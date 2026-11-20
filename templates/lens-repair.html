@@ -69,6 +69,11 @@
 @media(min-width:760px){.lens-row{padding:12px;gap:16px}.lens-row img{flex:0 0 240px;width:240px;max-width:240px}.lens-trio{grid-template-columns:repeat(3,1fr)}.lens-top h1{font-size:1.6rem}}
 @media(min-width:1000px){.lens-steps{grid-template-columns:repeat(4,1fr)}}
 .lens-faq details{background:#fff;border:1px solid #dde4ec;border-radius:8px;padding:8px 14px;margin:0 0 8px}.lens-faq summary{font-weight:700;cursor:pointer;color:#0f3d62}.lens-faq p{margin:8px 0 0;line-height:1.5}
+.lens-hero{margin:12px 0 0;border-radius:14px;background-size:cover;background-position:right center;min-height:200px;display:flex;align-items:center;overflow:hidden}
+.lens-hero-txt{background:rgba(15,36,56,.88);color:#fff;padding:18px 20px;margin:16px;max-width:520px;border-radius:10px}
+.lens-hero h1{color:#fff;font-size:1.35rem;margin:0 0 6px;line-height:1.25}.lens-hero p{margin:0;font-size:.95rem;line-height:1.4}
+@media(max-width:759px){.lens-hero{display:block;min-height:0;background-color:#0f2438;background-size:100% auto;background-position:top center;background-repeat:no-repeat;padding-top:54%}.lens-hero-txt{margin:0;border-radius:0;max-width:none;background:#0f2438}}
+@media(min-width:760px){.lens-hero{min-height:300px}.lens-hero h1{font-size:1.8rem}}
 </style>
 {% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
 <script type="application/ld+json">
@@ -82,10 +87,14 @@
 {% endblock %}
 {% block content %}
 
-<section class="lens-top">
-  <h1>Professional Box, ENG &amp; Studio Lens Repair</h1>
-  <p>Monday&ndash;Friday, 8:30 AM &ndash; 5:00 PM (Pacific Time) &middot; Weekends and after hours by appointment only</p>
+<div class="lens-wrap">
+<section class="lens-hero" style="background-image:url('/images/lens/lens-repair-banner.jpg')">
+  <div class="lens-hero-txt">
+    <h1>Professional Box, ENG &amp; Studio Lens Repair</h1>
+    <p>Monday&ndash;Friday, 8:30 AM &ndash; 5:00 PM (Pacific Time)<br>Weekends and after hours by appointment only</p>
+  </div>
 </section>
+</div>
 
 <div class="lens-banner">All repairs come with a free estimate and a 90-day warranty</div>
 
