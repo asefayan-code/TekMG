@@ -11,7 +11,8 @@
 "makesOffer":{"@type":"Offer","itemOffered":{"@type":"Service","name":"Projector Repair"}}}
 </script>
 <style>
-.pj-hero{background:linear-gradient(rgba(10,20,32,.62),rgba(10,20,32,.62)),#1c2733 url(/images/projector-repair.jpg) center/cover no-repeat;color:#fff;text-align:center;padding:48px 16px}
+.pj-herowrap{max-width:1100px;margin:16px auto 0;padding:0 16px}
+.pj-hero{border-radius:10px;background:linear-gradient(rgba(10,20,32,.62),rgba(10,20,32,.62)),#1c2733 url(/images/projector-repair.jpg) center/cover no-repeat;color:#fff;text-align:center;padding:48px 16px}
 .pj-hero h1{color:#fff;font-size:1.7rem;margin:0 0 10px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
 .pj-hero p{font-size:1.05rem;margin:0}
 .pj-wrap{max-width:1100px;margin:0 auto;padding:24px 16px}
@@ -33,17 +34,15 @@
 {% endblock %}
 {% block content %}
 <main>
-<section class="pj-hero">
+<div class="pj-herowrap"><section class="pj-hero">
   <h1>Projector Repair in Burbank, CA</h1>
   <p>Cleaning, repair and maintenance for all major brands. Warranty service provider for Epson only. Free estimates. 90-day warranty on repairs.</p>
-</section>
+</section></div>
 <div class="pj-wrap">
 
   <h2>Serving Burbank &amp; Surrounding Cities</h2>
   <ul class="pj-chips"><li>Burbank</li><li>Glendale</li><li>Toluca Lake</li><li>Universal City</li><li>North Hollywood</li><li>Valley Village</li><li>Studio City</li><li>Pasadena</li><li>Sherman Oaks</li><li>Hollywood</li></ul>
 
-  <h2>Projector Brands We Service</h2>
-  <div class="pj-brands"><div>EPSON<br><small style="font-weight:400">Warranty service provider</small></div><div>NEC</div><div>SHARP</div><div>JVC</div><div>SONY</div><div>PANASONIC</div><div>BenQ</div><div>BARCO</div><div>OPTOMA</div><div>CHRISTIE</div><div>HITACHI</div><div>ViewSonic</div><div>CANON</div><div>MITSUBISHI</div><div>LG</div><div>TOSHIBA</div><div>XGIMI</div></div>
 
   <h2>Our Repair Services</h2>
   <div class="pj-cols">
@@ -56,6 +55,9 @@
     <p>Cleaning often resolves projector problems and extends equipment life.</p>
     <div class="pj-clean-grid"><div>Exterior &amp; Interior Cleaning</div><div>Cooling System Service</div><div>Lens &amp; Optics Cleaning</div><div>Input Testing &amp; Calibration</div></div>
   </div>
+
+  <h2>Projector Brands We Service</h2>
+  <div class="pj-brands"><div>EPSON<br><small style="font-weight:400">Warranty service provider</small></div><div>NEC</div><div>SHARP</div><div>JVC</div><div>SONY</div><div>PANASONIC</div><div>BenQ</div><div>BARCO</div><div>OPTOMA</div><div>CHRISTIE</div><div>HITACHI</div><div>ViewSonic</div><div>CANON</div><div>MITSUBISHI</div><div>LG</div><div>TOSHIBA</div><div>XGIMI</div></div>
 
   <p class="pj-note"><strong>Free estimates</strong> &middot; 90-day warranty on repairs &middot; Pickup and delivery available<br>
   Monday&ndash;Friday 8:30 AM&ndash;5:00 PM &middot; Weekends and after hours by appointment only</p>
