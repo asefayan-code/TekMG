@@ -191,7 +191,7 @@
         document.querySelectorAll('.lens-sel').forEach(function(o){if(o!==s)o.selectedIndex=0;});
         var v=s.value,u=s.options[s.selectedIndex].getAttribute('data-url');
         if(!v||v==='Other'){go.href=base;go.textContent='Start New Repair Process \u2192';return;}
-        if(u){go.href=u;go.textContent='View '+v+' repair page \u2192';return;}
+        if(u){go.href=u;go.textContent='View '+v+' repair page \u2192';window.location.href=u;return;}
         go.href=base+'?model='+encodeURIComponent(v);
         go.textContent='Start repair for '+v+' \u2192';
       });
