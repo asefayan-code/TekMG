@@ -4,71 +4,79 @@
 {% block canon %}/lens-repair{% endblock %}
 {% block head %}
 <style>
-.lens-hero{background:#1c2733;color:#fff;text-align:center;padding:24px 16px}
-.lens-hero img{max-width:100%;height:auto;border-radius:6px}
-.lens-hero h1{color:#fff;font-size:1.6rem;margin:12px 0}
-.lens-call{display:inline-block;background:#fff;color:#0b6e99;font-weight:700;padding:12px 20px;border-radius:6px;text-decoration:none;margin:4px}
-.lens-wrap{max-width:1100px;margin:0 auto;padding:0 16px}
-.lens-banner{background:#fff3cd;text-align:center;padding:14px 16px;font-size:1.2rem;font-weight:600}
-.lens-blue{background:#54779b;color:#fff;padding:20px 16px}
-.lens-blue .lens-wrap{display:grid;grid-template-columns:1fr;gap:16px;max-width:800px}
-.lens-box{background:#fff;color:#222;border-radius:8px;padding:16px}
-.lens-tag{background:#666;color:#fff;text-align:center;padding:6px;margin:24px 0 0;font-size:1rem;font-weight:400}
-.lens-chips{list-style:none;margin:0;padding:10px 0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.lens-chips li{background:#eef3f8;border-radius:16px;padding:4px 14px}
-.lens-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:20px 0}
-.lens-grid img,.lens-pics img{max-width:100%;height:auto;border:1px solid #ddd;border-radius:6px}
-.lens-pics{display:grid;grid-template-columns:1fr;gap:12px;margin:12px 0 30px}
-.lens-pics img{justify-self:center}
-.lens-btn{display:inline-block;background:#5cb85c;color:#fff;padding:12px 18px;border-radius:6px;text-decoration:none}
-@media(min-width:700px){.lens-grid{grid-template-columns:1fr 1fr}.lens-pics{grid-template-columns:repeat(2,1fr)}.lens-hero h1{font-size:2.2rem}}
+.lens-top{background:#1c2733;color:#fff;text-align:center;padding:26px 16px}
+.lens-top h1{color:#fff;font-size:1.6rem;margin:0 0 8px}
+.lens-top p{margin:0;font-size:1rem}
+.lens-wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+.lens-row{display:flex;flex-direction:column;align-items:center;gap:16px;background:#fff;border:1px solid #dde4ec;border-radius:14px;padding:16px;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.lens-row img{display:block;width:100%;max-width:280px;height:auto;border-radius:10px;border:1px solid #e3e8ee}
+.lens-row .tall{max-width:200px}
+.lens-text{background:#f3f7fb;border-left:5px solid #0b6e99;border-radius:10px;padding:16px 18px;width:100%}
+.lens-text h2{margin:0 0 8px;font-size:1.25rem;color:#0f3d62}
+.lens-text p{margin:0 0 8px;line-height:1.6}
+.lens-text p:last-child{margin-bottom:0}
+.lens-tag{background:#0f3d62;color:#fff;text-align:center;padding:8px;margin:26px 0 0;font-size:1.05rem;font-weight:600;border-radius:8px 8px 0 0}
+.lens-chips{list-style:none;margin:0 0 6px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;background:#eef3f8;border-radius:0 0 8px 8px}
+.lens-chips li{background:#fff;border:1px solid #cfd9e4;border-radius:16px;padding:4px 14px}
+.lens-banner{background:#fff3cd;text-align:center;padding:14px 16px;font-size:1.1rem;font-weight:600}
+@media(min-width:760px){
+.lens-top h1{font-size:2.1rem}
+.lens-row{flex-direction:row;gap:24px;padding:20px}
+.lens-row img{flex:0 0 300px;width:300px;max-width:300px}
+.lens-row .tall{flex:0 0 200px;width:200px;max-width:200px}
+.lens-row:nth-of-type(even){flex-direction:row-reverse}
+}
 </style>
 {% endblock %}
 {% block content %}
 
-<p style="text-align:center;margin:12px 16px">Business hours: Monday&ndash;Friday, 8:30 AM &ndash; 5:00 PM (Pacific Time). Weekends and after hours by appointment only.</p>
-
-<section class="lens-hero">
-  <img src="/images/lens/professional-camera-lens-repair.jpg" width="850" height="450" alt="Fujinon and Canon box and studio lenses">
+<section class="lens-top">
   <h1>Professional Box, ENG &amp; Studio Lens Repair</h1>
-</section>
-
-<section class="lens-blue">
-  <div class="lens-wrap">
-    <div class="lens-box">
-      <p><strong style="font-size:1.2rem">What we do</strong><br>We restore and rebuild lenses damaged by wear and tear, focus and communication problems, impact, sand, salt damage or moisture.</p>
-    </div>
-  </div>
+  <p>Monday&ndash;Friday, 8:30 AM &ndash; 5:00 PM (Pacific Time) &middot; Weekends and after hours by appointment only</p>
 </section>
 
 <div class="lens-banner">All repairs come with a free estimate and a 90-day warranty</div>
 
 <div class="lens-wrap">
+
+  <div class="lens-row">
+    <img src="/images/lens/professional-camera-lens-repair.jpg" width="850" height="450" alt="Fujinon and Canon box and studio lenses">
+    <div class="lens-text">
+      <h2>What we do</h2>
+      <p>We restore and rebuild lenses damaged by wear and tear, focus and communication problems, impact, sand, salt damage or moisture.</p>
+    </div>
+  </div>
+
   <h2 class="lens-tag">Professional Camera Lens Service</h2>
   <ul class="lens-chips"><li>Box</li><li>Super</li><li>ENG</li><li>EFP</li><li>Pro</li></ul>
 
-  <div class="lens-grid">
-    <div>
-      <img src="/images/lens/box-eng-lens-repair.png" alt="Canon UHD DIGISUPER 122 box lens and ENG lens" width="307" height="299">
+  <div class="lens-row">
+    <img src="/images/lens/box-eng-lens-repair.png" alt="Canon UHD DIGISUPER 122 box lens and ENG lens" width="307" height="299">
+    <div class="lens-text">
+      <h2>Our clients</h2>
+      <p>We repair for major film studios, production houses, TV stations, independent filmmakers, churches and businesses across North America.</p>
     </div>
-    <div>
-      <p><strong>Clients:</strong> We repair for major film studios, production houses, TV stations, independent filmmakers, churches and businesses across North America.</p>
-      <p><strong>Work environment:</strong> We start with your lens in our clean room setting, equipped with HEPA air filters, ensuring a dust-free atmosphere. Manufacturer specifications guide our service, with precision testing and alignment equipment. Only manufacturer-provided tools and software are used during maintenance. Company-recommended lubricants, securing compounds and cleaning agents are used to ensure factory specification on every lens we repair.</p>
+  </div>
+
+  <div class="lens-row">
+    <img src="/images/lens/lens-repair-work-environment.jpg" alt="Technician repairing a camera lens at a clean workbench" width="551" height="366">
+    <div class="lens-text">
+      <h2>Work environment</h2>
+      <p>We start with your lens in our clean room setting, equipped with HEPA air filters, ensuring a dust-free atmosphere. Manufacturer specifications guide our service, with precision testing and alignment equipment.</p>
+      <p>Only manufacturer-provided tools and software are used during maintenance. Company-recommended lubricants, securing compounds and cleaning agents are used to ensure factory specification on every lens we repair.</p>
+    </div>
+  </div>
+
+  <div class="lens-row">
+    <img class="tall" src="/images/lens/box-eng-lens-repair-upside.png" alt="Canon UHD DIGISUPER 122 box lens, side view" width="307" height="440">
+    <div class="lens-text">
+      <h2>Box lenses <small>30 years of lens repair experience</small></h2>
       <p><strong>Type of lens:</strong> Whether your lens is detached or attached to a camcorder camera, we have the skills to repair both.</p>
     </div>
   </div>
 
-  <div class="lens-pics">
-    <img src="/images/lens/lens-repair-work-environment.jpg" alt="Technician repairing a camera lens at a clean workbench" width="551" height="366">
-  </div>
-
   <h2 class="lens-tag">Professional Cinema Lens Service</h2>
   <ul class="lens-chips"><li>Canon EF</li><li>Red</li><li>Arri</li><li>Cooke</li><li>Zeiss</li></ul>
-
-  <h2 style="font-size:1.8rem;margin-top:30px">Box Lenses <small>30 years of lens repair experience</small></h2>
-  <div class="lens-pics">
-    <img src="/images/lens/box-eng-lens-repair-upside.png" alt="Canon UHD DIGISUPER 122 box lens, side view" width="307" height="440">
-  </div>
 
 </div>
 
