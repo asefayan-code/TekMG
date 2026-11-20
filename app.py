@@ -1,5 +1,5 @@
 import os
-from flask import Flask, abort, send_from_directory
+from flask import Flask, abort, redirect, send_from_directory
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 PAGES = os.path.join(BASE, "pages")
@@ -14,6 +14,7 @@ ROUTES = {
     "about": "aboutUs.aspx.html",
     "contact": "contact.html",
     "accessibility": "accessibility.html",
+    "lens-repair": "lens-repair.html",
     "camcorder-camera-and-deck-repair": "Camcorder-Camera-And-Deck-Repair.aspx.html",
 }
 
@@ -27,9 +28,17 @@ def home():
     return page(ROUTES[""])
 
 
+# Old tekmg.com addresses -> new pages (permanent redirect)
+REDIRECTS = {
+    "lensrepair/lens.aspx": "/lens-repair",
+}
+
+
 @app.route("/<path:path>")
 def serve(path):
     key = path.strip("/").lower()
+    if key in REDIRECTS:
+        return redirect(REDIRECTS[key], code=301)
     if key in ROUTES:
         return page(ROUTES[key])
     # Old .aspx.html / .html addresses keep working
