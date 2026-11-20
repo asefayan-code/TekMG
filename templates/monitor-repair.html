@@ -20,6 +20,7 @@
 .mon-items li{background:#f8fafd;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;font-weight:500}
 .mon-items a{color:#0f3d62;font-weight:700;text-decoration:none;display:block}
 .mon-items a:hover{text-decoration:underline}
+.mon-pick{margin:0 0 14px;text-align:center}.mon-pick label{display:block;font-weight:700;margin-bottom:6px}.mon-pick select{width:100%;max-width:420px;padding:12px;font-size:1rem;border-radius:10px;border:2px solid #1a73e8}
 .mon-img{display:block;width:100%;max-width:100%;height:auto;border-radius:12px;margin:12px auto 0}
 .mon-banner{margin:0 0 14px}
 .mon-pair{display:grid;grid-template-columns:1fr;gap:12px;margin:14px 0 0}
@@ -46,6 +47,7 @@
 <p>Sony PVM, BVM and LMD, Panasonic, JVC and more. Burbank, CA.</p>
 </div>
 <img class="mon-img mon-banner" src="/images/monitor/monitor-terminal-repair-banner.png" width="1024" height="400" alt="Monitor terminal repair: a Sony professional monitor displaying color bars">
+<div class="mon-pick"><label for="mon-model">Choose your monitor model</label><select id="mon-model" onchange="if(this.value){window.location.href=this.value}"><option value="">Select a Sony model...</option>{% for m in sony_monitors %}<option value="/monitor-repair/{{ m.slug }}">{{ m.name }}</option>{% endfor %}</select></div>
 <div class="lm-banner">All repairs come with a free estimate and a 90-day warranty</div>
 <div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket &rarr;</a> &nbsp; <a href="tel:+18182444440" style="background:#0f3d62">Call (818) 244-4440</a></div>
 
