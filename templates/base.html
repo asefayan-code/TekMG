@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Tek Media Group{% endblock %}</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#0f62ac;--blue-h:#0353e9;--blue-d:#002d9c;--blue-l:#e0eaff}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+.nav-wrapper{background:#fff;position:sticky;top:0;z-index:999;box-shadow:0 4px 12px rgba(0,0,0,.05);border-bottom:1px solid #eef2f6}
+.container{width:100%;margin:auto;padding:0 12px}
+/* phone header: logo + menu button on one row */
+.row-first{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:10px}
+.logo-img{width:130px;height:auto;display:block}
+.head-right{display:flex;align-items:center;gap:8px}
+.call-btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#1e3a5f;background:#f8fafd;border:1px solid #e5edf5;border-radius:50px;padding:10px 12px;font-size:.85rem;font-weight:600;min-height:44px}
+.call-btn span{display:none}
+.menu-btn{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #e5edf5;background:#fff;border-radius:10px;font-size:1.3rem;color:var(--blue);cursor:pointer}
+.contact-info{display:none}
+.ticket-row{padding:0 0 10px}
+.service-ticket{display:flex;align-items:center;justify-content:center;gap:8px;background:#22c55e;color:#fff;text-decoration:none;padding:14px 18px;border-radius:50px;font-size:1.1rem;font-weight:700;min-height:52px}
+.service-ticket:hover{background:#16a34a}
+/* collapsible menu */
+.nav-links{display:none;flex-direction:column;padding:4px 0 12px;border-top:1px solid #eef2f6}
+.nav-wrapper.menu-open .nav-links{display:flex}
+.nav-item{color:var(--blue);text-decoration:none;font-weight:600;font-size:1rem;display:flex;align-items:center;justify-content:space-between;gap:6px;width:100%;padding:12px 4px;min-height:48px;border:none;background:transparent;cursor:pointer;font-family:inherit;text-align:left}
+.nav-item:hover{color:var(--blue-h)}
+.login-btn{justify-content:flex-start}
+.mail-link{justify-content:flex-start;color:#1e3a5f}
+.dropdown-trigger{position:relative;width:100%}
+.dropdown-menu{display:none;padding:0 0 6px 14px}
+.dropdown-trigger.touch-open .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:12px 10px;text-decoration:none;color:#2c3e50;font-size:.95rem;border-radius:6px}
+.dropdown-menu a:hover{background:var(--blue-l);color:var(--blue-d)}
+.small-color{color:#4a627a;font-size:.75rem}
+/* site search box */
+.site-search{display:flex;align-items:center;margin:0 0 10px;background:#f8fafd;border:1px solid #e5edf5;border-radius:50px;overflow:hidden}
+.site-search:focus-within{border-color:var(--blue);background:#fff}
+.site-search input{flex:1;min-width:0;border:0;background:transparent;padding:11px 16px;font-size:16px;font-family:inherit;color:#1e3a5f;outline:none}
+.site-search button{border:0;background:transparent;color:var(--blue);padding:0 16px;min-height:44px;font-size:1rem;cursor:pointer}
+.site-search button:hover{color:var(--blue-h)}
+.main-content{width:100%;margin:20px auto;padding:0 16px}
+.hero-placeholder{background:#fff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+.hero-placeholder h2{font-size:1.5rem;margin-bottom:16px}
+.hero-placeholder p{color:#4a627a;line-height:1.6;font-size:.95rem}
+footer{margin-top:40px;padding:20px 0;font-size:.8rem;color:#fff}
+footer .container{background:#2a4b85;display:flex;flex-direction:column;padding:20px;gap:16px;border-radius:20px;border:1px solid #e2d9ce}
+footer ul{list-style:none}
+footer ul li{padding:6px 0}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.footer__social{display:flex;gap:16px;justify-content:center}
+.footer__social a{font-size:1.5rem}
+.footer__copyright{text-align:center;color:#4a627a;margin-top:10px}
+/* tablet and desktop: full menu bar, no menu button */
+@media(min-width:900px){
+.container{max-width:1250px;padding:0 24px}
+.logo-img{width:180px}
+.menu-btn,.call-btn,.mail-link{display:none}
+.contact-info{display:flex;gap:12px}
+.contact-item{display:flex;align-items:center;gap:8px;text-decoration:none;color:#1e3a5f;background:#f8fafd;padding:10px 14px;border-radius:50px;border:1px solid #e5edf5;font-size:.85rem;font-weight:500}
+.contact-item:hover{background:var(--blue-l);color:var(--blue-d)}
+.nav-bar{display:flex;align-items:center;gap:24px;padding:10px 0}
+.ticket-row{padding:0}
+.service-ticket{padding:14px 26px;font-size:1.15rem;white-space:nowrap}
+.nav-links,.nav-wrapper.menu-open .nav-links{display:flex;flex-direction:row;align-items:center;gap:24px;padding:0;border:none}
+.nav-item{width:auto;padding:0;min-height:0;font-size:.9rem}
+.dropdown-trigger{width:auto}
+.dropdown-menu{position:absolute;top:calc(100% + 10px);left:0;min-width:240px;background:#fff;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.12);padding:8px 0;z-index:999}
+.dropdown-trigger:hover .dropdown-menu,.dropdown-trigger:focus-within .dropdown-menu{display:block}
+.dropdown-menu a{padding:12px 18px;font-size:.9rem;border-radius:0}
+.site-search{order:3;margin:0 0 0 auto;width:230px;flex-shrink:1}
+.site-search input{padding:9px 14px;font-size:.9rem}
+footer .container{flex-direction:row;flex-wrap:wrap;justify-content:space-between;border-radius:28px}
+footer ul{flex:1;min-width:200px}
+.main-content{max-width:1400px;margin:40px auto}
+}
+.skip-link{position:absolute;left:-9999px;top:8px;background:#002d9c;color:#fff;padding:12px 18px;border-radius:8px;z-index:100000;font-weight:700;text-decoration:none}
+.skip-link:focus{left:8px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid #ffbf00;outline-offset:2px}
+#main-content:focus{outline:none}
+.listen-btn{position:fixed;left:12px;bottom:12px;z-index:9998;display:inline-flex;align-items:center;gap:8px;background:#002d9c;color:#fff;border:2px solid #fff;border-radius:50px;padding:12px 18px;min-height:48px;font-size:1rem;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.listen-btn:hover{background:#0353e9}
+.listen-btn[aria-pressed=true]{background:#b42318}
+@media print{.listen-btn,.skip-link{display:none}}
+</style>
+<meta name="description" content="{% block desc %}Tek Media Group electronics repair in Burbank, CA. Call (818) 244-4440.{% endblock %}">
+<link rel="canonical" href="https://tekmg.com{% block canon %}/{% endblock %}">
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="nav-wrapper" id="navWrap"><div class="container">
+<div class="row-first">
+<a href="/"><img src="/images/logo.png" alt="Tek Media Group" class="logo-img"></a>
+<div class="contact-info">
+<a href="tel:+18182444440" class="contact-item"><i class="fas fa-phone-alt"></i><span>(818) 244-4440</span></a>
+<a href="mailto:jt@tekmg.com" class="contact-item"><i class="fas fa-envelope"></i><span>jt@tekmg.com</span></a>
+</div>
+<div class="head-right">
+<a href="tel:+18182444440" class="call-btn" aria-label="Call (818) 244-4440"><i class="fas fa-phone-alt"></i> Call</a>
+<button type="button" class="menu-btn" id="menuBtn" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><i class="fas fa-bars"></i></button>
+</div>
+</div>
+<div class="nav-bar">
+<div class="ticket-row"><a href="https://techmediagroup.repairshopr.com/check_ins" class="service-ticket"><i class="fas fa-ticket-alt"></i> Start Service Ticket</a></div>
+<nav class="nav-links" id="navLinks" aria-label="Main menu">
+<div class="dropdown-trigger">
+<button type="button" class="nav-item dropdown-toggle">AV-Broadcast Gear Repair <i class="fas fa-chevron-down"></i></button>
+<div class="dropdown-menu">
+<a href="/lens-repair">Camera Lens Repair<br><small class="small-color">Box, Super, ENG, EFP</small></a>
+<a href="/camera-repair">Pro. Camera Repair<br><small class="small-color">Broadcast ENG PTZ SLR</small></a>
+<a href="/projector-repair">Projector Repair</a>
+<a href="/monitor-repair">Pro Monitor Repair</a>
+</div></div>
+<div class="dropdown-trigger">
+<button type="button" class="nav-item dropdown-toggle">HI-FI Repair Services <i class="fas fa-chevron-down"></i></button>
+<div class="dropdown-menu">
+<a href="/hifi-audio">Audio Receiver Repair</a>
+<a href="/reel-to-reel">Reel to Reel Repair</a>
+</div></div>
+<a href="mailto:jt@tekmg.com" class="nav-item mail-link"><i class="fas fa-envelope"></i>&nbsp;jt@tekmg.com</a>
+<a href="https://techmediagroup.repairshopr.com/my_profile/user_login" class="nav-item login-btn"><i class="fas fa-user-circle"></i>&nbsp;Login</a>
+</nav>
+</div>
+</div></div>
+
+<main id="main-content" tabindex="-1">
+{% block content %}
+<section class="main-content"><div class="hero-placeholder">
+<h2>Tek Media Group</h2>
+<p>Professional repair services for broadcast equipment, vintage audio systems, professional monitors, projectors, cameras, and reel-to-reel recorders.</p>
+</div></section>
+{% endblock %}
+</main>
+
+<footer>
+<div class="container">
+<ul>
+<li><a href="/lens-repair">Professional Lenses Box-Super-ENG</a></li>
+<li><a href="/camera-repair">Professional Camcorders</a></li>
+<li><a href="/projector-repair">Projector Repair</a></li>
+<li><a href="/monitor-repair">Monitor Repair</a></li>
+</ul>
+<ul>
+<li><a href="/bang-olufsen">Bang and Olufsen</a></li>
+<li><a href="/reel-to-reel">Reel-To-Reel Audio Repair</a></li>
+<li><a href="/hifi-audio">Hifi-Audio Repair</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+<ul>
+<li><a href="https://tekmediagroup.com/about">About</a></li>
+<li><a href="/accessibility">Accessibility</a></li>
+<li><a href="https://tekmediagroup-legal.onrender.com/terms.html">Terms &amp; Conditions</a></li>
+<li><a href="https://tekmediagroup-legal.onrender.com/privacy.html">Privacy Policy</a></li>
+</ul>
+<div class="footer__social">
+<a href="https://www.facebook.com/pages/TEK-Media-Group/397040323684276" target="_blank" rel="noopener" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
+<a href="https://www.instagram.com/tekmediagroup" target="_blank" rel="noopener" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
+<a href="https://x.com/tekmediagroup" target="_blank" rel="noopener" aria-label="X"><b aria-hidden="true">X</b></a>
+</div>
+</div>
+<div class="footer__copyright">Business hours: Mon&ndash;Fri 8:30 AM&ndash;5:00 PM &middot; Weekends, holidays and after hours by appointment only<br>&copy; 1993&ndash;{{ year }} Tek Media Group. All rights reserved.</div>
+</footer>
+
+<script>
+(function(){
+const wrap=document.getElementById('navWrap'),btn=document.getElementById('menuBtn');
+btn.addEventListener('click',function(e){e.stopPropagation();const o=wrap.classList.toggle('menu-open');btn.setAttribute('aria-expanded',o);btn.innerHTML=o?'<i class="fas fa-times"></i>':'<i class="fas fa-bars"></i>';});
+const t=document.querySelectorAll('.dropdown-trigger');
+function closeAll(ex){t.forEach(x=>{if(x!==ex){x.classList.remove('touch-open');x.querySelector('.dropdown-toggle').setAttribute('aria-expanded','false')}})}
+t.forEach(tr=>{const b=tr.querySelector('.dropdown-toggle');b.setAttribute('aria-haspopup','true');b.setAttribute('aria-expanded','false')});
+t.forEach(tr=>{tr.querySelector('.dropdown-toggle').addEventListener('click',function(e){
+e.preventDefault();e.stopPropagation();
+const open=tr.classList.contains('touch-open');
+closeAll(open?null:tr);if(!open)tr.classList.add('touch-open');else tr.classList.remove('touch-open');tr.querySelector('.dropdown-toggle').setAttribute('aria-expanded',String(!open));})});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeAll();wrap.classList.remove('menu-open')}});
+})();
+// hide decorative icons from screen readers
+document.querySelectorAll('i.fas,i.fab,i.far').forEach(function(i){i.setAttribute('aria-hidden','true')});
+// Listen to this page (browser text-to-speech, no external service)
+(function(){
+if(!('speechSynthesis' in window)||typeof SpeechSynthesisUtterance==='undefined')return;
+var b=document.createElement('button');b.type='button';b.className='listen-btn';b.setAttribute('aria-pressed','false');
+function label(on){b.innerHTML=on?'<i class="fas fa-stop" aria-hidden="true"></i> Stop reading':'<i class="fas fa-volume-up" aria-hidden="true"></i> Listen to this page';}
+label(false);document.body.appendChild(b);
+var speaking=false;
+function stop(){speaking=false;window.speechSynthesis.cancel();b.setAttribute('aria-pressed','false');label(false);}
+function chunks(text){var out=[],parts=text.replace(/\s+/g,' ').match(/[^.!?]+[.!?]*\s*/g)||[text],cur='';
+parts.forEach(function(p){if((cur+p).length>200&&cur){out.push(cur);cur=p}else cur+=p});if(cur)out.push(cur);return out}
+function start(){
+var m=document.getElementById('main-content');if(!m)return;
+var clone=m.cloneNode(true);clone.querySelectorAll('script,style,noscript,svg,[aria-hidden=true]').forEach(function(n){n.remove()});
+var text=(document.title?document.title+'. ':'')+(clone.textContent||'');
+var list=chunks(text);if(!list.length)return;
+speaking=true;b.setAttribute('aria-pressed','true');label(true);
+list.forEach(function(c,i){var u=new SpeechSynthesisUtterance(c);u.lang=document.documentElement.lang||'en-US';
+if(i===list.length-1)u.onend=function(){if(speaking)stop()};
+u.onerror=function(){if(speaking)stop()};
+window.speechSynthesis.speak(u)});
+}
+b.addEventListener('click',function(){if(speaking){stop()}else{window.speechSynthesis.cancel();start()}});
+window.addEventListener('pagehide',function(){window.speechSynthesis.cancel()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&speaking)stop()});
+})();
+</script>
+</body>
+</html>
