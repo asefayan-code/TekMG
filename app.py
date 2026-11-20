@@ -1,7 +1,7 @@
 import datetime
 import os
 
-from flask import Flask, abort, redirect, render_template, send_from_directory
+from flask import Flask, Response, abort, redirect, render_template, send_from_directory
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(BASE, "public")
@@ -55,6 +55,37 @@ def serve(path):
     if path and os.path.isfile(os.path.join(PUBLIC, path)):
         return send_from_directory(PUBLIC, path)
     abort(404)
+
+
+@app.route("/robots.txt")
+def robots():
+    return Response("User-agent: *\nAllow: /\n\nSitemap: https://tekmg.com/sitemap.xml\n", mimetype="text/plain")
+
+
+@app.route("/sitemap.xml")
+def sitemap():
+    urls = ["/"] + ["/" + k for k in PAGES if k not in ("", "home")]
+    body = "".join("<url><loc>https://tekmg.com%s</loc></url>" % u for u in urls)
+    xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + body + "</urlset>"
+    return Response(xml, mimetype="application/xml")
+
+
+@app.route("/llms.txt")
+def llms():
+    txt = (
+        "# Tek Media Group\n\n"
+        "> Electronics repair shop at 711 South Victory Blvd, Burbank, CA 91502. Phone (818) 244-4440. "
+        "Hours: Mon-Fri 8:30 AM-5:00 PM; weekends, holidays and after hours by appointment only. Estimates are free; repairs carry a 90-day warranty.\n\n"
+        "## Services\n"
+        "- [Projector repair](https://tekmg.com/projector-repair): LCD, DLP, LED and 4K projectors; Epson warranty service provider only\n"
+        "- [Professional box, ENG and studio lens repair](https://tekmg.com/lens-repair)\n"
+        "- [Professional camera and deck repair](https://tekmg.com/camera-repair)\n\n"
+        "## Company\n"
+        "- [About](https://tekmg.com/about)\n"
+        "- [Contact](https://tekmg.com/contact)\n"
+        "- [Accessibility](https://tekmg.com/accessibility)\n"
+    )
+    return Response(txt, mimetype="text/plain")
 
 
 @app.route("/healthz")
