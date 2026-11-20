@@ -9,7 +9,8 @@ app = Flask(__name__, static_folder=None)
 
 # Clean URL -> page file in /pages
 ROUTES = {
-    "": "aboutUs.aspx.html",
+    "": "home.html",
+    "home": "home.html",
     "about": "aboutUs.aspx.html",
     "contact": "contact.html",
     "accessibility": "accessibility.html",
