@@ -12,6 +12,7 @@ ROUTES = {
     "": "aboutUs.aspx.html",
     "about": "aboutUs.aspx.html",
     "contact": "contact.html",
+    "accessibility": "accessibility.html",
     "camcorder-camera-and-deck-repair": "Camcorder-Camera-And-Deck-Repair.aspx.html",
 }
 
