@@ -1,20 +1,10 @@
-# TekMG – fixed pages
+# TekMG (tekmg.com)
 
-Static copies of the Tek Media Group pages with speed and bug fixes:
+Python/Flask version of tekmg.com, hosted on Render.
 
-- `aboutUs.aspx.html`
-- `Camcorder-Camera-And-Deck-Repair.aspx.html`
-- `contact.html` / `contact.aspx.html`
-- `css` (self-hosted Google Fonts, now with `font-display: swap`)
+- `app.py` - routes
+- `pages/` - page files
+- `public/` - css, assets, images, favicon (served from the site root)
+- Build: `pip install -r requirements.txt` / Start: `gunicorn app:app`
 
-## Missing: site assets
-
-The pages reference the site's existing files, which are not in this repo yet:
-`assets/` (Bootstrap, layout CSS, scripts, images, logo), `Sony/Sony-Camcorder/Images/`,
-`s/` (font files) and `favicon.ico`. Copy those folders from the live server into the
-repo root and the pages will render fully styled.
-
-## Deploy on Render
-
-New > Blueprint > pick this repo. Render reads `render.yaml` (static site, no build).
-Every push to `main` redeploys.
+Still to copy from the old GoDaddy site into `public/`: `assets/`, `Sony/Sony-Camcorder/Images/`, `s/` (fonts), `favicon.ico`, `sitemap.xml`.
