@@ -23,6 +23,7 @@ PAGES = {
     "accessibility": "accessibility.html",
     "lens-repair": "lens-repair.html",
     "camera-repair": "camera-repair.html",
+    "projector-repair": "projector-repair.html",
 }
 
 # Old tekmg.com addresses -> new pages (permanent redirect)
@@ -34,6 +35,8 @@ REDIRECTS = {
     "contact.html": "/contact",
     "contact.aspx.html": "/contact",
     "lensrepair/lens.aspx": "/lens-repair",
+    "projectorrepair/projector_repair.aspx": "/projector-repair",
+    "projector_repairs.aspx": "/projector-repair",
     "camcorder-camera-and-deck-repair": "/camera-repair",
     "camcorder-camera-and-deck-repair.aspx": "/camera-repair",
     "camcorder-camera-and-deck-repair.aspx.html": "/camera-repair",
