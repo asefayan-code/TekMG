@@ -39,6 +39,24 @@
 .lens-row .tall{flex:0 0 200px;width:200px;max-width:200px}
 .lens-row:nth-of-type(even){flex-direction:row-reverse}
 }
+
+/* compact overrides */
+.lens-top{padding:14px 16px}.lens-top h1{font-size:1.35rem;margin:0 0 4px}.lens-top p{font-size:.9rem}
+.lens-banner{padding:8px 16px;font-size:1rem}
+.lens-wrap{max-width:1100px}
+.lens-row{gap:12px;padding:12px;margin:12px 0}
+.lens-row img{max-width:200px}
+.lens-text{padding:12px 14px}.lens-text h2{font-size:1.1rem;margin:0 0 4px}.lens-text p{margin:0 0 6px;line-height:1.45;font-size:.95rem}
+.lens-trio{display:grid;grid-template-columns:1fr;gap:12px;margin:12px 0}
+.lens-trio .lens-row{margin:0;padding:0;border:0;box-shadow:none;background:none}
+.lens-trio .lens-text{height:100%}
+.lens-tag{margin:14px 0 0;padding:5px;font-size:1rem}
+.lens-chips{padding:8px;gap:6px}.lens-chips li{padding:2px 12px;font-size:.95rem}
+.lens-sec{font-size:1.25rem;margin:18px 0 8px}
+.lens-steps{gap:10px}.lens-step{padding:10px 12px}.lens-step h3{font-size:1rem;margin:0 0 4px}.lens-step .n{width:24px;height:24px;font-size:.85rem}.lens-step p{margin:0 0 4px;line-height:1.4;font-size:.9rem}
+.lens-dds{gap:10px;margin:10px 0}.lens-sel{padding:8px}.lens-go{margin:12px 0}.lens-go a{padding:10px 22px}
+@media(min-width:760px){.lens-row{padding:12px;gap:16px}.lens-row img{flex:0 0 240px;width:240px;max-width:240px}.lens-trio{grid-template-columns:repeat(3,1fr)}.lens-top h1{font-size:1.6rem}}
+@media(min-width:1000px){.lens-steps{grid-template-columns:repeat(4,1fr)}}
 </style>
 {% endblock %}
 {% block content %}
@@ -65,6 +83,7 @@
   <h2 class="lens-tag">Professional Camera Lens Service</h2>
   <ul class="lens-chips"><li>Box</li><li>Super</li><li>ENG</li><li>EFP</li><li>Pro</li></ul>
 
+  <div class="lens-trio">
   <div class="lens-row">
     <div class="lens-text">
       <h2>Our clients</h2>
@@ -85,6 +104,7 @@
       <h2>Box lenses <small>30 years of lens repair experience</small></h2>
       <p><strong>Type of lens:</strong> Whether your lens is detached or attached to a camcorder camera, we have the skills to repair both.</p>
     </div>
+  </div>
   </div>
 
   <h2 class="lens-tag">Professional Cinema Lens Service</h2>
