@@ -28,6 +28,11 @@
 .home-card p{margin:0 0 10px}
 .home-card ul{list-style:none;margin:0 0 10px;padding:0}
 .home-card .more{color:#17ABE4;font-weight:700;text-decoration:none}
+.home-card{position:relative;transition:box-shadow .15s,transform .15s}
+.home-card .more::after{content:"";position:absolute;inset:0;border-radius:8px}
+.home-card:hover{box-shadow:0 6px 18px rgba(0,0,0,.15);transform:translateY(-2px)}
+.home-card:hover .more{text-decoration:underline}
+.home-card:focus-within{outline:3px solid #ffbf00;outline-offset:2px}
 .home-why{max-width:1200px;margin:30px auto;padding:20px 16px;background:#f9f9f9;border-radius:8px}
 .home-why-grid{display:grid;grid-template-columns:1fr;gap:16px}
 .home-why h3{color:#17ABE4;font-size:1.1rem}
