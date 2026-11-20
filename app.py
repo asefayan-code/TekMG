@@ -1,6 +1,7 @@
 import datetime
 import os
 
+from lensdata import FUJINON_BY_SLUG, FUJINON_MODELS
 from flask import Flask, Response, abort, redirect, render_template, send_from_directory
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -12,6 +13,30 @@ app = Flask(__name__, static_folder=None)
 @app.context_processor
 def inject_year():
     return {"year": datetime.date.today().year}
+
+
+@app.context_processor
+def inject_lens_models():
+    return {"fujinon_models": FUJINON_MODELS}
+
+
+@app.route("/lens-repair/fujinon")
+def fujinon_hub():
+    return render_template("fujinon-hub.html")
+
+
+@app.route("/lens-repair/fujinon/<slug>")
+def fujinon_model(slug):
+    key = slug.lower()
+    model = FUJINON_BY_SLUG.get(key)
+    if not model:
+        abort(404)
+    if key != slug:
+        return redirect("/lens-repair/fujinon/" + key, code=301)
+    i = FUJINON_MODELS.index(model)
+    prev_m = FUJINON_MODELS[i - 1] if i > 0 else None
+    next_m = FUJINON_MODELS[i + 1] if i + 1 < len(FUJINON_MODELS) else None
+    return render_template("fujinon-model.html", m=model, prev_m=prev_m, next_m=next_m)
 
 
 # Clean URL -> template in /templates
@@ -65,6 +90,7 @@ def robots():
 @app.route("/sitemap.xml")
 def sitemap():
     urls = ["/"] + ["/" + k for k in PAGES if k not in ("", "home")]
+    urls += ["/lens-repair/fujinon"] + ["/lens-repair/fujinon/" + m["slug"] for m in FUJINON_MODELS]
     body = "".join("<url><loc>https://tekmg.com%s</loc></url>" % u for u in urls)
     xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + body + "</urlset>"
     return Response(xml, mimetype="application/xml")
@@ -79,6 +105,7 @@ def llms():
         "## Services\n"
         "- [Projector repair](https://tekmg.com/projector-repair): LCD, DLP, LED and 4K projectors; Epson warranty service provider only\n"
         "- [Professional box, ENG and studio lens repair](https://tekmg.com/lens-repair): Box, ENG, EFP, studio and cinema lenses from Canon, Fujinon, Sony, Zeiss and others; clean room service; free estimates; 90-day warranty\n"
+        "- [Fujinon box and studio lens repair, all models](https://tekmg.com/lens-repair/fujinon): one page per Fujinon model, free estimates, 90-day warranty\n"
         "- [Professional camera and deck repair](https://tekmg.com/camera-repair)\n\n"
         "## Company\n"
         "- [About](https://tekmg.com/about)\n"
