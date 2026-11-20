@@ -81,6 +81,10 @@ footer ul{flex:1;min-width:200px}
 .skip-link:focus{left:8px}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid #ffbf00;outline-offset:2px}
 #main-content:focus{outline:none}
+.float-call{position:fixed;right:12px;bottom:12px;z-index:9999;display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#fff;text-decoration:none;border:2px solid #fff;border-radius:50px;padding:12px 18px;min-height:48px;font-size:1.05rem;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.3);white-space:nowrap}
+.float-call:hover{background:#16a34a;color:#fff}
+@media(max-width:600px){.listen-btn{bottom:72px}}
+@media print{.float-call{display:none}}
 .listen-btn{position:fixed;left:12px;bottom:12px;z-index:9998;display:inline-flex;align-items:center;gap:8px;background:#002d9c;color:#fff;border:2px solid #fff;border-radius:50px;padding:12px 18px;min-height:48px;font-size:1rem;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
 .listen-btn:hover{background:#0353e9}
 .listen-btn[aria-pressed=true]{background:#b42318}
@@ -96,11 +100,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <div class="row-first">
 <a href="/"><img src="/images/logo.png" alt="Tek Media Group" class="logo-img"></a>
 <div class="contact-info">
-<a href="tel:+18182444440" class="contact-item"><i class="fas fa-phone-alt"></i><span>(818) 244-4440</span></a>
 <a href="mailto:jt@tekmg.com" class="contact-item"><i class="fas fa-envelope"></i><span>jt@tekmg.com</span></a>
 </div>
 <div class="head-right">
-<a href="tel:+18182444440" class="call-btn" aria-label="Call (818) 244-4440"><i class="fas fa-phone-alt"></i> Call</a>
 <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><i class="fas fa-bars"></i></button>
 </div>
 </div>
@@ -126,6 +128,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 </nav>
 </div>
 </div></div>
+
+<a href="tel:+18182444440" class="float-call" aria-label="Call Tek Media Group at (818) 244-4440"><i class="fas fa-phone-alt" aria-hidden="true"></i> (818) 244-4440</a>
 
 <main id="main-content" tabindex="-1">
 {% block content %}
