@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}{{ m.name }} Repair | Box and Studio Lens Service | Tek Media Group Burbank{% endblock %}
+{% block title %}{{ m.name }} Repair | Broadcast Lens Service | Tek Media Group Burbank{% endblock %}
 {% block desc %}{{ m.name }} lens repair in Burbank, CA. Clean room service, free estimate and 90-day warranty. Call Tek Media Group at (818) 244-4440.{% endblock %}
-{% block canon %}/lens-repair/fujinon/{{ m.slug }}{% endblock %}
+{% block canon %}/lens-repair/{{ b.slug }}/{{ m.slug }}{% endblock %}
 {% set faqs = [
  ("Do you repair the " ~ m.name ~ "?", "Yes. Tek Media Group repairs the " ~ m.name ~ " at 711 South Victory Blvd, Burbank, CA 91502. Start a repair online or call (818) 244-4440."),
  ("Do you charge for an estimate on the " ~ m.name ~ "?", "No. Every repair comes with a free estimate, and we call you with a quote before we start."),
@@ -14,18 +14,18 @@
 {% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
 <script type="application/ld+json">
 {{ {"@context":"https://schema.org","@graph":[
-{"@type":"Service","@id":"https://tekmg.com/lens-repair/fujinon/" ~ m.slug ~ "#service","name":m.name ~ " repair","serviceType":"Broadcast lens repair","brand":{"@type":"Brand","name":"Fujinon"},"provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://tekmg.com/lens-repair/fujinon/" ~ m.slug,"description":"Repair of the " ~ m.name ~ " box and studio lens in Burbank, CA. Free estimate and 90-day warranty."},
-{"@type":"FAQPage","@id":"https://tekmg.com/lens-repair/fujinon/" ~ m.slug ~ "#faq","mainEntity":faqlist},
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Lens Repair","item":"https://tekmg.com/lens-repair"},{"@type":"ListItem","position":3,"name":"Fujinon","item":"https://tekmg.com/lens-repair/fujinon"},{"@type":"ListItem","position":4,"name":m.name,"item":"https://tekmg.com/lens-repair/fujinon/" ~ m.slug}]}
+{"@type":"Service","@id":"https://tekmg.com/lens-repair/" ~ b.slug ~ "/" ~ m.slug ~ "#service","name":m.name ~ " repair","serviceType":"Broadcast lens repair","brand":{"@type":"Brand","name":b.name},"provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://tekmg.com/lens-repair/" ~ b.slug ~ "/" ~ m.slug,"description":"Repair of the " ~ m.name ~ " broadcast lens in Burbank, CA. Free estimate and 90-day warranty."},
+{"@type":"FAQPage","@id":"https://tekmg.com/lens-repair/" ~ b.slug ~ "/" ~ m.slug ~ "#faq","mainEntity":faqlist},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Lens Repair","item":"https://tekmg.com/lens-repair"},{"@type":"ListItem","position":3,"name":b.name,"item":"https://tekmg.com/lens-repair/" ~ b.slug ~ ""},{"@type":"ListItem","position":4,"name":m.name,"item":"https://tekmg.com/lens-repair/" ~ b.slug ~ "/" ~ m.slug}]}
 ]}|tojson }}
 </script>
 {% endblock %}
 {% block content %}
 <div class="lm-wrap">
-<nav class="lm-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/lens-repair">Lens Repair</a> &rsaquo; <a href="/lens-repair/fujinon">Fujinon</a> &rsaquo; {{ m.name }}</nav>
+<nav class="lm-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/lens-repair">Lens Repair</a> &rsaquo; <a href="/lens-repair/{{ b.slug }}">{{ b.name }}</a> &rsaquo; {{ m.name }}</nav>
 <div class="lm-hero">
 <h1>{{ m.name }} Repair</h1>
-<p>Box &amp; studio lens service in Burbank, CA</p>
+<p>Broadcast lens service in Burbank, CA</p>
 </div>
 <div class="lm-banner">All repairs come with a free estimate and a 90-day warranty</div>
 
@@ -40,7 +40,7 @@
 <div class="lm-card">
 <h2>Quick facts</h2>
 <table class="lm-facts"><tbody>
-<tr><th scope="row">Brand</th><td>Fujinon</td></tr>
+<tr><th scope="row">Brand</th><td>{{ b.name }}</td></tr>
 <tr><th scope="row">Model</th><td>{{ m.name }}</td></tr>
 {% if m.zoom %}<tr><th scope="row">Zoom ratio (from model name)</th><td>{{ m.zoom }}x</td></tr>
 <tr><th scope="row">Wide-end focal length (from model name)</th><td>{{ m.wide }} mm</td></tr>{% endif %}
@@ -66,9 +66,9 @@
 <div class="lm-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>
 
 <div class="lm-nav">
-{% if prev_m %}<a href="/lens-repair/fujinon/{{ prev_m.slug }}" rel="prev">&larr; {{ prev_m.name }}</a>{% else %}<span></span>{% endif %}
-{% if next_m %}<a href="/lens-repair/fujinon/{{ next_m.slug }}" rel="next">{{ next_m.name }} &rarr;</a>{% endif %}
+{% if prev_m %}<a href="/lens-repair/{{ b.slug }}/{{ prev_m.slug }}" rel="prev">&larr; {{ prev_m.name }}</a>{% else %}<span></span>{% endif %}
+{% if next_m %}<a href="/lens-repair/{{ b.slug }}/{{ next_m.slug }}" rel="next">{{ next_m.name }} &rarr;</a>{% endif %}
 </div>
-<p class="lm-nav"><a href="/lens-repair/fujinon">All Fujinon models</a> <a href="/lens-repair">Back to Lens Repair</a></p>
+<p class="lm-nav"><a href="/lens-repair/{{ b.slug }}">All {{ b.name }} models</a> <a href="/lens-repair">Back to Lens Repair</a></p>
 </div>
 {% endblock %}
