@@ -81,10 +81,19 @@ footer ul{flex:1;min-width:200px}
 .skip-link:focus{left:8px}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid #ffbf00;outline-offset:2px}
 #main-content:focus{outline:none}
-.float-call{position:fixed;right:12px;bottom:12px;z-index:9999;display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#fff;text-decoration:none;border:2px solid #fff;border-radius:50px;padding:12px 18px;min-height:48px;font-size:1.05rem;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.3);white-space:nowrap}
-.float-call:hover{background:#16a34a;color:#fff}
-@media(max-width:600px){.listen-btn{bottom:72px}}
-@media print{.float-call{display:none}}
+.float-bar{position:fixed;z-index:9999;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:8px;background:rgba(255,255,255,.96);box-shadow:0 -3px 12px rgba(0,0,0,.2)}
+.float-bar a{display:flex;align-items:center;justify-content:center;gap:6px;text-align:center;text-decoration:none;color:#fff;font-weight:700;font-size:.78rem;line-height:1.15;min-height:52px;padding:6px;border-radius:12px;border:2px solid #fff}
+.fb-start{background:#22c55e}.fb-check{background:#0f62ac}.fb-call{background:#17abe4}
+.float-bar a:hover{filter:brightness(.92);color:#fff}
+body{padding-bottom:76px}
+.listen-btn{bottom:84px!important}
+@media(min-width:900px){
+.float-bar{left:auto;right:12px;bottom:12px;display:flex;flex-direction:column;gap:8px;padding:0;background:none;box-shadow:none}
+.float-bar a{font-size:1rem;min-height:48px;padding:12px 18px;border-radius:50px;box-shadow:0 4px 14px rgba(0,0,0,.3);white-space:nowrap}
+body{padding-bottom:0}
+.listen-btn{bottom:12px!important}
+}
+@media print{.float-bar{display:none}}
 .listen-btn{position:fixed;left:12px;bottom:12px;z-index:9998;display:inline-flex;align-items:center;gap:8px;background:#002d9c;color:#fff;border:2px solid #fff;border-radius:50px;padding:12px 18px;min-height:48px;font-size:1rem;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
 .listen-btn:hover{background:#0353e9}
 .listen-btn[aria-pressed=true]{background:#b42318}
@@ -129,7 +138,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 </div>
 </div></div>
 
-<a href="tel:+18182444440" class="float-call" aria-label="Call Tek Media Group at (818) 244-4440"><i class="fas fa-phone-alt" aria-hidden="true"></i> (818) 244-4440</a>
+<div class="float-bar" role="navigation" aria-label="Quick actions">
+<a class="fb-start" href="https://techmediagroup.repairshopr.com/check_ins"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Start a New Service Ticket</a>
+<a class="fb-check" href="https://techmediagroup.repairshopr.com/my_profile/login"><i class="fas fa-search" aria-hidden="true"></i> Check Your Service Ticket</a>
+<a class="fb-call" href="tel:+18182444440" aria-label="Call Tek Media Group at (818) 244-4440"><i class="fas fa-phone-alt" aria-hidden="true"></i> (818) 244-4440</a>
+</div>
 
 <main id="main-content" tabindex="-1">
 {% block content %}
