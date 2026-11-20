@@ -2,6 +2,7 @@ import datetime
 import os
 
 from lensdata import BRANDS, CANON_MODELS, FUJINON_MODELS
+from monitordata import PROBLEMS, SERVICES, SONY_BY_SLUG, SONY_MONITORS
 from flask import Flask, Response, abort, redirect, render_template, send_from_directory
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -17,7 +18,7 @@ def inject_year():
 
 @app.context_processor
 def inject_lens_models():
-    return {"fujinon_models": FUJINON_MODELS, "canon_models": CANON_MODELS}
+    return {"fujinon_models": FUJINON_MODELS, "canon_models": CANON_MODELS, "sony_monitors": SONY_MONITORS}
 
 
 @app.route("/lens-repair/<brand>")
@@ -48,6 +49,23 @@ def lens_model(brand, slug):
     return render_template("lens-model.html", b=b, m=model, prev_m=prev_m, next_m=next_m)
 
 
+@app.route("/monitor-repair/<slug>")
+def monitor_model(slug):
+    key = slug.lower()
+    model = SONY_BY_SLUG.get(key)
+    if not model:
+        abort(404)
+    if key != slug:
+        return redirect("/monitor-repair/" + key, code=301)
+    i = SONY_MONITORS.index(model)
+    prev_m = SONY_MONITORS[i - 1] if i > 0 else None
+    next_m = SONY_MONITORS[i + 1] if i + 1 < len(SONY_MONITORS) else None
+    return render_template(
+        "monitor-model.html", m=model, prev_m=prev_m, next_m=next_m,
+        problems=PROBLEMS[model["kind"]], services=SERVICES[model["kind"]],
+    )
+
+
 # Clean URL -> template in /templates
 PAGES = {
     "": "home.html",
@@ -58,6 +76,7 @@ PAGES = {
     "lens-repair": "lens-repair.html",
     "camera-repair": "camera-repair.html",
     "projector-repair": "projector-repair.html",
+    "monitor-repair": "monitor-repair.html",
 }
 
 # Old tekmg.com addresses -> new pages (permanent redirect)
@@ -99,6 +118,7 @@ def robots():
 @app.route("/sitemap.xml")
 def sitemap():
     urls = ["/"] + ["/" + k for k in PAGES if k not in ("", "home")]
+    urls += ["/monitor-repair/" + m["slug"] for m in SONY_MONITORS]
     for b in BRANDS.values():
         urls += ["/lens-repair/" + b["slug"]] + ["/lens-repair/" + b["slug"] + "/" + m["slug"] for m in b["models"]]
     body = "".join("<url><loc>https://tekmg.com%s</loc></url>" % u for u in urls)
@@ -117,6 +137,7 @@ def llms():
         "- [Professional box, ENG and studio lens repair](https://tekmg.com/lens-repair): Box, ENG, EFP, studio and cinema lenses from Canon, Fujinon, Sony, Zeiss and others; clean room service; free estimates; 90-day warranty\n"
         "- [Fujinon box and studio lens repair, all models](https://tekmg.com/lens-repair/fujinon): one page per Fujinon model, free estimates, 90-day warranty\n"
         "- [Canon box and studio lens repair, all models](https://tekmg.com/lens-repair/canon): one page per Canon model, free estimates, 90-day warranty\n"
+        "- [Professional and medical monitor repair](https://tekmg.com/monitor-repair): Sony PVM, BVM and LMD, Panasonic, JVC, Eizo, NEC and Barco; one page per Sony model; free estimates; 90-day warranty\n"
         "- [Professional camera and deck repair](https://tekmg.com/camera-repair)\n\n"
         "## Company\n"
         "- [About](https://tekmg.com/about)\n"

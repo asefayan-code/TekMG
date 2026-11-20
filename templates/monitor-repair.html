@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Professional and Medical Monitor Repair | Sony, Panasonic, JVC | Tek Media Group Burbank{% endblock %}
+{% block desc %}Professional and medical monitor repair in Burbank, CA: Sony PVM, BVM and LMD, Panasonic, JVC, Eizo, NEC and Barco. Free estimate and 90-day warranty. Call (818) 244-4440.{% endblock %}
+{% block canon %}/monitor-repair{% endblock %}
+{% set faqs = [
+ ("Do you repair professional monitors in Burbank, CA?","Yes. Tek Media Group at 711 South Victory Blvd, Burbank, CA 91502 repairs professional broadcast and production monitors, including Sony PVM, BVM and LMD, Panasonic and JVC, as well as medical displays. Call (818) 244-4440."),
+ ("Which monitor brands do you repair?","Sony, Panasonic and JVC professional monitors, plus Flanders Scientific, TVLogic, Blackmagic, Canon, Marshall, and medical displays from Eizo, NEC, Barco and others."),
+ ("What monitor problems do you fix?","No power, signal loss, dead or stuck pixels, backlight failure, color shift, SDI and HDMI port damage, image persistence and burn-in, lines and flicker, and calibration. On CRT monitors we also repair convergence, geometry and purity."),
+ ("Do you charge for an estimate?","No. Every repair comes with a free estimate."),
+ ("What warranty do you give on monitor repairs?","All repairs come with a 90-day warranty."),
+ ("Can I ship my monitor to you?","Yes. Call (818) 244-4440 or start a service ticket and we will tell you how to send it. Shipping costs are not included in the estimate."),
+ ("What are your hours?","Monday through Friday, 8:30 AM to 5:00 PM Pacific Time. Weekends and after hours are by appointment only. Call (818) 244-4440.")
+] %}
+{% block head %}
+{% include "_lens_model_css.html" %}
+<style>
+.mon-badges{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}
+.mon-badges li{background:#f0f4fa;border:1px solid #cfdfed;border-radius:30px;padding:5px 12px;font-size:.9rem}
+.mon-items{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:8px}
+.mon-items li{background:#f8fafd;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;font-weight:500}
+.mon-items a{color:#0f3d62;font-weight:700;text-decoration:none;display:block}
+.mon-items a:hover{text-decoration:underline}
+@media(min-width:600px){.mon-items{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.mon-items{grid-template-columns:repeat(3,1fr)}}
+</style>
+{% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
+<script type="application/ld+json">
+{{ {"@context":"https://schema.org","@graph":[
+{"@type":"Service","@id":"https://tekmg.com/monitor-repair#service","name":"Professional and medical monitor repair","serviceType":"Monitor repair","provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://tekmg.com/monitor-repair","description":"Repair of professional broadcast and production monitors and medical displays in Burbank, CA. Free estimate and 90-day warranty."},
+{"@type":"FAQPage","@id":"https://tekmg.com/monitor-repair#faq","mainEntity":faqlist},
+{"@type":"ItemList","name":"Sony monitors we repair","itemListElement":sony_monitors|map(attribute="name")|list},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Monitor Repair","item":"https://tekmg.com/monitor-repair"}]}
+]}|tojson }}
+</script>
+{% endblock %}
+{% block content %}
+<div class="lm-wrap">
+<nav class="lm-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; Monitor Repair</nav>
+<div class="lm-hero">
+<h1>Professional &amp; Medical Monitor Repair</h1>
+<p>Sony PVM, BVM and LMD, Panasonic, JVC and more. Burbank, CA.</p>
+</div>
+<div class="lm-banner">All repairs come with a free estimate and a 90-day warranty</div>
+<div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket &rarr;</a> &nbsp; <a href="tel:+18182444440" style="background:#0f3d62">Call (818) 244-4440</a></div>
+
+<div class="lm-card">
+<h2>Monitor problems we repair</h2>
+<p>We repair professional broadcast and production monitors and medical displays: power failure, signal loss, dead pixels, backlight failure, SDI and HDMI port damage, color problems and calibration.</p>
+<ul class="mon-badges">
+<li>No power or won't boot</li><li>Backlight or inverter failure</li><li>Dead or stuck pixels</li><li>Color shift or calibration off</li><li>SDI or HDMI port repair</li><li>Touchscreen not responding</li><li>Image persistence or burn-in</li><li>Lines, flicker or artifacts</li><li>CRT convergence and geometry</li>
+</ul>
+</div>
+
+<div class="lm-card">
+<h2>Sony professional monitor repair</h2>
+<p>Pick your Sony model to see its repair page. We repair Sony PVM, BVM and LMD OLED, LCD and CRT monitors.</p>
+<ul class="mon-items">
+{% for m in sony_monitors %}<li><a href="/monitor-repair/{{ m.slug }}">{{ m.name }}</a>{{ m.display }}{% if m.size %}, {{ m.size }}{% endif %}</li>
+{% endfor %}<li>Sony PVM-20L5 (CRT)</li>
+</ul>
+</div>
+
+<div class="lm-card">
+<h2>Panasonic professional monitor repair</h2>
+<p>We repair Panasonic 4K HDR production monitors, including SDI and HDMI input boards, power modules and HDR calibration.</p>
+<ul class="mon-items">
+<li>Panasonic BT-LH1770P</li><li>Panasonic BT-LH2550G</li><li>Panasonic TH-55LFV9U</li><li>Panasonic TH-55LFV8U</li><li>Panasonic TH-43EQ1U</li><li>Panasonic TH-55EQ1U</li><li>Panasonic TH-65EQ1U</li><li>Panasonic TH-75EQ1U</li>
+</ul>
+</div>
+
+<div class="lm-card">
+<h2>JVC and other professional monitors</h2>
+<p>JVC professional monitors and industrial LCDs: panel, HDMI board and backlight inverter repair. We also repair Canon, Blackmagic, TVLogic, Flanders Scientific and Marshall monitors.</p>
+<ul class="mon-items">
+<li>JVC DT-U24G1</li><li>JVC LM-H241</li><li>JVC GM-P420U</li><li>Flanders Scientific XM series</li><li>TVLogic LVM-246W</li><li>Blackmagic SmartView 4K</li><li>Canon DP-V2420</li><li>Marshall V-LCD</li>
+</ul>
+</div>
+
+<div class="lm-card">
+<h2>Studio, reference and medical displays</h2>
+<p>High-resolution displays for editing, grading and production, and medical-grade displays. We repair backlights, video input boards, power supplies and touch interfaces, and calibrate after repair.</p>
+<ul class="mon-items">
+<li>Eizo RadiForce RX / GX series</li><li>Eizo FlexScan MX</li><li>NEC MD series</li><li>NEC MultiSync MD212G</li><li>NEC MD301C4</li><li>Barco Coronis and Nio</li><li>Barco MDCG-12130</li><li>Barco MDNC-3421</li><li>Totoku studio monitors</li><li>Planar studio displays</li><li>Philips studio monitors</li><li>LG 27HJ series</li>
+</ul>
+</div>
+
+<div class="lm-card">
+<h2>Teleprompter repair</h2>
+<ul>
+<li>Autocue and Autoscript prompters: LCD panel and beam splitter repair</li>
+<li>Portaprompt and CueMaster: control board troubleshooting</li>
+<li>HDMI and SDI input repair</li>
+</ul>
+</div>
+
+<div class="lm-card">
+<h2>Why Tek Media Group</h2>
+<ul>
+<li>30 years of professional electronics repair experience</li>
+<li>Free estimate on every repair</li>
+<li>90-day warranty on all repairs</li>
+<li>Shop in Burbank, CA, with mail-in service for customers nationwide</li>
+</ul>
+</div>
+
+<h2 style="text-align:center;color:#0f3d62;margin:26px 0 12px">Monitor repair questions</h2>
+<div class="lm-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>
+
+<div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins">Request a Free Estimate &rarr;</a></div>
+<p class="lm-nav"><a href="tel:+18182444440">(818) 244-4440</a> <span>711 South Victory Blvd, Burbank, CA 91502</span></p>
+</div>
+{% endblock %}
