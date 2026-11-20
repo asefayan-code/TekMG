@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ m.name }} Repair | Broadcast Lens Service | Tek Media Group Burbank{% endblock %}
-{% block desc %}{{ m.name }} lens repair in Burbank, CA. Clean room service, free estimate and 90-day warranty. Call Tek Media Group at (818) 244-4440.{% endblock %}
+{% block desc %}{{ m.name }} lens repair in Burbank, CA. Error messages explained, clean room service, free estimate and 90-day warranty. Call Tek Media Group at (818) 244-4440.{% endblock %}
 {% block canon %}/lens-repair/{{ b.slug }}/{{ m.slug }}{% endblock %}
 {% set faqs = [
  ("Do you repair the " ~ m.name ~ "?", "Yes. Tek Media Group repairs the " ~ m.name ~ " at 711 South Victory Blvd, Burbank, CA 91502. Start a repair online or call (818) 244-4440."),
@@ -9,6 +9,7 @@
  ("What if my " ~ m.name ~ " was dropped or exposed to salt water?", "Bring it in as soon as you can. A dropped lens can have internal damage with no visible scratches, and salt water, sand and moisture damage gets worse over time. Do not power on a wet or salt-exposed lens, and do not pry at bent parts yourself."),
  ("Where is the " ~ m.name ~ " repaired?", "In our clean room in Burbank, CA, using manufacturer specifications, precision testing and alignment equipment. Hours are Monday to Friday, 8:30 AM to 5:00 PM Pacific Time, with weekends and after hours by appointment only.")
 ] %}
+{% if info and info.faq %}{% set faqs = faqs + info.faq %}{% endif %}
 {% block head %}
 {% include "_lens_model_css.html" %}
 {% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
@@ -33,6 +34,7 @@
 <h2>{{ m.name }} lens repair</h2>
 <p>Tek Media Group repairs the {{ m.name }} in our Burbank, CA clean room. We restore and rebuild lenses damaged by wear and tear, focus and communication problems, impact, sand, salt damage or moisture, from minor cleanings to major overhauls.</p>
 <p>Start your repair online below, or call <a href="tel:+18182444440">(818) 244-4440</a>.</p>
+{% if info %}<p class="mi-jump"><a href="#error-codes">{{ m.name }} {{ info.title }} &darr;</a></p>{% endif %}
 </div>
 
 <div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins?model={{ m.name|urlencode }}">Start repair for {{ m.name }} &rarr;</a></div>
@@ -44,10 +46,13 @@
 <tr><th scope="row">Model</th><td>{{ m.name }}</td></tr>
 {% if m.zoom %}<tr><th scope="row">Zoom ratio (from model name)</th><td>{{ m.zoom }}x</td></tr>
 <tr><th scope="row">Wide-end focal length (from model name)</th><td>{{ m.wide }} mm</td></tr>{% endif %}
+{% if facts %}{% for k, v in facts %}<tr><th scope="row">{{ k }}</th><td>{{ v }}</td></tr>
+{% endfor %}{% endif %}
 <tr><th scope="row">Service location</th><td>711 South Victory Blvd, Burbank, CA 91502</td></tr>
 <tr><th scope="row">Estimate</th><td>Free</td></tr>
 <tr><th scope="row">Warranty</th><td>90 days</td></tr>
 </tbody></table>
+{% if facts %}<p class="mi-src" style="margin-top:8px">Specifications source: {{ facts_source }}</p>{% endif %}
 </div>
 
 <div class="lm-card">
@@ -61,6 +66,21 @@
 </ul>
 <p style="margin-top:10px">See how we work in our <a href="/lens-repair#process">7-step repair process</a>.</p>
 </div>
+
+{% if info %}
+<div class="lm-card" id="error-codes">
+<h2>{{ m.name }} {{ info.title }}</h2>
+<p>{{ info.intro }}</p>
+{% for sign, meaning, todo in info.rows %}<div class="mi-item">
+<h3>{{ sign }}</h3>
+<p><strong>What it means:</strong> {{ meaning }}</p>
+<p><strong>What to do:</strong> {{ todo }}</p>
+</div>
+{% endfor %}{% if info.note %}<p class="mi-note">{{ info.note }}</p>
+{% endif %}<p class="mi-src">Source: {{ info.source }}</p>
+<p>Seeing something that is not listed here? Write down exactly what the lens shows and put it in your service ticket.</p>
+</div>
+{% endif %}
 
 <h2 class="lm-faq-h" style="text-align:center;color:#0f3d62;margin:26px 0 12px">{{ m.name }} repair questions</h2>
 <div class="lm-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>

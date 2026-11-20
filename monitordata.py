@@ -10,7 +10,7 @@ SONY_MONITORS = [
     {"name": "Sony BVM-HX300", "slug": "sony-bvm-hx300", "kind": "lcd", "display": "4K HDR dual-layer LCD", "size": "30 inches"},
     {"name": "Sony BVM-HX310", "slug": "sony-bvm-hx310", "kind": "lcd", "display": "4K HDR dual-layer LCD", "size": "31 inches"},
     {"name": "Sony LMD-A240", "slug": "sony-lmd-a240", "kind": "lcd", "display": "LCD", "size": "24 inches"},
-    {"name": "Sony LMD-2451TD", "slug": "sony-lmd-2451td", "kind": "lcd", "display": "LCD", "size": None},
+    {"name": "Sony LMD-2451TD", "slug": "sony-lmd-2451td", "kind": "lcd", "display": "3D LCD", "size": "24 inches"},
     {"name": "Sony BVM-D24E1WU", "slug": "sony-bvm-d24e1wu", "kind": "crt", "display": "CRT", "size": "24 inches (16:9)"},
     {"name": "Sony BVM-20F1U", "slug": "sony-bvm-20f1u", "kind": "crt", "display": "CRT", "size": "20 inches (4:3)"},
     {"name": "Sony PVM-20M2U", "slug": "sony-pvm-20m2u", "kind": "crt", "display": "CRT", "size": "20 inches (4:3)"},
