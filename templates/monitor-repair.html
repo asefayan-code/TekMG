@@ -20,13 +20,18 @@
 .mon-items li{background:#f8fafd;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;font-weight:500}
 .mon-items a{color:#0f3d62;font-weight:700;text-decoration:none;display:block}
 .mon-items a:hover{text-decoration:underline}
-@media(min-width:600px){.mon-items{grid-template-columns:1fr 1fr}}
+.mon-img{display:block;width:100%;max-width:100%;height:auto;border-radius:12px;margin:12px auto 0}
+.mon-banner{margin:0 0 14px}
+.mon-pair{display:grid;grid-template-columns:1fr;gap:12px;margin:14px 0 0}
+.mon-pair .mon-img{margin:0;max-width:420px}
+.mon-single{max-width:420px}
+@media(min-width:600px){.mon-items{grid-template-columns:1fr 1fr}.mon-pair{grid-template-columns:1fr 1fr}.mon-pair .mon-img{margin:0 auto}}
 @media(min-width:900px){.mon-items{grid-template-columns:repeat(3,1fr)}}
 </style>
 {% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
 <script type="application/ld+json">
 {{ {"@context":"https://schema.org","@graph":[
-{"@type":"Service","@id":"https://tekmg.com/monitor-repair#service","name":"Professional and medical monitor repair","serviceType":"Monitor repair","provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://tekmg.com/monitor-repair","description":"Repair of professional broadcast and production monitors and medical displays in Burbank, CA. Free estimate and 90-day warranty."},
+{"@type":"Service","@id":"https://tekmg.com/monitor-repair#service","name":"Professional and medical monitor repair","serviceType":"Monitor repair","provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://tekmg.com/monitor-repair","image":"https://tekmg.com/images/monitor/monitor-terminal-repair-banner.png","description":"Repair of professional broadcast and production monitors and medical displays in Burbank, CA. Free estimate and 90-day warranty."},
 {"@type":"FAQPage","@id":"https://tekmg.com/monitor-repair#faq","mainEntity":faqlist},
 {"@type":"ItemList","name":"Sony monitors we repair","itemListElement":sony_monitors|map(attribute="name")|list},
 {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Monitor Repair","item":"https://tekmg.com/monitor-repair"}]}
@@ -40,6 +45,7 @@
 <h1>Professional &amp; Medical Monitor Repair</h1>
 <p>Sony PVM, BVM and LMD, Panasonic, JVC and more. Burbank, CA.</p>
 </div>
+<img class="mon-img mon-banner" src="/images/monitor/monitor-terminal-repair-banner.png" width="1024" height="400" alt="Monitor terminal repair: a Sony professional monitor displaying color bars">
 <div class="lm-banner">All repairs come with a free estimate and a 90-day warranty</div>
 <div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket &rarr;</a> &nbsp; <a href="tel:+18182444440" style="background:#0f3d62">Call (818) 244-4440</a></div>
 
@@ -58,6 +64,10 @@
 {% for m in sony_monitors %}<li><a href="/monitor-repair/{{ m.slug }}">{{ m.name }}</a>{{ m.display }}{% if m.size %}, {{ m.size }}{% endif %}</li>
 {% endfor %}<li>Sony PVM-20L5 (CRT)</li>
 </ul>
+<div class="mon-pair">
+<img class="mon-img" src="/images/monitor/sony-crt-monitor-repair.png" width="332" height="338" alt="Inside a Sony CRT professional monitor with the cabinet removed, showing the tube and circuit boards" loading="lazy">
+<img class="mon-img" src="/images/monitor/sony-monitor-ports-repair.png" width="450" height="450" alt="Close-up of the rear video ports on a Sony professional monitor with the SDI port highlighted" loading="lazy">
+</div>
 </div>
 
 <div class="lm-card">
@@ -66,6 +76,10 @@
 <ul class="mon-items">
 <li>Panasonic BT-LH1770P</li><li>Panasonic BT-LH2550G</li><li>Panasonic TH-55LFV9U</li><li>Panasonic TH-55LFV8U</li><li>Panasonic TH-43EQ1U</li><li>Panasonic TH-55EQ1U</li><li>Panasonic TH-65EQ1U</li><li>Panasonic TH-75EQ1U</li>
 </ul>
+<div class="mon-pair">
+<img class="mon-img" src="/images/monitor/panasonic-lcd-screen-repair.png" width="531" height="400" alt="A Panasonic monitor plus a new LCD panel makes a repaired monitor, with examples of defective LCD screens including color distortion, vertical lines and bars" loading="lazy">
+<img class="mon-img" src="/images/monitor/panasonic-sdi-port-repair.png" width="450" height="450" alt="Back of a Panasonic professional monitor with a note that an SDI or any other port that stops responding can be repaired" loading="lazy">
+</div>
 </div>
 
 <div class="lm-card">
@@ -74,6 +88,7 @@
 <ul class="mon-items">
 <li>JVC DT-U24G1</li><li>JVC LM-H241</li><li>JVC GM-P420U</li><li>Flanders Scientific XM series</li><li>TVLogic LVM-246W</li><li>Blackmagic SmartView 4K</li><li>Canon DP-V2420</li><li>Marshall V-LCD</li>
 </ul>
+<img class="mon-img mon-single" src="/images/monitor/jvc-prohd-monitor-repair.png" width="445" height="331" alt="JVC ProHD professional monitor showing a landscape picture, with an arrow pointing to the front panel controls" loading="lazy">
 </div>
 
 <div class="lm-card">
