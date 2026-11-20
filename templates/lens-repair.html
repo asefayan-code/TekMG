@@ -10,6 +10,7 @@
  ("Do you charge for a lens estimate?","No. Every repair comes with a free estimate, and we call you with a quote before we start."),
  ("What warranty do you give on lens repairs?","All repairs come with a 90-day warranty."),
  ("Where are lenses repaired and with what tools?","Lenses are serviced in our clean room with HEPA air filters, using manufacturer specifications, precision testing and alignment equipment. Only manufacturer-provided tools and software are used, with company-recommended lubricants, securing compounds and cleaning agents."),
+ ("Can you repair a lens with water or salt damage?","Yes. We repair lenses damaged by salt water, sand and moisture. We open the lens in our clean room, remove salt and corrosion from the mechanics and electronics, replace damaged parts, relubricate, and test. Do not power on a wet or salt-exposed lens; bring it in as soon as you can. Free estimate and 90-day warranty."),
  ("What should I do if I dropped my lens?","Bring it in for impact service. A dropped lens can have internal damage even with no visible scratches or dents. Signs include an unfamiliar sound, stiff or uneven movement, or distorted image quality. Do not pry at bent parts yourself."),
  ("What are your hours?","Monday through Friday, 8:30 AM to 5:00 PM Pacific Time. Weekends and after hours are by appointment only. Call (818) 244-4440.")
 ] %}
@@ -74,6 +75,7 @@
 .lens-hero h1{color:#fff;font-size:1.35rem;margin:0 0 6px;line-height:1.25}.lens-hero p{margin:0;font-size:.95rem;line-height:1.4}
 @media(max-width:759px){.lens-hero{display:block;min-height:0;background-color:#0f2438;background-size:100% auto;background-position:top center;background-repeat:no-repeat;padding-top:54%}.lens-hero-txt{margin:0;border-radius:0;max-width:none;background:#0f2438}}
 @media(min-width:760px){.lens-hero{min-height:300px}.lens-hero h1{font-size:1.8rem}}
+.lens-salt img{max-width:200px}@media(min-width:760px){.lens-salt img{flex:0 0 200px;width:200px;max-width:200px}}
 </style>
 {% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
 <script type="application/ld+json">
@@ -137,6 +139,16 @@
       <p><strong>Type of lens:</strong> Whether your lens is detached or attached to a camcorder camera, we have the skills to repair both.</p>
     </div>
   </div>
+  </div>
+
+  <div class="lens-row lens-salt" id="salt-water-damage">
+    <img src="/images/lens/lens-salt-damage.jpg" width="526" height="701" alt="Salt crystals and corrosion inside a broadcast lens body after salt water exposure" loading="lazy">
+    <div class="lens-text">
+      <h2>Water &amp; Salt Damage Repair</h2>
+      <p>Salt water and moisture get inside a lens and leave salt crystals and corrosion on gears, motors, circuit boards and wiring. Left alone, the damage spreads: zoom and focus controls stick, servos slow down or stop, and the lens can stop communicating with the camera.</p>
+      <p><strong>Our repair solution:</strong> we open the lens in our clean room, remove salt and corrosion from the mechanics and electronics, inspect every gear, motor and board, replace parts that are damaged, relubricate with company-recommended lubricants, then reassemble and test the full range of zoom, focus and iris.</p>
+      <p><strong>Our advice:</strong> do not power on a lens that has been in salt water or moisture. Bring it in as soon as you can. The sooner it is serviced, the better the chance of saving it. Free estimate and 90-day warranty.</p>
+    </div>
   </div>
 
   <h2 class="lens-tag">Professional Cinema Lens Service</h2>
