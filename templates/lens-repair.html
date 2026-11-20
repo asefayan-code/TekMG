@@ -2,6 +2,17 @@
 {% block title %}Professional Lens Repair | ENG, Box and Studio Lenses | Tek Media Group Burbank{% endblock %}
 {% block desc %}Professional camera lens repair in Burbank, CA: ENG, EFP, box and studio lenses. Impact, sand, salt and moisture damage, out of focus and communication problems. Free estimates. Call (818) 244-4440.{% endblock %}
 {% block canon %}/lens-repair{% endblock %}
+{% set faqs = [
+ ("Do you repair broadcast lenses in Burbank, CA?","Yes. Tek Media Group at 711 South Victory Blvd, Burbank, CA 91502 repairs box, ENG, EFP and studio lenses, and cinema lenses. We have 30 years of lens repair experience. Call (818) 244-4440."),
+ ("Which lens brands do you repair?","We repair ENG and box lenses from Canon, Fujinon, Sony, Zeiss and others, plus cinema lenses such as Canon EF, Red, Arri, Cooke and Zeiss. Use the Broadcast Box Lens Selector on this page to pick your model."),
+ ("What lens problems do you fix?","We restore and rebuild lenses damaged by wear and tear, focus and communication problems, impact, sand, salt damage or moisture, from minor cleanings to major overhauls."),
+ ("Can you repair a lens that is attached to a camcorder?","Yes. Whether your lens is detached or attached to a camcorder camera, we can repair both."),
+ ("Do you charge for a lens estimate?","No. Every repair comes with a free estimate, and we call you with a quote before we start."),
+ ("What warranty do you give on lens repairs?","All repairs come with a 90-day warranty."),
+ ("Where are lenses repaired and with what tools?","Lenses are serviced in our clean room with HEPA air filters, using manufacturer specifications, precision testing and alignment equipment. Only manufacturer-provided tools and software are used, with company-recommended lubricants, securing compounds and cleaning agents."),
+ ("What should I do if I dropped my lens?","Bring it in for impact service. A dropped lens can have internal damage even with no visible scratches or dents. Signs include an unfamiliar sound, stiff or uneven movement, or distorted image quality. Do not pry at bent parts yourself."),
+ ("What are your hours?","Monday through Friday, 8:30 AM to 5:00 PM Pacific Time. Weekends and after hours are by appointment only. Call (818) 244-4440.")
+] %}
 {% block head %}
 <style>
 .lens-top{background:#1c2733;color:#fff;text-align:center;padding:26px 16px}
@@ -57,7 +68,17 @@
 .lens-dds{gap:10px;margin:10px 0}.lens-sel{padding:8px}.lens-go{margin:12px 0}.lens-go a{padding:10px 22px}
 @media(min-width:760px){.lens-row{padding:12px;gap:16px}.lens-row img{flex:0 0 240px;width:240px;max-width:240px}.lens-trio{grid-template-columns:repeat(3,1fr)}.lens-top h1{font-size:1.6rem}}
 @media(min-width:1000px){.lens-steps{grid-template-columns:repeat(4,1fr)}}
+.lens-faq details{background:#fff;border:1px solid #dde4ec;border-radius:8px;padding:8px 14px;margin:0 0 8px}.lens-faq summary{font-weight:700;cursor:pointer;color:#0f3d62}.lens-faq p{margin:8px 0 0;line-height:1.5}
 </style>
+{% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
+<script type="application/ld+json">
+{{ {"@context":"https://schema.org","@graph":[
+{"@type":"LocalBusiness","@id":"https://tekmg.com/#business","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","email":"jt@tekmg.com","priceRange":"$$","image":"https://tekmg.com/images/home-hero.jpg","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"17:00"}]},
+{"@type":"Service","@id":"https://tekmg.com/lens-repair#service","name":"Professional Box, ENG and Studio Lens Repair","serviceType":"Broadcast and cinema lens repair","provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"description":"Repair and overhaul of box, ENG, EFP and studio lenses and cinema lenses from Canon, Fujinon, Sony, Zeiss and others. Impact, sand, salt, moisture, focus and communication problems. Clean room service. Free estimates and a 90-day warranty.","url":"https://tekmg.com/lens-repair"},
+{"@type":"FAQPage","@id":"https://tekmg.com/lens-repair#faq","mainEntity":faqlist},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Lens Repair","item":"https://tekmg.com/lens-repair"}]}
+]}|tojson }}
+</script>
 {% endblock %}
 {% block content %}
 
@@ -143,6 +164,11 @@
     });
   })();
   </script>
+
+  <h2 class="lens-sec" id="faq">Lens Repair Questions</h2>
+  <div class="lens-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>
+
+
 
 </div>
 
