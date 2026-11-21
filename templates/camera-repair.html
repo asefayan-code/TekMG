@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Camera, Camcorder and Deck Repair | Sony, Panasonic, JVC, Canon | Tek Media Group Burbank{% endblock %}
-{% block desc %}Broadcast, studio, ENG and PTZ camera, camcorder and video deck repair in Burbank, CA. Sony, Panasonic, JVC, Canon, Hitachi, ARRI, RED and Blackmagic. Free estimate and 90-day warranty. Call (818) 244-4440.{% endblock %}
+{% block desc %}Camera, camcorder and deck repair in Burbank, CA for Sony, Panasonic, JVC, Canon, ARRI, RED and Blackmagic. Free estimate, 90-day warranty. (818) 244-4440.{% endblock %}
 {% block canon %}/camera-repair{% endblock %}
 {% set ticket = "https://techmediagroup.repairshopr.com/check_ins" %}
+{% set updated_iso = "2026-11-21" %}
+{% set updated_text = "November 21, 2026" %}
 {% set cam_names = camera_brand_names[:-1]|join(", ") ~ " and " ~ camera_brand_names[-1] %}
 {% set deck_names = deck_brand_names[:-1]|join(", ") ~ " and " ~ deck_brand_names[-1] %}
 {% set problems = ["No power", "Soft back focus", "Battery does not charge", "SDI port not working", "SDI port yanked out or damaged", "Dropped / physical damage", "Salt, sand or dust inside the camera", "LCD display not working", "Iris blades stuck", "No video or audio", "SD card stuck or inserted backwards", "Liquid damage"] %}
@@ -10,6 +12,9 @@
  ("Which cameras do you repair?", "We repair broadcast, studio, ENG, PTZ and industrial cameras and camcorders from " ~ cam_names ~ ", plus DSLR and mirrorless cameras."),
  ("My equipment is not listed. Do you still work on it?", "If your equipment is not listed, that does not mean we do not work on it. Choose Other in the list and start a service ticket, or call (818) 244-4440."),
  ("Do you repair video decks and recorders?", "Yes. We repair decks and recorders from " ~ deck_names ~ ", including Sony SRW, HDW, PDW and XDS machines, and DAT, U-matic, Betamax and SuperBetamax / Hi-Band decks."),
+ ("Do you repair Sony broadcast camcorders?", "Yes. Tek Media Group in Burbank, CA repairs Sony XDCAM shoulder-mount and handheld camcorders, CineAlta and Cinema Line cameras, NXCAM and HDV camcorders and Sony studio cameras, including the PMW, PXW, PDW, HXR and HVR series."),
+ ("Do you repair RED, ARRI and Blackmagic cinema cameras?", "Yes. Tek Media Group works on RED, ARRI and Blackmagic digital cinema cameras. Choose the manufacturer in the camera list, pick your model or Other, and start a service ticket."),
+ ("How do I start a camera or deck repair?", "Choose your manufacturer and model on this page and press Start repair, or start a service ticket online. You can bring the equipment to 711 South Victory Blvd, Burbank, CA 91502, or ship it to us. Pickup and delivery is available from San Francisco to San Diego."),
  ("What camera problems do you fix?", "No power, soft back focus, a battery that does not charge, SDI ports that do not work or were yanked out, drop and physical damage, salt, sand or dust inside the camera, LCD displays that do not work, stuck iris blades, no video or audio, stuck SD cards and liquid damage."),
  ("Do you charge for an estimate?", "No. All repairs come with a free estimate."),
  ("What warranty comes with a camera or deck repair?", "All repairs come with a 90-day warranty."),
@@ -25,7 +30,17 @@
 .cam-badges{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .cam-badges li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);border-radius:50px;padding:5px 14px;font-size:.88rem;font-weight:600}
 .cam-banner{background:#fff3cd;text-align:center;padding:8px 16px;font-size:1rem;font-weight:600;border-radius:10px;margin:12px 0}
-.cam-intro{text-align:center;margin:12px auto;max-width:820px;line-height:1.55}
+.cam-crumbs{font-size:.9rem;margin:12px 0 0}
+.cam-crumbs a{color:#0f3d62}
+.cam-summary{display:grid;grid-template-columns:1fr;gap:12px;align-items:center;margin:14px 0;line-height:1.55}
+.cam-summary img{width:132px;height:132px;border-radius:12px;object-fit:cover;margin:0 auto;display:block}
+.cam-summary p{margin:0 0 8px}
+.cam-summary p:last-child{margin-bottom:0}
+.cam-facts{width:100%;border-collapse:collapse;background:#fff;border:1px solid #dde4ec;border-radius:10px;overflow:hidden}
+.cam-facts th,.cam-facts td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid #e3e8ee;line-height:1.45;font-size:.95rem}
+.cam-facts tr:last-child th,.cam-facts tr:last-child td{border-bottom:0}
+.cam-facts th{width:36%;color:#0f3d62;background:#f6f9fc}
+.cam-updated{text-align:center;color:#44566a;font-size:.88rem;margin:6px 0 18px}
 .cam-jump{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
 .cam-jump a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:8px 10px;border-radius:12px;text-decoration:none;font-weight:700;color:#fff;text-align:center;line-height:1.2}
 .cam-jump .j-cam{background:#0b6e99}
@@ -68,7 +83,7 @@
 .cam-faq summary{font-weight:700;cursor:pointer;color:#0f3d62}
 .cam-faq p{margin:8px 0 0;line-height:1.5}
 .cam-more{text-align:center;margin:18px 0;line-height:1.7}
-@media(min-width:640px){.cam-dds{grid-template-columns:1fr 1fr}.cam-issues{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:640px){.cam-summary{grid-template-columns:170px 1fr;gap:18px}.cam-summary img{width:170px;height:170px}.cam-dds{grid-template-columns:1fr 1fr}.cam-issues{grid-template-columns:repeat(3,1fr)}}
 @media(min-width:900px){
 .cam-hero{padding:30px 24px}.cam-hero h1{font-size:1.9rem}
 .cam-group{padding:20px}.cam-group-head h2{font-size:1.45rem}
@@ -80,12 +95,16 @@
 </style>
 {% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
 {% set brandlist = [] %}{% for n in camera_brand_names %}{% set _ = brandlist.append({"@type":"Brand","name":n}) %}{% endfor %}
+{% set camoffers = [] %}{% for n in camera_brand_names %}{% set _ = camoffers.append({"@type":"Offer","itemOffered":{"@type":"Service","name":n ~ " camera and camcorder repair"}}) %}{% endfor %}
+{% set deckoffers = [] %}{% for n in deck_brand_names %}{% set _ = deckoffers.append({"@type":"Offer","itemOffered":{"@type":"Service","name":n ~ " video deck and recorder repair"}}) %}{% endfor %}
+{% set areas = ["Burbank, CA", "Los Angeles, CA", "Glendale, CA", "Pasadena, CA", "North Hollywood, CA", "Studio City, CA", "Sherman Oaks, CA", "Eagle Rock, CA", "Hollywood, CA", "United States"] %}
 <script type="application/ld+json">
 {{ {"@context":"https://schema.org","@graph":[
 {"@type":"LocalBusiness","@id":"https://tekmg.com/#business","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","email":"jt@tekmg.com","priceRange":"$$","image":"https://tekmg.com/images/home-hero.jpg","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"17:00"}]},
-{"@type":"Service","@id":"https://tekmg.com/camera-repair#service","name":"Professional camera, camcorder and deck repair","serviceType":"Broadcast camera and video deck repair","brand":brandlist,"provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://tekmg.com/camera-repair","description":"Repair of broadcast, studio, ENG, PTZ and industrial cameras and camcorders from " ~ cam_names ~ ", and of video decks and recorders from " ~ deck_names ~ ". Free estimate and 90-day warranty."},
+{"@type":"Service","@id":"https://tekmg.com/camera-repair#service","name":"Professional camera, camcorder and deck repair","serviceType":"Broadcast camera and video deck repair","brand":brandlist,"provider":{"@id":"https://tekmg.com/#business"},"areaServed":areas,"hasOfferCatalog":{"@type":"OfferCatalog","name":"Camera and deck repair services","itemListElement":[{"@type":"OfferCatalog","name":"Camera and camcorder repair","itemListElement":camoffers},{"@type":"OfferCatalog","name":"Video deck and recorder repair","itemListElement":deckoffers}]},"url":"https://tekmg.com/camera-repair","description":"Repair of broadcast, studio, ENG, PTZ and industrial cameras and camcorders from " ~ cam_names ~ ", and of video decks and recorders from " ~ deck_names ~ ". Free estimate and 90-day warranty."},
+{"@type":"WebPage","@id":"https://tekmg.com/camera-repair#webpage","url":"https://tekmg.com/camera-repair","name":"Professional Camera, Camcorder and Deck Repair","description":self.desc(),"inLanguage":"en-US","dateModified":updated_iso,"about":{"@id":"https://tekmg.com/camera-repair#service"},"breadcrumb":{"@id":"https://tekmg.com/camera-repair#breadcrumb"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://tekmg.com/images/cards/camera.jpg","width":400,"height":400}},
 {"@type":"FAQPage","@id":"https://tekmg.com/camera-repair#faq","mainEntity":faqlist},
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Camera and Deck Repair","item":"https://tekmg.com/camera-repair"}]}
+{"@type":"BreadcrumbList","@id":"https://tekmg.com/camera-repair#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Camera and Deck Repair","item":"https://tekmg.com/camera-repair"}]}
 ]}|tojson }}
 </script>
 {% endblock %}
@@ -101,11 +120,12 @@
 </div>
 {% endmacro %}
 {% macro all_models(brands) %}
-{% for b in brands %}<p><strong>{{ b.name or b.label }}:</strong> {% for gname, models in b.groups %}{{ models|join(", ") }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+{% for b in brands %}<p><strong>{{ b.label }}:</strong> {% for gname, models in b.groups %}{% if gname %}<em>{{ gname }}:</em> {% endif %}{{ models|join(", ") }}{% if not loop.last %}; {% endif %}{% endfor %}.</p>
 {% endfor %}
 {% endmacro %}
 {% block content %}
 <div class="cam-wrap">
+<nav class="cam-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; Camera &amp; Deck Repair</nav>
 
 <section class="cam-hero">
 <h1>Professional Camera, Camcorder &amp; Deck Repair</h1>
@@ -120,7 +140,13 @@
 
 <div class="cam-banner">All repairs come with a free estimate and a 90-day warranty</div>
 
-<p class="cam-intro">We use manufacturer-provided tools combined with superb workmanship and years of experience. Pick your equipment below to start a repair.</p>
+<section class="cam-summary" aria-label="Summary">
+<img src="/images/cards/camera.jpg" alt="Studio camera viewfinder showing a back focus test chart during bench testing" width="400" height="400">
+<div>
+<p><strong>Tek Media Group repairs professional cameras, camcorders and video decks at 711 South Victory Blvd in Burbank, California.</strong> We work on {{ cam_names }} cameras, including broadcast, studio, ENG, PTZ and industrial models, and on {{ deck_names }} decks and recorders.</p>
+<p>We use manufacturer-provided tools combined with superb workmanship and years of experience. Pick your equipment below to start a repair.</p>
+</div>
+</section>
 
 <nav class="cam-jump" aria-label="Choose equipment type">
 <a class="j-cam" href="#cameras"><svg viewBox="0 0 64 64" width="26" height="26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="18" width="38" height="28" rx="4"/><path d="M44 26l14-8v28l-14-8"/><circle cx="25" cy="32" r="7"/></svg><span>Cameras &amp; Camcorders</span></a>
@@ -131,7 +157,7 @@
 <div class="cam-group-head">
 <div class="cam-ico" aria-hidden="true"><svg viewBox="0 0 64 64" width="32" height="32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="18" width="38" height="28" rx="4"/><path d="M44 26l14-8v28l-14-8"/><circle cx="25" cy="32" r="7"/></svg></div>
 <div>
-<h2 id="cameras-h">Cameras &amp; Camcorders</h2>
+<h2 id="cameras-h">Camera &amp; Camcorder Repair by Manufacturer</h2>
 <p>Choose your manufacturer, then your model.</p>
 </div>
 </div>
@@ -150,7 +176,7 @@
 <div class="cam-group-head">
 <div class="cam-ico" aria-hidden="true"><svg viewBox="0 0 64 64" width="32" height="32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="14" width="54" height="36" rx="4"/><path d="M14 24h36"/><circle cx="22" cy="38" r="5"/><circle cx="42" cy="38" r="5"/></svg></div>
 <div>
-<h2 id="decks-h">Decks &amp; Recorders</h2>
+<h2 id="decks-h">Deck &amp; Recorder Repair by Manufacturer</h2>
 <p>Video decks, recorders and players. Choose your manufacturer, then your model, or choose a tape format.</p>
 </div>
 </div>
@@ -165,8 +191,26 @@
 </details>
 </section>
 
+<section class="cam-sec" aria-labelledby="facts-h">
+<h2 id="facts-h">Camera &amp; Deck Repair at a Glance</h2>
+<table class="cam-facts"><tbody>
+<tr><th scope="row">Service</th><td>Camera, camcorder and video deck repair</td></tr>
+<tr><th scope="row">Camera brands</th><td>{{ camera_brand_names|join(", ") }}</td></tr>
+<tr><th scope="row">Deck brands</th><td>{{ deck_brand_names|join(", ") }}</td></tr>
+<tr><th scope="row">Not listed?</th><td>If your equipment is not listed, that does not mean we do not work on it</td></tr>
+<tr><th scope="row">Estimate</th><td>Free</td></tr>
+<tr><th scope="row">Warranty</th><td>90 days</td></tr>
+<tr><th scope="row">Location</th><td>711 South Victory Blvd, Burbank, CA 91502</td></tr>
+<tr><th scope="row">Hours</th><td>Monday to Friday, 8:30 AM to 5:00 PM Pacific. Weekends and after hours by appointment only</td></tr>
+<tr><th scope="row">Walk-ins</th><td>Burbank, Los Angeles, Glendale, Pasadena, North Hollywood, Studio City, Sherman Oaks, Eagle Rock, Hollywood</td></tr>
+<tr><th scope="row">Pickup and delivery</th><td>San Francisco to San Diego</td></tr>
+<tr><th scope="row">Shipping</th><td>Nationwide. Shipping costs are not included in the estimate</td></tr>
+<tr><th scope="row">Phone</th><td>(818) 244-4440</td></tr>
+</tbody></table>
+</section>
+
 <section class="cam-sec" aria-labelledby="problems-h">
-<h2 id="problems-h">Common Problems We Fix</h2>
+<h2 id="problems-h">Common Camera Problems We Fix</h2>
 <p class="cam-sub">If your camera shows any of these symptoms, we can diagnose and repair it.</p>
 <ul class="cam-issues">
 {% for p in problems %}<li>{{ p }}</li>
@@ -189,6 +233,7 @@
 </section>
 
 <p class="cam-more">Also at Tek Media Group: <a href="/lens-repair">Box, ENG &amp; Studio lens repair</a> &middot; <a href="/monitor-repair">Monitor repair</a> &middot; <a href="/projector-repair">Projector repair</a></p>
+<p class="cam-updated">Page updated <time datetime="{{ updated_iso }}">{{ updated_text }}</time></p>
 
 </div>
 <script>

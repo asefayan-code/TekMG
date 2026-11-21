@@ -3,6 +3,9 @@
 Where the lists come from:
   * Sony, JVC, Canon, RED, PTZ and tape formats: Tek Media Group's own pages
     (the earlier camera page and the model lists on the old tekmg.com site).
+  * Fact check, Nov 2026: removed PDW-500, PZW-2000 and PZW-3000 (no Sony models by those
+    numbers were found; PMW-500 and PZW-4000 are the real ones), renamed the RED entries
+    to RED's own names (SCARLET DRAGON), and regrouped the Sony cameras by product line.
   * Entries marked filled=True (Panasonic, Hitachi, ARRI, Blackmagic, Panasonic and
     JVC decks): common professional models added so every manufacturer has a list.
     Replace these with the shop's own lists when they are supplied.
@@ -18,19 +21,20 @@ TICKET_URL = "https://techmediagroup.repairshopr.com/check_ins"
 
 CAMERA_BRANDS = [
     {"name": "Sony", "slug": "sony", "label": "Sony Cameras", "groups": [
-        ("XDCAM and pro camcorders", [
-            "PMW-EX3", "PMW-100", "PMW-200", "PXW-Z190", "PMW-F5", "PMW-F55", "HXR-NX800"]),
-        ("ENG-style camcorders", [
-            "PMW-320", "PMW-500", "PDW-500", "PMW-150", "PMW-EX1R", "HDW-F900R", "SRW-9000",
-            "PXW-Z90V", "PXW-Z750", "HXC-FB80", "PXW-Z300", "PXW-Z200", "PXW-X400", "PXW-FX9",
-            "ILME-FX6", "PXW-FS7M2"]),
-        ("More Sony camcorders", [
-            "PMW-EX1", "PMW-F3", "PMW-160", "PMW-300K1", "PMW-400K",
-            "PXW-FS5", "PXW-FS7", "PXW-X70", "PXW-X160", "PXW-X180", "PXW-X200", "PXW-X320",
-            "PXW-X500", "PXW-Z100", "PXW-Z150",
-            "HXR-NX3", "HXR-NX3D1", "HXR-NX5", "HXR-NX70", "HXR-NX100", "HXR-MC50", "HXR-MC1500",
-            "HXR-MC2000", "HVR-A1", "HVR-HD1000", "HVR-Z5",
+        ("XDCAM shoulder-mount (ENG)", [
+            "PMW-320", "PMW-400K", "PMW-500", "PXW-X320", "PXW-X400", "PXW-X500", "PXW-Z750",
             "PDW-510", "PDW-530", "PDW-680", "PDW-700", "PDW-F330", "PDW-F355"]),
+        ("XDCAM handheld and compact", [
+            "PMW-EX1", "PMW-EX1R", "PMW-EX3", "PMW-100", "PMW-150", "PMW-160", "PMW-200", "PMW-300K1",
+            "PXW-X70", "PXW-X160", "PXW-X180", "PXW-X200", "PXW-Z90V", "PXW-Z100", "PXW-Z150",
+            "PXW-Z190", "PXW-Z200", "PXW-Z300"]),
+        ("Cinema and CineAlta cameras", [
+            "PMW-F3", "PMW-F5", "PMW-F55", "PXW-FS5", "PXW-FS7", "PXW-FS7M2", "PXW-FX9", "ILME-FX6",
+            "HDW-F900R", "SRW-9000"]),
+        ("NXCAM, AVCHD and HDV camcorders", [
+            "HXR-NX3", "HXR-NX3D1", "HXR-NX5", "HXR-NX70", "HXR-NX100", "HXR-NX800", "HXR-MC50",
+            "HXR-MC1500", "HXR-MC2000", "HVR-A1", "HVR-HD1000", "HVR-Z5"]),
+        ("Studio cameras", ["HXC-FB80"]),
     ]},
     {"name": "Panasonic", "slug": "panasonic", "label": "Panasonic Cameras", "filled": True, "groups": [
         ("", [
@@ -64,8 +68,8 @@ CAMERA_BRANDS = [
     {"name": "RED", "slug": "red", "label": "RED Cameras", "groups": [
         ("MYSTERIUM and MYSTERIUM-X", [
             "RED ONE MYSTERIUM", "RED ONE MYSTERIUM-X", "EPIC-M MYSTERIUM-X", "EPIC-X MYSTERIUM-X",
-            "SCARLET-X MYSTERIUM-X"]),
-        ("DSMC DRAGON", ["EPIC-M DRAGON", "EPIC-X DRAGON", "SCARLET-X DRAGON"]),
+            "SCARLET-X (MYSTERIUM-X)"]),
+        ("DSMC DRAGON", ["EPIC-M DRAGON", "EPIC-X DRAGON", "SCARLET DRAGON"]),
         ("DSMC2 and KOMODO", ["DSMC2", "KOMODO 6K"]),
     ]},
     {"name": "Blackmagic", "slug": "blackmagic", "label": "Blackmagic Cameras", "filled": True, "groups": [
@@ -91,7 +95,7 @@ DECK_BRANDS = [
             "HDW-M2000", "HDW-M2100"]),
         ("XDCAM and memory recorders", [
             "PDW-1500", "PDW-HD1500", "PDW-HD1550", "PDW-F75", "PDW-R1", "PDW-U2", "PDW-U4",
-            "XDS-PD1000", "XDS-PD2000", "PMW-RX50", "PZW-2000", "PZW-3000", "PZW-4000"]),
+            "XDS-PD1000", "XDS-PD2000", "PMW-RX50", "PZW-4000"]),
         ("HDV (HVR)", ["HVR-M15", "HVR-M25", "HVR-M35"]),
     ]},
     {"name": "Panasonic", "slug": "panasonic", "label": "Panasonic Decks & Recorders", "filled": True, "groups": [
