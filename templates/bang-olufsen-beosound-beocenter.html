@@ -61,7 +61,7 @@
       <label for="msModel">Choose your model</label>
       <select id="msModel" aria-describedby="msHelp">
         <option value="">Select a Beosound or Beocenter&hellip;</option>
-        <optgroup label="Featured"><option value="Beosound 9000">Beosound 9000</option></optgroup>
+        <option value="Beosound 9000">Beosound 9000</option>
         {% for title, sub, models in sound %}
         <optgroup label="Beosound &middot; {{ title|striptags|replace('&amp;','&') }}">
           {% for m in models %}<option value="{{ m }}">{{ m }}</option>{% endfor %}
@@ -81,9 +81,8 @@
 <section class="bo-sec" style="padding:48px 0 8px">
   <div class="bo-wrap">
     <div class="b9">
-      <div class="b9-pic"><span class="tv-tag">Featured</span><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/beosound9000.jpg" alt="Bang &amp; Olufsen Beosound 9000 multi-CD player" loading="lazy"></div>
+      <div class="b9-pic"><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/beosound9000.jpg" alt="Bang &amp; Olufsen Beosound 9000 multi-CD player" loading="lazy"></div>
       <div class="b9-body">
-        <div class="bo-eyebrow">Featured Repair</div>
         <h2>Beosound <b>9000</b></h2>
         <p>The multi-CD player that changed the look of audio, 1996 to 2011. It is also the one we repair more than any other. Disc not reading, glass door or sledge stuck, a "Cleaning required" message that won't clear: we fix them.</p>
         <ul class="b9-list"><li>Sensor and lens cleaning</li><li>Laser cleaning and replacement</li><li>Motor, clamp and sledge repair</li><li>Service-mode diagnostics</li></ul>
