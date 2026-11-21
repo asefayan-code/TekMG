@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% block title %}Bang &amp; Olufsen Authorized Service Center in Burbank, CA | Tek Media Group{% endblock %}
+{% block desc %}Bang &amp; Olufsen authorized service center in Burbank, CA. Repair and restoration of Beosound, BeoLab, Beocenter, Beogram and Beovision, in and out of warranty. Serving California, Nevada and Arizona with nationwide shipping. Free estimates. Call (818) 244-4440.{% endblock %}
+{% block canon %}/bang-and-olufsen{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://tekmg.com/#business","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","email":"jt@tekmg.com","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},{"@type":"Service","@id":"https://tekmg.com/bang-and-olufsen#service","name":"Bang & Olufsen Authorized Service and Repair","serviceType":"Bang & Olufsen repair","provider":{"@id":"https://tekmg.com/#business"},"areaServed":["California","Nevada","Arizona"],"description":"Warranty and out-of-warranty repair and restoration of Beosound, BeoLab, Beocenter, Beogram and Beovision. Nationwide shipping accepted. Free estimates.","url":"https://tekmg.com/bang-and-olufsen"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-and-olufsen"}]}]}{% endraw %}
+</script>
+<style>
+.bo{--red:#b3122b;--ink:#1a1a1c;--mid:#555a60;--line:#e4e4e0;--soft:#f5f5f3;color:var(--ink);font-weight:400;line-height:1.7}
+.bo *{box-sizing:border-box}
+.bo-wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.bo-hero{text-align:center;padding:64px 0 54px;position:relative;overflow:hidden;background:#fff}
+.bo-eyebrow{font-size:.72rem;letter-spacing:.38em;text-transform:uppercase;color:var(--red);margin-bottom:18px;font-weight:600}
+.bo h1{font-weight:200;font-size:clamp(2rem,6vw,3.9rem);line-height:1.1;letter-spacing:-.01em;color:var(--ink)}
+.bo h1 b{font-weight:300;color:var(--red)}
+.bo-lead{max-width:640px;margin:22px auto 0;font-size:1.05rem;color:var(--mid)}
+.bo-btns{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.bo-btn{display:inline-block;padding:13px 28px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;transition:.25s}
+.bo-btn:hover{background:var(--ink);color:#fff}
+.bo-btn.solid{background:var(--red);border-color:var(--red);color:#fff}
+.bo-btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+.bo-badges{margin-top:40px;display:flex;justify-content:center;gap:12px 34px;flex-wrap:wrap;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);font-weight:600}
+.bo-badges span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red);margin-right:10px;vertical-align:middle}
+.bo-rings{position:absolute;left:50%;top:46%;width:0;height:0;pointer-events:none}
+.bo-rings i{position:absolute;border:1px solid rgba(179,18,43,.16);border-radius:50%;transform:translate(-50%,-50%);animation:boring 9s linear infinite;opacity:0}
+.bo-rings i:nth-child(2){animation-delay:3s}.bo-rings i:nth-child(3){animation-delay:6s}
+@keyframes boring{0%{width:80px;height:80px;opacity:1}100%{width:1100px;height:1100px;opacity:0}}
+.bo-hero .bo-wrap{position:relative;z-index:2}
+.bo-sec{padding:64px 0}
+.bo-alt{background:var(--soft)}
+.bo-head{text-align:center;margin-bottom:40px}
+.bo h2{font-weight:200;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.15;color:var(--ink);margin:0}
+.bo h2 b{font-weight:300;color:var(--red)}
+.bo-head p{max-width:580px;margin:14px auto 0;color:var(--mid)}
+.bo-promo{border:1px solid var(--red);padding:18px 22px;text-align:center;margin-bottom:36px;background:#fff}
+.bo-promo strong{color:var(--red);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;display:block;margin-bottom:4px}
+.bo-picker{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:36px}
+.bo-picker label{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);font-weight:600}
+.bo-picker select{padding:13px 18px;font:inherit;font-size:16px;min-width:270px;max-width:100%;border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:0}
+.bo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.bo-card{border:1px solid var(--line);background:#fff;padding:30px 26px;scroll-margin-top:90px;transition:.25s}
+.bo-card:hover,.bo-card:target{border-color:var(--red);box-shadow:0 12px 30px rgba(0,0,0,.07)}
+.bo-num{font-weight:100;font-size:2.8rem;line-height:1;color:#d4d4d0;margin-bottom:10px;transition:.25s}
+.bo-card:hover .bo-num,.bo-card:target .bo-num{color:var(--red)}
+.bo-card h3{font-weight:600;font-size:1.2rem;margin:0;color:var(--ink)}
+.bo-sub{color:var(--red);font-size:.9rem;margin:2px 0 12px}
+.bo-card p{font-size:.94rem;color:var(--mid);margin:0}
+.bo-card ul{margin:14px 0 0;padding:0;list-style:none;font-size:.88rem}
+.bo-card li{padding:7px 0;border-top:1px solid var(--line)}
+.bo-card li::before{content:"\2013";color:var(--red);margin-right:10px}
+.bo-split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+@media(max-width:820px){.bo-split{grid-template-columns:1fr;gap:34px}}
+.bo-platter{width:min(300px,70vw);aspect-ratio:1;margin:0 auto;border-radius:50%;position:relative;background:conic-gradient(#222,#3a3a3e,#222,#444,#222,#3a3a3e,#222);box-shadow:0 22px 52px rgba(0,0,0,.25),inset 0 0 0 11px #111;animation:bospin 14s linear infinite}
+.bo-platter::before{content:"";position:absolute;inset:16%;border-radius:50%;background:repeating-radial-gradient(circle,#0b0b0c 0 2px,#17171a 2px 4px)}
+.bo-platter::after{content:"";position:absolute;inset:41%;border-radius:50%;background:var(--red);box-shadow:inset 0 0 0 5px #111}
+@keyframes bospin{to{transform:rotate(360deg)}}
+.bo-split h2{margin-bottom:16px}.bo-split p{margin:0 0 12px;color:var(--mid)}
+.bo-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.bo-pills span{border:1px solid var(--line);padding:6px 13px;font-size:.76rem;letter-spacing:.08em;color:var(--mid);background:#fff}
+.bo-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;counter-reset:bos}
+.bo-step{counter-increment:bos;border-top:2px solid var(--red);padding-top:18px}
+.bo-step::before{content:"0" counter(bos);font-weight:100;font-size:2rem;color:var(--red)}
+.bo-step h4{font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.84rem;margin:6px 0 8px;color:var(--ink)}
+.bo-step p{font-size:.92rem;color:var(--mid);margin:0}
+.bo-faq{max-width:820px;margin:0 auto}
+.bo details{border-bottom:1px solid var(--line);padding:18px 0}
+.bo details:first-child{border-top:1px solid var(--line)}
+.bo summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;font-size:1.02rem;font-weight:500}
+.bo summary::-webkit-details-marker{display:none}
+.bo summary::after{content:"+";color:var(--red);font-size:1.4rem;line-height:1}
+.bo details[open] summary::after{content:"\2013"}
+.bo details p{margin:10px 0 0;color:var(--mid)}
+.bo-note{text-align:center;margin-top:26px;font-size:.92rem;color:var(--mid)}
+@media(prefers-reduced-motion:reduce){.bo-platter,.bo-rings i{animation:none}}
+</style>
+{% endblock %}
+{% block content %}
+<div class="bo">
+
+<section class="bo-hero">
+  <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="bo-wrap">
+    <div class="bo-eyebrow">Authorized Service Center &middot; Burbank, CA</div>
+    <h1>Bang &amp; Olufsen,<br><b>sounding the way it should.</b></h1>
+    <p class="bo-lead">Repair and restoration of vintage and current Bang &amp; Olufsen, in warranty and out. Serving California, Nevada and Arizona, with nationwide shipping.</p>
+    <div class="bo-btns">
+      <a class="bo-btn solid" href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket</a>
+      <a class="bo-btn" href="#models">Find Your Model</a>
+    </div>
+    <div class="bo-badges"><span>Authorized B&amp;O Service</span><span>Free Estimates</span><span>Since 1993</span></div>
+  </div>
+</section>
+
+<section class="bo-sec bo-alt" id="models">
+  <div class="bo-wrap">
+    <div class="bo-head">
+      <div class="bo-eyebrow">The Collection</div>
+      <h2>Every era of <b>Beo.</b></h2>
+      <p>Pick your product family to jump straight to it.</p>
+    </div>
+
+    <div class="bo-promo"><strong>Turntable Refurbishing Program</strong>Complete refurbishing for the Beogram 4000, 4002, 4004 and 8000.</div>
+
+    <div class="bo-picker">
+      <label for="boFam">Jump to</label>
+      <select id="boFam" onchange="if(this.value){location.hash=this.value}">
+        <option value="">Choose your B&amp;O family&hellip;</option>
+        <option value="beosound">Beosound</option>
+        <option value="beolab">BeoLab speakers</option>
+        <option value="beocenter">Beocenter</option>
+        <option value="beogram">Beogram turntables</option>
+        <option value="beovision">Beovision TVs</option>
+      </select>
+    </div>
+
+    <div class="bo-grid">
+      <article class="bo-card" id="beosound">
+        <div class="bo-num">01</div>
+        <h3>Beosound</h3>
+        <div class="bo-sub">From the Beosound 9000 to today's multi-room</div>
+        <p>CD player service including sensor and lens cleaning, laser replacement, and motor and clamp repair, plus streaming and multi-room models from every era.</p>
+        <ul><li>Beosound 9000 CD player</li><li>Early 2010s and late 2010s multi-room</li><li>2020 to present and architectural / outdoor</li><li>Legacy pre-2000s models</li></ul>
+      </article>
+
+      <article class="bo-card" id="beolab">
+        <div class="bo-num">02</div>
+        <h3>BeoLab</h3>
+        <div class="bo-sub">BeoLab 1 through 28, Penta and A9</div>
+        <p>No sound, distortion, hum and wireless failures. Amplifier modules, DSP boards and protection-mode faults are handled with proper ESD protection and the right parts.</p>
+        <ul><li>BeoLab 1 through 28</li><li>BeoLab Penta and A9</li><li>Amplifier and DSP repair</li><li>Wireless connectivity faults</li></ul>
+      </article>
+
+      <article class="bo-card" id="beocenter">
+        <div class="bo-num">03</div>
+        <h3>Beocenter</h3>
+        <div class="bo-sub">Beocenter 2 through 9500</div>
+        <p>CD, cassette, radio, display and power supply faults on the all-in-one systems.</p>
+        <ul><li>CD and cassette mechanisms</li><li>Radio and tuner</li><li>Display problems</li><li>Power supply repair</li></ul>
+      </article>
+
+      <article class="bo-card" id="beogram">
+        <div class="bo-num">04</div>
+        <h3>Beogram</h3>
+        <div class="bo-sub">Complete turntable refurbishing</div>
+        <p>Our refurbishing program covers the Beogram 4000, 4002, 4004 and 8000, going through the whole machine rather than just the symptom.</p>
+        <ul><li>Beogram 4000 / 4002 / 4004</li><li>Beogram 8000</li><li>Tonearm, belts and motor</li><li>Full refurbishing</li></ul>
+      </article>
+
+      <article class="bo-card" id="beovision">
+        <div class="bo-num">05</div>
+        <h3>Beovision</h3>
+        <div class="bo-sub">Beovision 4 through 16</div>
+        <p>Television repair for the Beovision line. Call with your model and we'll tell you what we can do.</p>
+        <ul><li>Beovision 4 through 16</li><li>Picture and sound faults</li><li>Power and standby problems</li></ul>
+      </article>
+    </div>
+
+    <p class="bo-note">Don't see your model? That doesn't mean we don't work on it. Start a ticket and we'll take a look.</p>
+  </div>
+</section>
+
+<section class="bo-sec">
+  <div class="bo-wrap bo-split">
+    <div><div class="bo-platter" aria-hidden="true"></div></div>
+    <div>
+      <div class="bo-eyebrow">Spotlight</div>
+      <h2>The Beogram <b>deserves patience.</b></h2>
+      <p>Belts, motor, tonearm lift, servo electronics and tracking all have to agree before a record sounds the way the designers intended. Our refurbishing program treats the whole turntable, not just the part that failed.</p>
+      <div class="bo-pills"><span>Tonearm &amp; lift</span><span>Drive belts</span><span>Motor &amp; speed</span><span>Servo electronics</span><span>Full refurbishing</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec bo-alt">
+  <div class="bo-wrap">
+    <div class="bo-head"><div class="bo-eyebrow">How It Works</div><h2>Four steps. <b>No surprises.</b></h2></div>
+    <div class="bo-steps">
+      <div class="bo-step"><h4>Start a ticket</h4><p>Tell us the model and what it's doing. Takes two minutes online.</p></div>
+      <div class="bo-step"><h4>Bring it in or ship it</h4><p>Visit our Burbank shop or ship from anywhere in the country.</p></div>
+      <div class="bo-step"><h4>Free estimate</h4><p>We diagnose it and give you a clear price before any repair work begins.</p></div>
+      <div class="bo-step"><h4>Back to life</h4><p>Repaired, tested and on its way back to you. Track your ticket online.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec">
+  <div class="bo-wrap">
+    <div class="bo-head"><div class="bo-eyebrow">Questions</div><h2>Good to <b>know.</b></h2></div>
+    <div class="bo-faq">
+      <details><summary>Do you service B&amp;O under warranty?</summary><p>Yes. We are an authorized service center and handle both warranty and out-of-warranty repairs.</p></details>
+      <details><summary>Do you ship nationwide?</summary><p>Yes. We serve California, Nevada and Arizona locally and accept B&amp;O equipment shipped from anywhere in the country. Start a ticket and we'll walk you through it.</p></details>
+      <details><summary>How much does an estimate cost?</summary><p>Estimates are free. You approve the price before any work is done.</p></details>
+      <details><summary>Can an old Beogram or Beocenter really be saved?</summary><p>In most cases, yes. Age-related problems are exactly what we are set up to fix.</p></details>
+      <details><summary>What are your hours?</summary><p>Monday to Friday, 8:30 AM to 5:00 PM. Weekends, holidays and after hours are by appointment only.</p></details>
+    </div>
+  </div>
+</section>
+
+</div>
+{% endblock %}
