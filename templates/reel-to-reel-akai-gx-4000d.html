@@ -8,186 +8,167 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/akai">Akai</a> &rsaquo; Akai GX-4000D</nav><span class="rr-eyebrow">Akai reel-to-reel repair</span><h1>Akai GX-4000D Reel-to-Reel Tape Deck</h1><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>Akai</dd></div><div><dt>Model</dt><dd>Akai GX-4000D</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#critical-capacitors-to-replace">Critical Capacitors to Replace</a><a href="#capacitor-replacement-reference-table">Capacitor Replacement Reference Table</a><a href="#common-symptoms-of-failing-capacitors">Common Symptoms of Failing Capacitors</a><a href="#replacement-recommendations">Replacement Recommendations</a><a href="#board-specific-capacitor-locations">Board-Specific Capacitor Locations</a><a href="#general-maintenance-tips">General Maintenance Tips</a></nav><article class="rr-card rr-body"><div class="container">
-        <div class="header">
-            
-            <div class="subtitle">Capacitor Replacement Guide & Maintenance Reference</div>
-        </div>
-
-        <div class="content">
-            <div class="disclaimer">
-                <strong>ACCURACY DISCLAIMER:</strong> This information is compiled from various sources and may contain inaccuracies. Component locations and values should be verified against the official Akai service manual. We cannot guarantee the correctness of this information. Always double-check with official documentation before performing any repairs.
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/akai">Akai</a> › Akai GX-4000D</nav><span class="rr-eyebrow">Akai reel-to-reel repair</span><h1>Akai GX-4000D Reel-to-Reel Tape Deck</h1><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Akai</dd></div><div><dt>Model</dt><dd>Akai GX-4000D</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#critical-capacitors-to-replace">Critical Capacitors to Replace</a><a href="#capacitor-replacement-reference-table">Capacitor Replacement Reference Table</a><a href="#common-symptoms-of-failing-capacitors">Common Symptoms of Failing Capacitors</a><a href="#replacement-recommendations">Replacement Recommendations</a><a href="#board-specific-capacitor-locations">Board-Specific Capacitor Locations</a><a href="#general-maintenance-tips">General Maintenance Tips</a></nav><article class="rr-card rr-body"><div class="container">
+<div class="header">
+<div class="subtitle">Capacitor Replacement Guide &amp; Maintenance Reference</div>
+</div>
+<div class="content">
+<div class="disclaimer">
+<strong>ACCURACY DISCLAIMER:</strong> This information is compiled from various sources and may contain inaccuracies. Component locations and values should be verified against the official Akai service manual. We cannot guarantee the correctness of this information. Always double-check with official documentation before performing any repairs.
             </div>
-            
-            <div class="note">
-                <strong>Note:</strong> The <span class="model-highlight">Akai GX-4000D</span> is a semi-professional reel-to-reel deck featuring Akai's famous glass & crystal ferrite (GX) heads. Capacitor replacement should be performed carefully to preserve its audio quality.
+<div class="note">
+<strong>Note:</strong> The <span class="model-highlight">Akai GX-4000D</span> is a semi-professional reel-to-reel deck featuring Akai's famous glass &amp; crystal ferrite (GX) heads. Capacitor replacement should be performed carefully to preserve its audio quality.
                 <div class="accuracy-note">Component locations based on general information about similar Akai models - verify with service manual</div>
-            </div>
-
-            <h2 id="critical-capacitors-to-replace">Critical Capacitors to Replace</h2>
-            
-            <div class="section">
-                <h3>Power Supply Section</h3>
-                <ul>
-                    <li>Main filter capacitors - C701, C702 (large electrolytic cans)</li>
-                    <li>Voltage regulator capacitors - C703, C704</li>
-                    <li>Rectifier circuit smoothing capacitors - C705, C706</li>
-                    <li>DC protection circuit capacitors - C707, C708</li>
-                </ul>
-                <div class="accuracy-note">Capacitor numbering may vary between production runs - verify with service manual</div>
-            </div>
-            
-            <div class="section">
-                <h3>Audio Signal Path</h3>
-                <ul>
-                    <li>Input coupling capacitors - C101-C104 (Record amp), C201-C204 (Playback amp)</li>
-                    <li>Equalization circuit capacitors - C105-C108 (Record), C205-C208 (Playback)</li>
-                    <li>Bias oscillator capacitors - C301, C302</li>
-                    <li>Output coupling capacitors - C209-C212</li>
-                </ul>
-                <div class="accuracy-note">Specific capacitor numbers should be verified against your unit's board</div>
-            </div>
-            
-            <div class="section">
-                <h3>Motor Control Circuits</h3>
-                <ul>
-                    <li>Capstan motor run capacitors - C501, C502</li>
-                    <li>Reel motor capacitors - C503, C504</li>
-                    <li>Speed control timing capacitors - C505, C506</li>
-                    <li>Braking circuit capacitors - C507, C508</li>
-                </ul>
-                <div class="accuracy-note">Motor control board layout may differ between units</div>
-            </div>
-
-            <h2 id="capacitor-replacement-reference-table">Capacitor Replacement Reference Table</h2>
-            
-            <table>
-                <tr>
-                    <th>Location/Board</th>
-                    <th>Capacitor Codes</th>
-                    <th>Type</th>
-                    <th>Recommended Replacement</th>
-                </tr>
-                <tr>
-                    <td>Power Supply Board</td>
-                    <td>C701-C708</td>
-                    <td><span class="cap-type electrolytic">Electrolytic</span></td>
-                    <td>Low-ESR, 105°C rated</td>
-                </tr>
-                <tr>
-                    <td>Record Amplifier</td>
-                    <td>C101-C112</td>
-                    <td><span class="cap-type electrolytic">Electrolytic</span><span class="cap-type film">Film</span></td>
-                    <td>Audio-grade for signal path</td>
-                </tr>
-                <tr>
-                    <td>Playback Amplifier</td>
-                    <td>C201-C212</td>
-                    <td><span class="cap-type electrolytic">Electrolytic</span><span class="cap-type film">Film</span></td>
-                    <td>Audio-grade, precise values</td>
-                </tr>
-                <tr>
-                    <td>Bias/Oscillator Circuit</td>
-                    <td>C301-C306</td>
-                    <td><span class="cap-type film">Film</span><span class="cap-type ceramic">Ceramic</span></td>
-                    <td>High-voltage, stable values</td>
-                </tr>
-                <tr>
-                    <td>Motor Control Board</td>
-                    <td>C501-C508</td>
-                    <td><span class="cap-type electrolytic">Electrolytic</span><span class="cap-type ceramic">Ceramic</span></td>
-                    <td>Stable temperature characteristics</td>
-                </tr>
-            </table>
-            <div class="accuracy-note">Table based on general information - specific values and locations may differ</div>
-            
-            <h2 id="common-symptoms-of-failing-capacitors">Common Symptoms of Failing Capacitors</h2>
-            <ul>
-                <li>Hum or buzz in audio output (especially 60/120Hz)</li>
-                <li>Weak, thin, or distorted sound</li>
-                <li>Inconsistent tape speed or wow/flutter</li>
-                <li>Motor not starting or running erratically</li>
-                <li>Functions not working properly (play, record, rewind)</li>
-                <li>Complete failure to power on</li>
-                <li>Bias oscillator not functioning (affects recording)</li>
-            </ul>
-            
-            <div class="warning">
-                <strong>Warning:</strong> Always discharge large capacitors before working on the unit. The power supply section can hold dangerous voltages even when unplugged. Use appropriate safety equipment.
+</div>
+<h2 id="critical-capacitors-to-replace">Critical Capacitors to Replace</h2>
+<div class="section">
+<h3>Power Supply Section</h3>
+<ul>
+<li>Main filter capacitors - C701, C702 (large electrolytic cans)</li>
+<li>Voltage regulator capacitors - C703, C704</li>
+<li>Rectifier circuit smoothing capacitors - C705, C706</li>
+<li>DC protection circuit capacitors - C707, C708</li>
+</ul>
+<div class="accuracy-note">Capacitor numbering may vary between production runs - verify with service manual</div>
+</div>
+<div class="section">
+<h3>Audio Signal Path</h3>
+<ul>
+<li>Input coupling capacitors - C101-C104 (Record amp), C201-C204 (Playback amp)</li>
+<li>Equalization circuit capacitors - C105-C108 (Record), C205-C208 (Playback)</li>
+<li>Bias oscillator capacitors - C301, C302</li>
+<li>Output coupling capacitors - C209-C212</li>
+</ul>
+<div class="accuracy-note">Specific capacitor numbers should be verified against your unit's board</div>
+</div>
+<div class="section">
+<h3>Motor Control Circuits</h3>
+<ul>
+<li>Capstan motor run capacitors - C501, C502</li>
+<li>Reel motor capacitors - C503, C504</li>
+<li>Speed control timing capacitors - C505, C506</li>
+<li>Braking circuit capacitors - C507, C508</li>
+</ul>
+<div class="accuracy-note">Motor control board layout may differ between units</div>
+</div>
+<h2 id="capacitor-replacement-reference-table">Capacitor Replacement Reference Table</h2>
+<table>
+<tr>
+<th>Location/Board</th>
+<th>Capacitor Codes</th>
+<th>Type</th>
+<th>Recommended Replacement</th>
+</tr>
+<tr>
+<td>Power Supply Board</td>
+<td>C701-C708</td>
+<td><span class="cap-type electrolytic">Electrolytic</span></td>
+<td>Low-ESR, 105°C rated</td>
+</tr>
+<tr>
+<td>Record Amplifier</td>
+<td>C101-C112</td>
+<td><span class="cap-type electrolytic">Electrolytic</span><span class="cap-type film">Film</span></td>
+<td>Audio-grade for signal path</td>
+</tr>
+<tr>
+<td>Playback Amplifier</td>
+<td>C201-C212</td>
+<td><span class="cap-type electrolytic">Electrolytic</span><span class="cap-type film">Film</span></td>
+<td>Audio-grade, precise values</td>
+</tr>
+<tr>
+<td>Bias/Oscillator Circuit</td>
+<td>C301-C306</td>
+<td><span class="cap-type film">Film</span><span class="cap-type ceramic">Ceramic</span></td>
+<td>High-voltage, stable values</td>
+</tr>
+<tr>
+<td>Motor Control Board</td>
+<td>C501-C508</td>
+<td><span class="cap-type electrolytic">Electrolytic</span><span class="cap-type ceramic">Ceramic</span></td>
+<td>Stable temperature characteristics</td>
+</tr>
+</table>
+<div class="accuracy-note">Table based on general information - specific values and locations may differ</div>
+<h2 id="common-symptoms-of-failing-capacitors">Common Symptoms of Failing Capacitors</h2>
+<ul>
+<li>Hum or buzz in audio output (especially 60/120Hz)</li>
+<li>Weak, thin, or distorted sound</li>
+<li>Inconsistent tape speed or wow/flutter</li>
+<li>Motor not starting or running erratically</li>
+<li>Functions not working properly (play, record, rewind)</li>
+<li>Complete failure to power on</li>
+<li>Bias oscillator not functioning (affects recording)</li>
+</ul>
+<div class="warning">
+<strong>Warning:</strong> Always discharge large capacitors before working on the unit. The power supply section can hold dangerous voltages even when unplugged. Use appropriate safety equipment.
                 <div class="accuracy-note">Safety information is accurate and should be followed carefully</div>
-            </div>
-            
-            <h2 id="replacement-recommendations">Replacement Recommendations</h2>
-            <ul>
-                <li>Use high-quality replacement capacitors from reputable brands (Nichicon, Panasonic, Elna)</li>
-                <li>For electrolytics, use 105°C rated capacitors for longer life</li>
-                <li>In audio signal paths, consider using film capacitors instead of electrolytics where possible</li>
-                <li>Match or slightly exceed the original voltage rating</li>
-                <li>Note polarity when replacing polarized capacitors</li>
-                <li>For the bias circuit, use capacitors with stable values over temperature</li>
-            </ul>
-            
-            <h2 id="board-specific-capacitor-locations">Board-Specific Capacitor Locations</h2>
-            
-            <div class="board-diagram">
-                <div class="board-title">Power Supply Board</div>
-                <ul class="cap-list">
-                    <li><strong>C701, C702:</strong> Large main filter capacitors (usually 2200μF/35V)</li>
-                    <li><strong>C703, C704:</strong> Voltage regulator filters</li>
-                    <li><strong>C705, C706:</strong> Secondary filter capacitors</li>
-                    <li><strong>C707, C708:</strong> Regulation/filter capacitors for various voltage rails</li>
-                </ul>
-                <div class="accuracy-note">Board layout may vary - consult service manual for accurate component locations</div>
-            </div>
-            
-            <div class="board-diagram">
-                <div class="board-title">Record/Playback Amplifier Board</div>
-                <ul class="cap-list">
-                    <li><strong>C101-C104:</strong> Input coupling capacitors (Record section)</li>
-                    <li><strong>C105-C108:</strong> EQ network capacitors (Record section)</li>
-                    <li><strong>C201-C204:</strong> Input coupling capacitors (Playback section)</li>
-                    <li><strong>C205-C208:</strong> EQ network capacitors (Playback section)</li>
-                    <li><strong>C209-C212:</strong> Output coupling capacitors</li>
-                </ul>
-                <div class="accuracy-note">Specific capacitor numbering should be verified on your unit's board</div>
-            </div>
-            
-            <div class="board-diagram">
-                <div class="board-title">Bias/Oscillator Board</div>
-                <ul class="cap-list">
-                    <li><strong>C301, C302:</strong> Main oscillation capacitors</li>
-                    <li><strong>C303-C306:</strong> Bias adjustment and filtering capacitors</li>
-                </ul>
-                <div class="accuracy-note">Bias circuit configuration may differ between production runs</div>
-            </div>
-            
-            <div class="board-diagram">
-                <div class="board-title">Motor Control Board</div>
-                <ul class="cap-list">
-                    <li><strong>C501, C502:</strong> Capstan motor run capacitors</li>
-                    <li><strong>C503, C504:</strong> Reel motor capacitors</li>
-                    <li><strong>C505, C506:</strong> Speed control timing capacitors</li>
-                    <li><strong>C507, C508:</strong> Braking circuit capacitors</li>
-                </ul>
-                <div class="accuracy-note">Motor control implementation may vary - verify with service manual</div>
-            </div>
-            
-            <h2 id="general-maintenance-tips">General Maintenance Tips</h2>
-            <ul>
-                <li>Clean all switches and potentiometers with contact cleaner</li>
-                <li>Lubricate moving parts with appropriate lubricants (not on brakes or belts)</li>
-                <li>Check and replace worn belts and tires</li>
-                <li>Demagnetize the tape heads regularly (Akai GX heads require careful handling)</li>
-                <li>Adjust tape head alignment after any significant maintenance</li>
-                <li>Check and adjust bias current after capacitor replacement</li>
-                <li>Clean capstan and pinch roller with isopropyl alcohol</li>
-                <li>Check reel motor torque settings</li>
-            </ul>
-            
-            <div class="note">
-                <strong>Service Manual:</strong> For precise adjustments, obtain the Akai GX-4000D service manual which contains detailed schematics, alignment procedures, and calibration specifications. The GX-4000D requires proper calibration after capacitor replacement.
+</div>
+<h2 id="replacement-recommendations">Replacement Recommendations</h2>
+<ul>
+<li>Use high-quality replacement capacitors from reputable brands (Nichicon, Panasonic, Elna)</li>
+<li>For electrolytics, use 105°C rated capacitors for longer life</li>
+<li>In audio signal paths, consider using film capacitors instead of electrolytics where possible</li>
+<li>Match or slightly exceed the original voltage rating</li>
+<li>Note polarity when replacing polarized capacitors</li>
+<li>For the bias circuit, use capacitors with stable values over temperature</li>
+</ul>
+<h2 id="board-specific-capacitor-locations">Board-Specific Capacitor Locations</h2>
+<div class="board-diagram">
+<div class="board-title">Power Supply Board</div>
+<ul class="cap-list">
+<li><strong>C701, C702:</strong> Large main filter capacitors (usually 2200μF/35V)</li>
+<li><strong>C703, C704:</strong> Voltage regulator filters</li>
+<li><strong>C705, C706:</strong> Secondary filter capacitors</li>
+<li><strong>C707, C708:</strong> Regulation/filter capacitors for various voltage rails</li>
+</ul>
+<div class="accuracy-note">Board layout may vary - consult service manual for accurate component locations</div>
+</div>
+<div class="board-diagram">
+<div class="board-title">Record/Playback Amplifier Board</div>
+<ul class="cap-list">
+<li><strong>C101-C104:</strong> Input coupling capacitors (Record section)</li>
+<li><strong>C105-C108:</strong> EQ network capacitors (Record section)</li>
+<li><strong>C201-C204:</strong> Input coupling capacitors (Playback section)</li>
+<li><strong>C205-C208:</strong> EQ network capacitors (Playback section)</li>
+<li><strong>C209-C212:</strong> Output coupling capacitors</li>
+</ul>
+<div class="accuracy-note">Specific capacitor numbering should be verified on your unit's board</div>
+</div>
+<div class="board-diagram">
+<div class="board-title">Bias/Oscillator Board</div>
+<ul class="cap-list">
+<li><strong>C301, C302:</strong> Main oscillation capacitors</li>
+<li><strong>C303-C306:</strong> Bias adjustment and filtering capacitors</li>
+</ul>
+<div class="accuracy-note">Bias circuit configuration may differ between production runs</div>
+</div>
+<div class="board-diagram">
+<div class="board-title">Motor Control Board</div>
+<ul class="cap-list">
+<li><strong>C501, C502:</strong> Capstan motor run capacitors</li>
+<li><strong>C503, C504:</strong> Reel motor capacitors</li>
+<li><strong>C505, C506:</strong> Speed control timing capacitors</li>
+<li><strong>C507, C508:</strong> Braking circuit capacitors</li>
+</ul>
+<div class="accuracy-note">Motor control implementation may vary - verify with service manual</div>
+</div>
+<h2 id="general-maintenance-tips">General Maintenance Tips</h2>
+<ul>
+<li>Clean all switches and potentiometers with contact cleaner</li>
+<li>Lubricate moving parts with appropriate lubricants (not on brakes or belts)</li>
+<li>Check and replace worn belts and tires</li>
+<li>Demagnetize the tape heads regularly (Akai GX heads require careful handling)</li>
+<li>Adjust tape head alignment after any significant maintenance</li>
+<li>Check and adjust bias current after capacitor replacement</li>
+<li>Clean capstan and pinch roller with isopropyl alcohol</li>
+<li>Check reel motor torque settings</li>
+</ul>
+<div class="note">
+<strong>Service Manual:</strong> For precise adjustments, obtain the Akai GX-4000D service manual which contains detailed schematics, alignment procedures, and calibration specifications. The GX-4000D requires proper calibration after capacitor replacement.
                 <div class="accuracy-note">The service manual is the only truly accurate source of information for your specific unit</div>
-            </div>
-        </div>
-    </div></article><section class="rr-card"><h2 class="rr-h">More Akai models we service</h2><div class="rr-rel"><a href="/reel-to-reel/akai/akai-gx-635d">Akai GX-635D</a><a href="/reel-to-reel/akai/akai-gx-747">Akai GX-747</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Akai GX-4000D?</div><div>Yes. Tek Media Group repairs and restores the Akai GX-4000D at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Akai GX-4000D repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+</div>
+</div>
+</div></article><section class="rr-card"><h2 class="rr-h">More Akai models we service</h2><div class="rr-rel"><a href="/reel-to-reel/akai/akai-gx-635d">Akai GX-635D</a><a href="/reel-to-reel/akai/akai-gx-747">Akai GX-747</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Akai GX-4000D?</div><div>Yes. Tek Media Group repairs and restores the Akai GX-4000D at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Akai GX-4000D repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

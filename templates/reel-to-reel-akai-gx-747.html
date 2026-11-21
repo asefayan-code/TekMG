@@ -8,66 +8,59 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/akai">Akai</a> &rsaquo; Akai GX-747</nav><span class="rr-eyebrow">Akai reel-to-reel repair</span><h1>Akai GX-747 Repair and Maintenance Guide</h1><p class="rr-lead">The Akai GX-747 is a premium reel-to-reel tape recorder renowned for its exceptional sound quality and advanced features like auto-reverse and durable glass and ferrite (GX) heads.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>Akai</dd></div><div><dt>Model</dt><dd>Akai GX-747</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#capacitor-replacement">Capacitor Replacement</a><a href="#other-common-repairs">Other Common Repairs</a><a href="#adjustments-for-optimal-performance">Adjustments for Optimal Performance</a><a href="#sourcing-parts-and-services">Sourcing Parts and Services</a></nav><article class="rr-card rr-body"><div class="container">
-        
-        
-
-        <div class="section">
-            <h2 id="capacitor-replacement">Capacitor Replacement</h2>
-            <p><span class="highlight">Why Replace Capacitors:</span> Electrolytic capacitors in the Akai GX-747, like those in many vintage audio devices, degrade over time, leading to issues such as distorted sound, power supply instability, or motor speed inconsistencies. A full recap of all electrolytic capacitors on the unit’s circuit boards is recommended for a proper restoration.</p>
-            <h3>Key Capacitors to Replace</h3>
-            <ul>
-                <li><strong>Power Supply Board (C20):</strong> The capstan motor requires a motor run capacitor. For 50 Hz operation (e.g., Europe), replace the 3.5 µF capacitor with a 5.0 µF motor run capacitor. Alternatively, add a 1.5 µF capacitor in parallel to the existing 3.5 µF capacitor to achieve the required 5.0 µF for 50 Hz. For 60 Hz (e.g., U.S.), the 3.5 µF capacitor is typically sufficient. Use high-quality capacitors like WIMA or Illinois Capacitor for reliability. <a href="/">Tek Media Group</a> offers suitable replacement kits.</li>
-                <li><strong>Audio Boards:</strong> Replace all electrolytic capacitors on the audio (main) board to ensure clean signal paths. The GX-747DBX model may include up to 105 capacitors, often Nichicon audio-grade capacitors, for optimal performance. Check the schematic for exact values (e.g., 0.47 µF for certain signal paths) and replace with equivalent or upgraded audio-grade capacitors.</li>
-                <li><strong>Syscon Board:</strong> Replace electrolytic capacitors here to stabilize control circuits. Common values include 10 µF and 47 µF, but consult the service manual for specifics. Ensure polarity is correct to avoid damage.</li>
-                <li><strong>Spark Quenchers (CEE Versions):</strong> In some GX-747 models, spark quenchers (e.g., 0.1 µF with a 120 Ohm resistor) are prone to short-circuiting after decades of use. Replace these with modern equivalents, such as WIMA MKP 0.47 µF 630V film capacitors, to prevent smoke or failure.</li>
-            </ul>
-            <h3>Replacement Tips</h3>
-            <ul>
-                <li>Mark all cables before disassembling circuit boards to avoid confusion during reassembly.</li>
-                <li>Replace capacitors one at a time, verifying polarity against the board and schematic to prevent errors.</li>
-                <li>Use a vacuum desoldering station for clean removal, especially for dense boards, to avoid damaging traces.</li>
-                <li>Source high-quality capacitors from <a href="/">Tek Media Group</a> to ensure compatibility and performance.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2 id="other-common-repairs">Other Common Repairs</h2>
-            <p><span class="highlight">Additional Components:</span> Beyond capacitors, other parts may need attention to restore the GX-747 to full functionality.</p>
-            <ul>
-                <li><strong>Belts:</strong> The GX-747 uses two tension arm belts (approximately 15 mm diameter, resembling O-rings) and a counter belt. These degrade over time, causing transport issues or counter malfunctions. Replace with a belt kit from <a href="/">Tek Media Group</a>.</li>
-                <li><strong>Head Switches:</strong> Oxidized head switches can cause recording failures on one or both channels. Clean with a contact cleaner like Deoxit D5 or replace faulty switches if necessary.</li>
-                <li><strong>Input/Output Potentiometers:</strong> Scratchy or inconsistent line in/out controls may need cleaning with Deoxit D5 or replacement if damaged.</li>
-                <li><strong>Transistors:</strong> The 2SC458 transistors, common in Akai units, may fail and cause static. Replace any rectangular, slanted-top transistors showing signs of failure (e.g., green/black corrosion on legs).</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2 id="adjustments-for-optimal-performance">Adjustments for Optimal Performance</h2>
-            <p><span class="highlight">Calibration Needs:</span> After repairs, the GX-747 requires precise adjustments to ensure accurate playback, recording, and transport functions. Refer to the Akai GX-747 service manual (available through <a href="/">Tek Media Group</a>) for detailed schematics and procedures.</p>
-            <h3>Key Adjustments</h3>
-            <ul>
-                <li><strong>Tape Speed Calibration:</strong> Verify capstan motor speed using a test tape (7½ or 3¾ ips). Adjust the capstan motor control circuit (potentiometer VR1 on the syscon board) to achieve accurate speed. Incorrect capacitor values (e.g., 3.5 µF vs. 5.0 µF) can cause speed drift, so ensure the correct motor run capacitor is installed.</li>
-                <li><strong>Head Alignment:</strong> Align the GX heads for optimal azimuth and height using a reference tape (e.g., 1 kHz test tone). Adjust the head screws to maximize signal output and minimize phase errors. Check both forward and reverse directions due to the auto-reverse feature.</li>
-                <li><strong>Bias and Equalization:</strong> Adjust bias current and equalization for recording accuracy. Use an audio oscillator and VU meter to set bias levels (typically via VR2/VR3 on the audio board) to match tape type (e.g., Maxell UD or BASF). Ensure left and right channels are balanced.</li>
-                <li><strong>Tension Arm Adjustment:</strong> Ensure proper tape tension by adjusting the tension arm springs. Incorrect tension can cause tape skew or wow/flutter. Use a spring gauge to set tension per the service manual (approximately 50–70g for the GX-747).</li>
-                <li><strong>Playback Level Calibration:</strong> Connect the GX-747 to an amplifier, set the monitor switch to ‘source,’ and adjust the line-in controls to ensure green LEDs light up with signal input. Calibrate output levels using a 400 Hz test tape to match VU meter readings.</li>
-            </ul>
-            <h3>Adjustment Tips</h3>
-            <ul>
-                <li>Use high-quality test equipment (e.g., oscilloscope, frequency counter) for precise adjustments.</li>
-                <li>Perform adjustments in a clean, static-free environment to avoid damaging sensitive components.</li>
-                <li>Consult the service manual for exact settings and tolerances, available through <a href="/">Tek Media Group</a>.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2 id="sourcing-parts-and-services">Sourcing Parts and Services</h2>
-            <p>For all replacement parts, including capacitors, belts, and transistors, as well as professional repair services, we recommend <a href="/">Tek Media Group</a>. They specialize in vintage audio equipment and offer high-quality components and expert restoration services tailored to the Akai GX-747.</p>
-        </div>
-
-        <div class="disclaimer">
-            <p><strong>Disclaimer:</strong> Tek Media Group is not responsible for the content of this guide. The information provided is for informational purposes only and does not constitute professional advice. Always consult a qualified technician for repairs and adjustments.</p>
-        </div>
-    </div></article><section class="rr-card"><h2 class="rr-h">More Akai models we service</h2><div class="rr-rel"><a href="/reel-to-reel/akai/akai-gx-4000d">Akai GX-4000D</a><a href="/reel-to-reel/akai/akai-gx-635d">Akai GX-635D</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Akai GX-747?</div><div>Yes. Tek Media Group repairs and restores the Akai GX-747 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Akai GX-747 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/akai">Akai</a> › Akai GX-747</nav><span class="rr-eyebrow">Akai reel-to-reel repair</span><h1>Akai GX-747 Repair and Maintenance Guide</h1><p class="rr-lead">The Akai GX-747 is a premium reel-to-reel tape recorder renowned for its exceptional sound quality and advanced features like auto-reverse and durable glass and ferrite (GX) heads.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Akai</dd></div><div><dt>Model</dt><dd>Akai GX-747</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#capacitor-replacement">Capacitor Replacement</a><a href="#other-common-repairs">Other Common Repairs</a><a href="#adjustments-for-optimal-performance">Adjustments for Optimal Performance</a><a href="#sourcing-parts-and-services">Sourcing Parts and Services</a></nav><article class="rr-card rr-body"><div class="container">
+<div class="section">
+<h2 id="capacitor-replacement">Capacitor Replacement</h2>
+<p><span class="highlight">Why Replace Capacitors:</span> Electrolytic capacitors in the Akai GX-747, like those in many vintage audio devices, degrade over time, leading to issues such as distorted sound, power supply instability, or motor speed inconsistencies. A full recap of all electrolytic capacitors on the unit’s circuit boards is recommended for a proper restoration.</p>
+<h3>Key Capacitors to Replace</h3>
+<ul>
+<li><strong>Power Supply Board (C20):</strong> The capstan motor requires a motor run capacitor. For 50 Hz operation (e.g., Europe), replace the 3.5 µF capacitor with a 5.0 µF motor run capacitor. Alternatively, add a 1.5 µF capacitor in parallel to the existing 3.5 µF capacitor to achieve the required 5.0 µF for 50 Hz. For 60 Hz (e.g., U.S.), the 3.5 µF capacitor is typically sufficient. Use high-quality capacitors like WIMA or Illinois Capacitor for reliability. <a href="/">Tek Media Group</a> offers suitable replacement kits.</li>
+<li><strong>Audio Boards:</strong> Replace all electrolytic capacitors on the audio (main) board to ensure clean signal paths. The GX-747DBX model may include up to 105 capacitors, often Nichicon audio-grade capacitors, for optimal performance. Check the schematic for exact values (e.g., 0.47 µF for certain signal paths) and replace with equivalent or upgraded audio-grade capacitors.</li>
+<li><strong>Syscon Board:</strong> Replace electrolytic capacitors here to stabilize control circuits. Common values include 10 µF and 47 µF, but consult the service manual for specifics. Ensure polarity is correct to avoid damage.</li>
+<li><strong>Spark Quenchers (CEE Versions):</strong> In some GX-747 models, spark quenchers (e.g., 0.1 µF with a 120 Ohm resistor) are prone to short-circuiting after decades of use. Replace these with modern equivalents, such as WIMA MKP 0.47 µF 630V film capacitors, to prevent smoke or failure.</li>
+</ul>
+<h3>Replacement Tips</h3>
+<ul>
+<li>Mark all cables before disassembling circuit boards to avoid confusion during reassembly.</li>
+<li>Replace capacitors one at a time, verifying polarity against the board and schematic to prevent errors.</li>
+<li>Use a vacuum desoldering station for clean removal, especially for dense boards, to avoid damaging traces.</li>
+<li>Source high-quality capacitors from <a href="/">Tek Media Group</a> to ensure compatibility and performance.</li>
+</ul>
+</div>
+<div class="section">
+<h2 id="other-common-repairs">Other Common Repairs</h2>
+<p><span class="highlight">Additional Components:</span> Beyond capacitors, other parts may need attention to restore the GX-747 to full functionality.</p>
+<ul>
+<li><strong>Belts:</strong> The GX-747 uses two tension arm belts (approximately 15 mm diameter, resembling O-rings) and a counter belt. These degrade over time, causing transport issues or counter malfunctions. Replace with a belt kit from <a href="/">Tek Media Group</a>.</li>
+<li><strong>Head Switches:</strong> Oxidized head switches can cause recording failures on one or both channels. Clean with a contact cleaner like Deoxit D5 or replace faulty switches if necessary.</li>
+<li><strong>Input/Output Potentiometers:</strong> Scratchy or inconsistent line in/out controls may need cleaning with Deoxit D5 or replacement if damaged.</li>
+<li><strong>Transistors:</strong> The 2SC458 transistors, common in Akai units, may fail and cause static. Replace any rectangular, slanted-top transistors showing signs of failure (e.g., green/black corrosion on legs).</li>
+</ul>
+</div>
+<div class="section">
+<h2 id="adjustments-for-optimal-performance">Adjustments for Optimal Performance</h2>
+<p><span class="highlight">Calibration Needs:</span> After repairs, the GX-747 requires precise adjustments to ensure accurate playback, recording, and transport functions. Refer to the Akai GX-747 service manual (available through <a href="/">Tek Media Group</a>) for detailed schematics and procedures.</p>
+<h3>Key Adjustments</h3>
+<ul>
+<li><strong>Tape Speed Calibration:</strong> Verify capstan motor speed using a test tape (7½ or 3¾ ips). Adjust the capstan motor control circuit (potentiometer VR1 on the syscon board) to achieve accurate speed. Incorrect capacitor values (e.g., 3.5 µF vs. 5.0 µF) can cause speed drift, so ensure the correct motor run capacitor is installed.</li>
+<li><strong>Head Alignment:</strong> Align the GX heads for optimal azimuth and height using a reference tape (e.g., 1 kHz test tone). Adjust the head screws to maximize signal output and minimize phase errors. Check both forward and reverse directions due to the auto-reverse feature.</li>
+<li><strong>Bias and Equalization:</strong> Adjust bias current and equalization for recording accuracy. Use an audio oscillator and VU meter to set bias levels (typically via VR2/VR3 on the audio board) to match tape type (e.g., Maxell UD or BASF). Ensure left and right channels are balanced.</li>
+<li><strong>Tension Arm Adjustment:</strong> Ensure proper tape tension by adjusting the tension arm springs. Incorrect tension can cause tape skew or wow/flutter. Use a spring gauge to set tension per the service manual (approximately 50–70g for the GX-747).</li>
+<li><strong>Playback Level Calibration:</strong> Connect the GX-747 to an amplifier, set the monitor switch to ‘source,’ and adjust the line-in controls to ensure green LEDs light up with signal input. Calibrate output levels using a 400 Hz test tape to match VU meter readings.</li>
+</ul>
+<h3>Adjustment Tips</h3>
+<ul>
+<li>Use high-quality test equipment (e.g., oscilloscope, frequency counter) for precise adjustments.</li>
+<li>Perform adjustments in a clean, static-free environment to avoid damaging sensitive components.</li>
+<li>Consult the service manual for exact settings and tolerances, available through <a href="/">Tek Media Group</a>.</li>
+</ul>
+</div>
+<div class="section">
+<h2 id="sourcing-parts-and-services">Sourcing Parts and Services</h2>
+<p>For all replacement parts, including capacitors, belts, and transistors, as well as professional repair services, we recommend <a href="/">Tek Media Group</a>. They specialize in vintage audio equipment and offer high-quality components and expert restoration services tailored to the Akai GX-747.</p>
+</div>
+<div class="disclaimer">
+<p><strong>Disclaimer:</strong> Tek Media Group is not responsible for the content of this guide. The information provided is for informational purposes only and does not constitute professional advice. Always consult a qualified technician for repairs and adjustments.</p>
+</div>
+</div></article><section class="rr-card"><h2 class="rr-h">More Akai models we service</h2><div class="rr-rel"><a href="/reel-to-reel/akai/akai-gx-4000d">Akai GX-4000D</a><a href="/reel-to-reel/akai/akai-gx-635d">Akai GX-635D</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Akai GX-747?</div><div>Yes. Tek Media Group repairs and restores the Akai GX-747 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Akai GX-747 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

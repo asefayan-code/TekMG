@@ -8,684 +8,573 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/revox">Revox</a> &rsaquo; Revox B760</nav><span class="rr-eyebrow">Revox FM tuner repair</span><h1>Revox B760</h1><p class="rr-lead">The Revox B760 is widely considered one of the finest FM tuners ever manufactured. Produced by Studer-Revox from approximately 1977 to 1982, this digital synthesizer tuner represents the pinnacle of FM reception technology.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>Revox</dd></div><div><dt>Model</dt><dd>Revox B760</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#overview">Overview</a><a href="#current-market-value-2024-2025">Current Market Value (2024-2025)</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-fuse-identification-guide">⚠️ CRITICAL: Fuse Identification Guide</a><a href="#power-supply-troubleshooting">Power Supply Troubleshooting</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#b-dab-760-dab-fm-conversion">B-DAB-760 DAB+/FM Conversion</a><a href="#alignment-instructions-per-service-manua">Alignment Instructions (per Service …</a><a href="#common-troubleshooting-guide">Common Troubleshooting Guide</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
-        
-        
-        <div class="disclaimer">
-            <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/revox">Revox</a> › Revox B760</nav><span class="rr-eyebrow">Revox FM tuner repair</span><h1>Revox B760</h1><p class="rr-lead">The Revox B760 is widely considered one of the finest FM tuners ever manufactured. Produced by Studer-Revox from approximately 1977 to 1982, this digital synthesizer tuner represents the pinnacle of FM reception technology.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Revox</dd></div><div><dt>Model</dt><dd>Revox B760</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#overview">Overview</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-fuse-identification-guide">⚠️ CRITICAL: Fuse Identification Guide</a><a href="#power-supply-troubleshooting">Power Supply Troubleshooting</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#b-dab-760-dab-fm-conversion">B-DAB-760 DAB+/FM Conversion</a><a href="#alignment-instructions-per-service-manua">Alignment Instructions (per Service …</a><a href="#common-troubleshooting-guide">Common Troubleshooting Guide</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
+<div class="disclaimer">
+<strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
         </div>
-
-        <div class="danger">
-            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Revox B760 contains <span class="voltage-warning">RIFA "exploding" paper capacitors</span> that WILL fail catastrophically with smoke and fire. It also contains aging electrolytic capacitors that can cause power supply issues. <strong>Never apply mains power to an unrestored B760 without first replacing all RIFA capacitors and critical electrolytics.</strong>
-        </div>
-
-        <section id="overview">
-            <h2 id="overview">Overview</h2>
-            
-            
-            <div class="info-box">
-                <strong>📌 Key Specifications:</strong>
-                <ul>
-                    <li><strong>Type:</strong> Digital synthesizer FM tuner</li>
-                    <li><strong>Frequency Range:</strong> 87 to 107.975 MHz</li>
-                    <li><strong>Sensitivity:</strong> 2µV (FM)</li>
-                    <li><strong>Signal/Noise:</strong> 75dB (FM)</li>
-                    <li><strong>Distortion:</strong> 0.15% (FM)</li>
-                    <li><strong>Selectivity:</strong> 80dB (FM)</li>
-                    <li><strong>Frequency Response:</strong> 30Hz-15kHz (FM)</li>
-                    <li><strong>Output:</strong> 1160mV</li>
-                    <li><strong>Weight:</strong> 12 kg / 26.5 lbs</li>
-                </ul>
+<div class="danger">
+<strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Revox B760 contains <span class="voltage-warning">RIFA "exploding" paper capacitors</span> that WILL fail catastrophically with smoke and fire. It also contains aging electrolytic capacitors that can cause power supply issues. <strong>Never apply mains power to an unrestored B760 without first replacing all RIFA capacitors and critical electrolytics.</strong>
+</div>
+<section id="overview">
+<h2 id="overview">Overview</h2>
+<div class="info-box">
+<strong>📌 Key Specifications:</strong>
+<ul>
+<li><strong>Type:</strong> Digital synthesizer FM tuner</li>
+<li><strong>Frequency Range:</strong> 87 to 107.975 MHz</li>
+<li><strong>Sensitivity:</strong> 2µV (FM)</li>
+<li><strong>Signal/Noise:</strong> 75dB (FM)</li>
+<li><strong>Distortion:</strong> 0.15% (FM)</li>
+<li><strong>Selectivity:</strong> 80dB (FM)</li>
+<li><strong>Frequency Response:</strong> 30Hz-15kHz (FM)</li>
+<li><strong>Output:</strong> 1160mV</li>
+<li><strong>Weight:</strong> 12 kg / 26.5 lbs</li>
+</ul>
+</div>
+<p>The B760 features 15 station presets, adjustable deemphasis (25, 50, or 75µs), separately adjustable stereo and muting thresholds, oscilloscope outputs, and 25kHz or 50kHz tuning steps. Its modular construction with plug-in PCBs and plated RF shields exemplifies Studer-Revox's professional build quality.</p>
+</section>
+<section id="failures">
+<h2 id="common-failure-modes">Common Failure Modes</h2>
+<h3><span class="badge">#1</span> RIFA Capacitor Failure</h3>
+<p><strong>Symptom:</strong> Smoke, burning smell, loud cracking, blown mains fuse. One restorer noted: "Replaced troublesome RIFA capacitor at mains power inlet" as a standard repair.</p>
+<p><strong>Cause:</strong> Paper dielectric absorbs moisture over decades and shorts catastrophically.</p>
+<p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight before applying power. Located at mains power inlet and on power supply board.</p>
+<h3><span class="badge">#2</span> Power Supply Voltage Issues</h3>
+<p><strong>Symptom:</strong> Unstable operation, frequency jumps, stereo/mute lights flashing intermittently. One owner reported: "刚开机调到已存好的台，几分钟时，立体声灯（绿色）和静音灯交替闪动，收不到清晰电台声音，频率显示跳到别的频率" (After turning on to a preset station, after a few minutes the stereo and mute lights flash alternately, cannot receive clear station audio, frequency display jumps to other frequencies).</p>
+<p><strong>Cause:</strong> Aging electrolytic capacitors cause poor load regulation. Measured voltages in one case: +22V dropped to +19.7V, -22V to -19.6V, ±15V to ±14.5V, +6V to +5.6V.</p>
+<p><strong>Repair:</strong> Replace all electrolytic and tantalum capacitors on power supply board. Note: One owner reported replacing all caps but still had issues, suggesting deeper problems.</p>
+<h3><span class="badge">#3</span> Fuse Failures (Critical Diagnostic)</h3>
+<p><strong>Symptom:</strong> No tuning, no sound, partial functionality. One owner found: "F2 and F3 were blown, with F1 and F4 O.K.".</p>
+<p><strong>Cause:</strong> The B760 has five fuses with specific functions:</p>
+<div class="fuse-table">
+<ul>
+<li><strong>F1 (100 mA):</strong> Supplies +32V regulated and adjustable</li>
+<li><strong>F2, F3 (630 mA):</strong> Protect +22V unregulated, -22V unregulated, +15V regulated, -15V regulated</li>
+<li><strong>F4 (2A):</strong> In line with +6V and +5.6V regulated rails</li>
+<li><strong>F5 (250 mA):</strong> Rear panel mains entry fuse, changes with line voltage selection</li>
+</ul>
+</div>
+<p><strong>Repair:</strong> Check fuses and investigate downstream shorts. Revox sized fuses to protect the instrument, so they may blow from thermal stress, voltage surges, or rapid power cycling.</p>
+<h3><span class="badge">#4</span> Electrolytic Capacitor Deterioration</h3>
+<p><strong>Symptom:</strong> Power supply instability, noise, intermittent operation. Restorers consistently recommend: "Replaced all electrolytic capacitors".</p>
+<p><strong>Cause:</strong> 40+ year old electrolytics dry out and lose capacitance or develop high ESR.</p>
+<p><strong>Repair:</strong> Replace all electrolytic capacitors on all boards. Some restorers replace electrolytics with WIMA polypropylene film caps where possible. The B-DAB-760-REV revision kit includes "diverse Elkos, und vieles weiteres" (various electrolytics and much more).</p>
+<h3><span class="badge">#5</span> Internal Relay Failure</h3>
+<p><strong>Symptom:</strong> No sound output. One experienced technician noted: "Other no-sound issues... Internal relay. Seen this twice".</p>
+<p><strong>Cause:</strong> Relay contacts oxidize or coil fails after decades.</p>
+<p><strong>Repair:</strong> Replace internal relay with equivalent type.</p>
+<h3><span class="badge">#6</span> Ribbon Cable Connection Issues</h3>
+<p><strong>Symptom:</strong> Intermittent operation, no sound, erratic behavior. One expert noted: "Loose/dirty ribbon cable connector. Seen this too often to count".</p>
+<p><strong>Cause:</strong> Oxidation on connector contacts or loose connections.</p>
+<p><strong>Repair:</strong> Disconnect and reconnect ribbon cables, clean contacts with DeOxit if necessary.</p>
+<h3><span class="badge">#7</span> Tuning Meter Failure</h3>
+<p><strong>Symptom:</strong> Signal strength meter not working. One owner reported: "the tuning meters don't work". Another tuner was listed with: "Unfortunately, the signal VU meter doesn't work; I don't have a new one for it".</p>
+<p><strong>Cause:</strong> Meter mechanism failure, driver circuit issues, or bulb failure.</p>
+<p><strong>Repair:</strong> Check meter driver circuit, verify bulbs, replace meter if necessary. Calibration of signal strength meter per service manual section 4-10.</p>
+<h3><span class="badge">#8</span> Stereo Indicator Bulb Failure</h3>
+<p><strong>Symptom:</strong> Stereo indicator doesn't light even when receiving stereo signal. One owner asked: "know what the stereo bulb part is (not the revox part #)".</p>
+<p><strong>Cause:</strong> Bulbs burn out after decades of use.</p>
+<p><strong>Repair:</strong> Replace with appropriate bulb. Replacement of indicator lamps is covered in service manual section 2-2.</p>
+<h3><span class="badge">#9</span> Battery Holder Corrosion</h3>
+<p><strong>Symptom:</strong> Station presets lost when power is removed.</p>
+<p><strong>Cause:</strong> Corroded battery contacts from leaked batteries. One restorer performed: "Battery holder contacts cleaned and installed new batteries".</p>
+<p><strong>Repair:</strong> Clean contacts thoroughly, install fresh batteries. The DAB+ conversion notes that "Das Batteriefach und die Batteriespannung wird nicht mehr benötigt" (The battery compartment and battery voltage is no longer needed) after modification.</p>
+<h3><span class="badge">#10</span> RCA Connector Wear</h3>
+<p><strong>Symptom:</strong> Intermittent output, poor connection quality.</p>
+<p><strong>Cause:</strong> Original RCA sockets may not accept modern interconnect cables well. One restorer: "Replaced RCA connectors on variable and fixed outputs, to accept modern interconnect cables".</p>
+<p><strong>Repair:</strong> Replace with modern high-quality RCA sockets.</p>
+<h3><span class="badge">#11</span> Mains Connector Issues</h3>
+<p><strong>Symptom:</strong> Intermittent power, loose connection.</p>
+<p><strong>Cause:</strong> Original hardwired mains lead or non-standard connector. One restorer: "Replaced mains power socket with standard IEC connector".</p>
+<p><strong>Repair:</strong> Install standard IEC socket for convenience and safety.</p>
+<h3><span class="badge">#12</span> Rotary Switch / Toggle Switch Issues</h3>
+<p><strong>Symptom:</strong> Intermittent control operation, crackling.</p>
+<p><strong>Cause:</strong> Oxidation on switch contacts. The DAB+ conversion notes: "Mindestens die beiden Kipphebel auf der linken Seite sind für die Funktion des Gerätes wichtig... Sollten Kipphebel nicht mehr bewegbar sein, können diese vorsichtig geölt werden" (At least the two toggle switches on the left side are important for the device's function... If toggle switches are no longer movable, they can be carefully oiled).</p>
+<p><strong>Repair:</strong> Clean with contact cleaner or carefully oil if stuck.</p>
+</section>
+<section id="fuse-guide">
+<h2 id="critical-fuse-identification-guide">⚠️ CRITICAL: Fuse Identification Guide</h2>
+<div class="danger">
+<strong>FUSE FAILURES ARE KEY DIAGNOSTIC INDICATORS</strong>
+</div>
+<p>The B760 has five fuses. Understanding which fuse is blown helps identify the faulty section:</p>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Fuse</th>
+<th>Rating</th>
+<th>Location</th>
+<th>Protects</th>
+</tr>
+<tr>
+<td><strong>F1</strong></td>
+<td>100 mA</td>
+<td>Bottom panel access</td>
+<td>+32V regulated and adjustable supply</td>
+</tr>
+<tr>
+<td><strong>F2</strong></td>
+<td>630 mA</td>
+<td>Bottom panel access</td>
+<td>+22V unregulated, +15V regulated circuits</td>
+</tr>
+<tr>
+<td><strong>F3</strong></td>
+<td>630 mA</td>
+<td>Bottom panel access</td>
+<td>-22V unregulated, -15V regulated circuits</td>
+</tr>
+<tr>
+<td><strong>F4</strong></td>
+<td>2A</td>
+<td>Bottom panel access</td>
+<td>+6V and +5.6V regulated rails</td>
+</tr>
+<tr>
+<td><strong>F5</strong></td>
+<td>250 mA (varies with voltage)</td>
+<td>Rear panel</td>
+<td>Mains entry - changes with line voltage selection</td>
+</tr>
+</table></div>
+<p><strong>Important Notes on Fuses:</strong></p>
+<ul>
+<li>Revox sized fuses to protect the instrument, not just the real estate around it</li>
+<li>Fuses can blow from thermal stress when run at the bleeding edge of their rating</li>
+<li>Voltage surges, spikes, sags, or rapid power cycling can cause fuse failure</li>
+<li>Fuses that should change with line voltage are occasionally not changed, causing premature failure</li>
+</ul>
+</section>
+<section id="power-supply">
+<h2 id="power-supply-troubleshooting">Power Supply Troubleshooting</h2>
+<p>A documented case of power supply issues provides valuable diagnostic information:</p>
+<h3>Case Study: Unstable Voltages</h3>
+<ul>
+<li><strong>Symptoms:</strong> After a few minutes of operation, stereo and mute lights flash alternately, frequency display jumps, reception lost</li>
+<li><strong>Measured Voltages:</strong>
+<ul>
+<li>+32V: Normal</li>
+<li>+22V: Dropped to +19.7V</li>
+<li>-22V: Dropped to -19.6V</li>
+<li>+15V: Dropped to +14.5V</li>
+<li>-15V: Dropped to -14.7V</li>
+<li>+6V: Dropped to +5.6V</li>
+<li>+5.6V: Normal</li>
+</ul>
+</li>
+<li><strong>Observation:</strong> When disconnecting loads, voltages rose toward normal</li>
+<li><strong>Initial Hypothesis:</strong> Capacitor aging causing poor load regulation</li>
+<li><strong>Result after recap:</strong> Problem persisted, suggesting deeper regulator or rectifier issues</li>
+</ul>
+<p><strong>Key Takeaway:</strong> While capacitor replacement is essential, voltage regulator circuits and bridge rectifiers should also be tested if problems persist after recap.</p>
+</section>
+<section id="repair">
+<h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
+<div class="warning">
+<strong>🔧 RESTORATION PHILOSOPHY:</strong> The B760's modular construction makes restoration straightforward. Work methodically, document connections, and test after each stage.
             </div>
-            
-            <p>The B760 features 15 station presets, adjustable deemphasis (25, 50, or 75µs), separately adjustable stereo and muting thresholds, oscilloscope outputs, and 25kHz or 50kHz tuning steps. Its modular construction with plug-in PCBs and plated RF shields exemplifies Studer-Revox's professional build quality.</p>
-        </section>
-
-        <section id="value">
-            <h2 id="current-market-value-2024-2025">Current Market Value (2024-2025)</h2>
-            <p>B760 values reflect its status as a legendary tuner sought after by collectors worldwide:</p>
-            
-            <div class="model-grid">
-                <div class="model-card">
-                    <strong>Unrestored / Project Unit</strong>
-                    <p>Non-working, unknown condition, likely needs capacitor replacement</p>
-                    <div class="price-tag">$300-500</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Partially Restored</strong>
-                    <p>Some capacitors replaced, basic functionality</p>
-                    <div class="price-tag">$500-800</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Fully Restored</strong>
-                    <p>Complete recap, alignment, mechanical overhaul</p>
-                    <div class="price-tag">$900-1,400</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Mint / Expert Modified</strong>
-                    <p>Exceptional condition, Joseph Chow modifications, Bluetooth upgrades</p>
-                    <div class="price-tag">$1,500-2,500+</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>With DAB+ Upgrade</strong>
-                    <p>Modern DAB+/FM conversion kit installed</p>
-                    <div class="price-tag">$1,800-2,800+</div>
-                </div>
+<div class="checklist">
+<h3>Complete Restoration Checklist:</h3>
+<div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors, board positions)</div>
+<div class="checklist-item">✅ Stage 1 - Replace RIFA capacitor at mains power inlet</div>
+<div class="checklist-item">✅ Stage 2 - Replace ALL electrolytic capacitors (use WIMA polypro where possible)</div>
+<div class="checklist-item">✅ Stage 3 - Replace tantalum capacitors on all boards</div>
+<div class="checklist-item">✅ Stage 4 - Check and replace fuses as needed</div>
+<div class="checklist-item">✅ Stage 5 - Test bridge rectifiers and voltage regulators</div>
+<div class="checklist-item">✅ Stage 6 - Clean battery holder contacts, install new batteries</div>
+<div class="checklist-item">✅ Stage 7 - Clean all switch contacts (carefully oil if stuck)</div>
+<div class="checklist-item">✅ Stage 8 - Check and reseat all ribbon cable connectors</div>
+<div class="checklist-item">✅ Stage 9 - Replace indicator lamps and meter bulbs as needed</div>
+<div class="checklist-item">✅ Stage 10 - Replace RCA connectors with modern equivalents</div>
+<div class="checklist-item">✅ Stage 11 - Install IEC mains socket (optional but recommended)</div>
+<div class="checklist-item">✅ Stage 12 - Full alignment per service manual (sections 4-1 through 4-11)</div>
+</div>
+<p><strong>Optional Upgrades:</strong></p>
+<ul>
+<li><strong>B-DAB-760 DAB+/FM Conversion:</strong> Modern digital radio upgrade, reversible installation</li>
+<li><strong>B-DAB-760-REV Revision Kit:</strong> Optional kit with capacitors and components for full power supply revision</li>
+<li><strong>Bluetooth Module:</strong> Some restorers add Bluetooth capability</li>
+</ul>
+</section>
+<section id="capacitors">
+<h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
+<div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Location</th>
+<th>Value</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>RIFA Suppression Cap</td>
+<td>Mains power inlet</td>
+<td>0.1µF or similar 250VAC</td>
+<td>Replace with X2 class safety cap</td>
+</tr>
+</table></div>
+<div class="component-category">⚡ POWER SUPPLY BOARD (1.166.201, 1.166.210, 1.166.375)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>All electrolytic capacitors</td>
+<td>Replace all</td>
+<td>Critical for stable voltages; problems can persist after recap</td>
+</tr>
+<tr>
+<td>All tantalum capacitors</td>
+<td>Replace all</td>
+<td>Known failure points</td>
+</tr>
+</table></div>
+<div class="component-category">🎚️ AUDIO SECTION (1.166.170)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Electrolytic capacitors</td>
+<td>Replace all</td>
+<td>Some restorers use WIMA polypro where possible</td>
+</tr>
+</table></div>
+<div class="component-category">🔴 TANTALUM CAPACITORS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Board</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>All boards</td>
+<td>Replace all tantalums</td>
+<td>Can cause power supply loading issues</td>
+</tr>
+</table></div>
+<div class="component-category">🎛️ FRONT PANEL BOARDS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Board</th>
+<th>Part Numbers</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Front Bedienelemente</td>
+<td>1.166.350, 1.166.355, 1.166.320, 1.166.360</td>
+<td>Check for capacitor issues</td>
+</tr>
+</table></div>
+<p><strong>Optional Revision Kit:</strong> The B-DAB-760-REV kit contains "diverse Elkos, und vieles weiteres" (various electrolytics and much more) for a complete power supply revision.</p>
+</section>
+<section id="dab-conversion">
+<h2 id="b-dab-760-dab-fm-conversion">B-DAB-760 DAB+/FM Conversion</h2>
+<div class="info-box">
+<strong>📻 Modern Digital Radio for Vintage B760:</strong> A reversible upgrade that adds DAB+/FM capability while preserving the original tuner's aesthetics and functionality.
             </div>
-            
-            <p><strong>Note:</strong> Expert modifications by known technicians like Joseph Chow or JM Technical Arts command premium prices. Units with Nixie tube displays in perfect condition are especially desirable.</p>
-        </section>
-
-        <section id="failures">
-            <h2 id="common-failure-modes">Common Failure Modes</h2>
-            
-            <h3><span class="badge">#1</span> RIFA Capacitor Failure</h3>
-            <p><strong>Symptom:</strong> Smoke, burning smell, loud cracking, blown mains fuse. One restorer noted: "Replaced troublesome RIFA capacitor at mains power inlet" as a standard repair.</p>
-            <p><strong>Cause:</strong> Paper dielectric absorbs moisture over decades and shorts catastrophically.</p>
-            <p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight before applying power. Located at mains power inlet and on power supply board.</p>
-            
-            <h3><span class="badge">#2</span> Power Supply Voltage Issues</h3>
-            <p><strong>Symptom:</strong> Unstable operation, frequency jumps, stereo/mute lights flashing intermittently. One owner reported: "刚开机调到已存好的台，几分钟时，立体声灯（绿色）和静音灯交替闪动，收不到清晰电台声音，频率显示跳到别的频率" (After turning on to a preset station, after a few minutes the stereo and mute lights flash alternately, cannot receive clear station audio, frequency display jumps to other frequencies).</p>
-            <p><strong>Cause:</strong> Aging electrolytic capacitors cause poor load regulation. Measured voltages in one case: +22V dropped to +19.7V, -22V to -19.6V, ±15V to ±14.5V, +6V to +5.6V.</p>
-            <p><strong>Repair:</strong> Replace all electrolytic and tantalum capacitors on power supply board. Note: One owner reported replacing all caps but still had issues, suggesting deeper problems.</p>
-            
-            <h3><span class="badge">#3</span> Fuse Failures (Critical Diagnostic)</h3>
-            <p><strong>Symptom:</strong> No tuning, no sound, partial functionality. One owner found: "F2 and F3 were blown, with F1 and F4 O.K.".</p>
-            <p><strong>Cause:</strong> The B760 has five fuses with specific functions:</p>
-            <div class="fuse-table">
-                <ul>
-                    <li><strong>F1 (100 mA):</strong> Supplies +32V regulated and adjustable</li>
-                    <li><strong>F2, F3 (630 mA):</strong> Protect +22V unregulated, -22V unregulated, +15V regulated, -15V regulated</li>
-                    <li><strong>F4 (2A):</strong> In line with +6V and +5.6V regulated rails</li>
-                    <li><strong>F5 (250 mA):</strong> Rear panel mains entry fuse, changes with line voltage selection</li>
-                </ul>
+<h3>Key Features:</h3>
+<ul>
+<li>Completely reversible installation - no permanent modifications</li>
+<li>Uses existing power supply, audio section, and front panel controls</li>
+<li>Requires approximately 50-60 minutes for experienced technician</li>
+<li>New display board with modern components</li>
+</ul>
+<h3>Prerequisites:</h3>
+<p>The following original B760 boards must be functional:</p>
+<ul>
+<li>Power supply with transformer (1.166.201, 1.166.210(-81), 1.166.375)</li>
+<li>Audio section with outputs (1.166.170)</li>
+<li>Front panel controls (1.166.350, 1.166.355, 1.166.320, 1.166.360)</li>
+</ul>
+<h3>Installation Highlights:</h3>
+<ul>
+<li>Battery compartment and 32V supply no longer needed</li>
+<li>Original "Frequency Memory" board is removed</li>
+<li>New display board replaces original</li>
+<li>Signal strength meter is reused (must function 0-10)</li>
+<li>Toggle switches on left side must be functional</li>
+</ul>
+<div class="warning">
+<strong>⚠️ Important:</strong> This product should only be installed by qualified electronics professionals. The B760 will only function correctly with proper installation.
             </div>
-            <p><strong>Repair:</strong> Check fuses and investigate downstream shorts. Revox sized fuses to protect the instrument, so they may blow from thermal stress, voltage surges, or rapid power cycling.</p>
-            
-            <h3><span class="badge">#4</span> Electrolytic Capacitor Deterioration</h3>
-            <p><strong>Symptom:</strong> Power supply instability, noise, intermittent operation. Restorers consistently recommend: "Replaced all electrolytic capacitors".</p>
-            <p><strong>Cause:</strong> 40+ year old electrolytics dry out and lose capacitance or develop high ESR.</p>
-            <p><strong>Repair:</strong> Replace all electrolytic capacitors on all boards. Some restorers replace electrolytics with WIMA polypropylene film caps where possible. The B-DAB-760-REV revision kit includes "diverse Elkos, und vieles weiteres" (various electrolytics and much more).</p>
-            
-            <h3><span class="badge">#5</span> Internal Relay Failure</h3>
-            <p><strong>Symptom:</strong> No sound output. One experienced technician noted: "Other no-sound issues... Internal relay. Seen this twice".</p>
-            <p><strong>Cause:</strong> Relay contacts oxidize or coil fails after decades.</p>
-            <p><strong>Repair:</strong> Replace internal relay with equivalent type.</p>
-            
-            <h3><span class="badge">#6</span> Ribbon Cable Connection Issues</h3>
-            <p><strong>Symptom:</strong> Intermittent operation, no sound, erratic behavior. One expert noted: "Loose/dirty ribbon cable connector. Seen this too often to count".</p>
-            <p><strong>Cause:</strong> Oxidation on connector contacts or loose connections.</p>
-            <p><strong>Repair:</strong> Disconnect and reconnect ribbon cables, clean contacts with DeOxit if necessary.</p>
-            
-            <h3><span class="badge">#7</span> Tuning Meter Failure</h3>
-            <p><strong>Symptom:</strong> Signal strength meter not working. One owner reported: "the tuning meters don't work". Another tuner was listed with: "Unfortunately, the signal VU meter doesn't work; I don't have a new one for it".</p>
-            <p><strong>Cause:</strong> Meter mechanism failure, driver circuit issues, or bulb failure. Replacement meters are "a bit expensive" and available from Revox Online site.</p>
-            <p><strong>Repair:</strong> Check meter driver circuit, verify bulbs, replace meter if necessary. Calibration of signal strength meter per service manual section 4-10.</p>
-            
-            <h3><span class="badge">#8</span> Stereo Indicator Bulb Failure</h3>
-            <p><strong>Symptom:</strong> Stereo indicator doesn't light even when receiving stereo signal. One owner asked: "know what the stereo bulb part is (not the revox part #)".</p>
-            <p><strong>Cause:</strong> Bulbs burn out after decades of use.</p>
-            <p><strong>Repair:</strong> Replace with appropriate bulb. Replacement of indicator lamps is covered in service manual section 2-2.</p>
-            
-            <h3><span class="badge">#9</span> Battery Holder Corrosion</h3>
-            <p><strong>Symptom:</strong> Station presets lost when power is removed.</p>
-            <p><strong>Cause:</strong> Corroded battery contacts from leaked batteries. One restorer performed: "Battery holder contacts cleaned and installed new batteries".</p>
-            <p><strong>Repair:</strong> Clean contacts thoroughly, install fresh batteries. The DAB+ conversion notes that "Das Batteriefach und die Batteriespannung wird nicht mehr benötigt" (The battery compartment and battery voltage is no longer needed) after modification.</p>
-            
-            <h3><span class="badge">#10</span> RCA Connector Wear</h3>
-            <p><strong>Symptom:</strong> Intermittent output, poor connection quality.</p>
-            <p><strong>Cause:</strong> Original RCA sockets may not accept modern interconnect cables well. One restorer: "Replaced RCA connectors on variable and fixed outputs, to accept modern interconnect cables".</p>
-            <p><strong>Repair:</strong> Replace with modern high-quality RCA sockets.</p>
-            
-            <h3><span class="badge">#11</span> Mains Connector Issues</h3>
-            <p><strong>Symptom:</strong> Intermittent power, loose connection.</p>
-            <p><strong>Cause:</strong> Original hardwired mains lead or non-standard connector. One restorer: "Replaced mains power socket with standard IEC connector".</p>
-            <p><strong>Repair:</strong> Install standard IEC socket for convenience and safety.</p>
-            
-            <h3><span class="badge">#12</span> Rotary Switch / Toggle Switch Issues</h3>
-            <p><strong>Symptom:</strong> Intermittent control operation, crackling.</p>
-            <p><strong>Cause:</strong> Oxidation on switch contacts. The DAB+ conversion notes: "Mindestens die beiden Kipphebel auf der linken Seite sind für die Funktion des Gerätes wichtig... Sollten Kipphebel nicht mehr bewegbar sein, können diese vorsichtig geölt werden" (At least the two toggle switches on the left side are important for the device's function... If toggle switches are no longer movable, they can be carefully oiled).</p>
-            <p><strong>Repair:</strong> Clean with contact cleaner or carefully oil if stuck.</p>
-        </section>
-
-        <section id="fuse-guide">
-            <h2 id="critical-fuse-identification-guide">⚠️ CRITICAL: Fuse Identification Guide</h2>
-            
-            <div class="danger">
-                <strong>FUSE FAILURES ARE KEY DIAGNOSTIC INDICATORS</strong>
-            </div>
-            
-            <p>The B760 has five fuses. Understanding which fuse is blown helps identify the faulty section:</p>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Fuse</th>
-                    <th>Rating</th>
-                    <th>Location</th>
-                    <th>Protects</th>
-                </tr>
-                <tr>
-                    <td><strong>F1</strong></td>
-                    <td>100 mA</td>
-                    <td>Bottom panel access</td>
-                    <td>+32V regulated and adjustable supply</td>
-                </tr>
-                <tr>
-                    <td><strong>F2</strong></td>
-                    <td>630 mA</td>
-                    <td>Bottom panel access</td>
-                    <td>+22V unregulated, +15V regulated circuits</td>
-                </tr>
-                <tr>
-                    <td><strong>F3</strong></td>
-                    <td>630 mA</td>
-                    <td>Bottom panel access</td>
-                    <td>-22V unregulated, -15V regulated circuits</td>
-                </tr>
-                <tr>
-                    <td><strong>F4</strong></td>
-                    <td>2A</td>
-                    <td>Bottom panel access</td>
-                    <td>+6V and +5.6V regulated rails</td>
-                </tr>
-                <tr>
-                    <td><strong>F5</strong></td>
-                    <td>250 mA (varies with voltage)</td>
-                    <td>Rear panel</td>
-                    <td>Mains entry - changes with line voltage selection</td>
-                </tr>
-            </table></div>
-            
-            <p><strong>Important Notes on Fuses:</strong></p>
-            <ul>
-                <li>Revox sized fuses to protect the instrument, not just the real estate around it</li>
-                <li>Fuses can blow from thermal stress when run at the bleeding edge of their rating</li>
-                <li>Voltage surges, spikes, sags, or rapid power cycling can cause fuse failure</li>
-                <li>Fuses that should change with line voltage are occasionally not changed, causing premature failure</li>
-            </ul>
-        </section>
-
-        <section id="power-supply">
-            <h2 id="power-supply-troubleshooting">Power Supply Troubleshooting</h2>
-            
-            <p>A documented case of power supply issues provides valuable diagnostic information:</p>
-            
-            <h3>Case Study: Unstable Voltages</h3>
-            <ul>
-                <li><strong>Symptoms:</strong> After a few minutes of operation, stereo and mute lights flash alternately, frequency display jumps, reception lost</li>
-                <li><strong>Measured Voltages:</strong>
-                    <ul>
-                        <li>+32V: Normal</li>
-                        <li>+22V: Dropped to +19.7V</li>
-                        <li>-22V: Dropped to -19.6V</li>
-                        <li>+15V: Dropped to +14.5V</li>
-                        <li>-15V: Dropped to -14.7V</li>
-                        <li>+6V: Dropped to +5.6V</li>
-                        <li>+5.6V: Normal</li>
-                    </ul>
-                </li>
-                <li><strong>Observation:</strong> When disconnecting loads, voltages rose toward normal</li>
-                <li><strong>Initial Hypothesis:</strong> Capacitor aging causing poor load regulation</li>
-                <li><strong>Result after recap:</strong> Problem persisted, suggesting deeper regulator or rectifier issues</li>
-            </ul>
-            
-            <p><strong>Key Takeaway:</strong> While capacitor replacement is essential, voltage regulator circuits and bridge rectifiers should also be tested if problems persist after recap.</p>
-        </section>
-
-        <section id="repair">
-            <h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
-            
-            <div class="warning">
-                <strong>🔧 RESTORATION PHILOSOPHY:</strong> The B760's modular construction makes restoration straightforward. Work methodically, document connections, and test after each stage.
-            </div>
-            
-            <div class="checklist">
-                <h3>Complete Restoration Checklist:</h3>
-                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors, board positions)</div>
-                <div class="checklist-item">✅ Stage 1 - Replace RIFA capacitor at mains power inlet</div>
-                <div class="checklist-item">✅ Stage 2 - Replace ALL electrolytic capacitors (use WIMA polypro where possible)</div>
-                <div class="checklist-item">✅ Stage 3 - Replace tantalum capacitors on all boards</div>
-                <div class="checklist-item">✅ Stage 4 - Check and replace fuses as needed</div>
-                <div class="checklist-item">✅ Stage 5 - Test bridge rectifiers and voltage regulators</div>
-                <div class="checklist-item">✅ Stage 6 - Clean battery holder contacts, install new batteries</div>
-                <div class="checklist-item">✅ Stage 7 - Clean all switch contacts (carefully oil if stuck)</div>
-                <div class="checklist-item">✅ Stage 8 - Check and reseat all ribbon cable connectors</div>
-                <div class="checklist-item">✅ Stage 9 - Replace indicator lamps and meter bulbs as needed</div>
-                <div class="checklist-item">✅ Stage 10 - Replace RCA connectors with modern equivalents</div>
-                <div class="checklist-item">✅ Stage 11 - Install IEC mains socket (optional but recommended)</div>
-                <div class="checklist-item">✅ Stage 12 - Full alignment per service manual (sections 4-1 through 4-11)</div>
-            </div>
-            
-            <p><strong>Optional Upgrades:</strong></p>
-            <ul>
-                <li><strong>B-DAB-760 DAB+/FM Conversion:</strong> Modern digital radio upgrade, reversible installation</li>
-                <li><strong>B-DAB-760-REV Revision Kit:</strong> Optional kit with capacitors and components for full power supply revision</li>
-                <li><strong>Bluetooth Module:</strong> Some restorers add Bluetooth capability</li>
-            </ul>
-        </section>
-
-        <section id="capacitors">
-            <h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
-            
-            <div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Location</th>
-                    <th>Value</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>RIFA Suppression Cap</td>
-                    <td>Mains power inlet</td>
-                    <td>0.1µF or similar 250VAC</td>
-                    <td>Replace with X2 class safety cap</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">⚡ POWER SUPPLY BOARD (1.166.201, 1.166.210, 1.166.375)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Action</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>All electrolytic capacitors</td>
-                    <td>Replace all</td>
-                    <td>Critical for stable voltages; problems can persist after recap</td>
-                </tr>
-                <tr>
-                    <td>All tantalum capacitors</td>
-                    <td>Replace all</td>
-                    <td>Known failure points</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🎚️ AUDIO SECTION (1.166.170)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Action</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>Electrolytic capacitors</td>
-                    <td>Replace all</td>
-                    <td>Some restorers use WIMA polypro where possible</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔴 TANTALUM CAPACITORS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Board</th>
-                    <th>Action</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>All boards</td>
-                    <td>Replace all tantalums</td>
-                    <td>Can cause power supply loading issues</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🎛️ FRONT PANEL BOARDS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Board</th>
-                    <th>Part Numbers</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>Front Bedienelemente</td>
-                    <td>1.166.350, 1.166.355, 1.166.320, 1.166.360</td>
-                    <td>Check for capacitor issues</td>
-                </tr>
-            </table></div>
-            
-            <p><strong>Optional Revision Kit:</strong> The B-DAB-760-REV kit contains "diverse Elkos, und vieles weiteres" (various electrolytics and much more) for a complete power supply revision.</p>
-        </section>
-
-        <section id="dab-conversion">
-            <h2 id="b-dab-760-dab-fm-conversion">B-DAB-760 DAB+/FM Conversion</h2>
-            
-            <div class="info-box">
-                <strong>📻 Modern Digital Radio for Vintage B760:</strong> A reversible upgrade that adds DAB+/FM capability while preserving the original tuner's aesthetics and functionality.
-            </div>
-            
-            <h3>Key Features:</h3>
-            <ul>
-                <li>Completely reversible installation - no permanent modifications</li>
-                <li>Uses existing power supply, audio section, and front panel controls</li>
-                <li>Requires approximately 50-60 minutes for experienced technician</li>
-                <li>New display board with modern components</li>
-            </ul>
-            
-            <h3>Prerequisites:</h3>
-            <p>The following original B760 boards must be functional:</p>
-            <ul>
-                <li>Power supply with transformer (1.166.201, 1.166.210(-81), 1.166.375)</li>
-                <li>Audio section with outputs (1.166.170)</li>
-                <li>Front panel controls (1.166.350, 1.166.355, 1.166.320, 1.166.360)</li>
-            </ul>
-            
-            <h3>Installation Highlights:</h3>
-            <ul>
-                <li>Battery compartment and 32V supply no longer needed</li>
-                <li>Original "Frequency Memory" board is removed</li>
-                <li>New display board replaces original</li>
-                <li>Signal strength meter is reused (must function 0-10)</li>
-                <li>Toggle switches on left side must be functional</li>
-            </ul>
-            
-            <div class="warning">
-                <strong>⚠️ Important:</strong> This product should only be installed by qualified electronics professionals. The B760 will only function correctly with proper installation.
-            </div>
-        </section>
-
-        <section id="alignment">
-            <h2 id="alignment-instructions-per-service-manua">Alignment Instructions (per Service Manual)</h2>
-            
-            <p>The B760 service manual (117 pages, 83.9 MB) provides detailed alignment procedures:</p>
-            
-            <h3>Required Test Equipment:</h3>
-            <ul>
-                <li>FM signal generator</li>
-                <li>Oscilloscope</li>
-                <li>Distortion analyzer</li>
-                <li>AC millivoltmeter</li>
-                <li>Frequency counter</li>
-            </ul>
-            
-            <h3>Alignment Sections:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Section</th>
-                    <th>Procedure</th>
-                </tr>
-                <tr>
-                    <td>4-2</td>
-                    <td>Checking supply voltages</td>
-                </tr>
-                <tr>
-                    <td>4-4</td>
-                    <td>Alignment of local oscillator and synthesizer</td>
-                </tr>
-                <tr>
-                    <td>4-5</td>
-                    <td>Alignment of RF circuits</td>
-                </tr>
-                <tr>
-                    <td>4-6</td>
-                    <td>Alignment of IF filters, IF amplifier, and center tuning discriminator</td>
-                </tr>
-                <tr>
-                    <td>4-8</td>
-                    <td>Alignment of stereo decoder</td>
-                </tr>
-                <tr>
-                    <td>4-10</td>
-                    <td>Calibration of signal strength meter</td>
-                </tr>
-                <tr>
-                    <td>4-11</td>
-                    <td>Adjustment of audio output voltage</td>
-                </tr>
-            </table></div>
-            
-            <h3>Performance Testing:</h3>
-            <ul>
-                <li>Input sensitivity (5-1)</li>
-                <li>Image response (5-2)</li>
-                <li>Spurious response (5-3)</li>
-                <li>Distortion (5-4)</li>
-                <li>Signal to noise ratio (5-4)</li>
-                <li>Stereo separation (5-5)</li>
-                <li>Frequency response (5-5)</li>
-            </ul>
-        </section>
-
-        <section id="troubleshooting">
-            <h2 id="common-troubleshooting-guide">Common Troubleshooting Guide</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Symptom</th>
-                    <th>Likely Cause</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>No tuning, everything else works</td>
-                    <td>F1 (100 mA) blown</td>
-                    <td>Check/replace F1, investigate why it blew</td>
-                </tr>
-                <tr>
-                    <td>No sound, tuning works</td>
-                    <td>Internal relay failure, ribbon cable issues</td>
-                    <td>Check relay, reseat ribbon cables</td>
-                </tr>
-                <tr>
-                    <td>Intermittent operation, frequency jumps, flashing lights after warm-up</td>
-                    <td>Power supply voltage instability, failing caps</td>
-                    <td>Check ±22V, ±15V, +6V supplies; replace all electrolytics</td>
-                </tr>
-                <tr>
-                    <td>F2 and F3 blown</td>
-                    <td>Short in ±22V or ±15V circuits</td>
-                    <td>Check bridge rectifiers, check for shorted caps, replace caps before new fuses</td>
-                </tr>
-                <tr>
-                    <td>Tuning meters not working</td>
-                    <td>Meter failure, driver circuit, bulbs</td>
-                    <td>Check meter driver, verify bulbs, replace meter if necessary</td>
-                </tr>
-                <tr>
-                    <td>Stereo indicator not lighting</td>
-                    <td>Bulb burned out</td>
-                    <td>Replace indicator lamp per section 2-2</td>
-                </tr>
-                <tr>
-                    <td>Station presets lost on power-off</td>
-                    <td>Battery holder corrosion</td>
-                    <td>Clean contacts, install new batteries</td>
-                </tr>
-                <tr>
-                    <td>Intermittent output, poor connection</td>
-                    <td>Original RCA connectors worn</td>
-                    <td>Replace with modern RCA sockets</td>
-                </tr>
-                <tr>
-                    <td>Unit dead, no power</td>
-                    <td>F5 blown, mains issue</td>
-                    <td>Check F5 (rear panel), verify line voltage selection</td>
-                </tr>
-                <tr>
-                    <td>Smoke, burning smell</td>
-                    <td>RIFA capacitor failure</td>
-                    <td>IMMEDIATELY unplug, replace all RIFA caps</td>
-                </tr>
-            </table></div>
-            
-            <h3>Real Restoration Cases:</h3>
-            <div class="info-box">
-                <p><strong>Case 1 - Power Supply Instability:</strong> Owner reported intermittent operation with voltage drops. After replacing all electrolytic and tantalum capacitors, problem persisted, indicating possible regulator or rectifier issues.</p>
-                
-                <p><strong>Case 2 - Fuse Diagnosis:</strong> Technician found F2 and F3 blown, F1 and F4 intact. This pointed to issues in ±22V/±15V circuits rather than +32V or +6V supplies.</p>
-                
-                <p><strong>Case 3 - Full Restoration:</strong> Seller performed complete recap, RIFA replacement, IEC socket upgrade, RCA connector replacement, and battery cleaning. Result: Fully functional, excellent tuner.</p>
-                
-                <p><strong>Case 4 - Joseph Chow Modification:</strong> Owner reported modified B760 sounded excellent, not thin as some describe stock units. Modification may address known sonic characteristics.</p>
-            </div>
-        </section>
-
-        <section id="kits">
-            <h2 id="restoration-kits-resources">Restoration Kits & Resources</h2>
-            
-            <h3>Specialty Kits:</h3>
-            <div class="kit-reference">
-                <div class="kit-card">
-                    <strong>B-DAB-760 DAB+/FM Kit</strong>
-                    <p>Modern digital radio conversion, reversible installation</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>B-DAB-760-REV Revision Kit</strong>
-                    <p>Optional kit with electrolytics and components for power supply revision</p>
-                </div>
-            </div>
-            
-            <h3>Service Documentation:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Resource</th>
-                    <th>Details</th>
-                </tr>
-                <tr>
-                    <td>Service Manual</td>
-                    <td>117 pages, 83.9 MB, English/German/French, includes schematics and parts list</td>
-                </tr>
-                <tr>
-                    <td>Manual ID</td>
-                    <td>18.183.1179, Second edition</td>
-                </tr>
-                <tr>
-                    <td>Einbauanleitung</td>
-                    <td>German installation guide for DAB+ conversion</td>
-                </tr>
-            </table></div>
-            
-            <h3>Parts Sources:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Supplier</th>
-                    <th>Specialty</th>
-                </tr>
-                <tr>
-                    <td>Revox Online</td>
-                    <td>Replacement meters, bulbs, official parts</td>
-                </tr>
-                <tr>
-                    <td>JM Technical Arts</td>
-                    <td>USA Revox service center, expert repairs</td>
-                </tr>
-                <tr>
-                    <td>Mouser / DigiKey</td>
-                    <td>Capacitors (WIMA polypro), fuses, RCA connectors, IEC sockets</td>
-                </tr>
-                <tr>
-                    <td>Joseph Chow (via contacts)</td>
-                    <td>Highly regarded modifications and alignment</td>
-                </tr>
-            </table></div>
-            
-            <h3>Online Resources:</h3>
-            <ul>
-                <li><strong>FMtuners.groups.io</strong> - Active B760 discussions, technical expertise</li>
-                <li><strong>Manualslib.de</strong> - German installation manuals</li>
-                <li><strong>Canuck Audio Mart / Aussie Audio Mart</strong> - Restoration examples, market prices</li>
-                <li><strong>家电维修论坛 (dzdu.com)</strong> - Chinese forum with power supply troubleshooting</li>
-                <li><strong>Lost-Manuals.com</strong> - Service manual downloads</li>
-            </ul>
-        </section>
-
-        <section id="specifications">
-            <h2 id="technical-specifications">Technical Specifications</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Parameter</th>
-                    <th>Value</th>
-                </tr>
-                <tr>
-                    <td>Type</td>
-                    <td>Mono/Stereo Tuner</td>
-                </tr>
-                <tr>
-                    <td>Tuning Bands</td>
-                    <td>FM</td>
-                </tr>
-                <tr>
-                    <td>Tuning Scale</td>
-                    <td>Digital</td>
-                </tr>
-                <tr>
-                    <td>FM Tuning Range</td>
-                    <td>87 to 107.975 MHz</td>
-                </tr>
-                <tr>
-                    <td>Sensitivity</td>
-                    <td>2µV (FM)</td>
-                </tr>
-                <tr>
-                    <td>Signal to Noise Ratio</td>
-                    <td>75dB (FM)</td>
-                </tr>
-                <tr>
-                    <td>Distortion</td>
-                    <td>0.15% (FM)</td>
-                </tr>
-                <tr>
-                    <td>Selectivity</td>
-                    <td>80dB (FM)</td>
-                </tr>
-                <tr>
-                    <td>Frequency Response</td>
-                    <td>30Hz to 15kHz (FM)</td>
-                </tr>
-                <tr>
-                    <td>Output</td>
-                    <td>1160mV</td>
-                </tr>
-                <tr>
-                    <td>Dimensions</td>
-                    <td>452 x 151 x 348 mm / 17.8" x 6" x 13.7"</td>
-                </tr>
-                <tr>
-                    <td>Weight</td>
-                    <td>12 kg / 26.5 lbs</td>
-                </tr>
-            </table></div>
-            
-            <h3>Features:</h3>
-            <ul>
-                <li>15 station presets</li>
-                <li>Adjustable deemphasis (25, 50, or 75µs)</li>
-                <li>Separately adjustable stereo and muting thresholds</li>
-                <li>Oscilloscope outputs</li>
-                <li>25kHz or 50kHz tuning steps</li>
-                <li>C-MOS processor control</li>
-                <li>Optional Studer A176 antenna rotator control</li>
-            </ul>
-        </section>
-
-        <section id="common-mistakes">
-            <h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
-            
-            <div class="danger">
-                <ul>
-                    <li><strong>❌ Assuming capacitor replacement always fixes power issues:</strong> One owner replaced all caps but still had voltage problems, indicating regulator/rectifier issues</li>
-                    <li><strong>❌ Not checking fuses systematically:</strong> F1-F4 are accessed from bottom panel, F5 from rear - blown fuses point to specific circuit sections</li>
-                    <li><strong>❌ Using wrong fuse ratings:</strong> F5 changes with line voltage selection - using wrong value causes premature failure</li>
-                    <li><strong>❌ Forgetting to check ribbon cables:</strong> Loose/dirty connectors cause intermittent issues "too often to count"</li>
-                    <li><strong>❌ Ignoring RIFA capacitors:</strong> They WILL fail with smoke and fire - replace before power-up</li>
-                    <li><strong>❌ Breaking toggle switches:</strong> "vorsichtig geölt werden" (carefully oiled) if stuck - don't force them</li>
-                    <li><strong>❌ Not documenting before DAB+ conversion:</strong> Take photos before removing boards</li>
-                    <li><strong>❌ Overheating PCB pads during desoldering:</strong> Use appropriate temperature and tools</li>
-                    <li><strong>❌ Ignoring battery compartment corrosion:</strong> Can damage memory retention circuit</li>
-                    <li><strong>❌ Attempting DAB+ conversion without electronics experience:</strong> "Für Laien ist die Installation in der Regel nicht konform zu bewerkstelligen" (For laymen, installation is generally not possible to accomplish properly)</li>
-                </ul>
-            </div>
-        </section>
-
-        
-            <p><strong>Revox B760</strong> • Compiled from FMtuners.groups.io, Manualslib, Canuck Audio Mart, and service manual references • Last Updated: 2024</p>
-            <p>Restoration requires intermediate to advanced technical skill. The B760 is a legendary tuner - treat it with respect. Replace all RIFA and electrolytic capacitors first, then address power supply voltages. Consider DAB+ conversion for modern functionality.</p>
-            <p>🙏 Special thanks to the global FM tuner community and all contributors who share their restoration experiences.</p>
-        
-    </div></article><section class="rr-card"><h2 class="rr-h">More Revox models we service</h2><div class="rr-rel"><a href="/reel-to-reel/revox/revox-a700">Revox A700</a><a href="/reel-to-reel/revox/revox-a77">Revox A77</a><a href="/reel-to-reel/revox/revox-b225">Revox B225</a><a href="/reel-to-reel/revox/revox-b226">Revox B226</a><a href="/reel-to-reel/revox/revox-b710">Revox B710</a><a href="/reel-to-reel/revox/revox-b77">Revox B77</a><a href="/reel-to-reel/revox/revox-c270">Revox C270</a><a href="/reel-to-reel/revox/revox-f36">Revox F36</a><a href="/reel-to-reel/revox/revox-g36">Revox G36</a><a href="/reel-to-reel/revox/revox-pr77">Revox PR77</a><a href="/reel-to-reel/revox/revox-pr99">Revox PR99</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Revox B760?</div><div>Yes. Tek Media Group repairs and restores the Revox B760 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Revox B760 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+</section>
+<section id="alignment">
+<h2 id="alignment-instructions-per-service-manua">Alignment Instructions (per Service Manual)</h2>
+<p>The B760 service manual (117 pages, 83.9 MB) provides detailed alignment procedures:</p>
+<h3>Required Test Equipment:</h3>
+<ul>
+<li>FM signal generator</li>
+<li>Oscilloscope</li>
+<li>Distortion analyzer</li>
+<li>AC millivoltmeter</li>
+<li>Frequency counter</li>
+</ul>
+<h3>Alignment Sections:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Section</th>
+<th>Procedure</th>
+</tr>
+<tr>
+<td>4-2</td>
+<td>Checking supply voltages</td>
+</tr>
+<tr>
+<td>4-4</td>
+<td>Alignment of local oscillator and synthesizer</td>
+</tr>
+<tr>
+<td>4-5</td>
+<td>Alignment of RF circuits</td>
+</tr>
+<tr>
+<td>4-6</td>
+<td>Alignment of IF filters, IF amplifier, and center tuning discriminator</td>
+</tr>
+<tr>
+<td>4-8</td>
+<td>Alignment of stereo decoder</td>
+</tr>
+<tr>
+<td>4-10</td>
+<td>Calibration of signal strength meter</td>
+</tr>
+<tr>
+<td>4-11</td>
+<td>Adjustment of audio output voltage</td>
+</tr>
+</table></div>
+<h3>Performance Testing:</h3>
+<ul>
+<li>Input sensitivity (5-1)</li>
+<li>Image response (5-2)</li>
+<li>Spurious response (5-3)</li>
+<li>Distortion (5-4)</li>
+<li>Signal to noise ratio (5-4)</li>
+<li>Stereo separation (5-5)</li>
+<li>Frequency response (5-5)</li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2 id="common-troubleshooting-guide">Common Troubleshooting Guide</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>No tuning, everything else works</td>
+<td>F1 (100 mA) blown</td>
+<td>Check/replace F1, investigate why it blew</td>
+</tr>
+<tr>
+<td>No sound, tuning works</td>
+<td>Internal relay failure, ribbon cable issues</td>
+<td>Check relay, reseat ribbon cables</td>
+</tr>
+<tr>
+<td>Intermittent operation, frequency jumps, flashing lights after warm-up</td>
+<td>Power supply voltage instability, failing caps</td>
+<td>Check ±22V, ±15V, +6V supplies; replace all electrolytics</td>
+</tr>
+<tr>
+<td>F2 and F3 blown</td>
+<td>Short in ±22V or ±15V circuits</td>
+<td>Check bridge rectifiers, check for shorted caps, replace caps before new fuses</td>
+</tr>
+<tr>
+<td>Tuning meters not working</td>
+<td>Meter failure, driver circuit, bulbs</td>
+<td>Check meter driver, verify bulbs, replace meter if necessary</td>
+</tr>
+<tr>
+<td>Stereo indicator not lighting</td>
+<td>Bulb burned out</td>
+<td>Replace indicator lamp per section 2-2</td>
+</tr>
+<tr>
+<td>Station presets lost on power-off</td>
+<td>Battery holder corrosion</td>
+<td>Clean contacts, install new batteries</td>
+</tr>
+<tr>
+<td>Intermittent output, poor connection</td>
+<td>Original RCA connectors worn</td>
+<td>Replace with modern RCA sockets</td>
+</tr>
+<tr>
+<td>Unit dead, no power</td>
+<td>F5 blown, mains issue</td>
+<td>Check F5 (rear panel), verify line voltage selection</td>
+</tr>
+<tr>
+<td>Smoke, burning smell</td>
+<td>RIFA capacitor failure</td>
+<td>IMMEDIATELY unplug, replace all RIFA caps</td>
+</tr>
+</table></div>
+<h3>Real Restoration Cases:</h3>
+<div class="info-box">
+<p><strong>Case 1 - Power Supply Instability:</strong> Owner reported intermittent operation with voltage drops. After replacing all electrolytic and tantalum capacitors, problem persisted, indicating possible regulator or rectifier issues.</p>
+<p><strong>Case 2 - Fuse Diagnosis:</strong> Technician found F2 and F3 blown, F1 and F4 intact. This pointed to issues in ±22V/±15V circuits rather than +32V or +6V supplies.</p>
+<p><strong>Case 3 - Full Restoration:</strong> Seller performed complete recap, RIFA replacement, IEC socket upgrade, RCA connector replacement, and battery cleaning. Result: Fully functional, excellent tuner.</p>
+<p><strong>Case 4 - Joseph Chow Modification:</strong> Owner reported modified B760 sounded excellent, not thin as some describe stock units. Modification may address known sonic characteristics.</p>
+</div>
+</section>
+<section id="kits">
+<h2 id="restoration-kits-resources">Restoration Kits &amp; Resources</h2>
+<h3>Specialty Kits:</h3>
+<div class="kit-reference">
+<div class="kit-card">
+<strong>B-DAB-760 DAB+/FM Kit</strong>
+<p>Modern digital radio conversion, reversible installation</p>
+</div>
+<div class="kit-card">
+<strong>B-DAB-760-REV Revision Kit</strong>
+<p>Optional kit with electrolytics and components for power supply revision</p>
+</div>
+</div>
+<h3>Service Documentation:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Resource</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>Service Manual</td>
+<td>117 pages, 83.9 MB, English/German/French, includes schematics and parts list</td>
+</tr>
+<tr>
+<td>Manual ID</td>
+<td>18.183.1179, Second edition</td>
+</tr>
+<tr>
+<td>Einbauanleitung</td>
+<td>German installation guide for DAB+ conversion</td>
+</tr>
+</table></div>
+<h3>Parts Sources:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Supplier</th>
+<th>Specialty</th>
+</tr>
+<tr>
+<td>Revox Online</td>
+<td>Replacement meters, bulbs, official parts</td>
+</tr>
+<tr>
+<td>JM Technical Arts</td>
+<td>USA Revox service center, expert repairs</td>
+</tr>
+<tr>
+<td>Mouser / DigiKey</td>
+<td>Capacitors (WIMA polypro), fuses, RCA connectors, IEC sockets</td>
+</tr>
+<tr>
+<td>Joseph Chow (via contacts)</td>
+<td>Highly regarded modifications and alignment</td>
+</tr>
+</table></div>
+<h3>Online Resources:</h3>
+<ul>
+<li><strong>FMtuners.groups.io</strong> - Active B760 discussions, technical expertise</li>
+<li><strong>Manualslib.de</strong> - German installation manuals</li>
+<li><strong>家电维修论坛 (dzdu.com)</strong> - Chinese forum with power supply troubleshooting</li>
+<li><strong>Lost-Manuals.com</strong> - Service manual downloads</li>
+</ul>
+</section>
+<section id="specifications">
+<h2 id="technical-specifications">Technical Specifications</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Type</td>
+<td>Mono/Stereo Tuner</td>
+</tr>
+<tr>
+<td>Tuning Bands</td>
+<td>FM</td>
+</tr>
+<tr>
+<td>Tuning Scale</td>
+<td>Digital</td>
+</tr>
+<tr>
+<td>FM Tuning Range</td>
+<td>87 to 107.975 MHz</td>
+</tr>
+<tr>
+<td>Sensitivity</td>
+<td>2µV (FM)</td>
+</tr>
+<tr>
+<td>Signal to Noise Ratio</td>
+<td>75dB (FM)</td>
+</tr>
+<tr>
+<td>Distortion</td>
+<td>0.15% (FM)</td>
+</tr>
+<tr>
+<td>Selectivity</td>
+<td>80dB (FM)</td>
+</tr>
+<tr>
+<td>Frequency Response</td>
+<td>30Hz to 15kHz (FM)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>1160mV</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>452 x 151 x 348 mm / 17.8" x 6" x 13.7"</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>12 kg / 26.5 lbs</td>
+</tr>
+</table></div>
+<h3>Features:</h3>
+<ul>
+<li>15 station presets</li>
+<li>Adjustable deemphasis (25, 50, or 75µs)</li>
+<li>Separately adjustable stereo and muting thresholds</li>
+<li>Oscilloscope outputs</li>
+<li>25kHz or 50kHz tuning steps</li>
+<li>C-MOS processor control</li>
+<li>Optional Studer A176 antenna rotator control</li>
+</ul>
+</section>
+<section id="common-mistakes">
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<div class="danger">
+<ul>
+<li><strong>❌ Assuming capacitor replacement always fixes power issues:</strong> One owner replaced all caps but still had voltage problems, indicating regulator/rectifier issues</li>
+<li><strong>❌ Not checking fuses systematically:</strong> F1-F4 are accessed from bottom panel, F5 from rear - blown fuses point to specific circuit sections</li>
+<li><strong>❌ Using wrong fuse ratings:</strong> F5 changes with line voltage selection - using wrong value causes premature failure</li>
+<li><strong>❌ Forgetting to check ribbon cables:</strong> Loose/dirty connectors cause intermittent issues "too often to count"</li>
+<li><strong>❌ Ignoring RIFA capacitors:</strong> They WILL fail with smoke and fire - replace before power-up</li>
+<li><strong>❌ Breaking toggle switches:</strong> "vorsichtig geölt werden" (carefully oiled) if stuck - don't force them</li>
+<li><strong>❌ Not documenting before DAB+ conversion:</strong> Take photos before removing boards</li>
+<li><strong>❌ Overheating PCB pads during desoldering:</strong> Use appropriate temperature and tools</li>
+<li><strong>❌ Ignoring battery compartment corrosion:</strong> Can damage memory retention circuit</li>
+<li><strong>❌ Attempting DAB+ conversion without electronics experience:</strong> "Für Laien ist die Installation in der Regel nicht konform zu bewerkstelligen" (For laymen, installation is generally not possible to accomplish properly)</li>
+</ul>
+</div>
+</section>
+<p><strong>Revox B760</strong> • Compiled from FMtuners.groups.io, Manualslib, Canuck Audio Mart, and service manual references • Last Updated: 2024</p>
+<p>Restoration requires intermediate to advanced technical skill. The B760 is a legendary tuner - treat it with respect. Replace all RIFA and electrolytic capacitors first, then address power supply voltages. Consider DAB+ conversion for modern functionality.</p>
+<p>🙏 Special thanks to the global FM tuner community and all contributors who share their restoration experiences.</p>
+</div></article><section class="rr-card"><h2 class="rr-h">More Revox models we service</h2><div class="rr-rel"><a href="/reel-to-reel/revox/revox-a700">Revox A700</a><a href="/reel-to-reel/revox/revox-a77">Revox A77</a><a href="/reel-to-reel/revox/revox-b225">Revox B225</a><a href="/reel-to-reel/revox/revox-b226">Revox B226</a><a href="/reel-to-reel/revox/revox-b710">Revox B710</a><a href="/reel-to-reel/revox/revox-b77">Revox B77</a><a href="/reel-to-reel/revox/revox-c270">Revox C270</a><a href="/reel-to-reel/revox/revox-f36">Revox F36</a><a href="/reel-to-reel/revox/revox-g36">Revox G36</a><a href="/reel-to-reel/revox/revox-pr77">Revox PR77</a><a href="/reel-to-reel/revox/revox-pr99">Revox PR99</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Revox B760?</div><div>Yes. Tek Media Group repairs and restores the Revox B760 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Revox B760 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

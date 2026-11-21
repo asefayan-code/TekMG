@@ -8,689 +8,578 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/studer">Studer</a> &rsaquo; Studer A810</nav><span class="rr-eyebrow">Studer reel-to-reel repair</span><h1>Studer A810</h1><p class="rr-lead">The Studer A810, produced from approximately 1985 to 1993, represents the final evolution of Studer&#x27;s professional analog tape recorders .</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>Studer</dd></div><div><dt>Model</dt><dd>Studer A810</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#overview">Overview</a><a href="#historical-context">Historical Context</a><a href="#current-market-value-2024">Current Market Value (2024)</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-a810-error-codes">⚠️ CRITICAL: A810 Error Codes</a><a href="#critical-board-identification">Critical Board Identification</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#microprocessor-and-memory-issues">Microprocessor and Memory Issues</a><a href="#complete-troubleshooting-guide">Complete Troubleshooting Guide</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
-        
-        
-        
-        <nav aria-label="Breadcrumb" class="sr-only">
-            <ol>
-                <li><a href="/">Home</a></li>
-                <li><a href="/studer">Studer Restoration Guides</a></li>
-                <li>Studer A810</li>
-            </ol>
-        </nav>
-        
-        <div class="disclaimer">
-            <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Studer documentation when available. Proceed at your own risk.
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/studer">Studer</a> › Studer A810</nav><span class="rr-eyebrow">Studer reel-to-reel repair</span><h1>Studer A810</h1><p class="rr-lead">The Studer A810, produced from approximately 1985 to 1993, represents the final evolution of Studer's professional analog tape recorders .</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Studer</dd></div><div><dt>Model</dt><dd>Studer A810</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#overview">Overview</a><a href="#historical-context">Historical Context</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-a810-error-codes">⚠️ CRITICAL: A810 Error Codes</a><a href="#critical-board-identification">Critical Board Identification</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#microprocessor-and-memory-issues">Microprocessor and Memory Issues</a><a href="#complete-troubleshooting-guide">Complete Troubleshooting Guide</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
+<nav aria-label="Breadcrumb" class="sr-only">
+<ol>
+<li><a href="/">Home</a></li>
+<li><a href="/studer">Studer Restoration Guides</a></li>
+<li>Studer A810</li>
+</ol>
+</nav>
+<div class="disclaimer">
+<strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Studer documentation when available. Proceed at your own risk.
         </div>
-
-        <div class="danger">
-            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Studer A810 contains <span class="voltage-warning">infamous Frako electrolytic capacitors</span> that WILL fail, causing power supply issues and microprocessor glitches . It also contains <span class="voltage-warning">RIFA "exploding" paper capacitors</span> that WILL fail with smoke and fire . <strong>Never apply mains power to an unrestored A810 without first replacing all RIFA capacitors and critical Frako electrolytics.</strong>
-        </div>
-
-        <section id="overview">
-            <h2 id="overview">Overview</h2>
-            
-            
-            <div class="info-box">
-                <strong>📌 Key Features :</strong>
-                <ul>
-                    <li><strong>Microprocessor Control:</strong> Fully logic-controlled transport with self-diagnostic system</li>
-                    <li><strong>Transport:</strong> Three-motor design with direct-drive capstan motor</li>
-                    <li><strong>Tape Handling:</strong> Advanced tension control with servo-controlled reel motors</li>
-                    <li><strong>Configurations:</strong> Available in console, rack-mount, and portable versions</li>
-                    <li><strong>Track Formats:</strong> 1/4" stereo, 1/2" two-track, and multi-track versions</li>
-                    <li><strong>Remote Control:</strong> Full remote capability via serial interface</li>
-                    <li><strong>Varispeed:</strong> ±9 semitones vari-speed capability</li> 
-                </ul>
-            </div>
-            
-            <p>The A810 was designed as a more affordable alternative to the larger A80 and A820, while maintaining Studer's legendary build quality . It became extremely popular in broadcast stations and project studios due to its compact size and reliable operation . The machine features extensive use of plug-in cards, making servicing relatively straightforward compared to earlier point-to-point wired designs .</p>
-            
-            
-            <div class="sr-only">
-                <h3>Keywords: Studer A810 restoration, professional tape recorder, broadcast recorder, Swiss audio, vintage tape machine, capacitor replacement, transport overhaul, microprocessor troubleshooting, Frako capacitors, RIFA capacitors, tape tension adjustment</h3>
-            </div>
-        </section>
-
-        <section id="history">
-            <h2 id="historical-context">Historical Context</h2>
-            <p>The Studer A810 was introduced during a pivotal era in audio history, as studios and broadcasters were transitioning from analog to digital recording. Its microprocessor-controlled design and compact form factor made it a favorite in radio stations, mastering suites, and mobile recording rigs worldwide. The A810’s reliability, precision, and sonic quality helped it become a standard for broadcast archiving and professional mastering in the late 1980s and early 1990s.</p>
-            <p>Many classic radio programs, archival transfers, and even some early digital releases were mastered or transferred using the A810. Its robust build and modular serviceability ensured a long service life, and it remains highly respected among engineers for its transparency and ease of calibration. Today, the A810 is sought after by collectors, restoration specialists, and studios looking to preserve or recreate the authentic sound of the analog era.</p>
-        </section>
-
-        <section id="value">
-            <h2 id="current-market-value-2024">Current Market Value (2024)</h2>
-            <p>A810 values reflect its professional heritage, versatility, and continued demand in studios:</p>
-            
-            <div class="model-grid">
-                <div class="model-card">
-                    <strong>Unrestored / Project Unit</strong>
-                    <p>Non-working, unknown condition, likely needs full recap, may have microprocessor issues, missing boards or dead channels.</p>
-                    <div class="price-tag">$2,000-4,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Partially Restored</strong>
-                    <p>Some capacitors replaced, basic functionality, may have transport or calibration issues.</p>
-                    <div class="price-tag">$4,000-6,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Fully Restored</strong>
-                    <p>Complete recap, RIFA replacement, transport overhaul, microprocessor check, calibration, LED conversion often included.</p>
-                    <div class="price-tag">$6,000-9,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Mint / Low Hours</strong>
-                    <p>Exceptional original condition, low head wear, fully documented, original accessories and manuals.</p>
-                    <div class="price-tag">$9,000-12,000+</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>1/2" Two-Track Mastering Version</strong>
-                    <p>Professional mastering configuration, most desirable for audio restoration and high-end studios.</p>
-                    <div class="price-tag">$7,000-11,000+</div>
-                </div>
-            </div>
-            
-            <p><strong>Note:</strong> The A810 is more affordable than the larger A820 but shares much of the same technology. Machines with complete documentation, original manuals, and professional restoration command premium prices. The 1/2" two-track version is particularly sought after for mastering applications .</p>
-        </section>
-
-        <section id="failures">
-            <h2 id="common-failure-modes">Common Failure Modes</h2>
-            
-            <h3><span class="badge">#1</span> Frako Electrolytic Capacitor Failure (The #1 Killer)</h3>
-            <p><strong>Symptom:</strong> Missing power rails, blown fuses, dead channels, intermittent operation, microprocessor glitches, display issues . One technician noted: "The biggest issue is the Frako caps - they WILL fail and cause all sorts of weird problems" .</p>
-            <p><strong>Cause:</strong> The A810 uses numerous Frako electrolytic capacitors throughout the power supplies, audio cards, and transport control boards . These capacitors are infamous for drying out, leaking electrolyte, and shorting catastrophically after 30+ years .</p>
-            <p><strong>Repair:</strong> Replace ALL Frako electrolytic capacitors on sight . This includes power supply boards, audio cards, and transport control boards . Use high-quality 105°C rated capacitors from reputable brands (Nichicon, Panasonic, Vishay) .</p>
-            
-            <h3><span class="badge">#2</span> RIFA "Exploding" Capacitor Failure</h3>
-            <p><strong>Symptom:</strong> Smoke, burning smell, loud cracking, blown fuses, tripped breakers. One user reported: "The RIFA caps on the mains input had exploded, leaving soot everywhere" .</p>
-            <p><strong>Cause:</strong> Paper dielectric RIFA capacitors absorb moisture over decades and short catastrophically .</p>
-            <p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight before applying power. Found on mains input, power supply boards, and across motor run capacitors . Replace with X2 class safety capacitors .</p>
-            
-            <h3><span class="badge">#3</span> "DSC" Error or Transport Not Responding</h3>
-            <p><strong>Symptom:</strong> Machine powers on but displays "DSC" error, transport buttons don't work, or transport behaves erratically .</p>
-            <p><strong>Cause:</strong> Failed capacitors on the DSC (Digital Servo Control) board . The DSC board uses many small electrolytics that dry out, causing servo control issues .</p>
-            <p><strong>Repair:</strong> Replace all electrolytic capacitors on the DSC board (1.807.450) . Pay special attention to capacitors in the servo feedback circuits .</p>
-            
-            <h3><span class="badge">#4</span> Tension Sensor Board Issues</h3>
-            <p><strong>Symptom:</strong> Erratic tape tension, tape spillage, oscillation in fast wind, "Tension Error" messages .</p>
-            <p><strong>Cause:</strong> The tension sensor board (1.807.416) uses opto-electronic sensors that can drift or fail . The associated capacitors also degrade .</p>
-            <p><strong>Repair:</strong> Clean the opto-interrupters, check for proper alignment, replace capacitors on the tension sensor board .</p>
-            
-            <h3><span class="badge">#5</span> Power Supply Capacitor Failure (1.807.400 Series)</h3>
-            <p><strong>Symptom:</strong> Voltage fluctuations, intermittent operation, blown fuses, display flicker .</p>
-            <p><strong>Cause:</strong> The A810 uses multiple power supply boards (often 1.807.400 series) with numerous Frako electrolytics that fail .</p>
-            <p><strong>Repair:</strong> Replace all electrolytic capacitors on all power supply boards . Use low-ESR, 105°C rated capacitors for switching power supply sections .</p>
-            
-            <h3><span class="badge">#6</span> Audio Channel Capacitor Failure</h3>
-            <p><strong>Symptom:</strong> Distorted audio, low output, one channel dead, noise, hum .</p>
-            <p><strong>Cause:</strong> The audio boards (record and playback) contain many small electrolytics that dry out . Coupling capacitors lose capacitance, causing low output and poor frequency response .</p>
-            <p><strong>Repair:</strong> Replace all electrolytic capacitors on audio boards . For best results, use audio-grade capacitors (Nichicon FG, Elna Silmic II) in the signal path .</p>
-            
-            <h3><span class="badge">#7</span> Microprocessor Reset Issues</h3>
-            <p><strong>Symptom:</strong> Machine doesn't boot, freezes randomly, buttons unresponsive .</p>
-            <p><strong>Cause:</strong> Failed capacitors in the microprocessor reset circuit . The reset circuit relies on a capacitor that can leak or lose capacitance, preventing proper startup .</p>
-            <p><strong>Repair:</strong> Check reset circuit voltages, replace capacitors in the reset circuit even if they test good for capacitance - they may leak .</p>
-            
-            <h3><span class="badge">#8</span> Motor Run Capacitor Failure</h3>
-            <p><strong>Symptom:</strong> Capstan motor runs hot, won't start, speed instability, reel motors weak .</p>
-            <p><strong>Cause:</strong> Motor run capacitors (typically 4µF and 8µF values) degrade over time . The A810 uses separate capacitors for capstan and reel motors .</p>
-            <p><strong>Repair:</strong> Replace with modern polypropylene motor run capacitors . Verify correct values for your configuration (50Hz vs 60Hz) .</p>
-            
-            <h3><span class="badge">#9</span> Capstan Motor Bearing Wear</h3>
-            <p><strong>Symptom:</strong> Grinding noise, wow and flutter, speed instability .</p>
-            <p><strong>Cause:</strong> The direct-drive capstan motor bearings can wear over decades of use .</p>
-            <p><strong>Repair:</strong> Capstan motor rebuild by specialist (requires disassembly, bearing replacement, and reassembly) .</p>
-            
-            <h3><span class="badge">#10</span> Pinch Roller Solenoid Issues</h3>
-            <p><strong>Symptom:</strong> Pinch roller doesn't engage properly, tape slips, squealing .</p>
-            <p><strong>Cause:</strong> The pinch roller solenoid may be weak, or its pivot points may be dry and sticky .</p>
-            <p><strong>Repair:</strong> Clean and lubricate solenoid pivot points . Check solenoid voltage . Replace solenoid if weak .</p>
-            
-            <h3><span class="badge">#11</span> Display Dimming or Missing Segments</h3>
-            <p><strong>Symptom:</strong> Vacuum fluorescent display dim, missing digits, flickering .</p>
-            <p><strong>Cause:</strong> Aging VFD, or failed capacitors in the display power supply .</p>
-            <p><strong>Repair:</strong> Replace capacitors on display power supply board . If display itself is failing, replacement VFDs are available from specialist suppliers .</p>
-            
-            <h3><span class="badge">#12</span> Toggle Switch and Potentiometer Noise</h3>
-            <p><strong>Symptom:</strong> Crackling when adjusting controls, intermittent operation .</p>
-            <p><strong>Cause:</strong> Oxidation on switch contacts and potentiometer tracks after 30+ years .</p>
-            <p><strong>Repair:</strong> Clean with DeOxit or appropriate contact cleaner . For stubborn cases, replace switches/pots .</p>
-        </section>
-
-        <section id="error-codes">
-            <h2 id="critical-a810-error-codes">⚠️ CRITICAL: A810 Error Codes</h2>
-            
-            <p>The A810 microprocessor can display error codes that help diagnose problems :</p>
-            
-            <div class="error-code-box">
-                <strong>Common Error Codes:</strong><br /><br />
-                <strong>no CAL:</strong> Calibration data lost - battery may be dead, or EEPROM corrupted<br />
-                <strong>DSC:</strong> Digital Servo Control error - check DSC board capacitors<br />
-                <strong>tE1 / tE2:</strong> Tension error - check tension sensors and adjustments<br />
-                <strong>HAL:</strong> Hall sensor error - capstan motor hall sensors may be failing<br />
-                <strong>EAS:</strong> End-of-tape sensor error - check light barrier<br />
-                <strong>SF1 / SF2:</strong> Spooling motor frequency error - check tacho signals<br />
-                <strong>brC:</strong> Brake circuit error - check brake control circuit<br />
-                <strong>rEAd:</strong> Tape timer reading error - check tape counter circuit<br />
-                <strong>PAr:</strong> Parameter error - EEPROM data corrupted<br />
-            </div>
-            
-            <p><strong>Note:</strong> Error codes can be triggered by capacitor failures in the associated circuits. Always check power supply voltages and capacitor health when troubleshooting errors .</p>
-        </section>
-
-        <section id="board-identification">
-            <h2 id="critical-board-identification">Critical Board Identification</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Board</th>
-                    <th>Part Number</th>
-                    <th>Function</th>
-                    <th>Common Issues</th>
-                </tr>
-                <tr>
-                    <td><strong>DSC Board</strong></td>
-                    <td>1.807.450</td>
-                    <td>Digital Servo Control for transport</td>
-                    <td>Small electrolytics fail, causing DSC error </td>
-                </tr>
-                <tr>
-                    <td><strong>Power Supply</strong></td>
-                    <td>1.807.400 series</td>
-                    <td>Main power regulation</td>
-                    <td>Frako caps fail, RIFA caps explode </td>
-                </tr>
-                <tr>
-                    <td><strong>Tension Sensor</strong></td>
-                    <td>1.807.416</td>
-                    <td>Opto-electronic tension sensing</td>
-                    <td>Optos drift, caps fail </td>
-                </tr>
-                <tr>
-                    <td><strong>Audio Record</strong></td>
-                    <td>1.807.xxx</td>
-                    <td>Record amplifier</td>
-                    <td>Electrolytics dry out, coupling caps fail </td>
-                </tr>
-                <tr>
-                    <td><strong>Audio Playback</strong></td>
-                    <td>1.807.xxx</td>
-                    <td>Playback amplifier</td>
-                    <td>Electrolytics dry out, input stage critical </td>
-                </tr>
-                <tr>
-                    <td><strong>Microprocessor</strong></td>
-                    <td>1.807.xxx</td>
-                    <td>Main logic control</td>
-                    <td>Reset circuit capacitors </td>
-                </tr>
-                <tr>
-                    <td><strong>Display Board</strong></td>
-                    <td>1.807.xxx</td>
-                    <td>VFD display driver</td>
-                    <td>Power supply caps, VFD aging </td>
-                </tr>
-            </table></div>
-        </section>
-
-        <section id="repair">
-            <h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
-            
-            <div class="warning">
-                <strong>🔧 RESTORATION PHILOSOPHY:</strong> The A810's modular construction makes restoration methodical. Work systematically, one board at a time, and test after each stage . Experienced techs recommend: "Replace all Frakos first, then RIFAs, then see what's left" .</div>
-            
-            <div class="checklist">
-                <h3>Complete Restoration Checklist :</h3>
-                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all wiring, board positions)</div>
-                <div class="checklist-item">✅ Stage 1 - Replace ALL RIFA capacitors on mains input and power supply boards </div>
-                <div class="checklist-item">✅ Stage 2 - Replace ALL Frako electrolytic capacitors on ALL boards </div>
-                <div class="checklist-item">✅ Stage 3 - Replace all electrolytics on DSC board (1.807.450) - critical for transport </div>
-                <div class="checklist-item">✅ Stage 4 - Replace all electrolytics on power supply boards (1.807.400 series) </div>
-                <div class="checklist-item">✅ Stage 5 - Replace all electrolytics on audio boards (record and playback) </div>
-                <div class="checklist-item">✅ Stage 6 - Replace motor run capacitors (capstan and reel motors) with polypropylene types </div>
-                <div class="checklist-item">✅ Stage 7 - Check and replace reset circuit capacitors on microprocessor board </div>
-                <div class="checklist-item">✅ Stage 8 - Clean opto-interrupters on tension sensor board, replace caps </div>
-                <div class="checklist-item">✅ Stage 9 - Service capstan motor bearings (lubricate or rebuild) </div>
-                <div class="checklist-item">✅ Stage 10 - Clean and lubricate pinch roller solenoid pivot points </div>
-                <div class="checklist-item">✅ Stage 11 - Clean all board connectors and edge connectors with DeOxit </div>
-                <div class="checklist-item">✅ Stage 12 - Check backup battery, replace if needed </div>
-                <div class="checklist-item">✅ Stage 13 - Full mechanical alignment (tape path, tension) </div>
-                <div class="checklist-item">✅ Stage 14 - Full electronic calibration with test tape </div>
-            </div>
-            
-            <p><strong>Pro Tip:</strong> One restorer notes: "The A810 is very sensitive to capacitor health. A single bad cap can cause the entire transport to behave erratically. Don't skip the DSC board - it's often the culprit for DSC errors." </p>
-        </section>
-
-        <section id="capacitors">
-            <h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
-            
-            <div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Location</th>
-                    <th>Value</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>RIFA Suppression Caps</td>
-                    <td>Mains input, power supply boards</td>
-                    <td>0.1µF, 0.47µF 250VAC</td>
-                    <td>Replace with X2 class safety caps </td>
-                </tr>
-                <tr>
-                    <td>Frako Electrolytics</td>
-                    <td>ALL boards</td>
-                    <td>Various</td>
-                    <td>Replace ALL Frako caps - known to fail </td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">⚡ POWER SUPPLY BOARDS (1.807.400 SERIES)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Reference</th>
-                    <th>Typical Values</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>Main filter caps</td>
-                    <td>470µF-4700µF, 16V-63V</td>
-                    <td>Replace all electrolytics with low-ESR, 105°C types </td>
-                </tr>
-                <tr>
-                    <td>Small electrolytics</td>
-                    <td>10µF-100µF, 16V-50V</td>
-                    <td>Replace all, use high-quality brands (Nichicon, Panasonic) </td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔋 DSC BOARD (1.807.450) - CRITICAL FOR TRANSPORT</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Reference</th>
-                    <th>Typical Values</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>All electrolytics</td>
-                    <td>4.7µF-100µF, 16V-50V</td>
-                    <td>Replace ALL - failure here causes DSC error </td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🎚️ AUDIO BOARDS (RECORD AND PLAYBACK)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Type</th>
-                    <th>Values</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>Coupling capacitors</td>
-                    <td>10µF-47µF, 16V-50V</td>
-                    <td>Use audio-grade (Nichicon FG, Elna Silmic II) for best sound </td>
-                </tr>
-                <tr>
-                    <td>Power supply decoupling</td>
-                    <td>47µF-220µF, 16V-50V</td>
-                    <td>Standard low-ESR types fine </td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔴 TENSION SENSOR BOARD (1.807.416)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Reference</th>
-                    <th>Values</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>All electrolytics</td>
-                    <td>Small values</td>
-                    <td>Replace all; clean opto-interrupters </td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔋 MOTOR RUN CAPACITORS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Motor</th>
-                    <th>Typical Values</th>
-                    <th>Replacement</th>
-                </tr>
-                <tr>
-                    <td>Capstan Motor</td>
-                    <td>4µF AC</td>
-                    <td>Modern polypropylene motor run cap, 4µF/250VAC+</td>
-                </tr>
-                <tr>
-                    <td>Reel Motors</td>
-                    <td>8µF AC each</td>
-                    <td>Modern polypropylene motor run caps, 8µF/250VAC+ each</td>
-                </tr>
-            </table></div>
-            <p><strong>Note:</strong> Values may vary based on specific configuration (50Hz vs 60Hz). Verify with your machine's documentation .</p>
-            
-            <div class="component-category">✅ REPLACEMENT BEST PRACTICES</div>
-            <ul>
-                <li>Use high-quality capacitors: Nichicon, Panasonic, Vishay, WIMA</li>
-                <li>For audio path, consider audio-grade capacitors (Nichicon FG, Elna Silmic II)</li>
-                <li>Use 105°C rated capacitors for power supply and high-temperature areas</li>
-                <li>Increase voltage ratings where physically possible for safety margin</li>
-                <li>Confirm polarity during installation</li>
-                <li>Clean boards thoroughly after removing old caps (Frako electrolyte is corrosive)</li>
-            </ul>
-        </section>
-
-        <section id="microprocessor">
-            <h2 id="microprocessor-and-memory-issues">Microprocessor and Memory Issues</h2>
-            
-            <h3>Backup Battery:</h3>
-            <ul>
-                <li>The A810 uses a battery to maintain calibration data and setup parameters</li>
-                <li>Original batteries may leak and corrode the board</li>
-                <li>Replace with new lithium battery (CR2032 or similar with holder)</li>
-                <li>After battery replacement, calibration data may be lost - machine may display "no CAL"</li>
-                <li>Full recalibration required after battery replacement</li>
-            </ul>
-            
-            <h3>EEPROM Failure:</h3>
-            <ul>
-                <li>The A810 stores calibration data in EEPROM</li>
-                <li>EEPROM can fail or become corrupted</li>
-                <li>Symptoms: "PAr" error, incorrect operation, lost settings</li>
-                <li>Replacement EEPROMs available from Studer specialists</li>
-                <li>Must be programmed with correct data for your configuration</li>
-            </ul>
-            
-            <h3>Reset Circuit:</h3>
-            <ul>
-                <li>Capacitors in the reset circuit can leak, preventing proper microprocessor startup</li>
-                <li>Symptoms: machine doesn't boot, freezes randomly</li>
-                <li>Replace all electrolytics in reset circuit even if they test good for capacitance</li>
-            </ul>
-        </section>
-
-        <section id="troubleshooting">
-            <h2 id="complete-troubleshooting-guide">Complete Troubleshooting Guide</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Symptom</th>
-                    <th>Likely Cause</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>"DSC" error, transport not working</td>
-                    <td>Failed caps on DSC board (1.807.450)</td>
-                    <td>Replace all electrolytics on DSC board </td>
-                </tr>
-                <tr>
-                    <td>Smoke, burning smell, blown fuse</td>
-                    <td>RIFA capacitor exploded</td>
-                    <td>Replace all RIFA caps immediately </td>
-                </tr>
-                <tr>
-                    <td>Dead channels, distorted audio</td>
-                    <td>Frako caps on audio boards failed</td>
-                    <td>Replace all electrolytics on audio boards </td>
-                </tr>
-                <tr>
-                    <td>Intermittent transport, random errors</td>
-                    <td>Power supply Frako caps failing</td>
-                    <td>Replace all electrolytics on power supply boards </td>
-                </tr>
-                <tr>
-                    <td>Machine won't boot, freezes</td>
-                    <td>Reset circuit capacitor leaking</td>
-                    <td>Replace caps in microprocessor reset circuit </td>
-                </tr>
-                <tr>
-                    <td>"tE1" or "tE2" error, tape tension issues</td>
-                    <td>Tension sensor board caps or optos</td>
-                    <td>Replace caps, clean opto-interrupters </td>
-                </tr>
-                <tr>
-                    <td>"no CAL" error</td>
-                    <td>Backup battery dead, EEPROM corrupted</td>
-                    <td>Replace battery, recalibrate, or replace EEPROM </td>
-                </tr>
-                <tr>
-                    <td>Capstan motor runs hot, won't start</td>
-                    <td>Motor run capacitor failed</td>
-                    <td>Replace with polypropylene motor cap </td>
-                </tr>
-                <tr>
-                    <td>Reel motors weak, slow wind</td>
-                    <td>Reel motor caps failed</td>
-                    <td>Replace with polypropylene motor caps </td>
-                </tr>
-                <tr>
-                    <td>Display dim, flickering</td>
-                    <td>Display power supply caps, VFD aging</td>
-                    <td>Replace caps on display power supply </td>
-                </tr>
-                <tr>
-                    <td>Pinch roller not engaging</td>
-                    <td>Solenoid sticky, pivot dry</td>
-                    <td>Clean and lubricate solenoid pivot </td>
-                </tr>
-                <tr>
-                    <td>Wow and flutter, speed instability</td>
-                    <td>Capstan motor bearings, motor caps</td>
-                    <td>Service capstan motor, replace motor caps </td>
-                </tr>
-            </table></div>
-            
-            <h3>Real Restoration Cases:</h3>
-            <div class="info-box">
-                <p><strong>Case 1 - DSC Error :</strong> A810 displayed DSC error and transport was dead. Found multiple failed Frako caps on DSC board. After replacing all electrolytics on DSC board, error cleared and transport worked perfectly.</p>
-                
-                <p><strong>Case 2 - Intermittent Transport :</strong> Machine worked for 10-20 minutes then would freeze or behave erratically. Power supply voltages were fluctuating. Replaced all Frako caps on power supply boards - problem solved.</p>
-                
-                <p><strong>Case 3 - No Audio Left Channel :</strong> Left channel dead, right channel fine. Found open coupling capacitor on record board. Replaced all electrolytics on both record and playback boards as preventive measure.</p>
-                
-                <p><strong>Case 4 - "no CAL" Error :</strong> Machine displayed "no CAL" after power-up. Backup battery had leaked and corroded the board. Replaced battery, cleaned board, recalibrated - error cleared.</p>
-                
-                <p><strong>Case 5 - RIFA Explosion :</strong> User reported smoke and burning smell on power-up. Found exploded RIFA capacitor on mains input. Replaced all RIFA caps in machine, unit now safe.</p>
-            </div>
-        </section>
-
-        <section id="calibration">
-            <h2 id="calibration-and-alignment">Calibration and Alignment </h2>
-            
-            <h3>Required Tools:</h3>
-            <ul>
-                <li>MRL test tape (appropriate for track configuration and EQ curve)</li>
-                <li>Oscilloscope (for azimuth and bias adjustment)</li>
-                <li>Audio signal generator</li>
-                <li>AC millivoltmeter</li>
-                <li>Distortion analyzer (optional)</li>
-                <li>Tension gauge</li>
-                <li>Non-magnetic screwdrivers</li>
-                <li>Frequency counter (for speed calibration)</li>
-            </ul>
-            
-            <h3>Alignment Sequence :</h3>
-            <ol>
-                <li><strong>Mechanical alignment:</strong> Tape path, head height, zenith</li>
-                <li><strong>Playback alignment:</strong> Level and EQ using test tape</li>
-                <li><strong>Record alignment:</strong> Bias adjustment, record level, EQ</li>
-                <li><strong>Azimuth adjustment:</strong> Using test tape for playback, then record/playback loop</li>
-                <li><strong>Speed calibration:</strong> Adjust capstan speed using frequency counter</li>
-                <li><strong>Tension adjustment:</strong> Set tape tension per service manual</li>
-            </ol>
-            
-            <h3>Setup Mode:</h3>
-            <p>The A810 has a setup mode accessible via front panel buttons that allows adjustment of various parameters including:</p>
-            <ul>
-                <li>Speed settings</li>
-                <li>Tape tension values</li>
-                <li>Display brightness</li>
-                <li>Remote control configuration</li>
-                <li>Bias and EQ settings</li>
-            </ul>
-            
-            <div class="warning">
-                <strong>⚠️ IMPORTANT:</strong> Always document original settings before making adjustments. After battery replacement, calibration data may be lost, requiring full recalibration .</div>
-        </section>
-
-        <section id="mechanical">
-            <h2 id="mechanical-maintenance-guide">Mechanical Maintenance Guide </h2>
-            
-            <h3>Capstan Motor Service:</h3>
-            <ul>
-                <li>Listen for bearing noise (grinding, rumbling)</li>
-                <li>If noisy, motor may need professional rebuild</li>
-                <li>Some motors have lubrication ports - use appropriate oil (PDP65) sparingly</li>
-            </ul>
-            
-            <h3>Pinch Roller Solenoid:</h3>
-            <ul>
-                <li>Check for smooth operation, no binding</li>
-                <li>Clean pivot points and lubricate lightly</li>
-                <li>Check solenoid voltage when engaged</li>
-            </ul>
-            
-            <h3>Tape Path Cleaning:</h3>
-            <ul>
-                <li>Clean heads, guides, and rollers with isopropyl alcohol</li>
-                <li>Check for oxide buildup on all tape contact points</li>
-                <li>Clean capstan shaft thoroughly</li>
-            </ul>
-            
-            <h3>Tension Sensor Adjustment:</h3>
-            <ul>
-                <li>Clean opto-interrupters with compressed air or alcohol</li>
-                <li>Check alignment of light barriers</li>
-                <li>Adjust per service manual if tension errors persist</li>
-            </ul>
-            
-            <h3>Brake Adjustment:</h3>
-            <ul>
-                <li>Check brake pads for wear</li>
-                <li>Adjust brake tension to stop reels without excessive slack</li>
-            </ul>
-            
-            <h3>Head Inspection:</h3>
-            <ul>
-                <li>Visually inspect for wear groove</li>
-                <li>If groove is visible (>0.5mm), relapping may be needed</li>
-                <li>Studer heads typically last longer than most, but eventually wear</li>
-                <li>JRF Magnetic Sciences offers relapping services</li>
-            </ul>
-        </section>
-
-        <section id="kits">
-            <h2 id="restoration-kits-resources">Restoration Kits & Resources</h2>
-            
-            <h3>Specialist Suppliers:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Supplier</th>
-                    <th>Specialty</th>
-                </tr>
-                <tr>
-                    <td>Revox-online-shop (Germany)</td>
-                    <td>A807 restoration kits, capacitor kits, mechanical parts</td>
-                </tr>
-                <tr>
-                    <td>Nagravox (Australia)</td>
-                    <td>Restoration kits for Studer/Revox, mechanical parts</td>
-                </tr>
-                <tr>
-                    <td>Mouser / DigiKey</td>
-                    <td>General capacitors (Nichicon, Panasonic, Vishay), diodes, resistors</td>
-                </tr>
-                <tr>
-                    <td>JRF Magnetic Sciences</td>
-                    <td>Head relapping and replacement</td>
-                </tr>
-                <tr>
-                    <td>Terry's Rubber Rollers</td>
-                    <td>Pinch roller rebuilding</td>
-                </tr>
-                <tr>
-                    <td>F&T (Germany)</td>
-                    <td>Multi-section can capacitor replacements</td>
-                </tr>
-            </table></div>
-            
-            <h3>Service Documentation:</h3>
-            <ul>
-                <li><strong>Studer FTP Archive:</strong> ftp://ftp.studer.ch/Public/Products/A807/ - Service manuals, schematics, bulletins</li>
-                <li><strong>HiFi Engine:</strong> User and service manuals</li>
-                <li><strong>Manualslib.com:</strong> A807 documentation</li>
-            </ul>
-            
-            <h3>Online Communities:</h3>
-            <ul>
-                <li><strong>Tapeheads.net:</strong> Active Studer A807 discussions, many restoration threads</li>
-                <li><strong>GroupDIY:</strong> Technical discussions on Studer restoration</li>
-                <li><strong>Studer List (recordist.com):</strong> Email list for Studer enthusiasts</li>
-                <li><strong>Prodigy-Pro:</strong> Professional audio forum with A807 discussions</li>
-            </ul>
-        </section>
-
-        <section id="specifications">
-            <h2 id="technical-specifications">Technical Specifications </h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Parameter</th>
-                    <th>Value</th>
-                </tr>
-                <tr>
-                    <td>Manufacturer</td>
-                    <td>Studer (Willi Studer, Switzerland)</td>
-                </tr>
-                <tr>
-                    <td>Model</td>
-                    <td>A807</td>
-                </tr>
-                <tr>
-                    <td>Production Years</td>
-                    <td>1985-1993</td>
-                </tr>
-                <tr>
-                    <td>Type</td>
-                    <td>Microprocessor-controlled professional tape recorder</td>
-                </tr>
-                <tr>
-                    <td>Track Formats</td>
-                    <td>1/4" stereo, 1/2" two-track, multi-track versions</td>
-                </tr>
-                <tr>
-                    <td>Tape Speeds</td>
-                    <td>3.75, 7.5, 15 ips (standard), 7.5, 15, 30 ips (optional)</td>
-                </tr>
-                <tr>
-                    <td>Frequency Response</td>
-                    <td>±2dB 30Hz-20kHz at 15 ips</td>
-                </tr>
-                <tr>
-                    <td>S/N Ratio</td>
-                    <td>>72dB (depending on track format and tape)</td>
-                </tr>
-                <tr>
-                    <td>Wow and Flutter</td>
-                    <td><0.05% at 15 ips</td>
-                </tr>
-                <tr>
-                    <td>Crosstalk</td>
-                    <td>>60dB</td>
-                </tr>
-                <tr>
-                    <td>Output Level</td>
-                    <td>Line output: +4dBm or -10dBV (configurable)</td>
-                </tr>
-            </table></div>
-        </section>
-    </div></article><section class="rr-card"><h2 class="rr-h">More Studer models we service</h2><div class="rr-rel"><a href="/reel-to-reel/studer/studer-a62">Studer A62</a><a href="/reel-to-reel/studer/studer-a67">Studer A67</a><a href="/reel-to-reel/studer/studer-a721">Studer A721</a><a href="/reel-to-reel/studer/studer-a80">Studer A80</a><a href="/reel-to-reel/studer/studer-a807">Studer A807</a><a href="/reel-to-reel/studer/studer-a812">Studer A812</a><a href="/reel-to-reel/studer/studer-a816">Studer A816</a><a href="/reel-to-reel/studer/studer-a820">Studer A820</a><a href="/reel-to-reel/studer/studer-a827">Studer A827</a><a href="/reel-to-reel/studer/studer-c37">Studer C37</a><a href="/reel-to-reel/studer/studer-j37">Studer J37</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Studer A810?</div><div>Yes. Tek Media Group repairs and restores the Studer A810 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Studer A810 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+<div class="danger">
+<strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Studer A810 contains <span class="voltage-warning">infamous Frako electrolytic capacitors</span> that WILL fail, causing power supply issues and microprocessor glitches . It also contains <span class="voltage-warning">RIFA "exploding" paper capacitors</span> that WILL fail with smoke and fire . <strong>Never apply mains power to an unrestored A810 without first replacing all RIFA capacitors and critical Frako electrolytics.</strong>
+</div>
+<section id="overview">
+<h2 id="overview">Overview</h2>
+<div class="info-box">
+<strong>📌 Key Features :</strong>
+<ul>
+<li><strong>Microprocessor Control:</strong> Fully logic-controlled transport with self-diagnostic system</li>
+<li><strong>Transport:</strong> Three-motor design with direct-drive capstan motor</li>
+<li><strong>Tape Handling:</strong> Advanced tension control with servo-controlled reel motors</li>
+<li><strong>Configurations:</strong> Available in console, rack-mount, and portable versions</li>
+<li><strong>Track Formats:</strong> 1/4" stereo, 1/2" two-track, and multi-track versions</li>
+<li><strong>Remote Control:</strong> Full remote capability via serial interface</li>
+<li><strong>Varispeed:</strong> ±9 semitones vari-speed capability</li>
+</ul>
+</div>
+<p>It became extremely popular in broadcast stations and project studios due to its compact size and reliable operation . The machine features extensive use of plug-in cards, making servicing relatively straightforward compared to earlier point-to-point wired designs .</p>
+<div class="sr-only">
+<h3>Keywords: Studer A810 restoration, professional tape recorder, broadcast recorder, Swiss audio, vintage tape machine, capacitor replacement, transport overhaul, microprocessor troubleshooting, Frako capacitors, RIFA capacitors, tape tension adjustment</h3>
+</div>
+</section>
+<section id="history">
+<h2 id="historical-context">Historical Context</h2>
+<p>The Studer A810 was introduced during a pivotal era in audio history, as studios and broadcasters were transitioning from analog to digital recording. Its microprocessor-controlled design and compact form factor made it a favorite in radio stations, mastering suites, and mobile recording rigs worldwide. The A810’s reliability, precision, and sonic quality helped it become a standard for broadcast archiving and professional mastering in the late 1980s and early 1990s.</p>
+<p>Many classic radio programs, archival transfers, and even some early digital releases were mastered or transferred using the A810. Its robust build and modular serviceability ensured a long service life, and it remains highly respected among engineers for its transparency and ease of calibration. Today, the A810 is sought after by collectors, restoration specialists, and studios looking to preserve or recreate the authentic sound of the analog era.</p>
+</section>
+<section id="failures">
+<h2 id="common-failure-modes">Common Failure Modes</h2>
+<h3><span class="badge">#1</span> Frako Electrolytic Capacitor Failure (The #1 Killer)</h3>
+<p><strong>Symptom:</strong> Missing power rails, blown fuses, dead channels, intermittent operation, microprocessor glitches, display issues . One technician noted: "The biggest issue is the Frako caps - they WILL fail and cause all sorts of weird problems" .</p>
+<p><strong>Cause:</strong> The A810 uses numerous Frako electrolytic capacitors throughout the power supplies, audio cards, and transport control boards . These capacitors are infamous for drying out, leaking electrolyte, and shorting catastrophically after 30+ years .</p>
+<p><strong>Repair:</strong> Replace ALL Frako electrolytic capacitors on sight . This includes power supply boards, audio cards, and transport control boards . Use high-quality 105°C rated capacitors from reputable brands (Nichicon, Panasonic, Vishay) .</p>
+<h3><span class="badge">#2</span> RIFA "Exploding" Capacitor Failure</h3>
+<p><strong>Symptom:</strong> Smoke, burning smell, loud cracking, blown fuses, tripped breakers. One user reported: "The RIFA caps on the mains input had exploded, leaving soot everywhere" .</p>
+<p><strong>Cause:</strong> Paper dielectric RIFA capacitors absorb moisture over decades and short catastrophically .</p>
+<p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight before applying power. Found on mains input, power supply boards, and across motor run capacitors . Replace with X2 class safety capacitors .</p>
+<h3><span class="badge">#3</span> "DSC" Error or Transport Not Responding</h3>
+<p><strong>Symptom:</strong> Machine powers on but displays "DSC" error, transport buttons don't work, or transport behaves erratically .</p>
+<p><strong>Cause:</strong> Failed capacitors on the DSC (Digital Servo Control) board . The DSC board uses many small electrolytics that dry out, causing servo control issues .</p>
+<p><strong>Repair:</strong> Replace all electrolytic capacitors on the DSC board (1.807.450) .</p>
+<h3><span class="badge">#4</span> Tension Sensor Board Issues</h3>
+<p><strong>Symptom:</strong> Erratic tape tension, tape spillage, oscillation in fast wind, "Tension Error" messages .</p>
+<p><strong>Cause:</strong> The tension sensor board (1.807.416) uses opto-electronic sensors that can drift or fail . The associated capacitors also degrade .</p>
+<p><strong>Repair:</strong> Clean the opto-interrupters, check for proper alignment, replace capacitors on the tension sensor board .</p>
+<h3><span class="badge">#5</span> Power Supply Capacitor Failure (1.807.400 Series)</h3>
+<p><strong>Symptom:</strong> Voltage fluctuations, intermittent operation, blown fuses, display flicker .</p>
+<p><strong>Cause:</strong> The A810 uses multiple power supply boards (often 1.807.400 series) with numerous Frako electrolytics that fail .</p>
+<p><strong>Repair:</strong> Replace all electrolytic capacitors on all power supply boards . Use low-ESR, 105°C rated capacitors for switching power supply sections .</p>
+<h3><span class="badge">#6</span> Audio Channel Capacitor Failure</h3>
+<p><strong>Symptom:</strong> Distorted audio, low output, one channel dead, noise, hum .</p>
+<p><strong>Cause:</strong> The audio boards (record and playback) contain many small electrolytics that dry out . Coupling capacitors lose capacitance, causing low output and poor frequency response .</p>
+<p><strong>Repair:</strong> Replace all electrolytic capacitors on audio boards . For best results, use audio-grade capacitors (Nichicon FG, Elna Silmic II) in the signal path .</p>
+<h3><span class="badge">#7</span> Microprocessor Reset Issues</h3>
+<p><strong>Symptom:</strong> Machine doesn't boot, freezes randomly, buttons unresponsive .</p>
+<p><strong>Cause:</strong> Failed capacitors in the microprocessor reset circuit . The reset circuit relies on a capacitor that can leak or lose capacitance, preventing proper startup .</p>
+<p><strong>Repair:</strong> Check reset circuit voltages, replace capacitors in the reset circuit even if they test good for capacitance - they may leak .</p>
+<h3><span class="badge">#8</span> Motor Run Capacitor Failure</h3>
+<p><strong>Symptom:</strong> Capstan motor runs hot, won't start, speed instability, reel motors weak .</p>
+<p><strong>Cause:</strong> Motor run capacitors (typically 4µF and 8µF values) degrade over time . The A810 uses separate capacitors for capstan and reel motors .</p>
+<p><strong>Repair:</strong> Replace with modern polypropylene motor run capacitors . Verify correct values for your configuration (50Hz vs 60Hz) .</p>
+<h3><span class="badge">#9</span> Capstan Motor Bearing Wear</h3>
+<p><strong>Symptom:</strong> Grinding noise, wow and flutter, speed instability .</p>
+<p><strong>Cause:</strong> The direct-drive capstan motor bearings can wear over decades of use .</p>
+<p><strong>Repair:</strong> Capstan motor rebuild by specialist (requires disassembly, bearing replacement, and reassembly) .</p>
+<h3><span class="badge">#10</span> Pinch Roller Solenoid Issues</h3>
+<p><strong>Symptom:</strong> Pinch roller doesn't engage properly, tape slips, squealing .</p>
+<p><strong>Cause:</strong> The pinch roller solenoid may be weak, or its pivot points may be dry and sticky .</p>
+<p><strong>Repair:</strong> Clean and lubricate solenoid pivot points . Check solenoid voltage . Replace solenoid if weak .</p>
+<h3><span class="badge">#11</span> Display Dimming or Missing Segments</h3>
+<p><strong>Symptom:</strong> Vacuum fluorescent display dim, missing digits, flickering .</p>
+<p><strong>Cause:</strong> Aging VFD, or failed capacitors in the display power supply .</p>
+<p><strong>Repair:</strong> Replace capacitors on display power supply board . If display itself is failing, replacement VFDs are available from specialist suppliers .</p>
+<h3><span class="badge">#12</span> Toggle Switch and Potentiometer Noise</h3>
+<p><strong>Symptom:</strong> Crackling when adjusting controls, intermittent operation .</p>
+<p><strong>Cause:</strong> Oxidation on switch contacts and potentiometer tracks after 30+ years .</p>
+<p><strong>Repair:</strong> Clean with DeOxit or appropriate contact cleaner . For stubborn cases, replace switches/pots .</p>
+</section>
+<section id="error-codes">
+<h2 id="critical-a810-error-codes">⚠️ CRITICAL: A810 Error Codes</h2>
+<p>The A810 microprocessor can display error codes that help diagnose problems :</p>
+<div class="error-code-box">
+<strong>Common Error Codes:</strong><br/><br/>
+<strong>no CAL:</strong> Calibration data lost - battery may be dead, or EEPROM corrupted<br/>
+<strong>DSC:</strong> Digital Servo Control error - check DSC board capacitors<br/>
+<strong>tE1 / tE2:</strong> Tension error - check tension sensors and adjustments<br/>
+<strong>HAL:</strong> Hall sensor error - capstan motor hall sensors may be failing<br/>
+<strong>EAS:</strong> End-of-tape sensor error - check light barrier<br/>
+<strong>SF1 / SF2:</strong> Spooling motor frequency error - check tacho signals<br/>
+<strong>brC:</strong> Brake circuit error - check brake control circuit<br/>
+<strong>rEAd:</strong> Tape timer reading error - check tape counter circuit<br/>
+<strong>PAr:</strong> Parameter error - EEPROM data corrupted<br/>
+</div>
+<p><strong>Note:</strong> Error codes can be triggered by capacitor failures in the associated circuits. Always check power supply voltages and capacitor health when troubleshooting errors .</p>
+</section>
+<section id="board-identification">
+<h2 id="critical-board-identification">Critical Board Identification</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Board</th>
+<th>Part Number</th>
+<th>Function</th>
+<th>Common Issues</th>
+</tr>
+<tr>
+<td><strong>DSC Board</strong></td>
+<td>1.807.450</td>
+<td>Digital Servo Control for transport</td>
+<td>Small electrolytics fail, causing DSC error </td>
+</tr>
+<tr>
+<td><strong>Power Supply</strong></td>
+<td>1.807.400 series</td>
+<td>Main power regulation</td>
+<td>Frako caps fail, RIFA caps explode </td>
+</tr>
+<tr>
+<td><strong>Tension Sensor</strong></td>
+<td>1.807.416</td>
+<td>Opto-electronic tension sensing</td>
+<td>Optos drift, caps fail </td>
+</tr>
+<tr>
+<td><strong>Audio Record</strong></td>
+<td>1.807.xxx</td>
+<td>Record amplifier</td>
+<td>Electrolytics dry out, coupling caps fail </td>
+</tr>
+<tr>
+<td><strong>Audio Playback</strong></td>
+<td>1.807.xxx</td>
+<td>Playback amplifier</td>
+<td>Electrolytics dry out, input stage critical </td>
+</tr>
+<tr>
+<td><strong>Microprocessor</strong></td>
+<td>1.807.xxx</td>
+<td>Main logic control</td>
+<td>Reset circuit capacitors </td>
+</tr>
+<tr>
+<td><strong>Display Board</strong></td>
+<td>1.807.xxx</td>
+<td>VFD display driver</td>
+<td>Power supply caps, VFD aging </td>
+</tr>
+</table></div>
+</section>
+<section id="repair">
+<h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
+<div class="warning">
+<strong>🔧 RESTORATION PHILOSOPHY:</strong> The A810's modular construction makes restoration methodical. Work systematically, one board at a time, and test after each stage . Experienced techs recommend: "Replace all Frakos first, then RIFAs, then see what's left" .</div>
+<div class="checklist">
+<h3>Complete Restoration Checklist :</h3>
+<div class="checklist-item">✅ Stage 0 - Documentation (photos of all wiring, board positions)</div>
+<div class="checklist-item">✅ Stage 1 - Replace ALL RIFA capacitors on mains input and power supply boards </div>
+<div class="checklist-item">✅ Stage 2 - Replace ALL Frako electrolytic capacitors on ALL boards </div>
+<div class="checklist-item">✅ Stage 3 - Replace all electrolytics on DSC board (1.807.450) - critical for transport </div>
+<div class="checklist-item">✅ Stage 4 - Replace all electrolytics on power supply boards (1.807.400 series) </div>
+<div class="checklist-item">✅ Stage 5 - Replace all electrolytics on audio boards (record and playback) </div>
+<div class="checklist-item">✅ Stage 6 - Replace motor run capacitors (capstan and reel motors) with polypropylene types </div>
+<div class="checklist-item">✅ Stage 7 - Check and replace reset circuit capacitors on microprocessor board </div>
+<div class="checklist-item">✅ Stage 8 - Clean opto-interrupters on tension sensor board, replace caps </div>
+<div class="checklist-item">✅ Stage 9 - Service capstan motor bearings (lubricate or rebuild) </div>
+<div class="checklist-item">✅ Stage 10 - Clean and lubricate pinch roller solenoid pivot points </div>
+<div class="checklist-item">✅ Stage 11 - Clean all board connectors and edge connectors with DeOxit </div>
+<div class="checklist-item">✅ Stage 12 - Check backup battery, replace if needed </div>
+<div class="checklist-item">✅ Stage 13 - Full mechanical alignment (tape path, tension) </div>
+<div class="checklist-item">✅ Stage 14 - Full electronic calibration with test tape </div>
+</div>
+<p><strong>Pro Tip:</strong> One restorer notes: "The A810 is very sensitive to capacitor health. A single bad cap can cause the entire transport to behave erratically. Don't skip the DSC board - it's often the culprit for DSC errors." </p>
+</section>
+<section id="capacitors">
+<h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
+<div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Location</th>
+<th>Value</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>RIFA Suppression Caps</td>
+<td>Mains input, power supply boards</td>
+<td>0.1µF, 0.47µF 250VAC</td>
+<td>Replace with X2 class safety caps </td>
+</tr>
+<tr>
+<td>Frako Electrolytics</td>
+<td>ALL boards</td>
+<td>Various</td>
+<td>Replace ALL Frako caps - known to fail </td>
+</tr>
+</table></div>
+<div class="component-category">⚡ POWER SUPPLY BOARDS (1.807.400 SERIES)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Reference</th>
+<th>Typical Values</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>Main filter caps</td>
+<td>470µF-4700µF, 16V-63V</td>
+<td>Replace all electrolytics with low-ESR, 105°C types </td>
+</tr>
+<tr>
+<td>Small electrolytics</td>
+<td>10µF-100µF, 16V-50V</td>
+<td>Replace all, use high-quality brands (Nichicon, Panasonic) </td>
+</tr>
+</table></div>
+<div class="component-category">🔋 DSC BOARD (1.807.450) - CRITICAL FOR TRANSPORT</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Reference</th>
+<th>Typical Values</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>All electrolytics</td>
+<td>4.7µF-100µF, 16V-50V</td>
+<td>Replace ALL - failure here causes DSC error </td>
+</tr>
+</table></div>
+<div class="component-category">🎚️ AUDIO BOARDS (RECORD AND PLAYBACK)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Type</th>
+<th>Values</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>Coupling capacitors</td>
+<td>10µF-47µF, 16V-50V</td>
+<td>Use audio-grade (Nichicon FG, Elna Silmic II) for best sound </td>
+</tr>
+<tr>
+<td>Power supply decoupling</td>
+<td>47µF-220µF, 16V-50V</td>
+<td>Standard low-ESR types fine </td>
+</tr>
+</table></div>
+<div class="component-category">🔴 TENSION SENSOR BOARD (1.807.416)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Reference</th>
+<th>Values</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>All electrolytics</td>
+<td>Small values</td>
+<td>Replace all; clean opto-interrupters </td>
+</tr>
+</table></div>
+<div class="component-category">🔋 MOTOR RUN CAPACITORS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Motor</th>
+<th>Typical Values</th>
+<th>Replacement</th>
+</tr>
+<tr>
+<td>Capstan Motor</td>
+<td>4µF AC</td>
+<td>Modern polypropylene motor run cap, 4µF/250VAC+</td>
+</tr>
+<tr>
+<td>Reel Motors</td>
+<td>8µF AC each</td>
+<td>Modern polypropylene motor run caps, 8µF/250VAC+ each</td>
+</tr>
+</table></div>
+<p><strong>Note:</strong> Values may vary based on specific configuration (50Hz vs 60Hz). Verify with your machine's documentation .</p>
+<div class="component-category">✅ REPLACEMENT BEST PRACTICES</div>
+<ul>
+<li>Use high-quality capacitors: Nichicon, Panasonic, Vishay, WIMA</li>
+<li>For audio path, consider audio-grade capacitors (Nichicon FG, Elna Silmic II)</li>
+<li>Use 105°C rated capacitors for power supply and high-temperature areas</li>
+<li>Increase voltage ratings where physically possible for safety margin</li>
+<li>Confirm polarity during installation</li>
+<li>Clean boards thoroughly after removing old caps (Frako electrolyte is corrosive)</li>
+</ul>
+</section>
+<section id="microprocessor">
+<h2 id="microprocessor-and-memory-issues">Microprocessor and Memory Issues</h2>
+<h3>Backup Battery:</h3>
+<ul>
+<li>The A810 uses a battery to maintain calibration data and setup parameters</li>
+<li>Original batteries may leak and corrode the board</li>
+<li>Replace with new lithium battery (CR2032 or similar with holder)</li>
+<li>After battery replacement, calibration data may be lost - machine may display "no CAL"</li>
+<li>Full recalibration required after battery replacement</li>
+</ul>
+<h3>EEPROM Failure:</h3>
+<ul>
+<li>The A810 stores calibration data in EEPROM</li>
+<li>EEPROM can fail or become corrupted</li>
+<li>Symptoms: "PAr" error, incorrect operation, lost settings</li>
+<li>Replacement EEPROMs available from Studer specialists</li>
+<li>Must be programmed with correct data for your configuration</li>
+</ul>
+<h3>Reset Circuit:</h3>
+<ul>
+<li>Capacitors in the reset circuit can leak, preventing proper microprocessor startup</li>
+<li>Symptoms: machine doesn't boot, freezes randomly</li>
+<li>Replace all electrolytics in reset circuit even if they test good for capacitance</li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2 id="complete-troubleshooting-guide">Complete Troubleshooting Guide</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>"DSC" error, transport not working</td>
+<td>Failed caps on DSC board (1.807.450)</td>
+<td>Replace all electrolytics on DSC board </td>
+</tr>
+<tr>
+<td>Smoke, burning smell, blown fuse</td>
+<td>RIFA capacitor exploded</td>
+<td>Replace all RIFA caps immediately </td>
+</tr>
+<tr>
+<td>Dead channels, distorted audio</td>
+<td>Frako caps on audio boards failed</td>
+<td>Replace all electrolytics on audio boards </td>
+</tr>
+<tr>
+<td>Intermittent transport, random errors</td>
+<td>Power supply Frako caps failing</td>
+<td>Replace all electrolytics on power supply boards </td>
+</tr>
+<tr>
+<td>Machine won't boot, freezes</td>
+<td>Reset circuit capacitor leaking</td>
+<td>Replace caps in microprocessor reset circuit </td>
+</tr>
+<tr>
+<td>"tE1" or "tE2" error, tape tension issues</td>
+<td>Tension sensor board caps or optos</td>
+<td>Replace caps, clean opto-interrupters </td>
+</tr>
+<tr>
+<td>"no CAL" error</td>
+<td>Backup battery dead, EEPROM corrupted</td>
+<td>Replace battery, recalibrate, or replace EEPROM </td>
+</tr>
+<tr>
+<td>Capstan motor runs hot, won't start</td>
+<td>Motor run capacitor failed</td>
+<td>Replace with polypropylene motor cap </td>
+</tr>
+<tr>
+<td>Reel motors weak, slow wind</td>
+<td>Reel motor caps failed</td>
+<td>Replace with polypropylene motor caps </td>
+</tr>
+<tr>
+<td>Display dim, flickering</td>
+<td>Display power supply caps, VFD aging</td>
+<td>Replace caps on display power supply </td>
+</tr>
+<tr>
+<td>Pinch roller not engaging</td>
+<td>Solenoid sticky, pivot dry</td>
+<td>Clean and lubricate solenoid pivot </td>
+</tr>
+<tr>
+<td>Wow and flutter, speed instability</td>
+<td>Capstan motor bearings, motor caps</td>
+<td>Service capstan motor, replace motor caps </td>
+</tr>
+</table></div>
+<h3>Real Restoration Cases:</h3>
+<div class="info-box">
+<p><strong>Case 1 - DSC Error :</strong> A810 displayed DSC error and transport was dead. Found multiple failed Frako caps on DSC board. After replacing all electrolytics on DSC board, error cleared and transport worked perfectly.</p>
+<p><strong>Case 2 - Intermittent Transport :</strong> Machine worked for 10-20 minutes then would freeze or behave erratically. Power supply voltages were fluctuating. Replaced all Frako caps on power supply boards - problem solved.</p>
+<p><strong>Case 3 - No Audio Left Channel :</strong> Left channel dead, right channel fine. Found open coupling capacitor on record board. Replaced all electrolytics on both record and playback boards as preventive measure.</p>
+<p><strong>Case 4 - "no CAL" Error :</strong> Machine displayed "no CAL" after power-up. Backup battery had leaked and corroded the board. Replaced battery, cleaned board, recalibrated - error cleared.</p>
+<p><strong>Case 5 - RIFA Explosion :</strong> User reported smoke and burning smell on power-up. Found exploded RIFA capacitor on mains input. Replaced all RIFA caps in machine, unit now safe.</p>
+</div>
+</section>
+<section id="calibration">
+<h2 id="calibration-and-alignment">Calibration and Alignment </h2>
+<h3>Required Tools:</h3>
+<ul>
+<li>MRL test tape (appropriate for track configuration and EQ curve)</li>
+<li>Oscilloscope (for azimuth and bias adjustment)</li>
+<li>Audio signal generator</li>
+<li>AC millivoltmeter</li>
+<li>Distortion analyzer (optional)</li>
+<li>Tension gauge</li>
+<li>Non-magnetic screwdrivers</li>
+<li>Frequency counter (for speed calibration)</li>
+</ul>
+<h3>Alignment Sequence :</h3>
+<ol>
+<li><strong>Mechanical alignment:</strong> Tape path, head height, zenith</li>
+<li><strong>Playback alignment:</strong> Level and EQ using test tape</li>
+<li><strong>Record alignment:</strong> Bias adjustment, record level, EQ</li>
+<li><strong>Azimuth adjustment:</strong> Using test tape for playback, then record/playback loop</li>
+<li><strong>Speed calibration:</strong> Adjust capstan speed using frequency counter</li>
+<li><strong>Tension adjustment:</strong> Set tape tension per service manual</li>
+</ol>
+<h3>Setup Mode:</h3>
+<p>The A810 has a setup mode accessible via front panel buttons that allows adjustment of various parameters including:</p>
+<ul>
+<li>Speed settings</li>
+<li>Tape tension values</li>
+<li>Display brightness</li>
+<li>Remote control configuration</li>
+<li>Bias and EQ settings</li>
+</ul>
+<div class="warning">
+<strong>⚠️ IMPORTANT:</strong> Always document original settings before making adjustments. After battery replacement, calibration data may be lost, requiring full recalibration .</div>
+</section>
+<section id="mechanical">
+<h2 id="mechanical-maintenance-guide">Mechanical Maintenance Guide </h2>
+<h3>Capstan Motor Service:</h3>
+<ul>
+<li>Listen for bearing noise (grinding, rumbling)</li>
+<li>If noisy, motor may need professional rebuild</li>
+<li>Some motors have lubrication ports - use appropriate oil (PDP65) sparingly</li>
+</ul>
+<h3>Pinch Roller Solenoid:</h3>
+<ul>
+<li>Check for smooth operation, no binding</li>
+<li>Clean pivot points and lubricate lightly</li>
+<li>Check solenoid voltage when engaged</li>
+</ul>
+<h3>Tape Path Cleaning:</h3>
+<ul>
+<li>Clean heads, guides, and rollers with isopropyl alcohol</li>
+<li>Check for oxide buildup on all tape contact points</li>
+<li>Clean capstan shaft thoroughly</li>
+</ul>
+<h3>Tension Sensor Adjustment:</h3>
+<ul>
+<li>Clean opto-interrupters with compressed air or alcohol</li>
+<li>Check alignment of light barriers</li>
+<li>Adjust per service manual if tension errors persist</li>
+</ul>
+<h3>Brake Adjustment:</h3>
+<ul>
+<li>Check brake pads for wear</li>
+<li>Adjust brake tension to stop reels without excessive slack</li>
+</ul>
+<h3>Head Inspection:</h3>
+<ul>
+<li>Visually inspect for wear groove</li>
+<li>If groove is visible (&gt;0.5mm), relapping may be needed</li>
+<li>Studer heads typically last longer than most, but eventually wear</li>
+<li>JRF Magnetic Sciences offers relapping services</li>
+</ul>
+</section>
+<section id="kits">
+<h2 id="restoration-kits-resources">Restoration Kits &amp; Resources</h2>
+<h3>Specialist Suppliers:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Supplier</th>
+<th>Specialty</th>
+</tr>
+<tr>
+<td>Revox-online-shop (Germany)</td>
+<td>A807 restoration kits, capacitor kits, mechanical parts</td>
+</tr>
+<tr>
+<td>Nagravox (Australia)</td>
+<td>Restoration kits for Studer/Revox, mechanical parts</td>
+</tr>
+<tr>
+<td>Mouser / DigiKey</td>
+<td>General capacitors (Nichicon, Panasonic, Vishay), diodes, resistors</td>
+</tr>
+<tr>
+<td>JRF Magnetic Sciences</td>
+<td>Head relapping and replacement</td>
+</tr>
+<tr>
+<td>Terry's Rubber Rollers</td>
+<td>Pinch roller rebuilding</td>
+</tr>
+<tr>
+<td>F&amp;T (Germany)</td>
+<td>Multi-section can capacitor replacements</td>
+</tr>
+</table></div>
+<h3>Service Documentation:</h3>
+<ul>
+<li><strong>Studer FTP Archive:</strong> ftp://ftp.studer.ch/Public/Products/A807/ - Service manuals, schematics, bulletins</li>
+<li><strong>HiFi Engine:</strong> User and service manuals</li>
+<li><strong>Manualslib.com:</strong> A807 documentation</li>
+</ul>
+<h3>Online Communities:</h3>
+<ul>
+<li><strong>Tapeheads.net:</strong> Active Studer A807 discussions, many restoration threads</li>
+<li><strong>GroupDIY:</strong> Technical discussions on Studer restoration</li>
+<li><strong>Studer List (recordist.com):</strong> Email list for Studer enthusiasts</li>
+<li><strong>Prodigy-Pro:</strong> Professional audio forum with A807 discussions</li>
+</ul>
+</section>
+<section id="specifications">
+<h2 id="technical-specifications">Technical Specifications </h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Manufacturer</td>
+<td>Studer (Willi Studer, Switzerland)</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>A807</td>
+</tr>
+<tr>
+<td>Production Years</td>
+<td>1985-1993</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Microprocessor-controlled professional tape recorder</td>
+</tr>
+<tr>
+<td>Track Formats</td>
+<td>1/4" stereo, 1/2" two-track, multi-track versions</td>
+</tr>
+<tr>
+<td>Tape Speeds</td>
+<td>3.75, 7.5, 15 ips (standard), 7.5, 15, 30 ips (optional)</td>
+</tr>
+<tr>
+<td>Frequency Response</td>
+<td>±2dB 30Hz-20kHz at 15 ips</td>
+</tr>
+<tr>
+<td>S/N Ratio</td>
+<td>&gt;72dB (depending on track format and tape)</td>
+</tr>
+<tr>
+<td>Wow and Flutter</td>
+<td>&lt;0.05% at 15 ips</td>
+</tr>
+<tr>
+<td>Crosstalk</td>
+<td>&gt;60dB</td>
+</tr>
+<tr>
+<td>Output Level</td>
+<td>Line output: +4dBm or -10dBV (configurable)</td>
+</tr>
+</table></div>
+</section>
+</div></article><section class="rr-card"><h2 class="rr-h">More Studer models we service</h2><div class="rr-rel"><a href="/reel-to-reel/studer/studer-a62">Studer A62</a><a href="/reel-to-reel/studer/studer-a67">Studer A67</a><a href="/reel-to-reel/studer/studer-a721">Studer A721</a><a href="/reel-to-reel/studer/studer-a80">Studer A80</a><a href="/reel-to-reel/studer/studer-a807">Studer A807</a><a href="/reel-to-reel/studer/studer-a812">Studer A812</a><a href="/reel-to-reel/studer/studer-a816">Studer A816</a><a href="/reel-to-reel/studer/studer-a820">Studer A820</a><a href="/reel-to-reel/studer/studer-a827">Studer A827</a><a href="/reel-to-reel/studer/studer-c37">Studer C37</a><a href="/reel-to-reel/studer/studer-j37">Studer J37</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Studer A810?</div><div>Yes. Tek Media Group repairs and restores the Studer A810 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Studer A810 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

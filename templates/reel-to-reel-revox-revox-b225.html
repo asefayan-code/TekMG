@@ -8,663 +8,552 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/revox">Revox</a> &rsaquo; Revox B225</nav><span class="rr-eyebrow">Revox CD player repair</span><h1>Revox B225</h1><p class="rr-lead">The Revox B225 represents Studer-Revox&#x27;s entry into the digital audio era. Produced from approximately 1983 to 1987, it was the first CD player from the legendary Swiss manufacturer.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>Revox</dd></div><div><dt>Model</dt><dd>Revox B225</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#overview">Overview</a><a href="#current-market-value-2024">Current Market Value (2024)</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-board-identification-guide">⚠️ CRITICAL: Board Identification Gu…</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#mechanical-overhaul-guide">Mechanical Overhaul Guide</a><a href="#complete-troubleshooting-guide">Complete Troubleshooting Guide</a><a href="#calibration-essentials">Calibration Essentials</a><a href="#restoration-kits-resources">Restoration Kits &amp; Resources</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
-        
-        
-        <div class="disclaimer">
-            <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/revox">Revox</a> › Revox B225</nav><span class="rr-eyebrow">Revox CD player repair</span><h1>Revox B225</h1><p class="rr-lead">The Revox B225 represents Studer-Revox's entry into the digital audio era. Produced from approximately 1983 to 1987, it was the first CD player from the legendary Swiss manufacturer.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Revox</dd></div><div><dt>Model</dt><dd>Revox B225</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#overview">Overview</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-board-identification-guide">⚠️ CRITICAL: Board Identification Gu…</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#mechanical-overhaul-guide">Mechanical Overhaul Guide</a><a href="#complete-troubleshooting-guide">Complete Troubleshooting Guide</a><a href="#calibration-essentials">Calibration Essentials</a><a href="#restoration-kits-resources">Restoration Kits &amp; Resources</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
+<div class="disclaimer">
+<strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
         </div>
-
-        <div class="danger">
-            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Revox B225 contains <span class="voltage-warning">aging electrolytic capacitors</span> that WILL fail, causing a wide range of symptoms from no operation to skipping and tracking errors. <strong>Never operate an unrestored B225 without first replacing critical electrolytic capacitors.</strong> The unit also contains hazardous mains voltages.
+<div class="danger">
+<strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Revox B225 contains <span class="voltage-warning">aging electrolytic capacitors</span> that WILL fail, causing a wide range of symptoms from no operation to skipping and tracking errors. <strong>Never operate an unrestored B225 without first replacing critical electrolytic capacitors.</strong> The unit also contains hazardous mains voltages.
         </div>
-
-        <section id="overview">
-            <h2 id="overview">Overview</h2>
-            
-            
-            <div class="info-box">
-                <strong>📌 Key Specifications:</strong>
-                <ul>
-                    <li><strong>DAC:</strong> TDA1540 14-bit (陶封 ceramic version highly sought)</li>
-                    <li><strong>Transport:</strong> Philips CDM-0 / CDM-1 swing-arm mechanism</li>
-                    <li><strong>Modular Design:</strong> 5 plug-in PCBs (电源板、伺服板、控制板、数字处理、解码板)</li>
-                    <li><strong>Output:</strong> Variable and fixed RCA, headphone jack</li>
-                    <li><strong>Construction:</strong> Full metal chassis, removable lid for service</li>
-                </ul>
+<section id="overview">
+<h2 id="overview">Overview</h2>
+<div class="info-box">
+<strong>📌 Key Specifications:</strong>
+<ul>
+<li><strong>DAC:</strong> TDA1540 14-bit (陶封 ceramic version highly sought)</li>
+<li><strong>Transport:</strong> Philips CDM-0 / CDM-1 swing-arm mechanism</li>
+<li><strong>Modular Design:</strong> 5 plug-in PCBs (电源板、伺服板、控制板、数字处理、解码板)</li>
+<li><strong>Output:</strong> Variable and fixed RCA, headphone jack</li>
+<li><strong>Construction:</strong> Full metal chassis, removable lid for service</li>
+</ul>
+</div>
+<p>The B225 is renowned for its unique drawer mechanism: the entire transport module extends outward on rails when opening, rather than just a small tray. This "Tresorlade" (vault drawer) design is a hallmark of early Revox engineering. The unit uses a modular card-edge connector system, making board removal relatively straightforward.</p>
+</section>
+<section id="failures">
+<h2 id="common-failure-modes">Common Failure Modes</h2>
+<h3><span class="badge">#1</span> Electrolytic Capacitor Failure (The #1 Cause)</h3>
+<p><strong>Symptom:</strong> Unit takes power (~20W) but won't respond to controls, intermittent operation, skipping, TOC not read, or complete deadness. One forum member noted: "Symptome 1: Das Gerät nimmt etwa 20W Strom auf, lässt sich aber nicht 'bedienen'. Kurzum....'Fully recap recommended.'".</p>
+<p><strong>Cause:</strong> The B225 uses Philips blue electrolytic capacitors that dry out after 30+ years. A restorer found a 47µF capacitor that measured only 16.8µF, and a 100µF on the DAC board reading just 35.9µF. The power supply design places capacitors near hot regulators, accelerating aging.</p>
+<p><strong>Repair:</strong> "Alle Platinen sind betroffen" (All boards are affected). Replace ALL electrolytic capacitors on every board: Power Supply, Servo 1, Servo 2, Decoder, DAC, and Microprocessor boards. The DAC board contains the most capacitors and is especially critical.</p>
+<div class="capacitor-warning">
+<strong>📊 Measured Capacitor Deterioration Examples:</strong>
+<ul>
+<li>47µF Philips → 25.2µF (53% of rated)</li>
+<li>47µF Philips → 16.8µF (36% of rated)</li>
+<li>100µF Philips (DAC) → 35.9µF (36% of rated)</li>
+<li>100µF silver can → 76.5µF (76% of rated)</li>
+<li>22µF → 9.3µF (42% of rated)</li>
+<li>22µF → 4.1µF (19% of rated - critical failure)</li>
+</ul>
+</div>
+<h3><span class="badge">#2</span> Spindle Motor Bearing Wear (Plastic Thrust Plate)</h3>
+<p><strong>Symptom:</strong> CD doesn't read TOC, skipping, difficulty reading tracks, jumping time display. One user reported: "Die Achse des Spindelmotors hat sich in das Kunststofflager eingearbeitet" (The spindle motor shaft has worn into the plastic bearing). Another described: "the spindle runs on a thin plastic disk... the spindle digs or sinks into the surface of the disk, effectively lowering the CD's nominal height relative to the laser pickup".</p>
+<p><strong>Cause:</strong> The spindle motor rides on a small plastic thrust washer. Over decades, the metal shaft creates a divot, lowering the disc relative to the laser. The servo can no longer compensate.</p>
+<p><strong>Repair:</strong> Two approaches: (1) Simple fix - adjust the threaded nut underneath to raise the spindle height. (2) Proper fix - replace or resurface the plastic thrust washer. One restorer sanded it flat ("planschleifen geht auch") removing only 0.3-0.4mm, then reassembled with fresh grease. Use Delrin (POM) as replacement material.</p>
+<h3><span class="badge">#3</span> Laser Pickup Aging / CDM-0 Mechanism Issues</h3>
+<p><strong>Symptom:</strong> TOC not read, skipping, tracking errors, time jumps during playback. One user reported: "when I press next track it takes some seconds sometimes to find the next track and then starts to play, the time in the display jumps or counts before it comes to next track".</p>
+<p><strong>Cause:</strong> Laser diode weakens with age. Proper laser current should be measured. According to Revox documentation, normal laser voltage is 565mV ±75mV. Values above 640mV indicate aging.</p>
+<p><strong>Repair:</strong> Measure laser voltage at test points. Adjust potentiometer on the pickup board to achieve 500-565mV. One restorer achieved 500mV successfully. If adjustment fails, laser replacement or pickup rebuilding may be necessary.</p>
+<h3><span class="badge">#4</span> TOC Not Read / Focus Issues</h3>
+<p><strong>Symptom:</strong> Display shows "00" and doesn't read disc contents.</p>
+<p><strong>Cause:</strong> Can be multiple factors: spindle height misalignment, laser aging, or capacitor failure. One documented case involved C31 (3.3nF) on the Servo 1 PCB that had blown, taking out nearby components.</p>
+<p><strong>Repair:</strong> Systematic approach:</p>
+<ul>
+<li>Check if laser lens moves up/down when closing drawer and pressing PLAY</li>
+<li>Check IC2 (RC4559) for abnormal heating</li>
+<li>Check Q6, Q7 transistors</li>
+<li>Measure resistance of R6 near C31</li>
+<li>Replace C31 with correct 3nF value (not 10nF)</li>
+<li>Adjust spindle height</li>
+</ul>
+<h3><span class="badge">#5</span> Skipping and Fast-Forward Issues</h3>
+<p><strong>Symptom:</strong> CDs play fine for ~50 minutes then skip back; fast-forward doesn't hold and bounces; when starting at track 10, display counts through tracks rapidly before playback begins.</p>
+<p><strong>Cause:</strong> Often related to spindle height misalignment or laser current drift.</p>
+<p><strong>Repair:</strong> Professional advice: "put the unit into test mode and disconnect the focus servo plug, then adjust the spindle height until it 'plays'". Also verify laser current at 50mA.</p>
+<h3><span class="badge">#6</span> Control IC Failure (MAB8440)</h3>
+<p><strong>Symptom:</strong> Tray motor runs continuously, won't power off, buttons unresponsive except LOAD. One user reported: "My Revox B225 will not power off. Also the tray wants to open non stop. The motor will not stop turning".</p>
+<p><strong>Cause:</strong> Failed microprocessor IC - MAB8440P-D030 or MAB8440P-D029. These are now difficult to source.</p>
+<p><strong>Repair:</strong> Replacement from a donor unit is the only option. Check 6MHz and 4.4336MHz oscillator crystals first. Also check tray position switches.</p>
+<h3><span class="badge">#7</span> Display Failure (LCD and Backlight)</h3>
+<p><strong>Symptom:</strong> Display shows only half of digits, weak illumination, completely dead. One user reported: "Das Display zeigt nur die untere Hälfte normal an und die andere ganz schwach" (The display shows only the lower half normally and the other half very weakly).</p>
+<p><strong>Cause:</strong> LCD controller chips can fail, especially if shorted during cleaning. One user accidentally shorted the display while cleaning the drawer window and destroyed the LCD driver ICs.</p>
+<h3><span class="badge">#8</span> Damaged Ribbon Cables</h3>
+<p><strong>Symptom:</strong> Intermittent operation, display issues, control problems. One user replaced a faulty blue ribbon cable to fix display issues.</p>
+<p><strong>Cause:</strong> Flex cables can crack or become intermittent with age and repeated flexing.</p>
+<p><strong>Repair:</strong> Visually inspect, test continuity, replace if damaged.</p>
+<h3><span class="badge">#9</span> Tray Mechanism / Drawer Issues</h3>
+<p><strong>Symptom:</strong> Tray won't open or close, motor runs continuously, drawer doesn't fully extend.</p>
+<p><strong>Cause:</strong> Worn gears, dry lubrication, or faulty end-stop switches.</p>
+<p><strong>Repair:</strong> Clean and lubricate mechanism. Check microswitches that sense open/closed position. The drawer can be operated manually for service.</p>
+<h3><span class="badge">#10</span> Large Filter Capacitors (Frako/ROE) - Usually Good</h3>
+<p><strong>Symptom:</strong> Unlike small electrolytics, the main power supply filters often remain healthy. One restorer measured: 2200µF FRAKO at 2790µF, 4700µF ROE at 6460µF, Siemens at 1100+µF.</p>
+<p><strong>Cause:</strong> High-quality German capacitors age better than Philips small electrolytics.</p>
+<p><strong>Repair:</strong> These can typically be left in place unless problems are suspected.</p>
+</section>
+<section id="board-identification">
+<h2 id="critical-board-identification-guide">⚠️ CRITICAL: Board Identification Guide</h2>
+<p>The B225 consists of five main plug-in PCBs:</p>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Board</th>
+<th>Part Number</th>
+<th>Function</th>
+<th>Capacitor Issues</th>
+</tr>
+<tr>
+<td><strong>Power Supply</strong></td>
+<td>1.769.???</td>
+<td>Main power regulation</td>
+<td>Philips blue caps near regulators dry out quickly</td>
+</tr>
+<tr>
+<td><strong>SERVO 1 PCB</strong></td>
+<td>1.769.310</td>
+<td>Focus servo, motor control</td>
+<td>Contains C31 (3.3nF) critical for focus</td>
+</tr>
+<tr>
+<td><strong>SERVO 2 PCB</strong></td>
+<td>1.769.330</td>
+<td>Additional servo functions</td>
+<td>Electrolytics need replacement</td>
+</tr>
+<tr>
+<td><strong>DECODER PCB</strong></td>
+<td>1.769.300</td>
+<td>Digital signal processing</td>
+<td>Many aging Philips caps</td>
+</tr>
+<tr>
+<td><strong>DAC PCB</strong></td>
+<td>1.769.280</td>
+<td>TDA1540 DACs, analog output</td>
+<td><strong>Most capacitors on this board</strong> - all need replacement</td>
+</tr>
+<tr>
+<td><strong>MICROPROCESSOR</strong></td>
+<td>1.769.320</td>
+<td>Control logic, display</td>
+<td>Contains MAB8440 IC, timing caps</td>
+</tr>
+</table></div>
+<p><strong>Access:</strong> All boards can be removed without disassembling the transport, except SERVO 1 which requires drawer extension.</p>
+</section>
+<section id="repair">
+<h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
+<div class="warning">
+<strong>🔧 RESTORATION PHILOSOPHY:</strong> "Alle Platinen sind betroffen" (All boards are affected). The B225's modular design makes restoration straightforward, but EVERY electrolytic capacitor should be replaced. The DAC board has the most capacitors.
             </div>
-            
-            <p>The B225 is renowned for its unique drawer mechanism: the entire transport module extends outward on rails when opening, rather than just a small tray. This "Tresorlade" (vault drawer) design is a hallmark of early Revox engineering. The unit uses a modular card-edge connector system, making board removal relatively straightforward.</p>
-        </section>
-
-        <section id="value">
-            <h2 id="current-market-value-2024">Current Market Value (2024)</h2>
-            <p>B225 values are driven by condition, presence of original TDA1540 ceramic DACs, and restoration status:</p>
-            
-            <div class="model-grid">
-                <div class="model-card">
-                    <strong>Unrestored / Project Unit</strong>
-                    <p>Non-working, unknown capacitor condition, may have TOC reading issues</p>
-                    <div class="price-tag">$400-800</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Partially Restored</strong>
-                    <p>Some capacitors replaced, basic functionality</p>
-                    <div class="price-tag">$800-1,200</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Fully Restored</strong>
-                    <p>Complete recap, spindle bearing service, alignment, new display if needed</p>
-                    <div class="price-tag">$1,500-2,200</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Mint / Ceramic DAC</strong>
-                    <p>陶封 TDA1540D, exceptional condition, all original Philips tubes</p>
-                    <div class="price-tag">$2,200-3,000+</div>
-                </div>
+<div class="checklist">
+<h3>Complete Restoration Checklist:</h3>
+<div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors, board positions)</div>
+<div class="checklist-item">✅ Stage 1 - Remove all 5 PCBs per service manual</div>
+<div class="checklist-item">✅ Stage 2 - Replace ALL electrolytic capacitors on EVERY board</div>
+<div class="checklist-item">✅ Stage 4 - Replace C31 (3.3nF) on SERVO 1 PCB with correct value</div>
+<div class="checklist-item">✅ Stage 5 - Check large Frako/ROE filter caps - usually OK</div>
+<div class="checklist-item">✅ Stage 6 - Clean all board connectors and card-edge contacts</div>
+<div class="checklist-item">✅ Stage 7 - Inspect and replace any damaged ribbon cables</div>
+<div class="checklist-item">✅ Stage 8 - Inspect spindle bearing, adjust or resurface thrust plate</div>
+<div class="checklist-item">✅ Stage 9 - Measure and adjust laser current (target 500-565mV)</div>
+<div class="checklist-item">✅ Stage 10 - Adjust spindle height using test mode</div>
+<div class="checklist-item">✅ Stage 11 - Check display function; replace bulbs or LCD if needed</div>
+<div class="checklist-item">✅ Stage 12 - Full calibration per service manual (focus gain, etc.)</div>
+<div class="checklist-item">✅ Stage 13 - Replace RCA connectors if worn</div>
+<div class="checklist-item">✅ Stage 14 - Clean drawer mechanism, lubricate rails</div>
+</div>
+<p><strong>Capacitor Selection Notes:</strong></p>
+<ul>
+<li>Different capacitor brands affect sound quality. Options tested: Nippon Chemicon, Yageo, Fujicon, Panasonic.</li>
+<li>One restorer found Fujicon capacitors produced "lebhafter und musizieren mit klarerem Grundton" (more lively and musical with clearer fundamental tone).</li>
+<li>Panasonic were also good but Fujicon preferred in this application.</li>
+<li>Organic polymer capacitors are possible but "Nur Fliegenfischen ist noch schöner" (Only fly fishing is more beautiful) - implying they're overkill/not necessary.</li>
+</ul>
+</section>
+<section id="capacitors">
+<h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
+<div class="component-category">⚡ POWER SUPPLY BOARD</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Location</th>
+<th>Typical Values</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Near 3-terminal regulators</td>
+<td>47µF, 100µF</td>
+<td>Heat from regulators accelerates drying - replace all</td>
+</tr>
+<tr>
+<td>Main Filters</td>
+<td>2200µF (Frako), 4700µF (ROE), Siemens</td>
+<td>Often test good - can be retained</td>
+</tr>
+</table></div>
+<div class="component-category">🎚️ DAC BOARD (1.769.280) - MOST CRITICAL</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Typical Values</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>All electrolytics</td>
+<td>100µF, 47µF, 22µF, 10µF</td>
+<td><strong>Replace ALL</strong> - severe deterioration measured</td>
+</tr>
+<tr>
+<td>Output coupling caps</td>
+<td>100µF (Philips 035 series)</td>
+<td>Critical for sound quality - upgrade to audio-grade (SIC, Elna, etc.)</td>
+</tr>
+<tr>
+<td>Silver can caps</td>
+<td>100µF</td>
+<td>Also deteriorate (76.5µF measured) - replace</td>
+</tr>
+</table></div>
+<div class="component-category">🔴 SERVO 1 PCB (1.769.310) - SPECIAL CASES</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>C31</td>
+<td>3.3nF (not electrolytic)</td>
+<td>Critical for focus circuit - use EXACT value</td>
+</tr>
+<tr>
+<td>R6 (near C31)</td>
+<td>Check value</td>
+<td>May be burned if C31 shorted</td>
+</tr>
+<tr>
+<td>Electrolytics</td>
+<td>Various</td>
+<td>Replace all</td>
+</tr>
+</table></div>
+<div class="component-category">🔵 DECODER, SERVO 2, MICROPROCESSOR BOARDS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Board</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Decoder (1.769.300)</td>
+<td>Replace all electrolytics</td>
+<td>Philips caps show deterioration</td>
+</tr>
+<tr>
+<td>Servo 2 (1.769.330)</td>
+<td>Replace all electrolytics</td>
+<td>Similar age-related issues</td>
+</tr>
+<tr>
+<td>Microprocessor (1.769.320)</td>
+<td>Replace all electrolytics</td>
+<td>Check 6MHz/4.4336MHz crystals</td>
+</tr>
+</table></div>
+<div class="component-category">🎛️ SMALL SIGNAL CAPACITORS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Type</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Roederstein (orange)</td>
+<td>Check - often still good</td>
+<td>"Die orangefarbenen Roederstein sind noch perfekt"</td>
+</tr>
+<tr>
+<td>WIMA film caps</td>
+<td>Usually reliable</td>
+<td>Can be left unless damaged</td>
+</tr>
+</table></div>
+<p><strong>Documented Measurements (for reference):</strong></p>
+<ul>
+<li>Original 100µF Philips → 35.9µF (DAC board, critical)</li>
+<li>Original 47µF Philips → 16.8µF (worst case)</li>
+<li>Original 22µF → 4.1µF (critical failure)</li>
+<li>Original 22µF → 9.3µF</li>
+<li>Original 100µF silver can → 76.5µF (better but still degraded)</li>
+</ul>
+</section>
+<section id="mechanical">
+<h2 id="mechanical-overhaul-guide">Mechanical Overhaul Guide</h2>
+<h3>Spindle Bearing Service:</h3>
+<ul>
+<li><strong>Inspection:</strong> Check if spindle shaft has worn into plastic thrust washer. This is extremely common.</li>
+<li><strong>Quick Fix:</strong> Adjust threaded nut underneath to raise spindle height. Turn in slightly until proper focus achieved.</li>
+<li><strong>Proper Fix:</strong> Remove thrust washer, sand flat (remove 0.3-0.4mm), or replace with Delrin (POM).</li>
+<li><strong>Lubrication:</strong> Apply fresh grease to bearing surfaces.</li>
+<li><strong>Adjustment:</strong> After repair, must re-adjust spindle height and possibly laser current.</li>
+</ul>
+<h3>Laser Current Adjustment:</h3>
+<ul>
+<li><strong>Test Point:</strong> Locate laser current test points on pickup board.</li>
+<li><strong>Target:</strong> 565mV ±75mV (normal range). Above 640mV indicates aging.</li>
+<li><strong>Procedure:</strong> Play a CD, measure voltage, adjust potentiometer to 500-565mV.</li>
+<li><strong>Note:</strong> After spindle height adjustment, laser current may need readjustment.</li>
+</ul>
+<h3>Drawer Mechanism:</h3>
+<ul>
+<li><strong>Manual Operation:</strong> Drawer can be operated manually for service without damage.</li>
+<li><strong>Access:</strong> To remove mechanism, push drawer partly out, turn unit upside down, remove screws [D], then carefully lift player off.</li>
+<li><strong>Cleaning:</strong> Clean rails and gears, apply fresh lithium grease.</li>
+</ul>
+<h3>Focus Servo Test Mode:</h3>
+<ul>
+<li>Put unit into test mode (procedure in service manual).</li>
+<li>Disconnect focus servo plug.</li>
+<li>Adjust spindle height until CD "plays".</li>
+</ul>
+<h3>Op-Amp Upgrades:</h3>
+<ul>
+<li>Original boards use RC5532 op-amps (Raytheon).</li>
+<li>Front two (I/V conversion and output) can be upgraded.</li>
+<li>Install DIP sockets for easy rolling.</li>
+<li>Rear two are for volume-controlled output and headphone - can remain stock initially.</li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2 id="complete-troubleshooting-guide">Complete Troubleshooting Guide</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>Unit draws power but won't respond to controls</td>
+<td>Dead Philips blue electrolytics</td>
+<td>Replace ALL electrolytics on all boards</td>
+</tr>
+<tr>
+<td>No TOC, display shows "00"</td>
+<td>Spindle bearing wear, laser issue, C31 failure</td>
+<td>Check spindle height, measure laser current, check C31 on SERVO 1</td>
+</tr>
+<tr>
+<td>Skipping after ~50 min, FF bounces</td>
+<td>Spindle height misalignment, laser current drift</td>
+<td>Adjust spindle height in test mode, verify laser current</td>
+</tr>
+<tr>
+<td>Time jumps, slow track access</td>
+<td>Spindle bearing wear, laser aging</td>
+<td>Resurface thrust washer, adjust laser current</td>
+</tr>
+<tr>
+<td>Tray motor runs continuously, won't stop</td>
+<td>MAB8440 IC failed, tray switches</td>
+<td>Check tray switches, replace MAB8440 if needed</td>
+</tr>
+<tr>
+<td>Unit won't power off</td>
+<td>MAB8440 IC failed</td>
+<td>Check crystals, replace MAB8440</td>
+</tr>
+<tr>
+<td>Laser lens doesn't move at power-on/play</td>
+<td>Focus circuit failure, C31 blown</td>
+<td>Check IC2 (RC4559), replace C31 with 3.3nF, check Q6/Q7</td>
+</tr>
+<tr>
+<td>After recap, still has issues</td>
+<td>Mechanical misalignment</td>
+<td>Check spindle bearing, adjust height, verify laser current</td>
+</tr>
+<tr>
+<td>Distorted audio, one channel weak</td>
+<td>Output coupling caps degraded, op-amp issues</td>
+<td>Replace 100µF output caps, consider op-amp upgrade</td>
+</tr>
+</table></div>
+<h3>Real Restoration Cases:</h3>
+<div class="info-box">
+<p><strong>Case 1 - Complete No-Operation:</strong> Unit consumed power but wouldn't respond. Full recap of all Philips blue electrolytics restored function. The DAC board had the most capacitors and required special attention.</p>
+<p><strong>Case 2 - Spindle Bearing Wear:</strong> CD wouldn't read. Found spindle shaft had worn into plastic bearing. Sanded bearing flat (removed 0.3-0.4mm), regreased, adjusted height. Unit played perfectly with extremely low error rates.</p>
+<p><strong>Case 3 - C31 Failure:</strong> After recap, unit still had skipping and tracking issues. Found C31 (3.3nF) on SERVO 1 had blown and was replaced with wrong value (10nF). Replaced with correct 3.3nF, unit revived.</p>
+<p><strong>Case 4 - Laser Current Measurement:</strong> Restorer measured laser voltage at 620mV, well within normal range (565±75mV). Confirmed laser was healthy, focused on capacitor replacement.</p>
+<p><strong>Case 5 - Display Destroyed During Cleaning:</strong> User shorted LCD controller while cleaning drawer window.</p>
+</div>
+</section>
+<section id="calibration">
+<h2 id="calibration-essentials">Calibration Essentials</h2>
+<h3>Required Test Equipment:</h3>
+<ul>
+<li>Oscilloscope for Lissajous figures (focus gain adjustment)</li>
+<li>Digital multimeter for voltage measurements</li>
+<li>Test CD (preferably Revox calibration disc)</li>
+<li>Small screwdrivers for potentiometers</li>
+</ul>
+<h3>Critical Adjustments:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Adjustment</th>
+<th>Target</th>
+<th>Method</th>
+</tr>
+<tr>
+<td>Laser Current</td>
+<td>500-565mV (below 640mV)</td>
+<td>Measure at test points, adjust pot on pickup</td>
+</tr>
+<tr>
+<td>Spindle Height</td>
+<td>Proper focus servo operation</td>
+<td>Test mode, disconnect focus servo, adjust until plays</td>
+</tr>
+<tr>
+<td>Focus Gain</td>
+<td>Proper Lissajous figure</td>
+<td>Oscilloscope measurement, adjust per SM</td>
+</tr>
+<tr>
+<td>Balance Trimmer</td>
+<td>Centered per manual</td>
+<td>Some manuals say center, others "don't touch"</td>
+</tr>
+</table></div>
+<div class="warning">
+<strong>⚠️ IMPORTANT:</strong> Adjustments are interdependent. After changing spindle height, laser current must be rechecked. The sequence in the service manual must be followed precisely.
             </div>
-            
-            <p><strong>Note:</strong> Units with the original ceramic TDA1540 DACs (陶封) command premium prices due to their superior sound quality and rarity. The display is a known failure point, and replacement can cost approximately €100, affecting value.</p>
-        </section>
-
-        <section id="failures">
-            <h2 id="common-failure-modes">Common Failure Modes</h2>
-            
-            <h3><span class="badge">#1</span> Electrolytic Capacitor Failure (The #1 Cause)</h3>
-            <p><strong>Symptom:</strong> Unit takes power (~20W) but won't respond to controls, intermittent operation, skipping, TOC not read, or complete deadness. One forum member noted: "Symptome 1: Das Gerät nimmt etwa 20W Strom auf, lässt sich aber nicht 'bedienen'. Kurzum....'Fully recap recommended.'".</p>
-            <p><strong>Cause:</strong> The B225 uses Philips blue electrolytic capacitors that dry out after 30+ years. A restorer found a 47µF capacitor that measured only 16.8µF, and a 100µF on the DAC board reading just 35.9µF. The power supply design places capacitors near hot regulators, accelerating aging.</p>
-            <p><strong>Repair:</strong> "Alle Platinen sind betroffen" (All boards are affected). Replace ALL electrolytic capacitors on every board: Power Supply, Servo 1, Servo 2, Decoder, DAC, and Microprocessor boards. The DAC board contains the most capacitors and is especially critical.</p>
-            
-            <div class="capacitor-warning">
-                <strong>📊 Measured Capacitor Deterioration Examples:</strong>
-                <ul>
-                    <li>47µF Philips → 25.2µF (53% of rated)</li>
-                    <li>47µF Philips → 16.8µF (36% of rated)</li>
-                    <li>100µF Philips (DAC) → 35.9µF (36% of rated)</li>
-                    <li>100µF silver can → 76.5µF (76% of rated)</li>
-                    <li>22µF → 9.3µF (42% of rated)</li>
-                    <li>22µF → 4.1µF (19% of rated - critical failure)</li>
-                </ul>
-            </div>
-            
-            <h3><span class="badge">#2</span> Spindle Motor Bearing Wear (Plastic Thrust Plate)</h3>
-            <p><strong>Symptom:</strong> CD doesn't read TOC, skipping, difficulty reading tracks, jumping time display. One user reported: "Die Achse des Spindelmotors hat sich in das Kunststofflager eingearbeitet" (The spindle motor shaft has worn into the plastic bearing). Another described: "the spindle runs on a thin plastic disk... the spindle digs or sinks into the surface of the disk, effectively lowering the CD's nominal height relative to the laser pickup".</p>
-            <p><strong>Cause:</strong> The spindle motor rides on a small plastic thrust washer. Over decades, the metal shaft creates a divot, lowering the disc relative to the laser. The servo can no longer compensate.</p>
-            <p><strong>Repair:</strong> Two approaches: (1) Simple fix - adjust the threaded nut underneath to raise the spindle height. (2) Proper fix - replace or resurface the plastic thrust washer. One restorer sanded it flat ("planschleifen geht auch") removing only 0.3-0.4mm, then reassembled with fresh grease. Use Delrin (POM) as replacement material.</p>
-            
-            <h3><span class="badge">#3</span> Laser Pickup Aging / CDM-0 Mechanism Issues</h3>
-            <p><strong>Symptom:</strong> TOC not read, skipping, tracking errors, time jumps during playback. One user reported: "when I press next track it takes some seconds sometimes to find the next track and then starts to play, the time in the display jumps or counts before it comes to next track".</p>
-            <p><strong>Cause:</strong> Laser diode weakens with age. Proper laser current should be measured. According to Revox documentation, normal laser voltage is 565mV ±75mV. Values above 640mV indicate aging.</p>
-            <p><strong>Repair:</strong> Measure laser voltage at test points. Adjust potentiometer on the pickup board to achieve 500-565mV. One restorer achieved 500mV successfully. If adjustment fails, laser replacement or pickup rebuilding may be necessary.</p>
-            
-            <h3><span class="badge">#4</span> TOC Not Read / Focus Issues</h3>
-            <p><strong>Symptom:</strong> Display shows "00" and doesn't read disc contents.</p>
-            <p><strong>Cause:</strong> Can be multiple factors: spindle height misalignment, laser aging, or capacitor failure. One documented case involved C31 (3.3nF) on the Servo 1 PCB that had blown, taking out nearby components.</p>
-            <p><strong>Repair:</strong> Systematic approach:</p>
-            <ul>
-                <li>Check if laser lens moves up/down when closing drawer and pressing PLAY</li>
-                <li>Check IC2 (RC4559) for abnormal heating</li>
-                <li>Check Q6, Q7 transistors</li>
-                <li>Measure resistance of R6 near C31</li>
-                <li>Replace C31 with correct 3nF value (not 10nF)</li>
-                <li>Adjust spindle height</li>
-            </ul>
-            
-            <h3><span class="badge">#5</span> Skipping and Fast-Forward Issues</h3>
-            <p><strong>Symptom:</strong> CDs play fine for ~50 minutes then skip back; fast-forward doesn't hold and bounces; when starting at track 10, display counts through tracks rapidly before playback begins.</p>
-            <p><strong>Cause:</strong> Often related to spindle height misalignment or laser current drift.</p>
-            <p><strong>Repair:</strong> Professional advice: "put the unit into test mode and disconnect the focus servo plug, then adjust the spindle height until it 'plays'". Also verify laser current at 50mA.</p>
-            
-            <h3><span class="badge">#6</span> Control IC Failure (MAB8440)</h3>
-            <p><strong>Symptom:</strong> Tray motor runs continuously, won't power off, buttons unresponsive except LOAD. One user reported: "My Revox B225 will not power off. Also the tray wants to open non stop. The motor will not stop turning".</p>
-            <p><strong>Cause:</strong> Failed microprocessor IC - MAB8440P-D030 or MAB8440P-D029. These are now difficult to source.</p>
-            <p><strong>Repair:</strong> Replacement from a donor unit is the only option. Check 6MHz and 4.4336MHz oscillator crystals first. Also check tray position switches.</p>
-            
-            <h3><span class="badge">#7</span> Display Failure (LCD and Backlight)</h3>
-            <p><strong>Symptom:</strong> Display shows only half of digits, weak illumination, completely dead. One user reported: "Das Display zeigt nur die untere Hälfte normal an und die andere ganz schwach" (The display shows only the lower half normally and the other half very weakly).</p>
-            <p><strong>Cause:</strong> LCD controller chips can fail, especially if shorted during cleaning. One user accidentally shorted the display while cleaning the drawer window and destroyed the LCD driver ICs.</p>
-            <p><strong>Repair:</strong> Replacement displays are available from specialists like Peter Meinhold for approximately €100. Backlight bulbs (green) are also available separately for ~€10.</p>
-            
-            <h3><span class="badge">#8</span> Damaged Ribbon Cables</h3>
-            <p><strong>Symptom:</strong> Intermittent operation, display issues, control problems. One user replaced a faulty blue ribbon cable to fix display issues.</p>
-            <p><strong>Cause:</strong> Flex cables can crack or become intermittent with age and repeated flexing.</p>
-            <p><strong>Repair:</strong> Visually inspect, test continuity, replace if damaged.</p>
-            
-            <h3><span class="badge">#9</span> Tray Mechanism / Drawer Issues</h3>
-            <p><strong>Symptom:</strong> Tray won't open or close, motor runs continuously, drawer doesn't fully extend.</p>
-            <p><strong>Cause:</strong> Worn gears, dry lubrication, or faulty end-stop switches.</p>
-            <p><strong>Repair:</strong> Clean and lubricate mechanism. Check microswitches that sense open/closed position. The drawer can be operated manually for service.</p>
-            
-            <h3><span class="badge">#10</span> Large Filter Capacitors (Frako/ROE) - Usually Good</h3>
-            <p><strong>Symptom:</strong> Unlike small electrolytics, the main power supply filters often remain healthy. One restorer measured: 2200µF FRAKO at 2790µF, 4700µF ROE at 6460µF, Siemens at 1100+µF.</p>
-            <p><strong>Cause:</strong> High-quality German capacitors age better than Philips small electrolytics.</p>
-            <p><strong>Repair:</strong> These can typically be left in place unless problems are suspected.</p>
-        </section>
-
-        <section id="board-identification">
-            <h2 id="critical-board-identification-guide">⚠️ CRITICAL: Board Identification Guide</h2>
-            
-            <p>The B225 consists of five main plug-in PCBs:</p>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Board</th>
-                    <th>Part Number</th>
-                    <th>Function</th>
-                    <th>Capacitor Issues</th>
-                </tr>
-                <tr>
-                    <td><strong>Power Supply</strong></td>
-                    <td>1.769.???</td>
-                    <td>Main power regulation</td>
-                    <td>Philips blue caps near regulators dry out quickly</td>
-                </tr>
-                <tr>
-                    <td><strong>SERVO 1 PCB</strong></td>
-                    <td>1.769.310</td>
-                    <td>Focus servo, motor control</td>
-                    <td>Contains C31 (3.3nF) critical for focus</td>
-                </tr>
-                <tr>
-                    <td><strong>SERVO 2 PCB</strong></td>
-                    <td>1.769.330</td>
-                    <td>Additional servo functions</td>
-                    <td>Electrolytics need replacement</td>
-                </tr>
-                <tr>
-                    <td><strong>DECODER PCB</strong></td>
-                    <td>1.769.300</td>
-                    <td>Digital signal processing</td>
-                    <td>Many aging Philips caps</td>
-                </tr>
-                <tr>
-                    <td><strong>DAC PCB</strong></td>
-                    <td>1.769.280</td>
-                    <td>TDA1540 DACs, analog output</td>
-                    <td><strong>Most capacitors on this board</strong> - all need replacement</td>
-                </tr>
-                <tr>
-                    <td><strong>MICROPROCESSOR</strong></td>
-                    <td>1.769.320</td>
-                    <td>Control logic, display</td>
-                    <td>Contains MAB8440 IC, timing caps</td>
-                </tr>
-            </table></div>
-            
-            <p><strong>Access:</strong> All boards can be removed without disassembling the transport, except SERVO 1 which requires drawer extension.</p>
-        </section>
-
-        <section id="repair">
-            <h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
-            
-            <div class="warning">
-                <strong>🔧 RESTORATION PHILOSOPHY:</strong> "Alle Platinen sind betroffen" (All boards are affected). The B225's modular design makes restoration straightforward, but EVERY electrolytic capacitor should be replaced. The DAC board has the most capacitors.
-            </div>
-            
-            <div class="checklist">
-                <h3>Complete Restoration Checklist:</h3>
-                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors, board positions)</div>
-                <div class="checklist-item">✅ Stage 1 - Remove all 5 PCBs per service manual</div>
-                <div class="checklist-item">✅ Stage 2 - Replace ALL electrolytic capacitors on EVERY board</div>
-                <div class="checklist-item">✅ Stage 3 - Pay special attention to DAC board - most caps</div>
-                <div class="checklist-item">✅ Stage 4 - Replace C31 (3.3nF) on SERVO 1 PCB with correct value</div>
-                <div class="checklist-item">✅ Stage 5 - Check large Frako/ROE filter caps - usually OK</div>
-                <div class="checklist-item">✅ Stage 6 - Clean all board connectors and card-edge contacts</div>
-                <div class="checklist-item">✅ Stage 7 - Inspect and replace any damaged ribbon cables</div>
-                <div class="checklist-item">✅ Stage 8 - Inspect spindle bearing, adjust or resurface thrust plate</div>
-                <div class="checklist-item">✅ Stage 9 - Measure and adjust laser current (target 500-565mV)</div>
-                <div class="checklist-item">✅ Stage 10 - Adjust spindle height using test mode</div>
-                <div class="checklist-item">✅ Stage 11 - Check display function; replace bulbs or LCD if needed</div>
-                <div class="checklist-item">✅ Stage 12 - Full calibration per service manual (focus gain, etc.)</div>
-                <div class="checklist-item">✅ Stage 13 - Replace RCA connectors if worn</div>
-                <div class="checklist-item">✅ Stage 14 - Clean drawer mechanism, lubricate rails</div>
-            </div>
-            
-            <p><strong>Capacitor Selection Notes:</strong></p>
-            <ul>
-                <li>Different capacitor brands affect sound quality. Options tested: Nippon Chemicon, Yageo, Fujicon, Panasonic.</li>
-                <li>One restorer found Fujicon capacitors produced "lebhafter und musizieren mit klarerem Grundton" (more lively and musical with clearer fundamental tone).</li>
-                <li>Panasonic were also good but Fujicon preferred in this application.</li>
-                <li>Organic polymer capacitors are possible but "Nur Fliegenfischen ist noch schöner" (Only fly fishing is more beautiful) - implying they're overkill/not necessary.</li>
-            </ul>
-        </section>
-
-        <section id="capacitors">
-            <h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
-            
-            <div class="component-category">⚡ POWER SUPPLY BOARD</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Location</th>
-                    <th>Typical Values</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>Near 3-terminal regulators</td>
-                    <td>47µF, 100µF</td>
-                    <td>Heat from regulators accelerates drying - replace all</td>
-                </tr>
-                <tr>
-                    <td>Main Filters</td>
-                    <td>2200µF (Frako), 4700µF (ROE), Siemens</td>
-                    <td>Often test good - can be retained</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🎚️ DAC BOARD (1.769.280) - MOST CRITICAL</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Typical Values</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>All electrolytics</td>
-                    <td>100µF, 47µF, 22µF, 10µF</td>
-                    <td><strong>Replace ALL</strong> - severe deterioration measured</td>
-                </tr>
-                <tr>
-                    <td>Output coupling caps</td>
-                    <td>100µF (Philips 035 series)</td>
-                    <td>Critical for sound quality - upgrade to audio-grade (SIC, Elna, etc.)</td>
-                </tr>
-                <tr>
-                    <td>Silver can caps</td>
-                    <td>100µF</td>
-                    <td>Also deteriorate (76.5µF measured) - replace</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔴 SERVO 1 PCB (1.769.310) - SPECIAL CASES</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Value</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>C31</td>
-                    <td>3.3nF (not electrolytic)</td>
-                    <td>Critical for focus circuit - use EXACT value</td>
-                </tr>
-                <tr>
-                    <td>R6 (near C31)</td>
-                    <td>Check value</td>
-                    <td>May be burned if C31 shorted</td>
-                </tr>
-                <tr>
-                    <td>Electrolytics</td>
-                    <td>Various</td>
-                    <td>Replace all</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔵 DECODER, SERVO 2, MICROPROCESSOR BOARDS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Board</th>
-                    <th>Action</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>Decoder (1.769.300)</td>
-                    <td>Replace all electrolytics</td>
-                    <td>Philips caps show deterioration</td>
-                </tr>
-                <tr>
-                    <td>Servo 2 (1.769.330)</td>
-                    <td>Replace all electrolytics</td>
-                    <td>Similar age-related issues</td>
-                </tr>
-                <tr>
-                    <td>Microprocessor (1.769.320)</td>
-                    <td>Replace all electrolytics</td>
-                    <td>Check 6MHz/4.4336MHz crystals</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🎛️ SMALL SIGNAL CAPACITORS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Type</th>
-                    <th>Action</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>Roederstein (orange)</td>
-                    <td>Check - often still good</td>
-                    <td>"Die orangefarbenen Roederstein sind noch perfekt"</td>
-                </tr>
-                <tr>
-                    <td>WIMA film caps</td>
-                    <td>Usually reliable</td>
-                    <td>Can be left unless damaged</td>
-                </tr>
-            </table></div>
-            
-            <p><strong>Documented Measurements (for reference):</strong></p>
-            <ul>
-                <li>Original 100µF Philips → 35.9µF (DAC board, critical)</li>
-                <li>Original 47µF Philips → 16.8µF (worst case)</li>
-                <li>Original 22µF → 4.1µF (critical failure)</li>
-                <li>Original 22µF → 9.3µF</li>
-                <li>Original 100µF silver can → 76.5µF (better but still degraded)</li>
-            </ul>
-        </section>
-
-        <section id="mechanical">
-            <h2 id="mechanical-overhaul-guide">Mechanical Overhaul Guide</h2>
-            
-            <h3>Spindle Bearing Service:</h3>
-            <ul>
-                <li><strong>Inspection:</strong> Check if spindle shaft has worn into plastic thrust washer. This is extremely common.</li>
-                <li><strong>Quick Fix:</strong> Adjust threaded nut underneath to raise spindle height. Turn in slightly until proper focus achieved.</li>
-                <li><strong>Proper Fix:</strong> Remove thrust washer, sand flat (remove 0.3-0.4mm), or replace with Delrin (POM).</li>
-                <li><strong>Lubrication:</strong> Apply fresh grease to bearing surfaces.</li>
-                <li><strong>Adjustment:</strong> After repair, must re-adjust spindle height and possibly laser current.</li>
-            </ul>
-            
-            <h3>Laser Current Adjustment:</h3>
-            <ul>
-                <li><strong>Test Point:</strong> Locate laser current test points on pickup board.</li>
-                <li><strong>Target:</strong> 565mV ±75mV (normal range). Above 640mV indicates aging.</li>
-                <li><strong>Procedure:</strong> Play a CD, measure voltage, adjust potentiometer to 500-565mV.</li>
-                <li><strong>Note:</strong> After spindle height adjustment, laser current may need readjustment.</li>
-            </ul>
-            
-            <h3>Drawer Mechanism:</h3>
-            <ul>
-                <li><strong>Manual Operation:</strong> Drawer can be operated manually for service without damage.</li>
-                <li><strong>Access:</strong> To remove mechanism, push drawer partly out, turn unit upside down, remove screws [D], then carefully lift player off.</li>
-                <li><strong>Cleaning:</strong> Clean rails and gears, apply fresh lithium grease.</li>
-            </ul>
-            
-            <h3>Focus Servo Test Mode:</h3>
-            <ul>
-                <li>Put unit into test mode (procedure in service manual).</li>
-                <li>Disconnect focus servo plug.</li>
-                <li>Adjust spindle height until CD "plays".</li>
-            </ul>
-            
-            <h3>Op-Amp Upgrades:</h3>
-            <ul>
-                <li>Original boards use RC5532 op-amps (Raytheon).</li>
-                <li>Front two (I/V conversion and output) can be upgraded.</li>
-                <li>Install DIP sockets for easy rolling.</li>
-                <li>Rear two are for volume-controlled output and headphone - can remain stock initially.</li>
-            </ul>
-        </section>
-
-        <section id="troubleshooting">
-            <h2 id="complete-troubleshooting-guide">Complete Troubleshooting Guide</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Symptom</th>
-                    <th>Likely Cause</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>Unit draws power but won't respond to controls</td>
-                    <td>Dead Philips blue electrolytics</td>
-                    <td>Replace ALL electrolytics on all boards</td>
-                </tr>
-                <tr>
-                    <td>No TOC, display shows "00"</td>
-                    <td>Spindle bearing wear, laser issue, C31 failure</td>
-                    <td>Check spindle height, measure laser current, check C31 on SERVO 1</td>
-                </tr>
-                <tr>
-                    <td>Skipping after ~50 min, FF bounces</td>
-                    <td>Spindle height misalignment, laser current drift</td>
-                    <td>Adjust spindle height in test mode, verify laser current</td>
-                </tr>
-                <tr>
-                    <td>Time jumps, slow track access</td>
-                    <td>Spindle bearing wear, laser aging</td>
-                    <td>Resurface thrust washer, adjust laser current</td>
-                </tr>
-                <tr>
-                    <td>Tray motor runs continuously, won't stop</td>
-                    <td>MAB8440 IC failed, tray switches</td>
-                    <td>Check tray switches, replace MAB8440 if needed</td>
-                </tr>
-                <tr>
-                    <td>Unit won't power off</td>
-                    <td>MAB8440 IC failed</td>
-                    <td>Check crystals, replace MAB8440</td>
-                </tr>
-                <tr>
-                    <td>Display shows half digits, dim</td>
-                    <td>LCD controller failure, dead bulbs</td>
-                    <td>Replace bulbs (~€10), replace display (~€100)</td>
-                </tr>
-                <tr>
-                    <td>Laser lens doesn't move at power-on/play</td>
-                    <td>Focus circuit failure, C31 blown</td>
-                    <td>Check IC2 (RC4559), replace C31 with 3.3nF, check Q6/Q7</td>
-                </tr>
-                <tr>
-                    <td>After recap, still has issues</td>
-                    <td>Mechanical misalignment</td>
-                    <td>Check spindle bearing, adjust height, verify laser current</td>
-                </tr>
-                <tr>
-                    <td>Distorted audio, one channel weak</td>
-                    <td>Output coupling caps degraded, op-amp issues</td>
-                    <td>Replace 100µF output caps, consider op-amp upgrade</td>
-                </tr>
-            </table></div>
-            
-            <h3>Real Restoration Cases:</h3>
-            <div class="info-box">
-                <p><strong>Case 1 - Complete No-Operation:</strong> Unit consumed power but wouldn't respond. Full recap of all Philips blue electrolytics restored function. The DAC board had the most capacitors and required special attention.</p>
-                
-                <p><strong>Case 2 - Spindle Bearing Wear:</strong> CD wouldn't read. Found spindle shaft had worn into plastic bearing. Sanded bearing flat (removed 0.3-0.4mm), regreased, adjusted height. Unit played perfectly with extremely low error rates.</p>
-                
-                <p><strong>Case 3 - C31 Failure:</strong> After recap, unit still had skipping and tracking issues. Found C31 (3.3nF) on SERVO 1 had blown and was replaced with wrong value (10nF). Replaced with correct 3.3nF, unit revived.</p>
-                
-                <p><strong>Case 4 - Laser Current Measurement:</strong> Restorer measured laser voltage at 620mV, well within normal range (565±75mV). Confirmed laser was healthy, focused on capacitor replacement.</p>
-                
-                <p><strong>Case 5 - Display Destroyed During Cleaning:</strong> User shorted LCD controller while cleaning drawer window. Required full display replacement from specialist (€100).</p>
-            </div>
-        </section>
-
-        <section id="calibration">
-            <h2 id="calibration-essentials">Calibration Essentials</h2>
-            
-            <h3>Required Test Equipment:</h3>
-            <ul>
-                <li>Oscilloscope for Lissajous figures (focus gain adjustment)</li>
-                <li>Digital multimeter for voltage measurements</li>
-                <li>Test CD (preferably Revox calibration disc)</li>
-                <li>Small screwdrivers for potentiometers</li>
-            </ul>
-            
-            <h3>Critical Adjustments:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Adjustment</th>
-                    <th>Target</th>
-                    <th>Method</th>
-                </tr>
-                <tr>
-                    <td>Laser Current</td>
-                    <td>500-565mV (below 640mV)</td>
-                    <td>Measure at test points, adjust pot on pickup</td>
-                </tr>
-                <tr>
-                    <td>Spindle Height</td>
-                    <td>Proper focus servo operation</td>
-                    <td>Test mode, disconnect focus servo, adjust until plays</td>
-                </tr>
-                <tr>
-                    <td>Focus Gain</td>
-                    <td>Proper Lissajous figure</td>
-                    <td>Oscilloscope measurement, adjust per SM</td>
-                </tr>
-                <tr>
-                    <td>Balance Trimmer</td>
-                    <td>Centered per manual</td>
-                    <td>Some manuals say center, others "don't touch"</td>
-                </tr>
-            </table></div>
-            
-            <div class="warning">
-                <strong>⚠️ IMPORTANT:</strong> Adjustments are interdependent. After changing spindle height, laser current must be rechecked. The sequence in the service manual must be followed precisely.
-            </div>
-        </section>
-
-        <section id="kits">
-            <h2 id="restoration-kits-resources">Restoration Kits & Resources</h2>
-            
-            <h3>Specialist Parts Sources:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Supplier</th>
-                    <th>Specialty</th>
-                </tr>
-                <tr>
-                    <td>Peter Meinhold (Germany)</td>
-                    <td>Replacement displays (~€100), backlight bulbs (~€10)</td>
-                </tr>
-                <tr>
-                    <td>Mouser / DigiKey</td>
-                    <td>Capacitors (Fujicon, Panasonic, Nichicon), 3.3nF film caps, op-amps</td>
-                </tr>
-                <tr>
-                    <td>Brown Dog Adapters</td>
-                    <td>Op-amp adapters for upgrades</td>
-                </tr>
-                <tr>
-                    <td>Donor units</td>
-                    <td>MAB8440 ICs, CDM-0 parts, displays</td>
-                </tr>
-            </table></div>
-            
-            <h3>Service Documentation:</h3>
-            <ul>
-                <li><strong>Service Manual:</strong> Available at tubebbs.com</li>
-                <li><strong>Circuit Diagram:</strong> Revox-B225-cd-sch.pdf</li>
-                <li><strong>Maintenance Instructions:</strong> Board removal procedures</li>
-            </ul>
-            
-            <h3>Online Resources:</h3>
-            <ul>
-                <li><strong>hifitechforum.de</strong> - Detailed German restoration thread</li>
-                <li><strong>Tapeheads.net</strong> - Active B225 community</li>
-                <li><strong>HIFIDIY (China)</strong> - Complete teardown and capacitor replacement guide</li>
-                <li><strong>Revox Fan Forum (Swiss)</strong> - TOC and display discussions</li>
-                <li><strong>UK Vintage Radio</strong> - Control IC failure discussions</li>
-                <li><strong>胆艺轩 (tubebbs.com)</strong> - Circuit diagrams and power supply notes</li>
-            </ul>
-        </section>
-
-        <section id="specifications">
-            <h2 id="technical-specifications">Technical Specifications</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Parameter</th>
-                    <th>Value</th>
-                </tr>
-                <tr>
-                    <td>Type</td>
-                    <td>CD Player with separate drawer transport</td>
-                </tr>
-                <tr>
-                    <td>DAC</td>
-                    <td>TDA1540 14-bit (陶封 ceramic in early units)</td>
-                </tr>
-                <tr>
-                    <td>Transport</td>
-                    <td>Philips CDM-0 / CDM-1 swing-arm</td>
-                </tr>
-                <tr>
-                    <td>Output Level</td>
-                    <td>Fixed and variable RCA, headphone</td>
-                </tr>
-                <tr>
-                    <td>Frequency Response</td>
-                    <td>20Hz-20kHz ±0.5dB</td>
-                </tr>
-                <tr>
-                    <td>S/N Ratio</td>
-                    <td>>90dB</td>
-                </tr>
-                <tr>
-                    <td>Power Consumption</td>
-                    <td>Approx. 20W</td>
-                </tr>
-                <tr>
-                    <td>Dimensions</td>
-                    <td>Standard Revox B-series format</td>
-                </tr>
-                <tr>
-                    <td>Weight</td>
-                    <td>Heavy, full metal chassis</td>
-                </tr>
-            </table></div>
-            
-            <h3>Key ICs:</h3>
-            <ul>
-                <li><strong>TDA1540:</strong> 14-bit DAC (陶封 ceramic desirable)</li>
-                <li><strong>SAA7010:</strong> Decoder (can fail)</li>
-                <li><strong>MAB8440-D029/D030:</strong> Microcontroller</li>
-                <li><strong>RC5532:</strong> Op-amps (can be upgraded)</li>
-                <li><strong>RC4559:</strong> Focus circuit IC2</li>
-            </ul>
-        </section>
-
-        <section id="common-mistakes">
-            <h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
-            
-            <div class="danger">
-                <ul>
-                    <li><strong>❌ Replacing only "some" capacitors:</strong> "Alle Platinen sind betroffen" - all boards are affected. The DAC board has the most caps.</li>
-                    <li><strong>❌ Using wrong value for C31:</strong> One restorer used 10nF instead of 3.3nF and had continued problems.</li>
-                    <li><strong>❌ Shorting LCD while cleaning:</strong> User destroyed display controller by touching back of display to metal while powered.</li>
-                    <li><strong>❌ Not marking spindle adjustment:</strong> Before turning adjustment nut, mark original position so you can return if needed.</li>
-                    <li><strong>❌ Assuming laser is dead:</strong> Check spindle bearing first - wear here mimics laser failure.</li>
-                    <li><strong>❌ Ignoring the thrust washer:</strong> The plastic disk under spindle motor is a wear item - check it.</li>
-                    <li><strong>❌ Replacing large filter caps unnecessarily:</strong> Frako/ROE often test good.</li>
-                    <li><strong>❌ Not cleaning board connectors:</strong> Card-edge connectors can oxidize - clean with DeOxit.</li>
-                    <li><strong>❌ Forcing drawer mechanism:</strong> Drawer can be operated manually without damage - don't force.</li>
-                    <li><strong>❌ Overlooking ribbon cables:</strong> Blue ribbon cables can fail - inspect for cracks.</li>
-                    <li><strong>❌ Not checking R6 near C31:</strong> If C31 shorted, R6 may be burned.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="upgrades">
-            <h2 id="popular-upgrades">Popular Upgrades</h2>
-            
-            <h3>Audio Upgrades:</h3>
-            <ul>
-                <li><strong>Output coupling caps:</strong> Replace 100µF Philips with high-quality audio caps (SIC, Elna, Nichicon FG).</li>
-                <li><strong>Op-amp upgrade:</strong> Install DIP sockets, replace front two RC5532 with modern op-amps (OPA2604, LM4562).</li>
-                <li><strong>Capacitor selection:</strong> One restorer preferred Fujicon over Panasonic for "lebhafter" (more lively) sound.</li>
-            </ul>
-            
-            <h3>Power Supply Upgrades:</h3>
-            <ul>
-                <li><strong>IEC socket conversion:</strong> Add grounded IEC socket (Studer-style) with proper earth connection.</li>
-                <li><strong>Local regulation:</strong> Add additional local regulation to sensitive stages.</li>
-            </ul>
-            
-            <h3>Display Upgrades:</h3>
-            <ul>
-                <li><strong>LED backlight conversion:</strong> Replace green incandescent bulbs with warm-white LEDs for longer life.</li>
-            </ul>
-        </section>
-
-        
-            <p><strong>Revox B225</strong> • Compiled from hifitechforum.de, Tapeheads.net, HIFIDIY, Revox Fan Forum, and service manual references • Last Updated: 2024</p>
-            <p>Restoration requires intermediate to advanced technical skill. The B225 is a legendary first-generation CD player - treat it with respect. Replace ALL electrolytic capacitors on EVERY board, especially the DAC board. Check the spindle bearing thrust washer. Adjust laser current after mechanical work.</p>
-            <p>🙏 Special thanks to the global Revox community and all contributors who share their restoration experiences.</p>
-        
-    </div></article><section class="rr-card"><h2 class="rr-h">More Revox models we service</h2><div class="rr-rel"><a href="/reel-to-reel/revox/revox-a700">Revox A700</a><a href="/reel-to-reel/revox/revox-a77">Revox A77</a><a href="/reel-to-reel/revox/revox-b226">Revox B226</a><a href="/reel-to-reel/revox/revox-b710">Revox B710</a><a href="/reel-to-reel/revox/revox-b760">Revox B760</a><a href="/reel-to-reel/revox/revox-b77">Revox B77</a><a href="/reel-to-reel/revox/revox-c270">Revox C270</a><a href="/reel-to-reel/revox/revox-f36">Revox F36</a><a href="/reel-to-reel/revox/revox-g36">Revox G36</a><a href="/reel-to-reel/revox/revox-pr77">Revox PR77</a><a href="/reel-to-reel/revox/revox-pr99">Revox PR99</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Revox B225?</div><div>Yes. Tek Media Group repairs and restores the Revox B225 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Revox B225 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+</section>
+<section id="kits">
+<h2 id="restoration-kits-resources">Restoration Kits &amp; Resources</h2>
+<h3>Specialist Parts Sources:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Supplier</th>
+<th>Specialty</th>
+</tr>
+<tr>
+<td>Mouser / DigiKey</td>
+<td>Capacitors (Fujicon, Panasonic, Nichicon), 3.3nF film caps, op-amps</td>
+</tr>
+<tr>
+<td>Brown Dog Adapters</td>
+<td>Op-amp adapters for upgrades</td>
+</tr>
+<tr>
+<td>Donor units</td>
+<td>MAB8440 ICs, CDM-0 parts, displays</td>
+</tr>
+</table></div>
+<h3>Service Documentation:</h3>
+<ul>
+<li><strong>Service Manual:</strong> Available at tubebbs.com</li>
+<li><strong>Circuit Diagram:</strong> Revox-B225-cd-sch.pdf</li>
+<li><strong>Maintenance Instructions:</strong> Board removal procedures</li>
+</ul>
+<h3>Online Resources:</h3>
+<ul>
+<li><strong>hifitechforum.de</strong> - Detailed German restoration thread</li>
+<li><strong>Tapeheads.net</strong> - Active B225 community</li>
+<li><strong>HIFIDIY (China)</strong> - Complete teardown and capacitor replacement guide</li>
+<li><strong>Revox Fan Forum (Swiss)</strong> - TOC and display discussions</li>
+<li><strong>UK Vintage Radio</strong> - Control IC failure discussions</li>
+<li><strong>胆艺轩 (tubebbs.com)</strong> - Circuit diagrams and power supply notes</li>
+</ul>
+</section>
+<section id="specifications">
+<h2 id="technical-specifications">Technical Specifications</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Type</td>
+<td>CD Player with separate drawer transport</td>
+</tr>
+<tr>
+<td>DAC</td>
+<td>TDA1540 14-bit (陶封 ceramic in early units)</td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>Philips CDM-0 / CDM-1 swing-arm</td>
+</tr>
+<tr>
+<td>Output Level</td>
+<td>Fixed and variable RCA, headphone</td>
+</tr>
+<tr>
+<td>Frequency Response</td>
+<td>20Hz-20kHz ±0.5dB</td>
+</tr>
+<tr>
+<td>S/N Ratio</td>
+<td>&gt;90dB</td>
+</tr>
+<tr>
+<td>Power Consumption</td>
+<td>Approx. 20W</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>Standard Revox B-series format</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>Heavy, full metal chassis</td>
+</tr>
+</table></div>
+<h3>Key ICs:</h3>
+<ul>
+<li><strong>TDA1540:</strong> 14-bit DAC (陶封 ceramic desirable)</li>
+<li><strong>SAA7010:</strong> Decoder (can fail)</li>
+<li><strong>MAB8440-D029/D030:</strong> Microcontroller</li>
+<li><strong>RC5532:</strong> Op-amps (can be upgraded)</li>
+<li><strong>RC4559:</strong> Focus circuit IC2</li>
+</ul>
+</section>
+<section id="common-mistakes">
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<div class="danger">
+<ul>
+<li><strong>❌ Replacing only "some" capacitors:</strong> "Alle Platinen sind betroffen" - all boards are affected. The DAC board has the most caps.</li>
+<li><strong>❌ Using wrong value for C31:</strong> One restorer used 10nF instead of 3.3nF and had continued problems.</li>
+<li><strong>❌ Shorting LCD while cleaning:</strong> User destroyed display controller by touching back of display to metal while powered.</li>
+<li><strong>❌ Not marking spindle adjustment:</strong> Before turning adjustment nut, mark original position so you can return if needed.</li>
+<li><strong>❌ Assuming laser is dead:</strong> Check spindle bearing first - wear here mimics laser failure.</li>
+<li><strong>❌ Ignoring the thrust washer:</strong> The plastic disk under spindle motor is a wear item - check it.</li>
+<li><strong>❌ Replacing large filter caps unnecessarily:</strong> Frako/ROE often test good.</li>
+<li><strong>❌ Not cleaning board connectors:</strong> Card-edge connectors can oxidize - clean with DeOxit.</li>
+<li><strong>❌ Forcing drawer mechanism:</strong> Drawer can be operated manually without damage - don't force.</li>
+<li><strong>❌ Overlooking ribbon cables:</strong> Blue ribbon cables can fail - inspect for cracks.</li>
+<li><strong>❌ Not checking R6 near C31:</strong> If C31 shorted, R6 may be burned.</li>
+</ul>
+</div>
+</section>
+<section id="upgrades">
+<h2 id="popular-upgrades">Popular Upgrades</h2>
+<h3>Audio Upgrades:</h3>
+<ul>
+<li><strong>Output coupling caps:</strong> Replace 100µF Philips with high-quality audio caps (SIC, Elna, Nichicon FG).</li>
+<li><strong>Op-amp upgrade:</strong> Install DIP sockets, replace front two RC5532 with modern op-amps (OPA2604, LM4562).</li>
+<li><strong>Capacitor selection:</strong> One restorer preferred Fujicon over Panasonic for "lebhafter" (more lively) sound.</li>
+</ul>
+<h3>Power Supply Upgrades:</h3>
+<ul>
+<li><strong>IEC socket conversion:</strong> Add grounded IEC socket (Studer-style) with proper earth connection.</li>
+<li><strong>Local regulation:</strong> Add additional local regulation to sensitive stages.</li>
+</ul>
+<h3>Display Upgrades:</h3>
+<ul>
+<li><strong>LED backlight conversion:</strong> Replace green incandescent bulbs with warm-white LEDs for longer life.</li>
+</ul>
+</section>
+<p><strong>Revox B225</strong> • Compiled from hifitechforum.de, Tapeheads.net, HIFIDIY, Revox Fan Forum, and service manual references • Last Updated: 2024</p>
+<p>Restoration requires intermediate to advanced technical skill. The B225 is a legendary first-generation CD player - treat it with respect. Replace ALL electrolytic capacitors on EVERY board, especially the DAC board. Check the spindle bearing thrust washer. Adjust laser current after mechanical work.</p>
+<p>🙏 Special thanks to the global Revox community and all contributors who share their restoration experiences.</p>
+</div></article><section class="rr-card"><h2 class="rr-h">More Revox models we service</h2><div class="rr-rel"><a href="/reel-to-reel/revox/revox-a700">Revox A700</a><a href="/reel-to-reel/revox/revox-a77">Revox A77</a><a href="/reel-to-reel/revox/revox-b226">Revox B226</a><a href="/reel-to-reel/revox/revox-b710">Revox B710</a><a href="/reel-to-reel/revox/revox-b760">Revox B760</a><a href="/reel-to-reel/revox/revox-b77">Revox B77</a><a href="/reel-to-reel/revox/revox-c270">Revox C270</a><a href="/reel-to-reel/revox/revox-f36">Revox F36</a><a href="/reel-to-reel/revox/revox-g36">Revox G36</a><a href="/reel-to-reel/revox/revox-pr77">Revox PR77</a><a href="/reel-to-reel/revox/revox-pr99">Revox PR99</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Revox B225?</div><div>Yes. Tek Media Group repairs and restores the Revox B225 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Revox B225 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

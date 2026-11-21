@@ -8,200 +8,182 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/tascam">TASCAM</a> &rsaquo; TASCAM 34/32</nav><span class="rr-eyebrow">TASCAM reel-to-reel repair</span><h1>We fix Tascam</h1><p class="rr-lead">The Tascam 34&#x27;s power supply is a common failure point. Electrolytic capacitors dry out over time, leading to voltage irregularities and unstable operation.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>TASCAM</dd></div><div><dt>Model</dt><dd>TASCAM 34/32</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#tascam-34-32-common-failures-capacitor-r">Tascam 34/32 Common Failures &amp; Capac…</a><a href="#most-common-failure-points">Most Common Failure Points</a><a href="#capacitor-replacement-guide">Capacitor Replacement Guide</a><a href="#audio-channel-cards-medium-priority">Audio Channel Cards MEDIUM PRIORITY</a><a href="#metering-control-boards-low-priority">Metering &amp; Control Boards LOW PRIORITY</a><a href="#recommended-recap-order">Recommended Recap Order</a><a href="#troubleshooting-common-issues">Troubleshooting Common Issues</a></nav><article class="rr-card rr-body"><br />
-    <br/>
-      
-    <br />
-    <br />
-    
-    <h2 class="page-title" id="tascam-34-32-common-failures-capacitor-r">Tascam 34/32 Common Failures & Capacitor Replacement</h2>
-    
- 
-    
-    <div class="content-container">
-        <div class="card">
-            <h2 class="card-title" id="most-common-failure-points">Most Common Failure Points</h2>
-            <h3>1. Power Supply Issues</h3>
-            
-            
-            <h3>2. Transport Control Board</h3>
-            <p>Capacitors on the transport control board can fail, causing issues with tape transport functions like play, stop, rewind, and fast forward.</p>
-            
-            <h3>3. Audio Path Capacitors</h3>
-            <p>Electrolytic capacitors in the audio signal path degrade over time, resulting in distorted audio, loss of high frequencies, or complete channel failure.</p>
-            
-            <h3>4. Belt and Mechanical Wear</h3>
-            <p>While not capacitor-related, the Tascam 34 suffers from aging belts and idler tires that need replacement to maintain proper tape handling.</p>
-        </div>
-        
-        <div class="card">
-            <h2 class="card-title" id="capacitor-replacement-guide">Capacitor Replacement Guide</h2>
-            <p>For all replacements, use high-quality, low-ESR, 105°C rated capacitors from reputable brands like Nichicon, Panasonic, or Rubycon.</p>
-            
-            <h3>Power Supply Board <span class="priority priority-high">TOP PRIORITY</span></h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <thead>
-                    <tr>
-                        <th>Location</th>
-                        <th>Capacitors to Replace</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Main Filter Caps</td>
-                        <td>2x 4700μF 35V (or similar values)</td>
-                    </tr>
-                    <tr>
-                        <td>Regulator Circuit</td>
-                        <td>All electrolytic capacitors (typically 10-1000μF)</td>
-                    </tr>
-                    <tr>
-                        <td>Rectifier Section</td>
-                        <td>Smaller electrolytics near diodes</td>
-                    </tr>
-                </tbody>
-            </table></div>
-
-            <h3>Transport Control Board <span class="priority priority-high">HIGH PRIORITY</span></h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <thead>
-                    <tr>
-                        <th>Location</th>
-                        <th>Capacitors to Replace</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Main Control IC Area</td>
-                        <td>All electrolytic capacitors</td>
-                    </tr>
-                    <tr>
-                        <td>Power Regulation</td>
-                        <td>10-100μF capacitors near regulators</td>
-                    </tr>
-                    <tr>
-                        <td>Timing Circuits</td>
-                        <td>All electrolytics, especially near timing components</td>
-                    </tr>
-                </tbody>
-            </table></div>
-        </div>
-        
-        <div class="card">
-            <h2 class="card-title" id="audio-channel-cards-medium-priority">Audio Channel Cards <span class="priority priority-medium">MEDIUM PRIORITY</span></h2>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <thead>
-                    <tr>
-                        <th>Location</th>
-                        <th>Capacitors to Replace</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Record Amplifier</td>
-                        <td>All electrolytic capacitors, especially coupling caps</td>
-                    </tr>
-                    <tr>
-                        <td>Playback Amplifier</td>
-                        <td>All electrolytic capacitors</td>
-                    </tr>
-                    <tr>
-                        <td>EQ Circuits</td>
-                        <td>All electrolytics in the signal path</td>
-                    </tr>
-                    <tr>
-                        <td>BIAS Oscillator</td>
-                        <td>All electrolytic capacitors</td>
-                    </tr>
-                </tbody>
-            </table></div>
-        </div>
-        
-        <div class="card">
-            <h2 class="card-title" id="metering-control-boards-low-priority">Metering & Control Boards <span class="priority priority-low">LOW PRIORITY</span></h2>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <thead>
-                    <tr>
-                        <th>Location</th>
-                        <th>Capacitors to Replace</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>VU Meter Driver</td>
-                        <td>All electrolytic capacitors</td>
-                    </tr>
-                    <tr>
-                        <td>Input/Output Board</td>
-                        <td>All electrolytic capacitors in signal path</td>
-                    </tr>
-                    <tr>
-                        <td>Control Logic</td>
-                        <td>All electrolytic capacitors</td>
-                    </tr>
-                </tbody>
-            </table></div>
-            
-            <div class="warning">
-                <h3>⚠️ Important Safety Warning</h3>
-                <p>Working on a Tascam 34 requires technical skill. The device operates at dangerous voltages. <strong>Always disconnect power and discharge large capacitors</strong> before working inside. If you are not confident, seek out a qualified technician.</p>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2 class="card-title" id="recommended-recap-order">Recommended Recap Order</h2>
-            <div class="recap-order">
-                <ol>
-                    <li><strong>Power Supply Board</strong> - Most critical for stable operation</li>
-                    <li><strong>Transport Control Board</strong> - Ensures proper tape handling</li>
-                    <li><strong>Audio Channel Cards</strong> - Restores audio quality</li>
-                    <li><strong>Bias Oscillator Board</strong> - Important for recording functionality</li>
-                    <li><strong>Metering & Control Boards</strong> - For complete reliability</li>
-                </ol>
-            </div>
-            
-            <h3>Additional Maintenance Tips</h3>
-            <ul>
-                <li>Replace all belts and idler tires for proper transport operation</li>
-                <li>Clean all potentiometers and switches with contact cleaner</li>
-                <li>Demagnetize tape heads regularly</li>
-                <li>Lubricate moving parts with appropriate lubricants</li>
-                <li>Check and adjust tape head alignment if necessary</li>
-            </ul>
-        </div>
-        
-        <div class="card">
-            <h2 class="card-title" id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <thead>
-                    <tr>
-                        <th>Symptom</th>
-                        <th>Likely Cause</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>No power</td>
-                        <td>Failed power supply capacitors or rectifier diodes</td>
-                    </tr>
-                    <tr>
-                        <td>Erratic transport behavior</td>
-                        <td>Failing capacitors on transport control board</td>
-                    </tr>
-                    <tr>
-                        <td>Distorted audio</td>
-                        <td>Degraded capacitors in audio signal path</td>
-                    </tr>
-                    <tr>
-                        <td>Intermittent operation</td>
-                        <td>Dried out electrolytic capacitors throughout unit</td>
-                    </tr>
-                    <tr>
-                        <td>Poor high frequency response</td>
-                        <td>Failed capacitors in EQ circuits or bias oscillator</td>
-                    </tr>
-                </tbody>
-            </table></div>
-        </div>
-    </div></article><section class="rr-card"><h2 class="rr-h">More TASCAM models we service</h2><div class="rr-rel"><a href="/reel-to-reel/tascam/tascam-38">TASCAM 38</a><a href="/reel-to-reel/tascam/tascam-58">TASCAM 58</a><a href="/reel-to-reel/tascam/tascam-80-8">TASCAM 80-8</a><a href="/reel-to-reel/tascam/tascam-86">TASCAM 85 Series</a><a href="/reel-to-reel/tascam/tascam-atr-60">TASCAM ATR-60</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the TASCAM 34/32?</div><div>Yes. Tek Media Group repairs and restores the TASCAM 34/32 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your TASCAM 34/32 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/tascam">TASCAM</a> › TASCAM 34/32</nav><span class="rr-eyebrow">TASCAM reel-to-reel repair</span><h1>We fix Tascam</h1><p class="rr-lead">The Tascam 34's power supply is a common failure point. Electrolytic capacitors dry out over time, leading to voltage irregularities and unstable operation.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>TASCAM</dd></div><div><dt>Model</dt><dd>TASCAM 34/32</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#tascam-34-32-common-failures-capacitor-r">Tascam 34/32 Common Failures &amp; Capac…</a><a href="#most-common-failure-points">Most Common Failure Points</a><a href="#capacitor-replacement-guide">Capacitor Replacement Guide</a><a href="#audio-channel-cards-medium-priority">Audio Channel Cards MEDIUM PRIORITY</a><a href="#metering-control-boards-low-priority">Metering &amp; Control Boards LOW PRIORITY</a><a href="#recommended-recap-order">Recommended Recap Order</a><a href="#troubleshooting-common-issues">Troubleshooting Common Issues</a></nav><article class="rr-card rr-body"><br/>
+<br/>
+<br/>
+<br/>
+<h2 class="page-title" id="tascam-34-32-common-failures-capacitor-r">Tascam 34/32 Common Failures &amp; Capacitor Replacement</h2>
+<div class="content-container">
+<div class="card">
+<h2 class="card-title" id="most-common-failure-points">Most Common Failure Points</h2>
+<h3>1. Power Supply Issues</h3>
+<h3>2. Transport Control Board</h3>
+<p>Capacitors on the transport control board can fail, causing issues with tape transport functions like play, stop, rewind, and fast forward.</p>
+<h3>3. Audio Path Capacitors</h3>
+<p>Electrolytic capacitors in the audio signal path degrade over time, resulting in distorted audio, loss of high frequencies, or complete channel failure.</p>
+<h3>4. Belt and Mechanical Wear</h3>
+<p>While not capacitor-related, the Tascam 34 suffers from aging belts and idler tires that need replacement to maintain proper tape handling.</p>
+</div>
+<div class="card">
+<h2 class="card-title" id="capacitor-replacement-guide">Capacitor Replacement Guide</h2>
+<p>For all replacements, use high-quality, low-ESR, 105°C rated capacitors from reputable brands like Nichicon, Panasonic, or Rubycon.</p>
+<h3>Power Supply Board <span class="priority priority-high">TOP PRIORITY</span></h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Capacitors to Replace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main Filter Caps</td>
+<td>2x 4700μF 35V (or similar values)</td>
+</tr>
+<tr>
+<td>Regulator Circuit</td>
+<td>All electrolytic capacitors (typically 10-1000μF)</td>
+</tr>
+<tr>
+<td>Rectifier Section</td>
+<td>Smaller electrolytics near diodes</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Transport Control Board <span class="priority priority-high">HIGH PRIORITY</span></h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Capacitors to Replace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main Control IC Area</td>
+<td>All electrolytic capacitors</td>
+</tr>
+<tr>
+<td>Power Regulation</td>
+<td>10-100μF capacitors near regulators</td>
+</tr>
+<tr>
+<td>Timing Circuits</td>
+<td>All electrolytics, especially near timing components</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="card">
+<h2 class="card-title" id="audio-channel-cards-medium-priority">Audio Channel Cards <span class="priority priority-medium">MEDIUM PRIORITY</span></h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Capacitors to Replace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Record Amplifier</td>
+<td>All electrolytic capacitors, especially coupling caps</td>
+</tr>
+<tr>
+<td>Playback Amplifier</td>
+<td>All electrolytic capacitors</td>
+</tr>
+<tr>
+<td>EQ Circuits</td>
+<td>All electrolytics in the signal path</td>
+</tr>
+<tr>
+<td>BIAS Oscillator</td>
+<td>All electrolytic capacitors</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="card">
+<h2 class="card-title" id="metering-control-boards-low-priority">Metering &amp; Control Boards <span class="priority priority-low">LOW PRIORITY</span></h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Capacitors to Replace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VU Meter Driver</td>
+<td>All electrolytic capacitors</td>
+</tr>
+<tr>
+<td>Input/Output Board</td>
+<td>All electrolytic capacitors in signal path</td>
+</tr>
+<tr>
+<td>Control Logic</td>
+<td>All electrolytic capacitors</td>
+</tr>
+</tbody>
+</table></div>
+<div class="warning">
+<h3>⚠️ Important Safety Warning</h3>
+<p>Working on a Tascam 34 requires technical skill. The device operates at dangerous voltages. <strong>Always disconnect power and discharge large capacitors</strong> before working inside. If you are not confident, seek out a qualified technician.</p>
+</div>
+</div>
+<div class="card">
+<h2 class="card-title" id="recommended-recap-order">Recommended Recap Order</h2>
+<div class="recap-order">
+<ol>
+<li><strong>Power Supply Board</strong> - Most critical for stable operation</li>
+<li><strong>Transport Control Board</strong> - Ensures proper tape handling</li>
+<li><strong>Audio Channel Cards</strong> - Restores audio quality</li>
+<li><strong>Bias Oscillator Board</strong> - Important for recording functionality</li>
+<li><strong>Metering &amp; Control Boards</strong> - For complete reliability</li>
+</ol>
+</div>
+<h3>Additional Maintenance Tips</h3>
+<ul>
+<li>Replace all belts and idler tires for proper transport operation</li>
+<li>Clean all potentiometers and switches with contact cleaner</li>
+<li>Demagnetize tape heads regularly</li>
+<li>Lubricate moving parts with appropriate lubricants</li>
+<li>Check and adjust tape head alignment if necessary</li>
+</ul>
+</div>
+<div class="card">
+<h2 class="card-title" id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No power</td>
+<td>Failed power supply capacitors or rectifier diodes</td>
+</tr>
+<tr>
+<td>Erratic transport behavior</td>
+<td>Failing capacitors on transport control board</td>
+</tr>
+<tr>
+<td>Distorted audio</td>
+<td>Degraded capacitors in audio signal path</td>
+</tr>
+<tr>
+<td>Intermittent operation</td>
+<td>Dried out electrolytic capacitors throughout unit</td>
+</tr>
+<tr>
+<td>Poor high frequency response</td>
+<td>Failed capacitors in EQ circuits or bias oscillator</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div></article><section class="rr-card"><h2 class="rr-h">More TASCAM models we service</h2><div class="rr-rel"><a href="/reel-to-reel/tascam/tascam-38">TASCAM 38</a><a href="/reel-to-reel/tascam/tascam-58">TASCAM 58</a><a href="/reel-to-reel/tascam/tascam-80-8">TASCAM 80-8</a><a href="/reel-to-reel/tascam/tascam-86">TASCAM 85 Series</a><a href="/reel-to-reel/tascam/tascam-atr-60">TASCAM ATR-60</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the TASCAM 34/32?</div><div>Yes. Tek Media Group repairs and restores the TASCAM 34/32 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your TASCAM 34/32 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

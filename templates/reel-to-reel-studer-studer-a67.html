@@ -8,619 +8,506 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/studer">Studer</a> &rsaquo; Studer A67</nav><span class="rr-eyebrow">Studer reel-to-reel repair</span><h1>Studer A67</h1><p class="rr-lead">The Studer A67, manufactured from approximately 1975 to 1978 in Switzerland, is a professional 1/4-inch analog tape recorder widely respected for its precision and audio quality.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>Studer</dd></div><div><dt>Model</dt><dd>Studer A67</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#overview">Overview</a><a href="#current-market-value-2024">Current Market Value (2024)</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-a67-vs-b67-vs-a700-relationship">⚠️ CRITICAL: A67 vs B67 vs A700 Rela…</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#tube-complement-and-replacement">Tube Complement and Replacement</a><a href="#complete-troubleshooting-guide">Complete Troubleshooting Guide</a><a href="#mechanical-maintenance-guide">Mechanical Maintenance Guide</a><a href="#calibration-and-alignment">Calibration and Alignment</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
-        
-        
-        <div class="disclaimer">
-            <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Studer documentation when available. Proceed at your own risk.
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/studer">Studer</a> › Studer A67</nav><span class="rr-eyebrow">Studer reel-to-reel repair</span><h1>Studer A67</h1><p class="rr-lead">The Studer A67, manufactured from approximately 1975 to 1978 in Switzerland, is a professional 1/4-inch analog tape recorder widely respected for its precision and audio quality.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Studer</dd></div><div><dt>Model</dt><dd>Studer A67</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#overview">Overview</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-a67-vs-b67-vs-a700-relationship">⚠️ CRITICAL: A67 vs B67 vs A700 Rela…</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#tube-complement-and-replacement">Tube Complement and Replacement</a><a href="#complete-troubleshooting-guide">Complete Troubleshooting Guide</a><a href="#mechanical-maintenance-guide">Mechanical Maintenance Guide</a><a href="#calibration-and-alignment">Calibration and Alignment</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
+<div class="disclaimer">
+<strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Studer documentation when available. Proceed at your own risk.
         </div>
-
-        <div class="danger">
-            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Studer A67 contains <span class="voltage-warning">aging electrolytic capacitors</span> prone to drying out, leaking, and shorting. It also contains <span class="voltage-warning">high-voltage tube circuits (B+ 250V-300V)</span> that can deliver lethal shocks. <strong>Never apply mains power to an unrestored A67 without first replacing critical electrolytic capacitors and checking tube condition.</strong> Always discharge capacitors before working on the machine.
+<div class="danger">
+<strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Studer A67 contains <span class="voltage-warning">aging electrolytic capacitors</span> prone to drying out, leaking, and shorting. It also contains <span class="voltage-warning">high-voltage tube circuits (B+ 250V-300V)</span> that can deliver lethal shocks. <strong>Never apply mains power to an unrestored A67 without first replacing critical electrolytic capacitors and checking tube condition.</strong> Always discharge capacitors before working on the machine.
         </div>
-
-        <section id="overview">
-            <h2 id="overview">Overview</h2>
-            
-            
-            <div class="info-box">
-                <strong>📌 Key Features:</strong>
-                <ul>
-                    <li><strong>Electronics:</strong> Tube-driven (ECC83, EL84) for rich analog sound</li>
-                    <li><strong>Construction:</strong> Robust, modular design for ease of maintenance</li>
-                    <li><strong>Transport:</strong> Reliable mechanism with consistent tape tension</li>
-                    <li><strong>Versions:</strong> 15 configurations including stereo and 1/2" 4-track</li>
-                    <li><strong>Original Price:</strong> Approximately 6,200-12,250 SFr (1970s)</li>
-                    <li><strong>Made In:</strong> Switzerland</li>
-                </ul>
+<section id="overview">
+<h2 id="overview">Overview</h2>
+<div class="info-box">
+<strong>📌 Key Features:</strong>
+<ul>
+<li><strong>Electronics:</strong> Tube-driven (ECC83, EL84) for rich analog sound</li>
+<li><strong>Construction:</strong> Robust, modular design for ease of maintenance</li>
+<li><strong>Transport:</strong> Reliable mechanism with consistent tape tension</li>
+<li><strong>Versions:</strong> 15 configurations including stereo and 1/2" 4-track</li>
+<li><strong>Made In:</strong> Switzerland</li>
+</ul>
+</div>
+<p>The A67 shares transport similarities with the Revox A700, and its successor, the Studer B67, was developed alongside it. While the A67 uses tube audio electronics, the B67 transitioned to solid-state. German restorers note: "Wenn man derart alte Technik wieder regelmäßig nutzen will, ist eine komplette Überholung unumgänglich" (If you want to use such old technology regularly, a complete overhaul is essential).</p>
+</section>
+<section id="failures">
+<h2 id="common-failure-modes">Common Failure Modes</h2>
+<h3><span class="badge">#1</span> Electrolytic Capacitor Failure (Frako/Philips)</h3>
+<p><strong>Symptom:</strong> Hum, oscillation, unstable voltages, transport issues, blown fuses. One user reported changing motor caps and Frako electrolytics but problem persisted.</p>
+<p><strong>Cause:</strong> Many A67 units use older electrolytic capacitors (e.g., Frako or Philips) prone to drying out, leaking, or shorting after 40+ years. Power supply capacitors (100µF–4700µF, 25V–450V) degrade, causing hum and voltage instability. Audio circuit capacitors fail, leading to noise and distortion.</p>
+<p><strong>Repair:</strong> Replace ALL electrolytic capacitors, particularly in power supply and audio circuits. Given the A67's age, a complete recap is advised.</p>
+<h3><span class="badge">#2</span> Motor Run Capacitor Failure (Dual Section 6.5+1.5µF)</h3>
+<p><strong>Symptom:</strong> Transport problems, capstan stops after about a minute, speed lights turn off. Motor vibration or noise in play mode.</p>
+<p><strong>Cause:</strong> Original electrolytic dual-section 6.5µF+1.5µF motor capacitors for spooling motors "splurge" and fail. The 3.5µF capstan motor capacitor also degrades. One user changed all motor caps but problem persisted, suggesting other issues.</p>
+<p><strong>Repair:</strong> Replace with modern non-polarized polypropylene motor capacitors. For UK 50Hz operation, a single 8µF cap can be used (the 50Hz switch puts the dual sections in parallel). Ensure capacitors are rated for continuous usage.</p>
+<h3><span class="badge">#3</span> Tube Wear and Failure</h3>
+<p><strong>Symptom:</strong> Noise, distortion, signal loss, weak output.</p>
+<p><strong>Cause:</strong> The A67 relies on vacuum tubes (e.g., ECC83, EL84) for audio amplification. Weak or faulty tubes degrade performance.</p>
+<p><strong>Repair:</strong> Test tubes with a tube tester and replace any showing low emission or microphonics. Check tube bias voltages for proper operation.</p>
+<h3><span class="badge">#4</span> Transport Stops After ~1 Minute, Capstan Dies</h3>
+<p><strong>Symptom:</strong> All seems to work for about a minute, then capstan stops, speed lights turn off.</p>
+<p><strong>Cause:</strong> Complex issue - one user replaced motor caps and Frako electrolytics but problem persisted. Suspected large can capacitors.</p>
+<p><strong>Repair:</strong> Check large can-type electrolytics (e.g., C1-C3, 4700µF, 50V-100V). Inspect transport control relays, as they are prone to sticking or failure. Test power supply voltages thoroughly.</p>
+<h3><span class="badge">#5</span> Take-Up Motor Vibration / Noise in Play Mode</h3>
+<p><strong>Symptom:</strong> At play mode, take-up motor vibrates and is noisy. Drive waveform is jagged instead of smooth sinusoid.</p>
+<p><strong>Cause:</strong> Jagged waveform indicates drive circuit issues. One user changed capacitors without result.</p>
+<p><strong>Repair:</strong> Check power transistors driving the motor, verify waveform per service bulletin (which may be missing pages). Inspect solder joints and component values in motor drive circuit.</p>
+<h3><span class="badge">#6</span> Tape Tension and Transport Control Issues</h3>
+<p><strong>Symptom:</strong> Random transport shutdowns, erratic behavior, problems with leader tape.</p>
+<p><strong>Cause:</strong> Improper tape tension, worn tension arms, rollers, or brake mechanisms. Transport control relays can stick or fail. The A67/A700 transport is known for tension regulation that can be "half baked".</p>
+<p><strong>Repair:</strong> Examine tension arms, rollers, and brake mechanisms. Adjust brake tension (typically 200–300g/cm). Check transport control relays.</p>
+<h3><span class="badge">#7</span> Tape Lifter Wear</h3>
+<p><strong>Symptom:</strong> Tape contacts heads during fast wind, causing excessive head wear.</p>
+<p><strong>Cause:</strong> Worn tape lifters fail to keep tape clear of heads.</p>
+<p><strong>Repair:</strong> Visually check lifters and test for tape-head contact by disabling mute function. Address lifter issues promptly.</p>
+<h3><span class="badge">#8</span> Power Supply Issues (High Voltage B+)</h3>
+<p><strong>Symptom:</strong> Hum, weak audio output, tube failure, blown fuses.</p>
+<p><strong>Cause:</strong> Degraded capacitors in linear power supply. Overheating may damage transformer.</p>
+<p><strong>Repair:</strong> Measure B+ voltages (250V–300V for tube plates) and filament voltages (6.3V for heaters). Replace faulty rectifiers or drifted resistors.</p>
+<h3><span class="badge">#9</span> Switch Failures (Transport Control)</h3>
+<p><strong>Symptom:</strong> Transport mode issues, intermittent control.</p>
+<p><strong>Cause:</strong> Original switches 1.011.031.00 (positions S7 &amp; S8 on transport control board) wear out.</p>
+<p><strong>Repair:</strong> Replace with NOS or modern equivalents.</p>
+<h3><span class="badge">#10</span> General Component Deterioration</h3>
+<p><strong>Symptom:</strong> Multiple intermittent issues, degradation over time.</p>
+<p><strong>Cause:</strong> 40+ year old resistors drift, solder joints crack, connectors oxidize.</p>
+<p><strong>Repair:</strong> Systematic inspection, cleaning contacts, checking resistors for drift, reflowing suspect solder joints.</p>
+</section>
+<section id="model-relationship">
+<h2 id="critical-a67-vs-b67-vs-a700-relationship">⚠️ CRITICAL: A67 vs B67 vs A700 Relationship</h2>
+<p>Understanding the relationship between these models is essential for restoration:</p>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Model</th>
+<th>Relationship to A67</th>
+</tr>
+<tr>
+<td><strong>Studer A67</strong></td>
+<td>Tube audio electronics, transport similar to A700</td>
+</tr>
+<tr>
+<td><strong>Studer B67</strong></td>
+<td>Successor with solid-state electronics, developed alongside A67</td>
+</tr>
+<tr>
+<td><strong>Revox A700</strong></td>
+<td>Shares transport topography with A67/B67</td>
+</tr>
+</table></div>
+<div class="info-box">
+<strong>🔧 Transport Notes:</strong> The A67 transport is similar to the Revox A700. However, the A700 is considered less reliable than the B67, which was designed for broadcast use. The A67's tension regulation can be "half baked" compared to the stable B67 transport.
             </div>
-            
-            <p>The A67 shares transport similarities with the Revox A700, and its successor, the Studer B67, was developed alongside it. While the A67 uses tube audio electronics, the B67 transitioned to solid-state. German restorers note: "Wenn man derart alte Technik wieder regelmäßig nutzen will, ist eine komplette Überholung unumgänglich" (If you want to use such old technology regularly, a complete overhaul is essential).</p>
-        </section>
-
-        <section id="value">
-            <h2 id="current-market-value-2024">Current Market Value (2024)</h2>
-            <p>A67 values reflect its professional heritage and tube-driven sound quality:</p>
-            
-            <div class="model-grid">
-                <div class="model-card">
-                    <strong>Unrestored / Project Unit</strong>
-                    <p>Non-working, unknown tube condition, likely needs full recap</p>
-                    <div class="price-tag">$2,000-4,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Partially Restored</strong>
-                    <p>Some capacitors replaced, basic functionality, may have transport issues</p>
-                    <div class="price-tag">$4,000-6,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Fully Restored</strong>
-                    <p>Complete recap, tube testing/replacement, transport overhaul, calibration</p>
-                    <div class="price-tag">$6,000-9,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Mint / Low Hours</strong>
-                    <p>Exceptional original condition, fully documented, all original tubes</p>
-                    <div class="price-tag">$9,000-12,000+</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Stereo Mastering Version</strong>
-                    <p>Professional stereo configuration, most desirable</p>
-                    <div class="price-tag">$7,000-10,000+</div>
-                </div>
+<p>When troubleshooting, A700 and B67 resources may provide useful insights, but tube audio electronics are unique to the A67.</p>
+</section>
+<section id="repair">
+<h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
+<div class="warning">
+<strong>🔧 RESTORATION PHILOSOPHY:</strong> The A67's tube-based electronics and mechanical transport require specialized knowledge. If you're not experienced in audio equipment repair, engage a qualified technician. Request detailed records of settings for future reference.
             </div>
-            
-            <p><strong>Note:</strong> The A67 is less common than the later B67, contributing to its value. Machines with original documentation, service records, and tested tubes command premium prices. As with all vintage Studer equipment, professional restoration by specialists (such as Tonbandgerätewerkstatt in Germany) adds significant value.</p>
-        </section>
-
-        <section id="failures">
-            <h2 id="common-failure-modes">Common Failure Modes</h2>
-            
-            <h3><span class="badge">#1</span> Electrolytic Capacitor Failure (Frako/Philips)</h3>
-            <p><strong>Symptom:</strong> Hum, oscillation, unstable voltages, transport issues, blown fuses. One user reported changing motor caps and Frako electrolytics but problem persisted.</p>
-            <p><strong>Cause:</strong> Many A67 units use older electrolytic capacitors (e.g., Frako or Philips) prone to drying out, leaking, or shorting after 40+ years. Power supply capacitors (100µF–4700µF, 25V–450V) degrade, causing hum and voltage instability. Audio circuit capacitors fail, leading to noise and distortion.</p>
-            <p><strong>Repair:</strong> Replace ALL electrolytic capacitors, particularly in power supply and audio circuits. Given the A67's age, a complete recap is advised.</p>
-            
-            <h3><span class="badge">#2</span> Motor Run Capacitor Failure (Dual Section 6.5+1.5µF)</h3>
-            <p><strong>Symptom:</strong> Transport problems, capstan stops after about a minute, speed lights turn off. Motor vibration or noise in play mode.</p>
-            <p><strong>Cause:</strong> Original electrolytic dual-section 6.5µF+1.5µF motor capacitors for spooling motors "splurge" and fail. The 3.5µF capstan motor capacitor also degrades. One user changed all motor caps but problem persisted, suggesting other issues.</p>
-            <p><strong>Repair:</strong> Replace with modern non-polarized polypropylene motor capacitors. For UK 50Hz operation, a single 8µF cap can be used (the 50Hz switch puts the dual sections in parallel). Ensure capacitors are rated for continuous usage.</p>
-            
-            <h3><span class="badge">#3</span> Tube Wear and Failure</h3>
-            <p><strong>Symptom:</strong> Noise, distortion, signal loss, weak output.</p>
-            <p><strong>Cause:</strong> The A67 relies on vacuum tubes (e.g., ECC83, EL84) for audio amplification. Weak or faulty tubes degrade performance.</p>
-            <p><strong>Repair:</strong> Test tubes with a tube tester and replace any showing low emission or microphonics. Check tube bias voltages for proper operation.</p>
-            
-            <h3><span class="badge">#4</span> Transport Stops After ~1 Minute, Capstan Dies</h3>
-            <p><strong>Symptom:</strong> All seems to work for about a minute, then capstan stops, speed lights turn off.</p>
-            <p><strong>Cause:</strong> Complex issue - one user replaced motor caps and Frako electrolytics but problem persisted. Suspected large can capacitors.</p>
-            <p><strong>Repair:</strong> Check large can-type electrolytics (e.g., C1-C3, 4700µF, 50V-100V). Inspect transport control relays, as they are prone to sticking or failure. Test power supply voltages thoroughly.</p>
-            
-            <h3><span class="badge">#5</span> Take-Up Motor Vibration / Noise in Play Mode</h3>
-            <p><strong>Symptom:</strong> At play mode, take-up motor vibrates and is noisy. Drive waveform is jagged instead of smooth sinusoid.</p>
-            <p><strong>Cause:</strong> Jagged waveform indicates drive circuit issues. One user changed capacitors without result.</p>
-            <p><strong>Repair:</strong> Check power transistors driving the motor, verify waveform per service bulletin (which may be missing pages). Inspect solder joints and component values in motor drive circuit.</p>
-            
-            <h3><span class="badge">#6</span> Tape Tension and Transport Control Issues</h3>
-            <p><strong>Symptom:</strong> Random transport shutdowns, erratic behavior, problems with leader tape.</p>
-            <p><strong>Cause:</strong> Improper tape tension, worn tension arms, rollers, or brake mechanisms. Transport control relays can stick or fail. The A67/A700 transport is known for tension regulation that can be "half baked".</p>
-            <p><strong>Repair:</strong> Examine tension arms, rollers, and brake mechanisms. Adjust brake tension (typically 200–300g/cm). Check transport control relays.</p>
-            
-            <h3><span class="badge">#7</span> Tape Lifter Wear</h3>
-            <p><strong>Symptom:</strong> Tape contacts heads during fast wind, causing excessive head wear.</p>
-            <p><strong>Cause:</strong> Worn tape lifters fail to keep tape clear of heads. Replacement heads are costly and hard to source.</p>
-            <p><strong>Repair:</strong> Visually check lifters and test for tape-head contact by disabling mute function. Address lifter issues promptly.</p>
-            
-            <h3><span class="badge">#8</span> Power Supply Issues (High Voltage B+)</h3>
-            <p><strong>Symptom:</strong> Hum, weak audio output, tube failure, blown fuses.</p>
-            <p><strong>Cause:</strong> Degraded capacitors in linear power supply. Overheating may damage transformer.</p>
-            <p><strong>Repair:</strong> Measure B+ voltages (250V–300V for tube plates) and filament voltages (6.3V for heaters). Replace faulty rectifiers or drifted resistors.</p>
-            
-            <h3><span class="badge">#9</span> Switch Failures (Transport Control)</h3>
-            <p><strong>Symptom:</strong> Transport mode issues, intermittent control.</p>
-            <p><strong>Cause:</strong> Original switches 1.011.031.00 (positions S7 & S8 on transport control board) wear out.</p>
-            <p><strong>Repair:</strong> Replace with NOS or modern equivalents.</p>
-            
-            <h3><span class="badge">#10</span> General Component Deterioration</h3>
-            <p><strong>Symptom:</strong> Multiple intermittent issues, degradation over time.</p>
-            <p><strong>Cause:</strong> 40+ year old resistors drift, solder joints crack, connectors oxidize.</p>
-            <p><strong>Repair:</strong> Systematic inspection, cleaning contacts, checking resistors for drift, reflowing suspect solder joints.</p>
-        </section>
-
-        <section id="model-relationship">
-            <h2 id="critical-a67-vs-b67-vs-a700-relationship">⚠️ CRITICAL: A67 vs B67 vs A700 Relationship</h2>
-            
-            <p>Understanding the relationship between these models is essential for restoration:</p>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Model</th>
-                    <th>Relationship to A67</th>
-                </tr>
-                <tr>
-                    <td><strong>Studer A67</strong></td>
-                    <td>Tube audio electronics, transport similar to A700</td>
-                </tr>
-                <tr>
-                    <td><strong>Studer B67</strong></td>
-                    <td>Successor with solid-state electronics, developed alongside A67</td>
-                </tr>
-                <tr>
-                    <td><strong>Revox A700</strong></td>
-                    <td>Shares transport topography with A67/B67</td>
-                </tr>
-            </table></div>
-            
-            <div class="info-box">
-                <strong>🔧 Transport Notes:</strong> The A67 transport is similar to the Revox A700. However, the A700 is considered less reliable than the B67, which was designed for broadcast use. The A67's tension regulation can be "half baked" compared to the stable B67 transport.
-            </div>
-            
-            <p>When troubleshooting, A700 and B67 resources may provide useful insights, but tube audio electronics are unique to the A67.</p>
-        </section>
-
-        <section id="repair">
-            <h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
-            
-            <div class="warning">
-                <strong>🔧 RESTORATION PHILOSOPHY:</strong> The A67's tube-based electronics and mechanical transport require specialized knowledge. If you're not experienced in audio equipment repair, engage a qualified technician. Request detailed records of settings for future reference.
-            </div>
-            
-            <div class="checklist">
-                <h3>Complete Restoration Checklist:</h3>
-                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all wiring, card positions)</div>
-                <div class="checklist-item">✅ Stage 1 - Safety discharge: Discharge all high-voltage capacitors before working</div>
-                <div class="checklist-item">✅ Stage 2 - Power supply recap: Replace ALL electrolytic capacitors on power supply board</div>
-                <div class="checklist-item">✅ Stage 3 - Large can capacitors: Replace C1-C3 (4700µF, 50V-100V)</div>
-                <div class="checklist-item">✅ Stage 4 - Motor capacitors: Replace dual-section 6.5+1.5µF spooling motor caps with polypropylene</div>
-                <div class="checklist-item">✅ Stage 5 - Capstan motor capacitor: Replace 3.5µF capstan motor cap</div>
-                <div class="checklist-item">✅ Stage 6 - Audio circuit recap: Replace all smaller electrolytics (10µF–220µF) on audio boards</div>
-                <div class="checklist-item">✅ Stage 7 - Transport control recap: Replace C20, C21 (100µF, 63V) and C30 (220µF, 40V)</div>
-                <div class="checklist-item">✅ Stage 8 - Tube testing: Test all tubes (ECC83, EL84), replace weak/microphonic ones</div>
-                <div class="checklist-item">✅ Stage 9 - Clean all tape path components: guides, heads, rollers</div>
-                <div class="checklist-item">✅ Stage 10 - Lubricate bearings (light machine oil, PDP65 for capstan)</div>
-                <div class="checklist-item">✅ Stage 11 - Check and adjust brake tension (200–300g/cm)</div>
-                <div class="checklist-item">✅ Stage 12 - Full alignment: tape path, audio calibration, transport adjustments</div>
-            </div>
-            
-            <p><strong>Critical Note:</strong> Avoid prolonged operation. Running the A67 continuously can stress components, particularly tubes and capacitors in the power supply, leading to failures. Power off when idle.</p>
-        </section>
-
-        <section id="capacitors">
-            <h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
-            
-            <div class="component-category">⚡ POWER SUPPLY BOARD (B+ and Bias Supply)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Reference</th>
-                    <th>Value</th>
-                    <th>Replacement</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>C10</td>
-                    <td>1000µF, 40V</td>
-                    <td>Nichicon 1000–1200µF, 50V, low ESR, UHE series</td>
-                    <td>Power supply filter</td>
-                </tr>
-                <tr>
-                    <td>C12–C15</td>
-                    <td>2200µF, 25V</td>
-                    <td>Panasonic 2200µF, 25–35V, low ESR, EEU-FS series</td>
-                    <td>Secondary filters</td>
-                </tr>
-                <tr>
-                    <td>C5</td>
-                    <td>220µF, 250V</td>
-                    <td>Nichicon 220µF, 250–350V, UPW series</td>
-                    <td>High-voltage for tube circuits</td>
-                </tr>
-                <tr>
-                    <td>Various</td>
-                    <td>100µF–4700µF, 25V–450V</td>
-                    <td>High-quality, high-endurance, low-ESR types</td>
-                    <td>Replace ALL electrolytics</td>
-                </tr>
-            </table></div>
-            <p><strong>Symptoms of failure:</strong> Hum, oscillation, unstable voltages. Check nearby resistors for overheating.</p>
-            
-            <div class="component-category">🔋 POWER SUPPLY FILTER CAPACITORS (Large Can Type)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Reference</th>
-                    <th>Typical Value</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>C1–C3</td>
-                    <td>4700µF, 50V–100V</td>
-                    <td>High-quality Nichicon, Epcos/TDK with matching/higher voltage. Use isolation mounts to prevent grounding issues.</td>
-                </tr>
-            </table></div>
-            <p><strong>Symptoms:</strong> Blown fuses, excessive hum. One user suspected these after motor cap replacement didn't solve transport stopping.</p>
-            
-            <div class="component-category">🎚️ AUDIO CIRCUITS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Type</th>
-                    <th>Values</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>Small electrolytics</td>
-                    <td>10µF–47µF, 25V–250V</td>
-                    <td>Replace all. Use low-ESR or non-polarized for audio paths to preserve sound quality.</td>
-                </tr>
-                <tr>
-                    <td>Paper/oil capacitors</td>
-                    <td>Various</td>
-                    <td>Avoid replacing unless necessary</td>
-                </tr>
-            </table></div>
-            <p><strong>Symptoms:</strong> Noise, distortion, signal loss.</p>
-            
-            <div class="component-category">⚙️ TRANSPORT CONTROL CIRCUITS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Reference</th>
-                    <th>Value</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>C20, C21 (Motor Control)</td>
-                    <td>100µF, 63V</td>
-                    <td>Replace with durable Panasonic/Nichicon electrolytics</td>
-                </tr>
-                <tr>
-                    <td>C30 (Relay Control)</td>
-                    <td>220µF, 40V</td>
-                    <td>Replace with matching specifications</td>
-                </tr>
-            </table></div>
-            <p><strong>Symptoms:</strong> Erratic motor behavior, relay malfunctions, transport errors.</p>
-            
-            <div class="component-category">🔴 MOTOR RUN CAPACITORS (CRITICAL)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Motor</th>
-                    <th>Original Value</th>
-                    <th>Replacement</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>Spooling Motors</td>
-                    <td>6.5µF + 1.5µF dual-section electrolytic</td>
-                    <td>Modern non-polarized polypropylene caps. For 50Hz UK, single 8µF works (parallel combination)</td>
-                </tr>
-                <tr>
-                    <td>Capstan Motor</td>
-                    <td>3.5µF</td>
-                    <td>Modern non-polarized polypropylene motor cap</td>
-                </tr>
-            </table></div>
-            <p><strong>Important:</strong> Motor capacitors are non-polarized (not electrolytic). Modern motor caps are generally polypropylene. Ensure they are rated for continuous usage.</p>
-            
-            <div class="component-category">✅ REPLACEMENT BEST PRACTICES</div>
-            <ul>
-                <li>Select high-quality, low-ESR capacitors suitable for the A67's specifications</li>
-                <li>Confirm polarity during installation (except motor caps which are non-polarized)</li>
-                <li>For chassis-mounted capacitors, use isolation mounts to avoid grounding issues</li>
-                <li>Inspect for damaged traces, solder joints, or tube sockets after capacitor removal</li>
-                <li>Test for shorts with multimeter before powering on</li>
-                <li>Use temperature-controlled soldering iron (80W–120W) to prevent damage</li>
-                <li>Complete recap advised given the A67's age</li>
-            </ul>
-        </section>
-
-        <section id="tubes">
-            <h2 id="tube-complement-and-replacement">Tube Complement and Replacement</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Tube</th>
-                    <th>Function</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>ECC83 (12AX7)</td>
-                    <td>Audio amplification</td>
-                    <td>Test for low emission, microphonics; critical for sound quality</td>
-                </tr>
-                <tr>
-                    <td>EL84</td>
-                    <td>Output stage</td>
-                    <td>Can cause distortion if weak</td>
-                </tr>
-            </table></div>
-            
-            <h3>Tube Maintenance:</h3>
-            <ul>
-                <li>Test tubes with a tube tester</li>
-                <li>Replace any showing low emission or microphonics</li>
-                <li>Check tube bias voltages for proper operation</li>
-                <li>Weak tubes can cause noise, distortion, or signal loss</li>
-            </ul>
-        </section>
-
-        <section id="troubleshooting">
-            <h2 id="complete-troubleshooting-guide">Complete Troubleshooting Guide</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Symptom</th>
-                    <th>Likely Cause</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>Capstan stops after ~1 minute, speed lights off</td>
-                    <td>Motor caps, large can caps, or deeper power supply issue</td>
-                    <td>Replace motor caps, check large can caps, test power supply voltages</td>
-                </tr>
-                <tr>
-                    <td>Take-up motor vibrates, noisy in play</td>
-                    <td>Drive circuit issue, jagged waveform</td>
-                    <td>Check power transistors, waveform per service bulletin</td>
-                </tr>
-                <tr>
-                    <td>Hum, oscillation, unstable voltages</td>
-                    <td>Failed power supply capacitors (C10, C12–C15)</td>
-                    <td>Replace all electrolytics on power supply board</td>
-                </tr>
-                <tr>
-                    <td>Blown fuses, excessive hum</td>
-                    <td>Failed large can capacitors (C1–C3)</td>
-                    <td>Replace with high-quality high-voltage types</td>
-                </tr>
-                <tr>
-                    <td>Transport stops randomly, leader tape issues</td>
-                    <td>Tape tension problems, worn tension arms, stuck relays</td>
-                    <td>Check tension arms, brake mechanisms, transport relays</td>
-                </tr>
-                <tr>
-                    <td>Noise, distortion, weak output</td>
-                    <td>Weak tubes, failed audio circuit capacitors</td>
-                    <td>Test tubes, replace audio electrolytics</td>
-                </tr>
-                <tr>
-                    <td>Tape contacts heads in fast wind</td>
-                    <td>Worn tape lifters</td>
-                    <td>Address lifter issues promptly to prevent head wear</td>
-                </tr>
-                <tr>
-                    <td>Erratic motor behavior</td>
-                    <td>Failed C20, C21 (motor control)</td>
-                    <td>Replace with durable electrolytics</td>
-                </tr>
-                <tr>
-                    <td>Relay malfunctions</td>
-                    <td>Failed C30 (relay control)</td>
-                    <td>Replace with matching specifications</td>
-                </tr>
-            </table></div>
-            
-            <h3>Real Restoration Cases:</h3>
-            <div class="info-box">
-                <p><strong>Case 1 - Transport Stops After 1 Minute:</strong> A67 worked for about a minute, then capstan stopped, speed lights off. User changed motor caps and Frako electrolytics but problem persisted. Suspected large can capacitors. Solution not documented - highlights complexity.</p>
-                
-                <p><strong>Case 2 - Take-Up Motor Vibration:</strong> In play mode, take-up motor vibrated and was noisy. Drive waveform jagged instead of smooth sinusoid. Capacitor replacement didn't help. Required service bulletin information (possibly missing pages).</p>
-                
-                <p><strong>Case 3 - Motor Capacitor Replacement:</strong> Dual-section 6.5+1.5µF motor caps had "splurged." Replaced with modern non-polarized polypropylene caps. For 50Hz UK operation, a single 8µF cap works.</p>
-            </div>
-        </section>
-
-        <section id="mechanical">
-            <h2 id="mechanical-maintenance-guide">Mechanical Maintenance Guide</h2>
-            
-            <h3>Cleaning and Lubrication:</h3>
-            <ul>
-                <li>Keep tape guides, heads, and rollers clean</li>
-                <li>Apply appropriate lubricants sparingly: light machine oil for bearings, PDP65 for capstan</li>
-                <li>Avoid over-lubrication to prevent dust buildup</li>
-            </ul>
-            
-            <h3>Brake Adjustments:</h3>
-            <ul>
-                <li>Adjust brake tension to stop reels without excessive slack or strain</li>
-                <li>Typically 200–300g/cm, per service manual</li>
-            </ul>
-            
-            <h3>Tape Path Inspection:</h3>
-            <ul>
-                <li>Check tape lifters for wear - prevent tape-head contact in fast wind</li>
-                <li>Examine tension arms, rollers, and brake mechanisms</li>
-                <li>Check for smooth operation without binding</li>
-            </ul>
-            
-            <h3>Capstan Motor:</h3>
-            <ul>
-                <li>Check speed using strobe disc or frequency counter</li>
-                <li>Should match standard speeds (7.5 or 15 ips)</li>
-                <li>Lubricate bearings if specified in manual</li>
-            </ul>
-            
-            <h3>Head Wear:</h3>
-            <ul>
-                <li>Visually inspect for wear grooves</li>
-                <li>Replacement heads are costly and hard to source</li>
-                <li>Address tape lifter issues promptly to preserve head life</li>
-            </ul>
-        </section>
-
-        <section id="calibration">
-            <h2 id="calibration-and-alignment">Calibration and Alignment</h2>
-            
-            <h3>Required Tools:</h3>
-            <ul>
-                <li>Test tape (MRL alignment tape)</li>
-                <li>Oscilloscope</li>
-                <li>Audio signal generator</li>
-                <li>Voltmeter (high-voltage capable for tube circuits)</li>
-                <li>Tension gauge</li>
-                <li>Precision screwdrivers</li>
-            </ul>
-            
-            <h3>Tape Path Alignment:</h3>
-            <ul>
-                <li>Use test tape to adjust height and azimuth of record/playback heads</li>
-                <li>Check tape tension arms for proper spring tension (typically 50–100g)</li>
-                <li>Adjust guide rollers to ensure tape runs flat without curling</li>
-                <li>Symptoms of misalignment: poor high-frequency response, tape skew, uneven head wear</li>
-            </ul>
-            
-            <h3>Audio Calibration:</h3>
-            <ul>
-                <li>Set playback levels (e.g., 0 dB at 1 kHz) using test tape</li>
-                <li>Adjust record bias and equalization for tape type (NAB or CCIR standards)</li>
-                <li>Check tube bias voltages for ECC83 and EL84 tubes</li>
-                <li>Symptoms of misadjustment: distortion, low output, excessive noise</li>
-            </ul>
-            
-            <h3>Power Supply Voltage Check:</h3>
-            <ul>
-                <li>Measure B+ voltages (250V–300V for tube plates)</li>
-                <li>Measure filament voltages (6.3V for heaters)</li>
-                <li>Adjust trim pots if available to match manual specifications</li>
-                <li>Replace faulty rectifiers or resistors if out of tolerance</li>
-                <li>Symptoms: hum, weak audio output, tube failure</li>
-            </ul>
-            
-            <h3>Transport Adjustments:</h3>
-            <ul>
-                <li>Adjust brake tension (200–300g/cm)</li>
-                <li>Check capstan motor speed with strobe disc</li>
-                <li>Lubricate bearings, check belt tension</li>
-                <li>Symptoms: tape slippage, erratic spooling, slow start/stop</li>
-            </ul>
-        </section>
-
-        <section id="resources">
-            <h2 id="restoration-resources-documentation">Restoration Resources & Documentation</h2>
-            
-            <h3>Essential Documentation:</h3>
-            <ul>
-                <li><strong>Service Manual:</strong> Available from nodevice.com and tekmg.com</li>
-                <li><strong>Service Bulletin:</strong> 10-page document covering motor drive waveforms (may be missing pages)</li>
-                <li><strong>Studer FTP Archive:</strong> ftp://ftp.studer.ch/Public/Products/ - May contain A67 documentation</li>
-            </ul>
-            
-            <h3>Specialist Restoration Services:</h3>
-            <ul>
-                <li><strong>Tonbandgerätewerkstatt (Germany):</strong> Specializes in Studer A67, A810, A812, A820, and Revox machines. Offers complete overhauls and restorations. "Generalüberholungen (Revisionen, Restaurierungen)"</li>
-            </ul>
-            
-            <h3>Parts Sources:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Supplier</th>
-                    <th>Specialty</th>
-                </tr>
-                <tr>
-                    <td>Mouser / DigiKey</td>
-                    <td>General capacitors (Nichicon, Panasonic, Epcos), 105°C, low-ESR types</td>
-                </tr>
-                <tr>
-                    <td>tekmg.com</td>
-                    <td>Capacitor selection guidance, parts sourcing</td>
-                </tr>
-                <tr>
-                    <td>Reverb (sellers)</td>
-                    <td>NOS switches (1.011.031.00), other parts</td>
-                </tr>
-                <tr>
-                    <td>Tube testers/suppliers</td>
-                    <td>ECC83, EL84 replacement tubes</td>
-                </tr>
-            </table></div>
-            
-            <h3>Online Communities:</h3>
-            <ul>
-                <li><strong>UK Vintage Radio Forum:</strong> Active A67 transport discussions</li>
-                <li><strong>Tapeheads.net:</strong> A67 vs B67 comparisons, transport reliability</li>
-                <li><strong>Tape Project Forum:</strong> Motor vibration issues</li>
-                <li><strong>Hifi-Wiki.de:</strong> Technical specifications and history</li>
-            </ul>
-        </section>
-
-        <section id="specifications">
-            <h2 id="technical-specifications">Technical Specifications</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Parameter</th>
-                    <th>Value</th>
-                </tr>
-                <tr>
-                    <td>Manufacturer</td>
-                    <td>Studer</td>
-                </tr>
-                <tr>
-                    <td>Model</td>
-                    <td>A67</td>
-                </tr>
-                <tr>
-                    <td>Type</td>
-                    <td>Professional tape recorder in 15 configurations up to 1/2" 4-track</td>
-                </tr>
-                <tr>
-                    <td>Production Years</td>
-                    <td>1975 - 1978</td>
-                </tr>
-                <tr>
-                    <td>Made In</td>
-                    <td>Switzerland</td>
-                </tr>
-                <tr>
-                    <td>Color</td>
-                    <td>Silver / Grey</td>
-                </tr>
-                <tr>
-                    <td>Original Price (approx.)</td>
-                    <td>Stereo with 0.75mm track gap: 6,200 SFr<br>Stereo with VU panel: 7,750 SFr<br>1/2" 4-track: 12,250 SFr</td>
-                </tr>
-                <tr>
-                    <td>Electronics</td>
-                    <td>Tube-driven (ECC83, EL84)</td>
-                </tr>
-                <tr>
-                    <td>Transport</td>
-                    <td>Similar to Revox A700</td>
-                </tr>
-            </table></div>
-            
-            <h3>Related Models:</h3>
-            <ul>
-                <li><strong>Studer B67:</strong> Successor with solid-state electronics</li>
-                <li><strong>Revox A700:</strong> Shares transport topography</li>
-            </ul>
-        </section>
-
-        <section id="common-mistakes">
-            <h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
-            
-            <div class="danger">
-                <ul>
-                    <li><strong>❌ Powering up without replacing electrolytics:</strong> Frako and Philips capacitors WILL fail after 40+ years.</li>
-                    <li><strong>❌ Ignoring high-voltage safety:</strong> Tube circuits have B+ up to 300V - always discharge capacitors before working.</li>
-                    <li><strong>❌ Using electrolytic replacements for motor caps:</strong> Motor capacitors are non-polarized - use polypropylene types.</li>
-                    <li><strong>❌ Assuming capacitor replacement solves everything:</strong> One user replaced motor caps and Frakos but problem persisted.</li>
-                    <li><strong>❌ Not checking large can capacitors:</strong> Suspect C1-C3 if other recapping doesn't fix issues.</li>
-                    <li><strong>❌ Prolonged operation without restoration:</strong> Continuous running stresses tubes and capacitors.</li>
-                    <li><strong>❌ Ignoring tape lifter wear:</strong> Causes excessive head wear - heads are costly to replace.</li>
-                    <li><strong>❌ Over-lubricating:</strong> Attracts dust, causes mechanism issues.</li>
-                    <li><strong>❌ Using wrong lubricant in capstan:</strong> Use PDP65, not general oils.</li>
-                    <li><strong>❌ Not testing tubes:</strong> Weak tubes cause noise, distortion, signal loss.</li>
-                    <li><strong>❌ Forgetting transport relays:</strong> Prone to sticking or failure.</li>
-                </ul>
-            </div>
-        </section>
-
-        
-            <p><strong>Studer A67 (1975-1978)</strong> • Compiled from Tek Media Group, UK Vintage Radio Forum, Hifi-Wiki, Tapeheads.net, and service manual references • Last Updated: 2024</p>
-            <p>Restoration requires advanced technical skill and high-voltage safety awareness. The A67 is a professional tube recorder - treat it with respect. Replace all electrolytic capacitors, especially in power supply. Use polypropylene replacements for motor caps. Test tubes thoroughly. German specialists note: "komplette Überholung ist unumgänglich" (complete overhaul is essential).</p>
-            <p>🙏 Special thanks to the global Studer community and all contributors who share their restoration experiences.</p>
-        
-    </div></article><section class="rr-card"><h2 class="rr-h">More Studer models we service</h2><div class="rr-rel"><a href="/reel-to-reel/studer/studer-a62">Studer A62</a><a href="/reel-to-reel/studer/studer-a721">Studer A721</a><a href="/reel-to-reel/studer/studer-a80">Studer A80</a><a href="/reel-to-reel/studer/studer-a807">Studer A807</a><a href="/reel-to-reel/studer/studer-a810">Studer A810</a><a href="/reel-to-reel/studer/studer-a812">Studer A812</a><a href="/reel-to-reel/studer/studer-a816">Studer A816</a><a href="/reel-to-reel/studer/studer-a820">Studer A820</a><a href="/reel-to-reel/studer/studer-a827">Studer A827</a><a href="/reel-to-reel/studer/studer-c37">Studer C37</a><a href="/reel-to-reel/studer/studer-j37">Studer J37</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Studer A67?</div><div>Yes. Tek Media Group repairs and restores the Studer A67 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Studer A67 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+<div class="checklist">
+<h3>Complete Restoration Checklist:</h3>
+<div class="checklist-item">✅ Stage 0 - Documentation (photos of all wiring, card positions)</div>
+<div class="checklist-item">✅ Stage 1 - Safety discharge: Discharge all high-voltage capacitors before working</div>
+<div class="checklist-item">✅ Stage 2 - Power supply recap: Replace ALL electrolytic capacitors on power supply board</div>
+<div class="checklist-item">✅ Stage 3 - Large can capacitors: Replace C1-C3 (4700µF, 50V-100V)</div>
+<div class="checklist-item">✅ Stage 4 - Motor capacitors: Replace dual-section 6.5+1.5µF spooling motor caps with polypropylene</div>
+<div class="checklist-item">✅ Stage 5 - Capstan motor capacitor: Replace 3.5µF capstan motor cap</div>
+<div class="checklist-item">✅ Stage 6 - Audio circuit recap: Replace all smaller electrolytics (10µF–220µF) on audio boards</div>
+<div class="checklist-item">✅ Stage 7 - Transport control recap: Replace C20, C21 (100µF, 63V) and C30 (220µF, 40V)</div>
+<div class="checklist-item">✅ Stage 8 - Tube testing: Test all tubes (ECC83, EL84), replace weak/microphonic ones</div>
+<div class="checklist-item">✅ Stage 9 - Clean all tape path components: guides, heads, rollers</div>
+<div class="checklist-item">✅ Stage 10 - Lubricate bearings (light machine oil, PDP65 for capstan)</div>
+<div class="checklist-item">✅ Stage 11 - Check and adjust brake tension (200–300g/cm)</div>
+<div class="checklist-item">✅ Stage 12 - Full alignment: tape path, audio calibration, transport adjustments</div>
+</div>
+<p><strong>Critical Note:</strong> Avoid prolonged operation. Running the A67 continuously can stress components, particularly tubes and capacitors in the power supply, leading to failures. Power off when idle.</p>
+</section>
+<section id="capacitors">
+<h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
+<div class="component-category">⚡ POWER SUPPLY BOARD (B+ and Bias Supply)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Reference</th>
+<th>Value</th>
+<th>Replacement</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>C10</td>
+<td>1000µF, 40V</td>
+<td>Nichicon 1000–1200µF, 50V, low ESR, UHE series</td>
+<td>Power supply filter</td>
+</tr>
+<tr>
+<td>C12–C15</td>
+<td>2200µF, 25V</td>
+<td>Panasonic 2200µF, 25–35V, low ESR, EEU-FS series</td>
+<td>Secondary filters</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>220µF, 250V</td>
+<td>Nichicon 220µF, 250–350V, UPW series</td>
+<td>High-voltage for tube circuits</td>
+</tr>
+<tr>
+<td>Various</td>
+<td>100µF–4700µF, 25V–450V</td>
+<td>High-quality, high-endurance, low-ESR types</td>
+<td>Replace ALL electrolytics</td>
+</tr>
+</table></div>
+<p><strong>Symptoms of failure:</strong> Hum, oscillation, unstable voltages. Check nearby resistors for overheating.</p>
+<div class="component-category">🔋 POWER SUPPLY FILTER CAPACITORS (Large Can Type)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Reference</th>
+<th>Typical Value</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>C1–C3</td>
+<td>4700µF, 50V–100V</td>
+<td>High-quality Nichicon, Epcos/TDK with matching/higher voltage. Use isolation mounts to prevent grounding issues.</td>
+</tr>
+</table></div>
+<p><strong>Symptoms:</strong> Blown fuses, excessive hum. One user suspected these after motor cap replacement didn't solve transport stopping.</p>
+<div class="component-category">🎚️ AUDIO CIRCUITS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Type</th>
+<th>Values</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>Small electrolytics</td>
+<td>10µF–47µF, 25V–250V</td>
+<td>Replace all. Use low-ESR or non-polarized for audio paths to preserve sound quality.</td>
+</tr>
+<tr>
+<td>Paper/oil capacitors</td>
+<td>Various</td>
+<td>Avoid replacing unless necessary</td>
+</tr>
+</table></div>
+<p><strong>Symptoms:</strong> Noise, distortion, signal loss.</p>
+<div class="component-category">⚙️ TRANSPORT CONTROL CIRCUITS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Reference</th>
+<th>Value</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>C20, C21 (Motor Control)</td>
+<td>100µF, 63V</td>
+<td>Replace with durable Panasonic/Nichicon electrolytics</td>
+</tr>
+<tr>
+<td>C30 (Relay Control)</td>
+<td>220µF, 40V</td>
+<td>Replace with matching specifications</td>
+</tr>
+</table></div>
+<p><strong>Symptoms:</strong> Erratic motor behavior, relay malfunctions, transport errors.</p>
+<div class="component-category">🔴 MOTOR RUN CAPACITORS (CRITICAL)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Motor</th>
+<th>Original Value</th>
+<th>Replacement</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Spooling Motors</td>
+<td>6.5µF + 1.5µF dual-section electrolytic</td>
+<td>Modern non-polarized polypropylene caps. For 50Hz UK, single 8µF works (parallel combination)</td>
+</tr>
+<tr>
+<td>Capstan Motor</td>
+<td>3.5µF</td>
+<td>Modern non-polarized polypropylene motor cap</td>
+</tr>
+</table></div>
+<p><strong>Important:</strong> Motor capacitors are non-polarized (not electrolytic). Modern motor caps are generally polypropylene. Ensure they are rated for continuous usage.</p>
+<div class="component-category">✅ REPLACEMENT BEST PRACTICES</div>
+<ul>
+<li>Select high-quality, low-ESR capacitors suitable for the A67's specifications</li>
+<li>Confirm polarity during installation (except motor caps which are non-polarized)</li>
+<li>For chassis-mounted capacitors, use isolation mounts to avoid grounding issues</li>
+<li>Inspect for damaged traces, solder joints, or tube sockets after capacitor removal</li>
+<li>Test for shorts with multimeter before powering on</li>
+<li>Use temperature-controlled soldering iron (80W–120W) to prevent damage</li>
+<li>Complete recap advised given the A67's age</li>
+</ul>
+</section>
+<section id="tubes">
+<h2 id="tube-complement-and-replacement">Tube Complement and Replacement</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Tube</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>ECC83 (12AX7)</td>
+<td>Audio amplification</td>
+<td>Test for low emission, microphonics; critical for sound quality</td>
+</tr>
+<tr>
+<td>EL84</td>
+<td>Output stage</td>
+<td>Can cause distortion if weak</td>
+</tr>
+</table></div>
+<h3>Tube Maintenance:</h3>
+<ul>
+<li>Test tubes with a tube tester</li>
+<li>Replace any showing low emission or microphonics</li>
+<li>Check tube bias voltages for proper operation</li>
+<li>Weak tubes can cause noise, distortion, or signal loss</li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2 id="complete-troubleshooting-guide">Complete Troubleshooting Guide</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>Capstan stops after ~1 minute, speed lights off</td>
+<td>Motor caps, large can caps, or deeper power supply issue</td>
+<td>Replace motor caps, check large can caps, test power supply voltages</td>
+</tr>
+<tr>
+<td>Take-up motor vibrates, noisy in play</td>
+<td>Drive circuit issue, jagged waveform</td>
+<td>Check power transistors, waveform per service bulletin</td>
+</tr>
+<tr>
+<td>Hum, oscillation, unstable voltages</td>
+<td>Failed power supply capacitors (C10, C12–C15)</td>
+<td>Replace all electrolytics on power supply board</td>
+</tr>
+<tr>
+<td>Blown fuses, excessive hum</td>
+<td>Failed large can capacitors (C1–C3)</td>
+<td>Replace with high-quality high-voltage types</td>
+</tr>
+<tr>
+<td>Transport stops randomly, leader tape issues</td>
+<td>Tape tension problems, worn tension arms, stuck relays</td>
+<td>Check tension arms, brake mechanisms, transport relays</td>
+</tr>
+<tr>
+<td>Noise, distortion, weak output</td>
+<td>Weak tubes, failed audio circuit capacitors</td>
+<td>Test tubes, replace audio electrolytics</td>
+</tr>
+<tr>
+<td>Tape contacts heads in fast wind</td>
+<td>Worn tape lifters</td>
+<td>Address lifter issues promptly to prevent head wear</td>
+</tr>
+<tr>
+<td>Erratic motor behavior</td>
+<td>Failed C20, C21 (motor control)</td>
+<td>Replace with durable electrolytics</td>
+</tr>
+<tr>
+<td>Relay malfunctions</td>
+<td>Failed C30 (relay control)</td>
+<td>Replace with matching specifications</td>
+</tr>
+</table></div>
+<h3>Real Restoration Cases:</h3>
+<div class="info-box">
+<p><strong>Case 1 - Transport Stops After 1 Minute:</strong> A67 worked for about a minute, then capstan stopped, speed lights off. User changed motor caps and Frako electrolytics but problem persisted. Suspected large can capacitors. Solution not documented - highlights complexity.</p>
+<p><strong>Case 2 - Take-Up Motor Vibration:</strong> In play mode, take-up motor vibrated and was noisy. Drive waveform jagged instead of smooth sinusoid. Capacitor replacement didn't help. Required service bulletin information (possibly missing pages).</p>
+<p><strong>Case 3 - Motor Capacitor Replacement:</strong> Dual-section 6.5+1.5µF motor caps had "splurged." Replaced with modern non-polarized polypropylene caps. For 50Hz UK operation, a single 8µF cap works.</p>
+</div>
+</section>
+<section id="mechanical">
+<h2 id="mechanical-maintenance-guide">Mechanical Maintenance Guide</h2>
+<h3>Cleaning and Lubrication:</h3>
+<ul>
+<li>Keep tape guides, heads, and rollers clean</li>
+<li>Apply appropriate lubricants sparingly: light machine oil for bearings, PDP65 for capstan</li>
+<li>Avoid over-lubrication to prevent dust buildup</li>
+</ul>
+<h3>Brake Adjustments:</h3>
+<ul>
+<li>Adjust brake tension to stop reels without excessive slack or strain</li>
+<li>Typically 200–300g/cm, per service manual</li>
+</ul>
+<h3>Tape Path Inspection:</h3>
+<ul>
+<li>Check tape lifters for wear - prevent tape-head contact in fast wind</li>
+<li>Examine tension arms, rollers, and brake mechanisms</li>
+<li>Check for smooth operation without binding</li>
+</ul>
+<h3>Capstan Motor:</h3>
+<ul>
+<li>Check speed using strobe disc or frequency counter</li>
+<li>Should match standard speeds (7.5 or 15 ips)</li>
+<li>Lubricate bearings if specified in manual</li>
+</ul>
+<h3>Head Wear:</h3>
+<ul>
+<li>Visually inspect for wear grooves</li>
+<li>Address tape lifter issues promptly to preserve head life</li>
+</ul>
+</section>
+<section id="calibration">
+<h2 id="calibration-and-alignment">Calibration and Alignment</h2>
+<h3>Required Tools:</h3>
+<ul>
+<li>Test tape (MRL alignment tape)</li>
+<li>Oscilloscope</li>
+<li>Audio signal generator</li>
+<li>Voltmeter (high-voltage capable for tube circuits)</li>
+<li>Tension gauge</li>
+<li>Precision screwdrivers</li>
+</ul>
+<h3>Tape Path Alignment:</h3>
+<ul>
+<li>Use test tape to adjust height and azimuth of record/playback heads</li>
+<li>Check tape tension arms for proper spring tension (typically 50–100g)</li>
+<li>Adjust guide rollers to ensure tape runs flat without curling</li>
+<li>Symptoms of misalignment: poor high-frequency response, tape skew, uneven head wear</li>
+</ul>
+<h3>Audio Calibration:</h3>
+<ul>
+<li>Set playback levels (e.g., 0 dB at 1 kHz) using test tape</li>
+<li>Adjust record bias and equalization for tape type (NAB or CCIR standards)</li>
+<li>Check tube bias voltages for ECC83 and EL84 tubes</li>
+<li>Symptoms of misadjustment: distortion, low output, excessive noise</li>
+</ul>
+<h3>Power Supply Voltage Check:</h3>
+<ul>
+<li>Measure B+ voltages (250V–300V for tube plates)</li>
+<li>Measure filament voltages (6.3V for heaters)</li>
+<li>Adjust trim pots if available to match manual specifications</li>
+<li>Replace faulty rectifiers or resistors if out of tolerance</li>
+<li>Symptoms: hum, weak audio output, tube failure</li>
+</ul>
+<h3>Transport Adjustments:</h3>
+<ul>
+<li>Adjust brake tension (200–300g/cm)</li>
+<li>Check capstan motor speed with strobe disc</li>
+<li>Lubricate bearings, check belt tension</li>
+<li>Symptoms: tape slippage, erratic spooling, slow start/stop</li>
+</ul>
+</section>
+<section id="resources">
+<h2 id="restoration-resources-documentation">Restoration Resources &amp; Documentation</h2>
+<h3>Essential Documentation:</h3>
+<ul>
+<li><strong>Service Manual:</strong> Available from nodevice.com and tekmg.com</li>
+<li><strong>Service Bulletin:</strong> 10-page document covering motor drive waveforms (may be missing pages)</li>
+<li><strong>Studer FTP Archive:</strong> ftp://ftp.studer.ch/Public/Products/ - May contain A67 documentation</li>
+</ul>
+<h3>Specialist Restoration Services:</h3>
+<ul>
+<li><strong>Tonbandgerätewerkstatt (Germany):</strong> Specializes in Studer A67, A810, A812, A820, and Revox machines. Offers complete overhauls and restorations. "Generalüberholungen (Revisionen, Restaurierungen)"</li>
+</ul>
+<h3>Parts Sources:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Supplier</th>
+<th>Specialty</th>
+</tr>
+<tr>
+<td>Mouser / DigiKey</td>
+<td>General capacitors (Nichicon, Panasonic, Epcos), 105°C, low-ESR types</td>
+</tr>
+<tr>
+<td>tekmg.com</td>
+<td>Capacitor selection guidance, parts sourcing</td>
+</tr>
+<tr>
+<td>Reverb (sellers)</td>
+<td>NOS switches (1.011.031.00), other parts</td>
+</tr>
+<tr>
+<td>Tube testers/suppliers</td>
+<td>ECC83, EL84 replacement tubes</td>
+</tr>
+</table></div>
+<h3>Online Communities:</h3>
+<ul>
+<li><strong>UK Vintage Radio Forum:</strong> Active A67 transport discussions</li>
+<li><strong>Tapeheads.net:</strong> A67 vs B67 comparisons, transport reliability</li>
+<li><strong>Tape Project Forum:</strong> Motor vibration issues</li>
+<li><strong>Hifi-Wiki.de:</strong> Technical specifications and history</li>
+</ul>
+</section>
+<section id="specifications">
+<h2 id="technical-specifications">Technical Specifications</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Manufacturer</td>
+<td>Studer</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>A67</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Professional tape recorder in 15 configurations up to 1/2" 4-track</td>
+</tr>
+<tr>
+<td>Production Years</td>
+<td>1975 - 1978</td>
+</tr>
+<tr>
+<td>Made In</td>
+<td>Switzerland</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>Silver / Grey</td>
+</tr>
+<tr>
+<td>Electronics</td>
+<td>Tube-driven (ECC83, EL84)</td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>Similar to Revox A700</td>
+</tr>
+</table></div>
+<h3>Related Models:</h3>
+<ul>
+<li><strong>Studer B67:</strong> Successor with solid-state electronics</li>
+<li><strong>Revox A700:</strong> Shares transport topography</li>
+</ul>
+</section>
+<section id="common-mistakes">
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<div class="danger">
+<ul>
+<li><strong>❌ Powering up without replacing electrolytics:</strong> Frako and Philips capacitors WILL fail after 40+ years.</li>
+<li><strong>❌ Ignoring high-voltage safety:</strong> Tube circuits have B+ up to 300V - always discharge capacitors before working.</li>
+<li><strong>❌ Using electrolytic replacements for motor caps:</strong> Motor capacitors are non-polarized - use polypropylene types.</li>
+<li><strong>❌ Assuming capacitor replacement solves everything:</strong> One user replaced motor caps and Frakos but problem persisted.</li>
+<li><strong>❌ Not checking large can capacitors:</strong> Suspect C1-C3 if other recapping doesn't fix issues.</li>
+<li><strong>❌ Prolonged operation without restoration:</strong> Continuous running stresses tubes and capacitors.</li>
+<li><strong>❌ Over-lubricating:</strong> Attracts dust, causes mechanism issues.</li>
+<li><strong>❌ Using wrong lubricant in capstan:</strong> Use PDP65, not general oils.</li>
+<li><strong>❌ Not testing tubes:</strong> Weak tubes cause noise, distortion, signal loss.</li>
+<li><strong>❌ Forgetting transport relays:</strong> Prone to sticking or failure.</li>
+</ul>
+</div>
+</section>
+<p><strong>Studer A67 (1975-1978)</strong> • Compiled from Tek Media Group, UK Vintage Radio Forum, Hifi-Wiki, Tapeheads.net, and service manual references • Last Updated: 2024</p>
+<p>Restoration requires advanced technical skill and high-voltage safety awareness. The A67 is a professional tube recorder - treat it with respect. Replace all electrolytic capacitors, especially in power supply. Use polypropylene replacements for motor caps. Test tubes thoroughly. German specialists note: "komplette Überholung ist unumgänglich" (complete overhaul is essential).</p>
+<p>🙏 Special thanks to the global Studer community and all contributors who share their restoration experiences.</p>
+</div></article><section class="rr-card"><h2 class="rr-h">More Studer models we service</h2><div class="rr-rel"><a href="/reel-to-reel/studer/studer-a62">Studer A62</a><a href="/reel-to-reel/studer/studer-a721">Studer A721</a><a href="/reel-to-reel/studer/studer-a80">Studer A80</a><a href="/reel-to-reel/studer/studer-a807">Studer A807</a><a href="/reel-to-reel/studer/studer-a810">Studer A810</a><a href="/reel-to-reel/studer/studer-a812">Studer A812</a><a href="/reel-to-reel/studer/studer-a816">Studer A816</a><a href="/reel-to-reel/studer/studer-a820">Studer A820</a><a href="/reel-to-reel/studer/studer-a827">Studer A827</a><a href="/reel-to-reel/studer/studer-c37">Studer C37</a><a href="/reel-to-reel/studer/studer-j37">Studer J37</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Studer A67?</div><div>Yes. Tek Media Group repairs and restores the Studer A67 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Studer A67 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

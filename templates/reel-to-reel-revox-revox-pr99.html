@@ -8,695 +8,584 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/revox">Revox</a> &rsaquo; Revox PR99</nav><span class="rr-eyebrow">Revox reel-to-reel repair</span><h1>Revox PR99 Restoration Guide</h1><p class="rr-lead">The Revox PR99 is the successor to the A700 and the professional version of the B77. Produced from 1978 to 1985, it features balanced XLR inputs/outputs, +4dBm professional levels, and improved transport mechanics.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>Revox</dd></div><div><dt>Model</dt><dd>Revox PR99</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#overview">Overview</a><a href="#current-market-value-2024">Current Market Value (2024)</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#mk-i-mk-ii-mk-iii-differences">Mk I, Mk II, Mk III Differences</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#siemens-ic-replacement-guide">Siemens IC Replacement Guide</a><a href="#mechanical-maintenance">Mechanical Maintenance</a><a href="#audio-board-restoration">Audio Board Restoration</a><a href="#calibration-essentials">Calibration Essentials</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
-        
-        <div class="disclaimer" style="background-color: #FFFF00; border: thin solid #0000FF; padding: 10px">
-    <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/revox">Revox</a> › Revox PR99</nav><span class="rr-eyebrow">Revox reel-to-reel repair</span><h1>Revox PR99 Restoration Guide</h1><p class="rr-lead">The Revox PR99 is the successor to the A700 and the professional version of the B77. Produced from 1978 to 1985, it features balanced XLR inputs/outputs, +4dBm professional levels, and improved transport mechanics.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Revox</dd></div><div><dt>Model</dt><dd>Revox PR99</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#overview">Overview</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#mk-i-mk-ii-mk-iii-differences">Mk I, Mk II, Mk III Differences</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#siemens-ic-replacement-guide">Siemens IC Replacement Guide</a><a href="#mechanical-maintenance">Mechanical Maintenance</a><a href="#audio-board-restoration">Audio Board Restoration</a><a href="#calibration-essentials">Calibration Essentials</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
+<div class="disclaimer" style="background-color: #FFFF00; border: thin solid #0000FF; padding: 10px">
+<strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
 </div>
-        <div class="danger">
-            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> Like all Revox machines of this era, the PR99 contains <span class="voltage-warning">RIFA paper capacitors that WILL fail explosively</span>. <strong>Never apply mains power to an unrestored PR99.</strong> Also contains Philips "blue" electrolytics that leak and corrode PCB traces.
+<div class="danger">
+<strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> Like all Revox machines of this era, the PR99 contains <span class="voltage-warning">RIFA paper capacitors that WILL fail explosively</span>. <strong>Never apply mains power to an unrestored PR99.</strong> Also contains Philips "blue" electrolytics that leak and corrode PCB traces.
         </div>
-
-        <section id="overview">
-            <h2 id="overview">Overview</h2>
-            
-            
-            <div class="info-box">
-                <strong>📌 Key Differences from B77:</strong> Balanced audio (Siemens ICs), +4dBm operation, different oscillator board, XLR connectors, and professional level metering.
+<section id="overview">
+<h2 id="overview">Overview</h2>
+<div class="info-box">
+<strong>📌 Key Differences from B77:</strong> Balanced audio (Siemens ICs), +4dBm operation, different oscillator board, XLR connectors, and professional level metering.
             </div>
-        </section>
-
-        <section id="value">
-            <h2 id="current-market-value-2024">Current Market Value (2024)</h2>
-            <p>PR99 values have increased significantly as professional studios seek reliable ¼" machines:</p>
-            
-            <div class="model-grid">
-                <div class="model-card">
-                    <strong>PR99 Mk I (1978-81)</strong>
-                    <p>Original version, VU meters, Siemens ICs</p>
-                    <div class="price-tag">$1,200-2,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>PR99 Mk II (1981-83)</strong>
-                    <p>LED metering, improved electronics</p>
-                    <div class="price-tag">$1,500-2,500</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>PR99 Mk III (1983-85)</strong>
-                    <p>Final version, most refined</p>
-                    <div class="price-tag">$1,800-3,000+</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Fully Restored</strong>
-                    <p>Professional recap, calibration, mechanics</p>
-                    <div class="price-tag">$2,500-4,000+</div>
-                </div>
+</section>
+<section id="failures">
+<h2 id="common-failure-modes">Common Failure Modes</h2>
+<h3><span class="badge">#1</span> RIFA Capacitors (Mains/Suppression)</h3>
+<p><strong>Symptom:</strong> Smoke, burning smell, cracking, blown fuses, tripped breakers.</p>
+<p><strong>Cause:</strong> Paper dielectric absorbs moisture, cracks, shorts internally.</p>
+<p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight. Located on relay board, motor boards, and across mains input.</p>
+<h3><span class="badge">#2</span> Philips "Blue" Electrolytic Capacitors</h3>
+<p><strong>Symptom:</strong> Leaking brown goo, corroded traces, lifted pads, audio distortion.</p>
+<p><strong>Cause:</strong> Philips capacitors from this era have electrolyte formulation issues and leak destructively.</p>
+<p><strong>Repair:</strong> Replace ALL Philips blue capacitors. Inspect PCB for corrosion damage underneath.</p>
+<h3><span class="badge">#3</span> Siemens ICs (Audio Path)</h3>
+<p><strong>Symptom:</strong> Distortion, noise, dead channels, intermittent audio.</p>
+<p><strong>Cause:</strong> Siemens TBA 931, TCA 580, and other audio ICs develop internal noise or fail completely.</p>
+<p><strong>Repair:</strong> Replace with modern op-amp adapters (SOIC-8 to DIP) using OPA2134 or similar.</p>
+<h3><span class="badge">#4</span> Motor Run Capacitors</h3>
+<p><strong>Symptom:</strong> Motors run hot, won't start, slow speed, capstan instability.</p>
+<p><strong>Cause:</strong> <span class="part-number">3.5µF</span> (capstan) and <span class="part-number">6.5+1.5µF</span> (reel motor) capacitors degrade over time.</p>
+<p><strong>Repair:</strong> Replace with new AC-rated motor run capacitors.</p>
+<h3><span class="badge">#5</span> Brake Band Wear</h3>
+<p><strong>Symptom:</strong> Tape spillage, uneven wind, machine won't stop properly.</p>
+<p><strong>Cause:</strong> Felt brake bands wear or become contaminated with oil.</p>
+<p><strong>Repair:</strong> Replace brake bands (still available from Revox parts suppliers, part <span class="part-number">1.011.646</span>).</p>
+<h3><span class="badge">#6</span> Tantalum Capacitors (Red Devils)</h3>
+<p><strong>Symptom:</strong> Short circuits, logic glitches, destroyed ICs.</p>
+<p><strong>Repair:</strong> Replace all tantalums on audio and logic boards with 35V rated parts or film substitutes.</p>
+<h3><span class="badge">#7</span> Reel Motor Bearings</h3>
+<p><strong>Symptom:</strong> Grinding noise, rough rotation, excessive wow/flutter.</p>
+<p><strong>Cause:</strong> Dried lubricant, worn bearings.</p>
+<p><strong>Repair:</strong> Replace bearings (<span class="part-number">SKF 608-2Z</span> or equivalent) or re-oil with PDP65.</p>
+<h3><span class="badge">#8</span> Mode Switch Contamination</h3>
+<p><strong>Symptom:</strong> Machine enters wrong mode, erratic transport behavior.</p>
+<p><strong>Cause:</strong> Gold contacts develop tracking due to contamination.</p>
+<p><strong>Repair:</strong> Remove, clean with IPA, re-lubricate lightly.</p>
+</section>
+<section id="mk-differences">
+<h2 id="mk-i-mk-ii-mk-iii-differences">Mk I, Mk II, Mk III Differences</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Feature</th>
+<th>Mk I (1978-81)</th>
+<th>Mk II (1981-83)</th>
+<th>Mk III (1983-85)</th>
+</tr>
+<tr>
+<td>Metering</td>
+<td>Analog VU meters</td>
+<td>LED bar graph</td>
+<td>LED bar graph (refined)</td>
+</tr>
+<tr>
+<td>Audio ICs</td>
+<td>Siemens TBA931</td>
+<td>Hybrid modules</td>
+<td>Hybrid modules</td>
+</tr>
+<tr>
+<td>Oscillator Board</td>
+<td>Discrete</td>
+<td>Integrated</td>
+<td>Integrated (improved)</td>
+</tr>
+<tr>
+<td>Capacitor Types</td>
+<td>Philips blue + RIFA</td>
+<td>Philips blue + RIFA</td>
+<td>Fewer problem caps</td>
+</tr>
+<tr>
+<td>Head Block</td>
+<td>Standard</td>
+<td>Standard</td>
+<td>Improved shielding</td>
+</tr>
+</table></div>
+<div class="compatibility-note">
+<strong>Note:</strong> Mk II and Mk III share most electronic assemblies. Mk I has unique audio boards requiring different restoration approach.
             </div>
-            
-            <p><strong>Parts/Project Units:</strong> $400-900 (assume full restoration needed)<br>
-            <strong>Rare Variants:</strong> PR99 with vari-speed, rack handles, or HS (high speed) command premium prices.</p>
-        </section>
-
-        <section id="failures">
-            <h2 id="common-failure-modes">Common Failure Modes</h2>
-            
-            <h3><span class="badge">#1</span> RIFA Capacitors (Mains/Suppression)</h3>
-            <p><strong>Symptom:</strong> Smoke, burning smell, cracking, blown fuses, tripped breakers.</p>
-            <p><strong>Cause:</strong> Paper dielectric absorbs moisture, cracks, shorts internally.</p>
-            <p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight. Located on relay board, motor boards, and across mains input.</p>
-            
-            <h3><span class="badge">#2</span> Philips "Blue" Electrolytic Capacitors</h3>
-            <p><strong>Symptom:</strong> Leaking brown goo, corroded traces, lifted pads, audio distortion.</p>
-            <p><strong>Cause:</strong> Philips capacitors from this era have electrolyte formulation issues and leak destructively.</p>
-            <p><strong>Repair:</strong> Replace ALL Philips blue capacitors. Inspect PCB for corrosion damage underneath.</p>
-            
-            <h3><span class="badge">#3</span> Siemens ICs (Audio Path)</h3>
-            <p><strong>Symptom:</strong> Distortion, noise, dead channels, intermittent audio.</p>
-            <p><strong>Cause:</strong> Siemens TBA 931, TCA 580, and other audio ICs develop internal noise or fail completely.</p>
-            <p><strong>Repair:</strong> Replace with modern op-amp adapters (SOIC-8 to DIP) using OPA2134 or similar.</p>
-            
-            <h3><span class="badge">#4</span> Motor Run Capacitors</h3>
-            <p><strong>Symptom:</strong> Motors run hot, won't start, slow speed, capstan instability.</p>
-            <p><strong>Cause:</strong> <span class="part-number">3.5µF</span> (capstan) and <span class="part-number">6.5+1.5µF</span> (reel motor) capacitors degrade over time.</p>
-            <p><strong>Repair:</strong> Replace with new AC-rated motor run capacitors.</p>
-            
-            <h3><span class="badge">#5</span> Brake Band Wear</h3>
-            <p><strong>Symptom:</strong> Tape spillage, uneven wind, machine won't stop properly.</p>
-            <p><strong>Cause:</strong> Felt brake bands wear or become contaminated with oil.</p>
-            <p><strong>Repair:</strong> Replace brake bands (still available from Revox parts suppliers, part <span class="part-number">1.011.646</span>).</p>
-            
-            <h3><span class="badge">#6</span> Tantalum Capacitors (Red Devils)</h3>
-            <p><strong>Symptom:</strong> Short circuits, logic glitches, destroyed ICs.</p>
-            <p><strong>Cause:</strong> Tantalum capacitors fail shorted, taking out expensive ICs.</p>
-            <p><strong>Repair:</strong> Replace all tantalums on audio and logic boards with 35V rated parts or film substitutes.</p>
-            
-            <h3><span class="badge">#7</span> Reel Motor Bearings</h3>
-            <p><strong>Symptom:</strong> Grinding noise, rough rotation, excessive wow/flutter.</p>
-            <p><strong>Cause:</strong> Dried lubricant, worn bearings.</p>
-            <p><strong>Repair:</strong> Replace bearings (<span class="part-number">SKF 608-2Z</span> or equivalent) or re-oil with PDP65.</p>
-            
-            <h3><span class="badge">#8</span> Mode Switch Contamination</h3>
-            <p><strong>Symptom:</strong> Machine enters wrong mode, erratic transport behavior.</p>
-            <p><strong>Cause:</strong> Gold contacts develop tracking due to contamination.</p>
-            <p><strong>Repair:</strong> Remove, clean with IPA, re-lubricate lightly.</p>
-        </section>
-
-        <section id="mk-differences">
-            <h2 id="mk-i-mk-ii-mk-iii-differences">Mk I, Mk II, Mk III Differences</h2>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Feature</th>
-                    <th>Mk I (1978-81)</th>
-                    <th>Mk II (1981-83)</th>
-                    <th>Mk III (1983-85)</th>
-                </tr>
-                <tr>
-                    <td>Metering</td>
-                    <td>Analog VU meters</td>
-                    <td>LED bar graph</td>
-                    <td>LED bar graph (refined)</td>
-                </tr>
-                <tr>
-                    <td>Audio ICs</td>
-                    <td>Siemens TBA931</td>
-                    <td>Hybrid modules</td>
-                    <td>Hybrid modules</td>
-                </tr>
-                <tr>
-                    <td>Oscillator Board</td>
-                    <td>Discrete</td>
-                    <td>Integrated</td>
-                    <td>Integrated (improved)</td>
-                </tr>
-                <tr>
-                    <td>Capacitor Types</td>
-                    <td>Philips blue + RIFA</td>
-                    <td>Philips blue + RIFA</td>
-                    <td>Fewer problem caps</td>
-                </tr>
-                <tr>
-                    <td>Head Block</td>
-                    <td>Standard</td>
-                    <td>Standard</td>
-                    <td>Improved shielding</td>
-                </tr>
-            </table></div>
-            
-            <div class="compatibility-note">
-                <strong>Note:</strong> Mk II and Mk III share most electronic assemblies. Mk I has unique audio boards requiring different restoration approach.
+</section>
+<section id="repair">
+<h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
+<div class="warning">
+<strong>🔧 RESTORATION PHILOSOPHY:</strong> The PR99 is modular—work in stages. Remove audio chassis as a unit. Test after each stage. Document connector positions with photos.
             </div>
-        </section>
-
-        <section id="repair">
-            <h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
-            
-            <div class="warning">
-                <strong>🔧 RESTORATION PHILOSOPHY:</strong> The PR99 is modular—work in stages. Remove audio chassis as a unit. Test after each stage. Document connector positions with photos.
+<div class="checklist">
+<h3>Restoration Checklist:</h3>
+<div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors)</div>
+<div class="checklist-item">✅ Stage 1 - Replace ALL RIFA capacitors (safety critical)</div>
+<div class="checklist-item">✅ Stage 2 - Replace Philips blue electrolytics in PSU</div>
+<div class="checklist-item">✅ Stage 3 - Test power supply voltages</div>
+<div class="checklist-item">✅ Stage 4 - Replace motor run capacitors</div>
+<div class="checklist-item">✅ Stage 5 - Capstan board recap and motor lubrication</div>
+<div class="checklist-item">✅ Stage 6 - Logic board tantalum replacement</div>
+<div class="checklist-item">✅ Stage 7 - Mechanical: brakes, bearings, tension arms</div>
+<div class="checklist-item">✅ Stage 8 - Audio boards: full recap, IC upgrades</div>
+<div class="checklist-item">✅ Stage 9 - Full calibration</div>
+</div>
+<h3>Recommended Restoration Order:</h3>
+<ol>
+<li><strong>Stage 0 - Documentation:</strong> Photograph all connectors, switches, and board positions before disassembly.</li>
+<li><strong>Stage 1 - Safety First:</strong> Replace ALL RIFA capacitors on relay board, motor boards, and mains input BEFORE applying power.</li>
+<li><strong>Stage 2 - Power Supply:</strong> Replace all Philips blue electrolytics, check rectifiers, test voltages (24V, 21V, 12V, 5V).</li>
+<li><strong>Stage 3 - Transport Test:</strong> Verify basic transport functions with audio boards disconnected.</li>
+<li><strong>Stage 4 - Capstan Board:</strong> Replace capacitors, check motor control ICs, lubricate capstan motor.</li>
+<li><strong>Stage 5 - Logic Board:</strong> Replace tantalums, clean mode switch.</li>
+<li><strong>Stage 6 - Mechanical:</strong> Clean/lube reel motors, replace brake bands if worn, service tension arms.</li>
+<li><strong>Stage 7 - Audio Boards:</strong> Replace all electrolytics, tantalums, consider Siemens IC replacement.</li>
+<li><strong>Stage 8 - Calibration:</strong> Full electronic alignment (levels, bias, EQ).</li>
+</ol>
+</section>
+<section id="capacitors">
+<h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
+<div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Location</th>
+<th>Value</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>RIFA Suppression Caps</td>
+<td>Relay Board (<span class="part-number">1.079.xxx</span>)</td>
+<td>0.1µF 250VAC</td>
+<td>2-3 units, replace with X2 class</td>
+</tr>
+<tr>
+<td>RIFA Motor Board Caps</td>
+<td>Motor Control Boards</td>
+<td>0.1µF, 0.47µF 250VAC</td>
+<td>Replace all with X2/Y2 types</td>
+</tr>
+<tr>
+<td>Mains Filter RIFA</td>
+<td>Behind power switch</td>
+<td>100nF X2</td>
+<td>Replace with modern X2</td>
+</tr>
+</table></div>
+<div class="component-category">🔋 MOTOR RUN CAPACITORS (AC RATED)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Value</th>
+<th>Replacement Part</th>
+</tr>
+<tr>
+<td>Capstan Motor Capacitor</td>
+<td>3.5µF 250VAC</td>
+<td>Motor run capacitor (Kemet, Ducati)</td>
+</tr>
+<tr>
+<td>Reel Motor Dual Capacitor</td>
+<td>6.5µF + 1.5µF 250VAC</td>
+<td>Special 3-terminal dual cap (<span class="part-number">Revox #1.022.410</span>)</td>
+</tr>
+</table></div>
+<div class="component-category">🔵 PHILIPS "BLUE" CAPACITORS - REPLACE ALL</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Common Values</th>
+<th>Location</th>
+<th>Failure Mode</th>
+<th>Modern Replacement</th>
+</tr>
+<tr>
+<td>47µF, 100µF, 220µF, 470µF</td>
+<td>Audio boards, PSU</td>
+<td>Leakage, corrosion, lifted pads</td>
+<td>Nichicon FG, Panasonic FR</td>
+</tr>
+<tr>
+<td>1000µF, 2200µF</td>
+<td>Power supply</td>
+<td>Dried out, high ESR</td>
+<td>Panasonic FR, Nichicon PW</td>
+</tr>
+<tr>
+<td>10µF, 22µF</td>
+<td>Audio coupling</td>
+<td>Distortion, noise</td>
+<td>Nichicon FG, Elna Silmic II</td>
+</tr>
+</table></div>
+<div class="component-category">🔴 TANTALUM CAPACITORS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Board</th>
+<th>Values</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>Audio Boards (<span class="part-number">1.080.xxx</span>)</td>
+<td>1µF-10µF 16V/25V</td>
+<td>Replace with 35V tantalums or film (WIMA MKS2)</td>
+</tr>
+<tr>
+<td>Logic Board</td>
+<td>4.7µF, 10µF</td>
+<td>Replace with 35V tantalums</td>
+</tr>
+</table></div>
+<div class="component-category">🎛️ AUDIO PATH ELECTROLYTICS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Type</th>
+<th>Recommendation</th>
+</tr>
+<tr>
+<td>Coupling Caps (&gt;10µF)</td>
+<td>Nichicon FG, Elna Silmic II (audio grade)</td>
+</tr>
+<tr>
+<td>Small Values (&lt;10µF)</td>
+<td>WIMA MKS2 film capacitors (no polarity concerns)</td>
+</tr>
+<tr>
+<td>Power Supply</td>
+<td>Panasonic FR, Nichicon PW (low ESR)</td>
+</tr>
+</table></div>
+</section>
+<section id="ics">
+<h2 id="siemens-ic-replacement-guide">Siemens IC Replacement Guide</h2>
+<p>Mk I PR99 uses Siemens ICs that are prone to failure and noise. Modern replacements dramatically improve performance.</p>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Original IC</th>
+<th>Function</th>
+<th>Modern Replacement</th>
+<th>Adapter Required</th>
+</tr>
+<tr>
+<td><span class="part-number">TBA 931</span></td>
+<td>Audio preamp/line amp</td>
+<td>OPA2134, NE5532, LME49720</td>
+<td>SOIC-8 to DIP-8</td>
+</tr>
+<tr>
+<td><span class="part-number">TCA 580</span></td>
+<td>Meter driver</td>
+<td>Difficult - check if working</td>
+<td>N/A - keep if good</td>
+</tr>
+<tr>
+<td><span class="part-number">uA739</span></td>
+<td>Dual op-amp</td>
+<td>NE5532, OPA2134</td>
+<td>Direct pin-compatible</td>
+</tr>
+</table></div>
+<div class="info-box">
+<strong>💡 IC Upgrade Tip:</strong> For Mk I audio boards, consider the "Sound-Design" replacement kit that includes adapters and high-quality op-amps. This transforms audio quality and reliability.
             </div>
-            
-            <div class="checklist">
-                <h3>Restoration Checklist:</h3>
-                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors)</div>
-                <div class="checklist-item">✅ Stage 1 - Replace ALL RIFA capacitors (safety critical)</div>
-                <div class="checklist-item">✅ Stage 2 - Replace Philips blue electrolytics in PSU</div>
-                <div class="checklist-item">✅ Stage 3 - Test power supply voltages</div>
-                <div class="checklist-item">✅ Stage 4 - Replace motor run capacitors</div>
-                <div class="checklist-item">✅ Stage 5 - Capstan board recap and motor lubrication</div>
-                <div class="checklist-item">✅ Stage 6 - Logic board tantalum replacement</div>
-                <div class="checklist-item">✅ Stage 7 - Mechanical: brakes, bearings, tension arms</div>
-                <div class="checklist-item">✅ Stage 8 - Audio boards: full recap, IC upgrades</div>
-                <div class="checklist-item">✅ Stage 9 - Full calibration</div>
+<h3>Critical ICs to Protect:</h3>
+<ul>
+<li><strong><span class="part-number">SC 10429</span></strong> - Logic IC (unobtainable)</li>
+<li><strong><span class="part-number">LM 317/337</span></strong> - Voltage regulators (replace if faulty)</li>
+</ul>
+</section>
+<section id="mechanical">
+<h2 id="mechanical-maintenance">Mechanical Maintenance</h2>
+<h3>Brake Band Replacement <span class="badge-blue">Part #1.011.646</span></h3>
+<ol>
+<li>Remove reel motors to access brake bands</li>
+<li>Replace with Revox part <span class="part-number">1.011.646</span> (felt band kit)</li>
+<li>Adjust for proper tape tension per service manual</li>
+</ol>
+<h3>Capstan Motor Lubrication</h3>
+<ul>
+<li>Use genuine <strong>PDP65 oil</strong> or equivalent</li>
+<li>Remove C-clip, drop shaft, apply to felt rings</li>
+<li>Critical for speed stability and servo lock</li>
+</ul>
+<h3>Reel Motor Bearing Service</h3>
+<ul>
+<li>If noisy: replace bearings (<span class="part-number">SKF 608-2Z</span> or equivalent)</li>
+<li>Clean old grease, repack with light lithium grease</li>
+</ul>
+<h3>Tension Arm Damping</h3>
+<ul>
+<li>If arms flop loose: disassemble, clean, replace silicon fluid</li>
+<li>Use <strong>300,000 cSt</strong> silicon oil for proper damping</li>
+</ul>
+<h3>Pinch Roller Rebuilding</h3>
+<ul>
+<li>If hardened or glazed: replace or send out for rebuilding</li>
+<li>Terry's Rubber Rollers offers service</li>
+</ul>
+<h3>Mode Switch Cleaning</h3>
+<ul>
+<li>Remove switch from transport PCB</li>
+<li>Carefully pry open metal housing</li>
+<li>Clean gold contacts with IPA, reassemble</li>
+</ul>
+</section>
+<section id="audio">
+<h2 id="audio-board-restoration">Audio Board Restoration</h2>
+<h3>Mk I Audio Boards (<span class="part-number">1.080.xxx</span>)</h3>
+<ul>
+<li>Replace all Philips blue electrolytics</li>
+<li>Replace all tantalums</li>
+<li>Consider Siemens IC replacement with adapters</li>
+<li>Check for corroded traces under capacitors</li>
+<li>Replace trimmers (Bias, Level, EQ) with multi-turn Bourns</li>
+</ul>
+<h3>Mk II / Mk III Audio Boards</h3>
+<ul>
+<li>Replace all electrolytics (fewer Philips caps than Mk I)</li>
+<li>Replace tantalums</li>
+<li>Hybrid modules are generally reliable but can be recapped</li>
+<li>Check for cracked solder joints on XLR connectors</li>
+</ul>
+<h3>Record/Playback Head Care</h3>
+<ul>
+<li>Inspect for wear (grooves, reduced output)</li>
+<li>Demagnetize with head demagnetizer</li>
+<li>Clean with isopropyl alcohol</li>
+<li>If worn: relapping or replacement (JRF Magnetics)</li>
+</ul>
+</section>
+<section id="calibration">
+<h2 id="calibration-essentials">Calibration Essentials</h2>
+<p>After recap, full calibration is required for professional performance:</p>
+<h3>Required Equipment:</h3>
+<ul>
+<li>Test tape (IEC 1: MRL, Revox, or ATR Services)</li>
+<li>Oscilloscope (for bias adjustment)</li>
+<li>Signal generator</li>
+<li>AC millivoltmeter</li>
+<li>Distortion analyzer (optional)</li>
+</ul>
+<h3>Calibration Sequence (per service manual):</h3>
+<ol>
+<li>Power supply voltages</li>
+<li>Repro level and EQ</li>
+<li>Record level and EQ</li>
+<li>Bias adjustment</li>
+<li>Meter calibration</li>
+<li>Check frequency response</li>
+</ol>
+<div class="warning">
+<strong>⚠️ IMPORTANT:</strong> Never attempt calibration without proper test tapes. Improper bias can damage heads and degrade performance.
             </div>
-            
-            <h3>Recommended Restoration Order:</h3>
-            <ol>
-                <li><strong>Stage 0 - Documentation:</strong> Photograph all connectors, switches, and board positions before disassembly.</li>
-                <li><strong>Stage 1 - Safety First:</strong> Replace ALL RIFA capacitors on relay board, motor boards, and mains input BEFORE applying power.</li>
-                <li><strong>Stage 2 - Power Supply:</strong> Replace all Philips blue electrolytics, check rectifiers, test voltages (24V, 21V, 12V, 5V).</li>
-                <li><strong>Stage 3 - Transport Test:</strong> Verify basic transport functions with audio boards disconnected.</li>
-                <li><strong>Stage 4 - Capstan Board:</strong> Replace capacitors, check motor control ICs, lubricate capstan motor.</li>
-                <li><strong>Stage 5 - Logic Board:</strong> Replace tantalums, clean mode switch.</li>
-                <li><strong>Stage 6 - Mechanical:</strong> Clean/lube reel motors, replace brake bands if worn, service tension arms.</li>
-                <li><strong>Stage 7 - Audio Boards:</strong> Replace all electrolytics, tantalums, consider Siemens IC replacement.</li>
-                <li><strong>Stage 8 - Calibration:</strong> Full electronic alignment (levels, bias, EQ).</li>
-            </ol>
-        </section>
-
-        <section id="capacitors">
-            <h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
-            
-            <div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Location</th>
-                    <th>Value</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>RIFA Suppression Caps</td>
-                    <td>Relay Board (<span class="part-number">1.079.xxx</span>)</td>
-                    <td>0.1µF 250VAC</td>
-                    <td>2-3 units, replace with X2 class</td>
-                </tr>
-                <tr>
-                    <td>RIFA Motor Board Caps</td>
-                    <td>Motor Control Boards</td>
-                    <td>0.1µF, 0.47µF 250VAC</td>
-                    <td>Replace all with X2/Y2 types</td>
-                </tr>
-                <tr>
-                    <td>Mains Filter RIFA</td>
-                    <td>Behind power switch</td>
-                    <td>100nF X2</td>
-                    <td>Replace with modern X2</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔋 MOTOR RUN CAPACITORS (AC RATED)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Value</th>
-                    <th>Replacement Part</th>
-                </tr>
-                <tr>
-                    <td>Capstan Motor Capacitor</td>
-                    <td>3.5µF 250VAC</td>
-                    <td>Motor run capacitor (Kemet, Ducati)</td>
-                </tr>
-                <tr>
-                    <td>Reel Motor Dual Capacitor</td>
-                    <td>6.5µF + 1.5µF 250VAC</td>
-                    <td>Special 3-terminal dual cap (<span class="part-number">Revox #1.022.410</span>)</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔵 PHILIPS "BLUE" CAPACITORS - REPLACE ALL</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Common Values</th>
-                    <th>Location</th>
-                    <th>Failure Mode</th>
-                    <th>Modern Replacement</th>
-                </tr>
-                <tr>
-                    <td>47µF, 100µF, 220µF, 470µF</td>
-                    <td>Audio boards, PSU</td>
-                    <td>Leakage, corrosion, lifted pads</td>
-                    <td>Nichicon FG, Panasonic FR</td>
-                </tr>
-                <tr>
-                    <td>1000µF, 2200µF</td>
-                    <td>Power supply</td>
-                    <td>Dried out, high ESR</td>
-                    <td>Panasonic FR, Nichicon PW</td>
-                </tr>
-                <tr>
-                    <td>10µF, 22µF</td>
-                    <td>Audio coupling</td>
-                    <td>Distortion, noise</td>
-                    <td>Nichicon FG, Elna Silmic II</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔴 TANTALUM CAPACITORS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Board</th>
-                    <th>Values</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>Audio Boards (<span class="part-number">1.080.xxx</span>)</td>
-                    <td>1µF-10µF 16V/25V</td>
-                    <td>Replace with 35V tantalums or film (WIMA MKS2)</td>
-                </tr>
-                <tr>
-                    <td>Logic Board</td>
-                    <td>4.7µF, 10µF</td>
-                    <td>Replace with 35V tantalums</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🎛️ AUDIO PATH ELECTROLYTICS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Type</th>
-                    <th>Recommendation</th>
-                </tr>
-                <tr>
-                    <td>Coupling Caps (>10µF)</td>
-                    <td>Nichicon FG, Elna Silmic II (audio grade)</td>
-                </tr>
-                <tr>
-                    <td>Small Values (<10µF)</td>
-                    <td>WIMA MKS2 film capacitors (no polarity concerns)</td>
-                </tr>
-                <tr>
-                    <td>Power Supply</td>
-                    <td>Panasonic FR, Nichicon PW (low ESR)</td>
-                </tr>
-            </table></div>
-        </section>
-
-        <section id="ics">
-            <h2 id="siemens-ic-replacement-guide">Siemens IC Replacement Guide</h2>
-            
-            <p>Mk I PR99 uses Siemens ICs that are prone to failure and noise. Modern replacements dramatically improve performance.</p>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Original IC</th>
-                    <th>Function</th>
-                    <th>Modern Replacement</th>
-                    <th>Adapter Required</th>
-                </tr>
-                <tr>
-                    <td><span class="part-number">TBA 931</span></td>
-                    <td>Audio preamp/line amp</td>
-                    <td>OPA2134, NE5532, LME49720</td>
-                    <td>SOIC-8 to DIP-8</td>
-                </tr>
-                <tr>
-                    <td><span class="part-number">TCA 580</span></td>
-                    <td>Meter driver</td>
-                    <td>Difficult - check if working</td>
-                    <td>N/A - keep if good</td>
-                </tr>
-                <tr>
-                    <td><span class="part-number">uA739</span></td>
-                    <td>Dual op-amp</td>
-                    <td>NE5532, OPA2134</td>
-                    <td>Direct pin-compatible</td>
-                </tr>
-            </table></div>
-            
-            <div class="info-box">
-                <strong>💡 IC Upgrade Tip:</strong> For Mk I audio boards, consider the "Sound-Design" replacement kit that includes adapters and high-quality op-amps. This transforms audio quality and reliability.
+</section>
+<section id="kits">
+<h2 id="restoration-kits-resources">Restoration Kits &amp; Resources</h2>
+<h3>Comprehensive Restoration Kits:</h3>
+<div class="kit-reference">
+<div class="kit-card">
+<strong>Basic Cap Kit</strong>
+<p>RIFA replacements, motor caps, main PSU caps</p>
+</div>
+<div class="kit-card">
+<strong>Full Recap Kit</strong>
+<p>All electrolytics, tantalums, film caps</p>
+</div>
+<div class="kit-card">
+<strong>Mk I IC Upgrade</strong>
+<p>Siemens replacements with adapters</p>
+</div>
+<div class="kit-card">
+<strong>Mechanical Kit</strong>
+<p>Brake bands, pinch roller, belts, PDP65 oil</p>
+</div>
+</div>
+<h3>Parts Sources:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Supplier</th>
+<th>Specialty</th>
+</tr>
+<tr>
+<td>Revox (via authorized dealers)</td>
+<td>Original parts, heads, mechanicals</td>
+</tr>
+<tr>
+<td>Mouser / DigiKey</td>
+<td>Capacitors, ICs, connectors</td>
+</tr>
+<tr>
+<td>JRF Magnetics</td>
+<td>Head relapping, replacements</td>
+</tr>
+<tr>
+<td>Terry's Rubber Rollers</td>
+<td>Pinch roller rebuilding</td>
+</tr>
+<tr>
+<td>ATR Services</td>
+<td>Test tapes, calibration</td>
+</tr>
+<tr>
+<td>Sound-Design (Germany)</td>
+<td>IC upgrade kits, capacitor sets</td>
+</tr>
+<tr>
+<td>Studio Sound Electronics</td>
+<td>Hard-to-find Revox parts</td>
+</tr>
+</table></div>
+<h3>Online Resources:</h3>
+<ul>
+<li><strong>Tapeheads.net</strong> - Revox subforum, active community</li>
+<li><strong>Revox Forum (German)</strong> - Technical deep dives</li>
+<li><strong>HiFi Engine</strong> - Service manuals, user guides</li>
+<li><strong>YouTube:</strong> "Revox PR99 restoration" - Numerous video guides</li>
+<li><strong>The Revox List (Groups.io)</strong> - Email list for enthusiasts</li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2 id="common-troubleshooting-guide">Common Troubleshooting Guide</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>No power, blown fuse</td>
+<td>RIFA capacitor shorted</td>
+<td>Replace RIFAs, check bridge rectifier</td>
+</tr>
+<tr>
+<td>Capstan won't lock</td>
+<td>Dry motor bearings, bad capstan cap</td>
+<td>Lubricate motor, replace 3.5µF cap</td>
+</tr>
+<tr>
+<td>Distorted audio</td>
+<td>Bad electrolytics, Siemens ICs</td>
+<td>Recap audio board, replace op-amps</td>
+</tr>
+<tr>
+<td>Meter not working</td>
+<td>Bad tantalum, meter driver IC</td>
+<td>Replace tantalums, check TCA580</td>
+</tr>
+<tr>
+<td>Tape spills in fast wind</td>
+<td>Worn brake bands</td>
+<td>Replace brake bands (<span class="part-number">1.011.646</span>), adjust</td>
+</tr>
+<tr>
+<td>Intermittent transport</td>
+<td>Mode switch contamination</td>
+<td>Clean mode switch contacts</td>
+</tr>
+<tr>
+<td>Hum in audio</td>
+<td>Bad PSU caps, ground issue</td>
+<td>Recap PSU, check ground straps</td>
+</tr>
+<tr>
+<td>Low output, dull sound</td>
+<td>Worn heads, bad EQ caps</td>
+<td>Check head wear, recap EQ section</td>
+</tr>
+<tr>
+<td>Motor runs hot</td>
+<td>Motor run capacitor failing</td>
+<td>Replace motor run caps</td>
+</tr>
+<tr>
+<td>Noise when adjusting pots</td>
+<td>Dirty controls</td>
+<td>Clean with DeOxit</td>
+</tr>
+</table></div>
+</section>
+<section id="upgrades">
+<h2 id="popular-modifications-upgrades">Popular Modifications &amp; Upgrades</h2>
+<h3>Audio Upgrades:</h3>
+<ul>
+<li><strong>Op-amp upgrade</strong> - Replace Siemens ICs with OPA2134, LME49720, or Sparkos discrete op-amps</li>
+<li><strong>Capacitor upgrades</strong> - Audio-grade electrolytics, film caps in signal path</li>
+<li><strong>Balanced output transformers</strong> - Lundahl, Cinemag for studio use</li>
+<li><strong>Recapping hybrid modules</strong> - Replace electrolytics inside Mk II/III modules</li>
+</ul>
+<h3>Mechanical Upgrades:</h3>
+<ul>
+<li><strong>Pinch roller upgrade</strong> - New rubber compound, improved grip</li>
+<li><strong>Reel motor bearings</strong> - Precision replacements for smoother operation</li>
+<li><strong>Tension arm dampers</strong> - Fresh silicon fluid (300,000 cSt)</li>
+<li><strong>Brake band material</strong> - Upgraded felt compound</li>
+</ul>
+<h3>Electronic Upgrades:</h3>
+<ul>
+<li><strong>Capstan servo upgrade</strong> - Modern replacement for TCA561 (Mister Q module)</li>
+<li><strong>LED lamp conversion</strong> - Replace incandescent bulbs with warm-white LEDs</li>
+<li><strong>Vari-speed modification</strong> - External speed control with pot or voltage</li>
+<li><strong>Meter LED backlight</strong> - For Mk I VU meters</li>
+</ul>
+<div class="info-box">The transport is rock-solid when properly maintained. Many studio engineers prefer a well-maintained PR99 over modern digital emulations.
             </div>
-            
-            <h3>Critical ICs to Protect:</h3>
-            <ul>
-                <li><strong><span class="part-number">TCA 561</span></strong> - Capstan motor control (expensive/rare)</li>
-                <li><strong><span class="part-number">SC 10429</span></strong> - Logic IC (unobtainable)</li>
-                <li><strong><span class="part-number">LM 317/337</span></strong> - Voltage regulators (replace if faulty)</li>
-            </ul>
-            
-            <div class="success-box">
-                <strong>✅ Protection Strategy:</strong> Replace all tantalum capacitors and check voltages BEFORE powering up to avoid destroying these expensive ICs.
-            </div>
-        </section>
-
-        <section id="mechanical">
-            <h2 id="mechanical-maintenance">Mechanical Maintenance</h2>
-            
-            <h3>Brake Band Replacement <span class="badge-blue">Part #1.011.646</span></h3>
-            <ol>
-                <li>Remove reel motors to access brake bands</li>
-                <li>Replace with Revox part <span class="part-number">1.011.646</span> (felt band kit)</li>
-                <li>Adjust for proper tape tension per service manual</li>
-            </ol>
-            
-            <h3>Capstan Motor Lubrication</h3>
-            <ul>
-                <li>Use genuine <strong>PDP65 oil</strong> or equivalent</li>
-                <li>Remove C-clip, drop shaft, apply to felt rings</li>
-                <li>Critical for speed stability and servo lock</li>
-            </ul>
-            
-            <h3>Reel Motor Bearing Service</h3>
-            <ul>
-                <li>If noisy: replace bearings (<span class="part-number">SKF 608-2Z</span> or equivalent)</li>
-                <li>Clean old grease, repack with light lithium grease</li>
-            </ul>
-            
-            <h3>Tension Arm Damping</h3>
-            <ul>
-                <li>If arms flop loose: disassemble, clean, replace silicon fluid</li>
-                <li>Use <strong>300,000 cSt</strong> silicon oil for proper damping</li>
-            </ul>
-            
-            <h3>Pinch Roller Rebuilding</h3>
-            <ul>
-                <li>If hardened or glazed: replace or send out for rebuilding</li>
-                <li>Terry's Rubber Rollers offers service</li>
-            </ul>
-            
-            <h3>Mode Switch Cleaning</h3>
-            <ul>
-                <li>Remove switch from transport PCB</li>
-                <li>Carefully pry open metal housing</li>
-                <li>Clean gold contacts with IPA, reassemble</li>
-            </ul>
-        </section>
-
-        <section id="audio">
-            <h2 id="audio-board-restoration">Audio Board Restoration</h2>
-            
-            <h3>Mk I Audio Boards (<span class="part-number">1.080.xxx</span>)</h3>
-            <ul>
-                <li>Replace all Philips blue electrolytics</li>
-                <li>Replace all tantalums</li>
-                <li>Consider Siemens IC replacement with adapters</li>
-                <li>Check for corroded traces under capacitors</li>
-                <li>Replace trimmers (Bias, Level, EQ) with multi-turn Bourns</li>
-            </ul>
-            
-            <h3>Mk II / Mk III Audio Boards</h3>
-            <ul>
-                <li>Replace all electrolytics (fewer Philips caps than Mk I)</li>
-                <li>Replace tantalums</li>
-                <li>Hybrid modules are generally reliable but can be recapped</li>
-                <li>Check for cracked solder joints on XLR connectors</li>
-            </ul>
-            
-            <h3>Record/Playback Head Care</h3>
-            <ul>
-                <li>Inspect for wear (grooves, reduced output)</li>
-                <li>Demagnetize with head demagnetizer</li>
-                <li>Clean with isopropyl alcohol</li>
-                <li>If worn: relapping or replacement (JRF Magnetics)</li>
-            </ul>
-        </section>
-
-        <section id="calibration">
-            <h2 id="calibration-essentials">Calibration Essentials</h2>
-            
-            <p>After recap, full calibration is required for professional performance:</p>
-            
-            <h3>Required Equipment:</h3>
-            <ul>
-                <li>Test tape (IEC 1: MRL, Revox, or ATR Services)</li>
-                <li>Oscilloscope (for bias adjustment)</li>
-                <li>Signal generator</li>
-                <li>AC millivoltmeter</li>
-                <li>Distortion analyzer (optional)</li>
-            </ul>
-            
-            <h3>Calibration Sequence (per service manual):</h3>
-            <ol>
-                <li>Power supply voltages</li>
-                <li>Repro level and EQ</li>
-                <li>Record level and EQ</li>
-                <li>Bias adjustment</li>
-                <li>Meter calibration</li>
-                <li>Check frequency response</li>
-            </ol>
-            
-            <div class="warning">
-                <strong>⚠️ IMPORTANT:</strong> Never attempt calibration without proper test tapes. Improper bias can damage heads and degrade performance.
-            </div>
-        </section>
-
-        <section id="kits">
-            <h2 id="restoration-kits-resources">Restoration Kits & Resources</h2>
-            
-            <h3>Comprehensive Restoration Kits:</h3>
-            <div class="kit-reference">
-                <div class="kit-card">
-                    <strong>Basic Cap Kit</strong>
-                    <p>RIFA replacements, motor caps, main PSU caps</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>Full Recap Kit</strong>
-                    <p>All electrolytics, tantalums, film caps</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>Mk I IC Upgrade</strong>
-                    <p>Siemens replacements with adapters</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>Mechanical Kit</strong>
-                    <p>Brake bands, pinch roller, belts, PDP65 oil</p>
-                </div>
-            </div>
-            
-            <h3>Parts Sources:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Supplier</th>
-                    <th>Specialty</th>
-                </tr>
-                <tr>
-                    <td>Revox (via authorized dealers)</td>
-                    <td>Original parts, heads, mechanicals</td>
-                </tr>
-                <tr>
-                    <td>Mouser / DigiKey</td>
-                    <td>Capacitors, ICs, connectors</td>
-                </tr>
-                <tr>
-                    <td>JRF Magnetics</td>
-                    <td>Head relapping, replacements</td>
-                </tr>
-                <tr>
-                    <td>Terry's Rubber Rollers</td>
-                    <td>Pinch roller rebuilding</td>
-                </tr>
-                <tr>
-                    <td>ATR Services</td>
-                    <td>Test tapes, calibration</td>
-                </tr>
-                <tr>
-                    <td>Sound-Design (Germany)</td>
-                    <td>IC upgrade kits, capacitor sets</td>
-                </tr>
-                <tr>
-                    <td>Studio Sound Electronics</td>
-                    <td>Hard-to-find Revox parts</td>
-                </tr>
-            </table></div>
-            
-            <h3>Online Resources:</h3>
-            <ul>
-                <li><strong>Tapeheads.net</strong> - Revox subforum, active community</li>
-                <li><strong>Revox Forum (German)</strong> - Technical deep dives</li>
-                <li><strong>HiFi Engine</strong> - Service manuals, user guides</li>
-                <li><strong>YouTube:</strong> "Revox PR99 restoration" - Numerous video guides</li>
-                <li><strong>The Revox List (Groups.io)</strong> - Email list for enthusiasts</li>
-            </ul>
-        </section>
-
-        <section id="troubleshooting">
-            <h2 id="common-troubleshooting-guide">Common Troubleshooting Guide</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Symptom</th>
-                    <th>Likely Cause</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>No power, blown fuse</td>
-                    <td>RIFA capacitor shorted</td>
-                    <td>Replace RIFAs, check bridge rectifier</td>
-                </tr>
-                <tr>
-                    <td>Capstan won't lock</td>
-                    <td>Dry motor bearings, bad capstan cap</td>
-                    <td>Lubricate motor, replace 3.5µF cap</td>
-                </tr>
-                <tr>
-                    <td>Distorted audio</td>
-                    <td>Bad electrolytics, Siemens ICs</td>
-                    <td>Recap audio board, replace op-amps</td>
-                </tr>
-                <tr>
-                    <td>Meter not working</td>
-                    <td>Bad tantalum, meter driver IC</td>
-                    <td>Replace tantalums, check TCA580</td>
-                </tr>
-                <tr>
-                    <td>Tape spills in fast wind</td>
-                    <td>Worn brake bands</td>
-                    <td>Replace brake bands (<span class="part-number">1.011.646</span>), adjust</td>
-                </tr>
-                <tr>
-                    <td>Intermittent transport</td>
-                    <td>Mode switch contamination</td>
-                    <td>Clean mode switch contacts</td>
-                </tr>
-                <tr>
-                    <td>Hum in audio</td>
-                    <td>Bad PSU caps, ground issue</td>
-                    <td>Recap PSU, check ground straps</td>
-                </tr>
-                <tr>
-                    <td>Low output, dull sound</td>
-                    <td>Worn heads, bad EQ caps</td>
-                    <td>Check head wear, recap EQ section</td>
-                </tr>
-                <tr>
-                    <td>Motor runs hot</td>
-                    <td>Motor run capacitor failing</td>
-                    <td>Replace motor run caps</td>
-                </tr>
-                <tr>
-                    <td>Noise when adjusting pots</td>
-                    <td>Dirty controls</td>
-                    <td>Clean with DeOxit</td>
-                </tr>
-            </table></div>
-        </section>
-
-        <section id="upgrades">
-            <h2 id="popular-modifications-upgrades">Popular Modifications & Upgrades</h2>
-            
-            <h3>Audio Upgrades:</h3>
-            <ul>
-                <li><strong>Op-amp upgrade</strong> - Replace Siemens ICs with OPA2134, LME49720, or Sparkos discrete op-amps</li>
-                <li><strong>Capacitor upgrades</strong> - Audio-grade electrolytics, film caps in signal path</li>
-                <li><strong>Balanced output transformers</strong> - Lundahl, Cinemag for studio use</li>
-                <li><strong>Recapping hybrid modules</strong> - Replace electrolytics inside Mk II/III modules</li>
-            </ul>
-            
-            <h3>Mechanical Upgrades:</h3>
-            <ul>
-                <li><strong>Pinch roller upgrade</strong> - New rubber compound, improved grip</li>
-                <li><strong>Reel motor bearings</strong> - Precision replacements for smoother operation</li>
-                <li><strong>Tension arm dampers</strong> - Fresh silicon fluid (300,000 cSt)</li>
-                <li><strong>Brake band material</strong> - Upgraded felt compound</li>
-            </ul>
-            
-            <h3>Electronic Upgrades:</h3>
-            <ul>
-                <li><strong>Capstan servo upgrade</strong> - Modern replacement for TCA561 (Mister Q module)</li>
-                <li><strong>LED lamp conversion</strong> - Replace incandescent bulbs with warm-white LEDs</li>
-                <li><strong>Vari-speed modification</strong> - External speed control with pot or voltage</li>
-                <li><strong>Meter LED backlight</strong> - For Mk I VU meters</li>
-            </ul>
-            
-            <div class="info-box">
-                <strong>⚡ Performance Note:</strong> A fully restored PR99 with modern op-amps rivals machines costing 5x as much. The transport is rock-solid when properly maintained. Many studio engineers prefer a well-maintained PR99 over modern digital emulations.
-            </div>
-        </section>
-
-        <section id="model-specific">
-            <h2 id="model-specific-considerations">Model-Specific Considerations</h2>
-            
-            <h3>PR99 Mk I</h3>
-            <ul>
-                <li><strong>VU meters:</strong> Bulbs may need replacement (warm LED conversion popular)</li>
-                <li><strong>Siemens ICs:</strong> Plan for replacement - they will fail eventually</li>
-                <li><strong>Oscillator board:</strong> Discrete components, recap fully</li>
-                <li><strong>Serial numbers:</strong> Below 10,000 may have early issues</li>
-            </ul>
-            
-            <h3>PR99 Mk II</h3>
-            <ul>
-                <li><strong>LED meters:</strong> Check driver ICs, power supply to meters</li>
-                <li><strong>Hybrid modules:</strong> Can be recapped but require careful disassembly</li>
-                <li><strong>Improved shielding:</strong> Better RF rejection than Mk I</li>
-                <li><strong>More reliable transport:</strong> Refined over Mk I</li>
-            </ul>
-            
-            <h3>PR99 Mk III</h3>
-            <ul>
-                <li><strong>Final revision:</strong> Most refined electronically</li>
-                <li><strong>Fewer problem caps:</strong> Some Philips eliminated</li>
-                <li><strong>Best head shielding:</strong> Improved head block</li>
-                <li><strong>Most valuable:</strong> Commands highest prices</li>
-            </ul>
-        </section>
-
-        <section id="parts-list">
-            <h2 id="essential-parts-reference">Essential Parts Reference</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Part</th>
-                    <th>Revox Part #</th>
-                    <th>Modern Equivalent</th>
-                </tr>
-                <tr>
-                    <td>Capstan Motor Capacitor</td>
-                    <td>1.022.380</td>
-                    <td>3.5µF 250VAC motor run</td>
-                </tr>
-                <tr>
-                    <td>Reel Motor Dual Capacitor</td>
-                    <td>1.022.410</td>
-                    <td>6.5+1.5µF 250VAC special</td>
-                </tr>
-                <tr>
-                    <td>Brake Band Set</td>
-                    <td>1.011.646</td>
-                    <td>Revox original only</td>
-                </tr>
-                <tr>
-                    <td>Pinch Roller</td>
-                    <td>1.011.450</td>
-                    <td>Terry's Rubber Rollers rebuild</td>
-                </tr>
-                <tr>
-                    <td>Capstan Motor Oil</td>
-                    <td>PDP65</td>
-                    <td>PDP65 or equivalent</td>
-                </tr>
-                <tr>
-                    <td>Reel Motor Bearings</td>
-                    <td>1.011.120</td>
-                    <td>SKF 608-2Z</td>
-                </tr>
-                <tr>
-                    <td>TBA 931 IC</td>
-                    <td>1.080.550</td>
-                    <td>OPA2134 + adapter</td>
-                </tr>
-            </table></div>
-        </section>
-
-        
-            <p><strong>Revox PR99 Restoration Guide</strong> • Compiled from Tapeheads.net, Revox Forum, and professional technician experience • Last Updated: 2024</p>
-            <p>Restoration requires advanced technical skill. Protect expensive/unobtainable ICs by replacing all capacitors and vulnerable components first. Always use an isolation transformer when working on live circuits.</p>
-            <p>🙏 Special thanks to the Revox community for decades of documented experience.</p>
-        
-    </div></article><section class="rr-card"><h2 class="rr-h">More Revox models we service</h2><div class="rr-rel"><a href="/reel-to-reel/revox/revox-a700">Revox A700</a><a href="/reel-to-reel/revox/revox-a77">Revox A77</a><a href="/reel-to-reel/revox/revox-b225">Revox B225</a><a href="/reel-to-reel/revox/revox-b226">Revox B226</a><a href="/reel-to-reel/revox/revox-b710">Revox B710</a><a href="/reel-to-reel/revox/revox-b760">Revox B760</a><a href="/reel-to-reel/revox/revox-b77">Revox B77</a><a href="/reel-to-reel/revox/revox-c270">Revox C270</a><a href="/reel-to-reel/revox/revox-f36">Revox F36</a><a href="/reel-to-reel/revox/revox-g36">Revox G36</a><a href="/reel-to-reel/revox/revox-pr77">Revox PR77</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Revox PR99?</div><div>Yes. Tek Media Group repairs and restores the Revox PR99 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Revox PR99 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+</section>
+<section id="model-specific">
+<h2 id="model-specific-considerations">Model-Specific Considerations</h2>
+<h3>PR99 Mk I</h3>
+<ul>
+<li><strong>VU meters:</strong> Bulbs may need replacement (warm LED conversion popular)</li>
+<li><strong>Siemens ICs:</strong> Plan for replacement - they will fail eventually</li>
+<li><strong>Oscillator board:</strong> Discrete components, recap fully</li>
+<li><strong>Serial numbers:</strong> Below 10,000 may have early issues</li>
+</ul>
+<h3>PR99 Mk II</h3>
+<ul>
+<li><strong>LED meters:</strong> Check driver ICs, power supply to meters</li>
+<li><strong>Hybrid modules:</strong> Can be recapped but require careful disassembly</li>
+<li><strong>Improved shielding:</strong> Better RF rejection than Mk I</li>
+<li><strong>More reliable transport:</strong> Refined over Mk I</li>
+</ul>
+<h3>PR99 Mk III</h3>
+<ul>
+<li><strong>Final revision:</strong> Most refined electronically</li>
+<li><strong>Fewer problem caps:</strong> Some Philips eliminated</li>
+<li><strong>Best head shielding:</strong> Improved head block</li>
+</ul>
+</section>
+<section id="parts-list">
+<h2 id="essential-parts-reference">Essential Parts Reference</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Part</th>
+<th>Revox Part #</th>
+<th>Modern Equivalent</th>
+</tr>
+<tr>
+<td>Capstan Motor Capacitor</td>
+<td>1.022.380</td>
+<td>3.5µF 250VAC motor run</td>
+</tr>
+<tr>
+<td>Reel Motor Dual Capacitor</td>
+<td>1.022.410</td>
+<td>6.5+1.5µF 250VAC special</td>
+</tr>
+<tr>
+<td>Brake Band Set</td>
+<td>1.011.646</td>
+<td>Revox original only</td>
+</tr>
+<tr>
+<td>Pinch Roller</td>
+<td>1.011.450</td>
+<td>Terry's Rubber Rollers rebuild</td>
+</tr>
+<tr>
+<td>Capstan Motor Oil</td>
+<td>PDP65</td>
+<td>PDP65 or equivalent</td>
+</tr>
+<tr>
+<td>Reel Motor Bearings</td>
+<td>1.011.120</td>
+<td>SKF 608-2Z</td>
+</tr>
+<tr>
+<td>TBA 931 IC</td>
+<td>1.080.550</td>
+<td>OPA2134 + adapter</td>
+</tr>
+</table></div>
+</section>
+<p><strong>Revox PR99 Restoration Guide</strong> • Compiled from Tapeheads.net, Revox Forum, and professional technician experience • Last Updated: 2024</p>
+<p>Restoration requires advanced technical skill. Always use an isolation transformer when working on live circuits.</p>
+<p>🙏 Special thanks to the Revox community for decades of documented experience.</p>
+</div></article><section class="rr-card"><h2 class="rr-h">More Revox models we service</h2><div class="rr-rel"><a href="/reel-to-reel/revox/revox-a700">Revox A700</a><a href="/reel-to-reel/revox/revox-a77">Revox A77</a><a href="/reel-to-reel/revox/revox-b225">Revox B225</a><a href="/reel-to-reel/revox/revox-b226">Revox B226</a><a href="/reel-to-reel/revox/revox-b710">Revox B710</a><a href="/reel-to-reel/revox/revox-b760">Revox B760</a><a href="/reel-to-reel/revox/revox-b77">Revox B77</a><a href="/reel-to-reel/revox/revox-c270">Revox C270</a><a href="/reel-to-reel/revox/revox-f36">Revox F36</a><a href="/reel-to-reel/revox/revox-g36">Revox G36</a><a href="/reel-to-reel/revox/revox-pr77">Revox PR77</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Revox PR99?</div><div>Yes. Tek Media Group repairs and restores the Revox PR99 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Revox PR99 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

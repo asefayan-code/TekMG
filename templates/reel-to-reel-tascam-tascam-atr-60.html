@@ -8,202 +8,185 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/tascam">TASCAM</a> &rsaquo; TASCAM ATR-60</nav><span class="rr-eyebrow">TASCAM reel-to-reel repair</span><h1>TASCAM ATR-60 Series Reel-to-Reel Tape Deck Repair Guide</h1><p class="rr-lead">The TASCAM ATR-60 Series represents the pinnacle of professional reel-to-reel tape decks designed for broadcast and mastering applications. These models are known for their exceptional build quality, precision transport, and superb audio performance.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>TASCAM</dd></div><div><dt>Model</dt><dd>TASCAM ATR-60</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#series-overview">Series Overview</a><a href="#common-issues-and-solutions">Common Issues and Solutions</a><a href="#capacitor-replacement-guide">Capacitor Replacement Guide</a><a href="#critical-components-to-check-replace">Critical Components to Check/Replace</a><a href="#mechanical-maintenance-procedure">Mechanical Maintenance Procedure</a><a href="#calibration-procedure">Calibration Procedure</a><a href="#additional-tips">Additional Tips</a></nav><article class="rr-card rr-body"><div class="container">
-        <div class="content">
-            
-            
-            <div class="warning">
-                <strong>SAFETY WARNING:</strong> Always disconnect the unit from power before working internally. 
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/tascam">TASCAM</a> › TASCAM ATR-60</nav><span class="rr-eyebrow">TASCAM reel-to-reel repair</span><h1>TASCAM ATR-60 Series Reel-to-Reel Tape Deck Repair Guide</h1><p class="rr-lead">The TASCAM ATR-60 Series represents the pinnacle of professional reel-to-reel tape decks designed for broadcast and mastering applications. These models are known for their exceptional build quality, precision transport, and superb audio performance.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>TASCAM</dd></div><div><dt>Model</dt><dd>TASCAM ATR-60</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#series-overview">Series Overview</a><a href="#common-issues-and-solutions">Common Issues and Solutions</a><a href="#capacitor-replacement-guide">Capacitor Replacement Guide</a><a href="#critical-components-to-check-replace">Critical Components to Check/Replace</a><a href="#mechanical-maintenance-procedure">Mechanical Maintenance Procedure</a><a href="#calibration-procedure">Calibration Procedure</a><a href="#additional-tips">Additional Tips</a></nav><article class="rr-card rr-body"><div class="container">
+<div class="content">
+<div class="warning">
+<strong>SAFETY WARNING:</strong> Always disconnect the unit from power before working internally. 
                 Discharge large capacitors before handling. The ATR-60 operates with high voltages - exercise extreme caution.
                 If unsure, consult a professional technician.
             </div>
-
-            <h2 id="series-overview">Series Overview</h2>
-            
-            
-            <div class="model-variants">
-                <div class="model-card">
-                    <div class="model-name">TASCAM ATR-60-1HS</div>
-                    <p>Half-inch, 2-track high-speed mastering recorder</p>
-                </div>
-                <div class="model-card">
-                    <div class="model-name">TASCAM ATR-60-2HS</div>
-                    <p>Half-inch, 2-track with extended frequency response</p>
-                </div>
-                <div class="model-card">
-                    <div class="model-name">TASCAM ATR-60-8</div>
-                    <p>One-inch, 8-track version for multitrack recording</p>
-                </div>
-                <div class="model-card">
-                    <div class="model-name">TASCAM ATR-60-16</div>
-                    <p>One-inch, 16-track version for studio applications</p>
-                </div>
-            </div>
-
-            <h2 id="common-issues-and-solutions">Common Issues and Solutions</h2>
-            
-            <h3>Transport Mechanism Problems</h3>
-            <p>The ATR-60 features an advanced transport system that can develop specific issues:</p>
-            <ul>
-                <li><strong>Tension arm problems:</strong> Worn bearings or misalignment cause irregular tape tension</li>
-                <li><strong>Capstan motor issues:</strong> Hall-effect sensor failures or motor driver problems affect speed stability</li>
-                <li><strong>Brake system wear:</strong> Worn brake pads cause inconsistent stopping</li>
-                <li><strong>Guide alignment:</strong> Tape guides can become misaligned, causing edge wear</li>
-            </ul>
-
-            <h3>Electronic Issues</h3>
-            <p>Common electrical problems include:</p>
-            <ul>
-                <li><strong>Capacitor failure:</strong> Electrolytic capacitors dry out, causing noise and performance issues</li>
-                <li><strong>Relay contact oxidation:</strong> Causes intermittent operation or channel dropouts</li>
-                <li><strong>Power supply regulation:</strong> Failed regulators cause voltage fluctuations</li>
-                <li><strong>Op-amp deterioration:</strong> Aging ICs cause noise and distortion</li>
-            </ul>
-
-            <h2 id="capacitor-replacement-guide">Capacitor Replacement Guide</h2>
-            <p>The following capacitors should be replaced in any comprehensive restoration:</p>
-
-            <div class="board">
-                <div class="board-title">Main Power Supply Section</div>
-                <div class="cap-list">
-                    <div class="cap-item">
-                        <span class="cap-value">C101, C102: 4700μF 50V</span> - Primary filter capacitors
+<h2 id="series-overview">Series Overview</h2>
+<div class="model-variants">
+<div class="model-card">
+<div class="model-name">TASCAM ATR-60-1HS</div>
+<p>Half-inch, 2-track high-speed mastering recorder</p>
+</div>
+<div class="model-card">
+<div class="model-name">TASCAM ATR-60-2HS</div>
+<p>Half-inch, 2-track with extended frequency response</p>
+</div>
+<div class="model-card">
+<div class="model-name">TASCAM ATR-60-8</div>
+<p>One-inch, 8-track version for multitrack recording</p>
+</div>
+<div class="model-card">
+<div class="model-name">TASCAM ATR-60-16</div>
+<p>One-inch, 16-track version for studio applications</p>
+</div>
+</div>
+<h2 id="common-issues-and-solutions">Common Issues and Solutions</h2>
+<h3>Transport Mechanism Problems</h3>
+<p>The ATR-60 features an advanced transport system that can develop specific issues:</p>
+<ul>
+<li><strong>Tension arm problems:</strong> Worn bearings or misalignment cause irregular tape tension</li>
+<li><strong>Capstan motor issues:</strong> Hall-effect sensor failures or motor driver problems affect speed stability</li>
+<li><strong>Brake system wear:</strong> Worn brake pads cause inconsistent stopping</li>
+<li><strong>Guide alignment:</strong> Tape guides can become misaligned, causing edge wear</li>
+</ul>
+<h3>Electronic Issues</h3>
+<p>Common electrical problems include:</p>
+<ul>
+<li><strong>Capacitor failure:</strong> Electrolytic capacitors dry out, causing noise and performance issues</li>
+<li><strong>Relay contact oxidation:</strong> Causes intermittent operation or channel dropouts</li>
+<li><strong>Power supply regulation:</strong> Failed regulators cause voltage fluctuations</li>
+<li><strong>Op-amp deterioration:</strong> Aging ICs cause noise and distortion</li>
+</ul>
+<h2 id="capacitor-replacement-guide">Capacitor Replacement Guide</h2>
+<p>The following capacitors should be replaced in any comprehensive restoration:</p>
+<div class="board">
+<div class="board-title">Main Power Supply Section</div>
+<div class="cap-list">
+<div class="cap-item">
+<span class="cap-value">C101, C102: 4700μF 50V</span> - Primary filter capacitors
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C103, C104: 2200μF 35V</span> - Secondary filter capacitors
+<div class="cap-item">
+<span class="cap-value">C103, C104: 2200μF 35V</span> - Secondary filter capacitors
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C105, C106: 1000μF 25V</span> - Regulation circuit capacitors
+<div class="cap-item">
+<span class="cap-value">C105, C106: 1000μF 25V</span> - Regulation circuit capacitors
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C107, C108: 470μF 25V</span> - Driver stage capacitors
+<div class="cap-item">
+<span class="cap-value">C107, C108: 470μF 25V</span> - Driver stage capacitors
                     </div>
-                </div>
-            </div>
-
-            <div class="board">
-                <div class="board-title">Audio Electronics Section</div>
-                <div class="cap-list">
-                    <div class="cap-item">
-                        <span class="cap-value">C201-C212: 10μF 25V</span> - Input coupling capacitors (varies by track count)
+</div>
+</div>
+<div class="board">
+<div class="board-title">Audio Electronics Section</div>
+<div class="cap-list">
+<div class="cap-item">
+<span class="cap-value">C201-C212: 10μF 25V</span> - Input coupling capacitors (varies by track count)
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C213-C224: 47μF 16V</span> - Bypass capacitors
+<div class="cap-item">
+<span class="cap-value">C213-C224: 47μF 16V</span> - Bypass capacitors
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C225-C236: 100μF 16V</span> - EQ circuit capacitors
+<div class="cap-item">
+<span class="cap-value">C225-C236: 100μF 16V</span> - EQ circuit capacitors
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C237-C248: 4.7μF 50V</span> - Output coupling capacitors
+<div class="cap-item">
+<span class="cap-value">C237-C248: 4.7μF 50V</span> - Output coupling capacitors
                     </div>
-                </div>
-            </div>
-
-            <div class="board">
-                <div class="board-title">Transport Control Section</div>
-                <div class="cap-list">
-                    <div class="cap-item">
-                        <span class="cap-value">C301: 2200μF 25V</span> - Capstan motor capacitor
+</div>
+</div>
+<div class="board">
+<div class="board-title">Transport Control Section</div>
+<div class="cap-list">
+<div class="cap-item">
+<span class="cap-value">C301: 2200μF 25V</span> - Capstan motor capacitor
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C302, C303: 1000μF 16V</span> - Reel motor capacitors
+<div class="cap-item">
+<span class="cap-value">C302, C303: 1000μF 16V</span> - Reel motor capacitors
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C304: 470μF 25V</span> - Logic power capacitor
+<div class="cap-item">
+<span class="cap-value">C304: 470μF 25V</span> - Logic power capacitor
                     </div>
-                    <div class="cap-item">
-                        <span class="cap-value">C305-C308: 47μF 50V</span> - Solenoid control capacitors
+<div class="cap-item">
+<span class="cap-value">C305-C308: 47μF 50V</span> - Solenoid control capacitors
                     </div>
-                </div>
-            </div>
-
-            <h2 id="critical-components-to-check-replace">Critical Components to Check/Replace</h2>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Reference</th>
-                    <th>Location</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td>Voltage Regulators</td>
-                    <td>IC101-IC105</td>
-                    <td>Power Supply</td>
-                    <td>Check for proper output voltages (±15V, ±24V)</td>
-                </tr>
-                <tr>
-                    <td>Relays</td>
-                    <td>RLY101-RLY108</td>
-                    <td>Control Board</td>
-                    <td>Clean or replace oxidized contacts</td>
-                </tr>
-                <tr>
-                    <td>Op-Amps</td>
-                    <td>IC201-IC232</td>
-                    <td>Audio Boards</td>
-                    <td>Replace noisy or failed units</td>
-                </tr>
-                <tr>
-                    <td>Tension Sensors</td>
-                    <td>N/A</td>
-                    <td>Transport</td>
-                    <td>Clean and adjust for proper operation</td>
-                </tr>
-                <tr>
-                    <td>Capstan Motor</td>
-                    <td>N/A</td>
-                    <td>Transport</td>
-                    <td>Check Hall sensors and driver circuitry</td>
-                </tr>
-            </table></div>
-
-            <h2 id="mechanical-maintenance-procedure">Mechanical Maintenance Procedure</h2>
-            <ol>
-                <li>Disconnect power and remove covers</li>
-                <li>Carefully clean the transport mechanism with isopropyl alcohol</li>
-                <li>Inspect and replace worn brake pads if necessary</li>
-                <li>Remove old hardened lubricant from all moving parts</li>
-                <li>Apply fresh lubricant to appropriate areas:
+</div>
+</div>
+<h2 id="critical-components-to-check-replace">Critical Components to Check/Replace</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Reference</th>
+<th>Location</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Voltage Regulators</td>
+<td>IC101-IC105</td>
+<td>Power Supply</td>
+<td>Check for proper output voltages (±15V, ±24V)</td>
+</tr>
+<tr>
+<td>Relays</td>
+<td>RLY101-RLY108</td>
+<td>Control Board</td>
+<td>Clean or replace oxidized contacts</td>
+</tr>
+<tr>
+<td>Op-Amps</td>
+<td>IC201-IC232</td>
+<td>Audio Boards</td>
+<td>Replace noisy or failed units</td>
+</tr>
+<tr>
+<td>Tension Sensors</td>
+<td>N/A</td>
+<td>Transport</td>
+<td>Clean and adjust for proper operation</td>
+</tr>
+<tr>
+<td>Capstan Motor</td>
+<td>N/A</td>
+<td>Transport</td>
+<td>Check Hall sensors and driver circuitry</td>
+</tr>
+</table></div>
+<h2 id="mechanical-maintenance-procedure">Mechanical Maintenance Procedure</h2>
+<ol>
+<li>Disconnect power and remove covers</li>
+<li>Carefully clean the transport mechanism with isopropyl alcohol</li>
+<li>Inspect and replace worn brake pads if necessary</li>
+<li>Remove old hardened lubricant from all moving parts</li>
+<li>Apply fresh lubricant to appropriate areas:
                     <ul>
-                        <li>Capstan bearing: Special capstan oil</li>
-                        <li>Guide rods: Light instrument grease</li>
-                        <li>Levers and pivots: Light machine oil</li>
-                    </ul>
-                </li>
-                <li>Check and adjust tape tension using proper tension gauge</li>
-                <li>Clean all switches and potentiometers with contact cleaner</li>
-                <li>Clean tension sensors with isopropyl alcohol</li>
-                <li>Inspect and align tape guides</li>
-            </ol>
-
-            <div class="note">
-                <strong>Note:</strong> The ATR-60 uses precision heads that should be cleaned regularly with isopropyl alcohol and a cotton swab. 
+<li>Capstan bearing: Special capstan oil</li>
+<li>Guide rods: Light instrument grease</li>
+<li>Levers and pivots: Light machine oil</li>
+</ul>
+</li>
+<li>Check and adjust tape tension using proper tension gauge</li>
+<li>Clean all switches and potentiometers with contact cleaner</li>
+<li>Clean tension sensors with isopropyl alcohol</li>
+<li>Inspect and align tape guides</li>
+</ol>
+<div class="note">
+<strong>Note:</strong> The ATR-60 uses precision heads that should be cleaned regularly with isopropyl alcohol and a cotton swab. 
                 Avoid abrasive cleaners. Demagnetize heads regularly for optimal performance.
             </div>
-
-            <h2 id="calibration-procedure">Calibration Procedure</h2>
-            <p>After capacitor replacement, these calibrations are essential:</p>
-            <ul>
-                <li>Set playback level and EQ using MRL calibration tape</li>
-                <li>Adjust record level and bias for each tape type</li>
-                <li>Check and adjust tape tension across all modes</li>
-                <li>Verify tape speed accuracy at all speed settings (7.5, 15, 30 ips)</li>
-                <li>Adjust head azimuth for proper high-frequency response</li>
-                <li>Calibrate reproduce and record electronics for all channels</li>
-                <li>Set proper brake tension for smooth operation</li>
-                <li>Adjust tension arm positions for proper tape handling</li>
-            </ul>
-
-            <h2 id="additional-tips">Additional Tips</h2>
-            <ul>
-                <li>Use high-quality, low-ESR capacitors for longer life</li>
-                <li>Document all adjustments before making changes</li>
-                <li>Check all resistors near replaced components; they may have drifted in value</li>
-                <li>Clean the record/playback switches thoroughly as they often cause noise</li>
-                <li>Allow the unit to warm up for at least 30 minutes before making final adjustments</li>
-                <li>Consider replacing relay contacts if they show signs of pitting or oxidation</li>
-                <li>Use deoxit on all edge connectors and reseat all boards</li>
-            </ul>
-        </div>
-    </div></article><section class="rr-card"><h2 class="rr-h">More TASCAM models we service</h2><div class="rr-rel"><a href="/reel-to-reel/tascam/tascam-34">TASCAM 34/32</a><a href="/reel-to-reel/tascam/tascam-38">TASCAM 38</a><a href="/reel-to-reel/tascam/tascam-58">TASCAM 58</a><a href="/reel-to-reel/tascam/tascam-80-8">TASCAM 80-8</a><a href="/reel-to-reel/tascam/tascam-86">TASCAM 85 Series</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the TASCAM ATR-60?</div><div>Yes. Tek Media Group repairs and restores the TASCAM ATR-60 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your TASCAM ATR-60 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+<h2 id="calibration-procedure">Calibration Procedure</h2>
+<p>After capacitor replacement, these calibrations are essential:</p>
+<ul>
+<li>Set playback level and EQ using MRL calibration tape</li>
+<li>Adjust record level and bias for each tape type</li>
+<li>Check and adjust tape tension across all modes</li>
+<li>Verify tape speed accuracy at all speed settings (7.5, 15, 30 ips)</li>
+<li>Adjust head azimuth for proper high-frequency response</li>
+<li>Calibrate reproduce and record electronics for all channels</li>
+<li>Set proper brake tension for smooth operation</li>
+<li>Adjust tension arm positions for proper tape handling</li>
+</ul>
+<h2 id="additional-tips">Additional Tips</h2>
+<ul>
+<li>Use high-quality, low-ESR capacitors for longer life</li>
+<li>Document all adjustments before making changes</li>
+<li>Check all resistors near replaced components; they may have drifted in value</li>
+<li>Clean the record/playback switches thoroughly as they often cause noise</li>
+<li>Allow the unit to warm up for at least 30 minutes before making final adjustments</li>
+<li>Consider replacing relay contacts if they show signs of pitting or oxidation</li>
+<li>Use deoxit on all edge connectors and reseat all boards</li>
+</ul>
+</div>
+</div></article><section class="rr-card"><h2 class="rr-h">More TASCAM models we service</h2><div class="rr-rel"><a href="/reel-to-reel/tascam/tascam-34">TASCAM 34/32</a><a href="/reel-to-reel/tascam/tascam-38">TASCAM 38</a><a href="/reel-to-reel/tascam/tascam-58">TASCAM 58</a><a href="/reel-to-reel/tascam/tascam-80-8">TASCAM 80-8</a><a href="/reel-to-reel/tascam/tascam-86">TASCAM 85 Series</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the TASCAM ATR-60?</div><div>Yes. Tek Media Group repairs and restores the TASCAM ATR-60 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your TASCAM ATR-60 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}

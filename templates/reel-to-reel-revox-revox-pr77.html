@@ -8,502 +8,407 @@
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
 {% block content %}
-<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav class="rr-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/reel-to-reel">Reel-to-Reel</a> &rsaquo; <a href="/reel-to-reel/revox">Revox</a> &rsaquo; Revox PR77</nav><span class="rr-eyebrow">Revox reel-to-reel repair</span><h1>Revox PR77</h1><p class="rr-lead">The Revox PR77 is a rare and unusual variant in the Revox lineup. While the PR99 is well-known as the professional version of the B77, the PR77 represents an intermediate or transitional model that is less documented.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section class="rr-card" aria-label="At a glance"><dl class="rr-facts"><div><dt>Brand</dt><dd>Revox</dd></div><div><dt>Model</dt><dd>Revox PR77</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav class="rr-card rr-toc" aria-label="On this page"><b>On this page</b><a href="#overview">Overview</a><a href="#current-market-value-2024">Current Market Value (2024)</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-motherboard-switch-contact-clea">⚠️ CRITICAL: Motherboard Switch Cont…</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#mechanical-overhaul-guide">Mechanical Overhaul Guide</a><a href="#complete-troubleshooting-guide">Complete Troubleshooting Guide</a><a href="#transport-key-testing-procedure">Transport Key Testing Procedure</a><a href="#restoration-kits-resources">Restoration Kits &amp; Resources</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
-        
-        
-        <div class="disclaimer" style="background-color: #FFFF00; border: thin solid #0000FF; padding: 10px">
-            <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
+<div class="rrp"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/reel-to-reel">Reel-to-Reel</a> › <a href="/reel-to-reel/revox">Revox</a> › Revox PR77</nav><span class="rr-eyebrow">Revox reel-to-reel repair</span><h1>Revox PR77</h1><p class="rr-lead">The Revox PR77 is a rare and unusual variant in the Revox lineup. While the PR99 is well-known as the professional version of the B77, the PR77 represents an intermediate or transitional model that is less documented.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Revox</dd></div><div><dt>Model</dt><dd>Revox PR77</dd></div><div><dt>Service</dt><dd>Repair, restoration and calibration</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from anywhere in the U.S.</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#overview">Overview</a><a href="#common-failure-modes">Common Failure Modes</a><a href="#critical-motherboard-switch-contact-clea">⚠️ CRITICAL: Motherboard Switch Cont…</a><a href="#systematic-restoration-process">Systematic Restoration Process</a><a href="#complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</a><a href="#mechanical-overhaul-guide">Mechanical Overhaul Guide</a><a href="#complete-troubleshooting-guide">Complete Troubleshooting Guide</a><a href="#transport-key-testing-procedure">Transport Key Testing Procedure</a><a href="#restoration-kits-resources">Restoration Kits &amp; Resources</a></nav><article class="rr-card rr-body"><div class="content-wrapper">
+<div class="disclaimer" style="background-color: #FFFF00; border: thin solid #0000FF; padding: 10px">
+<strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
         </div>
-
-        <div class="danger">
-            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Revox PR77 shares the B77/PR99 platform and contains <span class="voltage-warning">RIFA "exploding" paper capacitors</span> that WILL fail catastrophically with smoke and fire. <strong>Never apply mains power to an unrestored PR77 without first replacing all RIFA capacitors.</strong> Also contains Philips "blue" electrolytics that leak and corrode PCBs.
+<div class="danger">
+<strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Revox PR77 shares the B77/PR99 platform and contains <span class="voltage-warning">RIFA "exploding" paper capacitors</span> that WILL fail catastrophically with smoke and fire. <strong>Never apply mains power to an unrestored PR77 without first replacing all RIFA capacitors.</strong> Also contains Philips "blue" electrolytics that leak and corrode PCBs.
         </div>
-
-        <section id="overview">
-            <h2 id="overview">Overview</h2>
-            
-            
-            <div class="info-box">
-                <strong>📌 Key Features:</strong> Shares B77 transport and mechanics • Three-motor drive • 10.5" reel capacity • Modular PC board construction • XLR connectors (some versions) • Professional cosmetics
+<section id="overview">
+<h2 id="overview">Overview</h2>
+<div class="info-box">
+<strong>📌 Key Features:</strong> Shares B77 transport and mechanics • Three-motor drive • 10.5" reel capacity • Modular PC board construction • XLR connectors (some versions) • Professional cosmetics
             </div>
-            
-            <p>Due to its rarity, documentation is limited. Many PR77 restoration techniques are adapted from the B77 and PR99 service manuals, as the underlying mechanics and electronics are nearly identical.</p>
-        </section>
-
-        <section id="value">
-            <h2 id="current-market-value-2024">Current Market Value (2024)</h2>
-            <p>PR77 values are difficult to establish due to rarity, but generally fall between B77 and PR99 pricing:</p>
-            
-            <div class="model-grid">
-                <div class="model-card">
-                    <strong>Unrestored / Project Unit</strong>
-                    <p>Non-working, unknown condition, rare find</p>
-                    <div class="price-tag">$600-1,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Partially Restored</strong>
-                    <p>Some work done, functional but needs attention</p>
-                    <div class="price-tag">$1,000-1,800</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Fully Restored</strong>
-                    <p>Complete electronic and mechanical overhaul, calibration</p>
-                    <div class="price-tag">$2,000-3,000</div>
-                </div>
-                
-                <div class="model-card">
-                    <strong>Mint / Low Hours</strong>
-                    <p>Exceptional original condition, rare collector piece</p>
-                    <div class="price-tag">$3,000-4,500+</div>
-                </div>
+<p>Due to its rarity, documentation is limited. Many PR77 restoration techniques are adapted from the B77 and PR99 service manuals, as the underlying mechanics and electronics are nearly identical.</p>
+</section>
+<section id="failures">
+<h2 id="common-failure-modes">Common Failure Modes</h2>
+<h3><span class="badge">#1</span> RIFA Capacitor Failure (Mains/Suppression)</h3>
+<p><strong>Symptom:</strong> Smoke, burning smell, loud cracking, blown fuses, tripped breakers. The "knallfrosch" (exploding frog) is infamous in all Revox machines of this era.</p>
+<p><strong>Cause:</strong> Paper dielectric absorbs moisture over decades and shorts catastrophically.</p>
+<p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight before applying power. Located on mains input, relay board, and motor boards. Often accompanied by burnt series resistors.</p>
+<h3><span class="badge">#2</span> Philips "Blue" Electrolytic Capacitors</h3>
+<p><strong>Symptom:</strong> Leaking brown goo, corroded PCB traces, lifted pads, audio distortion, motor control instability.</p>
+<p><strong>Cause:</strong> 1970s Philips capacitors have electrolyte formulation issues and leak destructively.</p>
+<p><strong>Repair:</strong> Replace ALL Philips blue electrolytics on every board. Inspect for trace corrosion underneath.</p>
+<h3><span class="badge">#3</span> Tantalum Capacitor Failure</h3>
+<p><strong>Symptom:</strong> Short circuits, logic glitches, no function, destroyed ICs and transistors.</p>
+<p><strong>Cause:</strong> Tantalum beads fail shorted, taking out surrounding components.</p>
+<p><strong>Repair:</strong> Replace all tantalum capacitors on audio and logic boards with modern electrolytics or higher-voltage tantalums.</p>
+<h3><span class="badge">#4</span> Motherboard Switch Contact Oxidation</h3>
+<p><strong>Symptom:</strong> Intermittent channel operation, controls not working, crackling sounds.</p>
+<p><strong>Cause:</strong> Despite gold-plated contacts, oxidation and corrosion can start on the surface after decades of storage.</p>
+<p><strong>Repair:</strong> Remove motherboard, clean all gold contacts on both motherboard and switch backs with DeOxIt-loaded Q-tip.</p>
+<h3><span class="badge">#5</span> Toggle Switch Breakage</h3>
+<p><strong>Symptom:</strong> Switch shears off, won't stay in position, intermittent operation.</p>
+<p><strong>Cause:</strong> One of the weak points of Revox 10" machines - toggle switches can shear off if too much pressure is put on them, especially sideways.</p>
+<p><strong>Repair:</strong> Replace with new switches or repair using Nagravox repair kits.</p>
+<h3><span class="badge">#6</span> Motor Run Capacitor Failure</h3>
+<p><strong>Symptom:</strong> Motors run hot, won't start, slow speed, capstan instability.</p>
+<p><strong>Cause:</strong> Motor capacitors degrade over time (typical values: capstan 3.5µF, reel motors 6.5+1.5µF).</p>
+<p><strong>Repair:</strong> Replace with new AC-rated motor run capacitors. Need slim 30mm diameter type due to space constraints.</p>
+<h3><span class="badge">#7</span> Press Solenoid Not Engaging</h3>
+<p><strong>Symptom:</strong> When pressing play, the press solenoid does not move, but FF and RW work.</p>
+<p><strong>Cause:</strong> Transport keys may be contaminated, or cable harness faulty.</p>
+<p><strong>Repair:</strong> Test transport keys with multimeter in continuity mode (deck OFF). Check grey wire (common) through each button: pause, rewind, f.fwd, stop, play, rec.</p>
+<h3><span class="badge">#8</span> Reel Motor Bearings</h3>
+<p><strong>Symptom:</strong> Grinding noise, rough rotation, excessive wow/flutter.</p>
+<p><strong>Cause:</strong> Dried lubricant, worn bearings from years of use.</p>
+<p><strong>Repair:</strong> Replace bearings with precision low-noise bearings (SKF 608-2Z or equivalent) including circlips.</p>
+<h3><span class="badge">#9</span> Guide Roller and Tension Arm Damping</h3>
+<p><strong>Symptom:</strong> Sloppy tape path, inconsistent tension, wowing.</p>
+<p><strong>Cause:</strong> Bearings wear, damper fluid dries out over decades.</p>
+<p><strong>Repair:</strong> Replace guide roller bearings, repack tension arm dampers with fresh drag agent (300,000 cSt silicon fluid).</p>
+<h3><span class="badge">#10</span> Brake Lining Wear</h3>
+<p><strong>Symptom:</strong> Tape spillage, uneven wind, machine won't stop properly.</p>
+<p><strong>Cause:</strong> Felt brake bands wear or become contaminated.</p>
+<p><strong>Repair:</strong> Replace brake linings, adjust per service manual.</p>
+<h3><span class="badge">#11</span> Pinch Roller Hardening</h3>
+<p><strong>Symptom:</strong> Slipping, wow/flutter, tape speed issues.</p>
+<p><strong>Cause:</strong> Rubber hardens with age.</p>
+<p><strong>Repair:</strong> Replace with new pinch roller including spacers and shims.</p>
+<h3><span class="badge">#12</span> VU Meter Bulb Failure</h3>
+<p><strong>Symptom:</strong> Meters not illuminated, intermittent lighting.</p>
+<p><strong>Cause:</strong> Original 24V bulbs burn out; oxidation on bulb socket can cause intermittent operation.</p>
+<p><strong>Repair:</strong> Replace with E85 28V bulb for longer life. Rotate bulb 180 degrees if oxidation is suspected.</p>
+</section>
+<section id="motherboard-switch-cleaning">
+<h2 id="critical-motherboard-switch-contact-clea">⚠️ CRITICAL: Motherboard Switch Contact Cleaning</h2>
+<div class="switch-contact-warning">
+<strong>THE #1 FIX FOR INTERMITTENT OPERATION</strong>
+</div>
+<p>One of the most common problems with the PR77 (and B77/PR99) is intermittent channel operation caused by oxidized contacts between the motherboard and the toggle/rotary switches.</p>
+<h3>Cleaning Procedure:</h3>
+<ol>
+<li>Remove back cover (4 screws) and bottom PC board shield (2 screws)</li>
+<li>Pull all audio PC boards - TAKE PICTURES of orientation and order</li>
+<li>Remove motherboard (12 Philips screws) - careful with long speed switch attached to white plastic lever</li>
+<li>Unplug white/black and green/black wire pairs near top of motherboard</li>
+<li>Tilt motherboard down about 90 degrees to access back of board</li>
+<li>Load Q-tip with DeOxIt D5 until almost dripping</li>
+<li>Gently wipe down ALL gold contacts on motherboard</li>
+<li>Clean backs of toggle and rotary switch contacts with same method</li>
+<li>You'll be surprised how much crud comes off even on clean-looking contacts</li>
+<li>Repeat until no more crud comes off</li>
+<li>Reassemble ensuring all plastic switch standoffs fit flush through motherboard</li>
+</ol>
+<div class="warning">
+<strong>🔧 CRITICAL NOTES:</strong>
+<ul>
+<li>The long speed switch has a rectangular slot that fits into a white tab - wiggle carefully to avoid breaking</li>
+<li>Ensure wires route through round cutouts and aren't pinched between motherboard and chassis</li>
+<li>Plastic standoffs MUST be flush with component side of motherboard for proper contact</li>
+<li>Install all 12 screws and ensure they're tight - need solid connection</li>
+</ul>
+</div>
+</section>
+<section id="repair">
+<h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
+<div class="warning">
+<strong>🔧 RESTORATION PHILOSOPHY:</strong> Don't think that just doing a recap is all that's required. The mechanical aspects are also really important and often neglected.
             </div>
-            
-            <p><strong>Note:</strong> The PR77's rarity makes it highly collectible despite being less documented than the B77 or PR99. Condition and originality are critical factors.</p>
-        </section>
-
-        <section id="failures">
-            <h2 id="common-failure-modes">Common Failure Modes</h2>
-            
-            <h3><span class="badge">#1</span> RIFA Capacitor Failure (Mains/Suppression)</h3>
-            <p><strong>Symptom:</strong> Smoke, burning smell, loud cracking, blown fuses, tripped breakers. The "knallfrosch" (exploding frog) is infamous in all Revox machines of this era.</p>
-            <p><strong>Cause:</strong> Paper dielectric absorbs moisture over decades and shorts catastrophically.</p>
-            <p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight before applying power. Located on mains input, relay board, and motor boards. Often accompanied by burnt series resistors.</p>
-            
-            <h3><span class="badge">#2</span> Philips "Blue" Electrolytic Capacitors</h3>
-            <p><strong>Symptom:</strong> Leaking brown goo, corroded PCB traces, lifted pads, audio distortion, motor control instability.</p>
-            <p><strong>Cause:</strong> 1970s Philips capacitors have electrolyte formulation issues and leak destructively.</p>
-            <p><strong>Repair:</strong> Replace ALL Philips blue electrolytics on every board. Inspect for trace corrosion underneath.</p>
-            
-            <h3><span class="badge">#3</span> Tantalum Capacitor Failure</h3>
-            <p><strong>Symptom:</strong> Short circuits, logic glitches, no function, destroyed ICs and transistors.</p>
-            <p><strong>Cause:</strong> Tantalum beads fail shorted, taking out surrounding components.</p>
-            <p><strong>Repair:</strong> Replace all tantalum capacitors on audio and logic boards with modern electrolytics or higher-voltage tantalums.</p>
-            
-            <h3><span class="badge">#4</span> Motherboard Switch Contact Oxidation</h3>
-            <p><strong>Symptom:</strong> Intermittent channel operation, controls not working, crackling sounds.</p>
-            <p><strong>Cause:</strong> Despite gold-plated contacts, oxidation and corrosion can start on the surface after decades of storage.</p>
-            <p><strong>Repair:</strong> Remove motherboard, clean all gold contacts on both motherboard and switch backs with DeOxIt-loaded Q-tip.</p>
-            
-            <h3><span class="badge">#5</span> Toggle Switch Breakage</h3>
-            <p><strong>Symptom:</strong> Switch shears off, won't stay in position, intermittent operation.</p>
-            <p><strong>Cause:</strong> One of the weak points of Revox 10" machines - toggle switches can shear off if too much pressure is put on them, especially sideways.</p>
-            <p><strong>Repair:</strong> Replace with new switches or repair using Nagravox repair kits.</p>
-            
-            <h3><span class="badge">#6</span> Motor Run Capacitor Failure</h3>
-            <p><strong>Symptom:</strong> Motors run hot, won't start, slow speed, capstan instability.</p>
-            <p><strong>Cause:</strong> Motor capacitors degrade over time (typical values: capstan 3.5µF, reel motors 6.5+1.5µF).</p>
-            <p><strong>Repair:</strong> Replace with new AC-rated motor run capacitors. Need slim 30mm diameter type due to space constraints.</p>
-            
-            <h3><span class="badge">#7</span> Press Solenoid Not Engaging</h3>
-            <p><strong>Symptom:</strong> When pressing play, the press solenoid does not move, but FF and RW work.</p>
-            <p><strong>Cause:</strong> Transport keys may be contaminated, or cable harness faulty.</p>
-            <p><strong>Repair:</strong> Test transport keys with multimeter in continuity mode (deck OFF). Check grey wire (common) through each button: pause, rewind, f.fwd, stop, play, rec.</p>
-            
-            <h3><span class="badge">#8</span> Reel Motor Bearings</h3>
-            <p><strong>Symptom:</strong> Grinding noise, rough rotation, excessive wow/flutter.</p>
-            <p><strong>Cause:</strong> Dried lubricant, worn bearings from years of use.</p>
-            <p><strong>Repair:</strong> Replace bearings with precision low-noise bearings (SKF 608-2Z or equivalent) including circlips.</p>
-            
-            <h3><span class="badge">#9</span> Guide Roller and Tension Arm Damping</h3>
-            <p><strong>Symptom:</strong> Sloppy tape path, inconsistent tension, wowing.</p>
-            <p><strong>Cause:</strong> Bearings wear, damper fluid dries out over decades.</p>
-            <p><strong>Repair:</strong> Replace guide roller bearings, repack tension arm dampers with fresh drag agent (300,000 cSt silicon fluid).</p>
-            
-            <h3><span class="badge">#10</span> Brake Lining Wear</h3>
-            <p><strong>Symptom:</strong> Tape spillage, uneven wind, machine won't stop properly.</p>
-            <p><strong>Cause:</strong> Felt brake bands wear or become contaminated.</p>
-            <p><strong>Repair:</strong> Replace brake linings, adjust per service manual.</p>
-            
-            <h3><span class="badge">#11</span> Pinch Roller Hardening</h3>
-            <p><strong>Symptom:</strong> Slipping, wow/flutter, tape speed issues.</p>
-            <p><strong>Cause:</strong> Rubber hardens with age.</p>
-            <p><strong>Repair:</strong> Replace with new pinch roller including spacers and shims.</p>
-            
-            <h3><span class="badge">#12</span> VU Meter Bulb Failure</h3>
-            <p><strong>Symptom:</strong> Meters not illuminated, intermittent lighting.</p>
-            <p><strong>Cause:</strong> Original 24V bulbs burn out; oxidation on bulb socket can cause intermittent operation.</p>
-            <p><strong>Repair:</strong> Replace with E85 28V bulb for longer life. Rotate bulb 180 degrees if oxidation is suspected.</p>
-        </section>
-
-        <section id="motherboard-switch-cleaning">
-            <h2 id="critical-motherboard-switch-contact-clea">⚠️ CRITICAL: Motherboard Switch Contact Cleaning</h2>
-            
-            <div class="switch-contact-warning">
-                <strong>THE #1 FIX FOR INTERMITTENT OPERATION</strong>
-            </div>
-            
-            <p>One of the most common problems with the PR77 (and B77/PR99) is intermittent channel operation caused by oxidized contacts between the motherboard and the toggle/rotary switches.</p>
-            
-            <h3>Cleaning Procedure:</h3>
-            <ol>
-                <li>Remove back cover (4 screws) and bottom PC board shield (2 screws)</li>
-                <li>Pull all audio PC boards - TAKE PICTURES of orientation and order</li>
-                <li>Remove motherboard (12 Philips screws) - careful with long speed switch attached to white plastic lever</li>
-                <li>Unplug white/black and green/black wire pairs near top of motherboard</li>
-                <li>Tilt motherboard down about 90 degrees to access back of board</li>
-                <li>Load Q-tip with DeOxIt D5 until almost dripping</li>
-                <li>Gently wipe down ALL gold contacts on motherboard</li>
-                <li>Clean backs of toggle and rotary switch contacts with same method</li>
-                <li>You'll be surprised how much crud comes off even on clean-looking contacts</li>
-                <li>Repeat until no more crud comes off</li>
-                <li>Reassemble ensuring all plastic switch standoffs fit flush through motherboard</li>
-            </ol>
-            
-            <div class="warning">
-                <strong>🔧 CRITICAL NOTES:</strong>
-                <ul>
-                    <li>The long speed switch has a rectangular slot that fits into a white tab - wiggle carefully to avoid breaking</li>
-                    <li>Ensure wires route through round cutouts and aren't pinched between motherboard and chassis</li>
-                    <li>Plastic standoffs MUST be flush with component side of motherboard for proper contact</li>
-                    <li>Install all 12 screws and ensure they're tight - need solid connection</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="repair">
-            <h2 id="systematic-restoration-process">Systematic Restoration Process</h2>
-            
-            <div class="warning">
-                <strong>🔧 RESTORATION PHILOSOPHY:</strong> Don't think that just doing a recap is all that's required. The mechanical aspects are also really important and often neglected.
-            </div>
-            
-            <div class="checklist">
-                <h3>Complete Restoration Checklist (adapted from B77/PR99):</h3>
-                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors, board positions)</div>
-                <div class="checklist-item">✅ Stage 1 - Replace ALL RIFA capacitors (safety critical)</div>
-                <div class="checklist-item">✅ Stage 2 - Replace motor run capacitors (slim 30mm diameter)</div>
-                <div class="checklist-item">✅ Stage 3 - Replace all Philips blue electrolytic capacitors</div>
-                <div class="checklist-item">✅ Stage 4 - Replace all tantalum capacitors</div>
-                <div class="checklist-item">✅ Stage 5 - Motherboard switch contact cleaning (DeOxIt)</div>
-                <div class="checklist-item">✅ Stage 6 - Reel motor bearings replacement (precision low-noise)</div>
-                <div class="checklist-item">✅ Stage 7 - Capstan motor lubrication (PDP65)</div>
-                <div class="checklist-item">✅ Stage 8 - Guide roller bearings replacement</div>
-                <div class="checklist-item">✅ Stage 9 - Tension arm damper repacking (drag agent)</div>
-                <div class="checklist-item">✅ Stage 10 - Brake linings replacement</div>
-                <div class="checklist-item">✅ Stage 11 - Pinch roller replacement with spacers/shim</div>
-                <div class="checklist-item">✅ Stage 12 - General lubrication of levers, shafts, bushes</div>
-                <div class="checklist-item">✅ Stage 13 - Reel table height shims adjustment</div>
-                <div class="checklist-item">✅ Stage 14 - VU meter bulb replacement (E85 28V)</div>
-                <div class="checklist-item">✅ Stage 15 - Full calibration with test tape</div>
-            </div>
-        </section>
-
-        <section id="capacitors">
-            <h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
-            
-            <div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Location</th>
-                    <th>Value</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>RIFA Suppression Caps</td>
-                    <td>Mains input, relay board</td>
-                    <td>0.1µF, 0.47µF 250VAC</td>
-                    <td>Replace with X2 class safety caps</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔋 MOTOR RUN CAPACITORS (AC RATED)</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Component</th>
-                    <th>Value</th>
-                    <th>Replacement Notes</th>
-                </tr>
-                <tr>
-                    <td>Capstan Motor Capacitor</td>
-                    <td>3.5µF 250VAC</td>
-                    <td>Motor run capacitor, slim 30mm diameter</td>
-                </tr>
-                <tr>
-                    <td>Reel Motor Dual Capacitor</td>
-                    <td>6.5µF + 1.5µF 250VAC</td>
-                    <td>Special 3-terminal dual cap</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔵 PHILIPS "BLUE" CAPACITORS - REPLACE ALL</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Common Values</th>
-                    <th>Location</th>
-                    <th>Modern Replacement</th>
-                </tr>
-                <tr>
-                    <td>47µF, 100µF, 220µF, 470µF</td>
-                    <td>Audio boards, PSU</td>
-                    <td>Nichicon FG, Panasonic FR</td>
-                </tr>
-                <tr>
-                    <td>1000µF, 2200µF</td>
-                    <td>Power supply</td>
-                    <td>Panasonic FR, Nichicon PW</td>
-                </tr>
-                <tr>
-                    <td>10µF, 22µF</td>
-                    <td>Audio coupling</td>
-                    <td>Nichicon FG, Elna Silmic II</td>
-                </tr>
-            </table></div>
-            
-            <div class="component-category">🔴 TANTALUM CAPACITORS</div>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Board</th>
-                    <th>Values</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>Audio Boards</td>
-                    <td>1µF-10µF 16V/25V</td>
-                    <td>Replace with 35V tantalums or film (WIMA MKS2)</td>
-                </tr>
-                <tr>
-                    <td>Logic/Control Boards</td>
-                    <td>4.7µF, 10µF</td>
-                    <td>Replace with 35V tantalums</td>
-                </tr>
-            </table></div>
-        </section>
-
-        <section id="mechanical">
-            <h2 id="mechanical-overhaul-guide">Mechanical Overhaul Guide</h2>
-            
-            <h3>Reel Motor Bearings:</h3>
-            <ul>
-                <li>Replace with 4x precision low-noise bearings (SKF 608-2Z or equivalent)</li>
-                <li>Includes circlips for proper retention</li>
-                <li>Critical for quiet operation and low wow/flutter</li>
-            </ul>
-            
-            <h3>Capstan Motor Lubrication:</h3>
-            <ul>
-                <li>Use special Klueber PDP65 capstan motor lubricant</li>
-                <li>Essential for proper servo lock and speed stability</li>
-            </ul>
-            
-            <h3>Guide Roller Overhaul:</h3>
-            <ul>
-                <li>Tape guide overhaul kit with stainless steel roller bearings</li>
-                <li>Includes many shims for proper alignment</li>
-            </ul>
-            
-            <h3>Tension Arm Damper Service:</h3>
-            <ul>
-                <li>Special damper repacking lubricant / drag agent (300,000 cSt)</li>
-                <li>Clean old dried fluid completely before repacking</li>
-            </ul>
-            
-            <h3>Brake Service:</h3>
-            <ul>
-                <li>Replace brake linings (felt material)</li>
-                <li>Full brake overhaul option includes brake bands and associated fittings</li>
-                <li>Adjust for proper tape tension per service manual</li>
-            </ul>
-            
-            <h3>Pinch Roller Replacement:</h3>
-            <ul>
-                <li>New pinch roller including spacers and shims</li>
-                <li>Shims for pinch roller arm height adjustment</li>
-            </ul>
-            
-            <h3>General Lubrication:</h3>
-            <ul>
-                <li>General lubricant for levers, shafts and bushes</li>
-                <li>Counter belts as applicable</li>
-            </ul>
-        </section>
-
-        <section id="troubleshooting">
-            <h2 id="complete-troubleshooting-guide">Complete Troubleshooting Guide</h2>
-            
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Symptom</th>
-                    <th>Likely Cause</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>Intermittent channel operation, crackling</td>
-                    <td>Oxidized motherboard switch contacts</td>
-                    <td>Remove motherboard, clean all gold contacts with DeOxIt</td>
-                </tr>
-                <tr>
-                    <td>Play solenoid doesn't move, FF/RW work</td>
-                    <td>Transport key contamination, faulty cable harness</td>
-                    <td>Test transport keys with multimeter continuity (deck OFF)</td>
-                </tr>
-                <tr>
-                    <td>No power, blown fuse</td>
-                    <td>RIFA capacitor shorted</td>
-                    <td>Replace all RIFA caps, check series resistors</td>
-                </tr>
-                <tr>
-                    <td>Motors run hot, won't start</td>
-                    <td>Motor run capacitors failing</td>
-                    <td>Replace with AC-rated motor run caps</td>
-                </tr>
-                <tr>
-                    <td>Grinding noise from motors</td>
-                    <td>Worn reel motor bearings</td>
-                    <td>Replace bearings with precision low-noise type</td>
-                </tr>
-                <tr>
-                    <td>Sloppy tape path, inconsistent tension</td>
-                    <td>Worn guide roller bearings, dried tension dampers</td>
-                    <td>Replace guide roller bearings, repack dampers with fresh drag agent</td>
-                </tr>
-                <tr>
-                    <td>Tape spills, won't stop properly</td>
-                    <td>Worn brake linings</td>
-                    <td>Replace brake linings, adjust</td>
-                </tr>
-                <tr>
-                    <td>Wow/flutter, slipping</td>
-                    <td>Hardened pinch roller</td>
-                    <td>Replace pinch roller with new including spacers</td>
-                </tr>
-                <tr>
-                    <td>Meters not lit, intermittent</td>
-                    <td>Burnt bulb, oxidized socket</td>
-                    <td>Replace with E85 28V bulb, rotate 180° if oxidation</td>
-                </tr>
-                <tr>
-                    <td>Toggle switch sheared off</td>
-                    <td>Physical damage, weak point</td>
-                    <td>Replace switch or use Nagravox repair kit</td>
-                </tr>
-                <tr>
-                    <td>Distorted audio</td>
-                    <td>Bad electrolytics, tantalums</td>
-                    <td>Replace all Philips blue and tantalum caps</td>
-                </tr>
-            </table></div>
-        </section>
-
-        <section id="transport-keys">
-            <h2 id="transport-key-testing-procedure">Transport Key Testing Procedure</h2>
-            
-            <p>If your PR77's play solenoid doesn't engage but FF/RW work, test the transport keys with a multimeter:</p>
-            
-            <h3>Continuity Test (Deck OFF):</h3>
-            <ol>
-                <li>Locate transport key connector on tape drive PCB (left side from behind)</li>
-                <li>Contacts available from top of PCB</li>
-                <li>Place one lead on first contact (grey wire - common +24V)</li>
-                <li>Second lead on each contact in order:</li>
-                <ul>
-                    <li>Second contact: pause</li>
-                    <li>Third: rewind</li>
-                    <li>Fourth: f.fwd</li>
-                    <li>Fifth: stop</li>
-                    <li>Sixth: play</li>
-                    <li>Seventh: rec (press play simultaneously)</li>
-                </ul>
-                <li>Should read continuity when button pressed</li>
-                <li>If no continuity, problem is switches or wire harness</li>
-            </ol>
-        </section>
-
-        <section id="kits">
-            <h2 id="restoration-kits-resources">Restoration Kits & Resources</h2>
-            
-            <h3>Nagravox "Full Mechanical Overhaul Kit":</h3>
-            <div class="kit-reference">
-                <div class="kit-card">
-                    <strong>Reel Motor Bearings</strong>
-                    <p>4x precision low-noise bearings including circlips</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>Capstan Lubricant</strong>
-                    <p>Special Klueber PDP65 capstan motor lubricant</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>Tape Guide Kit</strong>
-                    <p>Stainless steel roller bearings and many shims</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>Damper Lubricant</strong>
-                    <p>Special repacking lubricant / drag agent</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>Brake Linings</strong>
-                    <p>Pair of brake linings (full brake option available)</p>
-                </div>
-                
-                <div class="kit-card">
-                    <strong>Pinch Roller</strong>
-                    <p>New pinch roller including spacers and shims</p>
-                </div>
-            </div>
-            
-            <p><strong>Kit Price:</strong> $481 AUD Overseas / $529 AUD Australia</p>
-            <p>Includes detailed service sheet guide and full tech support</p>
-            
-            <h3>Parts Sources:</h3>
-            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
-                <tr>
-                    <th>Supplier</th>
-                    <th>Specialty</th>
-                </tr>
-                <tr>
-                    <td>Nagravox</td>
-                    <td>Mechanical kits, toggle switch repair kits, full restoration parts</td>
-                </tr>
-                <tr>
-                    <td>Mouser / DigiKey</td>
-                    <td>Capacitors, ICs, diodes, general parts</td>
-                </tr>
-                <tr>
-                    <td>Reel-to-Reel Tech</td>
-                    <td>Service articles, technical guidance</td>
-                </tr>
-                <tr>
-                    <td>JRF Magnetics</td>
-                    <td>Head relapping, replacement</td>
-                </tr>
-            </table></div>
-            
-            <h3>Online Resources:</h3>
-            <ul>
-                <li><strong>Tapeheads.net</strong> - B77/PR99 forum, search for PR77 threads</li>
-                <li><strong>Reel-to-Reel Tech</strong> - Detailed B77/PR99 restoration articles</li>
-                <li><strong>HiFi Engine</strong> - Service manuals (use B77/PR99 manuals as reference)</li>
-                <li><strong>Revox Forum (German)</strong> - Technical deep dives</li>
-            </ul>
-        </section>
-
-        <section id="common-mistakes">
-            <h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
-            
-            <div class="danger">
-                <ul>
-                    <li><strong>❌ Powering up without replacing RIFA caps:</strong> Explosive failure, smoke, fire</li>
-                    <li><strong>❌ Skipping mechanical restoration:</strong> Recap alone isn't enough - bearings, dampers, brakes need attention</li>
-                    <li><strong>❌ Breaking the speed switch:</strong> When removing motherboard, the long speed switch sticks to white lever - wiggle carefully</li>
-                    <li><strong>❌ Pinching wires:</strong> Easy to pinch wires between motherboard and chassis during reassembly</li>
-                    <li><strong>❌ Improper motherboard seating:</strong> Plastic standoffs MUST be flush with motherboard for proper contact</li>
-                    <li><strong>❌ Forgetting ground wire orientation:</strong> Ground wire must be routed correctly or front cover won't fit</li>
-                    <li><strong>❌ Not documenting disassembly:</strong> Take pictures of board order and connector positions</li>
-                    <li><strong>❌ Using wrong bulb:</strong> VU meter bulb is 24V, replace with E85 28V for longer life</li>
-                </ul>
-            </div>
-        </section>
-
-        
-            <p><strong>Revox PR77</strong> • Compiled from Tapeheads.net, Reel-to-Reel Tech, Nagravox, and service manual references • Last Updated: 2024</p>
-            <p>Restoration requires intermediate to advanced technical skill. The PR77 shares B77/PR99 mechanics and electronics - use those service manuals as primary reference. Take your time, document everything, and don't rush.</p>
-            <p>🙏 Special thanks to the global Revox community for sharing knowledge across all B77/PR99 variants.</p>
-        
-    </div></article><section class="rr-card"><h2 class="rr-h">More Revox models we service</h2><div class="rr-rel"><a href="/reel-to-reel/revox/revox-a700">Revox A700</a><a href="/reel-to-reel/revox/revox-a77">Revox A77</a><a href="/reel-to-reel/revox/revox-b225">Revox B225</a><a href="/reel-to-reel/revox/revox-b226">Revox B226</a><a href="/reel-to-reel/revox/revox-b710">Revox B710</a><a href="/reel-to-reel/revox/revox-b760">Revox B760</a><a href="/reel-to-reel/revox/revox-b77">Revox B77</a><a href="/reel-to-reel/revox/revox-c270">Revox C270</a><a href="/reel-to-reel/revox/revox-f36">Revox F36</a><a href="/reel-to-reel/revox/revox-g36">Revox G36</a><a href="/reel-to-reel/revox/revox-pr99">Revox PR99</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Revox PR77?</div><div>Yes. Tek Media Group repairs and restores the Revox PR77 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Revox PR77 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
+<div class="checklist">
+<h3>Complete Restoration Checklist (adapted from B77/PR99):</h3>
+<div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors, board positions)</div>
+<div class="checklist-item">✅ Stage 1 - Replace ALL RIFA capacitors (safety critical)</div>
+<div class="checklist-item">✅ Stage 2 - Replace motor run capacitors (slim 30mm diameter)</div>
+<div class="checklist-item">✅ Stage 3 - Replace all Philips blue electrolytic capacitors</div>
+<div class="checklist-item">✅ Stage 4 - Replace all tantalum capacitors</div>
+<div class="checklist-item">✅ Stage 5 - Motherboard switch contact cleaning (DeOxIt)</div>
+<div class="checklist-item">✅ Stage 6 - Reel motor bearings replacement (precision low-noise)</div>
+<div class="checklist-item">✅ Stage 7 - Capstan motor lubrication (PDP65)</div>
+<div class="checklist-item">✅ Stage 8 - Guide roller bearings replacement</div>
+<div class="checklist-item">✅ Stage 9 - Tension arm damper repacking (drag agent)</div>
+<div class="checklist-item">✅ Stage 10 - Brake linings replacement</div>
+<div class="checklist-item">✅ Stage 11 - Pinch roller replacement with spacers/shim</div>
+<div class="checklist-item">✅ Stage 12 - General lubrication of levers, shafts, bushes</div>
+<div class="checklist-item">✅ Stage 13 - Reel table height shims adjustment</div>
+<div class="checklist-item">✅ Stage 14 - VU meter bulb replacement (E85 28V)</div>
+<div class="checklist-item">✅ Stage 15 - Full calibration with test tape</div>
+</div>
+</section>
+<section id="capacitors">
+<h2 id="complete-capacitor-replacement-guide">Complete Capacitor Replacement Guide</h2>
+<div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Location</th>
+<th>Value</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>RIFA Suppression Caps</td>
+<td>Mains input, relay board</td>
+<td>0.1µF, 0.47µF 250VAC</td>
+<td>Replace with X2 class safety caps</td>
+</tr>
+</table></div>
+<div class="component-category">🔋 MOTOR RUN CAPACITORS (AC RATED)</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Component</th>
+<th>Value</th>
+<th>Replacement Notes</th>
+</tr>
+<tr>
+<td>Capstan Motor Capacitor</td>
+<td>3.5µF 250VAC</td>
+<td>Motor run capacitor, slim 30mm diameter</td>
+</tr>
+<tr>
+<td>Reel Motor Dual Capacitor</td>
+<td>6.5µF + 1.5µF 250VAC</td>
+<td>Special 3-terminal dual cap</td>
+</tr>
+</table></div>
+<div class="component-category">🔵 PHILIPS "BLUE" CAPACITORS - REPLACE ALL</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Common Values</th>
+<th>Location</th>
+<th>Modern Replacement</th>
+</tr>
+<tr>
+<td>47µF, 100µF, 220µF, 470µF</td>
+<td>Audio boards, PSU</td>
+<td>Nichicon FG, Panasonic FR</td>
+</tr>
+<tr>
+<td>1000µF, 2200µF</td>
+<td>Power supply</td>
+<td>Panasonic FR, Nichicon PW</td>
+</tr>
+<tr>
+<td>10µF, 22µF</td>
+<td>Audio coupling</td>
+<td>Nichicon FG, Elna Silmic II</td>
+</tr>
+</table></div>
+<div class="component-category">🔴 TANTALUM CAPACITORS</div>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Board</th>
+<th>Values</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>Audio Boards</td>
+<td>1µF-10µF 16V/25V</td>
+<td>Replace with 35V tantalums or film (WIMA MKS2)</td>
+</tr>
+<tr>
+<td>Logic/Control Boards</td>
+<td>4.7µF, 10µF</td>
+<td>Replace with 35V tantalums</td>
+</tr>
+</table></div>
+</section>
+<section id="mechanical">
+<h2 id="mechanical-overhaul-guide">Mechanical Overhaul Guide</h2>
+<h3>Reel Motor Bearings:</h3>
+<ul>
+<li>Replace with 4x precision low-noise bearings (SKF 608-2Z or equivalent)</li>
+<li>Includes circlips for proper retention</li>
+<li>Critical for quiet operation and low wow/flutter</li>
+</ul>
+<h3>Capstan Motor Lubrication:</h3>
+<ul>
+<li>Use special Klueber PDP65 capstan motor lubricant</li>
+<li>Essential for proper servo lock and speed stability</li>
+</ul>
+<h3>Guide Roller Overhaul:</h3>
+<ul>
+<li>Tape guide overhaul kit with stainless steel roller bearings</li>
+<li>Includes many shims for proper alignment</li>
+</ul>
+<h3>Tension Arm Damper Service:</h3>
+<ul>
+<li>Special damper repacking lubricant / drag agent (300,000 cSt)</li>
+<li>Clean old dried fluid completely before repacking</li>
+</ul>
+<h3>Brake Service:</h3>
+<ul>
+<li>Replace brake linings (felt material)</li>
+<li>Full brake overhaul option includes brake bands and associated fittings</li>
+<li>Adjust for proper tape tension per service manual</li>
+</ul>
+<h3>Pinch Roller Replacement:</h3>
+<ul>
+<li>New pinch roller including spacers and shims</li>
+<li>Shims for pinch roller arm height adjustment</li>
+</ul>
+<h3>General Lubrication:</h3>
+<ul>
+<li>General lubricant for levers, shafts and bushes</li>
+<li>Counter belts as applicable</li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2 id="complete-troubleshooting-guide">Complete Troubleshooting Guide</h2>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>Intermittent channel operation, crackling</td>
+<td>Oxidized motherboard switch contacts</td>
+<td>Remove motherboard, clean all gold contacts with DeOxIt</td>
+</tr>
+<tr>
+<td>Play solenoid doesn't move, FF/RW work</td>
+<td>Transport key contamination, faulty cable harness</td>
+<td>Test transport keys with multimeter continuity (deck OFF)</td>
+</tr>
+<tr>
+<td>No power, blown fuse</td>
+<td>RIFA capacitor shorted</td>
+<td>Replace all RIFA caps, check series resistors</td>
+</tr>
+<tr>
+<td>Motors run hot, won't start</td>
+<td>Motor run capacitors failing</td>
+<td>Replace with AC-rated motor run caps</td>
+</tr>
+<tr>
+<td>Grinding noise from motors</td>
+<td>Worn reel motor bearings</td>
+<td>Replace bearings with precision low-noise type</td>
+</tr>
+<tr>
+<td>Sloppy tape path, inconsistent tension</td>
+<td>Worn guide roller bearings, dried tension dampers</td>
+<td>Replace guide roller bearings, repack dampers with fresh drag agent</td>
+</tr>
+<tr>
+<td>Tape spills, won't stop properly</td>
+<td>Worn brake linings</td>
+<td>Replace brake linings, adjust</td>
+</tr>
+<tr>
+<td>Wow/flutter, slipping</td>
+<td>Hardened pinch roller</td>
+<td>Replace pinch roller with new including spacers</td>
+</tr>
+<tr>
+<td>Meters not lit, intermittent</td>
+<td>Burnt bulb, oxidized socket</td>
+<td>Replace with E85 28V bulb, rotate 180° if oxidation</td>
+</tr>
+<tr>
+<td>Toggle switch sheared off</td>
+<td>Physical damage, weak point</td>
+<td>Replace switch or use Nagravox repair kit</td>
+</tr>
+<tr>
+<td>Distorted audio</td>
+<td>Bad electrolytics, tantalums</td>
+<td>Replace all Philips blue and tantalum caps</td>
+</tr>
+</table></div>
+</section>
+<section id="transport-keys">
+<h2 id="transport-key-testing-procedure">Transport Key Testing Procedure</h2>
+<p>If your PR77's play solenoid doesn't engage but FF/RW work, test the transport keys with a multimeter:</p>
+<h3>Continuity Test (Deck OFF):</h3>
+<ol>
+<li>Locate transport key connector on tape drive PCB (left side from behind)</li>
+<li>Contacts available from top of PCB</li>
+<li>Place one lead on first contact (grey wire - common +24V)</li>
+<li>Second lead on each contact in order:</li>
+<ul>
+<li>Second contact: pause</li>
+<li>Third: rewind</li>
+<li>Fourth: f.fwd</li>
+<li>Fifth: stop</li>
+<li>Sixth: play</li>
+<li>Seventh: rec (press play simultaneously)</li>
+</ul>
+<li>Should read continuity when button pressed</li>
+<li>If no continuity, problem is switches or wire harness</li>
+</ol>
+</section>
+<section id="kits">
+<h2 id="restoration-kits-resources">Restoration Kits &amp; Resources</h2>
+<h3>Nagravox "Full Mechanical Overhaul Kit":</h3>
+<div class="kit-reference">
+<div class="kit-card">
+<strong>Reel Motor Bearings</strong>
+<p>4x precision low-noise bearings including circlips</p>
+</div>
+<div class="kit-card">
+<strong>Capstan Lubricant</strong>
+<p>Special Klueber PDP65 capstan motor lubricant</p>
+</div>
+<div class="kit-card">
+<strong>Tape Guide Kit</strong>
+<p>Stainless steel roller bearings and many shims</p>
+</div>
+<div class="kit-card">
+<strong>Damper Lubricant</strong>
+<p>Special repacking lubricant / drag agent</p>
+</div>
+<div class="kit-card">
+<strong>Brake Linings</strong>
+<p>Pair of brake linings (full brake option available)</p>
+</div>
+<div class="kit-card">
+<strong>Pinch Roller</strong>
+<p>New pinch roller including spacers and shims</p>
+</div>
+</div>
+<p>Includes detailed service sheet guide and full tech support</p>
+<h3>Parts Sources:</h3>
+<div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+<tr>
+<th>Supplier</th>
+<th>Specialty</th>
+</tr>
+<tr>
+<td>Nagravox</td>
+<td>Mechanical kits, toggle switch repair kits, full restoration parts</td>
+</tr>
+<tr>
+<td>Mouser / DigiKey</td>
+<td>Capacitors, ICs, diodes, general parts</td>
+</tr>
+<tr>
+<td>Reel-to-Reel Tech</td>
+<td>Service articles, technical guidance</td>
+</tr>
+<tr>
+<td>JRF Magnetics</td>
+<td>Head relapping, replacement</td>
+</tr>
+</table></div>
+<h3>Online Resources:</h3>
+<ul>
+<li><strong>Tapeheads.net</strong> - B77/PR99 forum, search for PR77 threads</li>
+<li><strong>Reel-to-Reel Tech</strong> - Detailed B77/PR99 restoration articles</li>
+<li><strong>HiFi Engine</strong> - Service manuals (use B77/PR99 manuals as reference)</li>
+<li><strong>Revox Forum (German)</strong> - Technical deep dives</li>
+</ul>
+</section>
+<section id="common-mistakes">
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<div class="danger">
+<ul>
+<li><strong>❌ Powering up without replacing RIFA caps:</strong> Explosive failure, smoke, fire</li>
+<li><strong>❌ Skipping mechanical restoration:</strong> Recap alone isn't enough - bearings, dampers, brakes need attention</li>
+<li><strong>❌ Breaking the speed switch:</strong> When removing motherboard, the long speed switch sticks to white lever - wiggle carefully</li>
+<li><strong>❌ Pinching wires:</strong> Easy to pinch wires between motherboard and chassis during reassembly</li>
+<li><strong>❌ Improper motherboard seating:</strong> Plastic standoffs MUST be flush with motherboard for proper contact</li>
+<li><strong>❌ Forgetting ground wire orientation:</strong> Ground wire must be routed correctly or front cover won't fit</li>
+<li><strong>❌ Not documenting disassembly:</strong> Take pictures of board order and connector positions</li>
+<li><strong>❌ Using wrong bulb:</strong> VU meter bulb is 24V, replace with E85 28V for longer life</li>
+</ul>
+</div>
+</section>
+<p><strong>Revox PR77</strong> • Compiled from Tapeheads.net, Reel-to-Reel Tech, Nagravox, and service manual references • Last Updated: 2024</p>
+<p>Restoration requires intermediate to advanced technical skill. The PR77 shares B77/PR99 mechanics and electronics - use those service manuals as primary reference. Take your time, document everything, and don't rush.</p>
+<p>🙏 Special thanks to the global Revox community for sharing knowledge across all B77/PR99 variants.</p>
+</div></article><section class="rr-card"><h2 class="rr-h">More Revox models we service</h2><div class="rr-rel"><a href="/reel-to-reel/revox/revox-a700">Revox A700</a><a href="/reel-to-reel/revox/revox-a77">Revox A77</a><a href="/reel-to-reel/revox/revox-b225">Revox B225</a><a href="/reel-to-reel/revox/revox-b226">Revox B226</a><a href="/reel-to-reel/revox/revox-b710">Revox B710</a><a href="/reel-to-reel/revox/revox-b760">Revox B760</a><a href="/reel-to-reel/revox/revox-b77">Revox B77</a><a href="/reel-to-reel/revox/revox-c270">Revox C270</a><a href="/reel-to-reel/revox/revox-f36">Revox F36</a><a href="/reel-to-reel/revox/revox-g36">Revox G36</a><a href="/reel-to-reel/revox/revox-pr99">Revox PR99</a></div></section><section class="rr-card"><h2 class="rr-h">Common questions</h2><div class="faq-item"><div class="faq-question">Does Tek Media Group repair the Revox PR77?</div><div>Yes. Tek Media Group repairs and restores the Revox PR77 at 711 South Victory Blvd, Burbank, CA, and accepts units shipped from anywhere in the United States.</div></div><div class="faq-item"><div class="faq-question">How do I start a repair?</div><div>Start a service ticket online or call (818) 244-4440. Weekend and after-hours visits are by appointment.</div></div><div class="faq-item"><div class="faq-question">What work does a restoration include?</div><div>Typical work on these machines includes capacitor replacement (recapping), belt, roller and bearing service, mechanical overhaul, head alignment and electronic calibration, depending on what the machine needs.</div></div></section><section class="rr-card rr-cta"><h2>Need your Revox PR77 repaired?</h2><p>Send it in or bring it by appointment. Tell us what it is doing and we will take it from there.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div><p class="rr-nap">Tek Media Group · 711 South Victory Blvd, Burbank, CA 91502 · <a href="tel:+18182444440">(818) 244-4440</a></p></section></main></div>
 {% endblock %}
