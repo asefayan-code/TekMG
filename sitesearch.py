@@ -10,6 +10,7 @@ import threading
 from flask import render_template
 
 from lensdata import BRANDS
+from flowcharts import flow_text, lens_flow
 from modelinfo import lens_info, monitor_info
 from monitordata import PROBLEMS, SONY_MONITORS
 
@@ -86,7 +87,7 @@ def _build(pages):
             docs.append(_doc(
                 url + "/" + m["slug"], m["name"] + " lens repair", "Lens model",
                 b["name"] + " broadcast lens. Repair, " + (info["title"] if info else "service") + ".",
-                b["name"] + " box ENG studio broadcast lens repair " + _info_text(info),
+                b["name"] + " box ENG studio broadcast lens repair " + _info_text(info) + " " + flow_text(lens_flow(slug, m)),
                 aliases=_aliases(m["name"], b["name"]),
             ))
     for m in SONY_MONITORS:

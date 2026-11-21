@@ -4,6 +4,7 @@ import os
 from lensdata import BRANDS, CANON_MODELS, FUJINON_MODELS
 from monitordata import PROBLEMS, SERVICES, SONY_BY_SLUG, SONY_MONITORS
 from modelinfo import LENS_FACTS, LENS_FACTS_SOURCE, lens_info, monitor_info
+from flowcharts import lens_flow
 from sitesearch import search as site_search
 from flask import Flask, Response, abort, jsonify, redirect, render_template, request, send_from_directory
 
@@ -51,6 +52,7 @@ def lens_model(brand, slug):
     return render_template(
         "lens-model.html", b=b, m=model, prev_m=prev_m, next_m=next_m,
         info=lens_info(b["slug"], model), facts=LENS_FACTS.get(model["slug"]), facts_source=LENS_FACTS_SOURCE,
+        flow=lens_flow(b["slug"], model),
     )
 
 
@@ -164,7 +166,7 @@ def llms():
         "## Services\n"
         "- [Projector repair](https://tekmg.com/projector-repair): LCD, DLP, LED and 4K projectors; Epson warranty service provider only\n"
         "- [Professional box, ENG and studio lens repair](https://tekmg.com/lens-repair): Box, ENG, EFP, studio and cinema lenses from Canon, Fujinon, Sony, Zeiss and others; clean room service; free estimates; 90-day warranty\n"
-        "- [Fujinon box and studio lens repair, all models](https://tekmg.com/lens-repair/fujinon): one page per Fujinon model with the error codes and status signals from Fujinon's manuals; free estimates; 90-day warranty\n"
+        "- [Fujinon box and studio lens repair, all models](https://tekmg.com/lens-repair/fujinon): one page per Fujinon model with a troubleshooting flowchart and the error codes and status signals from Fujinon's manuals; free estimates; 90-day warranty\n"
         "- [Canon box and studio lens repair, all models](https://tekmg.com/lens-repair/canon): one page per Canon model with the error messages from Canon's manuals, such as Initialize Error; free estimates; 90-day warranty\n"
         "- [Professional and medical monitor repair](https://tekmg.com/monitor-repair): Sony PVM, BVM and LMD, Panasonic, JVC, Eizo, NEC and Barco; one page per Sony model with its warning lights and error signals from Sony's manuals; free estimates; 90-day warranty\n"
         "- [Professional camera and deck repair](https://tekmg.com/camera-repair)\n\n"

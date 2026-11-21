@@ -17,6 +17,29 @@
 .mi-item h3{margin:0 0 6px;font-size:1.05rem;color:#1c2733;line-height:1.35}
 .mi-item p{margin:0 0 4px}
 .mi-note,.mi-src{font-size:.93rem;color:#3b4754}
+.fc{margin:12px 0 0}
+.fc-start{width:max-content;max-width:100%;margin:0 auto;background:#1c2733;color:#fff;font-weight:700;border-radius:50px;padding:10px 22px;text-align:center}
+.fc-arrow{text-align:center;color:#0f3d62;font-size:1.4rem;line-height:1;margin:4px 0}
+.fc-tools{text-align:center;margin:0 0 8px}
+.fc-all{background:#fff;color:#0f3d62;border:2px solid #0f3d62;border-radius:50px;padding:8px 18px;min-height:44px;font-weight:700;font-family:inherit;font-size:.95rem;cursor:pointer}
+.fc-all:hover{background:#eef3f8}
+.fc-branch{border:1px solid #b9c6d4;border-radius:12px;margin:8px 0;background:#fff}
+.fc-branch>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;padding:10px 14px;font-weight:700;color:#0f3d62;min-height:48px;line-height:1.3}
+.fc-branch>summary::-webkit-details-marker{display:none}
+.fc-branch>summary::after{content:"+";margin-left:auto;font-size:1.4rem;line-height:1}
+.fc-branch[open]>summary::after{content:"\2212"}
+.fc-branch[open]>summary{border-bottom:1px solid #dde4ec}
+.fc-num{flex:none;display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#0f3d62;color:#fff;font-size:.9rem}
+.fc-steps{list-style:none;margin:0;padding:12px 14px 14px}
+.fc-q{display:flex;gap:10px;align-items:flex-start;background:#fff8e1;border:2px solid #b7791f;border-radius:10px;padding:10px 12px;font-weight:600;color:#1c2733;line-height:1.45}
+.fc-dia{flex:none;width:12px;height:12px;margin-top:5px;background:#b7791f;transform:rotate(45deg)}
+.fc-exit{display:flex;gap:10px;align-items:flex-start;margin:8px 0 0 22px;padding:8px 10px;background:#f5f8fb;border-left:4px solid #0f3d62;border-radius:0 8px 8px 0;line-height:1.5}
+.fc-tag{flex:none;min-width:38px;text-align:center;font-weight:700;font-size:.8rem;border-radius:50px;padding:2px 9px;color:#fff;margin-top:1px}
+.fc-tag-no{background:#b42318}
+.fc-tag-yes{background:#15803d}
+.fc-down{display:flex;align-items:center;gap:8px;margin:8px 0 8px 22px;color:#0f3d62;font-weight:700;font-size:1.2rem;line-height:1}
+.fc-end{background:#fdecea;border:2px solid #b42318;border-radius:14px;padding:10px 16px;font-weight:700;color:#1c2733;text-align:center;line-height:1.5}
+.fc-end a{color:#0f3d62}
 .mi-jump{margin:8px 0 0}
 .mi-jump a{color:#0f3d62;font-weight:600}
 .lm-go{text-align:center;margin:18px 0}
