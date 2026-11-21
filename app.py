@@ -103,6 +103,7 @@ PAGES = {
     "monitor-repair": "monitor-repair.html",
     "reel-to-reel": "reel-to-reel.html",
     "reel-to-reel/studer": "reel-to-reel-studer.html",
+    "reel-to-reel/aiwa": "reel-to-reel-aiwa.html",
     "hifi-audio": "hifi-audio.html",
     "site-index": "site-index.html",
     "bang-olufsen": "bang-olufsen.html",
@@ -133,6 +134,7 @@ REDIRECTS = {
     "bang-and-olufsen": "/bang-olufsen",
     "sitemap": "/site-index",
     "reel-to-reel-models/studer/studer.aspx": "/reel-to-reel/studer",
+    "reel-to-reel-models/aiwa/aiwa.aspx": "/reel-to-reel/aiwa",
     "reel-to-reel/reel-to-reel.aspx": "/reel-to-reel",
     "sitemap.html": "/site-index",
     "reel_to_reel": "/reel-to-reel",
@@ -223,6 +225,7 @@ def llms():
         "- [BeoLab 5 repair](https://tekmg.com/bang-olufsen/beolab-5): BeoLab 5 red protection light, no bass, ICEpower amplifier, acoustic lens and driver repair; free estimates\n"
         "- [Hi-fi audio repair](https://tekmg.com/hifi-audio): McIntosh, Marantz, Mark Levinson, Denon, Luxman, Nakamichi and other high-end and vintage receivers, amplifiers and preamps; free estimates\n"
         "- [Studer reel-to-reel repair](https://tekmg.com/reel-to-reel/studer): Studer J37, A62, C37, A80, A810, A807, A820, A812, A816, A827 and A721 tape machines\n"
+        "- [Aiwa reel-to-reel](https://tekmg.com/reel-to-reel/aiwa): Aiwa TPR-10, X-300/X-500/X-700, TPD-10A and AD-1250U/AD-1650U reel-to-reel recorders\n"
         "- [Reel-to-reel repair](https://tekmg.com/reel-to-reel): vintage and professional reel-to-reel recorders from Studer, Akai, Teac, Tascam, Revox and Ampex; free estimates\n\n"
         "## Company\n"
         "- [Site index](https://tekmg.com/site-index): every page on the site\n"
