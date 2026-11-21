@@ -11,6 +11,8 @@
 {% block content %}
 {% set tick = 'https://techmediagroup.repairshopr.com/check_ins' %}
 <div class="bo">
+{% set crumbs = [('Home','/'),('Bang &amp; Olufsen Service','/bang-olufsen'),('BeoLab &amp; Beovox','/bang-olufsen/beolab-beovox'),('BeoLab 5','/bang-olufsen/beolab-5')] %}
+{% include "_bo_crumbs.html" %}
 
 <section class="bo-hero tv" style="padding:56px 0 50px">
   <div class="bo-wrap">
@@ -72,5 +74,9 @@
   </div>
 </section>
 
+{% set page_url='/bang-olufsen/beolab-5' %}{% set page_name='BeoLab 5 Repair' %}
+{% set faqs = [('Why does my BeoLab 5 show a red light and have no sound?','The red light usually means the amplifier protection has tripped. Causes include an ICEpower amplifier fault, a DSP board fault or a failed driver. We diagnose and repair these.'),('Can you repair the BeoLab 5 acoustic lens?','Yes. We repair or replace the acoustic lens assembly and realign the tweeter.'),('Do you repair BeoLab 5 out of warranty?','Yes, in or out of warranty, with free estimates and nationwide service.')] %}
+{% set faq_ld = [] %}{% for q,a in faqs %}{% set _ = faq_ld.append({'@type':'Question','name':q|striptags|replace('&amp;','&'),'acceptedAnswer':{'@type':'Answer','text':a|striptags|replace('&amp;','&')}}) %}{% endfor %}
+{% include "_bo_faq.html" %}
 </div>
 {% endblock %}

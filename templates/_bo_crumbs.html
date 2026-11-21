@@ -1,0 +1,1 @@
+<nav class="bo-crumbs" aria-label="Breadcrumb"><div class="bo-wrap"><ol>{% for n,u in crumbs %}<li>{% if not loop.last %}<a href="{{ u }}">{{ n }}</a>{% else %}<span aria-current="page">{{ n }}</span>{% endif %}</li>{% endfor %}</ol></div></nav>

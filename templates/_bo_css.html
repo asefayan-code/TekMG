@@ -130,4 +130,30 @@ table.b9-t{width:100%;border-collapse:collapse;background:#fff;border:1px solid 
 .bo-band p{max-width:520px;margin:14px auto 0;color:#c9ccd1}
 .bo-band .bo-btn{border-color:#fff;color:#fff}.bo-band .bo-btn.solid{background:var(--red);border-color:var(--red)}
 .bo-band .bo-btn:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+/*mobile-first*/
+.bo-crumbs{background:#fff;border-bottom:1px solid var(--line);font-size:.85rem}
+.bo-crumbs ol{list-style:none;margin:0;padding:12px 0;display:flex;flex-wrap:wrap;gap:4px 8px}
+.bo-crumbs li+li:before{content:"\203A";margin-right:8px;color:var(--mid)}
+.bo-crumbs a{color:var(--mid);text-decoration:none;padding:6px 0;display:inline-block}
+.bo-crumbs span{color:var(--ink);font-weight:600}
+.bo-faq details{border-bottom:1px solid var(--line)}
+.bo-faq summary{cursor:pointer;padding:18px 28px 18px 0;font-weight:600;list-style:none;position:relative;min-height:44px}
+.bo-faq summary::-webkit-details-marker{display:none}
+.bo-faq summary:after{content:"+";position:absolute;right:4px;top:16px;color:var(--red);font-size:1.4rem;line-height:1}
+.bo-faq details[open] summary:after{content:"\2212"}
+.bo-faq p{margin:0 0 18px;color:var(--mid);line-height:1.65}
+.bo img{max-width:100%;height:auto}
+.bo-big select{font-size:16px;min-height:52px}
+.ms-chips a{display:inline-flex;align-items:center;min-height:44px}
+.bo-btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+.b9-tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:600px){
+ .bo-wrap{padding-left:18px;padding-right:18px}
+ .bo-btns{flex-direction:column;align-items:stretch}
+ .bo-btns .bo-btn{width:100%}
+ .b9-t th,.b9-t td{padding:12px 12px;font-size:.88rem}
+ .b9-t td:first-child{width:42%}
+ .ms-chips{gap:8px}
+}
 </style>

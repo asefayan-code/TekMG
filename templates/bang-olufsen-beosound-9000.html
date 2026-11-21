@@ -39,6 +39,8 @@ table.b9-t{width:100%;border-collapse:collapse;background:#fff;border:1px solid 
 {% block content %}
 {% set tick = 'https://techmediagroup.repairshopr.com/check_ins' %}
 <div class="bo">
+{% set crumbs = [('Home','/'),('Bang &amp; Olufsen Service','/bang-olufsen'),('Beosound 9000','/bang-olufsen/beosound-9000')] %}
+{% include "_bo_crumbs.html" %}
 
 <section class="bo-hero tv" style="padding:56px 0 50px">
   <div class="bo-wrap">
@@ -98,5 +100,9 @@ table.b9-t{width:100%;border-collapse:collapse;background:#fff;border:1px solid 
   </div>
 </section>
 
+{% set page_url='/bang-olufsen/beosound-9000' %}{% set page_name='Beosound 9000 Repair' %}
+{% set faqs = [('Why does my Beosound 9000 say Cleaning required or not read CDs?','Usually the laser, lens or sensors need cleaning or replacement. We service the CD mechanism, sledge, motor and clamp, and run service-mode diagnostics.'),('The glass door or CD sledge is stuck. Can it be fixed?','Yes. Door, sledge and motor faults are common Beosound 9000 repairs. Do not force the mechanism.'),('Do you repair the Beosound 9000 nationwide?','Yes. It is a large part of our repair work, and we handle units shipped from across the US.')] %}
+{% set faq_ld = [] %}{% for q,a in faqs %}{% set _ = faq_ld.append({'@type':'Question','name':q|striptags|replace('&amp;','&'),'acceptedAnswer':{'@type':'Answer','text':a|striptags|replace('&amp;','&')}}) %}{% endfor %}
+{% include "_bo_faq.html" %}
 </div>
 {% endblock %}

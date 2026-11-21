@@ -50,6 +50,8 @@
  ('Beocenter 1400','Beocenter 1500','Beocenter 1600','Beocenter 1800','Beocenter 2600','Beocenter 2800','Beocenter 3300','Beocenter 3500','Beocenter 3600','Beocenter 4600'),
 ] %}
 <div class="bo">
+{% set crumbs = [('Home','/'),('Bang &amp; Olufsen Service','/bang-olufsen'),('Beosound &amp; Beocenter','/bang-olufsen/beosound-beocenter')] %}
+{% include "_bo_crumbs.html" %}
 
 <section class="bo-hero tv">
   <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -118,6 +120,10 @@
   </div>
 </section>
 
+{% set page_url='/bang-olufsen/beosound-beocenter' %}{% set page_name='Beosound and Beocenter Repair' %}
+{% set faqs = [('Which Beosound and Beocenter models do you service?','Beosound 9000, Beosound Century, Ouverture, Overture and many more, plus Beocenter systems from the 1970s to the 2000s. Use the model list on this page.'),('My model is not listed. Can you still repair it?','Probably. An unlisted model does not mean we do not work on it. Start a service request and we will take a look.'),('How do I request service?','Pick your model from the dropdown and you are taken straight to the service request page.')] %}
+{% set faq_ld = [] %}{% for q,a in faqs %}{% set _ = faq_ld.append({'@type':'Question','name':q|striptags|replace('&amp;','&'),'acceptedAnswer':{'@type':'Answer','text':a|striptags|replace('&amp;','&')}}) %}{% endfor %}
+{% include "_bo_faq.html" %}
 </div>
 <script>
 (function(){

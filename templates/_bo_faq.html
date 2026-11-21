@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{{ {"@context":"https://schema.org","@graph":[
+ {"@type":"WebPage","url":"https://tekmg.com"+page_url,"name":page_name,"inLanguage":"en-US","dateModified":"2026-11-21","isPartOf":{"@type":"WebSite","name":"Tek Media Group","url":"https://tekmg.com/"}},
+ {"@type":"FAQPage","mainEntity":faq_ld}
+]}|tojson }}
+</script>
+<section class="bo-sec">
+  <div class="bo-wrap" style="max-width:900px">
+    <div class="bo-head"><div class="bo-eyebrow">Questions</div><h2>Good to <b>know.</b></h2></div>
+    <div class="bo-faq">
+      {% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>
+      {% endfor %}
+    </div>
+    <p class="bo-note">Tek Media Group &middot; 711 South Victory Blvd., Burbank, CA 91502 &middot; (818) 244-4440 &middot; Updated November 21, 2026</p>
+  </div>
+</section>

@@ -22,6 +22,8 @@
  ('Classic Beovox','Beovox 500','Beovox 600','Beovox 901','Beovox 1000','Beovox 1100','Beovox 2500','Beovox 3000','Beovox 4000','Beovox 4500','Beovox 5000','Beovox 5700'),
 ] %}
 <div class="bo">
+{% set crumbs = [('Home','/'),('Bang &amp; Olufsen Service','/bang-olufsen'),('BeoLab &amp; Beovox','/bang-olufsen/beolab-beovox')] %}
+{% include "_bo_crumbs.html" %}
 
 <section class="bo-hero tv">
   <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -117,6 +119,10 @@
   </div>
 </section>
 
+{% set page_url='/bang-olufsen/beolab-beovox' %}{% set page_name='BeoLab and Beovox Speaker Repair' %}
+{% set faqs = [('What is the difference between BeoLab and Beovox?','BeoLab speakers are active, with built-in amplifiers. Beovox speakers are passive and need an external amplifier. We repair both.'),('Why is my BeoLab speaker silent or showing a red light?','A red light usually means the amplifier protection circuit has tripped. Causes include a failed amplifier module, power supply or driver. We diagnose and repair these.'),('Can you replace old foam surrounds?','Yes. Foam surrounds deteriorate over time, especially on speakers over 20 years old. We replace them and recone drivers where needed.'),('My model is not listed. Can you still repair it?','Probably. Start a service request and we will take a look.')] %}
+{% set faq_ld = [] %}{% for q,a in faqs %}{% set _ = faq_ld.append({'@type':'Question','name':q|striptags|replace('&amp;','&'),'acceptedAnswer':{'@type':'Answer','text':a|striptags|replace('&amp;','&')}}) %}{% endfor %}
+{% include "_bo_faq.html" %}
 </div>
 <script>
 (function(){var s=document.getElementById('msModel');if(!s)return;s.addEventListener('change',function(){if(s.value){window.location.href='{{ tick }}';}});})();
