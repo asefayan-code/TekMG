@@ -4,7 +4,8 @@ import os
 from lensdata import BRANDS, CANON_MODELS, FUJINON_MODELS
 from monitordata import PROBLEMS, SERVICES, SONY_BY_SLUG, SONY_MONITORS
 from modelinfo import LENS_FACTS, LENS_FACTS_SOURCE, lens_info, monitor_info
-from flask import Flask, Response, abort, redirect, render_template, send_from_directory
+from sitesearch import search as site_search
+from flask import Flask, Response, abort, jsonify, redirect, render_template, request, send_from_directory
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(BASE, "public")
@@ -115,6 +116,29 @@ def serve(path):
     abort(404)
 
 
+def _query():
+    return " ".join((request.args.get("q") or "").split())[:80]
+
+
+@app.route("/search")
+def search_page():
+    q = _query()
+    results, total, exact = site_search(q, PAGES) if q else ([], 0, None)
+    if exact:
+        # the query names exactly one model: go straight to its page
+        return redirect(exact, code=302)
+    return render_template("search.html", q=q, results=results, total=total)
+
+
+@app.route("/search.json")
+def search_json():
+    q = _query()
+    results, total, _ = site_search(q, PAGES, limit=8) if q else ([], 0, None)
+    resp = jsonify({"q": q, "total": total, "results": [{"title": r["title"], "url": r["url"], "kind": r["kind"]} for r in results]})
+    resp.headers["X-Robots-Tag"] = "noindex"
+    return resp
+
+
 @app.route("/robots.txt")
 def robots():
     return Response("User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: Claude-User\nAllow: /\n\nUser-agent: Claude-SearchBot\nAllow: /\n\nUser-agent: anthropic-ai\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nUser-agent: Applebot-Extended\nAllow: /\n\nSitemap: https://tekmg.com/sitemap.xml\n", mimetype="text/plain")
@@ -148,6 +172,7 @@ def llms():
         "- [About](https://tekmg.com/about)\n"
         "- [Contact](https://tekmg.com/contact)\n"
         "- [Accessibility](https://tekmg.com/accessibility)\n"
+        "- [Site search](https://tekmg.com/search): find a model or service page; JSON results at https://tekmg.com/search.json?q=MODEL\n"
     )
     return Response(txt, mimetype="text/plain")
 

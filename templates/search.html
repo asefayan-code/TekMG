@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}{% if q %}Search results for {{ q }}{% else %}Search{% endif %} | Tek Media Group{% endblock %}
+{% block desc %}Search Tek Media Group for a repair service or an equipment model.{% endblock %}
+{% block canon %}/search{% endblock %}
+{% block robots %}noindex, follow{% endblock %}
+{% block head %}
+{% include "_lens_model_css.html" %}
+<style>
+.sr-form{margin:14px 0}
+.sr-form label{display:block;font-weight:700;color:#0f3d62;margin:0 0 6px}
+.sr-row{display:flex;gap:8px}
+.sr-row input{flex:1;min-width:0;padding:13px 16px;font-size:16px;border:2px solid #8fa3b8;border-radius:50px;font-family:inherit;color:#1c2733}
+.sr-row input:focus{border-color:#0f62ac}
+.sr-row button{display:inline-flex;align-items:center;gap:8px;background:#0f62ac;color:#fff;border:0;border-radius:50px;padding:0 22px;min-height:50px;font-size:1rem;font-weight:700;font-family:inherit;cursor:pointer}
+.sr-row button:hover{background:#0353e9}
+.sr-count{margin:12px 2px;color:#1c2733;font-weight:600;line-height:1.5}
+.sr-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.sr-list a{display:block;background:#fff;border:1px solid #dde4ec;border-radius:10px;padding:12px 14px;text-decoration:none;color:#1c2733}
+.sr-list a:hover{background:#eef3f8;border-color:#0f62ac}
+.sr-title{display:block;font-weight:700;color:#0f3d62;font-size:1.05rem}
+.sr-kind{display:inline-block;font-size:.78rem;font-weight:700;color:#0f3d62;background:#e0eaff;border-radius:50px;padding:2px 10px;margin:5px 0}
+.sr-desc{display:block;color:#3b4754;font-size:.93rem;line-height:1.45}
+</style>
+{% endblock %}
+{% block content %}
+<div class="lm-wrap">
+<div class="lm-hero">
+<h1>Search</h1>
+<p>Find a repair service or your equipment model</p>
+</div>
+
+<form class="sr-form" role="search" action="/search" method="get">
+<label for="srq">Search this site</label>
+<div class="sr-row">
+<input type="search" id="srq" name="q" value="{{ q }}" maxlength="80" placeholder="Model number or service, such as XA99 or projector">
+<button type="submit"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg> Search</button>
+</div>
+</form>
+
+{% if q %}
+{% if results %}
+<p class="sr-count" role="status">{{ total }} result{{ "" if total == 1 else "s" }} for &ldquo;{{ q }}&rdquo;.{% if total > results|length %} Showing the first {{ results|length }}. Add more of the model number to narrow it down.{% endif %}</p>
+<ol class="sr-list">
+{% for r in results %}<li><a href="{{ r.url }}"><span class="sr-title">{{ r.title }}</span><span class="sr-kind">{{ r.kind }}</span>{% if r.desc %}<span class="sr-desc">{{ r.desc }}</span>{% endif %}</a></li>
+{% endfor %}</ol>
+{% else %}
+<p class="sr-count" role="status">No results for &ldquo;{{ q }}&rdquo;.</p>
+<div class="lm-card">
+<h2>Nothing matched</h2>
+<p>Try a shorter model number, such as XA99, HJ22 or PVM-A250, or a service such as lens, projector or monitor.</p>
+<p>Your model may not have its own page yet. Start a service ticket and tell us the model.</p>
+</div>
+<div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket &rarr;</a></div>
+{% endif %}
+{% else %}
+<div class="lm-card">
+<h2>Browse instead</h2>
+<ul>
+<li><a href="/lens-repair">Professional Box, ENG and Studio Lens Repair</a></li>
+<li><a href="/lens-repair/fujinon">All Fujinon lens models</a></li>
+<li><a href="/lens-repair/canon">All Canon lens models</a></li>
+<li><a href="/monitor-repair">Professional Monitor Repair</a></li>
+<li><a href="/projector-repair">Projector Repair</a></li>
+<li><a href="/camera-repair">Professional Camera Repair</a></li>
+</ul>
+</div>
+{% endif %}
+</div>
+{% endblock %}
