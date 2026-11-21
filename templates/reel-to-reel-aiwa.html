@@ -1,67 +1,292 @@
 {% extends "base.html" %}
-{% block title %}Aiwa Reel-to-Reel Collectibles &amp; Professional Models | TEK Media Group{% endblock %}
-{% block desc %}Aiwa reel-to-reel collectibles and professional models: TPR-10, X-300/X-500/X-700, TPD-10A and AD-1250U/AD-1650U. Tek Media Group reel-to-reel repair. (818) 244-4440.{% endblock %}
+{% block title %}Aiwa Reel-to-Reel Repair &amp; Restoration | Vintage Audio Service Los Angeles{% endblock %}
+{% block desc %}Professional Aiwa reel-to-reel tape recorder repair, restoration &amp; capacitor replacement. TPR-10, X-700, X-500, X-300, TPD-10A, AD-1250U, AD-1650U. Tek Media Group, (818) 244-4440.{% endblock %}
 {% block canon %}/reel-to-reel/aiwa{% endblock %}
 {% block head %}
-<script type="application/ld+json">
-{% raw %}{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Aiwa Reel-to-Reel Repair", "serviceType": "Aiwa reel-to-reel tape recorder repair", "provider": {"@type": "LocalBusiness", "name": "Tek Media Group", "url": "https://tekmg.com/", "telephone": "+1-818-244-4440", "address": {"@type": "PostalAddress", "streetAddress": "711 South Victory Blvd", "addressLocality": "Burbank", "addressRegion": "CA", "postalCode": "91502", "addressCountry": "US"}}, "areaServed": "US", "url": "https://tekmg.com/reel-to-reel/aiwa"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tekmg.com/"}, {"@type": "ListItem", "position": 2, "name": "Reel-to-Reel Repair", "item": "https://tekmg.com/reel-to-reel"}, {"@type": "ListItem", "position": 3, "name": "Aiwa", "item": "https://tekmg.com/reel-to-reel/aiwa"}]}]}{% endraw %}
-</script>
-<style>
-.rr-hero{background:linear-gradient(135deg,#0d7ad8,#17a8e3);color:#fff;text-align:center;padding:44px 16px}
-.rr-hero h1{color:#fff;font-size:1.7rem;margin:0 0 14px;font-weight:600}
-.rr-hero p{margin:0;font-size:.95rem}
-.rr-wrap{max-width:1000px;margin:0 auto;padding:20px 16px}
-.rr-crumbs{background:#f4f4f4;padding:10px 14px;font-size:.8rem;color:#555;margin-bottom:20px}
-.rr-crumbs a{color:#1a73c8;text-decoration:none;display:inline-block;padding:8px 0}
-.rr-cols{display:grid;grid-template-columns:1fr;gap:20px}
-.rr-card{background:#fff;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.12);padding:20px}
-.rr-card h2{color:#1478c8;font-size:1.3rem;font-weight:600;margin:0 0 18px;padding-bottom:10px;border-bottom:2px solid #1a9be0}
-.rr-img{width:100%;aspect-ratio:4/3;border-radius:4px;background:#ddd center/cover no-repeat;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
-.rr-card p{margin:0 0 14px;color:#555;line-height:1.7;font-size:.95rem}
-.rr-check{list-style:none;margin:0 0 20px;padding:0}
-.rr-check li{padding:6px 0 6px 28px;position:relative;color:#555;font-size:.95rem}
-.rr-check li:before{content:"\2713";position:absolute;left:4px;color:#1a73c8;font-weight:700}
-.rr-est{background:#f6f8fa;border-radius:6px;padding:20px;text-align:center}
-.rr-est h3{margin:0 0 14px;font-size:1.1rem;font-weight:500;color:#222}
-.rr-est .ph{display:block;font-size:1.5rem;color:#1a73c8;text-decoration:none;margin-bottom:14px;padding:6px}
-.rr-btn{display:inline-flex;align-items:center;min-height:48px;padding:0 28px;border-radius:24px;background:linear-gradient(90deg,#0d7ad8,#17a8e3);color:#fff;text-decoration:none;font-weight:600;box-shadow:0 3px 8px rgba(0,0,0,.2)}
-.rr-brands{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;list-style:none;margin:0;padding:0}
-.rr-brands li{background:#eef0f3;border:1px solid #d9dde2;border-radius:4px;padding:14px 6px;text-align:center;font-weight:600;color:#1a5fa0;font-size:.9rem}
-.rr-card h3.sub{font-size:1rem;font-weight:500;margin:18px 0 12px;color:#222}
-.rr-area{margin:0 0 16px}.rr-area b{display:block;color:#1478c8;font-weight:600}.rr-area span{color:#555;font-size:.9rem}
-.rr-cities{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:10px 0 0;padding:0}
-.rr-cities li{background:#f0f4f8;border-radius:14px;padding:6px 12px;font-size:.85rem;color:#444}
-@media(min-width:800px){.rr-cols{grid-template-columns:1fr 1fr;align-items:start}.rr-hero h1{font-size:2.1rem}.rr-brands{grid-template-columns:repeat(3,1fr)}}
-.ai-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:20px}
-.ai-card{background:#fff;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.12);padding:20px;border-top:4px solid #1a9be0}
-.ai-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
-.ai-head h2{margin:0;color:#1478c8;font-size:1.3rem;font-weight:600}
-.ai-era{background:#eef3f8;border-radius:14px;padding:4px 12px;font-size:.85rem;color:#444}
-.ai-price{display:inline-block;background:#1478c8;color:#fff;border-radius:4px;padding:6px 12px;font-weight:600;margin:6px 0 10px}
-.ai-card ul{margin:0 0 12px;padding-left:20px;color:#555;line-height:1.7;font-size:.95rem}
-.ai-card p{margin:0;color:#555;line-height:1.65;font-size:.9rem;background:#f6f8fa;border-radius:4px;padding:10px 12px}
-.ai-sec{margin-top:30px}.ai-sec h2{color:#1478c8;font-size:1.4rem;margin:0 0 14px}
-.ai-factors{display:grid;grid-template-columns:1fr;gap:12px}
-.ai-factors div{background:#fff;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1);padding:14px 16px}
-.ai-factors b{display:block;color:#1a5fa0;margin-bottom:4px}
-.ai-sum p{color:#555;line-height:1.7;margin:0 0 12px}
-@media(min-width:800px){.ai-grid{grid-template-columns:1fr 1fr}.ai-factors{grid-template-columns:repeat(4,1fr)}}
-</style>
-{% endblock %}
-{% block content %}
-<section class="rr-hero"><h1>Aiwa Most Expensive Reel-to-Reel Recorders</h1><p>Professional &amp; High-Fidelity Models from the Golden Age of Audio</p></section>
-<div class="rr-wrap">
-<div class="rr-crumbs"><a href="/">Home</a> &gt; <a href="/reel-to-reel">Reel To Reel</a> &gt; Aiwa</div>
-<div class="rr-card">
-<p>When discussing the <b>most expensive and collectible Aiwa reel-to-reel recorders</b>, the conversation centers on their <b>professional and high-fidelity machines</b> from the late 1960s and 1970s, before they shifted focus to consumer audio.</p>
-<p style="margin:0">The most prized Aiwa decks are not typically the "most expensive" in absolute terms compared to top Studer or Nagra models, but within the Aiwa lineage and on today's vintage market, they command significant prices due to their rarity, build quality, and performance.</p>
-</div>
-<div class="ai-sec"><h2 style="text-align:center">The Most Valuable Models</h2><div class="ai-grid"><div class="ai-card"><div class="ai-head"><h2>TPR-10 (and TPR-9)</h2><span class="ai-era">Early 1970s</span></div><span class="ai-price">$2,500 - $4,500+</span><ul><li><b>Professional 1/4" recorder</b> built like a tank (over 30 kg / 66 lbs)</li><li><b>Three-motor, solenoid-controlled transport</b> (similar to Revox PR99)</li><li>Designed for <b>broadcast and studio use</b> with exceptional performance</li><li>Renowned for <b>robust, detailed sound quality</b> and reliability</li></ul><p><b>Market Status:</b> Highly collectible. The undisputed Aiwa flagship. In fully restored, excellent condition, a TPR-10 can sell for $2,500 to $4,500+, depending on the market and condition.</p></div><div class="ai-card"><div class="ai-head"><h2>X-300 / X-500 / X-700 Series</h2><span class="ai-era">1968-1972</span></div><span class="ai-price">$1,500 - $3,000+</span><ul><li>Iconic <b>"flying saucer" industrial design</b> masterpieces</li><li>Dramatic angled central pod with transport controls</li><li><b>X-700 is the top model</b> (3 motors, 3 heads, 3 speeds)</li><li>High-end consumer decks with excellent specs and visual appeal</li></ul><p><b>Market Status:</b> Highly sought after by design collectors and audiophiles. A pristine X-700 can fetch $1,500 to $3,000+. The X-300 and X-500 are also valuable ($800-$2,000 range).</p></div><div class="ai-card"><div class="ai-head"><h2>TPD-10A</h2><span class="ai-era">1970s</span></div><span class="ai-price">$1,200 - $2,500</span><ul><li>Professional <b>portable/mobile recorder</b> for field use</li><li>Ruggedized, <b>battery-operable</b> unit</li><li>Professional <b>XLR inputs</b> for news gathering and scientific use</li><li>Known for <b>durability and high performance</b> in the field</li></ul><p><b>Market Status:</b> Less common than the TPR-10. Prices for excellent units range from $1,200 to $2,500. Its professional heritage adds to its cachet.</p></div><div class="ai-card"><div class="ai-head"><h2>AD-1250U / AD-1650U</h2><span class="ai-era">Mid-1970s</span></div><span class="ai-price">$500 - $1,500+</span><ul><li>Unique <b>cassette-style loading</b> (Automatic Threading)</li><li>Technically ambitious <b>"easy-loading" design</b></li><li>Distinct, <b>space-age look</b> and engineering</li><li>Complex mechanism that requires proper maintenance</li></ul><p><b>Market Status:</b> Highly collectible due to rarity and unique mechanism. Condition and working order are critical. Prices vary from $500 for a project unit to over $1,500+ for a fully functional, pristine example.</p></div></div></div>
-<div class="ai-sec"><h2>Key Factors That Drive Value Today</h2><div class="ai-factors"><div><b>Condition &amp; Restoration</b>Working, calibrated, and cosmetically clean units are worth 2-3x more than "as-is" units.</div><div><b>Rarity</b>Models like the X-700 or TPR-10 are not common, especially in Western markets.</div><div><b>Professional Heritage</b>Models with "Pro" features (XLR, robust transport, studio use) command premiums.</div><div><b>Industrial Design</b>The X-Series is a prime example of form <em>and</em> function driving desirability.</div></div></div>
-<div class="ai-sec ai-sum"><h2>Summary</h2>
-<p>The <b>Aiwa TPR-10</b> is generally considered the <b>peak of their engineering and the most valuable in absolute terms</b> for pure performance and professional use.</p>
-<p>The <b>Aiwa X-700</b> (and its siblings) are the <b>most iconic and visually stunning</b>, often competing in value based on their exceptional aesthetics and design appeal.</p></div>
-<div class="rr-est" style="margin-top:30px"><h3>Get Your Free Estimate Today</h3><a class="ph" href="tel:+18182444440">&#128222; (818) 244-4440</a><a class="rr-btn" href="https://techmediagroup.repairshopr.com/check_ins">Start New Service Ticket</a></div>
-</div>
+<style>.ag *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}.ag .container{max-width: 1200px; margin: 0 auto; padding: 20px;}.ag header{text-align: center; margin-bottom: 40px; padding: 30px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 15px; border: 2px solid #e1e8ed; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);}.ag h1{color: #2c3e50; font-size: 2.8rem; margin-bottom: 10px; letter-spacing: 0.5px;}.ag h2{color: #34495e; margin-bottom: 20px; font-size: 1.8rem;}.ag h3{color: #34495e; margin-bottom: 15px; font-size: 1.4rem;}.ag .tagline{font-size: 1.2rem; color: #7f8c8d; margin-bottom: 20px; font-style: italic;}.ag .intro{max-width: 900px; margin: 0 auto 30px; padding: 20px; background-color: #f8f9fa; border-radius: 10px; border-left: 5px solid #3498db; color: #2c3e50;}.ag .model-grid{display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; margin-bottom: 40px;}.ag .model-card{background: #ffffff; border-radius: 12px; padding: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid #e1e8ed; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); position: relative; overflow: hidden;}.ag .model-card:hover{transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); border-color: #3498db;}.ag .model-card::before{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(to right, #3498db, #2980b9);}.ag .model-header{display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;}.ag .model-name{font-size: 1.8rem; color: #2c3e50; font-weight: 700;}.ag .model-era{background: #ecf0f1; color: #34495e; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 600;}.ag .price-tag{background: linear-gradient(to right, #e74c3c, #c0392b); color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold; margin: 15px 0; display: inline-block; font-size: 1.2rem; box-shadow: 0 3px 8px rgba(231, 76, 60, 0.3);}.ag .feature-list{list-style-type: none; margin: 15px 0;}.ag .feature-list li{padding: 8px 0; border-bottom: 1px dashed #bdc3c7; display: flex; align-items: flex-start; color: #2c3e50;}.ag .feature-list li:last-child{border-bottom: none;}.ag .feature-list i{color: #3498db; margin-right: 10px; margin-top: 3px;}.ag .market-status{background: #e8f4f8; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 0.95rem; border-left: 3px solid #3498db; color: #2c3e50;}.ag .repair-issues{background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 3px solid #ffc107; color: #2c3e50;}.ag .repair-issues h4{color: #856404; margin-bottom: 10px; font-size: 1.1rem;}.ag .repair-issues ul{margin-left: 20px; margin-top: 10px;}.ag .repair-issues ul li{margin-bottom: 8px; line-height: 1.5;}.ag .capacitor-section{background: #f8d7da; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 3px solid #dc3545; color: #2c3e50;}.ag .capacitor-section h4{color: #721c24; margin-bottom: 10px; font-size: 1.1rem;}.ag .capacitor-section ul{margin-left: 20px; margin-top: 10px;}.ag .capacitor-section ul li{margin-bottom: 8px; line-height: 1.5;}.ag .factors-section{background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 40px 0; border: 2px solid #e1e8ed;}.ag .factors-section h2{color: #2c3e50; margin-bottom: 20px; font-size: 1.8rem;}.ag .factor-grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}.ag .factor-item{background: #ffffff; padding: 15px; border-radius: 8px; border: 1px solid #e1e8ed; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);}.ag .factor-item h3{color: #34495e; margin-bottom: 10px; font-size: 1.2rem;}.ag .factor-item p{color: #2c3e50;}.ag .common-problems{background: #ffffff; padding: 30px; border-radius: 12px; margin: 40px 0; border: 2px solid #e1e8ed;}.ag .common-problems h2{color: #2c3e50; margin-bottom: 25px; text-align: center;}.ag .problem-category{margin-bottom: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #e74c3c;}.ag .problem-category h3{color: #e74c3c; margin-bottom: 15px;}.ag .problem-list{list-style-type: none; margin: 0;}.ag .problem-list li{padding: 10px 0; border-bottom: 1px dashed #dee2e6; color: #2c3e50;}.ag .problem-list li:last-child{border-bottom: none;}.ag .problem-list strong{color: #e74c3c;}.ag .summary{background: #e8f4f8; padding: 25px; border-radius: 12px; margin: 40px 0; border-left: 5px solid #3498db; color: #2c3e50;}.ag .summary h2{color: #2c3e50; margin-bottom: 15px;}.ag .summary a{color: #3498db; text-decoration: none;}.ag .summary a:hover{text-decoration: underline;}.ag .vintage-icon{color: #3498db; font-size: 1.5rem; margin-right: 10px;}@media (max-width: 768px){.ag .model-grid{grid-template-columns: 1fr;}.ag h1{font-size: 2.2rem;}.ag .container{padding: 10px;}}</style>
+<script type="application/ld+json">{{ {"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Aiwa Reel-to-Reel Repair and Restoration","serviceType":"Reel-to-reel tape recorder repair","provider":{"@type":"LocalBusiness","name":"Tek Media Group","telephone":"+1-818-244-4440","url":"https://tekmg.com"},"areaServed":"United States","url":"https://tekmg.com/reel-to-reel/aiwa"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Reel-to-Reel Repair","item":"https://tekmg.com/reel-to-reel"},{"@type":"ListItem","position":3,"name":"Aiwa","item":"https://tekmg.com/reel-to-reel/aiwa"}]}]}|tojson }}</script>
 {% endblock %}
 {% block footer %}{% include "_old_footer.html" %}{% endblock %}
+{% block content %}
+<div class="ag">
+<div class="container"><div style="font-size:.8rem;color:#555;margin:0 0 12px"><a href="/" style="display:inline-block;padding:10px 0">Home</a> &gt; <a href="/reel-to-reel" style="display:inline-block;padding:10px 0">Reel To Reel</a> &gt; Aiwa</div>
+        <header>
+            <h1>Aiwa Reel-to-Reel Repair & Restoration Service</h1>
+            <p class="tagline">Professional Restoration, Capacitor Replacement & Calibration for Vintage Aiwa Tape Recorders</p>
+            <div class="intro">
+                <p>TEK Media Group specializes in the <strong>professional repair and restoration of Aiwa reel-to-reel tape recorders</strong>, including the legendary <strong>TPR-10, TPR-9, X-700, X-500, X-300, TPD-10A, AD-1250U, and AD-1650U</strong> models. Our expert technicians provide comprehensive capacitor replacement, mechanical restoration, bias adjustment, azimuth calibration, and transport service to restore these vintage machines to peak performance.</p>
+                <p>With decades of experience servicing professional and high-fidelity audio equipment, we understand the unique challenges of maintaining these collectible recorders from the golden age of audio. Whether you need a complete restoration, capacitor replacement, or specific repairs, we deliver professional results.</p>
+            </div>
+        </header>
+        
+        <main>
+            <h2 style="color: #2c3e50; margin-bottom: 25px; text-align: center;">Aiwa Models We Service & Restore</h2>
+              <section><p style="border: thin solid #000000; padding: 10px; background-color: #FFFF00;">Note: WE DO NOT SELL COMPONENTS: Every repair is unique; what resolves an issue for one unit may not apply to others, especially if there are discrepancies in component Value or underlying quality concerns. The following is a recommendation, not a guaranteed solution.</p></section> 
+            <div class="model-grid">
+                <!-- Model 1: TPR-10 -->
+                <div class="model-card">
+                    <div class="model-header">
+                        <div class="model-name">TPR-10 / TPR-9</div>
+                        <div class="model-era">Early 1970s</div>
+                    </div>
+            
+                    <ul class="feature-list">
+                        <li><strong>Professional 1/4" recorder</strong> - broadcast quality (66 lbs)</li>
+                        <li><strong>Three-motor, solenoid-controlled transport</strong></li>
+                        <li>Complete capacitor replacement (all electrolytics & tantalums)</li>
+                        <li>Bias/azimuth calibration & speed adjustment</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>Common Mechanical Issues</h4>
+                        <ul>
+                            <li><strong>Solenoid sticking:</strong> Dried lubricant causes intermittent operation - requires complete cleaning and re-lubrication</li>
+                            <li><strong>Pinch roller deterioration:</strong> Rubber hardens, glazes, or becomes sticky - replacement required for proper tape contact</li>
+                            <li><strong>Belt degradation:</strong> Original belts turn to goo or snap - affects capstan drive and speed stability</li>
+                            <li><strong>Mode switch oxidation:</strong> Corroded contacts cause transport mode failures - cleaning with DeoxIT required</li>
+                            <li><strong>Reel table clutch slipping:</strong> Worn felt washers cause poor tape tension - precision adjustment needed</li>
+                            <li><strong>Brake pad wear:</strong> Uneven stopping or tape spillage - brake shoe replacement and adjustment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>Critical Capacitor Replacements</h4>
+                        <ul>
+                            <li><strong>Power supply filters (2200-4700µF):</strong> Cause hum, oscillation, low voltage - MUST be replaced</li>
+                            <li><strong>Audio coupling caps (1-47µF):</strong> Weak audio, distortion, DC offset - affects all channels</li>
+                            <li><strong>Tantalum capacitors (4.7-47µF):</strong> Often fail short-circuit causing blown fuses or transistor damage</li>
+                            <li><strong>Bias oscillator caps:</strong> Improper bias frequency causes poor high-frequency recording</li>
+                            <li><strong>Emitter bypass caps (100-470µF):</strong> Stage instability, noise, oscillation</li>
+                            <li><strong>EQ network caps (10-220µF):</strong> Incorrect frequency response, unstable playback</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Electronics Issues:</strong> Early transistor failures, power supply regulation drift, relay contact pitting, bias oscillator instability. Full diagnostic testing and alignment required after restoration.
+                    </div>
+                </div>
+                
+                <!-- Model 2: X-Series -->
+                <div class="model-card">
+                    <div class="model-header">
+                        <div class="model-name">X-300 / X-500 / X-700</div>
+                        <div class="model-era">1968-1972</div>
+                    </div>
+                
+                    <ul class="feature-list">
+                        <li>Iconic <strong>"flying saucer" design</strong> models</li>
+                        <li>Germanium transistor replacement & bias adjustment</li>
+                        <li>Paper/wax capacitor replacement with film types</li>
+                        <li>Idler wheel, belt, and transport linkage restoration</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>Common Mechanical Issues</h4>
+                        <ul>
+                            <li><strong>Idler wheel hardening:</strong> Rubber becomes hard and loses traction - causes speed instability</li>
+                            <li><strong>Complex linkage binding:</strong> Central control pod mechanism jams - requires complete disassembly</li>
+                            <li><strong>Plastic gear brittleness:</strong> Gears crack from age - can cause catastrophic transport failure</li>
+                            <li><strong>Motor bearing wear:</strong> Noisy operation, speed drift - bearing replacement or motor service</li>
+                            <li><strong>Control pod alignment:</strong> Difficult mode changes - precision mechanical adjustment required</li>
+                            <li><strong>Tape path guides worn:</strong> Azimuth shift, poor tracking - guide replacement needed</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>Critical Capacitor Replacements</h4>
+                        <ul>
+                            <li><strong>Paper/wax capacitors:</strong> Almost always leaky after 50+ years - causes distortion and DC offset</li>
+                            <li><strong>Power supply (1000-3300µF):</strong> Early rubber-sealed electrolytics dry out completely</li>
+                            <li><strong>Motor run capacitors (1-4µF @ 250VAC):</strong> Motor won't start or runs hot - use polypropylene replacements</li>
+                            <li><strong>Coupling capacitors (10-100µF):</strong> Germanium circuits especially sensitive to leakage</li>
+                            <li><strong>Tone control caps (0.01-0.47µF):</strong> Incorrect EQ curve, loss of highs/lows</li>
+                            <li><strong>Oscillator ceramics (100pF-1000pF):</strong> No bias, poor high-frequency recording</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Electronics Issues:</strong> Germanium transistors prone to thermal drift and leakage, bulb illumination burnout, selector switch oxidation. Germanium replacements (AC187/188) or silicon conversions with bias adjustment available.
+                    </div>
+                </div>
+                
+                <!-- Model 3: TPD-10A -->
+                <div class="model-card">
+                    <div class="model-header">
+                        <div class="model-name">TPD-10A Portable</div>
+                        <div class="model-era">1970s</div>
+                    </div>
+                   
+                    <ul class="feature-list">
+                        <li>Professional <strong>portable field recorder</strong></li>
+                        <li>Battery compartment restoration & corrosion removal</li>
+                        <li>XLR connector service & microphone preamp repair</li>
+                        <li>Power supply & switching circuit capacitor replacement</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>Common Mechanical Issues</h4>
+                        <ul>
+                            <li><strong>Battery corrosion:</strong> Leaked cells damage PCB traces and battery contacts - extensive cleaning/repair needed</li>
+                            <li><strong>Transport lock breakage:</strong> Plastic lock mechanism breaks from rough handling - affects portability</li>
+                            <li><strong>Carrying handle mounting cracks:</strong> Stress fractures in case - reinforcement required</li>
+                            <li><strong>VU meter damage:</strong> Bent needles or broken movements from drops - meter replacement often needed</li>
+                            <li><strong>Case seal deterioration:</strong> Weather seal degrades - affects environmental protection</li>
+                            <li><strong>Connector wear:</strong> XLR pins bent or damaged from field use</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>Critical Capacitor Replacements</h4>
+                        <ul>
+                            <li><strong>Power supply filters (470-2200µF):</strong> Heat-stressed in portable use - causes instability</li>
+                            <li><strong>Battery/AC switching tantalums:</strong> Critical for mode switching - often fail short</li>
+                            <li><strong>Audio coupling (1-10µF):</strong> Temperature cycling causes premature failure</li>
+                            <li><strong>Microphone preamp caps (4.7-47µF):</strong> Noisy mic inputs, poor gain - affects field recording</li>
+                            <li><strong>Meter driver caps (22-100µF):</strong> Inaccurate VU readings, sluggish response</li>
+                            <li><strong>DC-DC converter caps:</strong> If tube version, converter failure prevents operation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Electronics Issues:</strong> DC-DC converter failures, battery/AC switch oxidation, meter calibration drift. Portable units experience more thermal cycling damage than fixed installations.
+                    </div>
+                </div>
+                
+                <!-- Model 4: AD-Series -->
+                <div class="model-card">
+                    <div class="model-header">
+                        <div class="model-name">AD-1250U / AD-1650U</div>
+                        <div class="model-era">Mid-1970s</div>
+                    </div>
+                    <div class="price-tag">Restoration: $700 - $1,800+</div>
+                    <ul class="feature-list">
+                        <li>Unique <strong>cassette-style auto-loading</strong> system</li>
+                        <li>Complex loading mechanism service & alignment</li>
+                        <li>Logic control circuit & timing capacitor replacement</li>
+                        <li>Sensor cleaning & calibration</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>Common Mechanical Issues</h4>
+                        <ul>
+                            <li><strong>Auto-loading failure:</strong> Complex mechanism with multiple failure points - most common issue</li>
+                            <li><strong>Plastic cam wear:</strong> Loading sequence cams wear and skip - causes jams and misalignment</li>
+                            <li><strong>Tape path sensor misalignment:</strong> Optical/magnetic sensors for threading fail or drift</li>
+                            <li><strong>Door mechanism breakage:</strong> Cassette-style door hinges crack - affects loading reliability</li>
+                            <li><strong>Loading motor failure:</strong> Drive motor for auto-threading mechanism burns out</li>
+                            <li><strong>Threading arm sticking:</strong> Guide arms bind on posts - prevents proper tape loading</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>Critical Capacitor Replacements</h4>
+                        <ul>
+                            <li><strong>Power supply (3300-4700µF):</strong> Loading mechanism spikes stress caps - premature failure</li>
+                            <li><strong>Logic control caps (47-220µF):</strong> Timing circuit failures cause erratic auto-loading</li>
+                            <li><strong>Motor drive circuit (100-470µF):</strong> Slow or stalling motors during loading sequence</li>
+                            <li><strong>Timing capacitors (4.7-22µF):</strong> Incorrect loading sequence timing - causes jams</li>
+                            <li><strong>Sensor circuit caps:</strong> False triggering or no detection of tape position</li>
+                            <li><strong>Bias/oscillator (0.1-0.47µF):</strong> Standard recording circuit failures</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Electronics Issues:</strong> Logic control IC failures, loading motor drive transistor burnout, microswitches fail or stick. Most complex Aiwa model to service - requires specialized knowledge of auto-loading system.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Common Problems Section -->
+            <div class="common-problems">
+                <h2>Universal Aiwa Reel-to-Reel Problems & Solutions</h2>
+                
+                <div class="problem-category">
+                    <h3>Audio Quality Issues</h3>
+                    <ul class="problem-list">
+                        <li><strong>Weak or distorted playback:</strong> Failed coupling capacitors, bias misadjustment, worn heads</li>
+                        <li><strong>Excessive hum:</strong> Power supply filter capacitor failure, ground loop, transformer deterioration</li>
+                        <li><strong>High-frequency loss:</strong> Head wear, azimuth misalignment, bias oscillator drift</li>
+                        <li><strong>Channel imbalance:</strong> Asymmetric capacitor aging, head wear, potentiometer oxidation</li>
+                        <li><strong>Poor recording quality:</strong> Bias circuit failure, head magnetization, worn tape path</li>
+                        <li><strong>Intermittent audio:</strong> Cracked solder joints, oxidized switches, failing connectors</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category">
+                    <h3>Transport & Mechanical Problems</h3>
+                    <ul class="problem-list">
+                        <li><strong>Speed instability:</strong> Worn idler wheels, belt stretch, motor bearing wear, capstan contamination</li>
+                        <li><strong>Won't play/record:</strong> Interlock switch failure, mode selector oxidation, solenoid malfunction</li>
+                        <li><strong>Tape spillage:</strong> Worn brake pads, broken take-up clutch, sensor failure</li>
+                        <li><strong>Difficult threading:</strong> Worn tape guides, pinch roller misalignment, dirty tape path</li>
+                        <li><strong>Noisy operation:</strong> Dry bearings, worn gears, loose mounting hardware</li>
+                        <li><strong>Won't fast forward/rewind:</strong> Belt failure, idler arm spring weak, motor capacitor dead</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category">
+                    <h3>Power & Electronics</h3>
+                    <ul class="problem-list">
+                        <li><strong>Dead unit/no power:</strong> Fuse blown (check tantalum caps first), transformer failure, power switch</li>
+                        <li><strong>Blown fuses repeatedly:</strong> Shorted tantalum capacitor, failed rectifier, short in motor winding</li>
+                        <li><strong>Erratic operation:</strong> Cold solder joints, failing ICs, power supply regulation issues</li>
+                        <li><strong>No bias/erase:</strong> Oscillator transistor failure, bias head open circuit, oscillator cap failure</li>
+                        <li><strong>VU meters not working:</strong> Meter lamps out, driver circuit failure, meter movement damaged</li>
+                        <li><strong>Logic failures:</strong> Control circuit capacitors drifted, failed logic ICs, corroded switch contacts</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category">
+                    <h3>Age-Related Deterioration</h3>
+                    <ul class="problem-list">
+                        <li><strong>ALL electrolytic capacitors:</strong> After 40-50 years, these MUST be replaced preventatively</li>
+                        <li><strong>Rubber parts (belts, rollers, grommets):</strong> Become sticky, hard, or turn to goo</li>
+                        <li><strong>Lubrication dried out:</strong> Causes binding, increased wear, noise - complete re-lubrication needed</li>
+                        <li><strong>Plastic brittleness:</strong> Gears, cams, knobs crack easily - handle with care during service</li>
+                        <li><strong>Contact oxidation:</strong> All switches, potentiometers, connectors need cleaning</li>
+                        <li><strong>Head wear:</strong> Especially on units that saw heavy use - affects frequency response and output</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="factors-section">
+                <h2>Our Professional Restoration Services</h2>
+                <div class="factor-grid">
+                    <div class="factor-item">
+                        <h3>Complete Capacitor Replacement</h3>
+                        <p>All electrolytics, tantalums, and paper capacitors replaced with high-quality 105°C low-ESR components for decades of reliable service. We use Nichicon, Panasonic, or Elna premium capacitors.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Mechanical Restoration</h3>
+                        <p>Transport cleaning, lubrication, belt/idler replacement, pinch roller service, and mechanism alignment. All mechanical parts restored to factory specifications.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Electronic Calibration</h3>
+                        <p>Bias adjustment, azimuth alignment, speed calibration, EQ optimization, and frequency response testing. Professional test equipment and calibration tapes used.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Professional Testing</h3>
+                        <p>Full functional testing with calibration tapes, oscilloscope analysis, audio spectrum measurement, and wow/flutter testing to ensure peak performance.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Head Service</h3>
+                        <p>Head cleaning, demagnetization, azimuth alignment, and evaluation. We can source replacement heads if severely worn.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Cosmetic Restoration</h3>
+                        <p>Cleaning, polishing, and restoration of exterior components. Control panel restoration, meter glass cleaning, and hardware restoration available.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary">
+                <h2>Contact Us for Aiwa Reel-to-Reel Service</h2>
+                <p>Ready to restore your vintage Aiwa reel-to-reel recorder? Contact TEK Media Group today for a free consultation and estimate. Our expert technicians have the knowledge, tools, and genuine passion for vintage audio to bring your collectible recorder back to life.</p>
+                <p style="margin-top: 15px;"><strong>Call us at (818) 244-4440</strong></p>
+                <p style="margin-top: 10px;">Email: <a href="mailto:as@tekmg.com">as@tekmg.com</a></p>
+                <p style="margin-top: 15px;"><em>Professional restoration services for the TPR-10, TPR-9, X-700, X-500, X-300, TPD-10A, AD-1250U, AD-1650U, and all vintage Aiwa reel-to-reel models. Serving audio professionals, collectors, and enthusiasts throughout Southern California and nationwide via shipping.</em></p>
+            </div>
+        </main>
+    </div>
+</div>
+{% endblock %}

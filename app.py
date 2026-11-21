@@ -104,6 +104,13 @@ PAGES = {
     "reel-to-reel": "reel-to-reel.html",
     "reel-to-reel/studer": "reel-to-reel-studer.html",
     "reel-to-reel/aiwa": "reel-to-reel-aiwa.html",
+    "reel-to-reel/nagra": "reel-to-reel-nagra.html",
+    "reel-to-reel/nagra/nagra-nta-2s": "reel-to-reel-nagra-nta-2s.html",
+    "reel-to-reel/nagra/nagra-nta-3tcr": "reel-to-reel-nagra-nta-3tcr.html",
+    "reel-to-reel/nagra/nagra-nta-2b": "reel-to-reel-nagra-nta-2b.html",
+    "reel-to-reel/nagra/nagra-nts-3tcs": "reel-to-reel-nagra-nts-3tcs.html",
+    "reel-to-reel/nagra/nagra-nta-2m": "reel-to-reel-nagra-nta-2m.html",
+    "reel-to-reel/nagra/nagra-nta-3tcn": "reel-to-reel-nagra-nta-3tcn.html",
     "hifi-audio": "hifi-audio.html",
     "site-index": "site-index.html",
     "bang-olufsen": "bang-olufsen.html",
@@ -135,6 +142,15 @@ REDIRECTS = {
     "sitemap": "/site-index",
     "reel-to-reel-models/studer/studer.aspx": "/reel-to-reel/studer",
     "reel-to-reel-models/aiwa/aiwa.aspx": "/reel-to-reel/aiwa",
+    "reel-to-reel-models/nagra-t-audio/nagra-t-audio.aspx": "/reel-to-reel/nagra",
+    "reel-to-reel-models/nagra-t-audio/nagra-nta-2s.aspx": "/reel-to-reel/nagra/nagra-nta-2s",
+    "reel-to-reel-models/nagra-t-audio/nagra-nta-3tcr.aspx": "/reel-to-reel/nagra/nagra-nta-3tcr",
+    "reel-to-reel-models/nagra-t-audio/nagra-nta-2b.aspx": "/reel-to-reel/nagra/nagra-nta-2b",
+    "reel-to-reel-models/nagra-t-audio/nagra-nts-3tcs.aspx": "/reel-to-reel/nagra/nagra-nts-3tcs",
+    "reel-to-reel-models/nagra-t-audio/nagra-nta-2m.aspx": "/reel-to-reel/nagra/nagra-nta-2m",
+    "reel-to-reel-models/nagra-t-audio/nagra-nta-3tcn.aspx": "/reel-to-reel/nagra/nagra-nta-3tcn",
+    "reel-to-reel-models/nagra-t-audio/nagra-nta2s.aspx": "/reel-to-reel/nagra/nagra-nta-2s",
+    "reel-to-reel-models/nagra-t-audio/nagra-nta2b.aspx": "/reel-to-reel/nagra/nagra-nta-2b",
     "reel-to-reel/reel-to-reel.aspx": "/reel-to-reel",
     "sitemap.html": "/site-index",
     "reel_to_reel": "/reel-to-reel",
@@ -226,6 +242,7 @@ def llms():
         "- [Hi-fi audio repair](https://tekmg.com/hifi-audio): McIntosh, Marantz, Mark Levinson, Denon, Luxman, Nakamichi and other high-end and vintage receivers, amplifiers and preamps; free estimates\n"
         "- [Studer reel-to-reel repair](https://tekmg.com/reel-to-reel/studer): Studer J37, A62, C37, A80, A810, A807, A820, A812, A816, A827 and A721 tape machines\n"
         "- [Aiwa reel-to-reel](https://tekmg.com/reel-to-reel/aiwa): Aiwa TPR-10, X-300/X-500/X-700, TPD-10A and AD-1250U/AD-1650U reel-to-reel recorders\n"
+        "- [Nagra T-Audio reel-to-reel](https://tekmg.com/reel-to-reel/nagra): Nagra NTA-2S, NTA-3TCR, NTA-2B, NTS-3TCS, NTA-2M and NTA-3TCN restoration and repair\n"
         "- [Reel-to-reel repair](https://tekmg.com/reel-to-reel): vintage and professional reel-to-reel recorders from Studer, Akai, Teac, Tascam, Revox and Ampex; free estimates\n\n"
         "## Company\n"
         "- [Site index](https://tekmg.com/site-index): every page on the site\n"
