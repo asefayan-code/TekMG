@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}Beosound & Beosystem Repair | Bang & Olufsen Authorized Service | Tek Media Group{% endblock %}
+{% block desc %}Repair for every Bang & Olufsen Beosound and Beosystem: Beosound 9000, Ouverture, Century, 1, 2, 3, 5, 8, Balance, Emerge, Level, Shape, Theatre and Beosystem 10 through 7000. Pick your model and start a service ticket. Free estimates, nationwide.{% endblock %}
+{% block canon %}/bang-olufsen/beosound-beosystem{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Bang & Olufsen Beosound and Beosystem Repair","serviceType":"Bang & Olufsen audio repair","provider":{"@type":"LocalBusiness","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},"areaServed":"US","url":"https://tekmg.com/bang-olufsen/beosound-beosystem"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"},{"@type":"ListItem","position":3,"name":"Beosound & Beosystem Repair","item":"https://tekmg.com/bang-olufsen/beosound-beosystem"}]}]}{% endraw %}
+</script>
+{% include "_bo_css.html" %}
+<style>
+.bo-hero.tv{background:linear-gradient(180deg,#fff 0%,#f5f5f3 100%)}
+.bo-big{max-width:560px;margin:34px auto 0;text-align:left}
+.bo-big label{display:block;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:10px;text-align:center}
+.bo-big select{width:100%;padding:18px 20px;font:inherit;font-size:17px;border:2px solid var(--ink);background:#fff;color:var(--ink);border-radius:0;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.bo-big select:focus{border-color:var(--red);outline:none}
+.bo-big small{display:block;text-align:center;margin-top:10px;color:var(--mid);font-size:.84rem}
+.ms-group{margin-bottom:44px}
+.ms-group h3{font-weight:600;font-size:1.15rem;margin:0 0 4px;color:var(--ink)}
+.ms-group .bo-sub{margin:0 0 14px}
+.ms-chips{display:flex;flex-wrap:wrap;gap:8px}
+.ms-chips a{border:1px solid var(--line);background:#fff;padding:9px 16px;font-size:.88rem;color:var(--ink);text-decoration:none;transition:.2s}
+.ms-chips a:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-2px)}
+.ms-title{display:flex;align-items:baseline;gap:14px;margin:0 0 26px;padding-bottom:12px;border-bottom:2px solid var(--red)}
+.ms-title h2{font-size:clamp(1.6rem,3.6vw,2.4rem)}
+.ms-title span{color:var(--mid);font-size:.9rem}
+</style>
+{% endblock %}
+{% block content %}
+{% set tick = 'https://techmediagroup.repairshopr.com/check_ins' %}
+{% set sound = [
+ ('Modern platform','Balance, Emerge, Level and the newer generations',['Beosound Balance','Beosound Emerge','Beosound Level','Beosound A5','Beosound 1 (3rd Gen)','Beosound 2 (3rd Gen)']),
+ ('Architectural &amp; outdoor','Statement pieces and weatherproof portables',['Beosound Shape','Beosound Theatre','Beosound Explore','Beosound Outdoor']),
+ ('Multi-room &amp; voice control','Wireless, streaming and voice-enabled models',['Beosound 35','Beosound 1 (2nd Gen)','Beosound 2 (2nd Gen)','Beosound Core','Beosound Edge','Beosound Stage']),
+ ('Foundational era','The first streaming and portable generation',['Beosound 1','Beosound 2','Beosound 3','Beosound 4','Beosound 5','Beosound 6','Beosound 8','Beosound Essence']),
+ ('Legacy','Classic Beosound, including CD sensor, lens, laser, motor and clamp service',['Beosound 9000','Beosound 3000','Beosound 3200','Beosound Ouverture','Beosound Century','Beosound 2000']),
+] %}
+{% set system = [
+ ('Beosystem 10','Beosystem 901','Beosystem 1001','Beosystem 1100','Beosystem 1200','Beosystem 1400','Beosystem 1500','Beosystem 1700','Beosystem 1900'),
+ ('Beosystem 2000','Beosystem 2200','Beosystem 2300','Beosystem 2400','Beosystem 2500','Beosystem 2600','Beosystem 2800'),
+ ('Beosystem 3000','Beosystem 3300','Beosystem 3500','Beosystem 4000','Beosystem 4400','Beosystem 4500','Beosystem 4600'),
+ ('Beosystem 5000','Beosystem 5500','Beosystem 6500','Beosystem 7000'),
+] %}
+<div class="bo">
+
+<section class="bo-hero tv">
+  <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="bo-wrap">
+    <div class="bo-eyebrow">Authorized Service &middot; Nationwide</div>
+    <h1>Beosound &amp; <b>Beosystem</b> Repair</h1>
+    <p class="bo-lead">Every Beosound and Beosystem on one page. Pick your model and go straight to the service request.</p>
+    <div class="bo-big">
+      <label for="msModel">Choose your model</label>
+      <select id="msModel" aria-describedby="msHelp">
+        <option value="">Select a Beosound or Beosystem&hellip;</option>
+        {% for title, sub, models in sound %}
+        <optgroup label="Beosound &middot; {{ title|striptags|replace('&amp;','&') }}">
+          {% for m in models %}<option value="{{ m }}">{{ m }}</option>{% endfor %}
+        </optgroup>
+        {% endfor %}
+        <optgroup label="Beosystem">
+          {% for row in system %}{% for m in row %}<option value="{{ m }}">{{ m }}</option>{% endfor %}{% endfor %}
+        </optgroup>
+        <option value="other">My model is not listed</option>
+      </select>
+      <small id="msHelp">Selecting a model opens the service request page.</small>
+      <noscript><p style="text-align:center;margin-top:14px"><a class="bo-btn solid" href="{{ tick }}">Request Service</a></p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec">
+  <div class="bo-wrap">
+
+    <div class="ms-title"><h2>Beo<b>sound</b></h2><span>Tap any model to start a service ticket</span></div>
+    {% for title, sub, models in sound %}
+    <div class="ms-group">
+      <h3>{{ title|safe }}</h3>
+      <div class="bo-sub">{{ sub }}</div>
+      <div class="ms-chips">{% for m in models %}<a href="{{ tick }}">{{ m }}</a>{% endfor %}</div>
+    </div>
+    {% endfor %}
+
+    <div class="ms-title" style="margin-top:56px"><h2>Beo<b>system</b></h2><span>Component and music systems</span></div>
+    <div class="ms-group">
+      <div class="ms-chips">{% for row in system %}{% for m in row %}<a href="{{ tick }}">{{ m }}</a>{% endfor %}{% endfor %}</div>
+    </div>
+
+    <p class="bo-note">Don't see your model? That doesn't mean we don't work on it. Start a ticket and we'll take a look.</p>
+    <div class="bo-btns"><a class="bo-btn solid" href="{{ tick }}">Request Service</a><a class="bo-btn" href="/bang-olufsen">All Bang &amp; Olufsen Service</a></div>
+  </div>
+</section>
+
+</div>
+<script>
+(function(){
+  var s=document.getElementById('msModel');
+  if(!s)return;
+  s.addEventListener('change',function(){
+    if(s.value){window.location.href='{{ tick }}';}
+  });
+})();
+</script>
+{% endblock %}
