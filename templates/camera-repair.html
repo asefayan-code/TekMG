@@ -7,7 +7,8 @@
 {% set deck_names = deck_brand_names[:-1]|join(", ") ~ " and " ~ deck_brand_names[-1] %}
 {% set problems = ["No power", "Soft back focus", "Battery does not charge", "SDI port not working", "SDI port yanked out or damaged", "Dropped / physical damage", "Salt, sand or dust inside the camera", "LCD display not working", "Iris blades stuck", "No video or audio", "SD card stuck or inserted backwards", "Liquid damage"] %}
 {% set faqs = [
- ("Which cameras do you repair?", "We repair broadcast, studio, ENG, PTZ and industrial cameras and camcorders from " ~ cam_names ~ ", plus DSLR and mirrorless cameras. If your model is not in the list, choose Other and start a service ticket."),
+ ("Which cameras do you repair?", "We repair broadcast, studio, ENG, PTZ and industrial cameras and camcorders from " ~ cam_names ~ ", plus DSLR and mirrorless cameras."),
+ ("My equipment is not listed. Do you still work on it?", "If your equipment is not listed, that does not mean we do not work on it. Choose Other in the list and start a service ticket, or call (818) 244-4440."),
  ("Do you repair video decks and recorders?", "Yes. We repair decks and recorders from " ~ deck_names ~ ", including Sony SRW, HDW, PDW and XDS machines, and DAT, U-matic, Betamax and SuperBetamax / Hi-Band decks."),
  ("What camera problems do you fix?", "No power, soft back focus, a battery that does not charge, SDI ports that do not work or were yanked out, drop and physical damage, salt, sand or dust inside the camera, LCD displays that do not work, stuck iris blades, no video or audio, stuck SD cards and liquid damage."),
  ("Do you charge for an estimate?", "No. All repairs come with a free estimate."),
@@ -38,6 +39,8 @@
 .cam-group--deck .cam-ico{background:#e3f4f1;color:#0f766e}
 .cam-group-head h2{margin:0;font-size:1.3rem;line-height:1.2;color:#0f3d62}
 .cam-group-head p{margin:3px 0 0;font-size:.93rem;line-height:1.4;color:#44566a}
+.cam-note{background:#eef6fb;border-left:4px solid #0b6e99;border-radius:8px;padding:9px 12px;margin:0 0 12px;font-size:.95rem;line-height:1.45;color:#1c2733}
+.cam-group--deck .cam-note{background:#e9f6f3;border-left-color:#0f766e}
 .cam-dds{display:grid;grid-template-columns:1fr;gap:10px;align-items:start}
 .cam-dd{background:#f6f9fc;border:1px solid #dde4ec;border-radius:10px;padding:10px 12px}
 .cam-dd h3{margin:0 0 6px;font-size:1rem;color:#0f3d62}
@@ -129,9 +132,10 @@
 <div class="cam-ico" aria-hidden="true"><svg viewBox="0 0 64 64" width="32" height="32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="18" width="38" height="28" rx="4"/><path d="M44 26l14-8v28l-14-8"/><circle cx="25" cy="32" r="7"/></svg></div>
 <div>
 <h2 id="cameras-h">Cameras &amp; Camcorders</h2>
-<p>Choose your manufacturer, then your model. If your camera is not listed, choose &ldquo;Other&rdquo;.</p>
+<p>Choose your manufacturer, then your model.</p>
 </div>
 </div>
+<p class="cam-note"><strong>Not listed?</strong> If your camera is not listed, that does not mean we do not work on it. Choose &ldquo;Other&rdquo; to start a service ticket.</p>
 <div class="cam-dds">
 {% for b in camera_brands %}{{ dropdown(b, "camera") }}{% endfor %}
 </div>
@@ -150,6 +154,7 @@
 <p>Video decks, recorders and players. Choose your manufacturer, then your model, or choose a tape format.</p>
 </div>
 </div>
+<p class="cam-note"><strong>Not listed?</strong> If your deck or recorder is not listed, that does not mean we do not work on it. Choose &ldquo;Other&rdquo; to start a service ticket.</p>
 <div class="cam-dds">
 {% for b in deck_brands %}{{ dropdown(b, "deck") }}{% endfor %}
 </div>

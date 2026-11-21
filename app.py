@@ -187,7 +187,7 @@ def llms():
         "- [Canon box and studio lens repair, all models](https://tekmg.com/lens-repair/canon): one page per Canon model with a troubleshooting flowchart and the error messages from Canon's manuals, such as Initialize Error; free estimates; 90-day warranty\n"
         "- Other lens brands, each with a general troubleshooting flowchart: " + ", ".join("[%s](https://tekmg.com/lens-repair/%s)" % (ob["name"], ob["slug"]) for ob in OTHER_BRANDS) + "\n"
         "- [Professional and medical monitor repair](https://tekmg.com/monitor-repair): Sony PVM, BVM and LMD, Panasonic, JVC, Eizo, NEC and Barco; one page per Sony model with its warning lights and error signals from Sony's manuals; free estimates; 90-day warranty\n"
-        "- [Professional camera, camcorder and deck repair](https://tekmg.com/camera-repair): cameras and camcorders from " + ", ".join(CAMERA_BRAND_NAMES) + "; video decks and recorders from " + ", ".join(DECK_BRAND_NAMES) + "; model list for each manufacturer; free estimates; 90-day warranty\n\n"
+        "- [Professional camera, camcorder and deck repair](https://tekmg.com/camera-repair): cameras and camcorders from " + ", ".join(CAMERA_BRAND_NAMES) + "; video decks and recorders from " + ", ".join(DECK_BRAND_NAMES) + "; model list for each manufacturer, and equipment that is not listed is not ruled out; free estimates; 90-day warranty\n\n"
         "## Company\n"
         "- [About](https://tekmg.com/about)\n"
         "- [Contact](https://tekmg.com/contact)\n"
