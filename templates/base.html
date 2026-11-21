@@ -202,7 +202,7 @@ select{min-height:44px}
 {% endblock %}
 </main>
 
-<footer>
+{% block footer %}<footer>
 <div class="container">
 <ul>
 <li><a href="/lens-repair">Professional Box, ENG &amp; Studio Lenses</a></li>
@@ -230,7 +230,7 @@ select{min-height:44px}
 </div>
 </div>
 <div class="footer__copyright">Business hours: Mon&ndash;Fri 8:30 AM&ndash;5:00 PM &middot; Weekends, holidays and after hours by appointment only<br>&copy; 1993&ndash;{{ year }} Tek Media Group. All rights reserved.</div>
-</footer>
+</footer>{% endblock %}
 
 <script>
 (function(){
