@@ -118,6 +118,15 @@ body{padding-bottom:0}
 .listen-btn:hover{background:#0353e9}
 .listen-btn[aria-pressed=true]{background:#b42318}
 @media print{.listen-btn,.skip-link{display:none}}
+/*mobile-first touch + media*/
+img,video,svg{max-width:100%}img{height:auto}
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+footer li{font-size:15px}
+footer li a{display:block;padding:11px 0;min-height:44px;box-sizing:border-box}
+.footer__social a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+input,select,textarea{font-size:16px}
+table{max-width:100%}
 </style>
 <meta name="description" content="{% block desc %}Tek Media Group electronics repair in Burbank, CA. Call (818) 244-4440.{% endblock %}">
 <link rel="canonical" href="https://tekmg.com{% block canon %}/{% endblock %}">
