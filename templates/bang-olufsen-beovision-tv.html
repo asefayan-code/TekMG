@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% block title %}Bang & Olufsen Beovision TV Repair | Harmony, Eclipse, Avant, Horizon, BeoVision 4-14 | Tek Media Group{% endblock %}
+{% block desc %}Bang & Olufsen Beovision TV repair, warranty and non-warranty. Harmony, Eclipse, Avant, Horizon, BeoVision 11, 14, 10, 8, 7, 6 and 4. No power, no picture, no sound, backlight, HDMI and screen faults. Free estimates, nationwide. Call (818) 244-4440.{% endblock %}
+{% block canon %}/bang-olufsen/beovision-tv{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Bang & Olufsen Beovision TV Repair","serviceType":"Bang & Olufsen television repair","description":"Warranty and non-warranty repair of Beovision Harmony, Eclipse, Avant, Horizon and BeoVision 4 through 14 televisions.","provider":{"@type":"LocalBusiness","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},"areaServed":"US","url":"https://tekmg.com/bang-olufsen/beovision-tv"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"},{"@type":"ListItem","position":3,"name":"Beovision TV Repair","item":"https://tekmg.com/bang-olufsen/beovision-tv"}]}]}{% endraw %}
+</script>
+{% include "_bo_css.html" %}
+<style>
+.bo-hero.tv{background:linear-gradient(180deg,#fff 0%,#f5f5f3 100%)}
+.bo-symptoms{margin-top:34px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.bo-symptoms span{border:1px solid var(--line);background:#fff;padding:8px 18px;border-radius:40px;font-size:.84rem;color:var(--ink);font-weight:500;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.bo-symptoms span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:9px}
+.tv-fam{display:grid;grid-template-columns:minmax(240px,380px) 1fr;gap:44px;align-items:center;padding:46px 0;border-top:1px solid var(--line);scroll-margin-top:84px}
+.tv-fam:first-of-type{border-top:0}
+.tv-fam.flip{grid-template-columns:1fr minmax(240px,380px)}
+.tv-fam.flip .tv-pic{order:2}
+@media(max-width:820px){.tv-fam,.tv-fam.flip{grid-template-columns:1fr;gap:22px}.tv-fam.flip .tv-pic{order:0}}
+.tv-pic{background:#fff;border:1px solid var(--line);padding:14px;position:relative;transition:.3s}
+.tv-fam:hover .tv-pic,.tv-fam:target .tv-pic{box-shadow:0 18px 44px rgba(0,0,0,.1);border-color:var(--red)}
+.tv-pic img{display:block;width:100%;height:auto}
+.tv-pic.two{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
+.tv-pic.two img{aspect-ratio:1;object-fit:cover}
+.tv-tag{position:absolute;left:-1px;top:18px;background:var(--red);color:#fff;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;padding:5px 12px;font-weight:600}
+.tv-body h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:6px}
+.tv-sub{color:var(--red);font-size:.95rem;margin-bottom:16px}
+.tv-body h4{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);font-weight:600;margin:20px 0 10px}
+.tv-chips{display:flex;flex-wrap:wrap;gap:7px}
+.tv-chips span{background:var(--soft);border:1px solid var(--line);padding:4px 11px;font-size:.78rem;color:var(--ink)}
+.tv-chips small{color:var(--mid);font-size:.72rem;margin-left:5px}
+.tv-issues{list-style:none;margin:0;padding:0;columns:2;column-gap:28px;font-size:.9rem;color:var(--mid)}
+@media(max-width:620px){.tv-issues{columns:1}}
+.tv-issues li{break-inside:avoid;padding:6px 0 6px 20px;position:relative;border-bottom:1px dotted var(--line)}
+.tv-issues li::before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;background:var(--red);border-radius:50%}
+.tv-cta{margin-top:22px}
+.tv-also{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:10px}
+.tv-also .tv-mini{background:#fff;border:1px solid var(--line);padding:16px;text-align:center}
+.tv-also img{max-width:200px;width:100%;height:auto;margin:0 auto 10px;display:block}
+.tv-also h3{font-size:1.05rem;font-weight:600;margin:0 0 4px}
+.tv-also p{font-size:.86rem;color:var(--mid);margin:0}
+.bo-band{background:var(--ink);color:#fff;text-align:center;padding:54px 0}
+.bo-band h2{color:#fff}.bo-band h2 b{color:#ff6b81}
+.bo-band p{max-width:520px;margin:14px auto 0;color:#c9ccd1}
+.bo-band .bo-btn{border-color:#fff;color:#fff}.bo-band .bo-btn.solid{background:var(--red);border-color:var(--red)}
+.bo-band .bo-btn:hover{background:#fff;color:var(--ink);border-color:#fff}
+</style>
+{% endblock %}
+{% block content %}
+{% set tick = 'https://techmediagroup.repairshopr.com/check_ins' %}
+<div class="bo">
+
+<section class="bo-hero tv">
+  <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="bo-wrap">
+    <div class="bo-eyebrow">Authorized Service &middot; Nationwide</div>
+    <h1>Beovision <b>TV Repair</b></h1>
+    <p class="bo-lead">We repair both warranty and non-warranty Bang &amp; Olufsen televisions, from the classic BeoVision 4 to Harmony and Eclipse.</p>
+    <div class="bo-symptoms"><span>No power</span><span>Speakers not working</span><span>No image</span><span>Backlight out</span><span>HDMI faults</span></div>
+    <div class="bo-btns">
+      <a class="bo-btn solid" href="{{ tick }}">Request TV Service</a>
+      <a class="bo-btn" href="/bang-olufsen">All Bang &amp; Olufsen Service</a>
+    </div>
+    <div class="bo-picker" style="margin:36px 0 0">
+      <label for="tvFam">Find your TV</label>
+      <select id="tvFam" onchange="if(this.value){location.hash=this.value}">
+        <option value="">Choose your Beovision&hellip;</option>
+        <option value="harmony-eclipse">Harmony &amp; Eclipse</option>
+        <option value="avant-horizon">Avant &amp; Horizon</option>
+        <option value="bv11-14">BeoVision 11 &amp; 14</option>
+        <option value="bv10">BeoVision 10</option>
+        <option value="bv8">BeoVision 8</option>
+        <option value="bv7">BeoVision 7</option>
+        <option value="bv4-6">BeoVision 4 &amp; 6</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec" style="padding-top:20px">
+  <div class="bo-wrap">
+
+    <article class="tv-fam" id="harmony-eclipse">
+      <div class="tv-pic two"><span class="tv-tag">Flagship</span><img src="/images/bo/harmony-wood.jpg" alt="Beovision Harmony with wooden covers open" loading="lazy"><img src="/images/bo/harmony-gold.jpg" alt="Beovision Harmony in gold" loading="lazy"></div>
+      <div class="tv-body">
+        <h2>Beovision <b>Harmony</b> &amp; <b>Eclipse</b></h2>
+        <div class="tv-sub">Motorized screens, wooden covers, OLED</div>
+        <h4>Models</h4>
+        <div class="tv-chips"><span>Harmony 65</span><span>Harmony 77</span><span>Harmony 83</span><span>Harmony 88</span><span>Eclipse 55 C7</span><span>Eclipse 65 C7</span><span>Eclipse 2nd Gen 55 Soundcenter</span><span>Eclipse 2nd Gen 65 Soundcenter</span><span>Eclipse 3rd Gen 55 Soundcenter</span><span>Eclipse 3rd Gen 65 Soundcenter</span></div>
+        <h4>Common issues</h4>
+        <ul class="tv-issues">
+          <li>Noise from wooden covers</li><li>HDMI sources not shown on screen</li><li>Sound disappears</li><li>No sound when streaming AirPlay</li><li>Sound becomes extremely slow</li><li>One connected remote stops working</li><li>Does not switch completely to standby</li><li>Screen will not move up or down, speakers not moving</li><li>TV switches off suddenly</li><li>No picture from HDMI via extender or matrix</li><li>Front cover comes loose</li><li>WiSA or Wireless Power Link not working</li><li>PUC codes and settings disappear intermittently</li><li>Screen bending slightly</li><li>PSU replacement in the LG 65 C7 OLED screen (Eclipse 65)</li>
+        </ul>
+        <div class="tv-cta"><a class="bo-btn solid" href="{{ tick }}">Request TV Service</a></div>
+      </div>
+    </article>
+
+    <article class="tv-fam flip" id="avant-horizon">
+      <div class="tv-pic"><span class="tv-tag">Avant</span><img src="/images/bo/beovision-avant.jpg" alt="Beovision Avant" loading="lazy"></div>
+      <div class="tv-body">
+        <h2>Beovision <b>Avant</b> &amp; <b>Horizon</b></h2>
+        <div class="tv-sub">Avant 55, 75, 85 &middot; Horizon 40, 48</div>
+        <h4>Avant models</h4>
+        <div class="tv-chips"><span>Avant 55 OG<small>9671&ndash;9675, 8641&ndash;8647</small></span><span>Avant 75 OG<small>9676&ndash;9680, 9690&ndash;9693</small></span><span>Avant 85 OG<small>9681&ndash;9689, 8679&ndash;8688</small></span><span>Avant 55 NG</span><span>Avant 75 NG</span><span>Avant 85 NG</span></div>
+        <h4>Avant issues</h4>
+        <ul class="tv-issues"><li>Speaker not dropping</li><li>Picture disappears after a few seconds</li><li>Sound, no picture</li><li>Base not responding</li></ul>
+        <h4>Horizon models</h4>
+        <div class="tv-chips"><span>Horizon 40<small>7980&ndash;7983</small></span><span>Horizon 48<small>7984&ndash;7987</small></span></div>
+        <h4>Horizon issues</h4>
+        <ul class="tv-issues"><li>No function with Beosound Stage or Beovision Contour</li><li>No backlight; PSU and backlight voltages</li><li>Flickering picture</li><li>Blocks and lines on one side of the screen</li><li>Weak greenish background in the Home menu</li><li>No internal sound or missing center channel, external sound OK</li></ul>
+        <div class="tv-cta"><a class="bo-btn solid" href="{{ tick }}">Request TV Service</a></div>
+      </div>
+    </article>
+
+    <article class="tv-fam" id="bv11-14">
+      <div class="tv-pic"><span class="tv-tag">11 &middot; 14</span><img src="/images/bo/beovision-11.jpg" alt="BeoVision 11" loading="lazy"></div>
+      <div class="tv-body">
+        <h2>BeoVision <b>11 &ndash; 14</b></h2>
+        <div class="tv-sub">All sizes and all MK generations</div>
+        <h4>BeoVision 11</h4>
+        <div class="tv-chips">
+          <span>11-40<small>9597, 9598</small></span><span>11-40 MKII<small>9521, 9522</small></span><span>11-40 MKIII<small>9531, 9532</small></span><span>11-40 MKIV<small>9497, 9498, 9472, 9473</small></span>
+          <span>11-46<small>9557, 9558</small></span><span>11-46 MKII<small>9517&ndash;9520</small></span><span>11-46 MKIII<small>9527&ndash;9530</small></span><span>11-46 MKIV<small>9475&ndash;9477, 9496, 9427&ndash;9429, 9437</small></span>
+          <span>11-55<small>9578, 9596</small></span><span>11-55 MKII<small>9513&ndash;9516</small></span><span>11-55 MKIII<small>9523&ndash;9526</small></span><span>11-55 MKIV<small>9533&ndash;9536, 9408, 9409, 9418, 9419</small></span>
+        </div>
+        <h4>BeoVision 14</h4>
+        <div class="tv-chips"><span>14-40<small>8830&ndash;8831</small></span><span>14-55<small>8820&ndash;8821</small></span></div>
+        <h4>Common issues</h4>
+        <ul class="tv-issues"><li>Picture and sound missing</li><li>Intermittent picture stutter</li><li>Live TV streaming app constantly buffering</li><li>Picture split in two, one side frozen or with green shading</li><li>TV does not start up in the morning</li><li>Small intermittent horizontal line in the picture</li><li>No HDMI picture, very slow start-up</li><li>No sound in internal speakers after a loud bang</li><li>Mechanical noise</li><li>Sound drops out</li><li>Image freezes or drops out</li></ul>
+        <div class="tv-cta"><a class="bo-btn solid" href="{{ tick }}">Request TV Service</a></div>
+      </div>
+    </article>
+
+    <article class="tv-fam flip" id="bv10">
+      <div class="tv-pic"><span class="tv-tag">10</span><img src="/images/bo/beovision-10.jpg" alt="BeoVision 10" loading="lazy"></div>
+      <div class="tv-body">
+        <h2>BeoVision <b>10</b></h2>
+        <div class="tv-sub">Backlight and picture repair</div>
+        <h4>Common issues</h4>
+        <ul class="tv-issues"><li>Backlight not working (dark image)</li><li>Pixelated image</li></ul>
+        <div class="tv-cta"><a class="bo-btn solid" href="{{ tick }}">Request TV Service</a></div>
+      </div>
+    </article>
+
+    <article class="tv-fam" id="bv8">
+      <div class="tv-pic"><span class="tv-tag">8</span><img src="/images/bo/beovision-8.jpg" alt="BeoVision 8" loading="lazy"></div>
+      <div class="tv-body">
+        <h2>BeoVision <b>8</b></h2>
+        <div class="tv-sub">Menu and module faults</div>
+        <h4>Common issues</h4>
+        <ul class="tv-issues"><li>Does not enter menu</li><li>DVB-HD module rebooting or resetting</li></ul>
+        <div class="tv-cta"><a class="bo-btn solid" href="{{ tick }}">Request TV Service</a></div>
+      </div>
+    </article>
+
+    <article class="tv-fam flip" id="bv7">
+      <div class="tv-pic"><span class="tv-tag">7</span><img src="/images/bo/beovision-7.jpg" alt="BeoVision 7" loading="lazy"></div>
+      <div class="tv-body">
+        <h2>BeoVision <b>7</b></h2>
+        <div class="tv-sub">Screen and curtain faults</div>
+        <h4>Common issues</h4>
+        <ul class="tv-issues"><li>Humidity on the contrast screen between front glass and LCD panel</li><li>Picture tearing along vertical edges</li><li>No curtain function when switching HD source on or off</li></ul>
+        <div class="tv-cta"><a class="bo-btn solid" href="{{ tick }}">Request TV Service</a></div>
+      </div>
+    </article>
+
+    <article class="tv-fam" id="bv4-6">
+      <div class="tv-body" style="grid-column:1/-1">
+        <h2>BeoVision <b>4</b> &amp; <b>6</b></h2>
+        <div class="tv-sub">The classics, still serviceable</div>
+        <div class="tv-also">
+          <div class="tv-mini"><img src="/images/bo/beovision-4.jpg" alt="BeoVision 4" loading="lazy"><h3>BeoVision 4</h3><p>Power, picture and sound faults. Start a ticket for a free estimate.</p></div>
+          <div class="tv-mini"><img src="/images/bo/beovision-6.jpg" alt="BeoVision 6" loading="lazy"><h3>BeoVision 6</h3><p>Power, picture and sound faults. Start a ticket for a free estimate.</p></div>
+        </div>
+        <p class="bo-note" style="text-align:left">Don't see your model? That doesn't mean we don't work on it. Start a ticket and we'll take a look.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="bo-band">
+  <div class="bo-wrap">
+    <div class="bo-eyebrow" style="color:#ff6b81">Warranty &amp; non-warranty</div>
+    <h2>Give your Beovision <b>a second life.</b></h2>
+    <p>Free estimates. Walk in, ship it to us, or use pickup and delivery.</p>
+    <div class="bo-btns"><a class="bo-btn solid" href="{{ tick }}">Request TV Service</a><a class="bo-btn" href="/bang-olufsen">Back to Bang &amp; Olufsen</a></div>
+  </div>
+</section>
+
+</div>
+{% endblock %}
