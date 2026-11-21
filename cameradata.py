@@ -6,6 +6,7 @@ Where the lists come from:
   * Fact check, Nov 2026: removed PDW-500, PZW-2000 and PZW-3000 (no Sony models by those
     numbers were found; PMW-500 and PZW-4000 are the real ones), renamed the RED entries
     to RED's own names (SCARLET DRAGON), and regrouped the Sony cameras by product line.
+    Left out AJ-SD93, AJ-D455 and BR-S822U: not confirmed in the sources checked.
   * Entries marked filled=True (Panasonic, Hitachi, ARRI, Blackmagic, Panasonic and
     JVC decks): common professional models added so every manufacturer has a list.
     Replace these with the shop's own lists when they are supplied.
@@ -99,11 +100,11 @@ DECK_BRANDS = [
         ("HDV (HVR)", ["HVR-M15", "HVR-M25", "HVR-M35"]),
     ]},
     {"name": "Panasonic", "slug": "panasonic", "label": "Panasonic Decks & Recorders", "filled": True, "groups": [
-        ("", ["AJ-HD1400", "AJ-HD1700", "AJ-HD1800", "AJ-SD93", "AJ-D455", "AG-DV2500", "AG-HPD24",
-              "AJ-HPM200", "AJ-HPD2500", "AJ-PD500", "AG-HMR10"]),
+        ("", ["AJ-HD1400", "AJ-HD1700", "AJ-HD1800", "AG-DV2500", "AG-HPD24", "AJ-HPM200", "AJ-HPD2500",
+              "AJ-PD500", "AG-HMR10"]),
     ]},
     {"name": "JVC", "slug": "jvc", "label": "JVC Decks & Recorders", "filled": True, "groups": [
-        ("", ["BR-HD50U", "BR-DV3000U", "BR-DV6000U", "BR-S822U", "SR-VS30U", "SR-HD1500US", "SR-HD2500US"]),
+        ("", ["BR-HD50U", "BR-DV3000U", "BR-DV6000U", "SR-VS30U", "SR-HD1500US", "SR-HD2500US"]),
     ]},
     {"name": "", "slug": "formats", "label": "Tape Formats", "placeholder": "Choose a format...", "groups": [
         ("", ["DAT recorder", "U-matic deck", "Betamax deck", "SuperBetamax / Hi-Band deck"]),
