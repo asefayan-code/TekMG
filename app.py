@@ -102,6 +102,7 @@ PAGES = {
     "projector-repair": "projector-repair.html",
     "monitor-repair": "monitor-repair.html",
     "bang-olufsen": "bang-olufsen.html",
+    "bang-olufsen/turntable-shop": "bang-olufsen-turntable-shop.html",
 }
 
 # Old tekmg.com addresses -> new pages (permanent redirect)
@@ -121,6 +122,8 @@ REDIRECTS = {
     "bang_and_olufsen/band_and_olufsen_service.aspx": "/bang-olufsen",
     "bang_and_olufsen/bang_and_olufsen_service.aspx": "/bang-olufsen",
     "bang-and-olufsen": "/bang-olufsen",
+    "bang_and_olufsen/turntabe_shop.aspx": "/bang-olufsen/turntable-shop",
+    "bang_and_olufsen/turntable_shop.aspx": "/bang-olufsen/turntable-shop",
 }
 
 
@@ -192,7 +195,8 @@ def llms():
         "- Other lens brands, each with a general troubleshooting flowchart: " + ", ".join("[%s](https://tekmg.com/lens-repair/%s)" % (ob["name"], ob["slug"]) for ob in OTHER_BRANDS) + "\n"
         "- [Professional and medical monitor repair](https://tekmg.com/monitor-repair): Sony PVM, BVM and LMD, Panasonic, JVC, Eizo, NEC and Barco; one page per Sony model with its warning lights and error signals from Sony's manuals; free estimates; 90-day warranty\n"
         "- [Professional camera, camcorder and deck repair](https://tekmg.com/camera-repair): cameras and camcorders from " + ", ".join(CAMERA_BRAND_NAMES) + "; video decks and recorders from " + ", ".join(DECK_BRAND_NAMES) + "; model list for each manufacturer, and equipment that is not listed is not ruled out; free estimates; 90-day warranty\n"
-        "- [Bang & Olufsen authorized service](https://tekmg.com/bang-olufsen): warranty and out-of-warranty repair of Beosound, BeoLab, Beocenter, Beogram and Beovision; Beogram 4000, 4002, 4004 and 8000 refurbishing program; California, Nevada and Arizona with nationwide shipping; free estimates\n\n"
+        "- [Bang & Olufsen authorized service](https://tekmg.com/bang-olufsen): warranty and out-of-warranty repair of Beosound, BeoLab, Beocenter, Beogram and Beovision; Beogram 4000, 4002, 4004 and 8000 refurbishing program; California, Nevada and Arizona with nationwide shipping; free estimates\n"
+        "- [Beogram turntable shop](https://tekmg.com/bang-olufsen/turntable-shop): Bang & Olufsen authorized classic repair for Beogram 4000, 4002, 4004, 8000, 8002 and TX; 4002-4004 restore program; free estimates; walk-in, ship-in, pickup and delivery\n\n"
         "## Company\n"
         "- [About](https://tekmg.com/about)\n"
         "- [Contact](https://tekmg.com/contact)\n"
