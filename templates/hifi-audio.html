@@ -1,24 +1,74 @@
 {% extends "base.html" %}
-{% block title %}Hi-Fi Audio Repair | McIntosh, Marantz, Denon | Tek Media Group{% endblock %}
-{% block desc %}High-end and vintage hi-fi repair: McIntosh, Marantz, Mark Levinson, Denon, Luxman, Nakamichi and more. Receivers, amplifiers, preamps. Free estimates, nationwide.{% endblock %}
+{% block title %}Experts HiFi Audio Equipment Repair Services | TEK Media Group{% endblock %}
+{% block desc %}Expert HiFi audio equipment repair and restoration for Marantz, Pioneer, Sansui, Yamaha, Sony, and 25+ vintage brands. 30+ years experience. Serving Los Angeles, CA. Call (818) 244-4440 for free estimates.{% endblock %}
 {% block canon %}/hifi-audio{% endblock %}
 {% block head %}
 <script type="application/ld+json">
-{% raw %}{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Hi-Fi Audio Repair", "serviceType": "Hi-Fi Audio Repair", "description": "Repair and restoration of high-end and vintage hi-fi audio equipment including McIntosh, Marantz, Mark Levinson and Denon.", "provider": {"@type": "LocalBusiness", "name": "Tek Media Group", "url": "https://tekmg.com/", "telephone": "+1-818-244-4440", "address": {"@type": "PostalAddress", "streetAddress": "711 South Victory Blvd", "addressLocality": "Burbank", "addressRegion": "CA", "postalCode": "91502", "addressCountry": "US"}}, "areaServed": "US", "url": "https://tekmg.com/hifi-audio"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tekmg.com/"}, {"@type": "ListItem", "position": 2, "name": "Hi-Fi Audio Repair", "item": "https://tekmg.com/hifi-audio"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you service McIntosh equipment?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. McIntosh is one of the brands we service, along with Marantz, Mark Levinson, Denon, Luxman, Nakamichi and others."}}, {"@type": "Question", "name": "My amplifier shows protection mode or has no sound. Can you fix it?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. These are common faults, caused by failed output stages, power supplies or relays. Start a service request for a free estimate."}}, {"@type": "Question", "name": "Do you repair hi-fi gear nationwide?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Ship your equipment to our Burbank, CA shop, or ask about pickup and delivery."}}, {"@type": "Question", "name": "Do you work on Bang & Olufsen?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, see our Bang & Olufsen service pages."}}]}, {"@type": "WebPage", "url": "https://tekmg.com/hifi-audio", "name": "Hi-Fi Audio Repair", "dateModified": "2026-11-21", "inLanguage": "en-US"}]}{% endraw %}
+{% raw %}{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "HiFi Audio Equipment Repair", "serviceType": "HiFi audio equipment repair and restoration", "provider": {"@type": "LocalBusiness", "name": "Tek Media Group", "url": "https://tekmg.com/", "telephone": "+1-818-244-4440", "address": {"@type": "PostalAddress", "streetAddress": "711 South Victory Blvd", "addressLocality": "Burbank", "addressRegion": "CA", "postalCode": "91502", "addressCountry": "US"}}, "areaServed": "US", "url": "https://tekmg.com/hifi-audio"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tekmg.com/"}, {"@type": "ListItem", "position": 2, "name": "HiFi Audio Repair", "item": "https://tekmg.com/hifi-audio"}]}]}{% endraw %}
 </script>
-{% include "_svc_css.html" %}
+<style>
+.rr-hero{background:linear-gradient(135deg,#0d7ad8,#17a8e3);color:#fff;text-align:center;padding:44px 16px}
+.rr-hero h1{color:#fff;font-size:1.7rem;margin:0 0 14px;font-weight:600}
+.rr-hero p{margin:0;font-size:.95rem}
+.rr-wrap{max-width:1000px;margin:0 auto;padding:20px 16px}
+.rr-crumbs{background:#f4f4f4;padding:10px 14px;font-size:.8rem;color:#555;margin-bottom:20px}
+.rr-crumbs a{color:#1a73c8;text-decoration:none;display:inline-block;padding:8px 0}
+.rr-cols{display:grid;grid-template-columns:1fr;gap:20px}
+.rr-card{background:#fff;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.12);padding:20px}
+.rr-card h2{color:#1478c8;font-size:1.3rem;font-weight:600;margin:0 0 18px;padding-bottom:10px;border-bottom:2px solid #1a9be0}
+.rr-img{width:100%;aspect-ratio:4/3;border-radius:4px;background:#ddd center/cover no-repeat;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.rr-card p{margin:0 0 14px;color:#555;line-height:1.7;font-size:.95rem}
+.rr-check{list-style:none;margin:0 0 20px;padding:0}
+.rr-check li{padding:6px 0 6px 28px;position:relative;color:#555;font-size:.95rem}
+.rr-check li:before{content:"\2713";position:absolute;left:4px;color:#1a73c8;font-weight:700}
+.rr-est{background:#f6f8fa;border-radius:6px;padding:20px;text-align:center}
+.rr-est h3{margin:0 0 14px;font-size:1.1rem;font-weight:500;color:#222}
+.rr-est .ph{display:block;font-size:1.5rem;color:#1a73c8;text-decoration:none;margin-bottom:14px;padding:6px}
+.rr-btn{display:inline-flex;align-items:center;min-height:48px;padding:0 28px;border-radius:24px;background:linear-gradient(90deg,#0d7ad8,#17a8e3);color:#fff;text-decoration:none;font-weight:600;box-shadow:0 3px 8px rgba(0,0,0,.2)}
+.rr-brands{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;list-style:none;margin:0;padding:0}
+.rr-brands li{background:#eef0f3;border:1px solid #d9dde2;border-radius:4px;padding:14px 6px;text-align:center;font-weight:600;color:#1a5fa0;font-size:.9rem}
+.rr-card h3.sub{font-size:1rem;font-weight:500;margin:18px 0 12px;color:#222}
+.rr-area{margin:0 0 16px}.rr-area b{display:block;color:#1478c8;font-weight:600}.rr-area span{color:#555;font-size:.9rem}
+.rr-cities{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:10px 0 0;padding:0}
+.rr-cities li{background:#f0f4f8;border-radius:14px;padding:6px 12px;font-size:.85rem;color:#444}
+@media(min-width:800px){.rr-cols{grid-template-columns:1fr 1fr;align-items:start}.rr-hero h1{font-size:2.1rem}.rr-brands{grid-template-columns:repeat(3,1fr)}}
+.rr-tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;list-style:none;margin:0 0 6px;padding:0}
+.rr-tiles li{background:#eef0f3;border:1px solid #d9dde2;border-radius:4px;padding:8px 8px 12px;text-align:center;font-weight:600;color:#1a5fa0;font-size:.9rem}
+.rr-tiles span{display:block;aspect-ratio:4/3;background:#222 center/cover no-repeat;border-radius:3px;margin-bottom:8px}
+@media(min-width:800px){.rr-tiles{grid-template-columns:repeat(3,1fr)}}
+</style>
 {% endblock %}
 {% block content %}
-<nav class="sv-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <span>Hi-Fi Audio Repair</span></nav>
-<section class="sv-hero"><h1>Hi-Fi Audio Repair</h1><p>Receivers, amplifiers, preamps and high-end audio components repaired and restored, serviced nationwide from Burbank, CA.</p><a class="sv-btn" href="https://techmediagroup.repairshopr.com/check_ins">Request Service</a><a class="sv-btn alt" href="tel:+18182444440">Call (818) 244-4440</a></section>
-<div class="sv-wrap">
-<h2>Brands we repair</h2>
-<ul class="sv-chips"><li>McIntosh</li><li>Marantz</li><li>Mark Levinson</li><li>Denon</li><li>Harman-Kardon</li><li>Luxman</li><li>Onkyo</li><li>Anthem</li><li>Pioneer</li><li>Infinity</li><li>Boston Acoustics</li><li>NAD</li><li>Adcom</li><li>Nakamichi</li><li>Cambridge Audio</li></ul>
-<h2>What we fix</h2>
-<div class="sv-cols"><div class="sv-box"><h3>Receivers &amp; amplifiers</h3><ul><li>No sound or one channel dead</li><li>Protection mode and relay faults</li><li>Hum, buzz or distortion</li><li>Power supply and capacitor replacement</li></ul></div><div class="sv-box"><h3>Preamps &amp; processors</h3><ul><li>Input and selector faults</li><li>Volume and balance control repair</li><li>Remote and display problems</li><li>Noise and crackling controls</li></ul></div><div class="sv-box"><h3>Tape &amp; cassette decks</h3><ul><li>Belts and transport service</li><li>Head and alignment service</li><li>Dolby and meter faults</li><li>Nakamichi and other high-end decks</li></ul></div><div class="sv-box"><h3>Restoration</h3><ul><li>Full recap and service of vintage gear</li><li>Cleaning and lubrication</li><li>Lamp and display replacement</li><li>Bench testing before return</li></ul></div></div>
-<h2>Questions</h2>
-<div class="sv-faq"><details><summary>Do you service McIntosh equipment?</summary><p>Yes. McIntosh is one of the brands we service, along with Marantz, Mark Levinson, Denon, Luxman, Nakamichi and others.</p></details><details><summary>My amplifier shows protection mode or has no sound. Can you fix it?</summary><p>Yes. These are common faults, caused by failed output stages, power supplies or relays. Start a service request for a free estimate.</p></details><details><summary>Do you repair hi-fi gear nationwide?</summary><p>Yes. Ship your equipment to our Burbank, CA shop, or ask about pickup and delivery.</p></details><details><summary>Do you work on Bang &amp; Olufsen?</summary><p>Yes, see our <a href="/bang-olufsen">Bang &amp; Olufsen service</a> pages.</p></details></div>
-<div class="sv-cta"><h2 style="margin-top:0">Start a repair</h2><p>Free estimates. Walk in, ship it to us, or ask about pickup and delivery.</p><a class="sv-btn" href="https://techmediagroup.repairshopr.com/check_ins">Request Service</a></div>
-<p style="text-align:center;font-size:.85rem;color:#666;margin-top:20px">Tek Media Group &middot; 711 South Victory Blvd., Burbank, CA 91502 &middot; Updated November 21, 2026</p>
+<section class="rr-hero"><h1>Expert HiFi Audio Equipment Repair Services</h1><p>Over 35 Years of Excellence in Vintage HiFi Restoration - Expert Workmanship Since 1991</p></section>
+<div class="rr-wrap">
+<div class="rr-cols">
+<div class="rr-card">
+<h2>Our HiFi Repair Services</h2>
+<p>TEK Media Group specializes in professional HiFi audio equipment repair and restoration services. With over 30 years of experience, we provide expert diagnostics, repairs, and restorations for both professional and consumer HiFi gear.</p>
+<p><b>Comprehensive Services Include:</b></p>
+<ul class="rr-check"><li>Complete mechanical overhaul and calibration</li><li>Amplifier, receiver, and preamp repairs</li><li>Speaker diagnostics and restoration</li><li>Electronics troubleshooting and repair</li><li>Belt and drive mechanism replacement</li><li>Input/output and control cleaning</li><li>Restoration of vintage HiFi equipment</li></ul>
+<div class="rr-est"><h3>Get Your Free Estimate Today</h3><a class="ph" href="tel:+18182444440">&#128222; (818) 244-4440</a><a class="rr-btn" href="https://techmediagroup.repairshopr.com/check_ins">Start New Service Ticket</a></div>
+</div>
+<div>
+<div class="rr-card" style="margin-bottom:20px">
+<h2>HiFi Brands We Repair</h2>
+<p>We service 30+ professional and consumer HiFi audio brands:</p>
+<h3 class="sub">Featured Brands</h3>
+<ul class="rr-tiles"><li><span style="background-image:url(https://tekmg.com/Mcintosh/Images/All-Mcintosh-Repair-Experts.png)" role="img" aria-label="McIntosh repair"></span>McIntosh</li><li><span style="background-image:url(https://tekmg.com/Marantz/Marantz-Images/Marantz.png)" role="img" aria-label="Marantz repair"></span>Marantz</li><li><span style="background-image:url(https://tekmg.com/Audio-Recievers/Luxman/Images/Luxman-Audio-Repair-Shop.png)" role="img" aria-label="Luxman repair"></span>Luxman</li><li><span style="background-image:url(https://tekmg.com/Audio-Recievers/SCOTT/image/H-H-Scott-355-Repair.png)" role="img" aria-label="Scott repair"></span>Scott</li><li><span style="background-image:url(https://tekmg.com/Audio-Recievers/danon/image/Danon-Audio-Repair-Shop.png)" role="img" aria-label="Danon repair"></span>Danon</li><li><span style="background-image:url(https://tekmg.com/Audio-Recievers/Mark-Levinson/images/Mark-Levinson-Audio-Repair.png)" role="img" aria-label="Mark Levinson repair"></span>Mark Levinson</li></ul>
+<ul class="rr-brands"><li>Harman Kardon</li><li>Nad</li><li>Nakamichi</li><li>Sansui</li><li>Yamaha</li><li>Technics</li><li>Kenwood</li><li>Onkyo</li><li>Denon</li></ul>
+<h3 class="sub">Additional Brands</h3>
+<ul class="rr-brands"><li>Sony</li><li>Rotel</li><li>Sherwood</li><li>Aiwa</li><li>Fisher</li><li>JVC</li><li>Philips</li><li>Sanyo</li><li>Akai</li><li>Pyle</li></ul>
+</div>
+<div class="rr-card">
+<h2>Service Areas</h2>
+<div class="rr-area"><b>&#128205; Pickup &amp; Delivery:</b><span>San Francisco to San Diego, California</span></div>
+<div class="rr-area"><b>&#128205; Shipping:</b><span>Nationwide - We Accept Shipments from All 50 States</span></div>
+<div class="rr-area"><b>&#128205; Walk-Ins Welcome:</b><span>Glendale, CA Location</span></div>
+<h3 class="sub">Some of the Cities We Serve in Los Angeles County:</h3>
+<ul class="rr-cities"><li>Burbank</li><li>Pasadena</li><li>Los Angeles</li><li>La Cañada Flintridge</li><li>South Pasadena</li><li>Alhambra</li><li>Monterey Park</li><li>West Hollywood</li><li>Beverly Hills</li><li>Culver City</li><li>Santa Monica</li><li>Inglewood</li><li>Long Beach</li><li>Anaheim</li><li>San Fernando</li><li>Altadena</li><li>Sierra Madre</li><li>Arcadia</li><li>Monrovia</li><li>Duarte</li><li>El Monte</li><li>South Gate</li><li>Lynwood</li><li>Huntington Park</li><li>Compton</li><li>Seal Beach</li><li>Placentia</li><li>Fullerton</li><li>Orange</li><li>Santa Ana</li></ul>
+</div>
+</div>
+</div>
 </div>
 {% endblock %}
+{% block footer %}{% include "_old_footer.html" %}{% endblock %}
