@@ -72,6 +72,16 @@
 .bo details[open] summary::after{content:"\2013"}
 .bo details p{margin:10px 0 0;color:var(--mid)}
 .bo-note{text-align:center;margin-top:26px;font-size:.92rem;color:var(--mid)}
+.bo-tt{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.bo-tcard{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);padding:18px;scroll-margin-top:90px}
+.bo-tcard:hover{border-color:var(--red)}
+.bo-tcard img{width:96px;height:72px;object-fit:cover;flex:none;border:1px solid var(--line);background:var(--soft)}
+.bo-tcard h3{font-size:1.02rem;font-weight:600;margin:0 0 4px;color:var(--ink)}
+.bo-tcard p{font-size:.86rem;color:var(--mid);margin:0}
+.bo-tcard .bo-sub{margin:0 0 6px;font-size:.82rem}
+.bo-rp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:26px}
+.bo-rp div{background:#fff;border:1px solid var(--line);padding:14px;text-align:center;font-size:.8rem;color:var(--mid)}
+.bo-rp b{display:block;font-size:1.15rem;font-weight:600;color:var(--red);margin-bottom:2px}
 @media(prefers-reduced-motion:reduce){.bo-platter,.bo-rings i{animation:none}}
 </style>
 {% endblock %}
@@ -81,9 +91,9 @@
 <section class="bo-hero">
   <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="bo-wrap">
-    <div class="bo-eyebrow">Authorized Service Center &middot; Burbank, CA</div>
-    <h1>Bang &amp; Olufsen,<br><b>sounding the way it should.</b></h1>
-    <p class="bo-lead">Repair and restoration of vintage and current Bang &amp; Olufsen, in warranty and out. Serving California, Nevada and Arizona, with nationwide shipping.</p>
+    <div class="bo-eyebrow">Authorized Service Center &middot; Nationwide</div>
+    <h1>Bang &amp; <b>Olufsen</b></h1>
+    <p class="bo-lead">Repair and restoration of vintage and current Bang &amp; Olufsen, in warranty and out. We work nationwide: walk in, ship it to us, or use pickup and delivery.</p>
     <div class="bo-btns">
       <a class="bo-btn solid" href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket</a>
       <a class="bo-btn" href="#models">Find Your Model</a>
@@ -172,12 +182,37 @@
   </div>
 </section>
 
+<section class="bo-sec" id="turntable-shop">
+  <div class="bo-wrap">
+    <div class="bo-head">
+      <div class="bo-eyebrow">Classic Repair Shop</div>
+      <h2>Beogram <b>turntable service.</b></h2>
+      <p>Authorized classic repair for the Beogram, including our 4002 &ndash; 4004 restore program.</p>
+    </div>
+    <div class="bo-tt">
+      <article class="bo-tcard"><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/beogram-4000.jpg" alt="Beogram 4000" loading="lazy" width="96" height="72"><div><h3>Beogram 4000 Service</h3><div class="bo-sub">Type 5215 &middot; 1972 &ndash; Dec 1974</div><p>33 and 45 rpm, tangential pickup arm, automatic record-size scanning, belt drive, electronically controlled motor sync.</p></div></article>
+      <article class="bo-tcard"><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/beogram-4000-4002-4004-service-repair.jpg" alt="Beogram 4002 and 4004 restore program" loading="lazy" width="96" height="72"><div><h3>Beogram 4002 Service</h3><div class="bo-sub">Types 5501, 5511, 5521 &middot; USA 5503, 5513, 5523</div><p>1974 &ndash; 1980. Tangential tonearm, automatic record-size and speed selection. Ask about the 4002 &ndash; 4004 Restoration Program.</p></div></article>
+      <article class="bo-tcard"><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/Beogram-4004-Repair_Service.jpg" alt="Beogram 4004" loading="lazy" width="96" height="72"><div><h3>Beogram 4004 Service</h3><div class="bo-sub">Types 5525, GB 5527, USA 5526 &middot; 1978 &ndash; 1980</div><p>33 and 45 rpm, tangential tonearm, belt drive, 110&ndash;240 V power supply, automatic record-size and speed selection.</p></div></article>
+      <article class="bo-tcard"><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/beogram_8000_8002_Service_repair.jpg" alt="Beogram 8000 and 8002" loading="lazy" width="96" height="72"><div><h3>Beogram 8000 &ndash; 8002 Service &amp; Repair</h3><div class="bo-sub">Type 5615 &middot; 1981 &ndash; May 1983</div><p>Tangential tonearm with automatic record-size and speed selection.</p></div></article>
+      <article class="bo-tcard"><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/TX_2_Bang-and-Olufsen-Beogram-TX2-Tekmg.jpg" alt="Beogram TX" loading="lazy" width="96" height="72"><div><h3>Beogram TX Service</h3><div class="bo-sub">Tangential tonearm</div><p>Automatic record-size and speed selection.</p></div></article>
+    </div>
+    <div class="bo-rp">
+      <div><b>98%</b>Repair success rate</div>
+      <div><b>Free</b>Estimates</div>
+      <div><b>In stock</b>Most parts</div>
+      <div><b>2&ndash;4 weeks</b>Turnaround</div>
+      <div><b>3 ways</b>Walk-in, ship-in, pickup &amp; delivery</div>
+    </div>
+    <div class="bo-btns"><a class="bo-btn solid" href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket</a></div>
+  </div>
+</section>
+
 <section class="bo-sec bo-alt">
   <div class="bo-wrap">
     <div class="bo-head"><div class="bo-eyebrow">How It Works</div><h2>Four steps. <b>No surprises.</b></h2></div>
     <div class="bo-steps">
       <div class="bo-step"><h4>Start a ticket</h4><p>Tell us the model and what it's doing. Takes two minutes online.</p></div>
-      <div class="bo-step"><h4>Bring it in or ship it</h4><p>Visit our Burbank shop or ship from anywhere in the country.</p></div>
+      <div class="bo-step"><h4>Bring it in or ship it</h4><p>Walk in, ship it from anywhere in the country, or use pickup and delivery.</p></div>
       <div class="bo-step"><h4>Free estimate</h4><p>We diagnose it and give you a clear price before any repair work begins.</p></div>
       <div class="bo-step"><h4>Back to life</h4><p>Repaired, tested and on its way back to you. Track your ticket online.</p></div>
     </div>
