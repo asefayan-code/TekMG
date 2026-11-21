@@ -106,6 +106,8 @@ PAGES = {
     "bang-olufsen/beovision-tv": "bang-olufsen-beovision-tv.html",
     "bang-olufsen/beosound-beocenter": "bang-olufsen-beosound-beocenter.html",
     "bang-olufsen/beosound-9000": "bang-olufsen-beosound-9000.html",
+    "bang-olufsen/beolab-beovox": "bang-olufsen-beolab-beovox.html",
+    "bang-olufsen/beolab-5": "bang-olufsen-beolab-5.html",
 }
 
 # Old tekmg.com addresses -> new pages (permanent redirect)
@@ -206,7 +208,9 @@ def llms():
         "- [Beogram turntable shop](https://tekmg.com/bang-olufsen/turntable-shop): Bang & Olufsen authorized classic repair for Beogram 4000, 4002, 4004, 8000, 8002 and TX; 4002-4004 restore program; free estimates; walk-in, ship-in, pickup and delivery\n"
         "- [Beovision TV repair](https://tekmg.com/bang-olufsen/beovision-tv): Bang & Olufsen Beovision TV repair, warranty and non-warranty; Harmony, Eclipse, Avant, Horizon, BeoVision 11, 14, 10, 8, 7, 6 and 4; common faults listed per model; free estimates\n"
         "- [Beosound and Beocenter repair](https://tekmg.com/bang-olufsen/beosound-beocenter): every Bang & Olufsen Beosound and Beocenter model on one page; pick a model to request service; free estimates\n"
-        "- [Beosound 9000 repair](https://tekmg.com/bang-olufsen/beosound-9000): Bang & Olufsen Beosound 9000 multi-CD player repair; CD not reading, sledge and glass door stuck, Cleaning Required message, laser replacement, motor and clamp repair; free estimates\n\n"
+        "- [Beosound 9000 repair](https://tekmg.com/bang-olufsen/beosound-9000): Bang & Olufsen Beosound 9000 multi-CD player repair; CD not reading, sledge and glass door stuck, Cleaning Required message, laser replacement, motor and clamp repair; free estimates\n"
+        "- [BeoLab and Beovox speaker repair](https://tekmg.com/bang-olufsen/beolab-beovox): every Bang & Olufsen BeoLab and Beovox speaker on one page; pick a model to request service; free estimates\n"
+        "- [BeoLab 5 repair](https://tekmg.com/bang-olufsen/beolab-5): BeoLab 5 red protection light, no bass, ICEpower amplifier, acoustic lens and driver repair; free estimates\n\n"
         "## Company\n"
         "- [About](https://tekmg.com/about)\n"
         "- [Contact](https://tekmg.com/contact)\n"

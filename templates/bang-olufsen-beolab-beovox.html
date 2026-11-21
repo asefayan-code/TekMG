@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title %}BeoLab & Beovox Speaker Repair | Bang & Olufsen | Tek Media Group{% endblock %}
+{% block desc %}Repair for every Bang & Olufsen BeoLab and Beovox speaker, including BeoLab 5. Pick your model to request service. Free estimates, nationwide.{% endblock %}
+{% block canon %}/bang-olufsen/beolab-beovox{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Bang & Olufsen BeoLab and Beovox Speaker Repair","serviceType":"Bang & Olufsen speaker repair","description":"Repair and restoration of Bang & Olufsen BeoLab active speakers and Beovox passive speakers, including BeoLab 5, BeoLab 8000, BeoLab Penta, BeoLab 18 and BeoLab 20.","provider":{"@type":"LocalBusiness","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},"areaServed":"US","url":"https://tekmg.com/bang-olufsen/beolab-beovox"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"},{"@type":"ListItem","position":3,"name":"BeoLab & Beovox Repair","item":"https://tekmg.com/bang-olufsen/beolab-beovox"}]}]}{% endraw %}
+</script>
+{% include "_bo_css.html" %}
+{% endblock %}
+{% block content %}
+{% set tick = 'https://techmediagroup.repairshopr.com/check_ins' %}
+{% set lab = [
+ ('Current &amp; recent','Active and wireless speakers',['BeoLab 90','BeoLab 50','BeoLab 28','BeoLab 20','BeoLab 19','BeoLab 18','BeoLab 17']),
+ ('Active classics','Acoustic lens, columns and compact active speakers',['BeoLab 3','BeoLab 4','BeoLab 9','BeoLab 1','BeoLab 2','BeoLab 6000','BeoLab 6002','BeoLab 8000','BeoLab 8002','BeoLab Penta','BeoLab Penta 2','BeoLab Penta 3']),
+ ('TV speakers','Under-screen and home-cinema speakers',['BeoLab 7-1','BeoLab 7-2','BeoLab 7-4','BeoLab 12-1','BeoLab 12-2','BeoLab 12-3','BeoLab 14','BeoLab 15']),
+ ('Vintage','Early BeoLab and link-room speakers',['BeoLab 2000','BeoLab 3000','BeoLab 3500','BeoLab 4000','BeoLab 4500','BeoLab 5000','BeoLab LCS 9000']),
+] %}
+{% set vox = [
+ ('Red Line &amp; CX','Beovox RL 35','Beovox RL 45','Beovox RL 45.2','Beovox RL 60','Beovox RL 60.2','Beovox RL 140','Beovox RL 1000','Beovox RL 2000','Beovox RL 6000','Beovox RL 7000','Beovox CX 50','Beovox CX 100','Beovox MC 120.2','Beovox Penta'),
+ ('S series','Beovox S 22','Beovox S 25','Beovox S 30','Beovox S 35','Beovox S 40','Beovox S 45','Beovox S 45-2','Beovox S 50','Beovox S 55','Beovox S 60','Beovox S 70','Beovox S 75','Beovox S 80','Beovox S 80.2','Beovox S 120','Beovox P 45','Beovox C 75'),
+ ('Classic Beovox','Beovox 500','Beovox 600','Beovox 901','Beovox 1000','Beovox 1100','Beovox 2500','Beovox 3000','Beovox 4000','Beovox 4500','Beovox 5000','Beovox 5700'),
+] %}
+<div class="bo">
+
+<section class="bo-hero tv">
+  <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="bo-wrap">
+    <div class="bo-eyebrow">Authorized Service &middot; Nationwide</div>
+    <h1>BeoLab &amp; <b>Beovox</b> Speaker Repair</h1>
+    <p class="bo-lead">Every BeoLab and Beovox on one page. Pick your model and go straight to the service request.</p>
+    <div class="bo-big">
+      <label for="msModel">Choose your model to be serviced</label>
+      <select id="msModel" aria-describedby="msHelp">
+        <option value="">Select a BeoLab or Beovox&hellip;</option>
+        <option value="BeoLab 5">BeoLab 5</option>
+        {% for title, sub, models in lab %}
+        <optgroup label="BeoLab &middot; {{ title|striptags|replace('&amp;','&') }}">{% for m in models %}<option value="{{ m }}">{{ m }}</option>{% endfor %}</optgroup>
+        {% endfor %}
+        {% for row in vox %}
+        <optgroup label="Beovox &middot; {{ row[0]|striptags|replace('&amp;','&') }}">{% for m in row[1:] %}<option value="{{ m }}">{{ m }}</option>{% endfor %}</optgroup>
+        {% endfor %}
+        <option value="other">My model is not listed</option>
+      </select>
+      <small id="msHelp">Selecting a model opens the service request page.</small>
+      <noscript><p style="text-align:center;margin-top:14px"><a class="bo-btn solid" href="{{ tick }}">Request Service</a></p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec" style="padding:48px 0 8px">
+  <div class="bo-wrap">
+    <div class="b9">
+      <div class="b9-pic"><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/beolab5.jpg" alt="Bang &amp; Olufsen BeoLab 5 speaker" loading="lazy"></div>
+      <div class="b9-body">
+        <h2>Beo<b>Lab 5</b></h2>
+        <p>The acoustic lens flagship. Red protection light, no bass, a broken lens mechanism or a dead channel: we repair BeoLab 5 speakers, in or out of warranty.</p>
+        <ul class="b9-list"><li>Amplifier and ICEpower repair</li><li>Acoustic lens repair</li><li>Driver reconing</li><li>DSP and bass-control faults</li></ul>
+        <div class="bo-btns" style="justify-content:flex-start"><a class="bo-btn solid" href="/bang-olufsen/beolab-5">BeoLab 5 Repair</a><a class="bo-btn" href="{{ tick }}">Request Service</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec">
+  <div class="bo-wrap">
+    <div class="ms-title"><h2>Beo<b>Lab</b></h2><span>Tap any model to start a service ticket</span></div>
+    <div class="ms-group"><div class="ms-chips"><a href="{{ tick }}">BeoLab 5</a></div></div>
+    {% for title, sub, models in lab %}
+    <div class="ms-group">
+      <h3>{{ title|safe }}</h3>
+      <div class="bo-sub">{{ sub }}</div>
+      <div class="ms-chips">{% for m in models %}<a href="{{ tick }}">{{ m }}</a>{% endfor %}</div>
+    </div>
+    {% endfor %}
+
+    <div class="ms-title" style="margin-top:56px"><h2>Beo<b>vox</b></h2><span>Passive speakers</span></div>
+    {% for row in vox %}
+    <div class="ms-group">
+      <h3>{{ row[0]|safe }}</h3>
+      <div class="ms-chips">{% for m in row[1:] %}<a href="{{ tick }}">{{ m }}</a>{% endfor %}</div>
+    </div>
+    {% endfor %}
+    <p class="bo-note">Don't see your model? That doesn't mean we don't work on it. Start a ticket and we'll take a look.</p>
+  </div>
+</section>
+
+<section class="bo-sec bo-alt">
+  <div class="bo-wrap" style="max-width:900px">
+    <div class="bo-head"><div class="bo-eyebrow">Troubleshooting</div><h2>Symptom &amp; <b>solution.</b></h2></div>
+    <table class="b9-t">
+      <thead><tr><th>Symptom</th><th>Repair solution</th></tr></thead>
+      <tbody>
+        <tr><td>Speaker completely dead</td><td>Replace the blown internal fuse; repair or replace the power supply board</td></tr>
+        <tr><td>Distorted or muffled sound</td><td>Replace deteriorated foam surrounds; repair or replace damaged drivers</td></tr>
+        <tr><td>Loud hum or buzz</td><td>Replace failing electrolytic capacitors; check ground connections</td></tr>
+        <tr><td>Intermittent cutting out</td><td>Repair the thermal protection circuit; resolder loose PCB connections</td></tr>
+        <tr><td>Red LED or error indicator</td><td>Diagnose and repair the amplifier protection circuit; replace the damaged output stage</td></tr>
+        <tr><td>No bass response</td><td>Replace the blown woofer; repair the bass amplifier module; check the crossover</td></tr>
+        <tr><td>Crackling when playing</td><td>Recone drivers; clean the voice coil; replace damaged dust caps</td></tr>
+        <tr><td>Won't connect wirelessly</td><td>Replace the Wi-Fi or Bluetooth module; repair antenna connections</td></tr>
+        <tr><td>Penta cone damage</td><td>Full cone replacement and driver refurbishment</td></tr>
+        <tr><td>Acoustic lens issues (BeoLab 5)</td><td>Repair or replace the acoustic lens assembly; realign the tweeter</td></tr>
+      </tbody>
+    </table>
+    <div class="b9-warn">
+      <h3>Handle with care</h3>
+      <ul>
+        <li>All BeoLab speakers contain active amplification. Never open one without proper ESD protection.</li>
+        <li>Many models use proprietary ICEpower amplifier modules that need specialized replacement.</li>
+        <li>Foam surrounds deteriorate over time, especially on models 20+ years old, and should be replaced proactively.</li>
+        <li>Wireless models need firmware updates and calibration after a board replacement.</li>
+        <li>Original B&amp;O drivers are unavailable for many vintage models, so reconing is required.</li>
+      </ul>
+    </div>
+    <div class="bo-btns"><a class="bo-btn solid" href="{{ tick }}">Request Service</a><a class="bo-btn" href="/bang-olufsen">All Bang &amp; Olufsen Service</a></div>
+  </div>
+</section>
+
+</div>
+<script>
+(function(){var s=document.getElementById('msModel');if(!s)return;s.addEventListener('change',function(){if(s.value){window.location.href='{{ tick }}';}});})();
+</script>
+{% endblock %}

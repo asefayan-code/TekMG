@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}BeoLab 5 Repair | Bang & Olufsen | Tek Media Group{% endblock %}
+{% block desc %}BeoLab 5 repair: red protection light, no bass, ICEpower amplifier, acoustic lens and driver faults. Warranty and non-warranty. Free estimates, nationwide.{% endblock %}
+{% block canon %}/bang-olufsen/beolab-5{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Bang & Olufsen BeoLab 5 Repair","serviceType":"BeoLab 5 speaker repair","provider":{"@type":"LocalBusiness","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},"areaServed":"US","url":"https://tekmg.com/bang-olufsen/beolab-5"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"},{"@type":"ListItem","position":3,"name":"BeoLab & Beovox Repair","item":"https://tekmg.com/bang-olufsen/beolab-beovox"},{"@type":"ListItem","position":4,"name":"BeoLab 5 Repair","item":"https://tekmg.com/bang-olufsen/beolab-5"}]}]}{% endraw %}
+</script>
+{% include "_bo_css.html" %}
+{% endblock %}
+{% block content %}
+{% set tick = 'https://techmediagroup.repairshopr.com/check_ins' %}
+<div class="bo">
+
+<section class="bo-hero tv" style="padding:56px 0 50px">
+  <div class="bo-wrap">
+    <div class="b9h">
+      <div class="pic"><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/beolab5.jpg" alt="Bang &amp; Olufsen BeoLab 5 speaker"></div>
+      <div>
+        <div class="bo-eyebrow">Authorized Service &middot; Nationwide</div>
+        <h1>BeoLab <b>5</b> Repair</h1>
+        <p class="bo-lead" style="margin-left:0">Acoustic lens technology, active amplification and a digital sound engine, all in one speaker. We repair BeoLab 5, in or out of warranty.</p>
+        <div class="bo-btns" style="justify-content:flex-start"><a class="bo-btn solid" href="{{ tick }}">Request Service</a><a class="bo-btn" href="/bang-olufsen/beolab-beovox">All BeoLab &amp; Beovox</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec">
+  <div class="bo-wrap">
+    <div class="bo-head"><div class="bo-eyebrow">What We Do</div><h2>Common BeoLab 5 <b>repairs.</b></h2></div>
+    <div class="b9-svc">
+      <div><b>01</b><h3>Amplifier &amp; ICEpower</h3><p>Red protection light, dead channel or no sound: we diagnose the amplifier protection circuit and replace the ICEpower amplifier or damaged output stage.</p></div>
+      <div><b>02</b><h3>Acoustic lens repair</h3><p>Acoustic lens mechanism repair or replacement of the lens assembly, with the tweeter realigned.</p></div>
+      <div><b>03</b><h3>Drivers &amp; reconing</h3><p>Blown woofer or no bass: driver reconing and replacement, bass amplifier module repair, crossover check.</p></div>
+      <div><b>04</b><h3>DSP &amp; bass control</h3><p>Woofer amplifier and DSP board faults, EEPROM failures and Adaptive Bass Control microphone faults.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec bo-alt">
+  <div class="bo-wrap" style="max-width:900px">
+    <div class="bo-head"><div class="bo-eyebrow">Troubleshooting</div><h2>Symptom &amp; <b>solution.</b></h2></div>
+    <table class="b9-t">
+      <thead><tr><th>Symptom</th><th>Repair solution</th></tr></thead>
+      <tbody>
+        <tr><td>Red LED or error indicator</td><td>Diagnose and repair the amplifier protection circuit; replace the damaged output stage</td></tr>
+        <tr><td>No bass response</td><td>Replace the blown woofer; repair the bass amplifier module; check the crossover</td></tr>
+        <tr><td>One speaker not working</td><td>Check the master and slave link cable; ICEpower amplifier module; power distribution</td></tr>
+        <tr><td>Acoustic lens problems</td><td>Repair or replace the acoustic lens assembly; realign the tweeter</td></tr>
+        <tr><td>Crackling or distortion</td><td>Recone drivers; clean the voice coil; check connections</td></tr>
+        <tr><td>Physical damage</td><td>Repair a broken acoustic lens, dented grille or damaged finish</td></tr>
+      </tbody>
+    </table>
+    <div class="b9-warn">
+      <h3>Handle with care</h3>
+      <ul>
+        <li>BeoLab 5 contains active, mains-connected amplification. Never open one without proper ESD protection.</li>
+        <li>The ICEpower amplifier modules are proprietary and need specialized replacement.</li>
+        <li>Many internal repairs need B&amp;O service tools, which is why this work belongs with an authorized service center.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bo-band">
+  <div class="bo-wrap">
+    <div class="bo-eyebrow" style="color:#ff6b81">Warranty &amp; non-warranty</div>
+    <h2>Bring your BeoLab 5 <b>back to life.</b></h2>
+    <p>Free estimates. Walk in, ship it to us, or use pickup and delivery.</p>
+    <div class="bo-btns"><a class="bo-btn solid" href="{{ tick }}">Request Service</a><a class="bo-btn" href="/bang-olufsen">Back to Bang &amp; Olufsen</a></div>
+  </div>
+</section>
+
+</div>
+{% endblock %}
