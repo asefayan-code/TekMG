@@ -20,6 +20,16 @@
 .ms-chips{display:flex;flex-wrap:wrap;gap:8px}
 .ms-chips a{border:1px solid var(--line);background:#fff;padding:9px 16px;font-size:.88rem;color:var(--ink);text-decoration:none;transition:.2s}
 .ms-chips a:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-2px)}
+.b9{display:grid;grid-template-columns:minmax(240px,420px) 1fr;gap:44px;align-items:center;border:1px solid var(--red);background:#fff;padding:28px;box-shadow:0 18px 44px rgba(179,18,43,.08)}
+@media(max-width:820px){.b9{grid-template-columns:1fr;gap:22px}}
+.b9-pic{position:relative;background:var(--soft);padding:12px}
+.b9-pic img{display:block;width:100%;height:auto}
+.b9 h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:12px}
+.b9 p{color:var(--mid);margin:0 0 14px}
+.b9-list{list-style:none;margin:0 0 6px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;font-size:.92rem}
+@media(max-width:520px){.b9-list{grid-template-columns:1fr}}
+.b9-list li::before{content:"\2013";color:var(--red);margin-right:8px}
+.tv-tag{position:absolute;left:-1px;top:18px;background:var(--red);color:#fff;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;padding:5px 12px;font-weight:600}
 .ms-title{display:flex;align-items:baseline;gap:14px;margin:0 0 26px;padding-bottom:12px;border-bottom:2px solid var(--red)}
 .ms-title h2{font-size:clamp(1.6rem,3.6vw,2.4rem)}
 .ms-title span{color:var(--mid);font-size:.9rem}
@@ -28,15 +38,16 @@
 {% block content %}
 {% set tick = 'https://techmediagroup.repairshopr.com/check_ins' %}
 {% set sound = [
- ('Modern platform','Balance, Emerge, Level and the newer generations',['Beosound Balance','Beosound Emerge','Beosound Level','Beosound A5','Beosound 1 (3rd Gen)','Beosound 2 (3rd Gen)']),
+ ('Modern platform','Balance, Emerge, Level and the newer generations',['Beosound Balance','Beosound Emerge','Beosound Level','Beosound A5','Beosound A9','Beosound A1 (2nd Gen)','Beosound 1 (3rd Gen)','Beosound 2 (3rd Gen)']),
  ('Architectural &amp; outdoor','Statement pieces and weatherproof portables',['Beosound Shape','Beosound Theatre','Beosound Explore','Beosound Outdoor']),
- ('Multi-room &amp; voice control','Wireless, streaming and voice-enabled models',['Beosound 35','Beosound 1 (2nd Gen)','Beosound 2 (2nd Gen)','Beosound Core','Beosound Edge','Beosound Stage']),
- ('Foundational era','The first streaming and portable generation',['Beosound 1','Beosound 2','Beosound 3','Beosound 4','Beosound 5','Beosound 6','Beosound 8','Beosound Essence']),
- ('Legacy','Classic Beosound, including CD sensor, lens, laser, motor and clamp service',['Beosound 9000','Beosound 3000','Beosound 3200','Beosound Ouverture','Beosound Century','Beosound 2000']),
+ ('Multi-room &amp; voice control','Wireless, streaming and voice-enabled models',['Beosound 35','Beosound 1 (2nd Gen)','Beosound 2 (2nd Gen)','Beosound Core','Beosound Edge','Beosound Stage','Beosound Moment','Beosound Essence']),
+ ('Foundational era','The first streaming and portable generation',['Beosound 1','Beosound 2','Beosound 3','Beosound 4','Beosound 5','Beosound 5 Encore','BeoMaster 5','Beosound 6','Beosound 8']),
+ ('Legacy','Classic Beosound',['Beosound 3000','Beosound 3200','Beosound 4000','Beosound Ouverture','Beosound Century','Beosound 2000']),
 ] %}
 {% set system = [
- ('Beocenter 2','Beocenter 1400','Beocenter 1500','Beocenter 1600','Beocenter 1800'),
- ('Beocenter 2300','Beocenter 2500','Beocenter 4000','Beocenter 6000','Beocenter 7007','Beocenter 7700','Beocenter 8500','Beocenter 9000','Beocenter 9500'),
+ ('Beocenter 2','Beocenter 2 Audio','Beocenter 2300','Beocenter 2500','Beocenter 8000','Beocenter 8500','Beocenter 9300','Beocenter 9500'),
+ ('Beocenter 2000','Beocenter 2002','Beocenter 2100','Beocenter 2200','Beocenter 4000','Beocenter 5000','Beocenter 6000','Beocenter 7000','Beocenter 7002','Beocenter 7007','Beocenter 7700','Beocenter 9000'),
+ ('Beocenter 1400','Beocenter 1500','Beocenter 1600','Beocenter 1800','Beocenter 2600','Beocenter 2800','Beocenter 3300','Beocenter 3500','Beocenter 3600','Beocenter 4600'),
 ] %}
 <div class="bo">
 
@@ -50,6 +61,7 @@
       <label for="msModel">Choose your model</label>
       <select id="msModel" aria-describedby="msHelp">
         <option value="">Select a Beosound or Beocenter&hellip;</option>
+        <optgroup label="Featured"><option value="Beosound 9000">Beosound 9000</option></optgroup>
         {% for title, sub, models in sound %}
         <optgroup label="Beosound &middot; {{ title|striptags|replace('&amp;','&') }}">
           {% for m in models %}<option value="{{ m }}">{{ m }}</option>{% endfor %}
@@ -62,6 +74,21 @@
       </select>
       <small id="msHelp">Selecting a model opens the service request page.</small>
       <noscript><p style="text-align:center;margin-top:14px"><a class="bo-btn solid" href="{{ tick }}">Request Service</a></p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="bo-sec" style="padding:48px 0 8px">
+  <div class="bo-wrap">
+    <div class="b9">
+      <div class="b9-pic"><span class="tv-tag">Our Specialty</span><img src="https://tekmg.com/Bang_and_Olufsen/BangAndOlufsen_Images/beosound9000.jpg" alt="Bang &amp; Olufsen Beosound 9000 multi-CD player" loading="lazy"></div>
+      <div class="b9-body">
+        <div class="bo-eyebrow">Beosound 9000 Specialists</div>
+        <h2>Beosound <b>9000</b></h2>
+        <p>The multi-CD player that changed the look of audio, 1996 to 2011. It is also the one we repair more than any other. Disc not reading, glass door or sledge stuck, a "Cleaning required" message that won't clear: we fix them.</p>
+        <ul class="b9-list"><li>Sensor and lens cleaning</li><li>Laser cleaning and replacement</li><li>Motor, clamp and sledge repair</li><li>Service-mode diagnostics</li></ul>
+        <div class="bo-btns" style="justify-content:flex-start"><a class="bo-btn solid" href="/bang-olufsen/beosound-9000">Beosound 9000 Repair</a><a class="bo-btn" href="{{ tick }}">Request Service</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -79,9 +106,13 @@
     {% endfor %}
 
     <div class="ms-title" style="margin-top:56px"><h2>Beo<b>center</b></h2><span>All-in-one music systems</span></div>
+    {% set eras = ['1990s &amp; 2000s','1980s','1970s'] %}
+    {% for row in system %}
     <div class="ms-group">
-      <div class="ms-chips">{% for row in system %}{% for m in row %}<a href="{{ tick }}">{{ m }}</a>{% endfor %}{% endfor %}</div>
+      <h3>{{ eras[loop.index0]|safe }}</h3>
+      <div class="ms-chips">{% for m in row %}<a href="{{ tick }}">{{ m }}</a>{% endfor %}</div>
     </div>
+    {% endfor %}
 
     <p class="bo-note">Don't see your model? That doesn't mean we don't work on it. Start a ticket and we'll take a look.</p>
     <div class="bo-btns"><a class="bo-btn solid" href="{{ tick }}">Request Service</a><a class="bo-btn" href="/bang-olufsen">All Bang &amp; Olufsen Service</a></div>
