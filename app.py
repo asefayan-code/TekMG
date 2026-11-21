@@ -101,6 +101,9 @@ PAGES = {
     "camera-repair": "camera-repair.html",
     "projector-repair": "projector-repair.html",
     "monitor-repair": "monitor-repair.html",
+    "reel-to-reel": "reel-to-reel.html",
+    "hifi-audio": "hifi-audio.html",
+    "site-index": "site-index.html",
     "bang-olufsen": "bang-olufsen.html",
     "bang-olufsen/turntable-shop": "bang-olufsen-turntable-shop.html",
     "bang-olufsen/beovision-tv": "bang-olufsen-beovision-tv.html",
@@ -127,6 +130,10 @@ REDIRECTS = {
     "bang_and_olufsen/band_and_olufsen_service.aspx": "/bang-olufsen",
     "bang_and_olufsen/bang_and_olufsen_service.aspx": "/bang-olufsen",
     "bang-and-olufsen": "/bang-olufsen",
+    "sitemap": "/site-index",
+    "sitemap.html": "/site-index",
+    "reel_to_reel": "/reel-to-reel",
+    "hifi_audio": "/hifi-audio",
     "bang-olufsen/beosound-beosystem": "/bang-olufsen/beosound-beocenter",
     "bang_and_olufsen/turntabe_shop.aspx": "/bang-olufsen/turntable-shop",
     "bang_and_olufsen/turntable_shop.aspx": "/bang-olufsen/turntable-shop",
@@ -185,7 +192,7 @@ def sitemap():
     for b in BRANDS.values():
         urls += ["/lens-repair/" + b["slug"]] + ["/lens-repair/" + b["slug"] + "/" + m["slug"] for m in b["models"]]
     urls += ["/lens-repair/" + ob["slug"] for ob in OTHER_BRANDS]
-    body = "".join("<url><loc>https://tekmg.com%s</loc></url>" % u for u in urls)
+    body = "".join("<url><loc>https://tekmg.com%s</loc><lastmod>2026-11-21</lastmod></url>" % u for u in dict.fromkeys(urls) if u != "/site-index" or True)
     xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + body + "</urlset>"
     return Response(xml, mimetype="application/xml")
 
@@ -210,8 +217,11 @@ def llms():
         "- [Beosound and Beocenter repair](https://tekmg.com/bang-olufsen/beosound-beocenter): every Bang & Olufsen Beosound and Beocenter model on one page; pick a model to request service; free estimates\n"
         "- [Beosound 9000 repair](https://tekmg.com/bang-olufsen/beosound-9000): Bang & Olufsen Beosound 9000 multi-CD player repair; CD not reading, sledge and glass door stuck, Cleaning Required message, laser replacement, motor and clamp repair; free estimates\n"
         "- [BeoLab and Beovox speaker repair](https://tekmg.com/bang-olufsen/beolab-beovox): every Bang & Olufsen BeoLab and Beovox speaker on one page; pick a model to request service; free estimates\n"
-        "- [BeoLab 5 repair](https://tekmg.com/bang-olufsen/beolab-5): BeoLab 5 red protection light, no bass, ICEpower amplifier, acoustic lens and driver repair; free estimates\n\n"
+        "- [BeoLab 5 repair](https://tekmg.com/bang-olufsen/beolab-5): BeoLab 5 red protection light, no bass, ICEpower amplifier, acoustic lens and driver repair; free estimates\n"
+        "- [Hi-fi audio repair](https://tekmg.com/hifi-audio): McIntosh, Marantz, Mark Levinson, Denon, Luxman, Nakamichi and other high-end and vintage receivers, amplifiers and preamps; free estimates\n"
+        "- [Reel-to-reel repair](https://tekmg.com/reel-to-reel): vintage and professional reel-to-reel recorders from Studer, Akai, Teac, Tascam, Revox and Ampex; free estimates\n\n"
         "## Company\n"
+        "- [Site index](https://tekmg.com/site-index): every page on the site\n"
         "- [About](https://tekmg.com/about)\n"
         "- [Contact](https://tekmg.com/contact)\n"
         "- [Accessibility](https://tekmg.com/accessibility)\n"

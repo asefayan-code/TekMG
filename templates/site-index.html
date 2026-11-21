@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Site Index | All Repair Services | Tek Media Group{% endblock %}
+{% block desc %}Every Tek Media Group repair page in one list: lenses, cameras, monitors, projectors, hi-fi audio, reel-to-reel and Bang & Olufsen service.{% endblock %}
+{% block canon %}/site-index{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{% raw %}{"@context":"https://schema.org","@type":"CollectionPage","name":"Site Index","url":"https://tekmg.com/site-index","dateModified":"2026-11-21","isPartOf":{"@type":"WebSite","name":"Tek Media Group","url":"https://tekmg.com/"}}{% endraw %}
+</script>
+{% include "_svc_css.html" %}
+<style>.si h2{text-align:left;font-size:1.25rem;border-bottom:2px solid #a94e2c;padding-bottom:6px}.si ul{list-style:none;padding:0;margin:0 0 8px;columns:1}.si li a{display:block;padding:10px 0;min-height:24px;color:#0f62ac;text-decoration:none}.si small{color:#666}@media(min-width:700px){.si ul{columns:2}}@media(min-width:1000px){.si ul{columns:3}}</style>
+{% endblock %}
+{% block content %}
+<nav class="sv-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <span>Site Index</span></nav>
+<div class="sv-wrap si">
+<h1 style="text-align:center">Site Index</h1>
+<p style="text-align:center">Every repair page on one list. Tek Media Group, 711 South Victory Blvd., Burbank, CA &middot; (818) 244-4440</p>
+
+<h2>Main pages</h2>
+<ul><li><a href="/">Home</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/accessibility">Accessibility</a></li><li><a href="/search">Site search</a></li><li><a href="https://techmediagroup.repairshopr.com/check_ins">Start a service request</a></li></ul>
+
+<h2>Lenses, cameras, monitors, projectors</h2>
+<ul><li><a href="/lens-repair">Professional lens repair</a></li><li><a href="/camera-repair">Professional camera repair</a></li><li><a href="/monitor-repair">Monitor repair</a></li><li><a href="/projector-repair">Projector repair</a></li></ul>
+
+<h2>Hi-fi and audio</h2>
+<ul><li><a href="/hifi-audio">Hi-fi audio repair</a></li><li><a href="/reel-to-reel">Reel-to-reel repair</a></li></ul>
+
+<h2>Bang &amp; Olufsen</h2>
+<ul><li><a href="/bang-olufsen">Bang &amp; Olufsen service</a></li><li><a href="/bang-olufsen/beosound-beocenter">Beosound &amp; Beocenter</a></li><li><a href="/bang-olufsen/beosound-9000">Beosound 9000</a></li><li><a href="/bang-olufsen/beolab-beovox">BeoLab &amp; Beovox</a></li><li><a href="/bang-olufsen/beolab-5">BeoLab 5</a></li><li><a href="/bang-olufsen/beovision-tv">BeoVision TV</a></li><li><a href="/bang-olufsen/turntable-shop">Beogram turntable shop</a></li></ul>
+
+<h2>Lens brands</h2>
+<ul><li><a href="/lens-repair/fujinon">Fujinon</a></li><li><a href="/lens-repair/canon">Canon</a></li>{% for b in other_brands %}<li><a href="/lens-repair/{{ b.slug }}">{{ b.name }}</a></li>{% endfor %}</ul>
+
+<h2>Fujinon lens models</h2>
+<ul>{% for m in fujinon_models %}<li><a href="/lens-repair/fujinon/{{ m.slug }}">{{ m.name }}</a></li>{% endfor %}</ul>
+
+<h2>Canon lens models</h2>
+<ul>{% for m in canon_models %}<li><a href="/lens-repair/canon/{{ m.slug }}">{{ m.name }}</a></li>{% endfor %}</ul>
+
+<h2>Sony monitor models</h2>
+<ul>{% for m in sony_monitors %}<li><a href="/monitor-repair/{{ m.slug }}">{{ m.name }}</a></li>{% endfor %}</ul>
+</div>
+{% endblock %}
