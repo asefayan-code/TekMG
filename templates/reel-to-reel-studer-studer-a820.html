@@ -1,0 +1,609 @@
+{% extends "base.html" %}
+{% block title %}Studer A820 Reel-to-Reel Repair Guide | TEK Media Group{% endblock %}
+{% block desc %}Studer A820 Restoration Guide: Service, repair, capacitor replacement, troubleshooting, and maintenance tips for the ultimate analog tape machine. Market value, investment, and technical resources for studios and collectors.{% endblock %}
+{% block canon %}/reel-to-reel/studer/studer-a820{% endblock %}
+{% block head %}
+<style>.sd *{box-sizing: border-box; margin: 0; padding: 0;}.sd{font-family: 'Courier New', monospace; line-height: 1.6; color: #333; max-width: 100vw; margin: 0 auto; padding: 4vw; background: #f5f5f5;}.sd .content-wrapper{background: white; padding: 5vw 4vw; border: 1px solid #ddd; box-shadow: 2px 2px 5px rgba(0,0,0,0.05); max-width: 900px; margin: 0 auto;}.sd h1{font-size: 2em; margin-bottom: 0.6em; letter-spacing: -1px; color: #2c3e50;}.sd h2{font-size: 1.2em; margin: 2em 0 1em 0; padding: 0.7em 0 0.3em 0; border-bottom: 2px solid #ccc; color: #34495e;}.sd h3{font-size: 1em; margin: 1.2em 0 0.7em 0; color: #7f8c8d;}.sd .subtitle{font-style: italic; color: #666; margin-bottom: 20px; font-size: 1.1em;}.sd .header-section{border-bottom: 3px double #333; margin-bottom: 2em; padding-bottom: 1.2em; text-align: center;}.sd .disclaimer{background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; font-size: 0.9em; color: #856404; text-align: left; font-weight: bold;}.sd section{background: white; padding: 20px; margin-bottom: 25px; border: 1px solid #eee; box-shadow: 0 1px 3px rgba(0,0,0,0.05);}.sd .warning{background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;}.sd .danger{background: #f8d7da; border-left: 4px solid #dc3545; padding: 15px; margin: 20px 0;}.sd .danger strong{color: #721c24;}.sd .warning strong{color: #856404;}.sd .info-box{background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin: 20px 0;}.sd .success-box{background: #d4edda; border-left: 4px solid #28a745; padding: 15px; margin: 20px 0;}.sd .table-responsive{width: 100%; overflow-x: auto;}.sd table{width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; min-width: 600px;}.sd th,.sd td{border: 1px solid #ddd; padding: 8px 12px; text-align: left;}.sd th{background: #f0f0f0; font-weight: bold;}.sd tr:nth-child(even){background: #f9f9f9;}.sd ul,.sd ol{margin: 15px 0 15px 25px;}.sd li{margin-bottom: 8px;}.sd .badge{display: inline-block; background: #dc3545; color: white; padding: 3px 8px; font-size: 0.8em; border-radius: 3px; margin-right: 10px;}.sd .badge-blue{background: #17a2b8;}.sd .badge-green{background: #28a745;}.sd .badge-purple{background: #6f42c1;}.sd .badge-orange{background: #fd7e14;}.sd .component-category{background: #e9ecef; padding: 10px; margin: 15px 0 10px 0; font-weight: bold; border-left: 3px solid #007bff;}.sd .model-grid{display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;}.sd .model-card{border: 1px solid #ccc; padding: 15px; background: #f8f9fa; border-radius: 3px;}.sd .price-tag{font-weight: bold; color: #28a745; margin-top: 5px; font-size: 1.1em;}.sd .kit-reference{display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;}.sd .kit-card{border: 1px solid #ccc; padding: 15px; background: #f8f9fa; border-radius: 3px;}.sd footer{margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; text-align: center;}.sd code{background: #eee; padding: 2px 5px; font-family: 'Courier New', monospace; border-radius: 2px;}.sd .compatibility-note{background: #e7f3ff; padding: 10px; border-radius: 3px; margin: 10px 0;}.sd .part-number{font-family: 'Courier New', monospace; background: #f0f0f0; padding: 2px 4px; border-radius: 2px; font-size: 0.9em;}.sd .voltage-warning{color: #dc3545; font-weight: bold;}.sd .checklist{background: #f8f9fa; padding: 15px; border-radius: 3px; margin: 15px 0;}.sd .checklist-item{margin: 5px 0;}.sd .board-diagram{background: #f0f0f0; padding: 15px; font-family: 'Courier New', monospace; text-align: center; border-radius: 3px;}.sd .capacitor-warning{background: #f0f0f0; padding: 15px; border-left: 4px solid #dc3545; margin: 15px 0;}.sd .stud-mount-note{background: #f0f0f0; padding: 15px; border-left: 4px solid #17a2b8; margin: 15px 0;}@media (max-width: 600px){.sd{padding: 2vw;}.sd .content-wrapper{padding: 4vw 2vw;}.sd section{padding: 2vw;}.sd .model-grid,.sd .kit-reference{grid-template-columns: 1fr;}.sd h1{font-size: 1.3em;}.sd h2{font-size: 1em;}.sd h3{font-size: 0.95em;}.sd table{font-size: 0.9em; min-width: 480px;}}.sd{overflow-x:auto;max-width:100%}</style>
+<script type="application/ld+json">{% raw %}{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Studer A820 Repair", "serviceType": "Reel-to-reel tape recorder repair", "provider": {"@type": "LocalBusiness", "name": "Tek Media Group", "telephone": "+1-818-244-4440", "url": "https://tekmg.com"}, "areaServed": "United States", "url": "https://tekmg.com/reel-to-reel/studer/studer-a820"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tekmg.com/"}, {"@type": "ListItem", "position": 2, "name": "Reel To Reel", "item": "https://tekmg.com/reel-to-reel"}, {"@type": "ListItem", "position": 3, "name": "Studer", "item": "https://tekmg.com/reel-to-reel/studer"}, {"@type": "ListItem", "position": 4, "name": "Studer A820", "item": "https://tekmg.com/reel-to-reel/studer/studer-a820"}]}]}{% endraw %}</script>
+{% endblock %}
+{% block footer %}{% include "_old_footer.html" %}{% endblock %}
+{% block content %}
+<div class="sd">
+<div style="font-size:.8rem;margin:0 0 12px;font-family:Arial,sans-serif"><a href="/" style="display:inline-block;padding:10px 0">Home</a> &gt; <a href="/reel-to-reel" style="display:inline-block;padding:10px 0">Reel To Reel</a> &gt; <a href="/reel-to-reel/studer" style="display:inline-block;padding:10px 0">Studer</a> &gt; Studer A820</div>
+<div class="content-wrapper">
+        <div class="header-section">
+            <h1>Studer A820</h1>
+            <p class="subtitle">The Ultimate Analog Tape Machine • 1987-1997 • Swiss Precision at its Peak</p>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Studer documentation when available. Proceed at your own risk.
+        </div>
+
+        <div class="danger">
+            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Studer A820 contains <span class="voltage-warning">infamous Frako electrolytic capacitors</span> that will short out and fail catastrophically. It also contains <span class="voltage-warning">RIFA "exploding" paper capacitors</span> that WILL fail with smoke and fire. <strong>Never apply mains power to an unrestored A820 without first replacing all RIFA capacitors and critical Frako electrolytics.</strong>
+        </div>
+
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The Studer A820, introduced in 1987, represents the pinnacle of analog tape recorder development. As the successor to the legendary A80, the A820 incorporated advanced microprocessor-controlled transport, sophisticated tape tension control, and exceptional audio performance. It was produced until approximately 1997 and remains one of the most sought-after analog recorders for mastering and high-end recording applications.</p>
+            
+            <div class="info-box">
+                <strong>📌 Key Features:</strong>
+                <ul>
+                    <li>Microprocessor-controlled transport with self-diagnostic system</li>
+                    <li>Advanced tape tension control with servo-controlled spooling motors</li>
+                    <li>Varispeed capability</li>
+                    <li>Remote control support (parallel and serial interfaces)</li>
+                    <li>Comprehensive error message display</li>
+                    <li>Modular construction with plug-in cards</li>
+                </ul>
+            </div>
+            
+            <p>The A820 was available in numerous configurations including 1/4" stereo mastering machines, multi-track versions, and broadcast configurations. Its sophisticated design includes three independent power supplies (stabilizer boards) and extensive use of plug-in cards for audio, transport control, and motor drive functions.</p>
+        </section>
+
+        <section id="value">
+            <h2>Current Market Value (2024)</h2>
+            <p>Values for the A820 have escalated dramatically as the machine is recognized as the ultimate analog recorder:</p>
+            
+            <div class="model-grid">
+                <div class="model-card">
+                    <strong>Unrestored / Project Unit</strong>
+                    <p>Non-working, unknown condition, likely multiple dead channels, blown Frakos, may have error messages</p>
+                    <div class="price-tag">$8,000-15,000</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Partially Restored</strong>
+                    <p>Some capacitors replaced, basic functionality, may have intermittent issues</p>
+                    <div class="price-tag">$15,000-25,000</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Fully Restored</strong>
+                    <p>Complete recap, transport overhaul, new EPROMs, calibration, LED conversion</p>
+                    <div class="price-tag">$25,000-35,000</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Mint / Low Hours</strong>
+                    <p>Exceptional original condition, low head wear, fully documented, factory reconditioned</p>
+                    <div class="price-tag">$35,000-50,000+</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>1/4" Stereo Mastering Version</strong>
+                    <p>Specifically configured for stereo mastering, most desirable configuration</p>
+                    <div class="price-tag">$30,000-45,000+</div>
+                </div>
+            </div>
+            
+            <p><strong>Note:</strong> The A820 is considered the ultimate analog recorder and values reflect this status. Machines that have undergone professional restoration by recognized experts (such as those in Germany) command premium prices. EPROM integrity is critical - all EPROMs should be backed up and replaced as they are software-specific to the A820.</p>
+        </section>
+
+        <section id="failures">
+            <h2>Common Failure Modes</h2>
+            
+            <h3><span class="badge">#1</span> Frako Electrolytic Capacitor Failure (The #1 Killer)</h3>
+            <p><strong>Symptom:</strong> Missing power rails, blown fuses, dead channels, intermittent operation. One technician found a shorted Frako on the Stabilizer board causing missing +5.6V and +24V rails. Another reported: "All the frakos on the rear mounted PSU's have to be replaced, then all the others on the cards. I have had two PSU's burn to scrap over 30 years of maintaining 820's".</p>
+            <p><strong>Cause:</strong> Frako capacitors from this era are infamous for drying out, leaking electrolyte, and shorting catastrophically. They are found throughout the power supplies, stabilizer boards, audio cards, and transport cards.</p>
+            <p><strong>Repair:</strong> Replace ALL Frako electrolytic capacitors on sight. This includes the three stabilizer boards, all audio cards, and transport cards. Use 105°C rated capacitors and consider increasing voltage ratings where physically possible.</p>
+            
+            <div class="stud-mount-note">
+                <strong>🔧 Power Supply Strategy:</strong> "The best way to treat a machine that was 'put in storage because it didn't work' is to pull all audio cards and get the transport only working, then put one channel of audio back, and keep adding recapped cards. Voltages will not indicate if a card cap is bad. That's why you have to reduce the load on the supplies to work on them."
+            </div>
+            
+            <h3><span class="badge">#2</span> RIFA "Exploding" Capacitor Failure</h3>
+            <p><strong>Symptom:</strong> Smoke, burning smell, loud cracking, blown fuses. One technician noted RIFA caps failing in the power filter before the transformer, causing loss of AC to motor supply cards.</p>
+            <p><strong>Cause:</strong> Paper dielectric absorbs moisture over decades and shorts catastrophically.</p>
+            <p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight before applying power. Found on power supply inputs and various control cards.</p>
+            
+            <h3><span class="badge">#3</span> "Motor Supply Voltage Low" Error</h3>
+            <p><strong>Symptom:</strong> Machine powers on with "no errors detected," but after a few seconds displays "motor supply voltage low" error. Spooling motors don't work - no play, FF, or rewind.</p>
+            <p><strong>Cause:</strong> Complex issue with multiple potential causes:</p>
+            <ul>
+                <li><strong>C10 (47µF) on spooling motor PS card:</strong> One technician resolved same error by replacing this capacitor, led there by poor oscilloscope waveform symmetry.</li>
+                <li><strong>Failed transistors or transistor sockets:</strong> The spooling motor PS card (1.820.777.84) transistors often have failing sockets; better to solder transistor legs directly to PCB.</li>
+                <li><strong>RIFA caps before transformer:</strong> Yellow 0.1µF RIFA caps fail, cutting AC to motor supply.</li>
+                <li><strong>Failed bridge rectifiers:</strong> Large capacitors near the transformer or bridge rectifiers for spooling motors may fail.</li>
+            </ul>
+            <p><strong>Repair:</strong> Check spooling motor PS card first - replace C10 (47µF), check transistors and their sockets, ensure red/yellow LEDs light briefly on power-up. Check AC supply to the card from the nearby transformer. Replace RIFA caps in power filter. One user recapped the stabilizer and spooling motor supply but still had the error, indicating deeper issues.</p>
+            
+            <h3><span class="badge">#4</span> Erratic Spooling / Tension Oscillation</h3>
+            <p><strong>Symptom:</strong> Fast forward/rewind works only for a few seconds, then slows down; guide rollers drop near "play" position; violent tension arm oscillation on both sides; error message "INCORRECT RADIUS MEASUREMENT" appears.</p>
+            <p><strong>Cause:</strong> Multiple potential causes:</p>
+            <ul>
+                <li><strong>Bad RC4559 on tension sensor board (1.820.772):</strong> One technician located a defective RC4559 op-amp.</li>
+                <li><strong>Failed AD7524 DACs on spooling motor control (1.820.760):</strong> Replacing all three AD7524's on the right branch temporarily fixed the problem.</li>
+                <li><strong>Defective spooling motor tacho sensors:</strong> Check duty cycle of square wave on TAPE DECK COUNTER/TIMER (1.820.761).</li>
+            </ul>
+            <p><strong>Repair:</strong> Re-adjust tension sensor offset (0+15mV/-0mV) and gain (2.7±10mV). Check spooling motor tacho sensors. If problem persists, suspect AD7524 DACs or RC4559 op-amps.</p>
+            
+            <h3><span class="badge">#5</span> Erases but Doesn't Record</h3>
+            <p><strong>Symptom:</strong> Machine erases previous signal correctly but records no new audio. Playback works fine.</p>
+            <p><strong>Cause:</strong> Recording circuit failure - multiple possibilities:</p>
+            <ul>
+                <li><strong>Oscillator boards:</strong> Both channels failing simultaneously points to common oscillator issue. Check K-REC-XY and AFCSW-XY.</li>
+                <li><strong>HF driver boards:</strong> "Not the simplest or easiest to troubleshoot".</li>
+                <li><strong>Menu settings:</strong> Check that Rec Lvl and Bias values are not set to zero.</li>
+                <li><strong>Connections:</strong> Ribbon cables between bus boards, head block D-sub wiring may have come loose during transport.</li>
+                <li><strong>D/A converters:</strong> Unlikely both boards fail simultaneously.</li>
+            </ul>
+            <p><strong>Repair:</strong> Check bias at record head with oscilloscope (measure Vp-p or Vrms). Verify record amp board relay operation (pin 4 to 0V, pin 22 to +15V). Try swapping boards between channels. Check SYNC playback (uses record head) to verify head wiring.</p>
+            
+            <h3><span class="badge">#6</span> Stabilizer Board Voltage Issues</h3>
+            <p><strong>Symptom:</strong> Incorrect voltages, particularly -26V rail reading -31.5V. One user reported: "Without load I measure +25.9V and -27.1V".</p>
+            <p><strong>Cause:</strong> Stabilizer board (1.820.832.00) capacitor failure. A jumper between pins 3 and 4 of UC3843N IC that didn't match schematic was found in one case. Removing it killed that section entirely.</p>
+            <p><strong>Repair:</strong> Replace all electrolytics on stabilizer boards first, 105°C caps only. Check C107, C109, C111, C12, C110, C114. Verify all resistors in that area haven't drifted high. Note that -31.5V instead of -26V is suspiciously 5.5V too great - check connections and grounds.</p>
+            
+            <h3><span class="badge">#7</span> EPROM Failure / Corruption</h3>
+            <p><strong>Symptom:</strong> Machine passes self-diagnostic test but transport doesn't operate.</p>
+            <p><strong>Cause:</strong> EPROMs specific to A820 software can fail or become corrupted. The self-test may overlook EPROM issues.</p>
+            <p><strong>Repair:</strong> Replace all EPROMs and keep backups. They are software-specific to the A820 and must be obtained from reliable sources.</p>
+            
+            <h3><span class="badge">#8</span> Power Supply Failure (Three Stabilizers)</h3>
+            <p><strong>Symptom:</strong> Buzzing, oscillation, no output from stabilizer boards, blown fuses (±15V, +24V, or +50V).</p>
+            <p><strong>Cause:</strong> Failed capacitors on the three rear-mounted stabilizer boards. Large electrolytic capacitors (1000µF–10,000µF, 16V–63V) degrade, causing voltage instability.</p>
+            <p><strong>Repair:</strong> "All electrolytics on the three stabilizers first, 105 deg caps only, up the voltage to physically fit the cans to the pcb". Use low-ESR capacitors for switching power supplies to ensure stability.</p>
+            
+            <h3><span class="badge">#9</span> Audio Card Capacitor Failure</h3>
+            <p><strong>Symptom:</strong> Reduced audio quality, intermittent channels, dead channels.</p>
+            <p><strong>Cause:</strong> Smaller capacitors (10µF–47µF, 25V–63V) on audio boards degrade, affecting sound clarity or causing ±15V fuse failures.</p>
+            <p><strong>Repair:</strong> Recap all audio cards. "It was pretty slick having SR on each channel, but hundreds of caps ugh". Use low-ESR or non-polarized capacitors for audio paths to preserve sound quality. Avoid replacing SAL capacitors unless necessary.</p>
+            
+            <h3><span class="badge">#10</span> Tape Lifter / Transport Switch Issues</h3>
+            <p><strong>Symptom:</strong> Tape contacts heads during fast wind, excessive head wear.</p>
+            <p><strong>Cause:</strong> Worn tape lifters fail to keep tape clear of heads. Transport switches on deck or remote degrade over time.</p>
+            <p><strong>Repair:</strong> Visually inspect lifters and test for tape-head contact by disabling auto-mute function. Replace transport switches if needed.</p>
+        </section>
+
+        <section id="power-supply-strategy">
+            <h2>⚠️ CRITICAL: Power Supply Restoration Strategy</h2>
+            
+            <div class="capacitor-warning">
+                <strong>🔧 THE CORRECT APPROACH TO A820 RESTORATION:</strong>
+            </div>
+            
+            <p>Experienced A820 technicians emphasize a systematic approach:</p>
+            
+            <ol>
+                <li><strong>Pull all audio cards</strong> - Remove all audio channel cards to reduce load on power supplies.</li>
+                <li><strong>Get transport only working first</strong> - Verify transport functionality independently.</li>
+                <li><strong>Replace all electrolytics on the three stabilizers</strong> - Use 105°C rated caps, increase voltage ratings where physically possible.</li>
+                <li><strong>Replace all Frakos on rear-mounted PSUs</strong> - These are notorious for burning boards to scrap.</li>
+                <li><strong>Test voltages with reduced load</strong> - Voltages will not indicate if a card cap is bad; you must reduce load to work on supplies.</li>
+                <li><strong>Add recapped audio cards one by one</strong> - Test after each addition.</li>
+            </ol>
+            
+            <p>One technician's experience: "I have had two PSU's burn to scrap over 30 years of maintaining 820's. When a room smelled of magic smoke it was either a GML op amp or a 820 supply!"</p>
+        </section>
+
+        <section id="board-identification">
+            <h2>Critical Board Identification</h2>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Board</th>
+                    <th>Part Number</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td><strong>Stabilizer</strong></td>
+                    <td>1.820.832.00</td>
+                    <td>Power regulation, ±15V, +24V, +5.6V</td>
+                </tr>
+                <tr>
+                    <td><strong>Spooling Motor PS</strong></td>
+                    <td>1.820.777.84</td>
+                    <td>Motor supply, red/yellow LEDs, C10 (47µF) critical</td>
+                </tr>
+                <tr>
+                    <td><strong>Tension Sensor</strong></td>
+                    <td>1.820.772</td>
+                    <td>Contains RC4559 op-amp that fails</td>
+                </tr>
+                <tr>
+                    <td><strong>Spooling Motor Control</strong></td>
+                    <td>1.820.760</td>
+                    <td>Contains AD7524 DACs that fail</td>
+                </tr>
+                <tr>
+                    <td><strong>Tape Deck Counter</strong></td>
+                    <td>1.820.761</td>
+                    <td>For checking tacho sensor duty cycle</td>
+                </tr>
+                <tr>
+                    <td><strong>Master Periphery Controller</strong></td>
+                    <td>Various</td>
+                    <td>Check connections if recording fails</td>
+                </tr>
+                <tr>
+                    <td><strong>HF Driver</strong></td>
+                    <td>Various</td>
+                    <td>Not easy to troubleshoot; remove to test recording</td>
+                </tr>
+                <tr>
+                    <td><strong>REC Amplifier</strong></td>
+                    <td>Various</td>
+                    <td>Check relay operation (pin 4/22)</td>
+                </tr>
+            </table></div>
+            
+            <p><strong>Note:</strong> The A820 uses extensive plug-in cards. Always check and clean card contacts and connector sockets.</p>
+        </section>
+
+        <section id="repair">
+            <h2>Systematic Restoration Process</h2>
+            
+            <div class="warning">
+                <strong>🔧 RESTORATION PHILOSOPHY:</strong> The A820 is a complex microprocessor-controlled machine requiring systematic restoration. German restorers note: "Wenn man derart alte Technik wieder regelmäßig nutzen will, ist eine komplette Überholung unumgänglich" (If you want to use such old technology regularly, a complete overhaul is essential).
+            </div>
+            
+            <div class="checklist">
+                <h3>Complete Restoration Checklist:</h3>
+                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all card positions, wiring)</div>
+                <div class="checklist-item">✅ Stage 1 - Pull all audio cards to reduce load on power supplies</div>
+                <div class="checklist-item">✅ Stage 2 - Replace ALL RIFA capacitors on power inputs and control cards</div>
+                <div class="checklist-item">✅ Stage 3 - Replace ALL Frako capacitors on three rear-mounted stabilizers</div>
+                <div class="checklist-item">✅ Stage 4 - Replace ALL Frako capacitors on spooling motor PSU</div>
+                <div class="checklist-item">✅ Stage 5 - Replace C10 (47µF) on spooling motor PS card</div>
+                <div class="checklist-item">✅ Stage 6 - Check transistors on spooling motor PS card; solder directly if sockets failing</div>
+                <div class="checklist-item">✅ Stage 7 - Replace large stud-mount capacitors (C1-C4) with high-quality low-ESR types</div>
+                <div class="checklist-item">✅ Stage 8 - Recap all audio cards (hundreds of capacitors)</div>
+                <div class="checklist-item">✅ Stage 9 - Replace EPROMs and keep backups</div>
+                <div class="checklist-item">✅ Stage 10 - Check tension sensor boards; replace RC4559 if needed</div>
+                <div class="checklist-item">✅ Stage 11 - Verify AD7524 DACs on spooling motor control</div>
+                <div class="checklist-item">✅ Stage 12 - Clean all card contacts and connector sockets</div>
+                <div class="checklist-item">✅ Stage 13 - Full calibration per service manual</div>
+            </div>
+            
+            <p><strong>Pro Tip:</strong> The A820's self-diagnostic test may pass even with EPROM issues. Don't rely solely on error messages - systematic component replacement is essential.</p>
+        </section>
+
+        <section id="capacitors">
+            <h2>Complete Capacitor Replacement Guide</h2>
+            
+            <div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Component</th>
+                    <th>Location</th>
+                    <th>Value</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>RIFA Suppression Caps</td>
+                    <td>Power filter before transformer</td>
+                    <td>0.1µF 250VAC yellow</td>
+                    <td>Replace with X2 class safety caps</td>
+                </tr>
+                <tr>
+                    <td>Frako Electrolytics</td>
+                    <td>All stabilizers, audio cards, transport cards</td>
+                    <td>Various</td>
+                    <td>Replace ALL - known to short and leak</td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">⚡ STABILIZER BOARDS (1.820.832.00)</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Value</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>C101-C106</td>
+                    <td>Various</td>
+                    <td>Replace all electrolytics, 105°C caps only</td>
+                </tr>
+                <tr>
+                    <td>C107, C109, C111</td>
+                    <td>Check schematic</td>
+                    <td>Check these if voltages off</td>
+                </tr>
+                <tr>
+                    <td>C12, C110, C114</td>
+                    <td>Check schematic</td>
+                    <td>Check these if voltages off</td>
+                </tr>
+                <tr>
+                    <td>C6</td>
+                    <td>470µF, 16V</td>
+                    <td>Replace with Nichicon 470µF, 50V, UPW series</td>
+                </tr>
+                <tr>
+                    <td>C20-C24</td>
+                    <td>2200µF, 16V</td>
+                    <td>Replace with Panasonic 2200µF, 16V-25V, EEU-FS series</td>
+                </tr>
+                <tr>
+                    <td>C26</td>
+                    <td>1000µF, 40V</td>
+                    <td>Replace with Nichicon 1000µF-1200µF, 50V, UHE series</td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">🔋 SPOOLING MOTOR PS CARD (1.820.777.84)</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Value</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>C10</td>
+                    <td>47µF</td>
+                    <td>Known cause of "motor supply voltage low" error</td>
+                </tr>
+                <tr>
+                    <td>All electrolytics</td>
+                    <td>Various</td>
+                    <td>Replace all electrolytics</td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">⚡ POWER SUPPLY - LARGE CAPACITORS</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Typical Values</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>C1-C4</td>
+                    <td>10,000µF, 50V-63V stud-mount</td>
+                    <td>Replace with high-quality low-ESR capacitors (Nichicon, Epcos/TDK). Use isolation mounts</td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">🎚️ AUDIO CARDS</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Type</th>
+                    <th>Values</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>Small electrolytics</td>
+                    <td>10µF-47µF, 25V-63V</td>
+                    <td>Replace all; use low-ESR or non-polarized for audio paths</td>
+                </tr>
+                <tr>
+                    <td>SAL capacitors</td>
+                    <td>Various</td>
+                    <td>Avoid replacing unless necessary</td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">🎛️ SPOOLING AND CAPSTAN CONTROL</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Value</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>C23, C24 (Spooling Motor)</td>
+                    <td>220µF, 63V</td>
+                    <td>Replace if spooling malfunctions</td>
+                </tr>
+                <tr>
+                    <td>C65 (Capstan Control)</td>
+                    <td>220µF, 63V</td>
+                    <td>Replace if capstan malfunctions</td>
+                </tr>
+            </table></div>
+            
+            <p><strong>Replacement Best Practices:</strong></p>
+            <ul>
+                <li>Select high-quality, low-ESR capacitors suitable for switching power supplies</li>
+                <li>Use 105°C rated capacitors throughout</li>
+                <li>Confirm polarity during installation</li>
+                <li>For stud-mount capacitors, use isolation mounts to prevent grounding issues (can may connect to negative terminal)</li>
+                <li>Inspect PCB for damaged traces or solder joints after Frako removal (leaked electrolyte corrodes boards)</li>
+                <li>Use multimeter to test for shorts before powering on</li>
+            </ul>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>Complete Troubleshooting Guide</h2>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Symptom</th>
+                    <th>Likely Cause</th>
+                    <th>Solution</th>
+                </tr>
+                <tr>
+                    <td>Missing +5.6V and +24V rails</td>
+                    <td>Shorted Frako on Stabilizer board</td>
+                    <td>Replace all Frakos on stabilizer; pull audio cards to reduce load</td>
+                </tr>
+                <tr>
+                    <td>-26V rail reads -31.5V, +25.9V/-27.1V unloaded</td>
+                    <td>Stabilizer board capacitor issues</td>
+                    <td>Check C107, C109, C111, C12, C110, C114; check grounds</td>
+                </tr>
+                <tr>
+                    <td>"Motor supply voltage low" error, spooling motors dead</td>
+                    <td>Spooling motor PS card failure</td>
+                    <td>Replace C10 (47µF); check transistors and sockets; check AC supply; replace RIFA caps before transformer</td>
+                </tr>
+                <tr>
+                    <td>Spooling works seconds then stops, tension oscillation</td>
+                    <td>Bad RC4559 on tension sensor, failed AD7524 DACs</td>
+                    <td>Re-adjust tension offset/gain; replace RC4559; replace AD7524's</td>
+                </tr>
+                <tr>
+                    <td>"INCORRECT RADIUS MEASUREMENT" error</td>
+                    <td>Tension sensor misadjustment, failed tacho sensors</td>
+                    <td>Re-adjust tension offset/gain; check spooling motor tacho duty cycle</td>
+                </tr>
+                <tr>
+                    <td>Erases but doesn't record (both channels)</td>
+                    <td>Oscillator boards, HF driver, menu settings</td>
+                    <td>Check bias at head with scope; check record relay; check ribbon cables</td>
+                </tr>
+                <tr>
+                    <td>Passes self-test but transport doesn't operate</td>
+                    <td>Faulty EPROM</td>
+                    <td>Replace all EPROMs; keep backups</td>
+                </tr>
+                <tr>
+                    <td>Buzzing, oscillation from stabilizer</td>
+                    <td>Failed stabilizer capacitors</td>
+                    <td>Replace C6, C20-C24, C26 with specified low-ESR types</td>
+                </tr>
+                <tr>
+                    <td>Smoke, burning smell</td>
+                    <td>RIFA capacitor exploded</td>
+                    <td>Replace all RIFA caps immediately</td>
+                </tr>
+                <tr>
+                    <td>Tape contacts heads during fast wind</td>
+                    <td>Worn tape lifters</td>
+                    <td>Visually inspect lifters; test with auto-mute disabled</td>
+                </tr>
+            </table></div>
+            
+            <h3>Real Restoration Cases:</h3>
+            <div class="info-box">
+                <p><strong>Case 1 - Missing Power Rails:</strong> A820 had missing +5.6V and +24V rails. Found shorted Frako on Stabilizer board. After replacement, -26V rail read -31.5V. User removed jumper between pins 3-4 of UC3843N that didn't match schematic. Recommended approach: pull all audio cards, get transport working first, then add recapped cards one by one.</p>
+                
+                <p><strong>Case 2 - Motor Supply Voltage Low:</strong> Machine displayed error after power-up, spooling motors dead. Checked spooling motor PS card - C10 (47µF) was suspect. Also check transistors and their sockets (better to solder directly). RIFA caps before transformer also fail.</p>
+                
+                <p><strong>Case 3 - Erratic Spooling:</strong> A820 spooled for seconds then stopped, tension oscillation, "INCORRECT RADIUS MEASUREMENT" error. Found bad RC4559 on tension sensor board; replaced. Later AD7524 DACs on spooling motor control failed - replacing all three temporarily fixed.</p>
+                
+                <p><strong>Case 4 - No Recording:</strong> Machine erased but didn't record. Suspected oscillator boards (both channels common). Recommended checking bias at head with scope, verifying record relay operation, and checking ribbon cables between bus boards.</p>
+            </div>
+        </section>
+
+        <section id="diagnostic-tips">
+            <h2>Critical Diagnostic Tips</h2>
+            
+            <ul>
+                <li><strong>LED indicators:</strong> On spooling motor PS card, red and yellow diodes must light up briefly upon power-on (second from left to right when looking at back of deck).</li>
+                <li><strong>Card contacts:</strong> Check and clean all card contacts and connector sockets.</li>
+                <li><strong>Unloaded voltage test:</strong> Run power supply unladen - if voltages correct, fault is likely in a card.</li>
+                <li><strong>Oscilloscope waveform:</strong> Poor symmetry at DZ1 inputs led one tech to replace C10.</li>
+                <li><strong>Tacho sensor check:</strong> Check duty cycle of spooling motor tacho square wave on Tape Deck Counter board.</li>
+                <li><strong>Record head test:</strong> Use SYNC playback to verify record head wiring (SYNC uses record head as playback head).</li>
+            </ul>
+        </section>
+
+        <section id="resources">
+            <h2>Restoration Resources & Documentation</h2>
+            
+            <h3>Essential Documentation:</h3>
+            <ul>
+                <li><strong>Studer FTP Archive:</strong> ftp://ftp.studer.ch/Public/Products/ - Contains service manuals for A820</li>
+                <li><strong>A820 MCH MkII Manual:</strong> 81.3 MB PDF available from university archives</li>
+                <li><strong>Operating Instructions:</strong> 73-page manual covering features, remote control, error messages</li>
+            </ul>
+            
+            <h3>Specialist Restoration Services:</h3>
+            <ul>
+                <li><strong>Tonbandgerätewerkstatt (Germany):</strong> Specializes in Studer A820, A810, A812, A807. Offers complete overhauls and restorations.</li>
+                <li><strong>Tek Media Group:</strong> Capacitor replacement guides and parts.</li>
+            </ul>
+            
+            <h3>Parts Sources:</h3>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Supplier</th>
+                    <th>Specialty</th>
+                </tr>
+                <tr>
+                    <td>Mouser / DigiKey</td>
+                    <td>General capacitors (Nichicon, Panasonic, Epcos), 105°C, low-ESR types</td>
+                </tr>
+                <tr>
+                    <td>FT Cap (Germany)</td>
+                    <td>Direct stud-mount capacitor replacements</td>
+                </tr>
+                <tr>
+                    <td>AD7524 DACs</td>
+                    <td>Check spooling motor control board</td>
+                </tr>
+                <tr>
+                    <td>RC4559 op-amps</td>
+                    <td>For tension sensor board</td>
+                </tr>
+            </table></div>
+            
+            <h3>Online Communities:</h3>
+            <ul>
+                <li><strong>GroupDIY:</strong> Active A820 troubleshooting</li>
+                <li><strong>Tapeheads.net:</strong> Extensive A820 discussions</li>
+                <li><strong>Studer-Sony-MCI-Pro Groups.io:</strong> Expert technical discussions</li>
+            </ul>
+        </section>
+
+        <section id="specifications">
+            <h2>Technical Specifications</h2>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Production Period</td>
+                    <td>1987-1997</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>Microprocessor-controlled analog tape recorder</td>
+                </tr>
+                <tr>
+                    <td>Track Formats</td>
+                    <td>1/4" stereo, multi-track versions available</td>
+                </tr>
+                <tr>
+                    <td>Key Features</td>
+                    <td>2-track recording/playback, Varispeed, audio processing, remote control, serial interface, error messages</td>
+                </tr>
+                <tr>
+                    <td>Power Supply</td>
+                    <td>Three stabilizer boards, switching power supply design</td>
+                </tr>
+                <tr>
+                    <td>Construction</td>
+                    <td>Modular plug-in cards</td>
+                </tr>
+                <tr>
+                    <td>Control System</td>
+                    <td>Microprocessor-controlled transport with self-diagnostic</td>
+                </tr>
+            </table></div>
+        </section>
+
+        <section id="common-mistakes">
+            <h2>Common Mistakes to Avoid</h2>
+            
+            <div class="danger">
+                <ul>
+                    <li><strong>❌ Powering up without replacing RIFAs:</strong> They WILL explode with smoke and fire.</li>
+                    <li><strong>❌ Ignoring Frakos:</strong> "All the frakos on the rear mounted PSU's have to be replaced" - they burn boards to scrap.</li>
+                    <li><strong>❌ Blind recapping the whole deck at once:</strong> Pull audio cards first, get transport working, then add recapped cards one by one.</li>
+                    <li><strong>❌ Assuming error messages tell whole story:</strong> Self-test may pass with faulty EPROMs.</li>
+                    <li><strong>❌ Not checking transistor sockets:</strong> On spooling motor PS card, sockets fail - solder directly to PCB.</li>
+                    <li><strong>❌ Replacing only electrolytics:</strong> C10 (47µF) is critical for motor supply error.</li>
+                    <li><strong>❌ Ignoring ribbon cables:</strong> After transport, connections may come loose.</li>
+                    <li><strong>❌ Not checking both channels for common cause:</strong> Both channels failing points to oscillator boards.</li>
+                    <li><strong>❌ Forgetting to clean card contacts:</strong> Check and clean all card connectors.</li>
+                    <li><strong>❌ Using wrong capacitor types:</strong> Use low-ESR, 105°C rated caps.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p><strong>Studer A820</strong> • Compiled from GroupDIY, Tapeheads.net, Groups.io, Tek Media Group, and service manual references • Last Updated: 2024</p>
+            <p>Restoration requires advanced technical skill and proper tools. The A820 is the ultimate analog recorder - treat it with respect. Pull all audio cards first, replace all RIFAs and Frakos, then add recapped cards one by one. German specialists note: "komplette Überholung ist unumgänglich" (complete overhaul is essential).</p>
+            <p>🙏 Special thanks to the global Studer community and all contributors who share their restoration experiences.</p>
+        </footer>
+    </div>
+</div>
+{% endblock %}

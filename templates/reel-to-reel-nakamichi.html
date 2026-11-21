@@ -1,0 +1,383 @@
+{% extends "base.html" %}
+{% block title %}Nakamichi Reel-to-Reel Repair &amp; Restoration | Vintage Audio Service Los Angeles{% endblock %}
+{% block desc %}Professional Nakamichi reel-to-reel audio deck repair, restoration &amp; capacitor replacement. 1000ZXL, 700ZXL, 680ZX, 581, 582. Tek Media Group, (818) 244-4440.{% endblock %}
+{% block canon %}/reel-to-reel/nakamichi{% endblock %}
+{% block head %}
+<style>.nk *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}.nk .container{max-width: 1200px; margin: 0 auto; padding: 20px;}.nk header{text-align: center; margin-bottom: 40px; padding: 30px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 15px; border: 2px solid #e1e8ed; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);}.nk h1{color: #2c3e50; font-size: 2.8rem; margin-bottom: 10px; letter-spacing: 0.5px;}.nk h2{color: #34495e; margin-bottom: 20px; font-size: 1.8rem;}.nk h3{color: #34495e; margin-bottom: 15px; font-size: 1.4rem;}.nk .tagline{font-size: 1.2rem; color: #7f8c8d; margin-bottom: 20px; font-style: italic;}.nk .intro{max-width: 900px; margin: 0 auto 30px; padding: 20px; background-color: #f8f9fa; border-radius: 10px; border-left: 5px solid #3498db; color: #2c3e50;}.nk .warning-box{background: #dc3545; color: white; padding: 20px; border-radius: 10px; margin: 30px 0; border-left: 5px solid #721c24; font-size: 1.1rem;}.nk .warning-box strong{display: block; font-size: 1.3rem; margin-bottom: 10px;}.nk .model-grid{display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; margin-bottom: 40px;}.nk .model-card{background: #ffffff; border-radius: 12px; padding: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid #e1e8ed; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); position: relative; overflow: hidden;}.nk .model-card:hover{transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); border-color: #3498db;}.nk .model-card::before{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(to right, #3498db, #2980b9);}.nk .premium-badge{position: absolute; top: 15px; right: 15px; background: linear-gradient(to right, #f39c12, #e67e22); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);}.nk .holy-grail-badge{position: absolute; top: 15px; right: 15px; background: linear-gradient(to right, #e74c3c, #c0392b); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);}.nk .model-header{display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;}.nk .model-name{font-size: 1.8rem; color: #2c3e50; font-weight: 700;}.nk .model-era{background: #ecf0f1; color: #34495e; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 600;}.nk .feature-list{list-style-type: none; margin: 15px 0;}.nk .feature-list li{padding: 8px 0; border-bottom: 1px dashed #bdc3c7; display: flex; align-items: flex-start; color: #2c3e50;}.nk .feature-list li:last-child{border-bottom: none;}.nk .feature-list i{color: #3498db; margin-right: 10px; margin-top: 3px;}.nk .market-status{background: #e8f4f8; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 0.95rem; border-left: 3px solid #3498db; color: #2c3e50;}.nk .repair-issues{background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 3px solid #ffc107; color: #2c3e50;}.nk .repair-issues h4{color: #856404; margin-bottom: 10px; font-size: 1.1rem;}.nk .repair-issues ul{margin-left: 20px; margin-top: 10px;}.nk .repair-issues ul li{margin-bottom: 8px; line-height: 1.5;}.nk .capacitor-section{background: #f8d7da; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 3px solid #dc3545; color: #2c3e50;}.nk .capacitor-section h4{color: #721c24; margin-bottom: 10px; font-size: 1.1rem;}.nk .capacitor-section ul{margin-left: 20px; margin-top: 10px;}.nk .capacitor-section ul li{margin-bottom: 8px; line-height: 1.5;}.nk .factors-section{background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 40px 0; border: 2px solid #e1e8ed;}.nk .factors-section h2{color: #2c3e50; margin-bottom: 20px; font-size: 1.8rem;}.nk .factor-grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}.nk .factor-item{background: #ffffff; padding: 15px; border-radius: 8px; border: 1px solid #e1e8ed; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);}.nk .factor-item h3{color: #34495e; margin-bottom: 10px; font-size: 1.2rem;}.nk .factor-item p{color: #2c3e50;}.nk .common-problems{background: #ffffff; padding: 30px; border-radius: 12px; margin: 40px 0; border: 2px solid #e1e8ed;}.nk .common-problems h2{color: #2c3e50; margin-bottom: 25px; text-align: center;}.nk .problem-category{margin-bottom: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #e74c3c;}.nk .problem-category h3{color: #e74c3c; margin-bottom: 15px;}.nk .problem-list{list-style-type: none; margin: 0;}.nk .problem-list li{padding: 10px 0; border-bottom: 1px dashed #dee2e6; color: #2c3e50;}.nk .problem-list li:last-child{border-bottom: none;}.nk .problem-list strong{color: #e74c3c;}.nk .summary{background: #e8f4f8; padding: 25px; border-radius: 12px; margin: 40px 0; border-left: 5px solid #3498db; color: #2c3e50;}.nk .summary h2{color: #2c3e50; margin-bottom: 15px;}.nk .summary a{color: #3498db; text-decoration: none;}.nk .summary a:hover{text-decoration: underline;}.nk .vintage-icon{color: #3498db; font-size: 1.5rem; margin-right: 10px;}@media (max-width: 768px){.nk .model-grid{grid-template-columns: 1fr;}.nk h1{font-size: 2.2rem;}.nk .container{padding: 10px;}}</style>
+<script type="application/ld+json">{% raw %}{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Nakamichi Reel-to-Reel Repair and Restoration", "serviceType": "Reel-to-reel tape recorder repair", "provider": {"@type": "LocalBusiness", "name": "Tek Media Group", "telephone": "+1-818-244-4440", "url": "https://tekmg.com"}, "areaServed": "United States", "url": "https://tekmg.com/reel-to-reel/nakamichi"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tekmg.com/"}, {"@type": "ListItem", "position": 2, "name": "Reel To Reel", "item": "https://tekmg.com/reel-to-reel"}, {"@type": "ListItem", "position": 3, "name": "Nakamichi", "item": "https://tekmg.com/reel-to-reel/nakamichi"}]}]}{% endraw %}</script>
+{% endblock %}
+{% block footer %}{% include "_old_footer.html" %}{% endblock %}
+{% block content %}
+<div class="nk">
+<div class="container"><div style="font-size:.8rem;color:#555;margin:0 0 12px;font-family:Arial,sans-serif"><a href="/" style="display:inline-block;padding:10px 0">Home</a> &gt; <a href="/reel-to-reel" style="display:inline-block;padding:10px 0">Reel To Reel</a> &gt; Nakamichi</div>
+        <header>
+            <h1>Nakamichi Reel-to-Reel Audio Deck Repair & Restoration Service</h1>
+            <p class="tagline">Professional Restoration, Capacitor Replacement & Calibration for Legendary Nakamichi Reel-to-Reel Audio Decks</p>
+            <div class="intro">
+                <p>TEK Media Group specializes in the <strong>professional repair and restoration of Nakamichi reel-to-reel audio decks</strong>, including the legendary <strong>1000ZXL, 1000ZXL Limited, 700ZXL, 680ZX, 581, and 582</strong> models. Our expert technicians provide comprehensive capacitor replacement, mechanical restoration, bias adjustment, azimuth calibration, and transport service to restore these exceptional machines to peak performance.</p>
+                <p>With decades of experience servicing these complex high-end reel-to-reel decks, we understand the unique engineering and meticulous precision that makes Nakamichi the pinnacle of reel-to-reel technology. These are investment pieces requiring specialist-level service - we deliver professional results that preserve collector value.</p>
+            </div>
+        </header>
+        
+        <div class="warning-box">
+            <strong>CRITICAL SERVICE NOTICE</strong>
+            <p>ALL Nakamichi reel-to-reel models are 30-50 years old and require expert servicing. Complete capacitor replacement is MANDATORY. Parts are extremely scarce and require specialist knowledge. Budget appropriately for professional restoration. These are NOT plug-and-play devices.</p>
+        </div>
+        
+        <main>
+            <h2 style="color: #2c3e50; margin-bottom: 25px; text-align: center;">Nakamichi Reel-to-Reel Models We Service & Restore</h2>
+            
+            <div class="model-grid">
+                <!-- Model 1: 1000ZXL -->
+                <div class="model-card">
+                    <span class="holy-grail-badge">Holy Grail</span>
+                    <div class="model-header">
+                        <div class="model-name">1000ZXL</div>
+                        <div class="model-era">1984-1987</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>10.5" reel capacity</strong> - professional studio quality</li>
+                        <li><strong>15/7.5/3.75 IPS</strong> - three-speed operation</li>
+                        <li><strong>Quarter-track stereo</strong> - exceptional fidelity</li>
+                        <li>Computer-controlled transport - microprocessor logic</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>1000ZXL Critical Issues</h4>
+                        <ul>
+                            <li><strong>Main drive belt & idler tires:</strong> Complete deterioration after 40+ years - PRIMARY failure</li>
+                            <li><strong>Brake pads & clutches:</strong> Hardened or disintegrated - tape handling failures</li>
+                            <li><strong>Pinch rollers:</strong> Hard and glazed - must be replaced for proper tape contact</li>
+                            <li><strong>Relay failures:</strong> Audio and control relays with oxidized contacts</li>
+                            <li><strong>Microprocessor logic issues:</strong> Control board component aging, EPROM data corruption</li>
+                            <li><strong>Reel motor torque loss:</strong> Motor capacitors or driver circuits fail</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>MANDATORY Complete Recap</h4>
+                        <ul>
+                            <li><strong>Power Supply Board:</strong> Multiple regulated voltages - ALL filter caps (2200-4700µF)</li>
+                            <li><strong>Audio Amplifier Boards:</strong> Record/playback electronics - complete recap required</li>
+                            <li><strong>Bias/Oscillator Board:</strong> Recording bias circuit capacitors - critical for tape quality</li>
+                            <li><strong>Logic/Microprocessor Board:</strong> Control system power supply caps - system stability</li>
+                            <li><strong>Motor Drive Circuits:</strong> Reel motor and capstan control capacitors</li>
+                            <li><strong>Tantalum Capacitors:</strong> Replace ALL with modern low-ESR electrolytics or film caps</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Ultimate Rarity:</strong> 1000ZXL is Nakamichi's flagship reel-to-reel. Extremely rare, highly collectible. Computer-controlled transport requires specialist-level service. Complete mechanical and electronic restoration essential.
+                    </div>
+                </div>
+                
+                <!-- Model 2: 1000ZXL Limited -->
+                <div class="model-card">
+                    <span class="holy-grail-badge">Holy Grail</span>
+                    <div class="model-header">
+                        <div class="model-name">1000ZXL Limited</div>
+                        <div class="model-era">1984-1987</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>Limited edition</strong> - even rarer than standard 1000ZXL</li>
+                        <li>Same 10.5" reel, three-speed operation</li>
+                        <li><strong>Premium cosmetics</strong> - special edition finish</li>
+                        <li>Identical performance to standard 1000ZXL</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>Limited Edition Issues</h4>
+                        <ul>
+                            <li><strong>Same mechanical issues as 1000ZXL:</strong> Belts, tires, brakes, clutches</li>
+                            <li><strong>Limited parts availability:</strong> Even scarcer than standard model</li>
+                            <li><strong>Cosmetic restoration critical:</strong> Special finish requires expert care</li>
+                            <li><strong>Microprocessor control failures:</strong> Logic board aging identical to standard</li>
+                            <li><strong>Transport complexity:</strong> Computer-controlled mechanism requires specialist knowledge</li>
+                            <li><strong>Collector value concerns:</strong> Improper restoration can destroy value</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>Limited Edition Recap Requirements</h4>
+                        <ul>
+                            <li><strong>Identical to standard 1000ZXL:</strong> Same capacitor values and locations</li>
+                            <li><strong>Power supply (2200-4700µF):</strong> Multiple voltage regulators - ALL must be replaced</li>
+                            <li><strong>Audio path complete recap:</strong> ALL coupling and EQ capacitors</li>
+                            <li><strong>Logic board power supply:</strong> Microprocessor and memory backup circuits</li>
+                            <li><strong>Motor drive circuits:</strong> Servo loop and driver capacitors</li>
+                            <li><strong>NO EXCEPTIONS:</strong> Complete recap mandatory for reliability</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Extreme Collector Value:</strong> Limited editions command significant premium over standard 1000ZXL. Cosmetic condition critical. We understand the importance of preserving originality while ensuring reliability.
+                    </div>
+                </div>
+                
+                <!-- Model 3: 700ZXL -->
+                <div class="model-card">
+                    <span class="holy-grail-badge">Holy Grail</span>
+                    <div class="model-header">
+                        <div class="model-name">700ZXL</div>
+                        <div class="model-era">1982-1985</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>7" reel capacity</strong> - compact professional deck</li>
+                        <li><strong>7.5/3.75 IPS</strong> - two-speed operation</li>
+                        <li><strong>Quarter-track stereo</strong> - excellent performance</li>
+                        <li>Precision closed-loop dual-capstan transport</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>700ZXL Issues</h4>
+                        <ul>
+                            <li><strong>Drive belts & idler tires:</strong> Standard Nakamichi deterioration - complete replacement</li>
+                            <li><strong>Pinch roller hardening:</strong> Rubber loses compliance after 40 years</li>
+                            <li><strong>Brake pad deterioration:</strong> Causes tape handling issues</li>
+                            <li><strong>Capstan motor bearings:</strong> Bearing wear causes speed instability</li>
+                            <li><strong>Relay contact oxidation:</strong> Transport and audio switching failures</li>
+                            <li><strong>Head wear:</strong> Professional use causes significant wear on recording heads</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>700ZXL Capacitors</h4>
+                        <ul>
+                            <li><strong>Power Supply Board:</strong> ALL electrolytics - foundation of stable operation</li>
+                            <li><strong>Audio Amplifier Boards:</strong> Record/playback path - complete recap</li>
+                            <li><strong>Bias/Oscillator circuit:</strong> Recording frequency stability capacitors</li>
+                            <li><strong>Transport control logic:</strong> Relay driver and mode control caps</li>
+                            <li><strong>Motor servo circuits:</strong> Capstan and reel motor control capacitors</li>
+                            <li><strong>Tantalum replacement:</strong> Modern equivalents for long-term reliability</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Compact Professional:</strong> 700ZXL offers exceptional performance in smaller format. Popular with home studios and audiophiles. Dual-capstan transport provides excellent tape handling and sound quality.
+                    </div>
+                </div>
+                
+                <!-- Model 4: 680ZX -->
+                <div class="model-card">
+                    <span class="premium-badge">Premium Model</span>
+                    <div class="model-header">
+                        <div class="model-name">680ZX</div>
+                        <div class="model-era">1980-1983</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>7" reel deck</strong> - professional quality</li>
+                        <li><strong>7.5/3.75 IPS</strong> - two-speed operation</li>
+                        <li><strong>Discrete head design</strong> - separate record/playback heads</li>
+                        <li>ZX transport - precision tape handling</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>680ZX Issues</h4>
+                        <ul>
+                            <li><strong>Idler tires & belts:</strong> Complete deterioration - standard failure mode</li>
+                            <li><strong>Idler assembly:</strong> Sprung arm loses tension - torque/speed issues</li>
+                            <li><strong>Cam gear wear:</strong> Mode switching mechanism degradation</li>
+                            <li><strong>Pinch roller replacement:</strong> Rubber hardening requires replacement</li>
+                            <li><strong>Transport sensor drift:</strong> Optical or mechanical sensor failures</li>
+                            <li><strong>Head azimuth drift:</strong> Manual adjustment mechanism needs service</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>680ZX Capacitors</h4>
+                        <ul>
+                            <li><strong>Power Supply (1000-3300µF):</strong> ALL electrolytics - system power stability</li>
+                            <li><strong>Audio amplifier boards:</strong> Discrete head circuitry - complete recap</li>
+                            <li><strong>Bias/EQ circuits:</strong> Recording and playback equalization caps</li>
+                            <li><strong>Transport logic:</strong> Mode control and relay driver capacitors</li>
+                            <li><strong>Head amplifier section:</strong> Low-noise audio path capacitors</li>
+                            <li><strong>40+ year old caps:</strong> Total replacement mandatory</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Professional Standard:</strong> 680ZX provides excellent performance with discrete head design. Favored for precision recording and playback. Manual adjustability appeals to audio engineers.
+                    </div>
+                </div>
+                
+                <!-- Model 5: 581 -->
+                <div class="model-card">
+                    <span class="premium-badge">Premium Model</span>
+                    <div class="model-header">
+                        <div class="model-name">581</div>
+                        <div class="model-era">1977-1979</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>7" reel deck</strong> - early Nakamichi quality</li>
+                        <li><strong>3-head design</strong> - separate erase, record, playback</li>
+                        <li><strong>7.5/3.75 IPS</strong> - standard speeds</li>
+                        <li>Early precision Nakamichi transport engineering</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>581 Issues</h4>
+                        <ul>
+                            <li><strong>Belt & tire deterioration:</strong> 45+ year old rubber completely fails</li>
+                            <li><strong>Brake pad hardening:</strong> Transport control issues from aged brakes</li>
+                            <li><strong>Pinch roller glazing:</strong> Original rollers hard and shiny</li>
+                            <li><strong>Early electronics aging:</strong> Discrete transistor circuits show parameter drift</li>
+                            <li><strong>Switch oxidation:</strong> Mode selectors and function switches corrode</li>
+                            <li><strong>Head wear significant:</strong> 45 years of use shows on recording heads</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>581 Capacitors</h4>
+                        <ul>
+                            <li><strong>Power supply electrolytics:</strong> 45+ years old - 100% failure rate</li>
+                            <li><strong>Audio path coupling caps:</strong> ALL electrolytics in signal chain</li>
+                            <li><strong>Bias oscillator circuit:</strong> Recording frequency stability caps</li>
+                            <li><strong>EQ network capacitors:</strong> Playback/record equalization precision</li>
+                            <li><strong>Discrete transistor circuits:</strong> Emitter bypass and coupling caps throughout</li>
+                            <li><strong>NO EXCEPTIONS:</strong> Complete recap absolutely mandatory</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Early Excellence:</strong> 581 represents Nakamichi's early reel-to-reel expertise. 3-head design provides monitoring capability. Requires complete restoration but delivers exceptional sound when properly serviced.
+                    </div>
+                </div>
+                
+                <!-- Model 6: 582 -->
+                <div class="model-card">
+                    <span class="premium-badge">Premium Model</span>
+                    <div class="model-header">
+                        <div class="model-name">582</div>
+                        <div class="model-era">1977-1979</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>7" reel capacity</strong> - companion to 581</li>
+                        <li><strong>Similar to 581</strong> - slight feature variations</li>
+                        <li><strong>Professional 3-head</strong> - monitoring capability</li>
+                        <li>Precision Nakamichi transport engineering</li>
+                    </ul>
+                    
+                    <div class="repair-issues">
+                        <h4>582 Issues</h4>
+                        <ul>
+                            <li><strong>Identical mechanical failures to 581:</strong> Belts, tires, brakes, rollers</li>
+                            <li><strong>Transport wear from age:</strong> 45+ years causes multiple failure points</li>
+                            <li><strong>Electronics aging:</strong> Discrete component parameter drift</li>
+                            <li><strong>Switch and control oxidation:</strong> Corrosion from decades of storage</li>
+                            <li><strong>Motor bearing wear:</strong> Capstan and reel motors need service</li>
+                            <li><strong>Complete restoration required:</strong> No shortcuts on 45+ year old equipment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capacitor-section">
+                        <h4>582 Capacitors</h4>
+                        <ul>
+                            <li><strong>Same as 581:</strong> Complete power supply recap mandatory</li>
+                            <li><strong>Audio electronics:</strong> ALL signal path capacitors replaced</li>
+                            <li><strong>Bias/oscillator circuits:</strong> Recording quality dependent capacitors</li>
+                            <li><strong>EQ network precision caps:</strong> Frequency response accuracy</li>
+                            <li><strong>Motor control circuits:</strong> Speed stability capacitors</li>
+                            <li><strong>Total replacement:</strong> 45+ year lifespan exceeded - all fail</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="market-status">
+                        <strong>Vintage Quality:</strong> 582 provides same Nakamichi excellence as 581. Complete restoration brings these early models back to original performance. Proper service reveals why Nakamichi earned its legendary reputation.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Common Problems Section -->
+            <div class="common-problems">
+                <h2>Universal Nakamichi Reel-to-Reel Problems & Solutions</h2>
+                
+                <div class="problem-category">
+                    <h3>Mechanical & Transport Issues</h3>
+                    <ul class="problem-list">
+                        <li><strong>Drive belts deteriorated:</strong> All rubber belts turn to goo or harden after 30-45 years</li>
+                        <li><strong>Idler tires perished:</strong> Rubber wheels lose grip - speed instability results</li>
+                        <li><strong>Pinch rollers hardened:</strong> Glazed surface affects tape contact - must replace</li>
+                        <li><strong>Brake pads deteriorated:</strong> Hardened or crumbling pads cause tape handling failures</li>
+                        <li><strong>Clutch slippage:</strong> Take-up/supply reel clutches lose tension over time</li>
+                        <li><strong>Bearing wear:</strong> Capstan and reel motor bearings develop noise or fail completely</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category">
+                    <h3>Audio Quality Issues (Capacitor-Related)</h3>
+                    <ul class="problem-list">
+                        <li><strong>Weak or distorted audio:</strong> Failed coupling capacitors in audio path</li>
+                        <li><strong>Channel imbalance:</strong> Asymmetric capacitor aging between channels</li>
+                        <li><strong>Frequency response loss:</strong> EQ network capacitor degradation</li>
+                        <li><strong>Excessive hum:</strong> Power supply filter capacitor failure</li>
+                        <li><strong>Poor recording quality:</strong> Bias circuit capacitor failures</li>
+                        <li><strong>Noise and instability:</strong> Audio amplifier decoupling cap failures</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category">
+                    <h3>Electronic & Logic Problems</h3>
+                    <ul class="problem-list">
+                        <li><strong>Dead unit/no power:</strong> Power supply capacitors or regulator failures</li>
+                        <li><strong>Microprocessor control failures:</strong> Logic board capacitor degradation (1000ZXL)</li>
+                        <li><strong>Transport won't engage:</strong> Relay failures or logic circuit issues</li>
+                        <li><strong>Speed instability:</strong> Motor control circuit capacitor or servo failures</li>
+                        <li><strong>Erratic operation:</strong> Multiple capacitor failures causing system instability</li>
+                        <li><strong>Display/meter failures:</strong> Power supply or driver circuit capacitors</li>
+                    </ul>
+                </div>
+                
+                <div class="problem-category">
+                    <h3>Age-Related Deterioration</h3>
+                    <ul class="problem-list">
+                        <li><strong>ALL power supply electrolytics:</strong> MANDATORY replacement after 30-45 years</li>
+                        <li><strong>ALL audio path capacitors:</strong> Complete replacement for sound quality restoration</li>
+                        <li><strong>Tantalum capacitors:</strong> Often fail short-circuit - immediate replacement required</li>
+                        <li><strong>ALL rubber parts:</strong> Belts, tires, rollers, grommets - complete replacement</li>
+                        <li><strong>Lubrication dried out:</strong> Complete re-lubrication of all moving parts required</li>
+                        <li><strong>Head wear:</strong> Recording heads show significant wear - evaluation required</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="factors-section">
+                <h2>Our Specialist Restoration Services</h2>
+                <div class="factor-grid">
+                    <div class="factor-item">
+                        <h3>Complete Capacitor Replacement</h3>
+                        <p>MANDATORY complete recap including power supply, audio path, bias/oscillator circuits, and logic boards. We use premium Nichicon, Panasonic, or Elna capacitors. Total replacement of ALL electrolytics and tantalums for reliability.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Mechanical Restoration</h3>
+                        <p>Complete belt and idler tire replacement, pinch roller service/replacement, brake pad replacement, clutch service, bearing inspection and replacement. Transport mechanism complete overhaul to factory specifications.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Calibration & Alignment</h3>
+                        <p>Bias adjustment, azimuth alignment, speed calibration, EQ optimization, frequency response testing. Professional test tapes and equipment used for precision calibration to original specifications.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Head Service</h3>
+                        <p>Head cleaning, demagnetization, azimuth alignment verification, wear evaluation. Replacement heads sourced when needed. Proper head maintenance critical for Nakamichi reel-to-reel performance.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Electronics Restoration</h3>
+                        <p>Complete electronic restoration including relay replacement, transistor testing/replacement where needed, switch cleaning, connector service. Microprocessor system diagnostics for 1000ZXL models.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Cosmetic Restoration</h3>
+                        <p>Exterior cleaning, polishing, control panel restoration. Maintains collector value through proper cosmetic care. Special attention to Limited Edition finishes and original appearance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary">
+                <h2>Contact Us for Nakamichi Reel-to-Reel Specialist Service</h2>
+                <p>Ready to restore your legendary Nakamichi reel-to-reel audio deck? Contact TEK Media Group today for a free consultation and estimate. Our expert technicians specialize in Nakamichi reel-to-reel restoration with extensive experience in 1000ZXL, 700ZXL, and all vintage models. We understand these are rare investment pieces requiring specialist-level care.</p>
+                <p style="margin-top: 15px;"><strong>Call us at (818) 244-4440</strong></p>
+                <p style="margin-top: 10px;">Email: <a href="mailto:as@tekmg.com">as@tekmg.com</a></p>
+                <p style="margin-top: 15px;"><em>Specialist restoration services for all Nakamichi reel-to-reel models including 1000ZXL, 1000ZXL Limited, 700ZXL, 680ZX, 581, 582. Complete capacitor replacement (MANDATORY), mechanical restoration, calibration, and precision service. Serving audio professionals, collectors, and enthusiasts throughout Southern California and nationwide via shipping.</em></p>
+            </div>
+        </main>
+    </div>
+</div>
+{% endblock %}

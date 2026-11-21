@@ -1,0 +1,564 @@
+{% extends "base.html" %}
+{% block title %}Studer A80 Reel-to-Reel Repair Guide | TEK Media Group{% endblock %}
+{% block desc %}Studer A80 repair guide from Tek Media Group. Capacitor replacement, adjustments and common repairs. (818) 244-4440.{% endblock %}
+{% block canon %}/reel-to-reel/studer/studer-a80{% endblock %}
+{% block head %}
+<style>.sd *{box-sizing: border-box; margin: 0; padding: 0;}.sd{font-family: 'Courier New', monospace; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5;}.sd .content-wrapper{background: white; padding: 30px; border: 1px solid #ddd; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);}.sd h1{font-size: 2.2em; margin-bottom: 10px; letter-spacing: -1px; color: #2c3e50;}.sd h2{font-size: 1.5em; margin: 30px 0 15px 0; padding: 10px 0 5px 0; border-bottom: 2px solid #ccc; color: #34495e;}.sd h3{font-size: 1.2em; margin: 20px 0 10px 0; color: #7f8c8d;}.sd .subtitle{font-style: italic; color: #666; margin-bottom: 20px; font-size: 1.1em;}.sd .header-section{border-bottom: 3px double #333; margin-bottom: 30px; padding-bottom: 20px; text-align: center;}.sd .disclaimer{background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; font-size: 0.9em; color: #856404; text-align: left; font-weight: bold;}.sd section{background: white; padding: 20px; margin-bottom: 25px; border: 1px solid #eee; box-shadow: 0 1px 3px rgba(0,0,0,0.05);}.sd .warning{background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;}.sd .danger{background: #f8d7da; border-left: 4px solid #dc3545; padding: 15px; margin: 20px 0;}.sd .danger strong{color: #721c24;}.sd .warning strong{color: #856404;}.sd .info-box{background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin: 20px 0;}.sd .success-box{background: #d4edda; border-left: 4px solid #28a745; padding: 15px; margin: 20px 0;}.sd table{width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;}.sd th,.sd td{border: 1px solid #ddd; padding: 8px 12px; text-align: left;}.sd th{background: #f0f0f0; font-weight: bold;}.sd tr:nth-child(even){background: #f9f9f9;}.sd ul,.sd ol{margin: 15px 0 15px 25px;}.sd li{margin-bottom: 8px;}.sd .badge{display: inline-block; background: #dc3545; color: white; padding: 3px 8px; font-size: 0.8em; border-radius: 3px; margin-right: 10px;}.sd .badge-blue{background: #17a2b8;}.sd .badge-green{background: #28a745;}.sd .badge-purple{background: #6f42c1;}.sd .badge-orange{background: #fd7e14;}.sd .component-category{background: #e9ecef; padding: 10px; margin: 15px 0 10px 0; font-weight: bold; border-left: 3px solid #007bff;}.sd .model-grid{display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;}.sd .model-card{border: 1px solid #ccc; padding: 15px; background: #f8f9fa; border-radius: 3px;}.sd .price-tag{font-weight: bold; color: #28a745; margin-top: 5px; font-size: 1.1em;}.sd .kit-reference{display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;}.sd .kit-card{border: 1px solid #ccc; padding: 15px; background: #f8f9fa; border-radius: 3px;}.sd footer{margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; text-align: center;}.sd code{background: #eee; padding: 2px 5px; font-family: 'Courier New', monospace; border-radius: 2px;}.sd .compatibility-note{background: #e7f3ff; padding: 10px; border-radius: 3px; margin: 10px 0;}.sd .part-number{font-family: 'Courier New', monospace; background: #f0f0f0; padding: 2px 4px; border-radius: 2px; font-size: 0.9em;}.sd .voltage-warning{color: #dc3545; font-weight: bold;}.sd .checklist{background: #f8f9fa; padding: 15px; border-radius: 3px; margin: 15px 0;}.sd .checklist-item{margin: 5px 0;}.sd .board-diagram{background: #f0f0f0; padding: 15px; font-family: 'Courier New', monospace; text-align: center; border-radius: 3px;}.sd .capacitor-warning{background: #f0f0f0; padding: 15px; border-left: 4px solid #dc3545; margin: 15px 0;}.sd .stud-mount-note{background: #f0f0f0; padding: 15px; border-left: 4px solid #17a2b8; margin: 15px 0;}@media (max-width: 600px){.sd{padding: 10px;}.sd .content-wrapper{padding: 15px;}.sd section{padding: 15px;}.sd .model-grid,.sd .kit-reference{grid-template-columns: 1fr;}}.sd{overflow-x:auto;max-width:100%}</style>
+<script type="application/ld+json">{% raw %}{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Studer A80 Repair", "serviceType": "Reel-to-reel tape recorder repair", "provider": {"@type": "LocalBusiness", "name": "Tek Media Group", "telephone": "+1-818-244-4440", "url": "https://tekmg.com"}, "areaServed": "United States", "url": "https://tekmg.com/reel-to-reel/studer/studer-a80"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tekmg.com/"}, {"@type": "ListItem", "position": 2, "name": "Reel To Reel", "item": "https://tekmg.com/reel-to-reel"}, {"@type": "ListItem", "position": 3, "name": "Studer", "item": "https://tekmg.com/reel-to-reel/studer"}, {"@type": "ListItem", "position": 4, "name": "Studer A80", "item": "https://tekmg.com/reel-to-reel/studer/studer-a80"}]}]}{% endraw %}</script>
+{% endblock %}
+{% block footer %}{% include "_old_footer.html" %}{% endblock %}
+{% block content %}
+<div class="sd">
+<div style="font-size:.8rem;margin:0 0 12px;font-family:Arial,sans-serif"><a href="/" style="display:inline-block;padding:10px 0">Home</a> &gt; <a href="/reel-to-reel" style="display:inline-block;padding:10px 0">Reel To Reel</a> &gt; <a href="/reel-to-reel/studer" style="display:inline-block;padding:10px 0">Studer</a> &gt; Studer A80</div>
+<div class="content-wrapper">
+        <div class="header-section">
+            <h1>Studer A80 (1970s 1/4" Tape)</h1>
+            <p class="subtitle">The Professional Studio Standard • 1970-1989 • Swiss Precision in Analog Recording</p>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Studer documentation when available. Proceed at your own risk.
+        </div>
+
+        <div class="danger">
+            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Studer A80 contains <span class="voltage-warning">infamous Frako electrolytic capacitors</span> that WILL short out and fail catastrophically. It also contains <span class="voltage-warning">RIFA "exploding" paper capacitors</span> that WILL fail with smoke and fire. <strong>Never apply mains power to an unrestored A80 without first replacing all RIFA capacitors and critical Frako electrolytics.</strong>
+        </div>
+
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The Studer A80, introduced in 1970, needs no introduction to veteran studio engineers. With its stellar sound and overall performance, the A80 was a staple in all higher end recording studios from 1970 until production ceased in 1989. Countless major albums were recorded on the A80 series, which ranged from ¼" full track mono machines to 2" 24 tracks, and almost any variation in-between.</p>
+            
+            <div class="info-box">
+                <strong>📌 Key Characteristics:</strong>
+                <ul>
+                    <li><strong>Sound:</strong> Flat frequency response, minimal coloration</li>
+                    <li><strong>Frequency Response:</strong> Ruler-flat from around 40Hz to over 22kHz</li>
+                    <li><strong>Construction:</strong> Overbuilt, designed to be run 24/7</li>
+                    <li><strong>Modularity:</strong> Hot-swappable audio channels, point-to-point wiring</li>
+                    <li><strong>Versions:</strong> Four versions (MkI through MkIV), produced 1970-1989</li>
+                    <li><strong>Variants:</strong> A80VU (meters in bridge) vs A80RC (compact radio version)</li>
+                </ul>
+            </div>
+            
+            <p>The 1/4" version of the A80 is highly sought after for stereo mastering and high-quality playback. The machine uses a point-to-point wiring scheme rather than a motherboard, which was a deliberate design choice to withstand the vibration of 2" tape in fast wind modes.</p>
+        </section>
+
+        <section id="value">
+            <h2>Current Market Value (2024)</h2>
+            <p>Values for the A80 vary significantly by configuration, condition, and track format:</p>
+            
+            <div class="model-grid">
+                <div class="model-card">
+                    <strong>Unrestored / Project Unit</strong>
+                    <p>Non-working, unknown condition, likely multiple dead channels, blown Frakos</p>
+                    <div class="price-tag">$3,000-6,000</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Partially Restored</strong>
+                    <p>Some capacitors replaced, basic functionality, may have dead channels</p>
+                    <div class="price-tag">$6,000-10,000</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Fully Restored</strong>
+                    <p>Complete recap, transport overhaul, calibration, new bulbs/LEDs</p>
+                    <div class="price-tag">$12,000-18,000</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Mint / Low Hours</strong>
+                    <p>Exceptional original condition, low head wear, fully documented</p>
+                    <div class="price-tag">$20,000-30,000+</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>1/4" Stereo Mastering Version</strong>
+                    <p>Specifically configured for stereo mastering, most desirable</p>
+                    <div class="price-tag">$15,000-25,000+</div>
+                </div>
+            </div>
+            
+            <p><strong>Note:</strong> The 1/4" stereo versions are particularly valuable for mastering applications. Head wear is critical - Studer heads will take one or two relaps, but if the flats exceed 4mm, relapping is needed. Machines with original documentation and tools command premium prices.</p>
+        </section>
+
+        <section id="failures">
+            <h2>Common Failure Modes</h2>
+            
+            <h3><span class="badge">#1</span> Frako Electrolytic Capacitor Failure (The #1 Killer)</h3>
+            <p><strong>Symptom:</strong> Blown fuses, dead audio channels, power supply issues. One restorer noted: "8 channels of this A80 MKII had shorted caps in the main power supplies causing a fuse to blow, and thus a dead audio channel". In the 1980s, studios let maintenance lapse, and decks became 23-channel, then 21-channel machines.</p>
+            <p><strong>Cause:</strong> Frako capacitors from this era are infamous for shorting out. They are found throughout the audio channels and transport electronics. Each audio channel has 16 capacitors that are known to short out.</p>
+            <p><strong>Repair:</strong> Replace ALL Frako electrolytic capacitors on sight. This includes the large stud-mount capacitors in the power supply - they are expensive but should be replaced as they tend to short. One restorer replaced stud-mount Frakos with FT Cap replacements.</p>
+            
+            <div class="stud-mount-note">
+                <strong>🔧 Stud-Mount Capacitor Replacement:</strong> The A80 uses large stud-mount capacitors (e.g., 22,000µF/16V, 10,000µF/16V, 4700µF/40V). These are bolted to the chassis and can be replaced with modern equivalents using capacitor clamps if exact stud-mount types aren't available. FT Cap in Germany makes direct replacements.
+            </div>
+            
+            <h3><span class="badge">#2</span> RIFA "Exploding" Capacitor Failure</h3>
+            <p><strong>Symptom:</strong> Smoke, burning smell, loud cracking, blown fuses. One restorer noted: "The exploding Rifa caps were the first thing replaced, even before powering the deck up".</p>
+            <p><strong>Cause:</strong> Paper dielectric absorbs moisture over decades and shorts catastrophically.</p>
+            <p><strong>Repair:</strong> Replace ALL RIFA capacitors on sight before applying power. Found on transport control cards and power supply boards.</p>
+            
+            <h3><span class="badge">#3</span> "Red Devil" Tantalum Capacitor Failure</h3>
+            <p><strong>Symptom:</strong> Short circuits, logic glitches, no function, destroyed ICs. One restorer stated: "If red - do not turn on device before replacing". They are called "red devils" for a reason.</p>
+            <p><strong>Cause:</strong> Red tantalum beads fail shorted, taking out surrounding components. They are a time bomb.</p>
+            <p><strong>Repair:</strong> Replace ALL red tantalum capacitors immediately. Replace with modern aluminum electrolytics (now small enough) or new tantalums with at least 50% voltage overrating. Blue and green tantalums are less problematic and can be tested.</p>
+            
+            <h3><span class="badge">#4</span> Phase Shift / Motor Run Capacitor Failure</h3>
+            <p><strong>Symptom:</strong> Motor stops during playback, won't start, runs hot. One user reported: "It developed a problem where it is stopping in the middle of playback. If I wait for 10 minutes and hit play, she'll work great for about a minute, then stop again".</p>
+            <p><strong>Cause:</strong> Original motor run capacitors degrade. They can leak at any time, and cleaning up leaked electrolyte is horrible.</p>
+            <p><strong>Repair:</strong> Replace all motor capacitors as a matter of course. For a 15/30 ips 50Hz machine, the capstan capacitor should be 10µF. Standard motor run capacitors (e.g., Ducati brand) work perfectly - you do not need expensive "audiophile" motor caps.</p>
+            
+            <h3><span class="badge">#5</span> Transport Stalling / Pinch Roller Not Engaging</h3>
+            <p><strong>Symptom:</strong> Transport stalls after 20 minutes, capstan runs but pinch rollers don't push against tape, spool motors hesitate.</p>
+            <p><strong>Cause:</strong> The dashpots (damping tubes) that control the pinch roller movement get sticky when warm. One user found: "there is a small tube with a piston in it that dampens the movement of the 2 rollers... when getting warmed up, was causing too much friction".</p>
+            <p><strong>Repair:</strong> Lubricate the dashpot with appropriate silicone-based oil (La Tromba works well). The dashpots use 50cs viscosity silicone grease.</p>
+            
+            <h3><span class="badge">#6</span> Tape Tensioner Dashpot Issues</h3>
+            <p><strong>Symptom:</strong> One tensioner has much higher resistance than the other, causing slower rewinding in one direction.</p>
+            <p><strong>Cause:</strong> The brass dashpots on the tape tensioners contain special silicone grease that can dry out or become contaminated.</p>
+            <p><strong>Repair:</strong> Clean and refill with correct viscosity silicone grease (50cs). One tech reportedly used Colgate Gel toothpaste successfully, but proper silicone grease is recommended.</p>
+            
+            <h3><span class="badge">#7</span> Audio Channel Failures (Modular Design)</h3>
+            <p><strong>Symptom:</strong> One or more channels dead, no audio, distorted output.</p>
+            <p><strong>Cause:</strong> The A80's brilliant modular design means each audio channel has its own power supply and 16 capacitors prone to failure. When a channel blew, studios often just used remaining channels.</p>
+            <p><strong>Repair:</strong> Thanks to hot-swappable design, audio channels can be worked on while deck runs. Recapping each audio module is essential. Spare channels can be kept for quick swaps.</p>
+            
+            <h3><span class="badge">#8</span> VU Meter Lamp Failure</h3>
+            <p><strong>Symptom:</strong> Meters not illuminated, dim lighting, blown fuses indicated by dim bulbs.</p>
+            <p><strong>Cause:</strong> VU meter lights are 30 volt incandescent bulbs. If one side of the dual 12 volt power supply fails, bulbs dim significantly. Tiny 28V "record" and "ready" bulbs burn out and are expensive ($5 each).</p>
+            <p><strong>Repair:</strong> LED conversion is cost-effective ($2 per LED vs $5 per bulb) and lasts the life of the deck. End-of-tape sensor bulbs can also be converted to LED using copper tubing.</p>
+            
+            <h3><span class="badge">#9</span> Transport Control Card Failures</h3>
+            <p><strong>Symptom:</strong> Transport functions intermittent, dead controls.</p>
+            <p><strong>Cause:</strong> Capacitors on transport control cards fail. Transport uses plug-in cards that can be swapped.</p>
+            <p><strong>Repair:</strong> Recapping all transport boards, replacing RIFAs first. Studer manufactured PC board extenders for easier troubleshooting.</p>
+            
+            <h3><span class="badge">#10</span> Capstan Motor Slow to Start</h3>
+            <p><strong>Symptom:</strong> Capstan takes a while to reach full speed (30 ips).</p>
+            <p><strong>Cause:</strong> Wrong capacitor value fitted. A 15/30 ips 50Hz machine requires 10µF, but some had 8µF fitted (correct for other configurations).</p>
+            <p><strong>Repair:</strong> Replace with correct value (10µF for 15/30 50Hz). Standard motor run capacitors from eBay (Ducati) work perfectly.</p>
+            
+            <h3><span class="badge">#11</span> Brake Band Issues</h3>
+            <p><strong>Symptom:</strong> Tape spillage, uneven wind, resistance when moving reels by hand.</p>
+            <p><strong>Cause:</strong> Brake bands not lifting properly.</p>
+            <p><strong>Repair:</strong> Adjust or replace brake bands. Check that brake solenoids are functioning.</p>
+            
+            <h3><span class="badge">#12</span> Microswitch Failures</h3>
+            <p><strong>Symptom:</strong> Transport mode sensing issues, end-of-tape detection problems.</p>
+            <p><strong>Cause:</strong> Original microswitches wear out after decades of use.</p>
+            <p><strong>Repair:</strong> Replace with new Chinese microswitches - they are 1:1 Honeywell design clones and very good quality.</p>
+        </section>
+
+        <section id="model-identification">
+            <h2>⚠️ CRITICAL: A80 Model Identification</h2>
+            
+            <p>The A80 came in several variants, and knowing which you have is essential for ordering parts:</p>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Model</th>
+                    <th>Characteristics</th>
+                    <th>Identification</th>
+                </tr>
+                <tr>
+                    <td><strong>A80VU</strong></td>
+                    <td>Audio electronics in meterbridge</td>
+                    <td>Calibration adjustments on meterbridge, VU meters in bridge</td>
+                </tr>
+                <tr>
+                    <td><strong>A80RC (Radio Compact)</strong></td>
+                    <td>Audio electronics beneath transport, shallow meterbridge</td>
+                    <td>Calibration adjustments on front edge of machine, compact design</td>
+                </tr>
+                <tr>
+                    <td><strong>A80R</strong></td>
+                    <td>Reproduce-only version for broadcast</td>
+                    <td>No record electronics, dummy heads in place of record head</td>
+                </tr>
+                <tr>
+                    <td><strong>MkI, II, III, IV</strong></td>
+                    <td>Production versions 1970-1989</td>
+                    <td>Check serial number and board revisions</td>
+                </tr>
+            </table></div>
+            
+            <p><strong>Critical:</strong> The 1/4" version you're interested in may be an A80RC or A80VU configured for stereo. Card numbers help identify the exact configuration.</p>
+        </section>
+
+        <section id="repair">
+            <h2>Systematic Restoration Process</h2>
+            
+            <div class="warning">
+                <strong>🔧 RESTORATION PHILOSOPHY:</strong> The A80 is not a machine to cut your teeth on - when it's going it's fabulous, but some alignment, particularly the transport, needs tools and experience. Work methodically, one board at a time, and test after each stage.
+            </div>
+            
+            <div class="checklist">
+                <h3>Complete Restoration Checklist:</h3>
+                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all wiring, card positions) - point-to-point wiring is complex</div>
+                <div class="checklist-item">✅ Stage 1 - Replace ALL RIFA capacitors on transport boards and power supply</div>
+                <div class="checklist-item">✅ Stage 2 - Replace ALL motor run capacitors (capstan and reel motors)</div>
+                <div class="checklist-item">✅ Stage 3 - Replace large stud-mount Frako capacitors in power supply</div>
+                <div class="checklist-item">✅ Stage 4 - Replace ALL red tantalum capacitors immediately</div>
+                <div class="checklist-item">✅ Stage 5 - Recap audio channels (one by one) - each has 16 capacitors</div>
+                <div class="checklist-item">✅ Stage 6 - Recap transport control cards</div>
+                <div class="checklist-item">✅ Stage 7 - Replace microswitches</div>
+                <div class="checklist-item">✅ Stage 8 - Service dashpots (pinch roller and tensioner) with silicone grease</div>
+                <div class="checklist-item">✅ Stage 9 - Convert indicator bulbs to LED (meter, record, ready, end-of-tape)</div>
+                <div class="checklist-item">✅ Stage 10 - Check and adjust brake bands</div>
+                <div class="checklist-item">✅ Stage 11 - Measure head wear (flats >4mm indicate relap needed)</div>
+                <div class="checklist-item">✅ Stage 12 - Full alignment per service manual</div>
+            </div>
+            
+            <p><strong>Pro Tip:</strong> Do not do a blind recap of the whole deck at once. Verify function first, then recap in sections. The A80's modular design allows hot-swapping of audio channels, so you can test recapped modules immediately.</p>
+        </section>
+
+        <section id="capacitors">
+            <h2>Complete Capacitor Replacement Guide</h2>
+            
+            <div class="component-category">⚠️ CRITICAL - REPLACE BEFORE POWER-ON</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Component</th>
+                    <th>Location</th>
+                    <th>Value</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>RIFA Suppression Caps</td>
+                    <td>Transport boards, power supply</td>
+                    <td>0.1µF, 0.47µF 250VAC</td>
+                    <td>Replace with X2 class safety caps</td>
+                </tr>
+                <tr>
+                    <td>Red Tantalum Caps</td>
+                    <td>Audio boards, I/O boards</td>
+                    <td>Various (1-47µF)</td>
+                    <td>"If red - do not turn on device before replacing"</td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">🔋 MOTOR RUN CAPACITORS</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Motor</th>
+                    <th>Value (15/30 ips 50Hz)</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>Capstan Motor</td>
+                    <td>10µF</td>
+                    <td>8µF is for 7.5/15 or 60Hz operation - verify your configuration</td>
+                </tr>
+                <tr>
+                    <td>Reel Motors</td>
+                    <td>20µF</td>
+                    <td>Standard motor run caps from Ducati work fine</td>
+                </tr>
+            </table></div>
+            <p><strong>Note:</strong> "Some say not to get the white washing machine types but I don't know if these are the same. Well, of course they say. Because they want to sell their caps at 10x price. No problems, they are as good as any other."</p>
+            
+            <div class="component-category">⚡ POWER SUPPLY - STUD MOUNT CAPACITORS</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Component</th>
+                    <th>Typical Values</th>
+                    <th>Replacement Notes</th>
+                </tr>
+                <tr>
+                    <td>Main Filter Caps</td>
+                    <td>22,000µF/16V, 10,000µF/16V, 4700µF/40V</td>
+                    <td>Frako brand tends to short - replace</td>
+                </tr>
+            </table></div>
+            <p><strong>Replacement Options:</strong></p>
+            <ul>
+                <li><strong>FT Cap (Germany):</strong> Direct stud-mount replacements available from ftcap.de</li>
+                <li><strong>Modern caps + clamps:</strong> Use standard electrolytics with capacitor clamps, drill mounting plate</li>
+                <li><strong>Restuffing:</strong> Gut old cans and put modern caps inside (advanced, requires care with old electrolyte)</li>
+            </ul>
+            
+            <div class="component-category">🔴 AUDIO CHANNELS (1.080.xxx series)</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Card Type</th>
+                    <th>Part Numbers</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Reproduce Amp</td>
+                    <td>1.080.986.xx</td>
+                    <td>16 capacitors per channel, including Frakos</td>
+                </tr>
+                <tr>
+                    <td>Record Amp</td>
+                    <td>1.080.982.xx</td>
+                    <td>Replace all electrolytics and red tantalums</td>
+                </tr>
+                <tr>
+                    <td>Oscillator</td>
+                    <td>1.080.904.xx</td>
+                    <td>Check for bias oscillator issues</td>
+                </tr>
+                <tr>
+                    <td>Stabilizer</td>
+                    <td>1.080.964.xx</td>
+                    <td>Power regulation for audio channels</td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">🔵 TRANSPORT CONTROL CARDS</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Card Position</th>
+                    <th>Part Numbers</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Transport Cards</td>
+                    <td>1.081.381, 1.080.383, 1.080.374, 1.080.389, 1.081.393, 1.081.396, 1.080.370</td>
+                    <td>Recap all electrolytics, replace RIFAs first</td>
+                </tr>
+            </table></div>
+        </section>
+
+        <section id="mechanical">
+            <h2>Mechanical Overhaul Guide</h2>
+            
+            <h3>Dashpot Service (Pinch Roller & Tensioners):</h3>
+            <ul>
+                <li><strong>Symptoms:</strong> Transport stalls after warm-up, uneven tension, slow rewind in one direction</li>
+                <li><strong>Lubricant:</strong> 50cs viscosity silicone grease</li>
+                <li><strong>Alternative:</strong> La Tromba silicone oil works well</li>
+                <li><strong>Procedure:</strong> Disassemble dashpot, clean old grease, refill with fresh silicone, reassemble</li>
+                <li><strong>Note:</strong> One NYC tech used Colgate Gel toothpaste successfully for years</li>
+            </ul>
+            
+            <h3>Head Wear Assessment:</h3>
+            <ul>
+                <li>Check the width of the flats on the heads</li>
+                <li>Beyond 4mm indicates relapping territory</li>
+                <li>Studer heads will take one relap, maybe two</li>
+                <li>Don't rush into relapping - see how it performs first</li>
+                <li>4000 hours is a fair amount of use, but doesn't directly indicate head hours</li>
+            </ul>
+            
+            <h3>Capstan Motor Health:</h3>
+            <ul>
+                <li>Listen for rumblings from the capstan motor</li>
+                <li>Slow startup may indicate wrong capacitor value</li>
+            </ul>
+            
+            <h3>Bulb Replacement / LED Conversion:</h3>
+            <ul>
+                <li><strong>VU meter bulbs:</strong> 30V incandescent - LEDs are cost-effective alternative</li>
+                <li><strong>Record/Ready lamps:</strong> Tiny 28V bulbs - $5 each from specialists, $2 for LEDs</li>
+                <li><strong>End-of-tape sensor:</strong> Can be converted to LED using copper tubing</li>
+                <li><strong>Photocell:</strong> Sometimes goes bad - can be replaced with modern equivalent</li>
+            </ul>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>Common Troubleshooting Guide</h2>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Symptom</th>
+                    <th>Likely Cause</th>
+                    <th>Solution</th>
+                </tr>
+                <tr>
+                    <td>Dead audio channels, blown fuses</td>
+                    <td>Shorted Frako capacitors</td>
+                    <td>Replace all Frakos - 16 per channel</td>
+                </tr>
+                <tr>
+                    <td>Smoke, burning smell from transport</td>
+                    <td>RIFA capacitor exploded</td>
+                    <td>Replace all RIFAs immediately</td>
+                </tr>
+                <tr>
+                    <td>Motor stops after 10 min, works after cooldown</td>
+                    <td>Phase shift/motor capacitor failing</td>
+                    <td>Replace motor run caps</td>
+                </tr>
+                <tr>
+                    <td>Transport stalls after warm-up, pinch roller not engaging</td>
+                    <td>Dashpot sticky when warm</td>
+                    <td>Lubricate with silicone oil</td>
+                </tr>
+                <tr>
+                    <td>Rewind slower in one direction</td>
+                    <td>Tensioner dashpot dried out</td>
+                    <td>Clean and refill with 50cs silicone grease</td>
+                </tr>
+                <tr>
+                    <td>Capstan slow to reach speed</td>
+                    <td>Wrong capacitor value fitted</td>
+                    <td>Check configuration - 15/30 50Hz needs 10µF</td>
+                </tr>
+                <tr>
+                    <td>Intermittent transport functions</td>
+                    <td>Microswitch failure</td>
+                    <td>Replace with modern equivalents</td>
+                </tr>
+                <tr>
+                    <td>VU meters dark, record lamps dead</td>
+                    <td>Bulbs burned out</td>
+                    <td>LED conversion recommended</td>
+                </tr>
+                <tr>
+                    <td>Distorted audio, one channel weak</td>
+                    <td>Bad electrolytics or tantalums</td>
+                    <td>Replace all Frakos and red tantalums</td>
+                </tr>
+                <tr>
+                    <td>Machine works, then completely dead</td>
+                    <td>Stud-mount Frako shorted</td>
+                    <td>Replace large power supply caps</td>
+                </tr>
+            </table></div>
+            
+            <h3>Real Restoration Cases:</h3>
+            <div class="info-box">
+                <p><strong>Case 1 - Mushroom Studios A80 MkII 24-track:</strong> Received with paper notes on condition. 8 channels had shorted Frakos, only rewind worked. Full restoration included recapping all audio channels, transport cards, replacing RIFAs, LED conversion, and power supply rebuild.</p>
+                
+                <p><strong>Case 2 - Motor Stopping Issue:</strong> A80 MkII 24-track would stop mid-playback, work after cooldown. Suspected motor capacitors - classic symptom of failing phase shift caps.</p>
+                
+                <p><strong>Case 3 - Transport Stalling:</strong> A80RC would stall after 20 minutes, pinch rollers not engaging. Found dashpots causing friction when warm - lubrication solved it.</p>
+                
+                <p><strong>Case 4 - Capstan Capacitor Confusion:</strong> 15/30 ips machine had 8µF fitted (correct for other speeds) causing slow startup. Replaced with correct 10µF, problem solved.</p>
+            </div>
+        </section>
+
+        <section id="resources">
+            <h2>Restoration Resources & Documentation</h2>
+            
+            <h3>Essential Documentation:</h3>
+            <ul>
+                <li><strong>Studer FTP Archive:</strong> ftp://ftp.studer.ch/Public/Products/ - Contains service manuals for all A80 variants</li>
+                <li><strong>Service Manuals:</strong> Available from Reverb and other sources</li>
+                <li><strong>Card Numbers:</strong> Keep track of your specific card revisions (e.g., 1.080.986.12) for accurate parts</li>
+            </ul>
+            
+            <h3>Parts Sources:</h3>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Supplier</th>
+                    <th>Specialty</th>
+                </tr>
+                <tr>
+                    <td>FT Cap (Germany)</td>
+                    <td>Direct stud-mount capacitor replacements</td>
+                </tr>
+                <tr>
+                    <td>Mouser / DigiKey</td>
+                    <td>General capacitors, motor run caps (Ducati), LED bulbs, microswitches</td>
+                </tr>
+                <tr>
+                    <td>eBay UK/DE</td>
+                    <td>Motor run caps (Ducati, etc.), small parts</td>
+                </tr>
+                <tr>
+                    <td>Steve Smith (Nashville)</td>
+                    <td>Studer service expert, can supply parts and advice</td>
+                </tr>
+                <tr>
+                    <td>Al Grundy (cutterhead.com)</td>
+                    <td>Dashpot grease and supplies</td>
+                </tr>
+            </table></div>
+            
+            <h3>Online Resources:</h3>
+            <ul>
+                <li><strong>Tapeheads.net:</strong> Active A80 community, detailed recap threads</li>
+                <li><strong>Gearspace (GeekZone):</strong> Professional tech discussions</li>
+                <li><strong>GroupDIY:</strong> Transport troubleshooting</li>
+                <li><strong>Studer List (recordist.com):</strong> Email list moderated by Fred Thal, A80 expert</li>
+                <li><strong>Reel-to-Reel Tech:</strong> Restoration articles</li>
+                <li><strong>UK Vintage Radio:</strong> Buying advice and head wear assessment</li>
+            </ul>
+        </section>
+
+        <section id="specifications">
+            <h2>Technical Specifications (1/4" Version)</h2>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Production Period</td>
+                    <td>1970-1989</td>
+                </tr>
+                <tr>
+                    <td>Versions</td>
+                    <td>MkI through MkIV</td>
+                </tr>
+                <tr>
+                    <td>Variants</td>
+                    <td>A80VU (meters in bridge), A80RC (compact radio)</td>
+                </tr>
+                <tr>
+                    <td>Frequency Response</td>
+                    <td>Flat 40Hz to >22kHz (depending on calibration, tape, head condition)</td>
+                </tr>
+                <tr>
+                    <td>Construction</td>
+                    <td>Point-to-point wiring, no motherboard</td>
+                </tr>
+                <tr>
+                    <td>Modularity</td>
+                    <td>Hot-swappable audio channels</td>
+                </tr>
+                <tr>
+                    <td>Head Life</td>
+                    <td>Flats >4mm indicate relap needed</td>
+                </tr>
+                <tr>
+                    <td>Typical Use</td>
+                    <td>Professional recording studios, broadcast, mastering</td>
+                </tr>
+            </table></div>
+            
+            <h3>Key Card Numbers (A80RC Example):</h3>
+            <ul>
+                <li><strong>Reproduce Amp:</strong> 1.080.986.12 (2x for stereo)</li>
+                <li><strong>MS Switch:</strong> 1.081.940.11</li>
+                <li><strong>Record Amp:</strong> 1.080.982.12 (2x for stereo)</li>
+                <li><strong>Oscillator:</strong> 1.080.904.12</li>
+                <li><strong>Stabilizer:</strong> 1.080.964.11</li>
+                <li><strong>Transport Cards:</strong> 1.081.381, 1.080.383, 1.080.374, 1.080.389, 1.081.393, 1.081.396, 1.080.370</li>
+            </ul>
+        </section>
+
+        <section id="common-mistakes">
+            <h2>Common Mistakes to Avoid</h2>
+            
+            <div class="danger">
+                <ul>
+                    <li><strong>❌ Powering up without replacing RIFAs:</strong> They WILL explode with smoke and fire</li>
+                    <li><strong>❌ Ignoring red tantalums:</strong> "If red - do not turn on device before replacing"</li>
+                    <li><strong>❌ Not replacing motor run capacitors:</strong> They can leak at any time, cleaning is horrible</li>
+                    <li><strong>❌ Buying expensive "audiophile" motor caps:</strong> Standard Ducati caps work perfectly</li>
+                    <li><strong>❌ Blind recapping the whole deck at once:</strong> Do one board at a time, test after each</li>
+                    <li><strong>❌ Forgetting the dashpots:</strong> Sticky dashpots cause transport issues after warm-up</li>
+                    <li><strong>❌ Incorrect capstan capacitor value:</strong> Verify your configuration (15/30 50Hz needs 10µF, not 8µF)</li>
+                    <li><strong>❌ Assuming heads are worn without measuring:</strong> Check flats - under 4mm may be fine</li>
+                    <li><strong>❌ Using wrong lubricant in dashpots:</strong> Use 50cs silicone grease</li>
+                    <li><strong>❌ Ignoring microswitches:</strong> Cheap replacements are excellent quality</li>
+                    <li><strong>❌ Not using PC board extenders:</strong> Troubleshooting is much easier with them</li>
+                    <li><strong>❌ Assuming all tantalums are bad:</strong> Blue and green types are less problematic; red must go</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p><strong>Studer A80 (1970s 1/4" Tape)</strong> • Compiled from Reel-to-Reel Tech, Tapeheads.net, Gearspace, GroupDIY, and service manual references • Last Updated: 2024</p>
+            <p>Restoration requires advanced technical skill and proper tools. The A80 is a professional studio machine - treat it with respect. Replace all RIFAs, Frakos, and red tantalums first. Service dashpots with silicone grease. Take your time, work methodically, and test after each stage.</p>
+            <p>🙏 Special thanks to the global Studer community, Fred Thal, Steve Smith, and all contributors who share their restoration experiences.</p>
+        </footer>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,713 @@
+{% extends "base.html" %}
+{% block title %}Revox B226 Reel-to-Reel Repair Guide | TEK Media Group{% endblock %}
+{% block desc %}Revox B226 repair guide from Tek Media Group. Capacitor replacement, adjustments and common repairs. (818) 244-4440.{% endblock %}
+{% block canon %}/reel-to-reel/revox/revox-b226{% endblock %}
+{% block head %}
+<style>.rv *{box-sizing: border-box; margin: 0; padding: 0;}.rv{font-family: 'Courier New', monospace; line-height: 1.6; color: #333; max-width: 1100px; margin: 0 auto; padding: 20px; background: #f5f5f5;}.rv .content-wrapper{background: white; padding: 30px; border: 1px solid #ddd; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);}.rv h1{font-size: 2.2em; margin-bottom: 10px; letter-spacing: -1px; color: #2c3e50;}.rv h2{font-size: 1.5em; margin: 30px 0 15px 0; padding: 10px 0 5px 0; border-bottom: 2px solid #ccc; color: #34495e;}.rv h3{font-size: 1.2em; margin: 20px 0 10px 0; color: #7f8c8d;}.rv .subtitle{font-style: italic; color: #666; margin-bottom: 20px; font-size: 1.1em;}.rv .header-section{border-bottom: 3px double #333; margin-bottom: 30px; padding-bottom: 20px; text-align: center;}.rv .disclaimer{background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; font-size: 0.9em; color: #856404; text-align: left; font-weight: bold;}.rv section{background: white; padding: 20px; margin-bottom: 25px; border: 1px solid #eee; box-shadow: 0 1px 3px rgba(0,0,0,0.05);}.rv .warning{background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;}.rv .danger{background: #f8d7da; border-left: 4px solid #dc3545; padding: 15px; margin: 20px 0;}.rv .danger strong{color: #721c24;}.rv .warning strong{color: #856404;}.rv .info-box{background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 15px; margin: 20px 0;}.rv .success-box{background: #d4edda; border-left: 4px solid #28a745; padding: 15px; margin: 20px 0;}.rv table{width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em;}.rv th,.rv td{border: 1px solid #ddd; padding: 8px 12px; text-align: left;}.rv th{background: #f0f0f0; font-weight: bold;}.rv tr:nth-child(even){background: #f9f9f9;}.rv ul,.rv ol{margin: 15px 0 15px 25px;}.rv li{margin-bottom: 8px;}.rv .badge{display: inline-block; background: #dc3545; color: white; padding: 3px 8px; font-size: 0.8em; border-radius: 3px; margin-right: 10px;}.rv .badge-blue{background: #17a2b8;}.rv .badge-green{background: #28a745;}.rv .badge-purple{background: #6f42c1;}.rv .badge-orange{background: #fd7e14;}.rv .component-category{background: #e9ecef; padding: 10px; margin: 15px 0 10px 0; font-weight: bold; border-left: 3px solid #007bff;}.rv .model-grid{display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;}.rv .model-card{border: 1px solid #ccc; padding: 15px; background: #f8f9fa; border-radius: 3px;}.rv .price-tag{font-weight: bold; color: #28a745; margin-top: 5px; font-size: 1.1em;}.rv .kit-reference{display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;}.rv .kit-card{border: 1px solid #ccc; padding: 15px; background: #f8f9fa; border-radius: 3px;}.rv footer{margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; text-align: center;}.rv code{background: #eee; padding: 2px 5px; font-family: 'Courier New', monospace; border-radius: 2px;}.rv .compatibility-note{background: #e7f3ff; padding: 10px; border-radius: 3px; margin: 10px 0;}.rv .part-number{font-family: 'Courier New', monospace; background: #f0f0f0; padding: 2px 4px; border-radius: 2px; font-size: 0.9em;}.rv .voltage-warning{color: #dc3545; font-weight: bold;}.rv .checklist{background: #f8f9fa; padding: 15px; border-radius: 3px; margin: 15px 0;}.rv .checklist-item{margin: 5px 0;}.rv .board-diagram{background: #f0f0f0; padding: 15px; font-family: 'Courier New', monospace; text-align: center; border-radius: 3px;}.rv .capacitor-warning{background: #f0f0f0; padding: 15px; border-left: 4px solid #dc3545; margin: 15px 0;}.rv .ir-sensor-note{background: #f0f0f0; padding: 15px; border-left: 4px solid #17a2b8; margin: 15px 0;}@media (max-width: 900px){.rv{max-width: 100vw; padding: 10px;}.rv .content-wrapper{padding: 10px;}.rv h1{font-size: 1.5em;}.rv h2{font-size: 1.1em;}.rv h3{font-size: 1em;}.rv .model-grid,.rv .kit-reference{grid-template-columns: 1fr;}.rv table,.rv th,.rv td{font-size: 0.95em;}.rv section{padding: 10px;}}@media (max-width: 600px){.rv{padding: 5px;}.rv .content-wrapper{padding: 5px;}.rv section{padding: 5px;}.rv h1{font-size: 1.1em;}.rv h2{font-size: 1em;}.rv h3{font-size: 0.95em;}.rv .model-grid,.rv .kit-reference{grid-template-columns: 1fr;}.rv table,.rv th,.rv td{font-size: 0.9em; padding: 4px 6px;}}@media (max-width: 700px){.rv table{display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;}}.rv{overflow-x:auto;max-width:100%}</style>
+<script type="application/ld+json">{% raw %}{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Revox B226 Repair", "serviceType": "Reel-to-reel tape recorder repair", "provider": {"@type": "LocalBusiness", "name": "Tek Media Group", "telephone": "+1-818-244-4440", "url": "https://tekmg.com"}, "areaServed": "United States", "url": "https://tekmg.com/reel-to-reel/revox/revox-b226"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tekmg.com/"}, {"@type": "ListItem", "position": 2, "name": "Reel To Reel", "item": "https://tekmg.com/reel-to-reel"}, {"@type": "ListItem", "position": 3, "name": "Revox", "item": "https://tekmg.com/reel-to-reel/revox"}, {"@type": "ListItem", "position": 4, "name": "Revox B226", "item": "https://tekmg.com/reel-to-reel/revox/revox-b226"}]}]}{% endraw %}</script>
+{% endblock %}
+{% block footer %}{% include "_old_footer.html" %}{% endblock %}
+{% block content %}
+<div class="rv">
+<div style="font-size:.8rem;margin:0 0 12px;font-family:Arial,sans-serif"><a href="/" style="display:inline-block;padding:10px 0">Home</a> &gt; <a href="/reel-to-reel" style="display:inline-block;padding:10px 0">Reel To Reel</a> &gt; <a href="/reel-to-reel/revox" style="display:inline-block;padding:10px 0">Revox</a> &gt; Revox B226</div>
+<div class="content-wrapper">
+        <div class="header-section">
+            <h1>Revox B226</h1>
+            <p class="subtitle">16-Bit Quadruple Oversampling CD Player • 1986-1992 • The Digital Refinement</p>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>DISCLAIMER:</strong> This information is provided for educational purposes only. While we strive for accuracy, we cannot guarantee all information is correct or complete. Always consult official Revox documentation when available. Proceed at your own risk.
+        </div>
+
+        <div class="danger">
+            <strong>⚠️ IMMEDIATE SAFETY WARNING:</strong> The Revox B226 contains <span class="voltage-warning">aging electrolytic capacitors</span> that WILL fail, causing a wide range of symptoms from intermittent operation to complete failure . <strong>Never operate an unrestored B226 without first replacing critical electrolytic capacitors.</strong> The unit contains hazardous mains voltages.
+        </div>
+
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The Revox B226 represents the evolution of Revox's CD player technology, built from 1986 to 1992 as the successor to the B225 . Featuring a 16-bit quadruple oversampling DAC system developed in Europe, the B226 delivers exceptional audio performance with distortion below 0.005% and a signal-to-noise ratio exceeding 96dB .</p>
+            
+            <div class="info-box">
+                <strong>📌 Key Specifications :</strong>
+                <ul>
+                    <li><strong>DAC:</strong> 16-bit with quadruple oversampling</li>
+                    <li><strong>Transport:</strong> Philips CDM-1 / CDM-4 swing-arm mechanism</li>
+                    <li><strong>Frequency Response:</strong> 20 Hz - 20 kHz ± 0.1 dB</li>
+                    <li><strong>Distortion:</strong> < 0.005%</li>
+                    <li><strong>Signal/Noise:</strong> > 96 dB (20 Hz-20 kHz), > 100 dB weighted</li>
+                    <li><strong>Crosstalk:</strong> > 90 dB</li>
+                    <li><strong>Output Level:</strong> 2 V RMS fixed, variable output available</li>
+                    <li><strong>Weight:</strong> 8.5 kg</li>
+                    <li><strong>Dimensions:</strong> 450 x 109 x 332 mm</li>
+                </ul>
+            </div>
+            
+            <p>The B226 offers 19 programmable track steps, search time of 15,000 tracks per second, and start time from pause under 0.6 seconds . It features both fixed and variable audio outputs, plus two digital outputs for future applications like CD-Graphics and digital dubbing . The player was available in multiple versions including the B226-S and B226 MKII, with the MKII using the CDM-4 transport for cost reduction .</p>
+        </section>
+
+        <section id="value">
+            <h2>Current Market Value (2024)</h2>
+            <p>B226 values reflect its reputation as one of the finest CD players of its era:</p>
+            
+            <div class="model-grid">
+                <div class="model-card">
+                    <strong>Unrestored / Project Unit</strong>
+                    <p>Non-working, unknown condition, needs capacitor replacement </p>
+                    <div class="price-tag">$300-500</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Partially Restored</strong>
+                    <p>Some capacitors replaced, basic functionality</p>
+                    <div class="price-tag">$500-800</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Fully Restored</strong>
+                    <p>Complete recap, transport service, alignment </p>
+                    <div class="price-tag">$900-1,500</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>Factory Reconditioned</strong>
+                    <p>Revox factory overhaul with certificate and 2-year warranty </p>
+                    <div class="price-tag">$1,800-2,500+</div>
+                </div>
+                
+                <div class="model-card">
+                    <strong>B226 MKII</strong>
+                    <p>Later version with CDM-4 transport, cost-reduced</p>
+                    <div class="price-tag">$700-1,200</div>
+                </div>
+            </div>
+            
+            <p><strong>Note:</strong> Factory-reconditioned units from Revox in Villingen command premium prices and include full certification . Upgraded units with TDA1541A S1/S2 Double Crown DACs and op-amp modifications are highly sought by audiophiles .</p>
+        </section>
+
+        <section id="failures">
+            <h2>Common Failure Modes</h2>
+            
+            <h3><span class="badge">#1</span> Electrolytic Capacitor Failure</h3>
+            <p><strong>Symptom:</strong> Unit draws power but won't respond, intermittent operation, tracking errors, skipping. One repair shop noted that power supply board issues are a common cause of problems . German restorers advise: "Replace the spindle bearing and a couple of capacitors" as standard procedure .</p>
+            <p><strong>Cause:</strong> The B226 uses Philips blue electrolytic capacitors and yellow FRAKO capacitors that dry out after 30+ years. Capacitors in the IR receiver circuit (C3: 47µF 10V Philips, C1: 10µF 35V yellow Frako) are particularly critical . C3 was found with only 2/3 of original capacitance, while C1 had no measurable capacitance, causing the TBA2800 IR preamp IC to malfunction .</p>
+            <p><strong>Repair:</strong> Replace ALL electrolytic capacitors on every board . Pay special attention to capacitors on the power supply board, decoder board, and the IR receiver board . The IR board capacitors are double-sided with through-hole plating, making them "ziemlich fummelig zu entfernen" (quite fiddly to remove) but well worth the effort .</p>
+            
+            <h3><span class="badge">#2</span> Spindle Bearing Wear</h3>
+            <p><strong>Symptom:</strong> CD doesn't read TOC, skipping, tracking errors, difficulty playing later tracks. One forum member reported: "Mein im Jahre 1987 gekaufte Erstausgabe des b226, zeigte ähnliche Probleme. Nach dem ersetzen des Spindellagers war alles OK" (My first edition B226 from 1987 showed similar problems. After replacing the spindle bearing, everything was OK) .</p>
+            <p><strong>Cause:</strong> The spindle motor thrust bearing wears over time, creating a divot that lowers the CD relative to the laser. Even lightly used B226s exhibit this bearing wear . The spindle screw can wear into the bearing surface, requiring replacement or resurfacing .</p>
+            <p><strong>Repair:</strong> Replace the spindle bearing assembly or resurface the existing one. One restorer noted that the axial bearing is "immer ein Thema" (always a topic) with the CDM-1 transport . A complete transport overhaul is recommended for long-term reliability .</p>
+            
+            <h3><span class="badge">#3</span> Laser Failure / Weak Laser Current</h3>
+            <p><strong>Symptom:</strong> No disc reading, TOC not recognized, skipping on later tracks. One user reported: "le bloc opto - mécanique ( Philips CDM 1 ) ne veut plus lire les CD. réglages inopérants, etc ( plus de 'courant laser' : 40 mV pp au lieu de 550 au point de mesure )" (the opto-mechanical unit no longer reads CDs, adjustments ineffective, no laser current: 40mV pp instead of 550mV at test point) .</p>
+            <p><strong>Cause:</strong> Laser diode weakens with age. Normal laser voltage is approximately 550mV at the test point; 40mV indicates a dead laser . The Philips CDM-1 transport uses a laser diode that is no longer manufactured, making replacement difficult .</p>
+            <p><strong>Repair:</strong> Measure laser voltage at test points. If adjustment fails to restore proper current, laser replacement is necessary. However, "Il est très peu probable qu'il existe des pièces de rechange neuves" (It is very unlikely that new spare parts exist) . Options include finding a donor unit or complete transport replacement.</p>
+            
+            <h3><span class="badge">#4</span> Intermittent Pause / IR Receiver Issues</h3>
+            <p><strong>Symptom:</strong> Player starts, then after a few seconds goes into Pause mode spontaneously. The IR sensor LED briefly illuminates when this happens .</p>
+            <p><strong>Cause:</strong> Multiple potential causes:</p>
+            <ul>
+                <li><strong>Capacitors on IR board:</strong> C3 (47µF 10V Philips) and C1 (10µF 35V yellow Frako) on the IR receiver board fail, causing the TBA2800 IR preamp IC to malfunction </li>
+                <li><strong>Optocouplers:</strong> The two optocouplers near the Serial Link connector can develop corrosion on their socketed connections </li>
+                <li><strong>IR interference:</strong> Energy-saving lamps (CFLs) can trigger the IR sensor </li>
+                <li><strong>Rectifier diodes:</strong> Similar issues resolved by replacing two DC rectifier diodes </li>
+            </ul>
+            <p><strong>Repair:</strong> Replace C1 and C3 on the IR board first . If problem persists, clean or replace the optocouplers near the Serial Link connector . Test with room lights off to rule out interference .</p>
+            
+            <h3><span class="badge">#5</span> Drawer Mechanism Issues</h3>
+            <p><strong>Symptom:</strong> Drawer opens only partially, jams, or won't close completely. One restorer described: "Die Schublade wollte trotzdem ab und an nur einen Spalt aufgehen" (The drawer would occasionally only open a crack) .</p>
+            <p><strong>Cause:</strong> Rubber O-rings on the drawer rollers become hard and cracked. The small O-ring on the clamper lifter also deteriorates . Lack of lubrication on the clamper lift mechanism and guide rails causes friction.</p>
+            <p><strong>Repair:</strong> Replace all O-rings: the large ones on drawer rollers and the small one on the clamper lifter. Recommended sizes: 28mm outer diameter × 1.5mm cross-section for larger rings, and 4.1mm outer diameter × 0.7mm cross-section for the small clamper ring . Lubricate the clamper lift mechanism guide, the three clamper axles, and the drawer guide rails with Vaseline or suitable grease .</p>
+            
+            <h3><span class="badge">#6</span> Radial Arm / Swing Arm Stiffness</h3>
+            <p><strong>Symptom:</strong> Tracking errors, skipping, slow track access. One restorer found that after previous "repair" attempts, "der Schwenkarm ist nicht so leichtgängig wie er sollte" (the swing arm is not as free-moving as it should be) due to someone spraying oil into the mechanism .</p>
+            <p><strong>Cause:</strong> The radial arm bearings become contaminated or dry. Previous repair attempts often involve spraying lubricant incorrectly . The lower bearing plate may need centering adjustment.</p>
+            <p><strong>Repair:</strong> Loosen the centering plate of the lower bearing, ensure the arm moves freely in the bearing, and retighten so that upper and lower bearings are centered . The arm should move like "die Suppe im Teller" (the soup in a plate) when tilted .</p>
+            
+            <h3><span class="badge">#7</span> TDA1541 DAC Upgrade Potential</h3>
+            <p><strong>Symptom:</strong> Stock sound can be improved significantly with upgrades .</p>
+            <p><strong>Cause:</strong> The B226 uses the TDA1541 DAC (often TDA1541A), which can be upgraded to S1, S2, Single Crown, or Double Crown versions for improved performance .</p>
+            <p><strong>Repair/Upgrade:</strong> Replace the stock TDA1541 with TDA1541A S1/S2/Double Crown. Upgrade ranking: S2 > S1 > A > R1 .</p>
+            
+            <h3><span class="badge">#8</span> Display Segment Failure</h3>
+            <p><strong>Symptom:</strong> Missing digits or segments on the display. One user noted: "leider auf dem Display die Kästchen für einige Tracks fehlen" (unfortunately on the display, the boxes for some tracks are missing) . Another seller described: "On the display, the numbers that indicate the seconds are incomplete" .</p>
+            <p><strong>Cause:</strong> LCD controller ICs can fail, or contact issues develop with the display ribbon cable.</p>
+            <p><strong>Repair:</strong> Check ribbon cable connections first. Display replacement may be necessary - available from specialists like Peter Meinhold.</p>
+            
+            <h3><span class="badge">#9</span> Power Supply Board Failure</h3>
+            <p><strong>Symptom:</strong> Player jumps tracks, erratic behavior, drawer judders when opening/closing. One repair shop diagnosed this as a power supply board problem .</p>
+            <p><strong>Cause:</strong> Deteriorated capacitors on the power supply board cause voltage instability. The B126 power supply board is compatible and can be used for testing .</p>
+            <p><strong>Repair:</strong> Rebuild the power supply section completely. It's "quite easy to rebuild the psu section and this is probably the best bet" .</p>
+            
+            <h3><span class="badge">#10</span> Mains Voltage Selection Issues</h3>
+            <p><strong>Symptom:</strong> Intermittent problems that improve after warm-up.</p>
+            <p><strong>Cause:</strong> Modern mains voltages have increased from 220V to 230V since the 1980s. One user converted their player from 220V to 240V and resolved issues: "Ich habe noch eine Änderung vorgenommen und den Player von 220V auf 240V umgestellt, da die Spannung seit den 80er Jahren von 220V auf 230V angehoben wurde" (I made an additional change and switched the player from 220V to 240V, since the voltage has been increased from 220V to 230V since the 80s) .</p>
+            <p><strong>Repair:</strong> Check the voltage selector and adjust for modern mains voltage. This may resolve issues related to marginal power supply regulation.</p>
+            
+            <h3><span class="badge">#11</span> Optocoupler Corrosion (Serial Link)</h3>
+            <p><strong>Symptom:</strong> Sporadic Pause mode, IR-related issues after capacitors already replaced. One user found: "Bei mir waren ebenfalls die Optokoppler neben der Serial-Link-Buchse die Übeltäter - diese sind gesteckt und daher kann es aufgrund von Korrosion zu Kontaktproblemen kommen" (For me, the optocouplers next to the Serial Link socket were also the culprits - these are socketed and therefore contact problems can occur due to corrosion) .</p>
+            <p><strong>Cause:</strong> Corrosion on the socketed pins of the optocouplers near the Serial Link connector.</p>
+            <p><strong>Repair:</strong> Remove and clean the optocouplers, or replace them if corroded. "Nach Beseitigung der Korrosion hatte die 'IR-Spinnerei' ein Ende" (After removing the corrosion, the 'IR-spinning' had an end) .</p>
+            
+            <h3><span class="badge">#12</span> OP-Amp Upgrade Potential</h3>
+            <p><strong>Symptom:</strong> Stock sound can be improved with op-amp upgrades .</p>
+            <p><strong>Cause:</strong> The B226 uses NE5532 op-amps in the filter stage, which can be upgraded.</p>
+            <p><strong>Repair/Upgrade:</strong> Replace the two NE5532 filter op-amps with higher-quality alternatives. Options include AD827, OPA2604, OPA2134. Note that OPA627 is a single op-amp and cannot be directly used without adaptation . Install sockets first to allow op-amp rolling .</p>
+        </section>
+
+        <section id="ir-sensor-fix">
+            <h2>⚠️ CRITICAL: IR Sensor / Spontaneous Pause Fix</h2>
+            
+            <div class="ir-sensor-note">
+                <strong>THE #1 FIX FOR SPONTANEOUS PAUSE ISSUES</strong>
+            </div>
+            
+            <p>The B226 is notorious for spontaneously entering Pause mode during playback, often accompanied by the IR sensor LED briefly flashing . This has a known cause and solution.</p>
+            
+            <h3>IR Receiver Board Capacitors :</h3>
+            <ul>
+                <li><strong>C3:</strong> 47µF 10V (blue Philips) - powers the TBA2800 IR preamp IC at pin 3</li>
+                <li><strong>C1:</strong> 10µF 35V (yellow Frako) - regulates automatic gain control at pin 2</li>
+            </ul>
+            
+            <h3>Failure Analysis :</h3>
+            <ul>
+                <li>C3 was found with only 2/3 of original capacitance</li>
+                <li>C1 had no measurable capacitance at all</li>
+                <li>When C1 drops below 10µF, range decreases logarithmically</li>
+                <li>Below 1µF, "Fehlfunktionen im Empfangsbereich zwischen 0,2 und 2 Metern" (malfunctions in the reception range between 0.2 and 2 meters) occur</li>
+                <li>The TBA2800 develops "ein totales Eigenleben" (a total life of its own)</li>
+            </ul>
+            
+            <h3>Replacement Procedure :</h3>
+            <ol>
+                <li>The IR board is double-sided with through-hole plated connections - "ziemlich fummelig zu entfernen" (quite fiddly to remove)</li>
+                <li>Carefully desolder using proper technique</li>
+                <li>Replace with high-quality modern electrolytics</li>
+                <li>After replacement, "funktioniert an dieser Stelle jetzt wieder alles absolut ordnungsgemäß" (everything here now works absolutely properly again)</li>
+            </ol>
+            
+            <h3>Other IR-Related Issues :</h3>
+            <ul>
+                <li><strong>Optocouplers:</strong> Two socketed optocouplers near the Serial Link connector can develop corrosion - clean or replace</li>
+                <li><strong>Interference:</strong> Energy-saving lamps (CFLs) can trigger the sensor - test with lights off</li>
+                <li><strong>Rectifier diodes:</strong> Similar issues fixed by replacing two DC rectifier diodes </li>
+            </ul>
+        </section>
+
+        <section id="board-identification">
+            <h2>Board Identification Guide</h2>
+            
+            <p>The B226 consists of two main boards with multiple revisions :</p>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Board</th>
+                    <th>Location</th>
+                    <th>Function</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td><strong>Decoder Board</strong></td>
+                    <td>Left side </td>
+                    <td>Power supply, decoding, signal outputs</td>
+                    <td>Contains power supply section and audio output stages </td>
+                </tr>
+                <tr>
+                    <td><strong>Servo Board</strong></td>
+                    <td>Right side </td>
+                    <td>CD drive control, drawer control, IR processing, Serial Link</td>
+                    <td>Contains two potentiometers for radial adjustment </td>
+                </tr>
+                <tr>
+                    <td><strong>IR Receiver Board</strong></td>
+                    <td>Attached to front panel</td>
+                    <td>IR reception, TBA2800 IC</td>
+                    <td>Contains C1 and C3 - critical for pause issues </td>
+                </tr>
+            </table></div>
+            
+            <h3>Board Revisions :</h3>
+            <ul>
+                <li><strong>Early version:</strong> Single trim potentiometer for radial adjustment on servo board</li>
+                <li><strong>Intermediate version:</strong> Second trim pot soldered to the first, with center contact connected via resistor to IC</li>
+                <li><strong>Latest version:</strong> Both trim pots in their proper PCB positions</li>
+                <li><strong>B226 MKII:</strong> Cost-reduced version with CDM-4/27 transport (not CDM-1)</li>
+            </ul>
+            
+            <p><strong>Note:</strong> The transport in the B226 uses a green Studer-designed PCB, not the original Philips board. When buying replacement transports, ensure they include this specific Studer board .</p>
+        </section>
+
+        <section id="repair">
+            <h2>Systematic Restoration Process</h2>
+            
+            <div class="warning">
+                <strong>🔧 RESTORATION PHILOSOPHY:</strong> The B226 rewards systematic restoration. Experienced restorers recommend: "Sicher kann man nur das Spindellager und ein Paar Kondensatoren tauschen, aber mit einer Komplett Ueberholung wirst Du länger Freude an dem CD Player haben" (Sure, you can just replace the spindle bearing and a couple of capacitors, but with a complete overhaul you'll have longer enjoyment of the CD player) .
+            </div>
+            
+            <div class="checklist">
+                <h3>Complete Restoration Checklist:</h3>
+                <div class="checklist-item">✅ Stage 0 - Documentation (photos of all connectors, board positions)</div>
+                <div class="checklist-item">✅ Stage 1 - Replace ALL electrolytic capacitors on every board </div>
+                <div class="checklist-item">✅ Stage 2 - Pay special attention to IR board: C1 (10µF) and C3 (47µF) </div>
+                <div class="checklist-item">✅ Stage 3 - Check and replace spindle bearing if worn </div>
+                <div class="checklist-item">✅ Stage 4 - Clean or replace optocouplers near Serial Link connector </div>
+                <div class="checklist-item">✅ Stage 5 - Replace all drawer O-rings :
+                    <ul>
+                        <li>Large drawer rollers: 28×1.5mm outer diameter</li>
+                        <li>Small clamper lifter ring: 4.1×0.7mm outer diameter</li>
+                    </ul>
+                </div>
+                <div class="checklist-item">✅ Stage 6 - Lubricate drawer mechanism and clamper axles with Vaseline </div>
+                <div class="checklist-item">✅ Stage 7 - Clean laser lens gently with isopropyl alcohol </div>
+                <div class="checklist-item">✅ Stage 8 - Check radial arm bearing freedom, adjust if stiff </div>
+                <div class="checklist-item">✅ Stage 9 - Measure and adjust laser current (target ~550mV at test point) </div>
+                <div class="checklist-item">✅ Stage 10 - Check voltage selector and adjust for modern mains </div>
+                <div class="checklist-item">✅ Stage 11 - Consider upgrades: IEC socket, TDA1541A S1/S2, op-amps </div>
+                <div class="checklist-item">✅ Stage 12 - Full alignment per service manual (radial adjustment, focus gain)</div>
+            </div>
+            
+            <p><strong>Pro Tip:</strong> One restorer noted that after transport service, "die Maschine spielt jetzt eine gebrannte CD mit 79:20 min fehlerfrei bis zur letzten Zehntelsekunde ab" (the machine now plays a burned CD of 79:20 minutes error-free to the last tenth of a second) .</p>
+        </section>
+
+        <section id="capacitors">
+            <h2>Complete Capacitor Replacement Guide</h2>
+            
+            <div class="component-category">⚡ POWER SUPPLY / DECODER BOARD</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Location</th>
+                    <th>Typical Values</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Power supply section</td>
+                    <td>Various electrolytics</td>
+                    <td>Complete replacement recommended </td>
+                </tr>
+                <tr>
+                    <td>Output coupling</td>
+                    <td>100µF Philips 036 </td>
+                    <td>Upgrade option: Black Gate non-polar, ROE, or Philips other series </td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">🔴 IR RECEIVER BOARD - CRITICAL </div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Component</th>
+                    <th>Value</th>
+                    <th>Original Type</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td><strong>C3</strong></td>
+                    <td>47µF 10V</td>
+                    <td>Blue Philips</td>
+                    <td>Powers TBA2800 at pin 3 - often measures only 2/3 capacity</td>
+                </tr>
+                <tr>
+                    <td><strong>C1</strong></td>
+                    <td>10µF 35V</td>
+                    <td>Yellow Frako</td>
+                    <td>AGC regulation - often completely dead, causes IR malfunctions</td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">🔵 SERVO BOARD</div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Location</th>
+                    <th>Action</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Radial regulation circuit</td>
+                    <td>Replace electrolytics</td>
+                    <td>Small electrolytics around trim pots are candidates for replacement </td>
+                </tr>
+                <tr>
+                    <td>Laser power supply</td>
+                    <td>Replace electrolytics</td>
+                    <td>"die kleinen Elkos in der Stromversorgung für den Laser" (the small electrolytics in the laser power supply) </td>
+                </tr>
+            </table></div>
+            
+            <div class="component-category">🎚️ UPGRADE CAPACITORS </div>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Location</th>
+                    <th>Original</th>
+                    <th>Upgrade Options</th>
+                </tr>
+                <tr>
+                    <td>Output coupling (after op-amp)</td>
+                    <td>100µF Philips 036 (polarized)</td>
+                    <td>Black Gate non-polar, ROE, Philips other series </td>
+                </tr>
+            </table></div>
+            
+            <p><strong>Note:</strong> The yellow FRAKO capacitors should be added to the list of problematic electrolytics . When replacing, choose high-quality modern equivalents from Panasonic, Nichicon, or Elna.</p>
+        </section>
+
+        <section id="mechanical">
+            <h2>Mechanical Overhaul Guide</h2>
+            
+            <h3>Drawer O-Ring Replacement :</h3>
+            <ul>
+                <li><strong>Large drawer roller rings:</strong> Original size 28mm outer diameter × 1.5mm cross-section</li>
+                <li><strong>Small clamper lifter ring:</strong> Original size approximately 0.8mm cross-section; recommended replacement: 4.1mm outer diameter × 0.7mm cross-section</li>
+                <li><strong>Source:</strong> Available from eBay or specialized O-ring suppliers</li>
+                <li><strong>Note:</strong> When ordering from German suppliers like HUG, specify inner diameter; Chinese suppliers typically specify outer diameter </li>
+            </ul>
+            
+            <h3>Drawer Lubrication :</h3>
+            <ul>
+                <li>Lubricate the clamper lift mechanism guide</li>
+                <li>Lubricate the three clamper axles (2 suspension points, 1 roller axle on lift mechanism)</li>
+                <li>Lubricate drawer guide rails lightly</li>
+                <li><strong>Recommended lubricant:</strong> Vaseline (petroleum jelly)</li>
+            </ul>
+            
+            <h3>Spindle Bearing Service :</h3>
+            <ul>
+                <li><strong>Inspection:</strong> Check if spindle shaft has worn into bearing surface</li>
+                <li><strong>Replacement:</strong> Complete spindle bearing replacement recommended</li>
+                <li><strong>Resurfacing:</strong> If wear is minor, bearing surface can be sanded flat (remove only 0.3-0.4mm)</li>
+                <li><strong>Adjustment:</strong> CD height over laser adjusted with lower bearing </li>
+            </ul>
+            
+            <h3>Radial Arm Service :</h3>
+            <ul>
+                <li><strong>Symptoms of trouble:</strong> Arm not moving freely, previous oil spraying</li>
+                <li><strong>Procedure:</strong> Loosen centering plate of lower bearing, ensure arm moves freely, retighten with upper and lower bearings centered</li>
+                <li><strong>Test:</strong> When tilted, arm should move like "die Suppe im Teller" (soup in a plate)</li>
+            </ul>
+            
+            <h3>Lens Cleaning :</h3>
+            <ul>
+                <li>Use Q-tip with isopropyl alcohol</li>
+                <li>Breathe on lens first to loosen deposits</li>
+                <li>Clean until lens shows bluish tint (these are coated glass lenses in the CDM-1)</li>
+            </ul>
+            
+            <h3>Laser Current Adjustment :</h3>
+            <ul>
+                <li><strong>Target:</strong> Approximately 550mV at test point</li>
+                <li><strong>Too low:</strong> 40mV indicates dead laser </li>
+                <li><strong>Procedure:</strong> Play a CD and adjust potentiometer for optimal tracking</li>
+            </ul>
+        </section>
+
+        <section id="upgrades">
+            <h2>Popular Upgrades </h2>
+            
+            <h3>Power Supply Upgrades:</h3>
+            <ul>
+                <li><strong>IEC socket conversion:</strong> Replace the original fixed power cord with a standard IEC socket. One user noted that this upgrade significantly improves sound detail .</li>
+                <li><strong>Better power cord:</strong> Use high-quality aftermarket power cord after IEC conversion.</li>
+            </ul>
+            
+            <h3>DAC Upgrade :</h3>
+            <ul>
+                <li><strong>Original:</strong> TDA1541 or TDA1541A</li>
+                <li><strong>Upgrade path:</strong> TDA1541A R1 → A → S1 → S2 → Single Crown → Double Crown</li>
+            </ul>
+            
+            <h3>Op-Amp Upgrade :</h3>
+            <ul>
+                <li><strong>Original:</strong> Two NE5532 used for filtering (soldered directly to board)</li>
+                <li><strong>Procedure:</strong> Desolder originals, install DIP sockets, then experiment with different op-amps</li>
+                <li><strong>Options:</strong> AD827, OPA2604, OPA2134</li>
+                <li><strong>Note:</strong> OPA627 is a single op-amp and requires adaptation </li>
+            </ul>
+            
+            <h3>Output Coupling Capacitors :</h3>
+            <ul>
+                <li><strong>Original:</strong> 100µF Philips 036 (polarized)</li>
+                <li><strong>Options:</strong> Black Gate non-polar, ROE, or Philips other series</li>
+                <li><strong>Consideration:</strong> Choose based on desired sonic signature</li>
+            </ul>
+            
+            <h3>Clock Upgrade :</h3>
+            <ul>
+                <li><strong>Original:</strong> 11.2896 MHz oscillator</li>
+                <li><strong>Upgrade:</strong> Higher precision oscillator to reduce jitter</li>
+                <li><strong>Note:</strong> Good oscillators are expensive and hard to find - consider budget and effort </li>
+            </ul>
+            
+            <h3>Resistor Upgrades :</h3>
+            <ul>
+                <li>Signal path resistors can be upgraded to higher quality types</li>
+                <li>Consult schematic for locations and values</li>
+            </ul>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>Complete Troubleshooting Guide</h2>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Symptom</th>
+                    <th>Likely Cause</th>
+                    <th>Solution</th>
+                </tr>
+                <tr>
+                    <td>Spontaneous Pause during playback, IR LED flashes </td>
+                    <td>Failed C1/C3 on IR board, optocoupler corrosion, bad diodes </td>
+                    <td>Replace C1 (10µF) and C3 (47µF) on IR board first ; clean optocouplers ; check rectifier diodes </td>
+                </tr>
+                <tr>
+                    <td>No disc reading, TOC not recognized </td>
+                    <td>Laser failure, spindle bearing wear, radial arm stiffness </td>
+                    <td>Measure laser voltage (should be ~550mV) ; check spindle bearing ; verify radial arm freedom </td>
+                </tr>
+                <tr>
+                    <td>Skipping, track jumps </td>
+                    <td>Power supply board issues, capacitor failure </td>
+                    <td>Rebuild power supply section, replace all electrolytics </td>
+                </tr>
+                <tr>
+                    <td>Drawer opens only partially, jams </td>
+                    <td>Cracked O-rings, dry lubrication </td>
+                    <td>Replace all O-rings (28×1.5mm and 4.1×0.7mm), lubricate mechanism with Vaseline </td>
+                </tr>
+                <tr>
+                    <td>Long track access times, slow seeking </td>
+                    <td>Radial adjustment needed, stiff arm, spindle bearing wear </td>
+                    <td>Adjust radial trim pots for minimum access time; service radial arm bearings </td>
+                </tr>
+                <tr>
+                    <td>Cold start issues, works after warm-up </td>
+                    <td>Dry solder joints, failing capacitors </td>
+                    <td>Full recap, check for cold solder joints; consider voltage selector adjustment </td>
+                </tr>
+                <tr>
+                    <td>Drawer judders on opening/closing </td>
+                    <td>Power supply board issues </td>
+                    <td>Rebuild power supply section </td>
+                </tr>
+                <tr>
+                    <td>Display missing segments </td>
+                    <td>LCD controller failure, ribbon cable issues</td>
+                    <td>Check ribbon connections; replace display if necessary</td>
+                </tr>
+                <tr>
+                    <td>Unit draws power but won't respond </td>
+                    <td>Dead capacitors, power supply failure </td>
+                    <td>Complete capacitor replacement on all boards </td>
+                </tr>
+                <tr>
+                    <td>Muddy sound, lacks detail </td>
+                    <td>Stock components can be upgraded </td>
+                    <td>Consider TDA1541 upgrade, op-amp rolling, output capacitor replacement </td>
+                </tr>
+            </table></div>
+            
+            <h3>Real Restoration Cases:</h3>
+            <div class="info-box">
+                <p><strong>Case 1 - Spontaneous Pause (Germany):</strong> B226 MkII would randomly go into Pause after startup. Found C3 on IR board at 2/3 capacity, C1 completely dead. After replacement, "funktioniert an dieser Stelle jetzt wieder alles absolut ordnungsgemäß" (everything here now works absolutely properly again) .</p>
+                
+                <p><strong>Case 2 - Spontaneous Pause (Korea):</strong> Similar symptoms with IR LED flashing. Resolved by replacing two DC rectifier diodes .</p>
+                
+                <p><strong>Case 3 - Dead Laser:</strong> French user measured only 40mV at test point instead of 550mV. Laser completely dead, new CDM-1 transport unavailable - unit may need to be replaced .</p>
+                
+                <p><strong>Case 4 - Transport Overhaul:</strong> German restorer found sticky radial arm from previous oil spraying. After cleaning, bearing centering, and spindle adjustment, unit played 79-minute burned CDs perfectly .</p>
+            </div>
+        </section>
+
+        <section id="kits">
+            <h2>Restoration Kits & Resources</h2>
+            
+            <h3>Mechanical Parts :</h3>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Part</th>
+                    <th>Specification</th>
+                    <th>Source</th>
+                </tr>
+                <tr>
+                    <td>Drawer roller O-rings</td>
+                    <td>28mm outer diameter × 1.5mm cross-section </td>
+                    <td>eBay, O-ring suppliers</td>
+                </tr>
+                <tr>
+                    <td>Clamper lifter O-ring</td>
+                    <td>4.1mm outer diameter × 0.7mm cross-section </td>
+                    <td>eBay (search "304645029659") </td>
+                </tr>
+                <tr>
+                    <td>Transport replacement</td>
+                    <td>Complete CDM-1 with Studer green PCB </td>
+                    <td>Donor units, specialist dealers</td>
+                </tr>
+            </table></div>
+            
+            <h3>Electronic Components :</h3>
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Component</th>
+                    <th>Specification</th>
+                    <th>Source</th>
+                </tr>
+                <tr>
+                    <td>C1 (IR board)</td>
+                    <td>10µF 35V electrolytic</td>
+                    <td>Mouser, DigiKey, Reichelt </td>
+                </tr>
+                <tr>
+                    <td>C3 (IR board)</td>
+                    <td>47µF 10V electrolytic</td>
+                    <td>Mouser, DigiKey, Reichelt</td>
+                </tr>
+                <tr>
+                    <td>TDA1541A S1/S2</td>
+                    <td>ceramic Double Crown </td>
+                    <td>eBay, specialist suppliers</td>
+                </tr>
+                <tr>
+                    <td>Op-amp sockets</td>
+                    <td>8-pin DIP</td>
+                    <td>Mouser, DigiKey</td>
+                </tr>
+                <tr>
+                    <td>OPA2604/OPA2134</td>
+                    <td>Dual op-amps</td>
+                    <td>Mouser, DigiKey</td>
+                </tr>
+                <tr>
+                    <td>IEC socket</td>
+                    <td>Standard chassis mount</td>
+                    <td>Mouser, DigiKey </td>
+                </tr>
+            </table></div>
+            
+            <h3>Service Documentation:</h3>
+            <ul>
+                <li><strong>Service Manual:</strong> Available from Revox, manualslib.com</li>
+                <li><strong>Schematic:</strong> http://xoomer.virgilio.it/hi_fi/b226.jpg </li>
+                <li><strong>German Forum:</strong> revoxforum.de for technical discussions </li>
+            </ul>
+            
+            <h3>Online Resources:</h3>
+            <ul>
+                <li><strong>Old Fidelity Forum (Germany):</strong> Detailed B226 restoration thread with photos </li>
+                <li><strong>Revox Fan Forum (Swiss):</strong> IR sensor and pause issue solutions </li>
+                <li><strong>diyaudio.com:</strong> Power supply and troubleshooting </li>
+                <li><strong>MELAUDIA (France):</strong> Laser failure discussions </li>
+            </ul>
+        </section>
+
+        <section id="specifications">
+            <h2>Technical Specifications </h2>
+            
+            <div class="tbl-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%"><table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>CD Player with 16-bit quadruple oversampling</td>
+                </tr>
+                <tr>
+                    <td>Production Period</td>
+                    <td>1986-1992</td>
+                </tr>
+                <tr>
+                    <td>DAC</td>
+                    <td>TDA1541/TDA1541A 16-bit</td>
+                </tr>
+                <tr>
+                    <td>Transport</td>
+                    <td>Philips CDM-1 (early), CDM-4/27 (MKII) </td>
+                </tr>
+                <tr>
+                    <td>Frequency Response</td>
+                    <td>20 Hz - 20 kHz ± 0.1 dB</td>
+                </tr>
+                <tr>
+                    <td>Distortion</td>
+                    <td>< 0.005% (20 Hz - 20 kHz)</td>
+                </tr>
+                <tr>
+                    <td>Signal/Noise Ratio</td>
+                    <td>> 96 dB (20 Hz-20 kHz), > 100 dB weighted</td>
+                </tr>
+                <tr>
+                    <td>Crosstalk</td>
+                    <td>> 90 dB</td>
+                </tr>
+                <tr>
+                    <td>Output Level</td>
+                    <td>2 V RMS fixed, variable output available</td>
+                </tr>
+                <tr>
+                    <td>Headphone Output</td>
+                    <td>4.5V</td>
+                </tr>
+                <tr>
+                    <td>Program Steps</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>Start Time from Pause</td>
+                    <td>< 0.6 seconds</td>
+                </tr>
+                <tr>
+                    <td>Search Speed</td>
+                    <td>15,000 tracks/second</td>
+                </tr>
+                <tr>
+                    <td>Special Functions</td>
+                    <td>LOOP, PAUSE, POWER OFF</td>
+                </tr>
+                <tr>
+                    <td>Power Consumption</td>
+                    <td>Approx. 20W</td>
+                </tr>
+                <tr>
+                    <td>Dimensions (W×H×D)</td>
+                    <td>450 × 109 × 332 mm</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>8.5 kg</td>
+                </tr>
+            </table></div>
+            
+            <h3>Key ICs:</h3>
+            <ul>
+                <li><strong>TDA1541/TDA1541A:</strong> 16-bit DAC (upgradable to S1/S2/Double Crown) </li>
+                <li><strong>TBA2800:</strong> IR preamplifier on IR receiver board </li>
+                <li><strong>NE5532:</strong> Dual op-amps in filter stage (upgradable) </li>
+            </ul>
+        </section>
+
+        <section id="common-mistakes">
+            <h2>Common Mistakes to Avoid</h2>
+            
+            <div class="danger">
+                <ul>
+                    <li><strong>❌ Not replacing IR board capacitors:</strong> C1 and C3 are critical for fixing spontaneous pause issues. C1 (yellow Frako) often has zero capacitance left .</li>
+                    <li><strong>❌ Spraying oil into radial arm mechanism:</strong> One restorer found a previous "repair" where someone had sprayed oil, causing the arm to become sticky. "Mit Öl versprühen wird das nichts" (Spraying oil won't achieve anything) .</li>
+                    <li><strong>❌ Buying wrong transport replacements:</strong> Many eBay listings offer "transport for Studer A727" but without the necessary green Studer PCB. The B226 requires the complete unit with Studer board .</li>
+                    <li><strong>❌ Ignoring optocoupler corrosion:</strong> After capacitor replacement, if IR issues persist, check the two socketed optocouplers near the Serial Link connector .</li>
+                    <li><strong>❌ Not adjusting voltage selector:</strong> Modern mains voltage is higher than 1980s standards. Consider switching from 220V to 230V/240V .</li>
+                    <li><strong>❌ Using wrong O-ring sizes:</strong> The small clamper ring must be precisely sized - 4.1mm outer diameter × 0.7mm cross-section works well .</li>
+                    <li><strong>❌ Assuming laser is dead without checking:</strong> Measure laser voltage first - spindle bearing wear often mimics laser failure .</li>
+                    <li><strong>❌ Overlooking power supply board:</strong> Many intermittent issues, including drawer judder, trace back to power supply capacitors .</li>
+                    <li><strong>❌ Not cleaning lens properly:</strong> The CDM-1 has coated glass lenses - clean gently until they show bluish tint .</li>
+                    <li><strong>❌ Forgetting to lubricate the clamper mechanism:</strong> Dry axles cause drawer problems even after O-ring replacement .</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p><strong>Revox B226</strong> • Compiled from Old Fidelity Forum, Revox Fan Forum, diyaudio.com, MELAUDIA, and service manual references • Last Updated: 2024</p>
+            <p>Restoration requires intermediate to advanced technical skill. The B226 is a refined CD player - treat it with respect. Replace IR board capacitors C1 and C3 first if experiencing pause issues . Complete recap and mechanical overhaul will provide years of reliable service . Consider TDA1541A S1/S2 upgrade for audiophile performance .</p>
+            <p>🙏 Special thanks to the global Revox community and all contributors who share their restoration experiences across German, French, and Korean forums.</p>
+        </footer>
+    </div>
+</div>
+{% endblock %}
