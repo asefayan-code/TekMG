@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Beosound & Beosystem Repair | Bang & Olufsen Authorized Service | Tek Media Group{% endblock %}
-{% block desc %}Repair for every Bang & Olufsen Beosound and Beosystem: Beosound 9000, Ouverture, Century, 1, 2, 3, 5, 8, Balance, Emerge, Level, Shape, Theatre and Beosystem 10 through 7000. Pick your model and start a service ticket. Free estimates, nationwide.{% endblock %}
-{% block canon %}/bang-olufsen/beosound-beosystem{% endblock %}
+{% block title %}Beosound & Beocenter Repair | Bang & Olufsen Authorized Service | Tek Media Group{% endblock %}
+{% block desc %}Repair for every Bang & Olufsen Beosound and Beocenter: Beosound 9000, Ouverture, Century, 1, 2, 3, 5, 8, Balance, Emerge, Level, Shape, Theatre and Beocenter 2 through 9500. Pick your model and start a service ticket. Free estimates, nationwide.{% endblock %}
+{% block canon %}/bang-olufsen/beosound-beocenter{% endblock %}
 {% block head %}
 <script type="application/ld+json">
-{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Bang & Olufsen Beosound and Beosystem Repair","serviceType":"Bang & Olufsen audio repair","provider":{"@type":"LocalBusiness","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},"areaServed":"US","url":"https://tekmg.com/bang-olufsen/beosound-beosystem"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"},{"@type":"ListItem","position":3,"name":"Beosound & Beosystem Repair","item":"https://tekmg.com/bang-olufsen/beosound-beosystem"}]}]}{% endraw %}
+{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Bang & Olufsen Beosound and Beocenter Repair","serviceType":"Bang & Olufsen audio repair","provider":{"@type":"LocalBusiness","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},"areaServed":"US","url":"https://tekmg.com/bang-olufsen/beosound-beocenter"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"},{"@type":"ListItem","position":3,"name":"Beosound & Beocenter Repair","item":"https://tekmg.com/bang-olufsen/beosound-beocenter"}]}]}{% endraw %}
 </script>
 {% include "_bo_css.html" %}
 <style>
@@ -35,10 +35,8 @@
  ('Legacy','Classic Beosound, including CD sensor, lens, laser, motor and clamp service',['Beosound 9000','Beosound 3000','Beosound 3200','Beosound Ouverture','Beosound Century','Beosound 2000']),
 ] %}
 {% set system = [
- ('Beosystem 10','Beosystem 901','Beosystem 1001','Beosystem 1100','Beosystem 1200','Beosystem 1400','Beosystem 1500','Beosystem 1700','Beosystem 1900'),
- ('Beosystem 2000','Beosystem 2200','Beosystem 2300','Beosystem 2400','Beosystem 2500','Beosystem 2600','Beosystem 2800'),
- ('Beosystem 3000','Beosystem 3300','Beosystem 3500','Beosystem 4000','Beosystem 4400','Beosystem 4500','Beosystem 4600'),
- ('Beosystem 5000','Beosystem 5500','Beosystem 6500','Beosystem 7000'),
+ ('Beocenter 2','Beocenter 1400','Beocenter 1500','Beocenter 1600','Beocenter 1800'),
+ ('Beocenter 2300','Beocenter 2500','Beocenter 4000','Beocenter 6000','Beocenter 7007','Beocenter 7700','Beocenter 8500','Beocenter 9000','Beocenter 9500'),
 ] %}
 <div class="bo">
 
@@ -46,18 +44,18 @@
   <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="bo-wrap">
     <div class="bo-eyebrow">Authorized Service &middot; Nationwide</div>
-    <h1>Beosound &amp; <b>Beosystem</b> Repair</h1>
-    <p class="bo-lead">Every Beosound and Beosystem on one page. Pick your model and go straight to the service request.</p>
+    <h1>Beosound &amp; <b>Beocenter</b> Repair</h1>
+    <p class="bo-lead">Every Beosound and Beocenter on one page. Pick your model and go straight to the service request.</p>
     <div class="bo-big">
       <label for="msModel">Choose your model</label>
       <select id="msModel" aria-describedby="msHelp">
-        <option value="">Select a Beosound or Beosystem&hellip;</option>
+        <option value="">Select a Beosound or Beocenter&hellip;</option>
         {% for title, sub, models in sound %}
         <optgroup label="Beosound &middot; {{ title|striptags|replace('&amp;','&') }}">
           {% for m in models %}<option value="{{ m }}">{{ m }}</option>{% endfor %}
         </optgroup>
         {% endfor %}
-        <optgroup label="Beosystem">
+        <optgroup label="Beocenter">
           {% for row in system %}{% for m in row %}<option value="{{ m }}">{{ m }}</option>{% endfor %}{% endfor %}
         </optgroup>
         <option value="other">My model is not listed</option>
@@ -80,7 +78,7 @@
     </div>
     {% endfor %}
 
-    <div class="ms-title" style="margin-top:56px"><h2>Beo<b>system</b></h2><span>Component and music systems</span></div>
+    <div class="ms-title" style="margin-top:56px"><h2>Beo<b>center</b></h2><span>All-in-one music systems</span></div>
     <div class="ms-group">
       <div class="ms-chips">{% for row in system %}{% for m in row %}<a href="{{ tick }}">{{ m }}</a>{% endfor %}{% endfor %}</div>
     </div>

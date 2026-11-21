@@ -104,7 +104,7 @@ PAGES = {
     "bang-olufsen": "bang-olufsen.html",
     "bang-olufsen/turntable-shop": "bang-olufsen-turntable-shop.html",
     "bang-olufsen/beovision-tv": "bang-olufsen-beovision-tv.html",
-    "bang-olufsen/beosound-beosystem": "bang-olufsen-beosound-beosystem.html",
+    "bang-olufsen/beosound-beocenter": "bang-olufsen-beosound-beocenter.html",
 }
 
 # Old tekmg.com addresses -> new pages (permanent redirect)
@@ -124,6 +124,7 @@ REDIRECTS = {
     "bang_and_olufsen/band_and_olufsen_service.aspx": "/bang-olufsen",
     "bang_and_olufsen/bang_and_olufsen_service.aspx": "/bang-olufsen",
     "bang-and-olufsen": "/bang-olufsen",
+    "bang-olufsen/beosound-beosystem": "/bang-olufsen/beosound-beocenter",
     "bang_and_olufsen/turntabe_shop.aspx": "/bang-olufsen/turntable-shop",
     "bang_and_olufsen/turntable_shop.aspx": "/bang-olufsen/turntable-shop",
     "bang_and_olufsen/beovisiontv.aspx": "/bang-olufsen/beovision-tv",
@@ -202,7 +203,7 @@ def llms():
         "- [Bang & Olufsen authorized service](https://tekmg.com/bang-olufsen): warranty and out-of-warranty repair of Beosound, BeoLab, Beocenter, Beogram and Beovision; Beogram 4000, 4002, 4004 and 8000 refurbishing program; California, Nevada and Arizona with nationwide shipping; free estimates\n"
         "- [Beogram turntable shop](https://tekmg.com/bang-olufsen/turntable-shop): Bang & Olufsen authorized classic repair for Beogram 4000, 4002, 4004, 8000, 8002 and TX; 4002-4004 restore program; free estimates; walk-in, ship-in, pickup and delivery\n"
         "- [Beovision TV repair](https://tekmg.com/bang-olufsen/beovision-tv): Bang & Olufsen Beovision TV repair, warranty and non-warranty; Harmony, Eclipse, Avant, Horizon, BeoVision 11, 14, 10, 8, 7, 6 and 4; common faults listed per model; free estimates\n"
-        "- [Beosound and Beosystem repair](https://tekmg.com/bang-olufsen/beosound-beosystem): every Bang & Olufsen Beosound and Beosystem model on one page; pick a model to request service; free estimates\n\n"
+        "- [Beosound and Beocenter repair](https://tekmg.com/bang-olufsen/beosound-beocenter): every Bang & Olufsen Beosound and Beocenter model on one page; pick a model to request service; free estimates\n\n"
         "## Company\n"
         "- [About](https://tekmg.com/about)\n"
         "- [Contact](https://tekmg.com/contact)\n"
