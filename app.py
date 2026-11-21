@@ -4,6 +4,8 @@ import os
 from lensdata import BRANDS, CANON_MODELS, FUJINON_MODELS
 from monitordata import PROBLEMS, SERVICES, SONY_BY_SLUG, SONY_MONITORS
 from modelinfo import LENS_FACTS, LENS_FACTS_SOURCE, lens_info, monitor_info
+from cameradata import (CAMERA_BRANDS, CAMERA_BRAND_NAMES, CAMERA_MODEL_COUNT, DECK_BRANDS,
+                        DECK_BRAND_NAMES, DECK_MODEL_COUNT)
 from flowcharts import OTHER_BRANDS, OTHER_BY_SLUG, brand_flow, lens_flow
 from sitesearch import search as site_search
 from flask import Flask, Response, abort, jsonify, redirect, render_template, request, send_from_directory
@@ -22,6 +24,13 @@ def inject_year():
 @app.context_processor
 def inject_lens_models():
     return {"fujinon_models": FUJINON_MODELS, "canon_models": CANON_MODELS, "sony_monitors": SONY_MONITORS, "other_brands": OTHER_BRANDS}
+
+
+@app.context_processor
+def inject_camera_models():
+    return {"camera_brands": CAMERA_BRANDS, "deck_brands": DECK_BRANDS,
+            "camera_brand_names": CAMERA_BRAND_NAMES, "deck_brand_names": DECK_BRAND_NAMES,
+            "camera_model_count": CAMERA_MODEL_COUNT, "deck_model_count": DECK_MODEL_COUNT}
 
 
 @app.route("/lens-repair/<brand>")
@@ -178,7 +187,7 @@ def llms():
         "- [Canon box and studio lens repair, all models](https://tekmg.com/lens-repair/canon): one page per Canon model with a troubleshooting flowchart and the error messages from Canon's manuals, such as Initialize Error; free estimates; 90-day warranty\n"
         "- Other lens brands, each with a general troubleshooting flowchart: " + ", ".join("[%s](https://tekmg.com/lens-repair/%s)" % (ob["name"], ob["slug"]) for ob in OTHER_BRANDS) + "\n"
         "- [Professional and medical monitor repair](https://tekmg.com/monitor-repair): Sony PVM, BVM and LMD, Panasonic, JVC, Eizo, NEC and Barco; one page per Sony model with its warning lights and error signals from Sony's manuals; free estimates; 90-day warranty\n"
-        "- [Professional camera and deck repair](https://tekmg.com/camera-repair)\n\n"
+        "- [Professional camera, camcorder and deck repair](https://tekmg.com/camera-repair): cameras and camcorders from " + ", ".join(CAMERA_BRAND_NAMES) + "; video decks and recorders from " + ", ".join(DECK_BRAND_NAMES) + "; model list for each manufacturer; free estimates; 90-day warranty\n\n"
         "## Company\n"
         "- [About](https://tekmg.com/about)\n"
         "- [Contact](https://tekmg.com/contact)\n"

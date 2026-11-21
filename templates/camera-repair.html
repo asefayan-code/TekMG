@@ -1,237 +1,210 @@
 {% extends "base.html" %}
-{% block title %}Professional Camera and Deck Repair | Tek Media Group Burbank{% endblock %}
-{% block desc %}Professional broadcast and studio camera, camcorder and deck repair in Burbank, CA. Free estimates. Call (818) 244-4440.{% endblock %}
+{% block title %}Camera, Camcorder and Deck Repair | Sony, Panasonic, JVC, Canon | Tek Media Group Burbank{% endblock %}
+{% block desc %}Broadcast, studio, ENG and PTZ camera, camcorder and video deck repair in Burbank, CA. Sony, Panasonic, JVC, Canon, Hitachi, ARRI, RED and Blackmagic. Free estimate and 90-day warranty. Call (818) 244-4440.{% endblock %}
 {% block canon %}/camera-repair{% endblock %}
+{% set ticket = "https://techmediagroup.repairshopr.com/check_ins" %}
+{% set cam_names = camera_brand_names[:-1]|join(", ") ~ " and " ~ camera_brand_names[-1] %}
+{% set deck_names = deck_brand_names[:-1]|join(", ") ~ " and " ~ deck_brand_names[-1] %}
+{% set problems = ["No power", "Soft back focus", "Battery does not charge", "SDI port not working", "SDI port yanked out or damaged", "Dropped / physical damage", "Salt, sand or dust inside the camera", "LCD display not working", "Iris blades stuck", "No video or audio", "SD card stuck or inserted backwards", "Liquid damage"] %}
+{% set faqs = [
+ ("Which cameras do you repair?", "We repair broadcast, studio, ENG, PTZ and industrial cameras and camcorders from " ~ cam_names ~ ", plus DSLR and mirrorless cameras. If your model is not in the list, choose Other and start a service ticket."),
+ ("Do you repair video decks and recorders?", "Yes. We repair decks and recorders from " ~ deck_names ~ ", including Sony SRW, HDW, PDW and XDS machines, and DAT, U-matic, Betamax and SuperBetamax / Hi-Band decks."),
+ ("What camera problems do you fix?", "No power, soft back focus, a battery that does not charge, SDI ports that do not work or were yanked out, drop and physical damage, salt, sand or dust inside the camera, LCD displays that do not work, stuck iris blades, no video or audio, stuck SD cards and liquid damage."),
+ ("Do you charge for an estimate?", "No. All repairs come with a free estimate."),
+ ("What warranty comes with a camera or deck repair?", "All repairs come with a 90-day warranty."),
+ ("Can I ship my camera or deck to you?", "Yes. Call (818) 244-4440 or start a service ticket and we will tell you how to send it. Shipping costs are not included in the estimate."),
+ ("Where are you and what are your hours?", "Tek Media Group is at 711 South Victory Blvd, Burbank, CA 91502. Hours are Monday through Friday, 8:30 AM to 5:00 PM Pacific Time. Weekends and after hours are by appointment only. Call (818) 244-4440.")
+] %}
 {% block head %}
 <style>
-.pg-wrap{max-width:900px;margin:0 auto;padding:16px}
-.pg-wrap img{max-width:100%;height:auto}
-.page-header{background:#1c2733;color:#fff;padding:28px 16px;text-align:center}
-.page-header h1{color:#fff;margin:0}
-.page-header .overlay{display:none}
-.page-header .breadcrumb{display:none}
-section.alternate{padding:16px}
-.container{max-width:900px}
-.cta .btn,.btn-primary{display:inline-block;background:#0b6e99;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none}
+.cam-wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.cam-hero{margin:12px 0 0;border-radius:14px;background:linear-gradient(135deg,#0f2438 0%,#1c3b5a 100%);color:#fff;padding:22px 18px;text-align:center}
+.cam-hero h1{color:#fff;font-size:1.45rem;line-height:1.25;margin:0 0 8px}
+.cam-hero p{margin:0 auto;max-width:720px;font-size:.98rem;line-height:1.5;color:#e6eef6}
+.cam-badges{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.cam-badges li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);border-radius:50px;padding:5px 14px;font-size:.88rem;font-weight:600}
+.cam-banner{background:#fff3cd;text-align:center;padding:8px 16px;font-size:1rem;font-weight:600;border-radius:10px;margin:12px 0}
+.cam-intro{text-align:center;margin:12px auto;max-width:820px;line-height:1.55}
+.cam-jump{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.cam-jump a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:8px 10px;border-radius:12px;text-decoration:none;font-weight:700;color:#fff;text-align:center;line-height:1.2}
+.cam-jump .j-cam{background:#0b6e99}
+.cam-jump .j-deck{background:#0f766e}
+.cam-jump a:hover{filter:brightness(.92)}
+.cam-jump svg{flex:0 0 auto}
+.cam-group{background:#fff;border:1px solid #dde4ec;border-top:6px solid #0b6e99;border-radius:14px;padding:14px;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.04);scroll-margin-top:96px}
+.cam-group--deck{border-top-color:#0f766e}
+.cam-group-head{display:flex;align-items:center;gap:12px;margin:0 0 12px}
+.cam-ico{flex:0 0 52px;width:52px;height:52px;border-radius:12px;background:#e6f2f8;color:#0b6e99;display:flex;align-items:center;justify-content:center}
+.cam-group--deck .cam-ico{background:#e3f4f1;color:#0f766e}
+.cam-group-head h2{margin:0;font-size:1.3rem;line-height:1.2;color:#0f3d62}
+.cam-group-head p{margin:3px 0 0;font-size:.93rem;line-height:1.4;color:#44566a}
+.cam-dds{display:grid;grid-template-columns:1fr;gap:10px;align-items:start}
+.cam-dd{background:#f6f9fc;border:1px solid #dde4ec;border-radius:10px;padding:10px 12px}
+.cam-dd h3{margin:0 0 6px;font-size:1rem;color:#0f3d62}
+.cam-dd label{display:block;cursor:pointer}
+.cam-sel{width:100%;min-height:46px;padding:10px;border:2px solid #b9c6d4;border-radius:8px;font-size:16px;font-family:inherit;background:#fff;color:#1c2733}
+.cam-sel:focus-visible{outline:3px solid #ffbf00;outline-offset:2px;border-color:#0f3d62}
+.cam-start-wrap{margin:0}
+.cam-start{display:block;margin:8px 0 0;background:#15803d;color:#fff;font-weight:700;text-align:center;padding:10px 12px;border-radius:8px;text-decoration:none;line-height:1.3}
+.cam-start[hidden]{display:none}
+.cam-go{text-align:center;margin:14px 0 2px}
+.cam-btn{display:inline-block;background:#15803d;color:#fff;font-weight:700;padding:12px 24px;border-radius:50px;text-decoration:none}
+.cam-btn:hover,.cam-start:hover{background:#166534}
+.cam-all{margin:12px 0 0;border-top:1px solid #e3e8ee;padding-top:10px}
+.cam-all summary{cursor:pointer;font-weight:700;color:#0f3d62;padding:4px 0}
+.cam-all p{margin:8px 0 0;font-size:.92rem;line-height:1.6;overflow-wrap:anywhere}
+.cam-sec{margin:24px 0}
+.cam-sec h2{font-size:1.25rem;color:#0f3d62;margin:0 0 6px;text-align:center}
+.cam-sub{text-align:center;margin:0 0 12px;color:#44566a;line-height:1.5}
+.cam-issues{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cam-issues li{background:#fff;border:1px solid #dde4ec;border-left:4px solid #0b6e99;border-radius:8px;padding:9px 10px;font-size:.93rem;line-height:1.3}
+.cam-trust{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cam-trust div{background:#0f3d62;color:#fff;border-radius:12px;padding:14px 10px;text-align:center;font-size:.9rem;line-height:1.35}
+.cam-trust strong{display:block;font-size:1.15rem;margin-bottom:2px}
+.cam-faq details{background:#fff;border:1px solid #dde4ec;border-radius:8px;padding:8px 14px;margin:0 0 8px}
+.cam-faq summary{font-weight:700;cursor:pointer;color:#0f3d62}
+.cam-faq p{margin:8px 0 0;line-height:1.5}
+.cam-more{text-align:center;margin:18px 0;line-height:1.7}
+@media(min-width:640px){.cam-dds{grid-template-columns:1fr 1fr}.cam-issues{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){
+.cam-hero{padding:30px 24px}.cam-hero h1{font-size:1.9rem}
+.cam-group{padding:20px}.cam-group-head h2{font-size:1.45rem}
+.cam-dds{grid-template-columns:repeat(3,1fr)}
+.cam-group--deck .cam-dds{grid-template-columns:1fr 1fr}
+.cam-issues{grid-template-columns:repeat(4,1fr)}
+.cam-trust{grid-template-columns:repeat(4,1fr)}
+}
 </style>
+{% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
+{% set brandlist = [] %}{% for n in camera_brand_names %}{% set _ = brandlist.append({"@type":"Brand","name":n}) %}{% endfor %}
+<script type="application/ld+json">
+{{ {"@context":"https://schema.org","@graph":[
+{"@type":"LocalBusiness","@id":"https://tekmg.com/#business","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","email":"jt@tekmg.com","priceRange":"$$","image":"https://tekmg.com/images/home-hero.jpg","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"17:00"}]},
+{"@type":"Service","@id":"https://tekmg.com/camera-repair#service","name":"Professional camera, camcorder and deck repair","serviceType":"Broadcast camera and video deck repair","brand":brandlist,"provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://tekmg.com/camera-repair","description":"Repair of broadcast, studio, ENG, PTZ and industrial cameras and camcorders from " ~ cam_names ~ ", and of video decks and recorders from " ~ deck_names ~ ". Free estimate and 90-day warranty."},
+{"@type":"FAQPage","@id":"https://tekmg.com/camera-repair#faq","mainEntity":faqlist},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Camera and Deck Repair","item":"https://tekmg.com/camera-repair"}]}
+]}|tojson }}
+</script>
 {% endblock %}
+{% macro dropdown(b, kind) %}
+<div class="cam-dd">
+<h3><label for="{{ kind }}-{{ b.slug }}">{{ b.label }}</label></h3>
+<select id="{{ kind }}-{{ b.slug }}" class="cam-sel" data-brand="{{ b.name }}" data-kind="{{ kind }}">
+<option value="">{{ b.placeholder or ("Choose a " ~ b.name ~ " model...") }}</option>
+<option value="Other">Other / not listed</option>
+{% for gname, models in b.groups %}{% if gname %}<optgroup label="{{ gname }}">{% endif %}{% for m in models %}<option>{{ m }}</option>{% endfor %}{% if gname %}</optgroup>{% endif %}
+{% endfor %}</select>
+<p class="cam-start-wrap" aria-live="polite"><a class="cam-start" href="{{ ticket }}" hidden>Start a service ticket &rarr;</a></p>
+</div>
+{% endmacro %}
+{% macro all_models(brands) %}
+{% for b in brands %}<p><strong>{{ b.name or b.label }}:</strong> {% for gname, models in b.groups %}{{ models|join(", ") }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+{% endfor %}
+{% endmacro %}
 {% block content %}
+<div class="cam-wrap">
 
+<section class="cam-hero">
+<h1>Professional Camera, Camcorder &amp; Deck Repair</h1>
+<p>Broadcast, studio, ENG, PTZ and industrial cameras, plus video decks and recorders. Repaired by experienced engineers in Burbank, CA.</p>
+<ul class="cam-badges">
+<li>Free estimates</li>
+<li>90-day warranty</li>
+<li>HD / SD / 4K</li>
+<li>35+ years in electronics service</li>
+</ul>
+</section>
 
+<div class="cam-banner">All repairs come with a free estimate and a 90-day warranty</div>
 
+<p class="cam-intro">We use manufacturer-provided tools combined with superb workmanship and years of experience. Pick your equipment below to start a repair.</p>
 
+<nav class="cam-jump" aria-label="Choose equipment type">
+<a class="j-cam" href="#cameras"><svg viewBox="0 0 64 64" width="26" height="26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="18" width="38" height="28" rx="4"/><path d="M44 26l14-8v28l-14-8"/><circle cx="25" cy="32" r="7"/></svg><span>Cameras &amp; Camcorders</span></a>
+<a class="j-deck" href="#decks"><svg viewBox="0 0 64 64" width="26" height="26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="14" width="54" height="36" rx="4"/><path d="M14 24h36"/><circle cx="22" cy="38" r="5"/><circle cx="42" cy="38" r="5"/></svg><span>Decks &amp; Recorders</span></a>
+</nav>
 
-<div class="cam">
+<section class="cam-group cam-group--cam" id="cameras" aria-labelledby="cameras-h">
+<div class="cam-group-head">
+<div class="cam-ico" aria-hidden="true"><svg viewBox="0 0 64 64" width="32" height="32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="18" width="38" height="28" rx="4"/><path d="M44 26l14-8v28l-14-8"/><circle cx="25" cy="32" r="7"/></svg></div>
+<div>
+<h2 id="cameras-h">Cameras &amp; Camcorders</h2>
+<p>Choose your manufacturer, then your model. If your camera is not listed, choose &ldquo;Other&rdquo;.</p>
+</div>
+</div>
+<div class="cam-dds">
+{% for b in camera_brands %}{{ dropdown(b, "camera") }}{% endfor %}
+</div>
+<p class="cam-go"><a class="cam-btn" href="{{ ticket }}">Start a Camera Repair &rarr;</a></p>
+<details class="cam-all">
+<summary>See all camera models listed</summary>
+{{ all_models(camera_brands) }}
+</details>
+</section>
 
-    <!-- HERO -->
-    <section class="cam-hero">
-        <h1>Professional Camera, Camcorder &amp; Deck Repair</h1>
-        <p>Broadcast, studio, ENG, PTZ and industrial cameras, plus video decks and recorders. Repaired by experienced engineers in Burbank, CA.</p>
-        <div class="cam-badges">
-            <span class="cam-badge">FREE Estimates</span>
-            <span class="cam-badge">6-Month Warranty</span>
-            <span class="cam-badge">HD / SD / 4K</span>
-            <span class="cam-badge">35+ Years Experience</span>
-        </div>
-        <a class="cam-btn" href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket</a>
-    </section>
+<section class="cam-group cam-group--deck" id="decks" aria-labelledby="decks-h">
+<div class="cam-group-head">
+<div class="cam-ico" aria-hidden="true"><svg viewBox="0 0 64 64" width="32" height="32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="14" width="54" height="36" rx="4"/><path d="M14 24h36"/><circle cx="22" cy="38" r="5"/><circle cx="42" cy="38" r="5"/></svg></div>
+<div>
+<h2 id="decks-h">Decks &amp; Recorders</h2>
+<p>Video decks, recorders and players. Choose your manufacturer, then your model, or choose a tape format.</p>
+</div>
+</div>
+<div class="cam-dds">
+{% for b in deck_brands %}{{ dropdown(b, "deck") }}{% endfor %}
+</div>
+<p class="cam-go"><a class="cam-btn" href="{{ ticket }}">Start a Deck Repair &rarr;</a></p>
+<details class="cam-all">
+<summary>See all decks and recorders listed</summary>
+{{ all_models(deck_brands) }}
+</details>
+</section>
 
-    <!-- COMMON PROBLEMS -->
-    <section class="cam-section cam-section--soft">
-        <div class="container">
-            <h2>Common Problems We Fix</h2>
-            <p class="cam-sub">If your camera shows any of these symptoms, we can diagnose and repair it.</p>
-            <ul class="cam-issues">
-                <li>No power</li>
-                <li>Soft back focus</li>
-                <li>Battery does not charge</li>
-                <li>SDI port not working</li>
-                <li>SDI port yanked out or damaged</li>
-                <li>Dropped / physical damage</li>
-                <li>Salt, sand or dust inside the camera</li>
-                <li>LCD display not working</li>
-                <li>Iris blades stuck</li>
-                <li>No video or audio</li>
-                <li>SD card stuck or inserted backwards</li>
-                <li>Liquid damage</li>
-            </ul>
-        </div>
-    </section>
+<section class="cam-sec" aria-labelledby="problems-h">
+<h2 id="problems-h">Common Problems We Fix</h2>
+<p class="cam-sub">If your camera shows any of these symptoms, we can diagnose and repair it.</p>
+<ul class="cam-issues">
+{% for p in problems %}<li>{{ p }}</li>
+{% endfor %}</ul>
+</section>
 
-    <!-- SERVICES -->
-    <section class="cam-section">
-        <div class="container">
-            <h2>What We Repair</h2>
-            <p class="cam-sub">We use manufacturer-provided tools combined with superb workmanship and years of experience.</p>
+<section class="cam-sec" aria-label="Why Tek Media Group">
+<div class="cam-trust">
+<div><strong>FREE</strong>Estimates</div>
+<div><strong>90 Days</strong>Warranty on repairs</div>
+<div><strong>35+ Years</strong>In electronics service</div>
+<div><strong>Burbank, CA</strong>Serving LA &amp; nationwide</div>
+</div>
+<p class="cam-go"><a class="cam-btn" href="{{ ticket }}">Start a Service Ticket &rarr;</a></p>
+</section>
 
-            <div class="cam-grid">
+<section class="cam-sec" aria-labelledby="faq-h">
+<h2 id="faq-h">Camera &amp; Deck Repair Questions</h2>
+<div class="cam-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>
+</section>
 
-                <!-- Card 1: Camcorders -->
-                <article class="cam-card">
-                    <h3><a href="https://techmediagroup.repairshopr.com/check_ins">Camcorders: Studio &amp; Broadcast</a></h3>
-                    <figure class="cam-media">
-                        <img src="Sony/Sony-Camcorder/Images/PDW-F355L.jpg" alt="Sony PDW-F355L broadcast camcorder repair"
-                             width="800" height="600" decoding="async" fetchpriority="high"
-                             onload="this.parentNode.classList.add('is-loaded')" onerror="this.parentNode.classList.add('is-loaded')">
-                    </figure>
-
-                    <h4>Brands We Repair</h4>
-                    <div class="cam-chips">
-                        <span>Sony</span><span>Panasonic</span><span>JVC</span><span>Canon</span>
-                        <span>Hitachi</span><span>Arri</span><span>RED</span><span>Blackmagic</span>
-                    </div>
-
-                    <h4>Sony XDCAM / Pro Camcorders</h4>
-                    <ul class="cam-list">
-                        <li>PMW-EX3</li>
-                        <li>PMW-100</li>
-                        <li>PMW-200</li>
-                        <li>PMW-Z190</li>
-                        <li>PMW-F5</li>
-                        <li>PMW-F55</li>
-                        <li>HXR-NX800</li>
-                    </ul>
-
-                    <h4>Sony Professional ENG-Style Camcorders</h4>
-                    <ul class="cam-list">
-                        <li>PMW-320</li>
-                        <li>PMW-500</li>
-                        <li>PDW-500</li>
-                        <li>PMW-150</li>
-                        <li>PMW-EX1R</li>
-                        <li>HDW-F900R</li>
-                        <li>SRW-9000</li>
-                        <li>PXW-Z90V</li>
-                        <li>PXW-Z750</li>
-                        <li>HXC-FB80</li>
-                        <li>PXW-Z300</li>
-                        <li>PXW-Z200</li>
-                        <li>PXW-X400</li>
-                        <li>PXW-FX9</li>
-                        <li>ILME-FX6</li>
-                        <li>PXW-FS7M2</li>
-                    </ul>
-
-                    <div class="cam-cta"><a class="cam-btn" href="https://techmediagroup.repairshopr.com/check_ins">Need Service &rarr;</a></div>
-                </article>
-
-                <!-- Card 2: Video Recorders -->
-                <article class="cam-card">
-                    <h3><a href="https://techmediagroup.repairshopr.com/check_ins">Video Recorders &amp; Decks</a></h3>
-                    <figure class="cam-media">
-                        <img src="Sony/Sony-Camcorder/Images/HDWM2000P.jpg" alt="Sony HDW-M2000P HDCAM video deck repair"
-                             width="800" height="600" loading="lazy" decoding="async"
-                             onload="this.parentNode.classList.add('is-loaded')" onerror="this.parentNode.classList.add('is-loaded')">
-                    </figure>
-
-                    <h4>Decks and Recorders</h4>
-                    <ul class="cam-list">
-                        <li>DAT</li>
-                        <li>U-matic</li>
-                        <li>Betamax</li>
-                        <li>SuperBetamax / Hi-Band</li>
-                    </ul>
-
-                    <h4>Broadcast Decks and Recorders</h4>
-                    <ul class="cam-list">
-                        <li>SRW-5000</li>
-                        <li><a href="Sony/Sony-Eng-Camera-Issues/Sony-SRW-5800.aspx.html">SRW-5800</a></li>
-                        <li><a href="Sony/Sony-Eng-Camera-Issues/Sony-SRW-5100.aspx.html">SRW-5100</a></li>
-                        <li><a href="Sony/Sony-Eng-Camera-Issues/Sony-SRW-5500.aspx.html">SRW-5500</a></li>
-                        <li><a href="Sony/Sony-Eng-Camera-Issues/Sony-XDS-PD1000.aspx.html">XDS-PD1000</a></li>
-                        <li>XDS-PD2000</li>
-                        <li>PZW-2000</li>
-                        <li>PZW-3000</li>
-                        <li>PZW-4000</li>
-                        <li>PMW-RX50</li>
-                        <li>PDW-HD1550</li>
-                        <li>PDW-F75</li>
-                        <li>PDW-U2</li>
-                        <li>PDW-R1</li>
-                        <li>PDW-U4</li>
-                    </ul>
-
-                    <div class="cam-cta"><a class="cam-btn" href="https://techmediagroup.repairshopr.com/check_ins">Need Service &rarr;</a></div>
-                </article>
-
-                <!-- Card 3: Pro Consumer / PTZ / Industrial -->
-                <article class="cam-card">
-                    <h3><a href="https://techmediagroup.repairshopr.com/check_ins">Pro-Consumer, PTZ &amp; Industrial</a></h3>
-                    <div class="cam-chips">
-                        <span>Sony</span><span>Panasonic</span><span>JVC</span><span>Canon</span><span>Nikon</span>
-                    </div>
-
-                    <div class="cam-row" style="margin-top:14px;">
-                        <figure class="cam-media">
-                            <img src="assets/images/canon_eos_5d_6d_EOS-1d_mark.jpg" alt="Canon EOS DSLR and mirrorless camera repair"
-                                 width="400" height="400" loading="lazy" decoding="async"
-                                 onload="this.parentNode.classList.add('is-loaded')" onerror="this.parentNode.classList.add('is-loaded')">
-                        </figure>
-                        <div>
-                            <h4>DSLR &amp; Mirrorless</h4>
-                            <ul class="cam-list">
-                                <li>DSLR</li>
-                                <li>Mirrorless</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="cam-row">
-                        <figure class="cam-media">
-                            <img src="assets/images/PTZ-Camera-Repair.jpg" alt="PTZ robotic camera repair"
-                                 width="400" height="400" loading="lazy" decoding="async"
-                                 onload="this.parentNode.classList.add('is-loaded')" onerror="this.parentNode.classList.add('is-loaded')">
-                        </figure>
-                        <div>
-                            <h4>PTZ Cameras</h4>
-                            <ul class="cam-list">
-                                <li>PTZ robotic cameras</li>
-                                <li>Bosch MIC-9502-Z30WVF</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="cam-row">
-                        <!-- Inline SVG icon: zero download, renders instantly -->
-                        <figure class="cam-media cam-media--icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="#0b6e99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="6" y="18" width="38" height="28" rx="4"/>
-                                <path d="M44 26l14-8v28l-14-8"/>
-                                <circle cx="25" cy="32" r="7"/>
-                            </svg>
-                        </figure>
-                        <div>
-                            <h4>Industrial Cameras</h4>
-                            <ul class="cam-list">
-                                <li>IP / SDI</li>
-                                <li>CCU transmission</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="cam-cta"><a class="cam-btn" href="https://techmediagroup.repairshopr.com/check_ins">Need Service &rarr;</a></div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUST STRIP -->
-    <section class="cam-section cam-section--soft">
-        <div class="container">
-            <div class="cam-trust">
-                <div><strong>FREE</strong>Estimates</div>
-                <div><strong>6 Months</strong>Warranty on repairs</div>
-                <div><strong>35+ Years</strong>In electronics service</div>
-                <div><strong>Burbank, CA</strong>Serving LA &amp; nationwide</div>
-            </div>
-            <p style="text-align:center;margin-top:20px;">
-                <a class="cam-btn" href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket</a>
-            </p>
-        </div>
-    </section>
+<p class="cam-more">Also at Tek Media Group: <a href="/lens-repair">Box, ENG &amp; Studio lens repair</a> &middot; <a href="/monitor-repair">Monitor repair</a> &middot; <a href="/projector-repair">Projector repair</a></p>
 
 </div>
-
-        
+<script>
+(function(){
+  var base='{{ ticket }}',sels=document.querySelectorAll('.cam-sel');
+  function link(s){return s.parentNode.querySelector('.cam-start');}
+  function update(s){
+    var a=link(s),v=s.value,b=s.getAttribute('data-brand'),k=s.getAttribute('data-kind'),name;
+    if(!v){a.hidden=true;return;}
+    if(v==='Other'){name=b?b+' '+k:'';a.textContent=b?'Start repair for your '+name+' →':'Start a service ticket →';}
+    else{name=(b&&v.toUpperCase().indexOf(b.toUpperCase())!==0)?b+' '+v:v;a.textContent='Start repair for '+name+' →';}
+    a.href=name?base+'?model='+encodeURIComponent(name):base;
+    a.hidden=false;
+  }
+  sels.forEach(function(s){
+    s.addEventListener('change',function(){
+      sels.forEach(function(o){if(o!==s){o.selectedIndex=0;link(o).hidden=true;}});
+      update(s);
+    });
+  });
+  window.addEventListener('pageshow',function(){sels.forEach(function(s){if(s.value)update(s);});});
+})();
+</script>
 {% endblock %}
