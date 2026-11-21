@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}{{ ob.name }} Studio Lens Repair | Box, ENG and Studio Lens Service | Tek Media Group Burbank{% endblock %}
+{% block desc %}{{ ob.name }} studio and cinema lens repair in Burbank, CA. Troubleshooting flowchart, clean room service, free estimate and 90-day warranty. Call Tek Media Group at (818) 244-4440.{% endblock %}
+{% block canon %}/lens-repair/{{ ob.slug }}{% endblock %}
+{% set faqs = [
+ ("Do you repair " ~ ob.name ~ " lenses?", "Yes. Tek Media Group repairs " ~ ob.name ~ " studio and cinema lenses at 711 South Victory Blvd, Burbank, CA 91502. Start a repair online or call (818) 244-4440."),
+ ("Do you charge for an estimate on " ~ ob.name ~ " lenses?", "No. Every repair comes with a free estimate, and we call you with a quote before we start."),
+ ("What warranty comes with " ~ ob.name ~ " lens repair?", "All repairs come with a 90-day warranty."),
+ ("What if my " ~ ob.name ~ " lens was dropped or exposed to salt water?", "Bring it in as soon as you can. A dropped lens can have internal damage with no visible scratches, and salt water, sand and moisture damage gets worse over time. Do not power on a wet or salt-exposed lens, and do not pry at bent parts yourself."),
+ ("Is there a troubleshooting flowchart for " ~ ob.name ~ " lenses?", "This page has Tek Media Group's general troubleshooting flowchart for studio and cinema lenses, covering " ~ flow.branches|length ~ " symptoms. It is a general checklist and is not taken from " ~ ob.name ~ " documentation.")
+] %}
+{% block head %}
+{% include "_lens_model_css.html" %}
+{% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
+<script type="application/ld+json">
+{{ {"@context":"https://schema.org","@graph":[
+{"@type":"Service","@id":"https://tekmg.com/lens-repair/" ~ ob.slug ~ "#service","name":ob.name ~ " lens repair","serviceType":"Studio and cinema lens repair","brand":{"@type":"Brand","name":ob.name},"provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://tekmg.com/lens-repair/" ~ ob.slug,"description":"Repair of " ~ ob.name ~ " studio and cinema lenses in Burbank, CA. Free estimate and 90-day warranty."},
+{"@type":"FAQPage","@id":"https://tekmg.com/lens-repair/" ~ ob.slug ~ "#faq","mainEntity":faqlist},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Lens Repair","item":"https://tekmg.com/lens-repair"},{"@type":"ListItem","position":3,"name":ob.name,"item":"https://tekmg.com/lens-repair/" ~ ob.slug}]}
+]}|tojson }}
+</script>
+{% endblock %}
+{% block content %}
+<div class="lm-wrap">
+<nav class="lm-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/lens-repair">Lens Repair</a> &rsaquo; {{ ob.name }}</nav>
+<div class="lm-hero">
+<h1>{{ ob.name }} Studio Lens Repair</h1>
+<p>Professional Box, ENG and Studio lens service in Burbank, CA</p>
+</div>
+<div class="lm-banner">All repairs come with a free estimate and a 90-day warranty</div>
+
+<div class="lm-card">
+<h2>{{ ob.name }} lens repair</h2>
+<p>Tek Media Group repairs {{ ob.name }} studio and cinema lenses in our Burbank, CA clean room. We restore and rebuild lenses damaged by wear and tear, focus and communication problems, impact, sand, salt damage or moisture, from minor cleanings to major overhauls.</p>
+<p>Start your repair online below, or call <a href="tel:+18182444440">(818) 244-4440</a>.</p>
+<p class="mi-jump"><a href="#troubleshooting">{{ ob.name }} troubleshooting flowchart &darr;</a></p>
+</div>
+
+<div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins?model={{ ob.name|urlencode }}">Start repair for your {{ ob.name }} lens &rarr;</a></div>
+
+<div class="lm-card">
+<h2>Quick facts</h2>
+<table class="lm-facts"><tbody>
+<tr><th scope="row">Brand</th><td>{{ ob.name }}</td></tr>
+<tr><th scope="row">Service</th><td>Studio and cinema lens repair</td></tr>
+<tr><th scope="row">Service location</th><td>711 South Victory Blvd, Burbank, CA 91502</td></tr>
+<tr><th scope="row">Estimate</th><td>Free</td></tr>
+<tr><th scope="row">Warranty</th><td>90 days</td></tr>
+</tbody></table>
+</div>
+
+<div class="lm-card">
+<h2>Problems we repair on {{ ob.name }} lenses</h2>
+<ul>
+<li>Stiff or gummed-up zoom and focus rings</li>
+<li>Focus, servo and communication problems, including encoder glitches</li>
+<li>Impact damage after a drop, even with no visible damage</li>
+<li>Salt water, sand and moisture damage</li>
+<li>Soft or hazy pictures that need cleaning and element alignment</li>
+</ul>
+<p style="margin-top:10px">See how we work in our <a href="/lens-repair#process">7-step repair process</a>.</p>
+</div>
+
+{% set fc_name = ob.name ~ " lens" %}{% set fc_ticket = ob.name %}{% include "_flowchart.html" %}
+
+<h2 class="lm-faq-h" style="text-align:center;color:#0f3d62;margin:26px 0 12px">{{ ob.name }} lens repair questions</h2>
+<div class="lm-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>
+
+<div class="lm-card">
+<h2>Other lens brands we repair</h2>
+<ul class="lm-grid">
+<li><a href="/lens-repair/fujinon">Fujinon</a></li>
+<li><a href="/lens-repair/canon">Canon</a></li>
+{% for x in other_brands %}{% if x.slug != ob.slug %}<li><a href="/lens-repair/{{ x.slug }}">{{ x.name }}</a></li>
+{% endif %}{% endfor %}</ul>
+</div>
+<p class="lm-nav"><a href="/lens-repair">Back to Lens Repair</a></p>
+</div>
+{% endblock %}

@@ -4,7 +4,7 @@ import os
 from lensdata import BRANDS, CANON_MODELS, FUJINON_MODELS
 from monitordata import PROBLEMS, SERVICES, SONY_BY_SLUG, SONY_MONITORS
 from modelinfo import LENS_FACTS, LENS_FACTS_SOURCE, lens_info, monitor_info
-from flowcharts import lens_flow
+from flowcharts import OTHER_BRANDS, OTHER_BY_SLUG, brand_flow, lens_flow
 from sitesearch import search as site_search
 from flask import Flask, Response, abort, jsonify, redirect, render_template, request, send_from_directory
 
@@ -21,14 +21,21 @@ def inject_year():
 
 @app.context_processor
 def inject_lens_models():
-    return {"fujinon_models": FUJINON_MODELS, "canon_models": CANON_MODELS, "sony_monitors": SONY_MONITORS}
+    return {"fujinon_models": FUJINON_MODELS, "canon_models": CANON_MODELS, "sony_monitors": SONY_MONITORS, "other_brands": OTHER_BRANDS}
 
 
 @app.route("/lens-repair/<brand>")
 def lens_brand_hub(brand):
-    b = BRANDS.get(brand.lower())
+    key = brand.lower()
+    b = BRANDS.get(key)
     if not b:
-        abort(404)
+        ob = OTHER_BY_SLUG.get(key)
+        if not ob:
+            abort(404)
+        if brand != ob["slug"]:
+            return redirect("/lens-repair/" + ob["slug"], code=301)
+        # brand without model pages: one page with the general flowchart
+        return render_template("lens-brand.html", ob=ob, flow=brand_flow(ob["name"]))
     if brand != b["slug"]:
         return redirect("/lens-repair/" + b["slug"], code=301)
     return render_template("lens-hub.html", b=b)
@@ -152,6 +159,7 @@ def sitemap():
     urls += ["/monitor-repair/" + m["slug"] for m in SONY_MONITORS]
     for b in BRANDS.values():
         urls += ["/lens-repair/" + b["slug"]] + ["/lens-repair/" + b["slug"] + "/" + m["slug"] for m in b["models"]]
+    urls += ["/lens-repair/" + ob["slug"] for ob in OTHER_BRANDS]
     body = "".join("<url><loc>https://tekmg.com%s</loc></url>" % u for u in urls)
     xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + body + "</urlset>"
     return Response(xml, mimetype="application/xml")
@@ -167,7 +175,8 @@ def llms():
         "- [Projector repair](https://tekmg.com/projector-repair): LCD, DLP, LED and 4K projectors; Epson warranty service provider only\n"
         "- [Professional box, ENG and studio lens repair](https://tekmg.com/lens-repair): Box, ENG, EFP, studio and cinema lenses from Canon, Fujinon, Sony, Zeiss and others; clean room service; free estimates; 90-day warranty\n"
         "- [Fujinon box and studio lens repair, all models](https://tekmg.com/lens-repair/fujinon): one page per Fujinon model with a troubleshooting flowchart and the error codes and status signals from Fujinon's manuals; free estimates; 90-day warranty\n"
-        "- [Canon box and studio lens repair, all models](https://tekmg.com/lens-repair/canon): one page per Canon model with the error messages from Canon's manuals, such as Initialize Error; free estimates; 90-day warranty\n"
+        "- [Canon box and studio lens repair, all models](https://tekmg.com/lens-repair/canon): one page per Canon model with a troubleshooting flowchart and the error messages from Canon's manuals, such as Initialize Error; free estimates; 90-day warranty\n"
+        "- Other lens brands, each with a general troubleshooting flowchart: " + ", ".join("[%s](https://tekmg.com/lens-repair/%s)" % (ob["name"], ob["slug"]) for ob in OTHER_BRANDS) + "\n"
         "- [Professional and medical monitor repair](https://tekmg.com/monitor-repair): Sony PVM, BVM and LMD, Panasonic, JVC, Eizo, NEC and Barco; one page per Sony model with its warning lights and error signals from Sony's manuals; free estimates; 90-day warranty\n"
         "- [Professional camera and deck repair](https://tekmg.com/camera-repair)\n\n"
         "## Company\n"

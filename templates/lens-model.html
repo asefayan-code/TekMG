@@ -10,7 +10,7 @@
  ("Where is the " ~ m.name ~ " repaired?", "In our clean room in Burbank, CA, using manufacturer specifications, precision testing and alignment equipment. Hours are Monday to Friday, 8:30 AM to 5:00 PM Pacific Time, with weekends and after hours by appointment only.")
 ] %}
 {% if info and info.faq %}{% set faqs = faqs + info.faq %}{% endif %}
-{% if flow %}{% set faqs = faqs + [("Is there a troubleshooting flowchart for the " ~ m.name ~ "?", "Fujinon's operation manuals contain no troubleshooting flowchart. Tek Media Group's own flowchart for the " ~ m.name ~ " covers " ~ flow.branches|length ~ " symptoms, from a lens that does not respond to fog and water, using the checks described in Fujinon's manuals.")] %}{% endif %}
+{% if flow %}{% set faqs = faqs + [("Is there a troubleshooting flowchart for the " ~ m.name ~ "?", b.name ~ "'s operation manuals contain no troubleshooting flowchart. Tek Media Group's own flowchart for the " ~ m.name ~ " covers " ~ flow.branches|length ~ " symptoms, using the checks described in " ~ b.name ~ "'s manuals.")] %}{% endif %}
 {% block head %}
 {% include "_lens_model_css.html" %}
 {% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
@@ -84,34 +84,7 @@
 </div>
 {% endif %}
 
-{% if flow %}
-<div class="lm-card" id="troubleshooting">
-<h2>{{ m.name }} troubleshooting flowchart</h2>
-<p>{{ flow.intro }}</p>
-<div class="fc">
-<div class="fc-start">Start: what is the lens doing?</div>
-<div class="fc-arrow" aria-hidden="true">&darr;</div>
-<p class="fc-tools"><button type="button" class="fc-all" id="fcAll" aria-expanded="false">Open all paths</button></p>
-{% for br in flow.branches %}<details class="fc-branch">
-<summary><span class="fc-num">{{ loop.index }}</span><span>{{ br.symptom }}</span></summary>
-<ol class="fc-steps">
-{% for st in br.steps %}<li class="fc-step">
-<div class="fc-q"><span class="fc-dia" aria-hidden="true"></span><span>{{ st.q }}</span></div>
-<div class="fc-exit"><span class="fc-tag fc-tag-{{ st.exit }}">{{ "Yes" if st.exit == "yes" else "No" }}</span><span>{{ st.do }}</span></div>
-<div class="fc-down"><span class="fc-tag fc-tag-{{ "no" if st.exit == "yes" else "yes" }}">{{ "No" if st.exit == "yes" else "Yes" }}</span><span aria-hidden="true">&darr;</span><span class="sr-only">Go to the next step.</span></div>
-</li>
-{% endfor %}<li class="fc-end">{{ br.end }} <a href="https://techmediagroup.repairshopr.com/check_ins?model={{ m.name|urlencode }}">Start a service ticket</a></li>
-</ol>
-</details>
-{% endfor %}</div>
-<p class="mi-note" style="margin-top:10px">{{ flow.note }}</p>
-<p class="mi-src">Source: {{ flow.source }}</p>
-</div>
-<script>
-(function(){var b=document.getElementById('fcAll');if(!b)return;var d=document.querySelectorAll('.fc-branch');
-b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')!=='true';d.forEach(function(x){x.open=o;});b.setAttribute('aria-expanded',String(o));b.textContent=o?'Close all paths':'Open all paths';});})();
-</script>
-{% endif %}
+{% if flow %}{% set fc_name = m.name %}{% set fc_ticket = m.name %}{% include "_flowchart.html" %}{% endif %}
 
 <h2 class="lm-faq-h" style="text-align:center;color:#0f3d62;margin:26px 0 12px">{{ m.name }} repair questions</h2>
 <div class="lm-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>

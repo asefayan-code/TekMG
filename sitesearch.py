@@ -6,11 +6,12 @@ that serve the pages, so it never goes out of date with the site.
 import html
 import re
 import threading
+import unicodedata
 
 from flask import render_template
 
 from lensdata import BRANDS
-from flowcharts import flow_text, lens_flow
+from flowcharts import OTHER_BRANDS, brand_flow, flow_text, lens_flow
 from modelinfo import lens_info, monitor_info
 from monitordata import PROBLEMS, SONY_MONITORS
 
@@ -21,6 +22,8 @@ _index = None
 def norm(text):
     """Lowercase, join model-number punctuation (PVM-A250 -> pvma250, 9.3 -> 93)."""
     s = (text or "").lower().replace("×", "x")
+    # fold accents so "angenieux" finds "Angénieux"
+    s = "".join(ch for ch in unicodedata.normalize("NFKD", s) if not unicodedata.combining(ch))
     s = re.sub(r"(?<=[a-z0-9])[.\-/](?=[a-z0-9])", "", s)
     s = re.sub(r"[^a-z0-9]+", " ", s)
     return s.strip()
@@ -61,6 +64,11 @@ def _aliases(name, brand):
     return {compact(p) for p in parts if p.strip()}
 
 
+def _no_models(text):
+    """Drop model-number words (letters and digits, 5+ characters) from shared help text."""
+    return " ".join(w for w in text.split() if not (len(w) >= 5 and re.search(r"[A-Za-z]", w) and re.search(r"\d", w)))
+
+
 def _info_text(info):
     if not info:
         return ""
@@ -87,16 +95,23 @@ def _build(pages):
             docs.append(_doc(
                 url + "/" + m["slug"], m["name"] + " lens repair", "Lens model",
                 b["name"] + " broadcast lens. Repair, " + (info["title"] if info else "service") + ".",
-                b["name"] + " box ENG studio broadcast lens repair " + _info_text(info) + " " + flow_text(lens_flow(slug, m)),
+                b["name"] + " box ENG studio broadcast lens repair " + _no_models(_info_text(info) + " " + flow_text(lens_flow(slug, m))),
                 aliases=_aliases(m["name"], b["name"]),
             ))
+    for ob in OTHER_BRANDS:
+        docs.append(_doc(
+            "/lens-repair/" + ob["slug"], ob["name"] + " studio lens repair", "Brand page",
+            ob["name"] + " studio and cinema lens repair, with a troubleshooting flowchart.",
+            ob["name"] + " studio cinema lens repair " + flow_text(brand_flow(ob["name"])),
+            boost=3,
+        ))
     for m in SONY_MONITORS:
         info = monitor_info(m["slug"])
         size = (m["size"] + " ") if m.get("size") else ""
         docs.append(_doc(
             "/monitor-repair/" + m["slug"], m["name"] + " monitor repair", "Monitor model",
             size + m["display"] + " professional monitor. Repair" + (", " + info["title"] if info else "") + ".",
-            "Sony professional monitor repair " + m["display"] + " " + size + " ".join(PROBLEMS[m["kind"]]) + " " + _info_text(info),
+            "Sony professional monitor repair " + m["display"] + " " + size + " ".join(PROBLEMS[m["kind"]]) + " " + _no_models(_info_text(info)),
             aliases=_aliases(m["name"], "Sony"),
         ))
     return docs

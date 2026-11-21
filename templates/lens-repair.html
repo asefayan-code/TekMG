@@ -179,9 +179,10 @@
   <div class="lens-dds">
     <div class="lens-dd"><label for="dd0"><h3>Fujinon Box &amp; Studio Lenses</h3></label><select id="dd0" class="lens-sel"><option value="">Choose a Fujinon model...</option><option>Other</option>{% for m in fujinon_models %}<option value="{{ m.name }}" data-url="/lens-repair/fujinon/{{ m.slug }}">{{ m.name }}</option>{% endfor %}</select></div>
     <div class="lens-dd"><label for="dd1"><h3>Canon Box &amp; Studio Lenses</h3></label><select id="dd1" class="lens-sel"><option value="">Choose a Canon model...</option><option>Other</option>{% for m in canon_models %}<option value="{{ m.name }}" data-url="/lens-repair/canon/{{ m.slug }}">{{ m.name }}</option>{% endfor %}</select></div>
-    <div class="lens-dd"><label for="dd2"><h3>Other Brand Studio Lens Repair</h3></label><select id="dd2" class="lens-sel"><option value="">Choose a brand...</option><option>Other</option><option>Sony</option><option>Panasonic</option><option>Zeiss</option><option>Cooke Optics</option><option>ARRI</option><option>Angénieux</option><option>Leitz</option><option>Sigma</option><option>Panavision</option><option>Atlas Lens Co.</option><option>Laowa</option><option>IRIX</option></select></div>
+    <div class="lens-dd"><label for="dd2"><h3>Other Brand Studio Lens Repair</h3></label><select id="dd2" class="lens-sel"><option value="">Choose a brand...</option><option>Other</option>{% for ob in other_brands %}<option value="{{ ob.name }}" data-url="/lens-repair/{{ ob.slug }}">{{ ob.name }}</option>{% endfor %}</select></div>
   </div>
   <p style="text-align:center;margin:6px 0"><a href="/lens-repair/fujinon">See all Fujinon models we repair</a> &middot; <a href="/lens-repair/canon">See all Canon models we repair</a></p>
+  <p style="text-align:center;margin:6px 0">Other lens brands we repair: {% for ob in other_brands %}<a href="/lens-repair/{{ ob.slug }}">{{ ob.name }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}</p>
   <div class="lens-go" aria-live="polite"><a id="lens-go" href="https://techmediagroup.repairshopr.com/check_ins">Start New Repair Process &rarr;</a></div>
   <script>
   (function(){

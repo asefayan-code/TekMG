@@ -255,9 +255,15 @@ _CANON_BOX = {
         ("Zoom or focus position reads wrong on the camera or the lens display",
          "Canon's manual says that when position detection fails, the position signal the lens sends to the camera and the reading on the information display will be incorrect.",
          "Turn the power off and on so the lens can initialize again. If the readings stay wrong, send the lens in."),
+        ("Power low LED lit red on the indicator panel",
+         "The supply voltage is 10 V or less.",
+         "Raise the supply to 10.5 V or above. Canon's manual warns that the lens may malfunction otherwise."),
+        ("Servo zoom and servo focus stop while the heater is on",
+         "Normal. Canon's manual says the heater uses so much power that servo zoom and servo focus are disabled while it is on.",
+         "Switch the heater off to use servo control."),
     ],
-    "note": "This applies to DIGISUPER lenses that have the information display.",
-    "source": "Canon DIGISUPER 100AF (XJ100x9.3B AF) Operation Manual.",
+    "note": "The display rows apply to DIGISUPER lenses that have the information display. The heater is an option.",
+    "source": "Canon DIGISUPER 100AF (XJ100x9.3B AF) Operation Manual; Canon UHD-DIGISUPER and DIGISUPER Operation Manual “Lens”.",
 }
 
 _CANON_PORTABLE = {
