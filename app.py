@@ -98,6 +98,7 @@ PAGES = {
     "about": "about.html",
     "terms": "terms.html",
     "how-to": "how-to.html",
+    "capacitor-replacement": "capacitor-replacement.html",
     "privacy": "privacy.html",
     "contact": "contact.html",
     "accessibility": "accessibility.html",
@@ -191,6 +192,8 @@ PAGES = {
 REDIRECTS = {
     "home.html": "/",
     "terms.aspx": "/terms",
+    "capacitor-replacement.aspx": "/capacitor-replacement",
+    "audio-models/capacitor-replacement.aspx": "/capacitor-replacement",
     "howto.aspx": "/how-to",
     "privacy-policy.aspx": "/privacy",
     "privacypolicy.aspx": "/privacy",

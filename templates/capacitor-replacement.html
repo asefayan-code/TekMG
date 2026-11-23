@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% set faqs = [
+ ("Should every capacitor in vintage audio equipment be replaced?", "Not on every unit. We replace the capacitors that are out of specification or under stress, such as the main power supply capacitors, and leave healthy parts alone. Vintage tube equipment is the exception: there we replace all electrolytic and paper capacitors for safety."),
+ ("What does a targeted capacitor replacement fix?", "It restores factory performance, removes hum and noise caused by worn power supply capacitors, and prevents failures from capacitors that are actually failing, while the original sound character stays intact."),
+ ("What can go wrong with a full recap on an old circuit board?", "Every extra solder joint adds heat. On aging boards that can lift traces, crack plated-through holes, loosen solder pads and damage nearby parts. Modern low-ESR capacitors can also change the sound of vintage equipment."),
+ ("Which capacitors does Tek Media Group use?", "Low ESR, 105&deg;C rated parts from Nichicon, Panasonic, Elna or Vishay. Coupling capacitors are often film types from WIMA or Panasonic. Every capacitor is tested for capacitance and ESR before it is installed."),
+ ("Do you replace film, ceramic and mica capacitors?", "Rarely. These types do not degrade the way electrolytic capacitors do. We leave them alone unless one is cracked or shorted."),
+ ("Is this page repair advice?", "No. It describes how we work, based on 30 years of experience. It is not technical advice. Any repair you do yourself is at your own risk.")
+] %}
+{% block title %}Capacitor Replacement for Vintage Audio | Tek Media Group{% endblock %}
+{% block desc %}How Tek Media Group replaces capacitors in vintage amplifiers, receivers, tape decks and Bang &amp; Olufsen equipment: targeted replacement, tested parts, and care for aging circuit boards. Free estimates. Nationwide.{% endblock %}
+{% block canon %}/capacitor-replacement{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","name":"Capacitor Replacement (Recap) for Vintage Audio Equipment","serviceType":"Capacitor replacement","areaServed":"United States","url":"https://tekmg.com/capacitor-replacement",
+ "provider":{"@type":"LocalBusiness","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}}},
+{"@type":"FAQPage","mainEntity":[{% for q, a in faqs %}{"@type":"Question","name":{{ q|tojson }},"acceptedAnswer":{"@type":"Answer","text":{{ a|replace('&deg;','°')|tojson }}}}{{ "," if not loop.last }}{% endfor %}]},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Hi-Fi Audio Repair","item":"https://tekmg.com/hifi-audio"},{"@type":"ListItem","position":3,"name":"Capacitor Replacement","item":"https://tekmg.com/capacitor-replacement"}]}
+]}
+</script>
+<style>
+.cp{max-width:900px;margin:0 auto;padding:18px 16px 30px;line-height:1.6;color:#333}
+.cp-crumbs{font-size:.85rem;color:#555;margin:0 0 10px}
+.cp-crumbs a{color:#0f62ac;text-decoration:none}
+.cp h1{font-size:1.65rem;color:#0f3d62;margin:0 0 10px;line-height:1.25}
+.cp h2{font-size:1.2rem;color:#0f3d62;margin:26px 0 8px;scroll-margin-top:90px}
+.cp p{margin:0 0 12px}
+.cp ul{margin:0 0 12px;padding-left:20px}
+.cp li{margin:0 0 8px}
+.cp-note{background:#fff8e6;border:1px solid #f0d58a;border-left:4px solid #b7791f;border-radius:10px;padding:12px 14px;margin:0 0 16px;font-size:.93rem;color:#4a3a10}
+.cp-sum{background:#eef5fb;border:1px solid #cfe0ef;border-left:4px solid #0f62ac;border-radius:10px;padding:14px 16px;margin:0 0 16px}
+.cp-sum p{margin:0}
+.cp-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px;padding:0;list-style:none}
+.cp-toc a{display:inline-block;padding:9px 14px;border:1px solid #cfdbe7;border-radius:50px;color:#0f62ac;text-decoration:none;font-size:.9rem;background:#fff}
+.cp-toc a:hover{background:#e0eaff}
+.cp-two{display:grid;grid-template-columns:1fr;gap:14px}
+.cp-card{background:#fff;border:1px solid #dfe6ee;border-radius:12px;padding:14px 16px}
+.cp-card h2{margin-top:0}
+.cp-card.yes{border-left:4px solid #17692c}.cp-card.no{border-left:4px solid #b42318}
+.cp-tw{overflow-x:auto;margin:0 0 12px}
+.cp table{width:100%;border-collapse:collapse;font-size:.94rem}
+.cp th{text-align:left;background:#f1f5f9;color:#0f3d62;padding:9px;border:1px solid #dfe6ee}
+.cp td{padding:9px;border:1px solid #dfe6ee;vertical-align:top}
+.cp-cta{background:#0f3d62;color:#fff;border-radius:14px;padding:20px 16px;text-align:center;margin:26px 0 8px}
+.cp-cta b{display:block;font-size:1.15rem;margin-bottom:6px}
+.cp-cta a{display:inline-block;margin-top:12px;background:#15803d;color:#fff;text-decoration:none;font-weight:700;padding:13px 26px;border-radius:50px}
+.cp-cta a:hover{background:#166534}
+.cp details{border:1px solid #dfe6ee;border-radius:10px;padding:0 14px;margin:0 0 8px;background:#fff}
+.cp summary{cursor:pointer;font-weight:700;color:#0f3d62;padding:13px 0;min-height:22px}
+.cp details p{margin:0 0 13px}
+.cp-upd{font-size:.82rem;color:#666;margin-top:18px}
+@media(min-width:800px){.cp h1{font-size:2rem}.cp-two{grid-template-columns:1fr 1fr}}
+</style>
+{% endblock %}
+{% block content %}
+<article class="cp">
+<nav class="cp-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/hifi-audio">Hi-Fi Audio Repair</a> &rsaquo; Capacitor Replacement</nav>
+<h1>Capacitor Replacement: Why We Don&rsquo;t Replace Every Capacitor on Every Unit</h1>
+<div class="cp-sum"><p>Tek Media Group has replaced capacitors in vintage amplifiers, receivers, tape decks and Bang &amp; Olufsen equipment for 30 years. We replace the capacitors that are failing or under stress, test every new part before it goes in, and protect the aging circuit board. Vintage tube equipment gets all electrolytic and paper capacitors replaced for safety.</p></div>
+<div class="cp-note"><b>Not technical advice.</b> This page describes how we work, based on our experience. Any repair you do yourself is at your own risk. Tek Media Group is not responsible for damage or injury.</div>
+<ul class="cp-toc">
+<li><a href="#targeted">Targeted replacement</a></li>
+<li><a href="#full">Full recap</a></li>
+<li><a href="#why">Our reasons</a></li>
+<li><a href="#boards">Aging boards</a></li>
+<li><a href="#do">What we do</a></li>
+<li><a href="#parts">Parts and testing</a></li>
+<li><a href="#faq">Questions</a></li>
+</ul>
+
+<div class="cp-two">
+<section class="cp-card yes" id="targeted">
+<h2>What targeted replacement gives you</h2>
+<ul>
+<li><b>Restored factory performance.</b> Only the capacitors that are out of specification are replaced.</li>
+<li><b>Hum and noise removed.</b> Worn power supply capacitors are the main cause.</li>
+<li><b>Failures prevented.</b> The capacitors that are actually failing are replaced. The rest are fine.</li>
+<li><b>Long-term reliability.</b> Modern 105&deg;C low-ESR capacitors in the critical positions outlast the originals.</li>
+<li><b>The vintage character stays.</b> The sound is cleaner and tighter only where it matters.</li>
+<li><b>You pay for what the unit needs.</b></li>
+</ul>
+</section>
+<section class="cp-card no" id="full">
+<h2>What a full recap adds</h2>
+<ul>
+<li><b>No audible improvement</b> from replacing healthy capacitors on rails that are not stressed.</li>
+<li><b>No reliability gain.</b> Capacitors that have survived 30+ years are burned in. New parts restart the early-failure period.</li>
+<li><b>Several times the labor and parts</b> for the same result.</li>
+<li><b>More risk to the circuit board.</b> Every extra joint means more heat, more trace stress and more lifted pads.</li>
+<li><b>A changed sound.</b> Modern low-ESR capacitors can make vintage equipment sound harsh or clinical.</li>
+<li><b>Film, ceramic and mica capacitors replaced for no reason.</b> These types do not degrade.</li>
+</ul>
+</section>
+</div>
+
+<h2 id="why">Why we don&rsquo;t replace every capacitor on every board</h2>
+<ul>
+<li><b>One failed capacitor does not condemn the rest.</b> A capacitor usually fails from local heat or a bad production batch.</li>
+<li><b>Heat damages old boards.</b> Each pad heated past 300&deg;C can lift a trace, damage a via or delaminate the board. Twenty capacitors mean forty solder joints.</li>
+<li><b>Survivors are reliable.</b> Parts that have run for years are past the early-failure period. New parts are not.</li>
+<li><b>Some circuits are sensitive.</b> In switching power supplies, capacitors affect timing and damping. We match ESR and ripple ratings where it matters.</li>
+<li><b>New capacitors can be stale.</b> A capacitor that sat on a shelf for years may need reforming before use.</li>
+<li><b>A working original board is worth more than a damaged one that was recapped.</b> Some boards are too fragile to touch, and we say so.</li>
+</ul>
+
+<h2 id="boards">Risks with aging circuit boards</h2>
+<ul>
+<li><b>Lifted and broken traces.</b> Old solder does not flow and heat lingers, most of all on phenolic boards from the 1960s and 1970s.</li>
+<li><b>Cracked plated-through holes.</b> On 1970s and 1980s boards the thin copper inside the holes cracks with heat and causes intermittent faults.</li>
+<li><b>Loose solder pads</b> that float and spin when a new part is fitted.</li>
+<li><b>Heat damage to nearby parts</b> such as plastic transistors and diodes.</li>
+<li><b>Brittle wires and connectors.</b> 40-year-old insulation and locking tabs snap.</li>
+<li><b>Cracked joints from flexing the board.</b></li>
+<li><b>Static damage</b> to logic chips in late 1970s and 1980s equipment.</li>
+<li><b>Old glue under capacitors</b> that has turned conductive and corrosive. It all has to come off.</li>
+<li><b>Polarity markings printed wrong</b> on some boards. We check against the schematic.</li>
+</ul>
+<div class="cp-tw"><table>
+<thead><tr><th>Board type and era</th><th>Risk level</th><th>Main risk</th></tr></thead>
+<tbody>
+<tr><td>1960s&ndash;70s phenolic (brown board)</td><td>Extreme</td><td>Lifted traces, loose pads, delamination</td></tr>
+<tr><td>1970s&ndash;80s single-sided FR4</td><td>High</td><td>Broken plated-through holes, cracked joints from flex</td></tr>
+<tr><td>1980s&ndash;90s double-sided FR4</td><td>Moderate</td><td>Heat damage to nearby semiconductors</td></tr>
+<tr><td>1990s and later, lead-free</td><td>Moderate</td><td>Needs higher heat, more stress on vias</td></tr>
+<tr><td>Multi-layer, any era</td><td>Very high</td><td>Internal hole damage is nearly unrepairable</td></tr>
+</tbody></table></div>
+
+<h2 id="do">What we do</h2>
+<div class="cp-tw"><table>
+<thead><tr><th>Situation</th><th>What we do</th></tr></thead>
+<tbody>
+<tr><td>Vintage tube equipment (high voltage)</td><td>Replace all electrolytic and paper capacitors for safety.</td></tr>
+<tr><td>Solid-state equipment over 30 years old</td><td>Replace the main power supply capacitors. Signal path capacitors only if the sound has already degraded.</td></tr>
+<tr><td>Working and sounding good</td><td>Replace only failed or suspect capacitors.</td></tr>
+<tr><td>High-value collectible (Marantz, McIntosh, Bang &amp; Olufsen)</td><td>Partial recap with high-grade audio capacitors, keeping the original character.</td></tr>
+<tr><td>Daily-use equipment</td><td>Replace capacitors that are leaking or bulging.</td></tr>
+</tbody></table></div>
+<p>If a repair would cost more than the unit is worth, we tell you.</p>
+
+<h2 id="parts">Parts and testing</h2>
+<ul>
+<li><b>Parts.</b> Low ESR, 105&deg;C rated capacitors from Nichicon, Panasonic, Elna or Vishay. Coupling capacitors are often film types from WIMA or Panasonic.</li>
+<li><b>Testing before installation.</b> Every capacitor is checked with an ESR meter and a capacitance tester. We reject a part that is more than 10% off its capacitance or more than 20% above its typical datasheet ESR.</li>
+<li><b>Inspection.</b> Every part is checked for bent leads, cracked bases and dented cans.</li>
+<li><b>Ceramic disc capacitors</b> are left alone unless cracked or shorted.</li>
+<li><b>First power-up</b> is always through a dim-bulb tester.</li>
+<li><b>Sound.</b> Two identical receivers can sound different after the same work. It depends on the circuit, the capacitor series and the board revision. We discuss this with you first.</li>
+</ul>
+
+<div class="cp-cta"><b>Does your equipment hum, crackle or cut out?</b>Estimates are free. We service equipment nationwide.<br><a href="/start-ticket">Start a New Service Ticket</a></div>
+
+<h2 id="faq">Common questions</h2>
+{% for q, a in faqs %}<details><summary>{{ q }}</summary><p>{{ a|safe }}</p></details>
+{% endfor %}
+<p>Related: <a href="/hifi-audio">Hi-Fi Audio Repair</a> &middot; <a href="/reel-to-reel">Reel to Reel Repair</a> &middot; <a href="/bang-olufsen">Bang &amp; Olufsen Service</a></p>
+<p class="cp-upd">Page updated November 23, 2026</p>
+</article>
+{% endblock %}
