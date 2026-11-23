@@ -12,12 +12,14 @@
 "areaServed":["Burbank","Los Angeles","Glendale","Pasadena","North Hollywood","Studio City","Sherman Oaks"]}
 </script>
 <style>
-.hh{background:#000;color:#fff;text-align:center;padding:36px 16px 40px}
-.hh h1{color:#fff;font-size:1.9rem;font-weight:400;margin:0 0 26px;line-height:1.25}
-.hh p{color:#7ee07e;font-size:1.25rem;margin:14px 0}
-.hcall{display:inline-block;margin:26px auto 0;padding:10px 26px;border:1px solid #7fb8dc;color:#7fb8dc;text-decoration:none;border-radius:3px;line-height:1.4;min-height:48px;box-sizing:border-box}
-.hloc{max-width:760px;margin:22px auto;padding:0 16px;font-size:.8rem;color:#444;line-height:2}
-.hloc b{font-weight:600}.hloc span{color:#d33}
+.hh{background:linear-gradient(180deg,#0b2a45,#0f3d62);text-align:center;padding:30px 16px 26px}
+.hh h1{color:#fff;font-size:1.75rem;font-weight:700;margin:0 0 16px;line-height:1.2}
+.hh-pts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hh-pts li{background:rgba(255,255,255,.1);color:#9be8a8;border:1px solid rgba(155,232,168,.55);border-radius:50px;padding:8px 16px;font-weight:600;font-size:1rem}
+.hloc{max-width:1100px;margin:18px auto 10px;padding:0 16px;display:grid;grid-template-columns:1fr;gap:12px}
+.hloc div{background:#fff;border:1px solid #dfe6ee;border-left:4px solid #0f62ac;border-radius:10px;padding:12px 14px;font-size:.92rem;color:#444;line-height:1.55}
+.hloc b{display:block;color:#0f3d62;font-size:1rem;margin-bottom:2px}
+@media(min-width:900px){.hloc{grid-template-columns:2fr 1.2fr .8fr}.hh{padding:40px 16px 28px}}
 .hgrid{max-width:1100px;margin:0 auto;padding:16px;display:grid;grid-template-columns:1fr;gap:16px}
 .hc{display:block;background:#fff;border:1px solid #ddd;text-decoration:none;color:#333}
 .hc-img{display:block;aspect-ratio:3/2;background:#fff center/cover no-repeat}
@@ -28,7 +30,7 @@
 .hc-arrow:after{content:"";position:absolute;right:-8px;top:-6px;border-left:14px solid #1ba4dc;border-top:7.5px solid transparent;border-bottom:7.5px solid transparent}
 .hrule{max-width:1100px;margin:8px auto;border:0;border-top:1px solid #e5e5e5}
 @media(min-width:600px){.hgrid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:900px){.hgrid.g4{grid-template-columns:repeat(4,1fr)}.hgrid.g3{grid-template-columns:repeat(3,1fr);max-width:960px}.hh h1{font-size:2.6rem}}
+@media(min-width:900px){.hgrid.g4{grid-template-columns:repeat(4,1fr)}.hgrid.g3{grid-template-columns:repeat(3,1fr);max-width:960px}.hh h1{font-size:2.4rem}}
 .hf{background:#f6f8fa;border-top:1px solid #e5e5e5;margin:0;padding:28px 16px 84px;color:#444;line-height:1.7;font-size:.95rem}
 .hf-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:22px}
 .hf-col b{display:block;color:#0f3d62;font-size:1rem;margin-bottom:4px}
@@ -43,14 +45,12 @@
 {% block content %}
 <section class="hh">
 <h1>Expert Electronics Service &amp; Repair</h1>
-<p>&#10003; Free Estimates</p>
-<p>&#10003; 33 Years in Business</p>
-<a class="hcall" href="tel:+18182444440">Press here to call<br>818-244-4440</a>
+<ul class="hh-pts"><li>&#10003; Free Estimates</li><li>&#10003; 33 Years in Business</li></ul>
 </section>
 <div class="hloc">
-<div><span>&#128205;</span> <b>Walk ins:</b> Serving Burbank, Los Angeles, Glendale, Pasadena, North Hollywood, Studio City, Sherman Oaks, Eagle Rock, Hollywood</div>
-<div><span>&#128205;</span> <b>Pickup and delivery:</b> Serving From San Francisco to San Diego</div>
-<div><span>&#128205;</span> <b>Shipping:</b> Nationwide</div>
+<div><b><span aria-hidden="true">&#128205;</span> Walk ins</b>Serving Burbank, Los Angeles, Glendale, Pasadena, North Hollywood, Studio City, Sherman Oaks, Eagle Rock, Hollywood</div>
+<div><b><span aria-hidden="true">&#128205;</span> Pickup and delivery</b>Serving From San Francisco to San Diego</div>
+<div><b><span aria-hidden="true">&#128205;</span> Shipping</b>Nationwide</div>
 </div>
 <hr class="hrule">
 <div class="hgrid g4"><a class="hc" href="/lens-repair"><span class="hc-img" style="background-image:url(https://tekmg.com/assets/images/New_Site_No_Backround_Pics/BOX_ENG_lens_repair_canon_fujinon.jpg)" role="img" aria-label="Professional Box-Eng Lens Repair-Service"></span><span class="hc-body"><b>Professional Box-Eng Lens Repair-Service</b><small>Fujinon - Canon - Rokinon - Angenieux</small><i class="hc-arrow" aria-hidden="true"></i></span></a><a class="hc" href="/camera-repair"><span class="hc-img" style="background-image:url(https://tekmg.com/images/Home-Services-parallax.jpg)" role="img" aria-label="Experts on Camcorder Camera and Deck Repair"></span><span class="hc-body"><b>Experts on Camcorder Camera &amp; Deck Repair</b><small>Sony - Panasonic - JVC Service</small><i class="hc-arrow" aria-hidden="true"></i></span></a><a class="hc" href="/bang-olufsen"><span class="hc-img" style="background-image:url(/images/bo/beosound9000.jpg)" role="img" aria-label="Bang and Olufsen Authorized Service Center"></span><span class="hc-body"><b>Bang &amp; Olufsen Authorized Service Center</b><small>Warranty &amp; Out of Warranty Repairs</small><i class="hc-arrow" aria-hidden="true"></i></span></a><a class="hc" href="/projector-repair"><span class="hc-img" style="background-image:url(https://tekmg.com/ProjectorRepair/images/Projector-repairs-Sony-Epson-Panasonic-Ekie-Hitachi.jpg)" role="img" aria-label="We Repair and Service all Projector Brands"></span><span class="hc-body"><b>We Repair and Service all Projector Brands</b><small>Sony, Epson, Panasonic</small><i class="hc-arrow" aria-hidden="true"></i></span></a></div>
