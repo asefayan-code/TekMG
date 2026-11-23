@@ -32,16 +32,6 @@
 .hrule{max-width:1100px;margin:8px auto;border:0;border-top:1px solid #e5e5e5}
 @media(min-width:600px){.hgrid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:900px){.hgrid.g4{grid-template-columns:repeat(4,1fr)}.hgrid.g3{grid-template-columns:repeat(3,1fr);max-width:960px}.hh h1{font-size:2.4rem}}
-.hf{background:#f6f8fa;border-top:1px solid #e5e5e5;margin:0;padding:28px 16px 24px;color:#444;line-height:1.7;font-size:.95rem}
-.hf-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:22px}
-.hf-col b{display:block;color:#0f3d62;font-size:1rem;margin-bottom:4px}
-.hf a{color:#0f62ac;text-decoration:none}
-.hf a:hover{text-decoration:underline}
-.hf .listen-in{color:#0f62ac}
-.hf-col>a{display:block;padding:9px 0}
-.hf .cr{max-width:1100px;margin:22px auto 0;padding-top:14px;border-top:1px solid #e1e5ea;font-size:.8rem;color:#666;text-align:center}
-@media(min-width:600px){.hf-in{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.hf-in{grid-template-columns:1.2fr 1.3fr 1.3fr .8fr;gap:30px}.hf-col>a{padding:3px 0}.hf{padding:28px max(16px,calc(290px - (100vw - 1100px)/2)) 24px 16px}}
 </style>
 {% endblock %}
 {% block content %}
@@ -58,35 +48,4 @@
 <div class="hgrid g4"><a class="hc" href="/lens-repair"><span class="hc-img" style="background-image:url(https://tekmg.com/assets/images/New_Site_No_Backround_Pics/BOX_ENG_lens_repair_canon_fujinon.jpg)" role="img" aria-label="Professional Box-Eng Lens Repair-Service"></span><span class="hc-body"><b>Professional Box-Eng Lens Repair-Service</b><small>Fujinon - Canon - Rokinon - Angenieux</small><i class="hc-arrow" aria-hidden="true"></i></span></a><a class="hc" href="/camera-repair"><span class="hc-img" style="background-image:url(https://tekmg.com/images/Home-Services-parallax.jpg)" role="img" aria-label="Experts on Camcorder Camera and Deck Repair"></span><span class="hc-body"><b>Experts on Camcorder Camera &amp; Deck Repair</b><small>Sony - Panasonic - JVC Service</small><i class="hc-arrow" aria-hidden="true"></i></span></a><a class="hc" href="/bang-olufsen"><span class="hc-img" style="background-image:url(/images/bo/beosound9000.jpg)" role="img" aria-label="Bang and Olufsen Authorized Service Center"></span><span class="hc-body"><b>Bang &amp; Olufsen Authorized Service Center</b><small>Warranty &amp; Out of Warranty Repairs</small><i class="hc-arrow" aria-hidden="true"></i></span></a><a class="hc" href="/projector-repair"><span class="hc-img" style="background-image:url(https://tekmg.com/ProjectorRepair/images/Projector-repairs-Sony-Epson-Panasonic-Ekie-Hitachi.jpg)" role="img" aria-label="We Repair and Service all Projector Brands"></span><span class="hc-body"><b>We Repair and Service all Projector Brands</b><small>Sony, Epson, Panasonic</small><i class="hc-arrow" aria-hidden="true"></i></span></a></div>
 <hr class="hrule">
 <div class="hgrid g3"><a class="hc" href="/monitor-repair"><span class="hc-img" style="background-image:url(https://tekmg.com/assets/images/Monitor/Sony-Monitor-Repair.jpg)" role="img" aria-label="Professional Studio Monitor Repair"></span><span class="hc-body"><b>Professional Studio Monitor Repair</b><small>Broadcast &amp; Production Monitors</small><i class="hc-arrow" aria-hidden="true"></i></span></a><a class="hc" href="/hifi-audio"><span class="hc-img" style="background-image:url(/images/home/mcintosh-repair-experts.jpg)" role="img" aria-label="Analog Digital Audio Receiver Repair"></span><span class="hc-body"><b>Analog Digital Audio Receiver Repair</b><small>McIntosh Marantz Mark Levinson Nad Luxman More..</small><i class="hc-arrow" aria-hidden="true"></i></span></a><a class="hc" href="/reel-to-reel"><span class="hc-img" style="background-image:url(/images/reel/vintage-reel-to-reel-audio-repair.jpg)" role="img" aria-label="Vintage Reel to Reel Recorder Repair"></span><span class="hc-body"><b>Vintage Reel to Reel Recorder Repair</b><small>Studer, Akai, Teac, More...</small><i class="hc-arrow" aria-hidden="true"></i></span></a></div>
-{% endblock %}
-{% block footer %}
-<footer class="hf">
-<div class="hf-in">
-<div class="hf-col">
-<b>Tek Media Group</b>
-711 South Victory Blvd.<br>Burbank CA, 91502<br>
-<a href="mailto:jt@tekmg.com">JT@tekmg.com</a>
-</div>
-<div class="hf-col">
-<b>Business Hours</b>
-Mon-Fri: 8:30 AM &ndash; 5:00 PM<br>Sat-Sun-Holidays: By appointment only
-</div>
-<nav class="hf-col" aria-label="Footer">
-<b>Information</b>
-<a href="/how-to">How To Get Equipment Serviced</a>
-<a href="/about">About Tek Media Group</a>
-<a href="/terms">Terms</a>
-<a href="/privacy">Privacy Policy</a>
-<a href="/site-index">Site Index</a>
-<span data-listen></span>
-</nav>
-<div class="hf-col">
-<b>Follow</b>
-<a href="https://www.facebook.com/pages/TEK-Media-Group/397040323684276" rel="noopener">Facebook</a>
-<a href="https://www.instagram.com/tekmediagroup" rel="noopener">Instagram</a>
-<a href="https://x.com/tekmediagroup" rel="noopener">X</a>
-</div>
-</div>
-<div class="cr">1993-2026 &copy; TEK MEDIA GROUP. All rights reserved.</div>
-</footer>
 {% endblock %}

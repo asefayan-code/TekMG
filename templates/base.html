@@ -212,37 +212,7 @@ select{min-height:44px}
 {% endblock %}
 </main>
 
-{% block footer %}<footer>
-<div class="container">
-<ul>
-<li><a href="/lens-repair">Professional Box, ENG &amp; Studio Lenses</a></li>
-<li><a href="/camera-repair">Professional Camcorders</a></li>
-<li><a href="/projector-repair">Projector Repair</a></li>
-<li><a href="/monitor-repair">Monitor Repair</a></li>
-<li><a href="/bang-olufsen">Bang &amp; Olufsen Service</a></li>
-</ul>
-<ul>
-<li><a href="/site-index">Site Index</a></li>
-<li><a href="/reel-to-reel">Reel-To-Reel Audio Repair</a></li>
-<li><a href="/hifi-audio">Hifi-Audio Repair</a></li>
-<li><a href="/contact">Contact</a></li>
-</ul>
-<ul>
-<li><a href="/about">About</a></li>
-<li><a href="/accessibility">Accessibility</a></li>
-<li><a href="/how-to">How To Get Service</a></li>
-<li><a href="/terms">Terms &amp; Conditions</a></li>
-<li><a href="/privacy">Privacy Policy</a></li>
-<li data-listen></li>
-</ul>
-<div class="footer__social">
-<a href="https://www.facebook.com/pages/TEK-Media-Group/397040323684276" target="_blank" rel="noopener" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
-<a href="https://www.instagram.com/tekmediagroup" target="_blank" rel="noopener" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
-<a href="https://x.com/tekmediagroup" target="_blank" rel="noopener" aria-label="X"><b aria-hidden="true">X</b></a>
-</div>
-</div>
-<div class="footer__copyright">Business hours: Mon&ndash;Fri 8:30 AM&ndash;5:00 PM &middot; Weekends, holidays and after hours by appointment only<br>&copy; 1993&ndash;{{ year }} Tek Media Group. All rights reserved.</div>
-</footer>{% endblock %}
+{% block footer %}{% include "_footer.html" %}{% endblock %}
 
 <script>
 (function(){
