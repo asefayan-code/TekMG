@@ -362,7 +362,7 @@ SERVICE_REQUESTS = ["Shipping", "Pickup and delivery", "Walk-in"]
 def start_ticket():
     """New service ticket form: creates the customer and one ticket per item in RepairShopr."""
     ctx = {"equip_types": EQUIP_TYPES, "brands_by_type": BRANDS_BY_TYPE, "referred": REFERRED, "form": {}, "items": [{}],
-           "error": "", "numbers": None, "service_request": ""}
+           "error": "", "numbers": None, "service_request": "", "returning": False, "contact": [], "today": ""}
     if request.method == "GET":
         # match the form to the page the customer came from (a lens page shows lens brands, and so on)
         first = _from_page(request.headers.get("Referer"))
@@ -410,7 +410,9 @@ def start_ticket():
             ctx["error"] = "Too many requests. Wait a while and try again, or call us."
         else:
             try:
-                ctx["numbers"] = ticketlookup.create_tickets(cust, items, service, contact)
+                made = ticketlookup.create_tickets(cust, items, service, contact)
+                ctx.update(numbers=made["numbers"], returning=made["returning"], contact=contact,
+                           today=datetime.date.today().strftime("%B %-d, %Y"))
             except Exception:
                 app.logger.exception("new ticket failed")
                 ctx["error"] = "We could not open your ticket right now. Try again in a few minutes or call us."

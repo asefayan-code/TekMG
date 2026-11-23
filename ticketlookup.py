@@ -168,9 +168,10 @@ def find_by_email(email, last):
 def create_tickets(cust, items, service_request, contact):
     """Find or create the customer, then open one ticket per equipment item.
 
-    Returns the list of new ticket numbers."""
+    Returns {"numbers": [...], "returning": True when the customer was already on file}."""
     existing = find_customers(cust["lastname"], cust["phone"])
     customer = existing[0] if existing else find_by_email(cust["email"], cust["lastname"])
+    returning = customer is not None
     if customer is None:
         body = {k: v for k, v in cust.items() if v not in ("", None)}
         body["get_sms"] = "SMS" in contact
@@ -197,4 +198,4 @@ def create_tickets(cust, items, service_request, contact):
         _post("tickets/%s/comment" % t["id"], {"subject": "Initial Issue", "body": "\n".join(lines),
                                                "hidden": True, "do_not_email": True})
         numbers.append(t.get("number") or t["id"])
-    return numbers
+    return {"numbers": numbers, "returning": returning}

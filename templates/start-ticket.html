@@ -12,6 +12,25 @@
 .st-next{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:14px 16px;margin:0 0 16px}
 .st-next h2{font-size:1.1rem;color:#0f3d62;margin:0 0 6px}
 .st-hp{position:absolute;left:-9999px}
+.wo{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:18px 16px}
+.wo-head{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:2px solid #0f3d62;padding-bottom:10px;margin-bottom:14px;font-weight:700;color:#0f3d62;text-align:right}
+.wo-head span{font-weight:400;color:#555;font-size:.9rem}
+.wo h1{margin:0 0 6px}.wo h2{font-size:1.05rem;color:#0f3d62;margin:16px 0 6px}
+.wo p{margin:0 0 8px;color:#333}.wo-thanks{font-size:1.05rem}
+.wo-num{background:#e7f6ea;border:1px solid #bfe3c7;border-left:4px solid #17692c;border-radius:10px;padding:12px 16px;margin:14px 0 4px;color:#123d1c}
+.wo-num b{display:block;font-size:1.7rem;line-height:1.3}
+.wo-t{width:100%;border-collapse:collapse;font-size:.95rem}
+.wo-t th{text-align:left;background:#f1f5f9;color:#0f3d62;padding:8px;border:1px solid #dfe6ee}
+.wo-t td{padding:8px;border:1px solid #dfe6ee;vertical-align:top;overflow-wrap:anywhere}
+.wo-t small{color:#555}
+.wo-free{color:#17692c;font-weight:700;margin-top:12px!important}
+.wo-foot{display:none}
+.wo-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
+.st .wo-actions button{width:auto;padding:0 28px;background:#0f62ac}.st .wo-actions button:hover{background:#0353e9}
+@media(max-width:699px){.wo-t thead{display:none}.wo-t tr{display:block;border:1px solid #dfe6ee;border-radius:8px;margin:0 0 10px;padding:6px 10px}.wo-t td{display:block;border:0;padding:4px 0}.wo-t td:before{content:attr(data-l) ": ";font-weight:700;color:#0f3d62}}
+@media(min-width:700px){.wo{padding:26px 28px}.wo-two{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}}
+@media print{.nav-wrapper,.float-bar,footer,.wo-actions,.skip-link{display:none!important}body{padding:0!important}.st{max-width:none;padding:0}.wo{border:0;padding:0}.wo-foot{display:block;border-top:1px solid #999;margin-top:18px!important;padding-top:8px;font-size:.85rem;text-align:center}.wo-two{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.wo-num,.wo-t th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
 .st-warn{background:#fff4f2;border:1px solid #f0b8b0;border-left:4px solid #b42318;border-radius:10px;padding:12px 14px;margin:0 0 14px;color:#5c1a12}
 .st>p{margin:0 0 14px;color:#444}
 .st fieldset{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:16px 16px 4px;margin:0 0 16px;min-width:0}
@@ -38,20 +57,38 @@
 </style>{% endblock %}
 {% block content %}
 <div class="st">
-<h1>Start a New Service Ticket</h1>
 {% if numbers is not none %}
-<div class="st-ok" role="status">
-{% if numbers %}<b>Your service ticket{{ '' if numbers|length == 1 else 's' }}: {% for n in numbers %}#{{ n }}{{ ', ' if not loop.last }}{% endfor %}</b><br>Keep {{ 'this number' if numbers|length == 1 else 'these numbers' }} for your records.{% else %}<b>Thank you.</b>{% endif %}
+{% if not numbers %}
+<h1>Start a New Service Ticket</h1>
+<div class="st-ok" role="status"><b>Thank you.</b></div>
+{% else %}
+<div class="wo">
+<div class="wo-head"><img src="/images/logo.png" alt="Tek Media Group" width="150"><div>Service Ticket Confirmation<br><span>{{ today }}</span></div></div>
+<h1>{% if returning %}Welcome back, {{ form.firstname }}.{% else %}Thank you, {{ form.firstname }}.{% endif %}</h1>
+{% if returning %}<p class="wo-thanks">Thank you for coming back to Tek Media Group. We appreciate your trust in us again.</p>
+{% else %}<p class="wo-thanks">Thank you for choosing Tek Media Group. We appreciate your business.</p>{% endif %}
+<div class="wo-num">Your work order number{{ '' if numbers|length == 1 else 's' }}<b>{% for n in numbers %}#{{ n }}{{ ', ' if not loop.last }}{% endfor %}</b></div>
+<h2>Your equipment</h2>
+<table class="wo-t">
+<thead><tr><th>Work order</th><th>Equipment</th><th>Serial number</th><th>Issue</th></tr></thead>
+<tbody>{% for it in items %}<tr><td data-l="Work order"><b>#{{ numbers[loop.index0] }}</b></td><td data-l="Equipment">{{ it.brand }} {{ it.model }}<br><small>{{ it.type }}</small></td><td data-l="Serial number">{{ it.serial or 'Not given' }}</td><td data-l="Issue">{{ it.issue }}</td></tr>{% endfor %}</tbody>
+</table>
+<div class="wo-two">
+<div><h2>Your information</h2><p>{{ form.firstname }} {{ form.lastname }}{% if form.business_name %}<br>{{ form.business_name }}{% endif %}<br>{{ form.phone }}<br>{{ form.email }}</p>
+<p>We will contact you by {{ contact|join(' and ') }}.</p></div>
+<div><h2>What to do next</h2>
+{% if service_request == 'Shipping' %}<p>Ship your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p>Put a copy of this page in the box, or write your work order number on it.</p>
+{% elif service_request == 'Walk-in' %}<p>Bring your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p>Mon-Fri: 8:30 AM &ndash; 5:00 PM<br>Sat-Sun-Holidays: By appointment only</p><p>Bring this page or your work order number.</p>
+{% else %}<p>We will contact you to set up your pickup.</p><p>Keep this page with your equipment for the driver.</p>{% endif %}
 </div>
-{% if numbers %}
-<div class="st-next"><h2>What to do next</h2>
-{% if service_request == 'Shipping' %}<p>Ship your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p>Write your ticket number on the box or put a note inside.</p>
-{% elif service_request == 'Walk-in' %}<p>Bring your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p>Mon-Fri: 8:30 AM &ndash; 5:00 PM<br>Sat-Sun-Holidays: By appointment only</p><p>Give your ticket number at the counter.</p>
-{% else %}<p>We will contact you to set up your pickup.</p>{% endif %}
-<p><a href="/ticket-status">Check Your Service Ticket</a></p>
+</div>
+<p class="wo-free">&#10003; Estimates are free.</p>
+<p class="wo-foot">Tek Media Group &middot; 711 South Victory Blvd., Burbank CA, 91502 &middot; (818) 244-4440 &middot; JT@tekmg.com</p>
+<div class="wo-actions"><button type="button" onclick="window.print()">Print this page</button><a href="/ticket-status">Check Your Service Ticket</a></div>
 </div>
 {% endif %}
 {% else %}
+<h1>Start a New Service Ticket</h1>
 <div class="st-free">&#10003; Free Estimates</div>
 {% if error %}<div class="st-warn" role="alert">{{ error }}</div>{% endif %}
 <p>Fields marked <span style="color:#b42318">*</span> are required.</p>
