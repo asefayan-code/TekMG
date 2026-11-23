@@ -95,6 +95,9 @@ PAGES = {
     "": "home.html",
     "home": "home.html",
     "about": "about.html",
+    "terms": "terms.html",
+    "how-to": "how-to.html",
+    "privacy": "privacy.html",
     "contact": "contact.html",
     "accessibility": "accessibility.html",
     "lens-repair": "lens-repair.html",
@@ -186,6 +189,11 @@ PAGES = {
 # Old tekmg.com addresses -> new pages (permanent redirect)
 REDIRECTS = {
     "home.html": "/",
+    "terms.aspx": "/terms",
+    "howto.aspx": "/how-to",
+    "privacy-policy.aspx": "/privacy",
+    "privacypolicy.aspx": "/privacy",
+    "privacy.aspx": "/privacy",
     "aboutus.aspx": "/about",
     "aboutus.aspx.html": "/about",
     "contact.aspx": "/contact",
