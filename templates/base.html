@@ -118,16 +118,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .fb-start{background:#15803d}.fb-check{background:#0f62ac}.fb-call{background:#0b6e99}
 .float-bar a:hover{filter:brightness(.92);color:#fff}
 body{padding-bottom:76px}
-.listen-btn{bottom:84px!important}
 @media(min-width:900px){
 .float-bar{left:auto;right:12px;bottom:12px;display:flex;flex-direction:column;gap:8px;padding:0;background:none;box-shadow:none}
 .float-bar a{font-size:1rem;min-height:48px;padding:12px 18px;border-radius:50px;box-shadow:0 4px 14px rgba(0,0,0,.3);white-space:nowrap}
 body{padding-bottom:0}
-.listen-btn{bottom:12px!important}
 }
 @media print{.float-bar{display:none}}
-.listen-btn{position:fixed;left:12px;bottom:12px;z-index:9998;display:inline-flex;align-items:center;gap:8px;background:#002d9c;color:#fff;border:2px solid #fff;border-radius:50px;padding:12px 18px;min-height:48px;font-size:1rem;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.listen-wrap{text-align:center;margin:18px 0 0}
+.listen-btn{display:inline-flex;align-items:center;gap:8px;background:#002d9c;color:#fff;border:2px solid #fff;border-radius:50px;padding:12px 18px;min-height:48px;font-size:1rem;font-weight:700;font-family:inherit;cursor:pointer}
 .listen-btn:hover{background:#0353e9}
+.listen-btn.listen-in{background:none;border:0;border-radius:0;color:inherit;padding:9px 0;min-height:44px;font-weight:600}
+.listen-btn.listen-in:hover{background:none;text-decoration:underline}
+.listen-btn.listen-in[aria-pressed=true]{background:none;color:#b42318}
 .listen-btn[aria-pressed=true]{background:#b42318}
 @media print{.listen-btn,.skip-link{display:none}}
 /*mobile-first touch + media*/
@@ -231,6 +233,7 @@ select{min-height:44px}
 <li><a href="/how-to">How To Get Service</a></li>
 <li><a href="/terms">Terms &amp; Conditions</a></li>
 <li><a href="/privacy">Privacy Policy</a></li>
+<li data-listen></li>
 </ul>
 <div class="footer__social">
 <a href="https://www.facebook.com/pages/TEK-Media-Group/397040323684276" target="_blank" rel="noopener" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
@@ -280,8 +283,8 @@ document.querySelectorAll('i.fas,i.fab,i.far').forEach(function(i){i.setAttribut
 (function(){
 if(!('speechSynthesis' in window)||typeof SpeechSynthesisUtterance==='undefined')return;
 var b=document.createElement('button');b.type='button';b.className='listen-btn';b.setAttribute('aria-pressed','false');
-function label(on){b.innerHTML=on?'<i class="fas fa-stop" aria-hidden="true"></i> Stop reading':'<i class="fas fa-volume-up" aria-hidden="true"></i> Listen to this page';}
-label(false);document.body.appendChild(b);
+function label(on){b.innerHTML=on?'<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/></svg> Stop reading':'<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M14.5 8.5a5 5 0 0 1 0 7M17 5.5a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Listen to this page';}
+label(false);var w=document.createElement('div');w.className='listen-wrap';w.appendChild(b);var fs=document.querySelectorAll('footer'),f=fs[fs.length-1],sl=f&&f.querySelector('[data-listen]');if(sl){b.classList.add('listen-in');sl.appendChild(b)}else if(f){var c=f.querySelector('.cr,.footer__copyright');if(c)f.insertBefore(w,c);else f.appendChild(w)}else document.body.appendChild(w);
 var speaking=false;
 function stop(){speaking=false;window.speechSynthesis.cancel();b.setAttribute('aria-pressed','false');label(false);}
 function chunks(text){var out=[],parts=text.replace(/\s+/g,' ').match(/[^.!?]+[.!?]*\s*/g)||[text],cur='';
