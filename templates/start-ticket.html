@@ -81,9 +81,9 @@
 {% for it in items %}
 <fieldset class="st-item" data-item><legend>Equipment <span data-num></span></legend>
 <div class="st-grid">
-<div><label>Brand <i>*</i></label><select data-brand-pick hidden aria-label="Brand"></select><input name="equip_brand" data-brand type="text" required maxlength="60" placeholder="Brand name" value="{{ it.brand }}"></div>
 <div><label>Equipment type <i>*</i></label><select name="equip_type" required>
 <option value="">Select</option>{% for e in equip_types %}<option{% if it.type == e %} selected{% endif %}>{{ e }}</option>{% endfor %}</select></div>
+<div><label>Brand <i>*</i></label><select data-brand-pick hidden aria-label="Brand"></select><input name="equip_brand" data-brand type="text" required maxlength="60" placeholder="Brand name" value="{{ it.brand }}"></div>
 <div><label>Model <i>*</i></label><input name="equip_model" type="text" required maxlength="80" placeholder="Model name or number" value="{{ it.model }}"></div>
 <div><label>Serial number</label><input name="equip_serial" type="text" maxlength="60" placeholder="If you have it" value="{{ it.serial }}"></div>
 <div class="st-wide"><label>Issue <i>*</i></label><textarea name="equip_issue" required maxlength="1500" rows="4" placeholder="Tell us what is wrong">{{ it.issue }}</textarea></div>
@@ -111,22 +111,21 @@
 function all(){return document.querySelectorAll('[data-item]')}
 function renum(){var a=all();a.forEach(function(f,i){f.querySelector('[data-num]').textContent=a.length>1?(i+1):'';f.querySelector('[data-rm]').hidden=(i===0)});add.hidden=a.length>=MAX}
 add.addEventListener('click',function(){var a=all(),c=a[0].cloneNode(true);c.querySelectorAll('input,textarea').forEach(function(e){e.value=''});c.querySelectorAll('select').forEach(function(e){e.selectedIndex=0});a[a.length-1].after(c);setup(c,false);renum();c.querySelector('select').focus()});
-var BR={{ brands_by_type|tojson }},TY={{ equip_types|tojson }},ALL=[];
-TY.forEach(function(k){BR[k].forEach(function(x){if(ALL.indexOf(x)<0)ALL.push(x)})});ALL.sort(function(x,y){return x.toLowerCase()<y.toLowerCase()?-1:1});
-function opt(sel,v,label){var o=document.createElement('option');o.value=v;o.textContent=label||v;sel.appendChild(o)}
-function types(item,keep){var pick=item.querySelector('[data-brand-pick]'),ts=item.querySelector('[name=equip_type]'),b=pick.value,cur=keep?ts.value:'';
-var list=(b&&b!=='Other')?TY.filter(function(k){return BR[k].indexOf(b)>=0}).concat(['Other']):TY.slice();
-ts.innerHTML='';opt(ts,'','Select');list.forEach(function(k){opt(ts,k)});
-if(item.dataset.auto&&!(keep===2))cur='';item.dataset.auto='';
-if(list.length===2){cur=list[0];item.dataset.auto='1'}
-ts.value=list.indexOf(cur)>=0?cur:''}
-function setup(item,keep){var pick=item.querySelector('[data-brand-pick]'),inp=item.querySelector('[data-brand]'),cur=keep?inp.value:'';
-pick.innerHTML='';opt(pick,'','Select');ALL.forEach(function(x){opt(pick,x)});opt(pick,'Other');pick.hidden=false;pick.required=true;
-if(cur&&ALL.indexOf(cur)>=0){pick.value=cur;inp.hidden=true}else if(cur){pick.value='Other';inp.hidden=false}else{pick.value='';inp.value='';inp.hidden=true}
-types(item,keep?2:false)}
-document.addEventListener('change',function(e){if(e.target.name==='equip_type'){var i=e.target.closest('[data-item]');if(i)i.dataset.auto=''}});
-document.addEventListener('change',function(e){var item=e.target.closest('[data-item]');if(!item||!e.target.matches('[data-brand-pick]'))return;
-var inp=item.querySelector('[data-brand]');if(e.target.value==='Other'){inp.value='';inp.hidden=false;inp.focus()}else{inp.value=e.target.value;inp.hidden=true}types(item,true)});
+var BR={{ brands_by_type|tojson }};
+function setup(item,keep){var ty=item.querySelector('[name=equip_type]').value,pick=item.querySelector('[data-brand-pick]'),inp=item.querySelector('[data-brand]'),list=BR[ty]||[],cur=keep?inp.value:'';
+pick.innerHTML='';
+if(!ty){var o=document.createElement('option');o.value='';o.textContent='Choose equipment type first';pick.appendChild(o);pick.hidden=false;pick.required=true;pick.disabled=true;inp.value=cur;inp.hidden=true;return}
+pick.disabled=false;
+if(!list.length){pick.hidden=true;pick.required=false;inp.hidden=false;inp.value=cur;return}
+[''].concat(list,['Other']).forEach(function(b){var o=document.createElement('option');o.value=b;o.textContent=b||'Select';pick.appendChild(o)});
+pick.hidden=false;pick.required=true;
+if(list.length===1)cur=list[0];
+if(cur&&list.indexOf(cur)>=0){pick.value=cur;inp.value=cur;inp.hidden=true}
+else if(cur){pick.value='Other';inp.value=cur;inp.hidden=false}
+else{pick.value='';inp.value='';inp.hidden=true}}
+document.addEventListener('change',function(e){var item=e.target.closest('[data-item]');if(!item)return;
+if(e.target.name==='equip_type')setup(item,false);
+if(e.target.matches('[data-brand-pick]')){var inp=item.querySelector('[data-brand]');if(e.target.value==='Other'){inp.value='';inp.hidden=false;inp.focus()}else{inp.value=e.target.value;inp.hidden=true}}});
 all().forEach(function(i){setup(i,true)});
 document.addEventListener('click',function(e){if(e.target.matches('[data-rm]')){e.target.closest('[data-item]').remove();renum()}});renum();
 var f=document.querySelector('.st form');f.addEventListener('submit',function(){var b=document.getElementById('stGo');b.disabled=true;b.textContent='Sending...'})})();
