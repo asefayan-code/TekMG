@@ -303,7 +303,8 @@ def serve(path):
         return render_template(PAGES[key])
     # Site files (images, favicon, sitemap...) from /public
     if path and os.path.isfile(os.path.join(PUBLIC, path)):
-        return send_from_directory(PUBLIC, path)
+        # let browsers keep images and other site files for a day
+        return send_from_directory(PUBLIC, path, max_age=86400)
     abort(404)
 
 
