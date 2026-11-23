@@ -310,6 +310,12 @@ if os.path.exists(_hifi):
     REDIRECTS.update(_m["redirects"])
 
 
+@app.route("/start-ticket", methods=["GET", "POST"])
+def start_ticket():
+    """New service ticket form (being built; not linked from the site yet, does not save)."""
+    return render_template("start-ticket.html", preview_notice=(request.method == "POST"))
+
+
 @app.route("/ticket-status", methods=["GET", "POST"])
 def ticket_status():
     """Customer ticket lookup: last name + phone number, answered from RepairShopr."""

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}Start a New Service Ticket | Tek Media Group{% endblock %}
+{% block desc %}Start a new service ticket with Tek Media Group.{% endblock %}
+{% block canon %}/start-ticket{% endblock %}
+{% block robots %}noindex, follow{% endblock %}
+{% block head %}<style>
+.st{max-width:760px;margin:0 auto;padding:22px 16px 34px;line-height:1.55}
+.st h1{font-size:1.6rem;color:#0f3d62;margin:4px 0 6px}
+.st-free{display:inline-block;background:#e7f6ea;color:#17692c;border:1px solid #bfe3c7;border-radius:50px;padding:6px 16px;font-weight:700;margin:2px 0 12px}
+.st-warn{background:#fff4f2;border:1px solid #f0b8b0;border-left:4px solid #b42318;border-radius:10px;padding:12px 14px;margin:0 0 14px;color:#5c1a12}
+.st>p{margin:0 0 14px;color:#444}
+.st fieldset{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:16px 16px 4px;margin:0 0 16px;min-width:0}
+.st legend{font-weight:700;color:#0f3d62;font-size:1.1rem;padding:0 6px}
+.st-grid{display:grid;grid-template-columns:1fr;gap:0 14px}
+.st label{display:block;font-weight:700;color:#0f3d62;margin:0 0 6px;font-size:.95rem}
+.st label i{font-style:normal;color:#b42318}
+.st select,.st input[type=text],.st input[type=email],.st input[type=tel]{width:100%;box-sizing:border-box;font-size:16px;font-family:inherit;padding:12px 14px;border:1.5px solid #b9c6d3;border-radius:10px;margin:0 0 14px;min-height:48px}
+.st select{background:#fff;color:#111}
+.st textarea{width:100%;box-sizing:border-box;font-size:16px;font-family:inherit;padding:12px 14px;border:1.5px solid #b9c6d3;border-radius:10px;margin:0 0 14px;resize:vertical}
+.st textarea:focus{border-color:#0f62ac;outline:3px solid #ffbf00;outline-offset:1px}
+.st .st-add{background:#fff;color:#0f62ac;border:1.5px dashed #0f62ac;min-height:48px;margin:0 0 16px}
+.st .st-add:hover{background:#e0eaff}
+.st .st-rm{background:none;color:#b42318;width:auto;min-height:40px;padding:0 4px;margin:0 0 10px;font-size:.95rem;text-decoration:underline}
+.st .st-rm:hover{background:none}
+.st select:focus,.st input:focus{border-color:#0f62ac;outline:3px solid #ffbf00;outline-offset:1px}
+.st-ck{display:flex;align-items:flex-start;gap:10px;font-weight:500!important;color:#333!important;margin:0 0 12px!important;min-height:32px}
+.st-ck input{width:22px;height:22px;flex:none;margin:1px 0 0}
+.st button{width:100%;min-height:52px;border:0;border-radius:50px;background:#15803d;color:#fff;font-size:1.05rem;font-weight:700;font-family:inherit;cursor:pointer}
+.st button:hover{background:#166534}
+.st-note{font-size:.85rem;color:#555;margin:10px 0 0;text-align:center}
+@media(min-width:700px){.st-pair{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;align-items:stretch}.st-grid{grid-template-columns:1fr 1fr}.st-wide{grid-column:1/-1}.st-3{grid-template-columns:2fr 1fr 1fr}}
+</style>{% endblock %}
+{% block content %}
+<div class="st">
+<h1>Start a New Service Ticket</h1>
+<div class="st-free">&#10003; Free Estimates</div>
+{% if preview_notice %}<div class="st-warn" role="alert">This form is a preview. Nothing was sent. Use the Start a New Service Ticket button to open a ticket.</div>{% endif %}
+<p>Fields marked <span style="color:#b42318">*</span> are required.</p>
+<form method="post" action="/start-ticket" autocomplete="on">
+<fieldset><legend>Your information</legend>
+<div class="st-grid">
+<div><label for="stFirst">First name <i>*</i></label><input id="stFirst" name="firstname" type="text" required maxlength="60" autocomplete="given-name"></div>
+<div><label for="stLast">Last name <i>*</i></label><input id="stLast" name="lastname" type="text" required maxlength="60" autocomplete="family-name"></div>
+<div class="st-wide"><label for="stBiz">Business name</label><input id="stBiz" name="business_name" type="text" maxlength="100" autocomplete="organization"></div>
+<div class="st-wide"><label for="stEmail">Email <i>*</i></label><input id="stEmail" name="email" type="email" required maxlength="120" autocomplete="email"></div>
+<div><label for="stPhone">Phone <i>*</i></label><input id="stPhone" name="phone" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234"></div>
+<div><label for="stMobile">Mobile</label><input id="stMobile" name="mobile" type="tel" maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234"></div>
+</div>
+</fieldset>
+<fieldset><legend>Address</legend>
+<div class="st-grid">
+<div class="st-wide"><label for="stA1">Address</label><input id="stA1" name="address" type="text" maxlength="120" autocomplete="address-line1" placeholder="Street address or P.O. Box"></div>
+</div>
+<div class="st-grid st-3">
+<div><label for="stCity">City</label><input id="stCity" name="city" type="text" maxlength="60" autocomplete="address-level2"></div>
+<div><label for="stState">State/Country</label><input id="stState" name="state" type="text" maxlength="40" autocomplete="address-level1"></div>
+<div><label for="stZip">Zip/Postal code</label><input id="stZip" name="zip" type="text" maxlength="12" inputmode="numeric" autocomplete="postal-code"></div>
+</div>
+<div><label for="stRef">Referred by</label><select id="stRef" name="referred_by"><option value="">Select</option><option>ChatGPT</option><option>Claude (Anthropic)</option><option>Google</option><option>Manufacturer</option><option>Friend</option></select></div>
+</fieldset>
+<fieldset class="st-item" data-item><legend>Equipment <span data-num></span></legend>
+<div class="st-grid">
+<div><label>Equipment type <i>*</i></label><select name="equip_type" required>
+<option value="">Select</option><option>Lens (Box, ENG, Studio)</option><option>Camera or Camcorder</option><option>Deck or Recorder</option><option>Projector</option><option>Monitor</option><option>Hi-Fi Audio (Receiver, Amplifier)</option><option>Reel-to-Reel</option><option>Bang &amp; Olufsen</option><option>Other</option></select></div>
+<div><label>Brand <i>*</i></label><input name="equip_brand" type="text" required maxlength="60" list="stBrands" placeholder="Sony, Canon, McIntosh..."></div>
+<div><label>Model <i>*</i></label><input name="equip_model" type="text" required maxlength="80" placeholder="Model name or number"></div>
+<div><label>Serial number</label><input name="equip_serial" type="text" maxlength="60" placeholder="If you have it"></div>
+<div class="st-wide"><label>Issue <i>*</i></label><textarea name="equip_issue" required maxlength="1500" rows="4" placeholder="Tell us what is wrong"></textarea></div>
+</div>
+<button type="button" class="st-rm" data-rm hidden>Remove this item</button>
+</fieldset>
+<div id="stMore"></div>
+<button type="button" class="st-add" id="stAdd">+ Add another item</button>
+<datalist id="stBrands"><option>Angenieux</option><option>Akai</option><option>Bang &amp; Olufsen</option><option>Canon</option><option>Denon</option><option>Epson</option><option>Fujinon</option><option>Hitachi</option><option>JVC</option><option>Luxman</option><option>Marantz</option><option>Mark Levinson</option><option>McIntosh</option><option>NAD</option><option>Panasonic</option><option>Pioneer</option><option>Revox</option><option>Sony</option><option>Studer</option><option>Tascam</option><option>Teac</option></datalist>
+<div class="st-pair">
+<fieldset><legend>Service Request</legend>
+<label class="st-ck"><input type="radio" name="service_request" value="Shipping" required> Shipping</label>
+<label class="st-ck"><input type="radio" name="service_request" value="Pickup and delivery"> Pickup and delivery</label>
+<label class="st-ck"><input type="radio" name="service_request" value="Walk-in"> Walk-ins</label>
+</fieldset>
+<fieldset><legend>How we contact you</legend>
+<label class="st-ck"><input type="checkbox" name="contact_email" value="1" checked> Email</label>
+<label class="st-ck"><input type="checkbox" name="contact_sms" value="1"> SMS (text message)</label>
+</fieldset>
+</div>
+<button type="submit">Continue</button>
+</form>
+</div>
+<script>
+(function(){var first=document.querySelector('[data-item]'),more=document.getElementById('stMore'),add=document.getElementById('stAdd'),MAX=5;
+function renum(){var all=document.querySelectorAll('[data-item]');all.forEach(function(f,i){f.querySelector('[data-num]').textContent=all.length>1?(i+1):'';f.querySelector('[data-rm]').hidden=(i===0)});add.hidden=all.length>=MAX}
+add.addEventListener('click',function(){var c=first.cloneNode(true);c.querySelectorAll('input,textarea').forEach(function(e){e.value=''});c.querySelectorAll('select').forEach(function(e){e.selectedIndex=0});more.appendChild(c);renum();c.querySelector('select').focus()});
+document.addEventListener('click',function(e){if(e.target.matches('[data-rm]')){e.target.closest('[data-item]').remove();renum()}});renum()})();
+</script>
+{% endblock %}
