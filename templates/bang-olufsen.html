@@ -1,15 +1,44 @@
 {% extends "base.html" %}
-{% block title %}Bang & Olufsen Repair | Authorized Service | Tek Media Group{% endblock %}
+{% block title %}Bang & Olufsen Repair & Authorized Service | Beosound, BeoLab, Beogram | Tek Media Group{% endblock %}
 {% block desc %}Bang & Olufsen authorized service: Beosound, BeoLab, Beovox, Beocenter, Beomaster, Beogram, Beovision, Beoplay and BeoCom phones. Free estimates, nationwide.{% endblock %}
 {% block canon %}/bang-olufsen{% endblock %}
+{% set fams = [("Beosound","/bang-olufsen/beosound-beocenter"),("BeoLab","/bang-olufsen/beolab-beovox"),("Beovox","/bang-olufsen/beolab-beovox"),("Beocenter","/bang-olufsen/beosound-beocenter"),("Beosystem","/bang-olufsen/beosound-beocenter"),("Beomaster","/bang-olufsen"),("Beogram","/bang-olufsen/turntable-shop"),("Beovision","/bang-olufsen/beovision-tv"),("Beoplay","/bang-olufsen"),("BeoCom phones","/bang-olufsen")] %}
+{% set faqs = [
+ ("Which Bang & Olufsen products do you repair?", "Tek Media Group repairs Bang & Olufsen Beosound, BeoLab, Beovox, Beocenter, Beosystem, Beomaster, Beogram, Beovision, Beoplay and BeoCom phones, vintage and current. If your model is not listed, that does not mean we do not work on it."),
+ ("Do you service B&O under warranty?", "Yes. We are an authorized service center and handle both warranty and out-of-warranty repairs."),
+ ("Do you repair the Beosound 9000?", "Yes. Tek Media Group repairs the Bang & Olufsen Beosound 9000 CD player, including CD reading, sledge and glass door faults."),
+ ("Do you repair Beogram turntables?", "Yes. Our refurbishing program covers the Beogram 4000, 4002, 4004 and 8000, and the turntable shop also services the 8002 and TX."),
+ ("Do you repair BeoCom phones?", "Yes. We repair BeoCom cordless and corded phones, including battery, charging cradle and audio connectivity faults."),
+ ("Do you ship nationwide?", "Yes. We serve California, Nevada and Arizona locally and accept B&O equipment shipped from anywhere in the country. Start a ticket and we'll walk you through it."),
+ ("How do I start a Bang & Olufsen repair?", "Start a service ticket online with your model and what it is doing. Then walk in at 711 South Victory Blvd, Burbank, CA 91502, ship it to us, or use pickup and delivery."),
+ ("How much does an estimate cost?", "Estimates are free. You approve the price before any work is done."),
+ ("Can an old Beogram or Beocenter really be saved?", "In most cases, yes. Age-related problems are exactly what we are set up to fix."),
+ ("What are your hours?", "Monday to Friday, 8:30 AM to 5:00 PM. Weekends, holidays and after hours are by appointment only.")
+] %}
 {% block head %}
+{% set faqlist = [] %}{% for q,a in faqs %}{% set _ = faqlist.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}) %}{% endfor %}
+{% set offers = [] %}{% for n,u in fams %}{% set _ = offers.append({"@type":"Offer","itemOffered":{"@type":"Service","name":"Bang & Olufsen " ~ n ~ " repair","url":"https://tekmg.com" ~ u}}) %}{% endfor %}
 <script type="application/ld+json">
-{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://tekmg.com/#business","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","email":"jt@tekmg.com","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},{"@type":"Service","@id":"https://tekmg.com/bang-olufsen#service","name":"Bang & Olufsen Authorized Service and Repair","serviceType":"Bang & Olufsen repair","provider":{"@id":"https://tekmg.com/#business"},"areaServed":["California","Nevada","Arizona"],"description":"Warranty and out-of-warranty repair and restoration of Beosound, BeoLab, Beovox, Beocenter, Beosystem, Beomaster, Beogram, Beovision, Beoplay and BeoCom phones. Nationwide shipping accepted. Free estimates.","url":"https://tekmg.com/bang-olufsen"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you service B&O under warranty?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are an authorized service center and handle both warranty and out-of-warranty repairs."}},{"@type":"Question","name":"Do you ship nationwide?","acceptedAnswer":{"@type":"Answer","text":"Yes. We serve California, Nevada and Arizona locally and accept B&O equipment shipped from anywhere in the country."}},{"@type":"Question","name":"How much does an estimate cost?","acceptedAnswer":{"@type":"Answer","text":"Estimates are free. You approve the price before any work is done."}},{"@type":"Question","name":"Can an old Beogram or Beocenter really be saved?","acceptedAnswer":{"@type":"Answer","text":"In most cases, yes. Age-related problems are exactly what we are set up to fix."}},{"@type":"Question","name":"What are your hours?","acceptedAnswer":{"@type":"Answer","text":"Monday to Friday, 8:30 AM to 5:00 PM. Weekends, holidays and after hours are by appointment only."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"}]}]}{% endraw %}
+{{ {"@context":"https://schema.org","@graph":[
+{"@type":"LocalBusiness","@id":"https://tekmg.com/#business","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","email":"jt@tekmg.com","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"17:00"}]},
+{"@type":"Service","@id":"https://tekmg.com/bang-olufsen#service","name":"Bang & Olufsen Authorized Service and Repair","serviceType":"Bang & Olufsen repair","brand":{"@type":"Brand","name":"Bang & Olufsen"},"provider":{"@id":"https://tekmg.com/#business"},"areaServed":{"@type":"Country","name":"United States"},"description":"Warranty and out-of-warranty repair and restoration of Beosound, BeoLab, Beovox, Beocenter, Beosystem, Beomaster, Beogram, Beovision, Beoplay and BeoCom phones. Nationwide shipping accepted. Free estimates.","url":"https://tekmg.com/bang-olufsen","hasOfferCatalog":{"@type":"OfferCatalog","name":"Bang & Olufsen repair by product family","itemListElement":offers}},
+{"@type":"WebPage","@id":"https://tekmg.com/bang-olufsen#webpage","url":"https://tekmg.com/bang-olufsen","name":"Bang & Olufsen Repair and Authorized Service","description":self.desc(),"inLanguage":"en-US","dateModified":"2026-11-23","about":{"@id":"https://tekmg.com/bang-olufsen#service"}},
+{"@type":"FAQPage","@id":"https://tekmg.com/bang-olufsen#faq","mainEntity":faqlist},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"}]}
+]}|tojson }}
 </script>
 {% include "_bo_css.html" %}
+<style>
+.bo-facts{width:100%;max-width:820px;margin:0 auto;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+.bo-facts th,.bo-facts td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line);font-size:.94rem;line-height:1.5}
+.bo-facts th{width:34%;font-weight:600;color:var(--ink);background:var(--soft)}
+.bo-facts a{color:var(--red)}
+</style>
 {% endblock %}
 {% block content %}
 <div class="bo">
+{% set crumbs = [('Home','/'),('Bang &amp; Olufsen Service','/bang-olufsen')] %}
+{% include "_bo_crumbs.html" %}
 
 <section class="bo-hero">
   <div class="bo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -182,16 +211,30 @@
 
 <section class="bo-sec">
   <div class="bo-wrap">
-    <div class="bo-head"><div class="bo-eyebrow">Questions</div><h2>Good to <b>know.</b></h2></div>
-    <div class="bo-faq">
-      <details><summary>Do you service B&amp;O under warranty?</summary><p>Yes. We are an authorized service center and handle both warranty and out-of-warranty repairs.</p></details>
-      <details><summary>Do you ship nationwide?</summary><p>Yes. We serve California, Nevada and Arizona locally and accept B&amp;O equipment shipped from anywhere in the country. Start a ticket and we'll walk you through it.</p></details>
-      <details><summary>How much does an estimate cost?</summary><p>Estimates are free. You approve the price before any work is done.</p></details>
-      <details><summary>Can an old Beogram or Beocenter really be saved?</summary><p>In most cases, yes. Age-related problems are exactly what we are set up to fix.</p></details>
-      <details><summary>What are your hours?</summary><p>Monday to Friday, 8:30 AM to 5:00 PM. Weekends, holidays and after hours are by appointment only.</p></details>
-    </div>
+    <div class="bo-head"><div class="bo-eyebrow">At a Glance</div><h2>Bang &amp; Olufsen <b>repair facts.</b></h2></div>
+    <table class="bo-facts"><tbody>
+      <tr><th scope="row">Service</th><td>Bang &amp; Olufsen repair and restoration, in warranty and out of warranty</td></tr>
+      <tr><th scope="row">Status</th><td>Authorized Bang &amp; Olufsen service center</td></tr>
+      <tr><th scope="row">Product families</th><td>{% for n,u in fams %}<a href="{{ u if u != '/bang-olufsen' else '#' ~ ('beocom' if 'BeoCom' in n else n|lower) }}">{{ n }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</td></tr>
+      <tr><th scope="row">Not listed?</th><td>If your model is not listed, that does not mean we do not work on it</td></tr>
+      <tr><th scope="row">Estimate</th><td>Free</td></tr>
+      <tr><th scope="row">Service area</th><td>Nationwide: walk in, ship it to us, or use pickup and delivery</td></tr>
+      <tr><th scope="row">Location</th><td>711 South Victory Blvd, Burbank, CA 91502</td></tr>
+      <tr><th scope="row">Hours</th><td>Monday to Friday, 8:30 AM to 5:00 PM. Weekends, holidays and after hours by appointment only</td></tr>
+      <tr><th scope="row">Phone</th><td>(818) 244-4440</td></tr>
+    </tbody></table>
   </div>
 </section>
+
+<section class="bo-sec bo-alt">
+  <div class="bo-wrap">
+    <div class="bo-head"><div class="bo-eyebrow">Questions</div><h2>Good to <b>know.</b></h2></div>
+    <div class="bo-faq">
+      {% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>
+      {% endfor %}</div>
+  </div>
+</section>
+<p style="text-align:center;color:var(--mid);font-size:.86rem;margin:0 0 26px">Page updated <time datetime="2026-11-23">November 23, 2026</time></p>
 
 </div>
 {% endblock %}
