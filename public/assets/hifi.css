@@ -1,0 +1,10 @@
+.rrp.hf .tip-box,.rrp.hf .card,.rrp.hf .item,.rrp.hf .step,.rrp.hf .era-description,.rrp.hf .model-card,.rrp.hf .warning-note,.rrp.hf .intro-text{border-radius:12px;padding:14px 16px;margin:14px 0;border:1px solid var(--line);background:#fff}
+.rrp.hf .tip-box{border-left:5px solid var(--ok);background:#effaf2}
+.rrp.hf .warning-note{border-left:5px solid var(--acc);background:#fff8e6}
+.rrp.hf .grid,.rrp.hf .service-list{display:grid;grid-template-columns:1fr;gap:10px}
+.rrp.hf .model-name{font-weight:700;font-size:1.05rem;margin-top:14px}
+.rrp.hf .models-type,.rrp.hf .models-years{font-size:.9rem;color:#55606e}
+.rrp.hf .table-container{overflow-x:auto}
+.rrp.hf .badge,.rrp.hf .vintage-badge,.rrp.hf .marantz-badge{display:inline-block;font-size:.8rem;font-weight:700;padding:2px 10px;border-radius:50px;background:#eef2f7;margin:0 6px 6px 0}
+.rrp.hf .rr-body img{max-width:100%;height:auto;border-radius:10px}
+@media(min-width:760px){.rrp.hf .grid{grid-template-columns:1fr 1fr}}

@@ -292,6 +292,14 @@ REDIRECTS = {
     "beovisionrepair/beovisionrepairhome.aspx": "/bang-olufsen/beovision-tv",
 }
 
+# Hi-fi brand and model pages converted from the old site (see hifi_pages.json)
+_hifi = os.path.join(BASE, "hifi_pages.json")
+if os.path.exists(_hifi):
+    import json as _json
+    _m = _json.load(open(_hifi, encoding="utf-8"))
+    PAGES.update(_m["pages"])
+    REDIRECTS.update(_m["redirects"])
+
 
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
