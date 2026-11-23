@@ -310,8 +310,50 @@ if os.path.exists(_hifi):
     REDIRECTS.update(_m["redirects"])
 
 
-EQUIP_TYPES = ["Lens (Box, ENG, Studio)", "Camera or Camcorder", "Deck or Recorder", "Projector", "Monitor",
-               "Hi-Fi Audio (Receiver, Amplifier)", "Reel-to-Reel", "Bang & Olufsen", "Other"]
+BRANDS_BY_TYPE = {
+    "Lens (Box, ENG, Studio)": ["Fujinon", "Canon", "Angenieux", "ARRI", "Atlas Lens Co.", "Cooke Optics", "IRIX",
+                                "Laowa", "Leitz", "Panasonic", "Panavision", "Rokinon", "Sigma", "Sony", "Zeiss"],
+    "Camera or Camcorder": ["Sony", "Panasonic", "JVC", "Canon", "Hitachi", "ARRI", "RED", "Blackmagic"],
+    "Deck or Recorder": ["Sony", "Panasonic", "JVC"],
+    "Projector": ["Sony", "Epson", "Panasonic", "Barco", "BenQ", "Canon", "Christie", "Eiki", "Hitachi", "InFocus",
+                  "JVC", "LG", "Mitsubishi", "NEC", "Optoma", "Sanyo", "Sharp", "ViewSonic"],
+    "Monitor": ["Sony", "Panasonic", "Barco", "Canon", "Flanders", "JVC", "LG", "Marshall", "NEC", "TVLogic"],
+    "Hi-Fi Audio (Receiver, Amplifier)": ["McIntosh", "Marantz", "Mark Levinson", "Denon", "Luxman", "Anthem",
+                                          "Boston Acoustics", "Harman Kardon", "Kenwood", "NAD", "Nakamichi", "Onkyo",
+                                          "Sansui", "Scott", "Sony", "Technics", "Yamaha"],
+    "Reel-to-Reel": ["Studer", "Revox", "Akai", "Teac", "Tascam", "Aiwa", "Nagra", "Nakamichi", "Pioneer", "Sony",
+                     "Technics", "Wilcox-Gay"],
+    "Bang & Olufsen": ["Bang & Olufsen"],
+    "Other": [],
+}
+EQUIP_TYPES = list(BRANDS_BY_TYPE)
+_PAGE_TYPES = {"lens-repair": "Lens (Box, ENG, Studio)", "camera-repair": "Camera or Camcorder",
+               "projector-repair": "Projector", "monitor-repair": "Monitor",
+               "hifi-audio": "Hi-Fi Audio (Receiver, Amplifier)", "reel-to-reel": "Reel-to-Reel",
+               "bang-olufsen": "Bang & Olufsen"}
+
+
+def _from_page(ref):
+    """Equipment type and brand that match the page the customer came from."""
+    from urllib.parse import urlparse
+    parts = [p for p in urlparse(ref or "").path.lower().split("/") if p]
+    if not parts:
+        return {}
+    etype = next((t for k, t in _PAGE_TYPES.items() if parts[0].startswith(k)), "")
+    if not etype:
+        return {}
+    out = {"type": etype}
+    brands = BRANDS_BY_TYPE[etype]
+    if len(brands) == 1:
+        out["brand"] = brands[0]
+    else:
+        slug = "-".join(parts)
+        hits = [b for b in brands if b.lower().replace(" ", "-").replace(".", "").replace("&", "and") in slug]
+        if hits:
+            out["brand"] = max(hits, key=len)
+    return out
+
+
 REFERRED = ["ChatGPT", "Claude (Anthropic)", "Google", "Manufacturer", "Friend"]
 SERVICE_REQUESTS = ["Shipping", "Pickup and delivery", "Walk-in"]
 
@@ -319,11 +361,14 @@ SERVICE_REQUESTS = ["Shipping", "Pickup and delivery", "Walk-in"]
 @app.route("/start-ticket", methods=["GET", "POST"])
 def start_ticket():
     """New service ticket form: creates the customer and one ticket per item in RepairShopr."""
-    ctx = {"equip_types": EQUIP_TYPES, "referred": REFERRED, "form": {}, "items": [{}],
+    ctx = {"equip_types": EQUIP_TYPES, "brands_by_type": BRANDS_BY_TYPE, "referred": REFERRED, "form": {}, "items": [{}],
            "error": "", "numbers": None, "service_request": ""}
-    if request.method == "GET" and request.args.get("model"):
-        # links from model pages pass the model so the customer does not retype it
-        ctx["items"] = [{"model": " ".join(request.args.get("model").split())[:80]}]
+    if request.method == "GET":
+        # match the form to the page the customer came from (a lens page shows lens brands, and so on)
+        first = _from_page(request.headers.get("Referer"))
+        if request.args.get("model"):
+            first["model"] = " ".join(request.args.get("model").split())[:80]
+        ctx["items"] = [first]
     if request.method == "POST":
         f = request.form
 
