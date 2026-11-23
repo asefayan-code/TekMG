@@ -165,7 +165,7 @@ def find_by_email(email, last):
     return None
 
 
-def create_tickets(cust, items, service_request, contact):
+def create_tickets(cust, items, service_request, contact, box_request=False):
     """Find or create the customer, then open one ticket per equipment item.
 
     Returns {"numbers": [...], "returning": True when the customer was already on file}."""
@@ -195,6 +195,8 @@ def create_tickets(cust, items, service_request, contact):
                  "Service request: " + service_request,
                  "Contact by: " + (", ".join(contact) or "not chosen"),
                  "Referred by: " + (cust.get("referred_by") or "not given")]
+        if box_request and it["type"] == "Bang & Olufsen":
+            lines += ["", "ORIGINAL SHIPPING BOX REQUESTED by the customer."]
         _post("tickets/%s/comment" % t["id"], {"subject": "Initial Issue", "body": "\n".join(lines),
                                                "hidden": True, "do_not_email": True})
         numbers.append(t.get("number") or t["id"])

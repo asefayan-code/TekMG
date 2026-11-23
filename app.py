@@ -365,10 +365,13 @@ SERVICE_REQUESTS = ["Shipping", "Pickup and delivery", "Walk-in"]
 def start_ticket():
     """New service ticket form: creates the customer and one ticket per item in RepairShopr."""
     ctx = {"equip_types": EQUIP_TYPES, "brands_by_type": BRANDS_BY_TYPE, "referred": REFERRED, "form": {}, "items": [{}],
-           "error": "", "numbers": None, "service_request": "", "returning": False, "contact": [], "today": ""}
+           "error": "", "numbers": None, "service_request": "", "returning": False, "contact": [], "today": "", "box": False}
     if request.method == "GET":
         # match the form to the page the customer came from (a lens page shows lens brands, and so on)
         first = _from_page(request.headers.get("Referer"))
+        if request.args.get("box"):  # "Request the original shipping box" on the Bang & Olufsen page
+            first.update(type="Bang & Olufsen", brand="Bang & Olufsen")
+            ctx["box"] = True
         if request.args.get("model"):
             first["model"] = " ".join(request.args.get("model").split())[:80]
         ctx["items"] = [first]
@@ -394,6 +397,8 @@ def start_ticket():
                           "issue": issue[:1500]})
         service = val("service_request", 30)
         contact = [n for n, k in (("Email", "contact_email"), ("SMS", "contact_sms")) if f.get(k)]
+        box = bool(f.get("bo_box")) and any(i["type"] == "Bang & Olufsen" for i in items)
+        ctx["box"] = box
         ctx.update(form=dict(cust, contact_email="Email" in contact, contact_sms="SMS" in contact),
                    items=items or [{}], service_request=service)
         ip = (request.headers.get("X-Forwarded-For") or request.remote_addr or "").split(",")[0].strip()
@@ -413,7 +418,8 @@ def start_ticket():
             ctx["error"] = "Too many requests. Wait a while and try again, or call us."
         else:
             try:
-                made = ticketlookup.create_tickets(cust, items, service, contact)
+                made = ticketlookup.create_tickets(cust, items, service, contact,
+                                                     box_request=box)
                 ctx.update(numbers=made["numbers"], returning=made["returning"], contact=contact,
                            today=datetime.date.today().strftime("%B %-d, %Y"))
             except Exception:
