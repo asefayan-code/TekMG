@@ -198,4 +198,16 @@ def create_tickets(cust, items, service_request, contact):
         _post("tickets/%s/comment" % t["id"], {"subject": "Initial Issue", "body": "\n".join(lines),
                                                "hidden": True, "do_not_email": True})
         numbers.append(t.get("number") or t["id"])
+        # also register it under Leads in RepairShopr, linked to this ticket and customer
+        try:
+            _post("leads", {"first_name": cust["firstname"], "last_name": cust["lastname"],
+                            "business_name": cust.get("business_name") or "", "email": cust["email"],
+                            "phone": cust["phone"], "mobile": cust.get("mobile") or "",
+                            "address": cust.get("address") or "", "city": cust.get("city") or "",
+                            "state": cust.get("state") or "", "zip": cust.get("zip") or "",
+                            "ticket_subject": subject, "ticket_problem_type": it["type"],
+                            "ticket_description": "\n".join(lines),
+                            "customer_id": cid, "ticket_id": t["id"], "from_check_in": True})
+        except Exception as e:  # the ticket already exists; never fail the customer over the lead
+            print("lead not created for ticket %s: %s" % (t.get("number"), e))
     return {"numbers": numbers, "returning": returning}
