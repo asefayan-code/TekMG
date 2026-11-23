@@ -7,6 +7,11 @@
 .st{max-width:760px;margin:0 auto;padding:22px 16px 34px;line-height:1.55}
 .st h1{font-size:1.6rem;color:#0f3d62;margin:4px 0 6px}
 .st-free{display:inline-block;background:#e7f6ea;color:#17692c;border:1px solid #bfe3c7;border-radius:50px;padding:6px 16px;font-weight:700;margin:2px 0 12px}
+.st-ok{background:#e7f6ea;border:1px solid #bfe3c7;border-left:4px solid #17692c;border-radius:10px;padding:14px 16px;margin:0 0 16px;color:#123d1c}
+.st-ok b{font-size:1.15rem}
+.st-next{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:14px 16px;margin:0 0 16px}
+.st-next h2{font-size:1.1rem;color:#0f3d62;margin:0 0 6px}
+.st-hp{position:absolute;left:-9999px}
 .st-warn{background:#fff4f2;border:1px solid #f0b8b0;border-left:4px solid #b42318;border-radius:10px;padding:12px 14px;margin:0 0 14px;color:#5c1a12}
 .st>p{margin:0 0 14px;color:#444}
 .st fieldset{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:16px 16px 4px;margin:0 0 16px;min-width:0}
@@ -33,63 +38,82 @@
 {% block content %}
 <div class="st">
 <h1>Start a New Service Ticket</h1>
+{% if numbers is not none %}
+<div class="st-ok" role="status">
+{% if numbers %}<b>Your service ticket{{ '' if numbers|length == 1 else 's' }}: {% for n in numbers %}#{{ n }}{{ ', ' if not loop.last }}{% endfor %}</b><br>Keep {{ 'this number' if numbers|length == 1 else 'these numbers' }} for your records.{% else %}<b>Thank you.</b>{% endif %}
+</div>
+{% if numbers %}
+<div class="st-next"><h2>What to do next</h2>
+{% if service_request == 'Shipping' %}<p>Ship your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p>Write your ticket number on the box or put a note inside.</p>
+{% elif service_request == 'Walk-in' %}<p>Bring your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p>Mon-Fri: 8:30 AM &ndash; 5:00 PM<br>Sat-Sun-Holidays: By appointment only</p><p>Give your ticket number at the counter.</p>
+{% else %}<p>We will contact you to set up your pickup.</p>{% endif %}
+<p><a href="/ticket-status">Check Your Service Ticket</a></p>
+</div>
+{% endif %}
+{% else %}
 <div class="st-free">&#10003; Free Estimates</div>
-{% if preview_notice %}<div class="st-warn" role="alert">This form is a preview. Nothing was sent. Use the Start a New Service Ticket button to open a ticket.</div>{% endif %}
+{% if error %}<div class="st-warn" role="alert">{{ error }}</div>{% endif %}
 <p>Fields marked <span style="color:#b42318">*</span> are required.</p>
 <form method="post" action="/start-ticket" autocomplete="on">
+<div class="st-hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
 <fieldset><legend>Your information</legend>
 <div class="st-grid">
-<div><label for="stFirst">First name <i>*</i></label><input id="stFirst" name="firstname" type="text" required maxlength="60" autocomplete="given-name"></div>
-<div><label for="stLast">Last name <i>*</i></label><input id="stLast" name="lastname" type="text" required maxlength="60" autocomplete="family-name"></div>
-<div class="st-wide"><label for="stBiz">Business name</label><input id="stBiz" name="business_name" type="text" maxlength="100" autocomplete="organization"></div>
-<div class="st-wide"><label for="stEmail">Email <i>*</i></label><input id="stEmail" name="email" type="email" required maxlength="120" autocomplete="email"></div>
-<div><label for="stPhone">Phone <i>*</i></label><input id="stPhone" name="phone" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234"></div>
-<div><label for="stMobile">Mobile</label><input id="stMobile" name="mobile" type="tel" maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234"></div>
+<div><label for="stFirst">First name <i>*</i></label><input id="stFirst" name="firstname" type="text" required maxlength="60" autocomplete="given-name" value="{{ form.firstname }}"></div>
+<div><label for="stLast">Last name <i>*</i></label><input id="stLast" name="lastname" type="text" required maxlength="60" autocomplete="family-name" value="{{ form.lastname }}"></div>
+<div class="st-wide"><label for="stBiz">Business name</label><input id="stBiz" name="business_name" type="text" maxlength="100" autocomplete="organization" value="{{ form.business_name }}"></div>
+<div class="st-wide"><label for="stEmail">Email <i>*</i></label><input id="stEmail" name="email" type="email" required maxlength="120" autocomplete="email" value="{{ form.email }}"></div>
+<div><label for="stPhone">Phone <i>*</i></label><input id="stPhone" name="phone" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234" value="{{ form.phone }}"></div>
+<div><label for="stMobile">Mobile</label><input id="stMobile" name="mobile" type="tel" maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234" value="{{ form.mobile }}"></div>
 </div>
 </fieldset>
 <fieldset><legend>Address</legend>
 <div class="st-grid">
-<div class="st-wide"><label for="stA1">Address</label><input id="stA1" name="address" type="text" maxlength="120" autocomplete="address-line1" placeholder="Street address or P.O. Box"></div>
+<div class="st-wide"><label for="stA1">Address</label><input id="stA1" name="address" type="text" maxlength="120" autocomplete="address-line1" placeholder="Street address or P.O. Box" value="{{ form.address }}"></div>
 </div>
 <div class="st-grid st-3">
-<div><label for="stCity">City</label><input id="stCity" name="city" type="text" maxlength="60" autocomplete="address-level2"></div>
-<div><label for="stState">State/Country</label><input id="stState" name="state" type="text" maxlength="40" autocomplete="address-level1"></div>
-<div><label for="stZip">Zip/Postal code</label><input id="stZip" name="zip" type="text" maxlength="12" inputmode="numeric" autocomplete="postal-code"></div>
+<div><label for="stCity">City</label><input id="stCity" name="city" type="text" maxlength="60" autocomplete="address-level2" value="{{ form.city }}"></div>
+<div><label for="stState">State/Country</label><input id="stState" name="state" type="text" maxlength="40" autocomplete="address-level1" value="{{ form.state }}"></div>
+<div><label for="stZip">Zip/Postal code</label><input id="stZip" name="zip" type="text" maxlength="12" autocomplete="postal-code" value="{{ form.zip }}"></div>
 </div>
-<div><label for="stRef">Referred by</label><select id="stRef" name="referred_by"><option value="">Select</option><option>ChatGPT</option><option>Claude (Anthropic)</option><option>Google</option><option>Manufacturer</option><option>Friend</option></select></div>
+<div><label for="stRef">Referred by</label><select id="stRef" name="referred_by"><option value="">Select</option>{% for r in referred %}<option{% if form.referred_by == r %} selected{% endif %}>{{ r }}</option>{% endfor %}</select></div>
 </fieldset>
+{% for it in items %}
 <fieldset class="st-item" data-item><legend>Equipment <span data-num></span></legend>
 <div class="st-grid">
 <div><label>Equipment type <i>*</i></label><select name="equip_type" required>
-<option value="">Select</option><option>Lens (Box, ENG, Studio)</option><option>Camera or Camcorder</option><option>Deck or Recorder</option><option>Projector</option><option>Monitor</option><option>Hi-Fi Audio (Receiver, Amplifier)</option><option>Reel-to-Reel</option><option>Bang &amp; Olufsen</option><option>Other</option></select></div>
-<div><label>Brand <i>*</i></label><input name="equip_brand" type="text" required maxlength="60" list="stBrands" placeholder="Sony, Canon, McIntosh..."></div>
-<div><label>Model <i>*</i></label><input name="equip_model" type="text" required maxlength="80" placeholder="Model name or number"></div>
-<div><label>Serial number</label><input name="equip_serial" type="text" maxlength="60" placeholder="If you have it"></div>
-<div class="st-wide"><label>Issue <i>*</i></label><textarea name="equip_issue" required maxlength="1500" rows="4" placeholder="Tell us what is wrong"></textarea></div>
+<option value="">Select</option>{% for e in equip_types %}<option{% if it.type == e %} selected{% endif %}>{{ e }}</option>{% endfor %}</select></div>
+<div><label>Brand <i>*</i></label><input name="equip_brand" type="text" required maxlength="60" list="stBrands" placeholder="Sony, Canon, McIntosh..." value="{{ it.brand }}"></div>
+<div><label>Model <i>*</i></label><input name="equip_model" type="text" required maxlength="80" placeholder="Model name or number" value="{{ it.model }}"></div>
+<div><label>Serial number</label><input name="equip_serial" type="text" maxlength="60" placeholder="If you have it" value="{{ it.serial }}"></div>
+<div class="st-wide"><label>Issue <i>*</i></label><textarea name="equip_issue" required maxlength="1500" rows="4" placeholder="Tell us what is wrong">{{ it.issue }}</textarea></div>
 </div>
 <button type="button" class="st-rm" data-rm hidden>Remove this item</button>
 </fieldset>
+{% endfor %}
 <div id="stMore"></div>
 <button type="button" class="st-add" id="stAdd">+ Add another item</button>
 <datalist id="stBrands"><option>Angenieux</option><option>Akai</option><option>Bang &amp; Olufsen</option><option>Canon</option><option>Denon</option><option>Epson</option><option>Fujinon</option><option>Hitachi</option><option>JVC</option><option>Luxman</option><option>Marantz</option><option>Mark Levinson</option><option>McIntosh</option><option>NAD</option><option>Panasonic</option><option>Pioneer</option><option>Revox</option><option>Sony</option><option>Studer</option><option>Tascam</option><option>Teac</option></datalist>
 <div class="st-pair">
-<fieldset><legend>Service Request</legend>
-<label class="st-ck"><input type="radio" name="service_request" value="Shipping" required> Shipping</label>
-<label class="st-ck"><input type="radio" name="service_request" value="Pickup and delivery"> Pickup and delivery</label>
-<label class="st-ck"><input type="radio" name="service_request" value="Walk-in"> Walk-ins</label>
+<fieldset><legend>Service Request <i style="font-style:normal;color:#b42318">*</i></legend>
+<label class="st-ck"><input type="radio" name="service_request" value="Shipping" required{% if service_request == 'Shipping' %} checked{% endif %}> Shipping</label>
+<label class="st-ck"><input type="radio" name="service_request" value="Pickup and delivery"{% if service_request == 'Pickup and delivery' %} checked{% endif %}> Pickup and delivery</label>
+<label class="st-ck"><input type="radio" name="service_request" value="Walk-in"{% if service_request == 'Walk-in' %} checked{% endif %}> Walk-ins</label>
 </fieldset>
 <fieldset><legend>How we contact you</legend>
-<label class="st-ck"><input type="checkbox" name="contact_email" value="1" checked> Email</label>
-<label class="st-ck"><input type="checkbox" name="contact_sms" value="1"> SMS (text message)</label>
+<label class="st-ck"><input type="checkbox" name="contact_email" value="1"{% if not form or form.contact_email %} checked{% endif %}> Email</label>
+<label class="st-ck"><input type="checkbox" name="contact_sms" value="1"{% if form.contact_sms %} checked{% endif %}> SMS (text message)</label>
 </fieldset>
 </div>
-<button type="submit">Continue</button>
+<button type="submit" id="stGo">Start Service Ticket</button>
 </form>
-</div>
 <script>
-(function(){var first=document.querySelector('[data-item]'),more=document.getElementById('stMore'),add=document.getElementById('stAdd'),MAX=5;
-function renum(){var all=document.querySelectorAll('[data-item]');all.forEach(function(f,i){f.querySelector('[data-num]').textContent=all.length>1?(i+1):'';f.querySelector('[data-rm]').hidden=(i===0)});add.hidden=all.length>=MAX}
-add.addEventListener('click',function(){var c=first.cloneNode(true);c.querySelectorAll('input,textarea').forEach(function(e){e.value=''});c.querySelectorAll('select').forEach(function(e){e.selectedIndex=0});more.appendChild(c);renum();c.querySelector('select').focus()});
-document.addEventListener('click',function(e){if(e.target.matches('[data-rm]')){e.target.closest('[data-item]').remove();renum()}});renum()})();
+(function(){var more=document.getElementById('stMore'),add=document.getElementById('stAdd'),MAX=5;
+function all(){return document.querySelectorAll('[data-item]')}
+function renum(){var a=all();a.forEach(function(f,i){f.querySelector('[data-num]').textContent=a.length>1?(i+1):'';f.querySelector('[data-rm]').hidden=(i===0)});add.hidden=a.length>=MAX}
+add.addEventListener('click',function(){var a=all(),c=a[0].cloneNode(true);c.querySelectorAll('input,textarea').forEach(function(e){e.value=''});c.querySelectorAll('select').forEach(function(e){e.selectedIndex=0});a[a.length-1].after(c);renum();c.querySelector('select').focus()});
+document.addEventListener('click',function(e){if(e.target.matches('[data-rm]')){e.target.closest('[data-item]').remove();renum()}});renum();
+var f=document.querySelector('.st form');f.addEventListener('submit',function(){var b=document.getElementById('stGo');b.disabled=true;b.textContent='Sending...'})})();
 </script>
+{% endif %}
+</div>
 {% endblock %}

@@ -37,19 +37,30 @@ def allowed(ip, limit=8, window=600):
     return True
 
 
-def _get(path, **params):
-    url = "%s/%s?%s" % (BASE, path, urllib.parse.urlencode(params))
+def _call(method, path, params=None, body=None):
+    url = "%s/%s" % (BASE, path)
+    if params:
+        url += "?" + urllib.parse.urlencode(params)
+    data = json.dumps(body).encode("utf-8") if body is not None else None
     # RepairShopr refuses Python's default User-Agent, so send a normal one.
-    req = urllib.request.Request(url, headers={"Authorization": "Bearer " + api_key(),
-                                               "Accept": "application/json",
-                                               "Content-Type": "application/json",
-                                               "User-Agent": "TekMediaGroup-Website/1.0 (+https://tekmg.com)"})
+    req = urllib.request.Request(url, data=data, method=method, headers={
+        "Authorization": "Bearer " + api_key(), "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "TekMediaGroup-Website/1.0 (+https://tekmg.com)"})
     try:
-        with urllib.request.urlopen(req, timeout=12) as r:
-            return json.loads(r.read().decode("utf-8"))
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return json.loads(r.read().decode("utf-8") or "{}")
     except urllib.error.HTTPError as e:
-        body = e.read(300).decode("utf-8", "replace")
-        raise RuntimeError("RepairShopr %s on %s: %s" % (e.code, path, " ".join(body.split())[:200]))
+        text = e.read(300).decode("utf-8", "replace")
+        raise RuntimeError("RepairShopr %s on %s %s: %s" % (e.code, method, path, " ".join(text.split())[:200]))
+
+
+def _get(path, **params):
+    return _call("GET", path, params=params)
+
+
+def _post(path, body):
+    return _call("POST", path, body=body)
 
 
 def digits(s):
@@ -141,3 +152,49 @@ def lookup(last, phone):
     tickets.sort(key=lambda t: t["_sort"], reverse=True)
     return {"open": [t for t in tickets if not is_done(t["status"])][:MAX_OPEN],
             "done": [t for t in tickets if is_done(t["status"])][:MAX_DONE]}
+
+
+# ---- new service ticket -------------------------------------------------
+
+def find_by_email(email, last):
+    """Existing customer with this email and last name, if any."""
+    data = _get("customers", email=email)
+    for c in data.get("customers") or []:
+        if (c.get("email") or "").strip().lower() == email.lower() and _last_matches(c, last):
+            return c
+    return None
+
+
+def create_tickets(cust, items, service_request, contact):
+    """Find or create the customer, then open one ticket per equipment item.
+
+    Returns the list of new ticket numbers."""
+    existing = find_customers(cust["lastname"], cust["phone"])
+    customer = existing[0] if existing else find_by_email(cust["email"], cust["lastname"])
+    if customer is None:
+        body = {k: v for k, v in cust.items() if v not in ("", None)}
+        body["get_sms"] = "SMS" in contact
+        made = _post("customers", body)
+        customer = made.get("customer") or made
+    cid = customer.get("id")
+    if not cid:
+        raise RuntimeError("RepairShopr returned no customer id")
+    numbers = []
+    for it in items:
+        subject = ("%s %s - %s" % (it["brand"], it["model"], it["type"]))[:250]
+        made = _post("tickets", {"customer_id": cid, "subject": subject,
+                                 "problem_type": it["type"], "status": "New"})
+        t = made.get("ticket") or made
+        if not t.get("id"):
+            raise RuntimeError("RepairShopr returned no ticket id")
+        lines = ["Website service request", "",
+                 "Equipment type: " + it["type"], "Brand: " + it["brand"], "Model: " + it["model"],
+                 "Serial number: " + (it["serial"] or "not given"), "",
+                 "Issue: " + it["issue"], "",
+                 "Service request: " + service_request,
+                 "Contact by: " + (", ".join(contact) or "not chosen"),
+                 "Referred by: " + (cust.get("referred_by") or "not given")]
+        _post("tickets/%s/comment" % t["id"], {"subject": "Initial Issue", "body": "\n".join(lines),
+                                               "hidden": True, "do_not_email": True})
+        numbers.append(t.get("number") or t["id"])
+    return numbers

@@ -310,10 +310,65 @@ if os.path.exists(_hifi):
     REDIRECTS.update(_m["redirects"])
 
 
+EQUIP_TYPES = ["Lens (Box, ENG, Studio)", "Camera or Camcorder", "Deck or Recorder", "Projector", "Monitor",
+               "Hi-Fi Audio (Receiver, Amplifier)", "Reel-to-Reel", "Bang & Olufsen", "Other"]
+REFERRED = ["ChatGPT", "Claude (Anthropic)", "Google", "Manufacturer", "Friend"]
+SERVICE_REQUESTS = ["Shipping", "Pickup and delivery", "Walk-in"]
+
+
 @app.route("/start-ticket", methods=["GET", "POST"])
 def start_ticket():
-    """New service ticket form (being built; not linked from the site yet, does not save)."""
-    return render_template("start-ticket.html", preview_notice=(request.method == "POST"))
+    """New service ticket form: creates the customer and one ticket per item in RepairShopr."""
+    ctx = {"equip_types": EQUIP_TYPES, "referred": REFERRED, "form": {}, "items": [{}],
+           "error": "", "numbers": None, "service_request": ""}
+    if request.method == "POST":
+        f = request.form
+
+        def val(name, n=120):
+            return " ".join((f.get(name) or "").split())[:n]
+
+        cust = {"firstname": val("firstname", 60), "lastname": val("lastname", 60),
+                "business_name": val("business_name", 100), "email": val("email", 120),
+                "phone": val("phone", 20), "mobile": val("mobile", 20), "address": val("address", 120),
+                "city": val("city", 60), "state": val("state", 40), "zip": val("zip", 12),
+                "referred_by": val("referred_by", 40)}
+        if cust["referred_by"] not in REFERRED:
+            cust["referred_by"] = ""
+        cols = [f.getlist(k) for k in ("equip_type", "equip_brand", "equip_model", "equip_serial", "equip_issue")]
+        items = []
+        for row in list(zip(*cols))[:5]:
+            t, b, m, sn, issue = [(x or "").strip() for x in row]
+            items.append({"type": t if t in EQUIP_TYPES else "", "brand": " ".join(b.split())[:60],
+                          "model": " ".join(m.split())[:80], "serial": " ".join(sn.split())[:60],
+                          "issue": issue[:1500]})
+        service = val("service_request", 30)
+        contact = [n for n, k in (("Email", "contact_email"), ("SMS", "contact_sms")) if f.get(k)]
+        ctx.update(form=dict(cust, contact_email="Email" in contact, contact_sms="SMS" in contact),
+                   items=items or [{}], service_request=service)
+        ip = (request.headers.get("X-Forwarded-For") or request.remote_addr or "").split(",")[0].strip()
+        if f.get("website"):  # hidden field only robots fill in
+            ctx["numbers"] = []
+        elif not ticketlookup.api_key():
+            ctx["error"] = "Online tickets are not available right now. Call us to open a ticket."
+        elif not (cust["firstname"] and cust["lastname"] and "@" in cust["email"] and ticketlookup.digits(cust["phone"])):
+            ctx["error"] = "Enter your first name, last name, email and full 10-digit phone number."
+        elif not items or not all(i["type"] and i["brand"] and i["model"] and i["issue"] for i in items):
+            ctx["error"] = "For each item, choose the equipment type and enter the brand, model and issue."
+        elif service not in SERVICE_REQUESTS:
+            ctx["error"] = "Choose Shipping, Pickup and delivery, or Walk-ins."
+        elif not contact:
+            ctx["error"] = "Choose Email or SMS so we can contact you."
+        elif not ticketlookup.allowed("new:" + ip, limit=4, window=3600):
+            ctx["error"] = "Too many requests. Wait a while and try again, or call us."
+        else:
+            try:
+                ctx["numbers"] = ticketlookup.create_tickets(cust, items, service, contact)
+            except Exception:
+                app.logger.exception("new ticket failed")
+                ctx["error"] = "We could not open your ticket right now. Try again in a few minutes or call us."
+    resp = app.make_response(render_template("start-ticket.html", **ctx))
+    resp.headers["Cache-Control"] = "no-store"
+    return resp
 
 
 @app.route("/ticket-status", methods=["GET", "POST"])
