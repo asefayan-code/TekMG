@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block title %}Harman Kardon Repair &amp; Restoration | Hi-Fi Audio | Tek Media Group{% endblock %}
+{% block desc %}Harman Kardon hi-fi repair and restoration at Tek Media Group. Pick your Harman Kardon model for service information. Free estimate, nationwide shipping. (818) 244-4440.{% endblock %}
+{% block canon %}/hifi-audio/harman-kardon{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/assets/rr.css?v=1">
+<link rel="stylesheet" href="/assets/hifi.css?v=1">
+<script type="application/ld+json">{% raw %}{"@context": "https://schema.org", "@graph": [{"@type": "LocalBusiness", "@id": "https://tekmg.com/#business", "name": "Tek Media Group", "url": "https://tekmg.com/", "telephone": "+1-818-244-4440", "email": "jt@tekmg.com", "address": {"@type": "PostalAddress", "streetAddress": "711 South Victory Blvd", "addressLocality": "Burbank", "addressRegion": "CA", "postalCode": "91502", "addressCountry": "US"}}, {"@type": "Service", "@id": "https://tekmg.com/hifi-audio/harman-kardon#service", "name": "Harman Kardon Repair & Restoration", "serviceType": "Hi-fi audio repair", "brand": {"@type": "Brand", "name": "Harman Kardon"}, "provider": {"@id": "https://tekmg.com/#business"}, "areaServed": {"@type": "Country", "name": "United States"}, "url": "https://tekmg.com/hifi-audio/harman-kardon"}, {"@type": "WebPage", "@id": "https://tekmg.com/hifi-audio/harman-kardon#webpage", "url": "https://tekmg.com/hifi-audio/harman-kardon", "name": "Harman Kardon Repair & Restoration", "description": "Harman Kardon hi-fi repair and restoration at Tek Media Group. Pick your Harman Kardon model for service information. Free estimate, nationwide shipping. (818) 244-4440.", "inLanguage": "en-US", "dateModified": "2026-11-23"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tekmg.com/"}, {"@type": "ListItem", "position": 2, "name": "Hi-Fi Audio", "item": "https://tekmg.com/hifi-audio"}, {"@type": "ListItem", "position": 3, "name": "Harman Kardon", "item": "https://tekmg.com/hifi-audio/harman-kardon"}]}]}{% endraw %}</script>
+{% endblock %}
+{% block content %}
+<div class="rrp hf"><header class="rr-hero"><div class="rr-wrap"><nav aria-label="Breadcrumb" class="rr-crumbs"><a href="/">Home</a> › <a href="/hifi-audio">Hi-Fi Audio</a> › Harman Kardon</nav><span class="rr-eyebrow">Harman Kardon hi-fi repair</span><h1>Harman Kardon Repair &amp; Restoration</h1><p class="rr-lead">Harman Kardon hi-fi repair and restoration by Tek Media Group. Pick your model below.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins?model=Harman%20Kardon" rel="noopener">Start a service ticket</a><a class="rr-btn rr-btn-s" href="mailto:jt@tekmg.com">Email us</a></div></div></header><main class="rr-main"><section aria-label="At a glance" class="rr-card"><dl class="rr-facts"><div><dt>Brand</dt><dd>Harman Kardon</dd></div><div><dt>Service</dt><dd>Repair and restoration</dd></div><div><dt>Estimate</dt><dd>Free</dd></div><div><dt>Shop</dt><dd>711 South Victory Blvd, Burbank, CA 91502</dd></div><div><dt>Shipping</dt><dd>Units accepted from all 50 states</dd></div><div><dt>Contact</dt><dd>(818) 244-4440 · jt@tekmg.com</dd></div></dl></section><nav aria-label="On this page" class="rr-card rr-toc"><b>On this page</b><a href="#recurring-themes-capacitor-issues-display-failures">Recurring Themes: Capacitor Issues &amp; Display Failures</a><a href="#model-specific-defects-solutions">Model-Specific Defects &amp; Solutions</a><a href="#capacitor-replacement-a-closer-look">Capacitor Replacement: A Closer Look</a><a href="#display-repair-overview">Display Repair Overview</a><a href="#general-troubleshooting-flow">General Troubleshooting Flow</a></nav><article class="rr-card rr-body">
+
+<div class="container">
+<hr/>
+
+
+
+<p><em>A practical overview of frequent issues in select Harman Kardon models from the last two decades, aimed at informed enthusiasts. This is not a substitute for professional repair, especially for complex electrical work.</em></p>
+<div class="warning">
+<strong>⚠️ Important Safety Notice:</strong> This guide is for informational purposes. Always disconnect power before inspecting any device. Capacitors can retain charge. If you are not experienced with soldering, circuit board repair, or diagnosing live electrical circuits, <strong>seek professional help</strong>. Incorrect repairs can cause further damage or create safety hazards.
+</div>
+<h2 id="recurring-themes-capacitor-issues-display-failures">Recurring Themes: Capacitor Issues &amp; Display Failures</h2>
+<p>Two of the most common failure points across many Harman Kardon products from this era are <strong>electrolytic capacitors</strong> and <strong>display units</strong>. Power supplies, in particular, are prone to failing due to dried-out or bulging capacitors, leading to a complete lack of power, intermittent operation, or audible hum. Vacuum fluorescent displays (VFDs) and LCDs also commonly fail due to aging or driver circuit issues.</p>
+<h2 id="model-specific-defects-solutions">Model-Specific Defects &amp; Solutions</h2>
+<table>
+<thead>
+<tr>
+<th>Model Series / Name</th>
+<th>Typical Era</th>
+<th>Common Defects</th>
+<th>Practical Repair Solutions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AVR Receivers (e.g., AVR 140, 240, 340)</strong></td>
+<td>Early 2000s</td>
+<td>
+<ul>
+<li>Complete power failure (no standby light).</li>
+<li>Intermittent audio dropouts or protection mode.</li>
+<li>Failed display (VFD dim or dead).</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><strong>Primary Fix:</strong> Replace all electrolytic capacitors in the switch-mode power supply (SMPS), especially the large main filter caps and smaller caps around the regulator ICs. This solves ~80% of power issues.</li>
+<li>Check solder joints on the power supply board and output relay joints for cracks; reflow if necessary.</li>
+<li>Display failure is often the VFD itself or its dedicated power supply/filament voltage. Check for ~5V AC on the filament pins. If voltage is present but display is dead, the VFD tube is likely failed (difficult repair).</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>SoundSticks II &amp; III (Computer Speakers)</strong></td>
+<td>2000s-2010s</td>
+<td>
+<ul>
+<li>No power, dead subwoofer.</li>
+<li>Satellite speakers crackling or no sound.</li>
+<li>Power supply brick failure.</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Internal amplifier is inside the subwoofer. Open the subwoofer and inspect the amplifier board for <strong>bulging/leaking capacitors</strong>. Replace all electrolytics (often 1000µF and 2200µF values fail).</li>
+<li>Crackling satellites: Clean the potentiometer (volume control) on the subwoofer with contact cleaner. Check internal wiring connections.</li>
+<li>Test the external DC power adapter with a multimeter; replace if output voltage is low or absent.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Go + Play (Portable Systems)</strong></td>
+<td>Mid 2000s-2010s</td>
+<td>
+<ul>
+<li>Battery no longer holds charge.</li>
+<li>Unit won't power on, even with AC adapter.</li>
+<li>CD mechanism skipping or failing to load.</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Old Ni-MH battery packs fail. Can be rebuilt with new cells or used primarily on AC power.</li>
+<li>If dead on AC, inspect internal power board. Again, <strong>capacitor replacement</strong> is the first step. Look for small SMD electrolytics near the DC input.</li>
+<li>CD issues: Clean the laser lens with isopropyl alcohol. If persistent, the sled mechanism may be gummed up; clean old grease and re-lubricate.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Harman Kardon Citation Series (Soundbars, Amps)</strong></td>
+<td>2018-Present</td>
+<td>
+<ul>
+<li>Network/Bluetooth connectivity drops.</li>
+<li>Power cycling issues after a few years.</li>
+<li>Software/firmware glitches.</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Modern units have complex logic boards. Power issues can still stem from early capacitor failure on internal DC rails.</li>
+<li>For connectivity: Perform full factory reset. Ensure firmware is updated via the HK app.</li>
+
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Older CD Players &amp; Changers</strong></td>
+<td>1990s-2000s</td>
+<td>
+<ul>
+<li>Disc read errors ("NO DISC").</li>
+<li>Tray won't open or close.</li>
+<li>No audio output.</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Laser pickup failure is common. Can sometimes be cleaned, but often needs replacement (e.g., KSS-213C type lasers).</li>
+<li>Belt-driven trays: The rubber belt deteriorates. Replace with a same-size belt.</li>
+<li>Check analog output stage capacitors for dry joints or failure if there is power but no sound.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="capacitor-replacement-a-closer-look">Capacitor Replacement: A Closer Look</h2>
+<p>The most frequent repair for hardware from the 2000-2010 period.</p>
+<ul>
+<li><strong>Why:</strong> Electrolytic capacitors have a liquid electrolyte that dries out or leaks over time, especially under heat stress. This causes a loss of capacitance and increased internal resistance (ESR), disrupting power supply regulation.</li>
+<li><strong>Signs:</strong> Bulging/domed tops, leaking brown residue, crusty material at the base on the PCB.</li>
+<li><strong>Procedure:</strong>
+<ol>
+<li>Identify voltage (e.g., 16V, 25V, 50V) and capacitance (e.g., 100µF, 470µF, 2200µF).</li>
+<li>Use high-quality, low-ESR, 105°C rated replacements from reputable brands (Panasonic, Nichicon, Rubycon).</li>
+<li>Note polarity: The negative lead is marked on the capacitor body and the PCB.</li>
+<li>Desolder old caps, clean pads, solder new ones in place.</li>
+</ol>
+</li>
+<li><strong>Common Locations:</strong> Around heatsinks, near voltage regulators, in the primary and secondary sides of switch-mode power supplies.</li>
+</ul>
+<h2 id="display-repair-overview">Display Repair Overview</h2>
+<p>Displays are a common point of failure. They are often system-specific and can be challenging to source.</p>
+<ul>
+<li><strong>VFD (Vacuum Fluorescent Display):</strong> Blue-green glow. Requires both filament voltage (often ~5V AC) and higher DC anode/grid voltages. If dim, check these supplies. If segments are missing, the driver IC or connections may be bad. Complete failure often means the VFD tube is dead.</li>
+<li><strong>LCD (Liquid Crystal Display):</strong> Backlight failure (CCFL or LED) is common. CCFL backlights can be replaced, but require careful handling. LED backlights are more durable, but driver circuits can fail.</li>
+<li><strong>OLED (Modern Citations):</strong> Less prone to failure, but if damaged, the entire module usually needs replacement.</li>
+</ul>
+<p><em>Tip: For obsolete displays, search for part numbers on the flex cable or board (e.g., "VFD-256x64-001"). Salvage from a "for parts" unit on eBay may be the only option.</em></p>
+<h2 id="general-troubleshooting-flow">General Troubleshooting Flow</h2>
+<ol>
+<li><strong>Symptom Identification:</strong> Is it power, input, output, or control related?</li>
+<li><strong>Visual Inspection:</strong> Look for burnt components, bulging capacitors, cracked solder joints, or loose connectors.</li>
+<li><strong>Power Supply Check:</strong> Use a multimeter to verify all DC voltage rails coming from the power supply board are present and within ~10% of their labeled value (e.g., 5V, 12V, ±15V). <strong>Do this with extreme caution on live circuits.</strong></li>
+<li><strong>Isolate the Problem:</strong> If possible, test with different inputs or outputs to rule out specific sections.</li>
+<li><strong>Component-Level Test:</strong> Suspect capacitors can be tested for capacitance and ESR with a dedicated meter, but visual signs are often enough to warrant replacement.</li>
+</ol>
+
+</div>
+
+</article><section class="rr-cta"><h2>Start your Harman Kardon repair</h2><p>If your model is not listed, that does not mean we do not work on it.</p><div class="rr-actions"><a class="rr-btn rr-btn-p" href="https://techmediagroup.repairshopr.com/check_ins" rel="noopener">Start a service ticket</a></div></section></main></div>
+{% endblock %}
