@@ -3,6 +3,7 @@ import json
 import os
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -38,10 +39,17 @@ def allowed(ip, limit=8, window=600):
 
 def _get(path, **params):
     url = "%s/%s?%s" % (BASE, path, urllib.parse.urlencode(params))
+    # RepairShopr refuses Python's default User-Agent, so send a normal one.
     req = urllib.request.Request(url, headers={"Authorization": "Bearer " + api_key(),
-                                               "Accept": "application/json"})
-    with urllib.request.urlopen(req, timeout=12) as r:
-        return json.loads(r.read().decode("utf-8"))
+                                               "Accept": "application/json",
+                                               "Content-Type": "application/json",
+                                               "User-Agent": "TekMediaGroup-Website/1.0 (+https://tekmg.com)"})
+    try:
+        with urllib.request.urlopen(req, timeout=12) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        body = e.read(300).decode("utf-8", "replace")
+        raise RuntimeError("RepairShopr %s on %s: %s" % (e.code, path, " ".join(body.split())[:200]))
 
 
 def digits(s):
