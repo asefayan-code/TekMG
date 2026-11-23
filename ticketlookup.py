@@ -15,7 +15,11 @@ _hits = {}
 
 
 def api_key():
-    return (os.environ.get("REPAIRSHOPR_API_KEY") or "").strip()
+    """The RepairShopr key; tolerant of stray spaces or lower case in the variable name."""
+    for name, value in os.environ.items():
+        if name.strip().upper() in ("REPAIRSHOPR_API_KEY", "REPAIRSHOPR_KEY") and value.strip():
+            return value.strip()
+    return ""
 
 
 def allowed(ip, limit=8, window=600):

@@ -443,7 +443,7 @@ def llms():
 
 @app.route("/healthz")
 def healthz():
-    return "ok"
+    return "ok tickets:%s" % ("on" if ticketlookup.api_key() else "off")
 
 
 if __name__ == "__main__":
