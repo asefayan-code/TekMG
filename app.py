@@ -8,6 +8,7 @@ from cameradata import (CAMERA_BRANDS, CAMERA_BRAND_NAMES, CAMERA_MODEL_COUNT, D
                         DECK_BRAND_NAMES, DECK_MODEL_COUNT)
 from flowcharts import OTHER_BRANDS, OTHER_BY_SLUG, brand_flow, lens_flow
 from sitesearch import search as site_search
+import ticketlookup
 from flask import Flask, Response, abort, jsonify, redirect, render_template, request, send_from_directory
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -307,6 +308,37 @@ if os.path.exists(_hifi):
     _m = _json.load(open(_hifi, encoding="utf-8"))
     PAGES.update(_m["pages"])
     REDIRECTS.update(_m["redirects"])
+
+
+@app.route("/ticket-status", methods=["GET", "POST"])
+def ticket_status():
+    """Customer ticket lookup: last name + phone number, answered from RepairShopr."""
+    if not ticketlookup.api_key():
+        return redirect(ticketlookup.OLD_LOOKUP, code=302)
+    ctx = {"tickets": None, "error": "", "last": "", "phone": ""}
+    if request.method == "POST":
+        last = " ".join((request.form.get("last_name") or "").split())[:60]
+        phone = (request.form.get("phone") or "").strip()[:20]
+        ctx.update(last=last, phone=phone)
+        ip = (request.headers.get("X-Forwarded-For") or request.remote_addr or "").split(",")[0].strip()
+        if not last or not ticketlookup.digits(phone):
+            ctx["error"] = "Enter your last name and your full 10-digit phone number."
+        elif not ticketlookup.allowed(ip):
+            ctx["error"] = "Too many tries. Wait a few minutes and try again."
+        else:
+            try:
+                found = ticketlookup.lookup(last, phone)
+                if found is None:
+                    ctx["error"] = ("No match. Use the last name and phone number you gave us "
+                                    "when you opened the ticket, or call us.")
+                else:
+                    ctx["tickets"] = found
+            except Exception:
+                app.logger.exception("ticket lookup failed")
+                ctx["error"] = "The lookup is not available right now. Try again in a few minutes or call us."
+    resp = app.make_response(render_template("ticket-status.html", **ctx))
+    resp.headers["Cache-Control"] = "no-store"
+    return resp
 
 
 @app.route("/", defaults={"path": ""})

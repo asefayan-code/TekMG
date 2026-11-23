@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Check Your Service Ticket | Tek Media Group{% endblock %}
+{% block desc %}Check the status of your Tek Media Group service ticket with your last name and phone number.{% endblock %}
+{% block canon %}/ticket-status{% endblock %}
+{% block robots %}noindex, follow{% endblock %}
+{% block head %}<style>
+.tk{max-width:560px;margin:0 auto;padding:22px 16px 34px;line-height:1.55}
+.tk h1{font-size:1.6rem;color:#0f3d62;margin:4px 0 6px}
+.tk p{margin:0 0 14px;color:#444}
+.tk form{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:18px 16px}
+.tk label{display:block;font-weight:700;color:#0f3d62;margin:0 0 6px}
+.tk input{width:100%;box-sizing:border-box;font-size:16px;font-family:inherit;padding:13px 14px;border:1.5px solid #b9c6d3;border-radius:10px;margin:0 0 16px;min-height:50px}
+.tk input:focus{border-color:#0f62ac;outline:3px solid #ffbf00;outline-offset:1px}
+.tk button{width:100%;min-height:52px;border:0;border-radius:50px;background:#0f62ac;color:#fff;font-size:1.05rem;font-weight:700;font-family:inherit;cursor:pointer}
+.tk button:hover{background:#0353e9}
+.tk-msg{background:#fff4f2;border:1px solid #f0b8b0;border-left:4px solid #b42318;border-radius:10px;padding:12px 14px;margin:0 0 16px;color:#5c1a12}
+.tk-list{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
+.tk-list li{background:#fff;border:1px solid #dfe6ee;border-left:4px solid #0f62ac;border-radius:10px;padding:12px 14px}
+.tk-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.tk-num{font-weight:700;color:#0f3d62}
+.tk-st{background:#e7f6ea;color:#17692c;border:1px solid #bfe3c7;border-radius:50px;padding:4px 12px;font-weight:700;font-size:.9rem}
+.tk h2{font-size:1.1rem;color:#0f3d62;margin:14px 0 8px}
+.tk-done{border-left-color:#9aa7b4!important}
+.tk-done .tk-st{background:#eef1f4;color:#444;border-color:#cfd6dd}
+.tk-sub{margin:6px 0 2px;color:#222}
+.tk-date{font-size:.85rem;color:#555}
+</style>{% endblock %}
+{% block content %}
+<div class="tk">
+<h1>Check Your Service Ticket</h1>
+{% macro row(t) %}<li{% if t in tickets.done %} class="tk-done"{% endif %}><div class="tk-top"><span class="tk-num">Ticket #{{ t.number }}</span><span class="tk-st">{{ t.status or 'Open' }}</span></div>
+{% if t.subject %}<div class="tk-sub">{{ t.subject }}</div>{% endif %}
+<div class="tk-date">{% if t.created %}Opened {{ t.created }}{% endif %}{% if t.updated and t.updated != t.created %} &middot; Updated {{ t.updated }}{% endif %}</div></li>{% endmacro %}
+{% if tickets is not none %}
+{% if tickets.open %}
+<h2>In our shop now ({{ tickets.open|length }} item{{ '' if tickets.open|length == 1 else 's' }})</h2>
+<ul class="tk-list">{% for t in tickets.open %}{{ row(t) }}{% endfor %}</ul>
+{% endif %}
+{% if tickets.done %}
+<h2>Finished</h2>
+<ul class="tk-list">{% for t in tickets.done %}{{ row(t) }}{% endfor %}</ul>
+{% endif %}
+{% if not tickets.open and not tickets.done %}
+<div class="tk-msg" role="alert">We found your name but no service tickets yet.</div>
+{% endif %}
+<p><b>Check another ticket</b></p>
+{% else %}
+<p>Enter your last name and phone number.</p>
+{% endif %}
+{% if error %}<div class="tk-msg" role="alert">{{ error }}</div>{% endif %}
+<form method="post" action="/ticket-status" autocomplete="on">
+<label for="tkLast">Last name</label>
+<input id="tkLast" name="last_name" type="text" required maxlength="60" autocomplete="family-name" value="{{ last }}">
+<label for="tkPhone">Phone number</label>
+<input id="tkPhone" name="phone" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234" value="{{ phone }}">
+<button type="submit">Check Ticket</button>
+</form>
+</div>
+{% endblock %}
