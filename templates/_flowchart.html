@@ -13,7 +13,7 @@
 <div class="fc-exit"><span class="fc-tag fc-tag-{{ st.exit }}">{{ "Yes" if st.exit == "yes" else "No" }}</span><span>{{ st.do }}</span></div>
 <div class="fc-down"><span class="fc-tag fc-tag-{{ "no" if st.exit == "yes" else "yes" }}">{{ "No" if st.exit == "yes" else "Yes" }}</span><span aria-hidden="true">&darr;</span><span class="sr-only">Go to the next step.</span></div>
 </li>
-{% endfor %}<li class="fc-end">{{ br.end }} <a href="https://techmediagroup.repairshopr.com/check_ins?model={{ fc_ticket|urlencode }}">Start a service ticket</a></li>
+{% endfor %}<li class="fc-end">{{ br.end }} <a href="/start-ticket?model={{ fc_ticket|urlencode }}">Start a service ticket</a></li>
 </ol>
 </details>
 {% endfor %}</div>

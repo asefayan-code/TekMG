@@ -49,7 +49,7 @@
 <img class="mon-img mon-banner" src="/images/monitor/monitor-terminal-repair-banner.png" width="1024" height="400" alt="Monitor terminal repair: a Sony professional monitor displaying color bars">
 <div class="mon-pick"><label for="mon-model">Choose your monitor model</label><select id="mon-model" onchange="if(this.value){window.location.href=this.value}"><option value="">Select a Sony model...</option>{% for m in sony_monitors %}<option value="/monitor-repair/{{ m.slug }}">{{ m.name }}</option>{% endfor %}</select></div>
 <div class="lm-banner">All repairs come with a free estimate and a 90-day warranty</div>
-<div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins">Start a Service Ticket &rarr;</a> &nbsp; <a href="tel:+18182444440" style="background:#0f3d62">Call (818) 244-4440</a></div>
+<div class="lm-go"><a href="/start-ticket">Start a Service Ticket &rarr;</a> &nbsp; <a href="tel:+18182444440" style="background:#0f3d62">Call (818) 244-4440</a></div>
 
 <div class="lm-card">
 <h2>Monitor problems we repair</h2>
@@ -123,7 +123,7 @@
 <h2 style="text-align:center;color:#0f3d62;margin:26px 0 12px">Monitor repair questions</h2>
 <div class="lm-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>
 
-<div class="lm-go"><a href="https://techmediagroup.repairshopr.com/check_ins">Request a Free Estimate &rarr;</a></div>
+<div class="lm-go"><a href="/start-ticket">Request a Free Estimate &rarr;</a></div>
 <p class="lm-nav"><a href="tel:+18182444440">(818) 244-4440</a> <span>711 South Victory Blvd, Burbank, CA 91502</span></p>
 </div>
 {% endblock %}

@@ -183,10 +183,10 @@
   </div>
   <p style="text-align:center;margin:6px 0"><a href="/lens-repair/fujinon">See all Fujinon models we repair</a> &middot; <a href="/lens-repair/canon">See all Canon models we repair</a></p>
   <p style="text-align:center;margin:6px 0">Other lens brands we repair: {% for ob in other_brands %}<a href="/lens-repair/{{ ob.slug }}">{{ ob.name }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}</p>
-  <div class="lens-go" aria-live="polite"><a id="lens-go" href="https://techmediagroup.repairshopr.com/check_ins">Start New Repair Process &rarr;</a></div>
+  <div class="lens-go" aria-live="polite"><a id="lens-go" href="/start-ticket">Start New Repair Process &rarr;</a></div>
   <script>
   (function(){
-    var base='https://techmediagroup.repairshopr.com/check_ins',go=document.getElementById('lens-go');
+    var base='/start-ticket',go=document.getElementById('lens-go');
     document.querySelectorAll('.lens-sel').forEach(function(s){
       s.addEventListener('change',function(){
         document.querySelectorAll('.lens-sel').forEach(function(o){if(o!==s)o.selectedIndex=0;});

@@ -321,6 +321,9 @@ def start_ticket():
     """New service ticket form: creates the customer and one ticket per item in RepairShopr."""
     ctx = {"equip_types": EQUIP_TYPES, "referred": REFERRED, "form": {}, "items": [{}],
            "error": "", "numbers": None, "service_request": ""}
+    if request.method == "GET" and request.args.get("model"):
+        # links from model pages pass the model so the customer does not retype it
+        ctx["items"] = [{"model": " ".join(request.args.get("model").split())[:80]}]
     if request.method == "POST":
         f = request.form
 

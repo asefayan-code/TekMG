@@ -18,7 +18,7 @@ Each entry:
   groups  list of (group label, [models]); an empty group label means no sub-heading
 """
 
-TICKET_URL = "https://techmediagroup.repairshopr.com/check_ins"
+TICKET_URL = "/start-ticket"
 
 CAMERA_BRANDS = [
     {"name": "Sony", "slug": "sony", "label": "Sony Cameras", "groups": [
