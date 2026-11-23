@@ -131,14 +131,14 @@
 <div id="stMore"></div>
 <button type="button" class="st-add" id="stAdd">+ Add another item</button>
 <div class="st-pair">
+<fieldset><legend>How we contact you</legend>
+<label class="st-ck"><input type="checkbox" name="contact_email" value="1"{% if not form or form.contact_email %} checked{% endif %}> Email</label>
+<label class="st-ck"><input type="checkbox" name="contact_sms" value="1"{% if form.contact_sms %} checked{% endif %}> SMS (text message)</label>
+</fieldset>
 <fieldset><legend>Service Request <i style="font-style:normal;color:#b42318">*</i></legend>
 <label class="st-ck"><input type="radio" name="service_request" value="Shipping" required{% if service_request == 'Shipping' %} checked{% endif %}> Shipping</label>
 <label class="st-ck"><input type="radio" name="service_request" value="Pickup and delivery"{% if service_request == 'Pickup and delivery' %} checked{% endif %}> Pickup and delivery</label>
 <label class="st-ck"><input type="radio" name="service_request" value="Walk-in"{% if service_request == 'Walk-in' %} checked{% endif %}> Walk-ins</label>
-</fieldset>
-<fieldset><legend>How we contact you</legend>
-<label class="st-ck"><input type="checkbox" name="contact_email" value="1"{% if not form or form.contact_email %} checked{% endif %}> Email</label>
-<label class="st-ck"><input type="checkbox" name="contact_sms" value="1"{% if form.contact_sms %} checked{% endif %}> SMS (text message)</label>
 </fieldset>
 </div>
 <button type="submit" id="stGo">Start Service Ticket</button>
