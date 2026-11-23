@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Bang & Olufsen Repair | Authorized Service | Tek Media Group{% endblock %}
-{% block desc %}Bang & Olufsen authorized service. Repair for Beosound, BeoLab, Beocenter, Beogram and Beovision, in and out of warranty. Free estimates, nationwide.{% endblock %}
+{% block desc %}Bang & Olufsen authorized service: Beosound, BeoLab, Beovox, Beocenter, Beomaster, Beogram, Beovision, Beoplay and BeoCom phones. Free estimates, nationwide.{% endblock %}
 {% block canon %}/bang-olufsen{% endblock %}
 {% block head %}
 <script type="application/ld+json">
-{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://tekmg.com/#business","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","email":"jt@tekmg.com","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},{"@type":"Service","@id":"https://tekmg.com/bang-olufsen#service","name":"Bang & Olufsen Authorized Service and Repair","serviceType":"Bang & Olufsen repair","provider":{"@id":"https://tekmg.com/#business"},"areaServed":["California","Nevada","Arizona"],"description":"Warranty and out-of-warranty repair and restoration of Beosound, BeoLab, Beocenter, Beogram and Beovision. Nationwide shipping accepted. Free estimates.","url":"https://tekmg.com/bang-olufsen"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you service B&O under warranty?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are an authorized service center and handle both warranty and out-of-warranty repairs."}},{"@type":"Question","name":"Do you ship nationwide?","acceptedAnswer":{"@type":"Answer","text":"Yes. We serve California, Nevada and Arizona locally and accept B&O equipment shipped from anywhere in the country."}},{"@type":"Question","name":"How much does an estimate cost?","acceptedAnswer":{"@type":"Answer","text":"Estimates are free. You approve the price before any work is done."}},{"@type":"Question","name":"Can an old Beogram or Beocenter really be saved?","acceptedAnswer":{"@type":"Answer","text":"In most cases, yes. Age-related problems are exactly what we are set up to fix."}},{"@type":"Question","name":"What are your hours?","acceptedAnswer":{"@type":"Answer","text":"Monday to Friday, 8:30 AM to 5:00 PM. Weekends, holidays and after hours are by appointment only."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"}]}]}{% endraw %}
+{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://tekmg.com/#business","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","email":"jt@tekmg.com","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},{"@type":"Service","@id":"https://tekmg.com/bang-olufsen#service","name":"Bang & Olufsen Authorized Service and Repair","serviceType":"Bang & Olufsen repair","provider":{"@id":"https://tekmg.com/#business"},"areaServed":["California","Nevada","Arizona"],"description":"Warranty and out-of-warranty repair and restoration of Beosound, BeoLab, Beovox, Beocenter, Beosystem, Beomaster, Beogram, Beovision, Beoplay and BeoCom phones. Nationwide shipping accepted. Free estimates.","url":"https://tekmg.com/bang-olufsen"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you service B&O under warranty?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are an authorized service center and handle both warranty and out-of-warranty repairs."}},{"@type":"Question","name":"Do you ship nationwide?","acceptedAnswer":{"@type":"Answer","text":"Yes. We serve California, Nevada and Arizona locally and accept B&O equipment shipped from anywhere in the country."}},{"@type":"Question","name":"How much does an estimate cost?","acceptedAnswer":{"@type":"Answer","text":"Estimates are free. You approve the price before any work is done."}},{"@type":"Question","name":"Can an old Beogram or Beocenter really be saved?","acceptedAnswer":{"@type":"Answer","text":"In most cases, yes. Age-related problems are exactly what we are set up to fix."}},{"@type":"Question","name":"What are your hours?","acceptedAnswer":{"@type":"Answer","text":"Monday to Friday, 8:30 AM to 5:00 PM. Weekends, holidays and after hours are by appointment only."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"}]}]}{% endraw %}
 </script>
 {% include "_bo_css.html" %}
 {% endblock %}
@@ -44,6 +44,11 @@
         <option value="beocenter">Beocenter</option>
         <option value="beogram">Beogram turntables</option>
         <option value="beovision">Beovision TVs</option>
+        <option value="beovox">Beovox speakers</option>
+        <option value="beomaster">Beomaster receivers</option>
+        <option value="beosystem">Beosystem</option>
+        <option value="beoplay">Beoplay</option>
+        <option value="beocom">BeoCom phones</option>
       </select>
     </div>
 
@@ -90,6 +95,51 @@
         <p>Television repair for the Beovision line. Call with your model and we'll tell you what we can do.</p>
         <ul><li>Beovision 4 through 16</li><li>Picture and sound faults</li><li>Power and standby problems</li></ul>
         <p style="margin-top:14px"><a href="/bang-olufsen/beovision-tv" style="color:var(--red);font-weight:600">Beovision TV repair &rarr;</a></p>
+      </article>
+
+      <article class="bo-card" id="beovox">
+        <div class="bo-num">06</div>
+        <h3>Beovox</h3>
+        <div class="bo-sub">Passive speakers</div>
+        <p>Passive speakers from the Red Line, CX and S series to the classic Beovox models.</p>
+        <ul><li>Beovox Penta</li><li>Red Line (RL) and CX</li><li>S series</li><li>Classic Beovox</li></ul>
+        <p style="margin-top:14px"><a href="/bang-olufsen/beolab-beovox" style="color:var(--red);font-weight:600">All BeoLab &amp; Beovox models &rarr;</a></p>
+      </article>
+
+      <article class="bo-card" id="beomaster">
+        <div class="bo-num">07</div>
+        <h3>Beomaster</h3>
+        <div class="bo-sub">Classic receivers</div>
+        <p>Full recap and tuner alignment for the classic Beomaster receivers.</p>
+        <ul><li>Beomaster 6000 and 8000</li><li>Recap and tuner alignment</li><li>Button and display repair</li><li>Phono stage service</li></ul>
+        <p style="margin-top:14px"><a href="https://techmediagroup.repairshopr.com/check_ins?model=Beomaster" style="color:var(--red);font-weight:600">Start a Beomaster service ticket &rarr;</a></p>
+      </article>
+
+      <article class="bo-card" id="beosystem">
+        <div class="bo-num">08</div>
+        <h3>Beosystem</h3>
+        <div class="bo-sub">Beosystem 2500 and integrated systems</div>
+        <p>Integrated systems with CD, radio and cassette.</p>
+        <ul><li>Master Link bus repair</li><li>Display replacement</li><li>Remote sensor fix</li></ul>
+        <p style="margin-top:14px"><a href="/bang-olufsen/beosound-beocenter" style="color:var(--red);font-weight:600">All Beosound &amp; Beocenter models &rarr;</a></p>
+      </article>
+
+      <article class="bo-card" id="beoplay">
+        <div class="bo-num">09</div>
+        <h3>Beoplay</h3>
+        <div class="bo-sub">Beoplay A9 and modern wireless</div>
+        <p>Software and hardware repair for the Beoplay A9.</p>
+        <ul><li>Wi-Fi and network diagnosis</li><li>Amplifier board service</li><li>Speaker recone</li></ul>
+        <p style="margin-top:14px"><a href="https://techmediagroup.repairshopr.com/check_ins?model=Beoplay" style="color:var(--red);font-weight:600">Start a Beoplay service ticket &rarr;</a></p>
+      </article>
+
+      <article class="bo-card" id="beocom">
+        <div class="bo-num">10</div>
+        <h3>BeoCom Phones</h3>
+        <div class="bo-sub">Cordless and corded telephones</div>
+        <p>Battery, charging cradle and audio connectivity repair for BeoCom phones.</p>
+        <ul><li>BeoCom 6000, BeoCom 1, BeoCom 2 and BeoCom 5 cordless</li><li>BeoCom 1000 and 2000 corded</li><li>Battery replacement</li><li>Antenna and signal repair</li></ul>
+        <p style="margin-top:14px"><a href="https://techmediagroup.repairshopr.com/check_ins?model=BeoCom%20phone" style="color:var(--red);font-weight:600">Start a BeoCom phone service ticket &rarr;</a></p>
       </article>
     </div>
 
