@@ -136,10 +136,6 @@
 </fieldset>
 {% endfor %}
 <div id="stMore"></div>
-<fieldset id="stBox"{% if not box %} hidden{% endif %}><legend>Bang &amp; Olufsen shipping box</legend>
-<label class="st-ck"><input type="checkbox" name="bo_box" value="1"{% if box %} checked{% endif %}> Request the original shipping box</label>
-<p class="st-consent" style="font-size:.9rem">Original shipping boxes are purchasable, if available from Bang &amp; Olufsen.{% if flat %} Cost is $55.00.{% endif %}</p>
-</fieldset>
 <button type="button" class="st-add" id="stAdd">+ Add another item</button>
 <div class="st-pair">
 <fieldset><legend>How we contact you</legend>
@@ -175,7 +171,7 @@ if(e.target.name==='equip_type')setup(item,false);
 if(e.target.matches('[data-brand-pick]')){var inp=item.querySelector('[data-brand]');if(e.target.value==='Other'){inp.value='';inp.hidden=false;inp.focus()}else{inp.value=e.target.value;inp.hidden=true}}});
 all().forEach(function(i){setup(i,true)});
 var box=document.getElementById('stBox');
-function boxShow(){var bo=false;all().forEach(function(i){if(i.querySelector('[name=equip_type]').value==='Bang & Olufsen')bo=true});box.hidden=!bo;if(!bo)box.querySelector('input').checked=false}
+function boxShow(){if(!box)return;var bo=false;all().forEach(function(i){if(i.querySelector('[name=equip_type]').value==='Bang & Olufsen')bo=true});box.hidden=!bo;if(!bo)box.querySelector('input').checked=false}
 document.addEventListener('change',function(e){if(e.target.name==='equip_type')boxShow()});boxShow();
 document.addEventListener('click',function(e){if(e.target.matches('[data-rm]')){e.target.closest('[data-item]').remove();renum();boxShow()}});renum();
 var f=document.querySelector('.st form');f.addEventListener('submit',function(){var b=document.getElementById('stGo');b.disabled=true;b.textContent='Sending...'})})();
