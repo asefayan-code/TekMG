@@ -37,6 +37,26 @@
   </div>
 </section>
 
+<section class="bo-sec bo-alt" id="restoration-program">
+  <div class="bo-wrap">
+    <div class="bo-head"><h2>Beogram 4002 and 4004 <b>Restoration Program</b></h2></div>
+    <div class="bo-grid">
+      <article class="bo-card"><h3>Electronic components</h3><ul>
+        <li>Replace aging electrolytic capacitors where necessary (some specialists replace all).</li>
+        <li>Replace worn or oxidized potentiometers.</li>
+        <li>Replace defective electronic components.</li>
+        <li>Repair deteriorated wiring and solder connections.</li>
+        <li>Replace defective relays and sensors where necessary.</li></ul></article>
+      <article class="bo-card"><h3>Mechanical components</h3><ul>
+        <li>Replace platter drive belt.</li>
+        <li>Replace tonearm drive belt, on applicable versions.</li>
+        <li>Replace worn pulleys and transport bushings.</li>
+        <li>Clean and lubricate motor bearings.</li>
+        <li>Clean and lubricate the tonearm mechanism.</li>
+        <li>Calibrate the tracking and arm movement.</li></ul></article>
+    </div>
+  </div>
+</section>
 {% set page_url='/bang-olufsen/turntable-shop' %}{% set page_name='Beogram Turntable Repair' %}
 {% set faqs = [('Which Beogram turntables do you repair?','We repair Beogram 4000, 4002, 4004, 8000, 8002 and TX 2 turntables, including tonearm, tracking, motor, belt and electronics faults.'),('Do you work on Beogram turntables nationwide?','Yes. Ship your turntable to our Burbank, CA shop, or ask about pickup and delivery from San Francisco to San Diego. Free estimates.'),('How do I start a repair?','Open the service request page, choose your model, and we will follow up. You can also call (818) 244-4440.')] %}
 {% set faq_ld = [] %}{% for q,a in faqs %}{% set _ = faq_ld.append({'@type':'Question','name':q|striptags|replace('&amp;','&'),'acceptedAnswer':{'@type':'Answer','text':a|striptags|replace('&amp;','&')}}) %}{% endfor %}
