@@ -89,6 +89,7 @@
 <h2 class="lm-faq-h" style="text-align:center;color:#0f3d62;margin:26px 0 12px">{{ m.name }} repair questions</h2>
 <div class="lm-faq">{% for q,a in faqs %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div>
 
+<p style="text-align:center;margin:18px 0;color:#333">Walk in, ship it to us, or use pickup and delivery from San Francisco to San Diego.</p>
 <div class="lm-nav">
 {% if prev_m %}<a href="/lens-repair/{{ b.slug }}/{{ prev_m.slug }}" rel="prev">&larr; {{ prev_m.name }}</a>{% else %}<span></span>{% endif %}
 {% if next_m %}<a href="/lens-repair/{{ b.slug }}/{{ next_m.slug }}" rel="next">{{ next_m.name }} &rarr;</a>{% endif %}

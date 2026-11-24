@@ -37,7 +37,7 @@
 </section>
 
 {% set page_url='/bang-olufsen/turntable-shop' %}{% set page_name='Beogram Turntable Repair' %}
-{% set faqs = [('Which Beogram turntables do you repair?','We repair Beogram 4000, 4002, 4004, 8000, 8002 and TX 2 turntables, including tonearm, tracking, motor, belt and electronics faults.'),('Do you work on Beogram turntables nationwide?','Yes. Ship your turntable to our Burbank, CA shop, or ask about pickup and delivery. Free estimates.'),('How do I start a repair?','Open the service request page, choose your model, and we will follow up. You can also call (818) 244-4440.')] %}
+{% set faqs = [('Which Beogram turntables do you repair?','We repair Beogram 4000, 4002, 4004, 8000, 8002 and TX 2 turntables, including tonearm, tracking, motor, belt and electronics faults.'),('Do you work on Beogram turntables nationwide?','Yes. Ship your turntable to our Burbank, CA shop, or ask about pickup and delivery from San Francisco to San Diego. Free estimates.'),('How do I start a repair?','Open the service request page, choose your model, and we will follow up. You can also call (818) 244-4440.')] %}
 {% set faq_ld = [] %}{% for q,a in faqs %}{% set _ = faq_ld.append({'@type':'Question','name':q|striptags|replace('&amp;','&'),'acceptedAnswer':{'@type':'Answer','text':a|striptags|replace('&amp;','&')}}) %}{% endfor %}
 {% include "_bo_faq.html" %}
 </div>

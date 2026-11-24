@@ -192,7 +192,7 @@
 </section>
 
 {% set page_url='/bang-olufsen/beovision-tv' %}{% set page_name='BeoVision TV Repair' %}
-{% set faqs = [('Which BeoVision TVs do you repair?','BeoVision Harmony, Eclipse, Avant, Horizon, 11, 14, 10, 8, 7, 4 and 6, plus related BeoVision models.'),('Can you fix a BeoVision TV that will not turn on or has no picture?','Yes. Power supply, board, backlight, panel connection and standby faults are common repairs. Start a service request for a free estimate.'),('Do you service BeoVision TVs outside California?','Yes. We work nationwide through shipping, and pickup and delivery can be arranged.')] %}
+{% set faqs = [('Which BeoVision TVs do you repair?','BeoVision Harmony, Eclipse, Avant, Horizon, 11, 14, 10, 8, 7, 4 and 6, plus related BeoVision models.'),('Can you fix a BeoVision TV that will not turn on or has no picture?','Yes. Power supply, board, backlight, panel connection and standby faults are common repairs. Start a service request for a free estimate.'),('Do you service BeoVision TVs outside California?','Yes. We work nationwide through shipping, and pickup and delivery can be arranged from San Francisco to San Diego.')] %}
 {% set faq_ld = [] %}{% for q,a in faqs %}{% set _ = faq_ld.append({'@type':'Question','name':q|striptags|replace('&amp;','&'),'acceptedAnswer':{'@type':'Answer','text':a|striptags|replace('&amp;','&')}}) %}{% endfor %}
 {% include "_bo_faq.html" %}
 </div>
