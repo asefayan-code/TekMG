@@ -12,6 +12,7 @@
 .st-next{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:14px 16px;margin:0 0 16px}
 .st-next h2{font-size:1.1rem;color:#0f3d62;margin:0 0 6px}
 .st-hp{position:absolute;left:-9999px}
+.st-consent a{color:#0f62ac}
 .st-consent{font-size:.82rem;color:#555;line-height:1.45;margin:0 0 12px}
 .wo{background:#fff;border:1px solid #dfe6ee;border-radius:14px;padding:18px 16px}
 .wo-head{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:2px solid #0f3d62;padding-bottom:10px;margin-bottom:14px;font-weight:700;color:#0f3d62;text-align:right}
@@ -104,6 +105,10 @@
 <div class="st-wide"><label for="stEmail">Email <i>*</i></label><input id="stEmail" name="email" type="email" required maxlength="120" autocomplete="email" value="{{ form.email }}"></div>
 <div><label for="stPhone">Phone <i>*</i></label><input id="stPhone" name="phone" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234" value="{{ form.phone }}"></div>
 <div><label for="stMobile">Mobile</label><input id="stMobile" name="mobile" type="tel" maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(818) 555-1234" value="{{ form.mobile }}"></div>
+<div class="st-wide">
+<label class="st-ck"><input type="checkbox" name="contact_sms" value="1"{% if form.contact_sms %} checked{% endif %}> SMS (text message) &ndash; optional</label>
+<p class="st-consent">By checking SMS, I agree to receive customer care text messages from Tek Media Group at the mobile number above, including repair status updates, quotes, pickup and delivery notices, and appointment reminders. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of service. See our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+</div>
 </div>
 </fieldset>
 <fieldset><legend>Address</legend>
@@ -139,7 +144,6 @@
 <div class="st-pair">
 <fieldset><legend>How we contact you</legend>
 <label class="st-ck"><input type="checkbox" name="contact_email" value="1"{% if not form or form.contact_email %} checked{% endif %}> Email</label>
-<label class="st-ck"><input type="checkbox" name="contact_sms" value="1"{% if form.contact_sms %} checked{% endif %}> SMS (text message)</label>
 </fieldset>
 <fieldset><legend>Service Request <i style="font-style:normal;color:#b42318">*</i></legend>
 <label class="st-ck"><input type="radio" name="service_request" value="Shipping" required{% if service_request == 'Shipping' %} checked{% endif %}> Shipping</label>
