@@ -181,6 +181,7 @@ PAGES = {
     "site-index": "site-index.html",
     "bang-olufsen": "bang-olufsen.html",
     "bang-olufsen/turntable-shop": "bang-olufsen-turntable-shop.html",
+    "bang-olufsen/beogram-flat-rate-repair": "bang-olufsen-beogram-flat-rate.html",
     "bang-olufsen/beovision-tv": "bang-olufsen-beovision-tv.html",
     "bang-olufsen/beosound-beocenter": "bang-olufsen-beosound-beocenter.html",
     "bang-olufsen/beosound-9000": "bang-olufsen-beosound-9000.html",
@@ -532,6 +533,7 @@ def llms():
         "- [Professional camera, camcorder and deck repair](https://tekmg.com/camera-repair): cameras and camcorders from " + ", ".join(CAMERA_BRAND_NAMES) + "; video decks and recorders from " + ", ".join(DECK_BRAND_NAMES) + "; model list for each manufacturer, and equipment that is not listed is not ruled out; free estimates; 90-day warranty\n"
         "- [Bang & Olufsen authorized service](https://tekmg.com/bang-olufsen): warranty and out-of-warranty repair of Beosound, BeoLab, Beovox, Beocenter, Beosystem, Beomaster, Beogram, Beovision, Beoplay and BeoCom phones; Beogram 4000, 4002, 4004 and 8000 refurbishing program; California, Nevada and Arizona with nationwide shipping; free estimates\n"
         "- [Beogram turntable shop](https://tekmg.com/bang-olufsen/turntable-shop): Bang & Olufsen authorized classic repair for Beogram 4000, 4002, 4004, 8000, 8002 and TX; 4002-4004 restore program; free estimates; walk-in, ship-in, pickup and delivery\n"
+        "- [Beogram flat-rate repair](https://tekmg.com/bang-olufsen/beogram-flat-rate-repair): $325 flat-rate repair including repair parts (cosmetic parts not included) for Beogram 1000, 1200, 1202, 1500, 1600, 1700, 2000, 2200 and 3000; nationwide mail service; pickup and delivery San Diego to San Francisco\n"
         "- [Beovision TV repair](https://tekmg.com/bang-olufsen/beovision-tv): Bang & Olufsen Beovision TV repair, warranty and non-warranty; Harmony, Eclipse, Avant, Horizon, BeoVision 11, 14, 10, 8, 7, 6 and 4; common faults listed per model; free estimates\n"
         "- [Beosound and Beocenter repair](https://tekmg.com/bang-olufsen/beosound-beocenter): every Bang & Olufsen Beosound and Beocenter model on one page; pick a model to request service; free estimates\n"
         "- [Beosound 9000 repair](https://tekmg.com/bang-olufsen/beosound-9000): Bang & Olufsen Beosound 9000 multi-CD player repair; CD not reading, sledge and glass door stuck, Cleaning Required message, laser replacement, motor and clamp repair; free estimates\n"

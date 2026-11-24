@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Beogram Turntable Flat-Rate Repair $325 | Tek Media Group{% endblock %}
+{% block desc %}Bang & Olufsen Beogram 1000, 1200, 1202, 1500, 1600, 1700, 2000, 2200 and 3000 turntable repair for a $325 flat rate, repair parts included. Nationwide mail-in service.{% endblock %}
+{% block canon %}/bang-olufsen/beogram-flat-rate-repair{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{% raw %}{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Beogram Turntable Flat-Rate Repair","serviceType":"Bang & Olufsen Beogram repair","provider":{"@type":"LocalBusiness","name":"Tek Media Group","url":"https://tekmg.com/","telephone":"+1-818-244-4440","address":{"@type":"PostalAddress","streetAddress":"711 South Victory Blvd","addressLocality":"Burbank","addressRegion":"CA","postalCode":"91502","addressCountry":"US"}},"areaServed":"US","offers":{"@type":"Offer","price":"325","priceCurrency":"USD","description":"Flat-rate repair including repair parts. Cosmetic parts not included."},"url":"https://tekmg.com/bang-olufsen/beogram-flat-rate-repair"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tekmg.com/"},{"@type":"ListItem","position":2,"name":"Bang & Olufsen Service","item":"https://tekmg.com/bang-olufsen"},{"@type":"ListItem","position":3,"name":"Beogram Flat-Rate Repair","item":"https://tekmg.com/bang-olufsen/beogram-flat-rate-repair"}]}]}{% endraw %}
+</script>
+{% include "_bo_css.html" %}
+<style>
+.bo-price{border:2px solid var(--red);background:#fff;text-align:center;padding:26px 18px;max-width:560px;margin:0 auto 34px}
+.bo-price b{display:block;font-size:clamp(2.6rem,10vw,3.8rem);font-weight:300;color:var(--red);line-height:1}
+.bo-price span{display:block;margin-top:8px;color:var(--mid);font-size:.95rem}
+.bo-fr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.bo-fr a{display:block;background:#fff;border:1px solid var(--line);padding:14px;text-align:center;text-decoration:none;color:var(--ink)}
+.bo-fr a:hover{border-color:var(--red)}
+.bo-fr img{width:100%;height:130px;object-fit:contain;background:#fff;display:block;margin-bottom:10px}
+.bo-fr .ph{height:130px;margin-bottom:10px;background:var(--soft)}
+.bo-fr h3{margin:0;font-size:1.05rem;font-weight:600}
+</style>
+{% endblock %}
+{% block content %}
+<div class="bo">
+{% set crumbs = [('Home','/'),('Bang &amp; Olufsen Service','/bang-olufsen'),('Beogram Flat-Rate Repair','/bang-olufsen/beogram-flat-rate-repair')] %}
+{% include "_bo_crumbs.html" %}
+<section class="bo-sec" id="flat-rate">
+  <div class="bo-wrap">
+    <div class="bo-head">
+      <div class="bo-eyebrow">Nationwide Mail Service</div>
+      <h1>Beogram <b>Flat-Rate Repair</b></h1>
+      <p>Bang &amp; Olufsen Beogram turntable repair at one flat price.</p>
+    </div>
+    <div class="bo-price"><b>$325</b><span>Flat rate. Includes repair parts. Cosmetic parts are not included.</span></div>
+    <div class="bo-fr">
+      {% for n,img in [('1000','beogram-1000'),('1200','beogram-1200'),('1202','beogram-1202'),('1500','beogram-1500'),('1600','beogram-1600'),('1700','beogram-1700'),('2000',''),('2200','beogram-2200'),('3000','beogram-3000')] %}
+      <a href="/start-ticket?brand=Bang+%26+Olufsen&amp;model=Beogram+{{ n }}">{% if img %}<img src="/images/bo/{{ img }}-flat-rate-repair.jpg" alt="Bang &amp; Olufsen Beogram {{ n }} turntable" loading="lazy" width="150" height="130">{% else %}<div class="ph"></div>{% endif %}<h3>Beogram {{ n }}</h3></a>
+      {% endfor %}
+    </div>
+    <div class="bo-rp">
+      <div><b>Nationwide</b>Mail service</div>
+      <div><b>San Diego to San Francisco</b>Pickup and delivery</div>
+      <div><b>$325</b>Flat rate with repair parts</div>
+    </div>
+    <div class="bo-btns"><a class="bo-btn solid" href="/start-ticket">Start a Service Ticket</a><a class="bo-btn" href="/bang-olufsen/turntable-shop">Beogram 4000 &ndash; 8000 Shop</a></div>
+  </div>
+</section>
+
+{% set page_url='/bang-olufsen/beogram-flat-rate-repair' %}{% set page_name='Beogram Flat-Rate Repair' %}
+{% set faqs = [('What does the Beogram flat-rate repair cost?','$325 flat rate, including repair parts. Cosmetic parts are not included.'),('Which Beogram turntables qualify?','Beogram 1000, 1200, 1202, 1500, 1600, 1700, 2000, 2200 and 3000.'),('Can I mail my turntable?','Yes. We offer nationwide mail service. Pickup and delivery is available from San Diego to San Francisco.'),('How do I start a repair?','Open the service request page, choose your model, and we will follow up. You can also call (818) 244-4440.')] %}
+{% set faq_ld = [] %}{% for q,a in faqs %}{% set _ = faq_ld.append({'@type':'Question','name':q|striptags|replace('&amp;','&'),'acceptedAnswer':{'@type':'Answer','text':a|striptags|replace('&amp;','&')}}) %}{% endfor %}
+{% include "_bo_faq.html" %}
+</div>
+{% endblock %}
