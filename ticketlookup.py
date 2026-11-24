@@ -165,7 +165,7 @@ def find_by_email(email, last):
     return None
 
 
-def create_tickets(cust, items, service_request, contact, box_request=False):
+def create_tickets(cust, items, service_request, contact, box_request=False, box_note=""):
     """Find or create the customer, then open one ticket per equipment item.
 
     Returns {"numbers": [...], "returning": True when the customer was already on file}."""
@@ -181,6 +181,7 @@ def create_tickets(cust, items, service_request, contact, box_request=False):
     if not cid:
         raise RuntimeError("RepairShopr returned no customer id")
     numbers = []
+    ids = []
     for it in items:
         subject = ("%s %s - %s" % (it["brand"], it["model"], it["type"]))[:250]
         made = _post("tickets", {"customer_id": cid, "subject": subject,
@@ -197,9 +198,12 @@ def create_tickets(cust, items, service_request, contact, box_request=False):
                  "Referred by: " + (cust.get("referred_by") or "not given")]
         if box_request and it["type"] == "Bang & Olufsen":
             lines += ["", "ORIGINAL SHIPPING BOX REQUESTED by the customer."]
+        if box_note and it["type"] == "Bang & Olufsen":
+            lines += ["", box_note]
         _post("tickets/%s/comment" % t["id"], {"subject": "Initial Issue", "body": "\n".join(lines),
                                                "hidden": True, "do_not_email": True})
         numbers.append(t.get("number") or t["id"])
+        ids.append(t["id"])
         # also register it under Leads in RepairShopr, linked to this ticket and customer
         try:
             _post("leads", {"first_name": cust["firstname"], "last_name": cust["lastname"],
@@ -212,4 +216,4 @@ def create_tickets(cust, items, service_request, contact, box_request=False):
                             "customer_id": cid, "ticket_id": t["id"], "from_check_in": True})
         except Exception as e:  # the ticket already exists; never fail the customer over the lead
             print("lead not created for ticket %s: %s" % (t.get("number"), e))
-    return {"numbers": numbers, "returning": returning}
+    return {"numbers": numbers, "ids": ids, "returning": returning}

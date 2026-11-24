@@ -136,6 +136,10 @@
 </fieldset>
 {% endfor %}
 <div id="stMore"></div>
+{% if pay_ready %}<fieldset id="stBox" hidden><legend>Optional shipping box &ndash; $75.00</legend>
+<label class="st-ck"><input type="checkbox" name="pay_box" value="1"{% if paybox %} checked{% endif %}> Add a Beogram shipping box for $75.00</label>
+<p class="st-consent" style="font-size:.9rem">After you submit this form you pay securely with Apple Pay, Google Pay or PayPal.</p>
+</fieldset>{% endif %}
 <button type="button" class="st-add" id="stAdd">+ Add another item</button>
 <div class="st-pair">
 <fieldset><legend>How we contact you</legend>
@@ -171,8 +175,8 @@ if(e.target.name==='equip_type')setup(item,false);
 if(e.target.matches('[data-brand-pick]')){var inp=item.querySelector('[data-brand]');if(e.target.value==='Other'){inp.value='';inp.hidden=false;inp.focus()}else{inp.value=e.target.value;inp.hidden=true}}});
 all().forEach(function(i){setup(i,true)});
 var box=document.getElementById('stBox');
-function boxShow(){if(!box)return;var bo=false;all().forEach(function(i){if(i.querySelector('[name=equip_type]').value==='Bang & Olufsen')bo=true});box.hidden=!bo;if(!bo)box.querySelector('input').checked=false}
-document.addEventListener('change',function(e){if(e.target.name==='equip_type')boxShow()});boxShow();
+function boxShow(){if(!box)return;var bo=false;all().forEach(function(i){if(i.querySelector('[name=equip_type]').value==='Bang & Olufsen')bo=true});var sh=document.querySelector('[name=service_request]:checked');bo=bo&&sh&&sh.value==='Shipping';box.hidden=!bo;if(!bo)box.querySelector('input').checked=false}
+document.addEventListener('change',function(e){if(e.target.name==='equip_type'||e.target.name==='service_request')boxShow()});boxShow();
 document.addEventListener('click',function(e){if(e.target.matches('[data-rm]')){e.target.closest('[data-item]').remove();renum();boxShow()}});renum();
 var f=document.querySelector('.st form');f.addEventListener('submit',function(){var b=document.getElementById('stGo');b.disabled=true;b.textContent='Sending...'})})();
 </script>

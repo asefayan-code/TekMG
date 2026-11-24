@@ -9,6 +9,7 @@ from cameradata import (CAMERA_BRANDS, CAMERA_BRAND_NAMES, CAMERA_MODEL_COUNT, D
 from flowcharts import OTHER_BRANDS, OTHER_BY_SLUG, brand_flow, lens_flow
 from sitesearch import search as site_search
 import ticketlookup
+import boxpay
 from flask import Flask, Response, abort, jsonify, redirect, render_template, request, send_from_directory
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -366,13 +367,13 @@ SERVICE_REQUESTS = ["Shipping", "Pickup and delivery", "Walk-in"]
 def start_ticket():
     """New service ticket form: creates the customer and one ticket per item in RepairShopr."""
     ctx = {"equip_types": EQUIP_TYPES, "brands_by_type": BRANDS_BY_TYPE, "referred": REFERRED, "form": {}, "items": [{}],
-           "error": "", "numbers": None, "service_request": "", "returning": False, "contact": [], "today": "", "box": False}
+           "error": "", "numbers": None, "service_request": "", "returning": False, "contact": [], "today": "", "box": False, "pay_ready": boxpay.ready(), "paybox": False}
     if request.method == "GET":
         # match the form to the page the customer came from (a lens page shows lens brands, and so on)
         first = _from_page(request.headers.get("Referer"))
-        if request.args.get("box"):  # "Request the original shipping box" on the Bang & Olufsen page
+        if request.args.get("box"):  # Optional Shipping Box button on the flat-rate page
             first.update(type="Bang & Olufsen", brand="Bang & Olufsen")
-            ctx["box"] = True
+            ctx["paybox"] = True
         if request.args.get("flat"):  # Beogram flat-rate page: B&O item, $55 box price shown
             first.update(type="Bang & Olufsen", brand="Bang & Olufsen")
             ctx["flat"] = True
@@ -403,8 +404,10 @@ def start_ticket():
                           "issue": issue[:1500]})
         service = val("service_request", 30)
         contact = [n for n, k in (("Email", "contact_email"), ("SMS", "contact_sms")) if f.get(k)]
-        box = bool(f.get("bo_box")) and any(i["type"] == "Bang & Olufsen" for i in items)
-        ctx["box"] = box
+        box = False
+        paybox = (bool(f.get("pay_box")) and boxpay.ready() and f.get("service_request") == "Shipping"
+                  and any(i["type"] == "Bang & Olufsen" for i in items))
+        ctx["paybox"] = paybox
         ctx.update(form=dict(cust, contact_email="Email" in contact, contact_sms="SMS" in contact),
                    items=items or [{}], service_request=service)
         ip = (request.headers.get("X-Forwarded-For") or request.remote_addr or "").split(",")[0].strip()
@@ -424,14 +427,50 @@ def start_ticket():
             ctx["error"] = "Too many requests. Wait a while and try again, or call us."
         else:
             try:
-                made = ticketlookup.create_tickets(cust, items, service, contact,
-                                                     box_request=box)
+                made = ticketlookup.create_tickets(
+                    cust, items, service, contact, box_request=box,
+                    box_note="SHIPPING BOX $75.00 - PAYMENT PENDING (customer sent to checkout)" if paybox else "")
+                if paybox:
+                    try:
+                        sess = boxpay.create_session(request.url_root.rstrip("/").replace("http://", "https://"),
+                                                     cust["email"], made["ids"], made["numbers"])
+                        return redirect(sess["url"], code=303)
+                    except Exception:
+                        app.logger.exception("box checkout failed")
+                        ctx["error"] = ""
                 ctx.update(numbers=made["numbers"], returning=made["returning"], contact=contact,
                            today=datetime.date.today().strftime("%B %-d, %Y"))
             except Exception:
                 app.logger.exception("new ticket failed")
                 ctx["error"] = "We could not open your ticket right now. Try again in a few minutes or call us."
     resp = app.make_response(render_template("start-ticket.html", **ctx))
+    resp.headers["Cache-Control"] = "no-store"
+    return resp
+
+
+@app.route("/start-ticket/box-paid")
+def box_paid():
+    """Stripe sends the customer back here. A paid session adds a PAID note to the RepairShopr ticket."""
+    sid = request.args.get("session_id", "")
+    state, numbers = "cancelled", []
+    if sid and boxpay.ready():
+        try:
+            sess = boxpay.paid_session(sid)
+            if sess:
+                state = "paid"
+                md = sess.get("metadata") or {}
+                numbers = [n for n in (md.get("ticket_numbers") or "").split(",") if n]
+                if boxpay.first_time(sid):
+                    for tid in (md.get("ticket_ids") or "").split(","):
+                        if tid.strip():
+                            ticketlookup._post("tickets/%s/comment" % tid.strip(),
+                                               {"subject": "Shipping box paid",
+                                                "body": "SHIPPING BOX $75.00 PAID online (Stripe %s)." % sid[-12:],
+                                                "hidden": True, "do_not_email": True})
+        except Exception:
+            app.logger.exception("box payment check failed")
+            state = "error"
+    resp = app.make_response(render_template("box_paid.html", state=state, numbers=numbers))
     resp.headers["Cache-Control"] = "no-store"
     return resp
 
