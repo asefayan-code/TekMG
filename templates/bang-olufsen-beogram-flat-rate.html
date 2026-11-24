@@ -11,12 +11,17 @@
 .bo-price{border:2px solid var(--red);background:#fff;text-align:center;padding:26px 18px;max-width:560px;margin:0 auto 34px}
 .bo-price b{display:block;font-size:clamp(2.6rem,10vw,3.8rem);font-weight:300;color:var(--red);line-height:1}
 .bo-price span{display:block;margin-top:8px;color:var(--mid);font-size:.95rem}
-.bo-fr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
-.bo-fr a{display:block;background:#fff;border:1px solid var(--line);padding:14px;text-align:center;text-decoration:none;color:var(--ink)}
-.bo-fr a:hover{border-color:var(--red)}
-.bo-fr img{width:100%;height:130px;object-fit:contain;background:#fff;display:block;margin-bottom:10px}
-.bo-fr .ph{height:130px;margin-bottom:10px;background:var(--soft)}
-.bo-fr h3{margin:0;font-size:1.05rem;font-weight:600}
+.bo-fr{display:flex;flex-direction:column;gap:12px;max-width:720px;margin:0}
+.bo-fr .row{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);padding:12px}
+.bo-fr .row:hover{border-color:var(--red)}
+.bo-fr img,.bo-fr .ph{width:110px;height:90px;flex:none;object-fit:contain;background:#fff}
+.bo-fr .ph{background:var(--soft)}
+.bo-fr h3{margin:0 0 8px;font-size:1.1rem;font-weight:600}
+.bo-fr .opts{display:flex;flex-wrap:wrap;gap:8px}
+.bo-fr .opts a{padding:9px 12px;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:1px solid var(--ink);color:var(--ink);text-decoration:none;min-height:40px;display:inline-flex;align-items:center}
+.bo-fr .opts a:hover{background:var(--red);border-color:var(--red);color:#fff}
+.bo-box{max-width:720px;margin:22px 0 0;border:1px solid var(--line);padding:16px 18px;background:#fff}
+.bo-box p{margin:8px 0 0;color:var(--mid);font-size:.9rem}
 </style>
 {% endblock %}
 {% block content %}
@@ -33,9 +38,15 @@
     <div class="bo-price"><b>$325</b><span>Flat rate. Includes repair parts. Cosmetic parts are not included.</span></div>
     <div class="bo-fr">
       {% for n,img in [('1000','beogram-1000'),('1200','beogram-1200'),('1202','beogram-1202'),('1500','beogram-1500'),('1600','beogram-1600'),('1700','beogram-1700'),('2000',''),('2200','beogram-2200'),('3000','beogram-3000')] %}
-      <a href="/start-ticket?brand=Bang+%26+Olufsen&amp;model=Beogram+{{ n }}">{% if img %}<img src="/images/bo/{{ img }}-flat-rate-repair.jpg" alt="Bang &amp; Olufsen Beogram {{ n }} turntable" loading="lazy" width="150" height="130">{% else %}<div class="ph"></div>{% endif %}<h3>Beogram {{ n }}</h3></a>
+      <div class="row">{% if img %}<img src="/images/bo/{{ img }}-flat-rate-repair.jpg" alt="Bang &amp; Olufsen Beogram {{ n }} turntable" loading="lazy" width="110" height="90">{% else %}<div class="ph"></div>{% endif %}
+        <div><h3>Beogram {{ n }}</h3><div class="opts">
+          <a href="/start-ticket?flat=1&amp;model=Beogram+{{ n }}&amp;service=Walk-in">Walk-in</a>
+          <a href="/start-ticket?flat=1&amp;model=Beogram+{{ n }}&amp;service=Pickup+and+delivery">Pickup &amp; delivery</a>
+          <a href="/start-ticket?flat=1&amp;model=Beogram+{{ n }}&amp;service=Shipping">Online / Ship in</a>
+        </div></div></div>
       {% endfor %}
     </div>
+    <div class="bo-box"><a class="bo-btn" href="/start-ticket?box=1&amp;flat=1">Request a shipping box (optional) &ndash; $55.00</a><p>Optional. Cost is $55.00.</p></div>
     <div class="bo-rp">
       <div><b>20 years</b>Authorized Bang &amp; Olufsen repair experience</div>
       <div><b>98%</b>Repair success rate</div>

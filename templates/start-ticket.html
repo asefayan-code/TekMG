@@ -84,7 +84,7 @@
 {% else %}<p>We will contact you to set up your pickup.</p><p>Keep this page with your equipment for the driver.</p>{% endif %}
 </div>
 </div>
-{% if box %}<p><b>Original shipping box requested.</b> Original shipping boxes are purchasable, if available from Bang &amp; Olufsen.</p>
+{% if box %}<p><b>Original shipping box requested.</b> Original shipping boxes are purchasable, if available from Bang &amp; Olufsen.{% if flat %} Cost is $55.00.{% endif %}</p>
 {% endif %}<p class="wo-free">&#10003; Estimates are free.</p>
 <p class="wo-foot">Tek Media Group &middot; 711 South Victory Blvd., Burbank CA, 91502 &middot; (818) 244-4440 &middot; JT@tekmg.com</p>
 <div class="wo-actions"><button type="button" onclick="window.print()">Print this page</button><a href="/ticket-status">Check Your Service Ticket</a></div>
@@ -138,7 +138,7 @@
 <div id="stMore"></div>
 <fieldset id="stBox"{% if not box %} hidden{% endif %}><legend>Bang &amp; Olufsen shipping box</legend>
 <label class="st-ck"><input type="checkbox" name="bo_box" value="1"{% if box %} checked{% endif %}> Request the original shipping box</label>
-<p class="st-consent" style="font-size:.9rem">Original shipping boxes are purchasable, if available from Bang &amp; Olufsen.</p>
+<p class="st-consent" style="font-size:.9rem">Original shipping boxes are purchasable, if available from Bang &amp; Olufsen.{% if flat %} Cost is $55.00.{% endif %}</p>
 </fieldset>
 <button type="button" class="st-add" id="stAdd">+ Add another item</button>
 <div class="st-pair">

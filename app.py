@@ -373,6 +373,11 @@ def start_ticket():
         if request.args.get("box"):  # "Request the original shipping box" on the Bang & Olufsen page
             first.update(type="Bang & Olufsen", brand="Bang & Olufsen")
             ctx["box"] = True
+        if request.args.get("flat"):  # Beogram flat-rate page: B&O item, $55 box price shown
+            first.update(type="Bang & Olufsen", brand="Bang & Olufsen")
+            ctx["flat"] = True
+        if request.args.get("service") in SERVICE_REQUESTS:
+            ctx["service_request"] = request.args.get("service")
         if request.args.get("model"):
             first["model"] = " ".join(request.args.get("model").split())[:80]
         ctx["items"] = [first]
