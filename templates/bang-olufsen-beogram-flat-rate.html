@@ -20,6 +20,7 @@
 .bo-fr .opts{display:flex;flex-wrap:wrap;gap:8px}
 .bo-fr .opts a{padding:9px 12px;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:1px solid var(--ink);color:var(--ink);text-decoration:none;min-height:40px;display:inline-flex;align-items:center}
 .bo-fr .opts a:hover{background:var(--red);border-color:var(--red);color:#fff}
+.bo-fr .opts a.boxbtn{background:#22c55e;border-color:#22c55e;color:#fff}.bo-fr .opts a.boxbtn:hover{background:#16a34a;border-color:#16a34a}
 .bo-box{max-width:720px;margin:22px 0 0;border:1px solid var(--line);padding:16px 18px;background:#fff}
 .bo-box p{margin:8px 0 0;color:var(--mid);font-size:.9rem}
 </style>
@@ -43,7 +44,7 @@
           <a href="/start-ticket?flat=1&amp;model=Beogram+{{ n }}&amp;service=Walk-in">Walk-in</a>
           <a href="/start-ticket?flat=1&amp;model=Beogram+{{ n }}&amp;service=Pickup+and+delivery">Pickup &amp; delivery</a>
           <a href="/start-ticket?flat=1&amp;model=Beogram+{{ n }}&amp;service=Shipping">Ship-In</a>
-          <a href="https://tekmediagroup.com/start-ticket">Optional Shipping Box $75.00</a>
+          <a class="boxbtn" href="/start-ticket?flat=1&amp;box=1&amp;model=Beogram+{{ n }}&amp;service=Shipping">Optional Shipping Box $75.00</a>
         </div></div></div>
       {% endfor %}
     </div>
