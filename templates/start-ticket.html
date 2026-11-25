@@ -79,7 +79,7 @@
 <div><h2>Your information</h2><p>{{ form.firstname }} {{ form.lastname }}{% if form.business_name %}<br>{{ form.business_name }}{% endif %}<br>{{ form.phone }}<br>{{ form.email }}</p>
 <p>We will contact you by {{ contact|join(' and ') }}.</p></div>
 <div><h2>What to do next</h2>
-{% if service_request == 'Shipping' %}<p>Ship your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p>Put a copy of this page in the box, or write your work order number on it.</p>
+{% if service_request == 'Shipping' %}<p>Ship your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p><b>&#10140;</b> <i class="fas fa-box" aria-hidden="true"></i> Put a copy of this page in the box, or write your work order number on it.</p>
 {% elif service_request == 'Walk-in' %}<p>Bring your equipment to:<br><b>Tek Media Group</b><br>711 South Victory Blvd.<br>Burbank CA, 91502</p><p>Mon-Fri: 8:30 AM &ndash; 5:00 PM<br>Sat-Sun-Holidays: By appointment only</p><p>Bring this page or your work order number.</p>
 {% else %}<p>We will contact you to set up your pickup.</p><p>Keep this page with your equipment for the driver.</p>{% endif %}
 </div>
